@@ -1,15 +1,11 @@
-import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
-import { ComingSoonView } from "@/components/comingSoon";
 import { OfferingMainView } from "@/components/offerings";
-import {
-  comingSoonOfferings,
-  getComingSoonOffering,
-  getOffering,
-  offeringsRegistry,
-} from "@/data/offerings/registry";
+import { InfoPageView, buildInfoPageMetadata } from "@/components/infoPage";
+import { getOffering, offeringsRegistry } from "@/data/offerings/registry";
+import { getProgramSummaries } from "@/data/programs/registry";
+import { getInfoPageForOffering, infoPageOfferingIds } from "@/data/pages/info-pages.data";
 import { offeringHref } from "@/lib/routes";
 
 interface PageProps {
@@ -17,67 +13,55 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return [...Object.keys(offeringsRegistry), ...Object.keys(comingSoonOfferings)].map((offeringId) => ({ offeringId }));
+  return [...Object.keys(offeringsRegistry), ...infoPageOfferingIds].map((offeringId) => ({ offeringId }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { offeringId } = await params;
   const offering = getOffering(offeringId);
-  const comingSoonTitle = getComingSoonOffering(offeringId);
+  const infoPage = getInfoPageForOffering(offeringId);
 
-  if (!offering) {
-    if (comingSoonTitle) {
-      return {
-        title: `${comingSoonTitle} - Coming Soon`,
-        description: `${comingSoonTitle} by Diamond Club Vacations is coming soon.`,
-        robots: { index: false, follow: false },
-      };
-    }
+  if (infoPage) return buildInfoPageMetadata(infoPage, offeringHref(offeringId));
+  if (!offering) return { title: "Offering Not Found" };
 
-    return { title: "Offering Not Found" };
-  }
-
-  const pageTitle = `${offering.hero.headline.primary} ${offering.hero.headline.secondary}`;
-  const pageDescription = offering.hero.subtext;
   const pageUrl = offeringHref(offeringId);
 
   return {
-    title: pageTitle,
-    description: pageDescription,
+    title: offering.title,
+    description: offering.hero.subtext,
     alternates: { canonical: pageUrl },
     openGraph: {
-      title: `${pageTitle} | ${siteConfig.name}`,
-      description: pageDescription,
+      title: `${offering.title} | ${siteConfig.name}`,
+      description: offering.hero.subtext,
       url: pageUrl,
       siteName: siteConfig.name,
       locale: "en_US",
       type: "website",
-      images: [{ url: typeof offering.hero.backgroundImage === "string" ? offering.hero.backgroundImage : offering.hero.backgroundImage.src, alt: pageTitle }],
+      images: [{ url: offering.hero.image.src, alt: offering.title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${pageTitle} | ${siteConfig.name}`,
-      description: pageDescription,
+      title: `${offering.title} | ${siteConfig.name}`,
+      description: offering.hero.subtext,
     },
   };
 }
 
 export default async function OfferingPage({ params }: PageProps) {
   const { offeringId } = await params;
+
+  const infoPage = getInfoPageForOffering(offeringId);
+  if (infoPage) return <InfoPageView data={infoPage} />;
+
   const offering = getOffering(offeringId);
+  if (!offering) notFound();
 
-  if (!offering) {
-    if (getComingSoonOffering(offeringId)) {
-      return <ComingSoonView />;
-    }
-
-    notFound();
-  }
+  const programs = getProgramSummaries(offering);
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "TouristTrip",
-    name: `${offering.hero.headline.primary} ${offering.hero.headline.secondary}`,
+    name: offering.title,
     description: offering.hero.subtext,
     touristType: ["Family", "Luxury Traveler", "Kosher Travel"],
     provider: {
@@ -85,18 +69,18 @@ export default async function OfferingPage({ params }: PageProps) {
       name: siteConfig.name,
       url: siteConfig.siteUrl,
     },
-    offers: offering.programsSection.programs.map((program) => ({
+    offers: programs.map((program) => ({
       "@type": "Offer",
-      name: `${program.title.part1}${program.title.part2}`,
+      name: program.title,
       description: program.description,
-      url: `${siteConfig.siteUrl}${offeringHref(offeringId)}/programs/${program.id}`,
+      url: program.external ? program.href : `${siteConfig.siteUrl}${program.href}`,
     })),
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <OfferingMainView data={offering} />
+      <OfferingMainView data={offering} programs={programs} />
     </>
   );
 }

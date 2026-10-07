@@ -1,138 +1,54 @@
-import type { StaticImageData } from "next/image";
+import type { DesignFeatureGroup, DesignImage, DesignStat } from "@/components/shared/design";
 
-export interface ResortGalleryStructure {
-  main: { src: StaticImageData | string; label: string };
-  side1: { src: StaticImageData | string; label: string };
-  side2: { src: StaticImageData | string; label: string };
-  side3: { src: StaticImageData | string; label: string };
-  side4: { src: StaticImageData | string; label: string };
-  totalPhotos: number;
-}
-
-export interface ResortRoom {
-  id: string;
-  category?: string;
-  title: string;
-  titlePrefix: string;
-  titleItalic: string;
-  bedConfig: string;
-  size: string;
-  view: string;
-  description: string;
-  image: StaticImageData | string;
-  gallery: ResortGalleryStructure;
-  bedsAndBedding: {
-    items: string[];
-    note?: string;
-  };
-  roomFeatures: string[];
-  bathFeatures: string[];
-}
-
-export type ResortDiningCategory =
-  | "all"
-  | "seafood"
-  | "mediterranean"
-  | "multiple"
-  | "other"
-  | "latin"
-  | "steakhouse"
-  | "international"
-  | "cafe"
-  | "signature";
-
-export interface ResortDiningVenue {
+/** One detail page under a resort: a room, a restaurant, a pool or the spa. */
+export interface ResortDetailItem {
   id: string;
   title: string;
-  titlePrefix?: string;
-  titleItalic?: string;
-  cuisine: string;
-  category: ResortDiningCategory;
-  categoryLabel: string;
-  mealPeriod: string;
-  location?: string;
-  schedule: { days: string; hours: string; isClosed?: boolean }[];
-  dressCode: string;
+  /** One line shown under the title on list cards and in the detail hero (e.g. "1 King Bed · Ocean View"). */
+  subtitle: string;
+  /** Card thumbnail. */
+  image: DesignImage;
   description: string;
-  reservations?: string;
-  kosherCertification?: string;
-  image: StaticImageData | string;
-  gallery: ResortGalleryStructure;
-  hours?: string;
-  kashrutNotes?: string;
-  features?: string[];
+  /** Up to four key facts shown as a strip above the description. */
+  stats?: DesignStat[];
+  groups?: DesignFeatureGroup[];
+  gallery: DesignImage[];
 }
 
-export interface ResortPoolItem {
+export interface ResortWellnessActivity {
   id: string;
   title: string;
-  titlePrefix: string;
-  titleItalic: string;
-  type: string;
-  typeLabel: string;
-  atmosphere?: string;
-  location?: string;
-  schedule?: { days: string; hours: string }[];
-  hours?: string;
   description: string;
-  image: StaticImageData | string;
-  gallery: ResortGalleryStructure;
-  amenities?: string[];
-  features?: string[];
-}
-
-export interface ResortWellnessItem {
-  id: string;
-  title: string;
-  category: "the-spa" | "wellness-deck" | "fitness-center" | "soak-rituals";
-  description: string;
-  image: StaticImageData | string;
   timing?: string;
-  linkText?: string;
 }
 
-export interface ResortSpaData {
-  title: string;
-  titlePrefix: string;
-  titleItalic: string;
-  headline?: string;
-  meta?: string[];
-  /** Short blurb for the main resort page's spa section; falls back to `description`. */
-  summary?: string;
-  description: string;
-  treatmentsAndFacilities: string[];
-  schedule: { days: string; hours: string }[];
-  hours?: string;
-  location: string;
-  image: StaticImageData | string;
-  gallery: ResortGalleryStructure;
-  treatments?: { title: string; description: string; duration: string; category?: string }[];
-  amenities?: string[];
-}
+export type ResortSectionId = "rooms" | "dining" | "pools" | "wellness" | "spa" | "gallery";
 
-export interface ResortGalleryPhoto {
+/** Where an overview card or sub-nav item points: a section of the resort page, or a program-level experience page. */
+export type ResortTarget =
+  | { type: "section"; section: ResortSectionId }
+  | { type: "experience"; experienceType: string };
+
+export interface ResortCategoryCard {
   id: string;
   title: string;
-  category: "all" | "resort" | "rooms" | "pools" | "dining" | "spa" | "events" | "grounds" | "aerial";
-  image: StaticImageData | string;
-}
-
-export interface ResortDetailsData {
-  checkIn: string;
-  checkOut: string;
-  facilities: string[];
-  address: string;
-  mapNote?: string;
+  /** Shorter label for the sub navigation when it differs from the card title (e.g. "Gallery"). */
+  navLabel?: string;
   description: string;
+  image: DesignImage;
+  target: ResortTarget;
 }
 
-export interface ResortAboutData {
-  kicker?: string;
-  headline: {
-    lead: string;
-    italic: string;
-  };
-  paragraphs: string[];
+/** A titled block with a photo mosaic. */
+export interface ResortGallerySection {
+  title: string;
+  description: string;
+  images: DesignImage[];
+}
+
+export interface ResortListSection extends ResortGallerySection {
+  /** Venues that have their own detail page, listed as chips under the heading. */
+  items: ResortDetailItem[];
 }
 
 export interface ResortData {
@@ -140,33 +56,38 @@ export interface ResortData {
   programTitle: string;
   resortId: string;
   resortName: string;
-  /** Name without the trailing "Resort", used in the hero badge (e.g. "The Edition"). */
-  shortName: string;
+  /** Hero eyebrow, e.g. "DIAMOND CLUB RESERVE" or "Passover 2027". */
+  kicker: string;
+  /** Hero sub-line. */
   tagline: string;
-  heroImage: StaticImageData | string;
-  heroCtas?: {
-    primaryText?: string;
-    secondaryText?: string;
-    secondaryAction?: "gallery" | "details";
+  heroImage: DesignImage;
+
+  /** First label of the floating sub navigation ("Hotel Overview", "Overview", ...). */
+  overviewLabel: string;
+  /** Render the floating sub navigation under the hero. */
+  showSubNav: boolean;
+  /** Append an "Inquire" pill to the sub navigation. */
+  subNavInquire?: boolean;
+  overview: {
+    title: string;
+    description: string;
+    cards: ResortCategoryCard[];
   };
-  /** One-line intro under the "Pools & Beach" heading on the main resort page. */
-  poolsIntro?: string;
-  roomsTitle?: { lead: string; italic: string };
-  roomsDescription?: string;
-  diningTitle?: { lead: string; italic: string };
-  diningDescription?: string;
-  poolsTitle?: { lead: string; italic: string };
-  poolsDescription?: string;
-  wellnessTitle?: { lead: string; italic: string };
-  wellnessDescription?: string;
-  about?: ResortAboutData;
-  details?: ResortDetailsData;
-  rooms: ResortRoom[];
-  dining: ResortDiningVenue[];
-  pools: ResortPoolItem[];
-  wellness: ResortWellnessItem[];
-  /** Activities shown in the main page's wellness tabs, when they differ from `wellness` (which feeds the spa detail page). */
-  wellnessActivities?: ResortWellnessItem[];
-  spa: ResortSpaData;
-  gallery: ResortGalleryPhoto[];
+
+  rooms: {
+    title: string;
+    description: string;
+    items: ResortDetailItem[];
+    /** Whether room cards link to their detail pages. */
+    linkToDetails: boolean;
+  };
+  dining?: ResortListSection;
+  pools?: ResortListSection;
+  wellness?: ResortGallerySection & { activities: ResortWellnessActivity[] };
+  /**
+   * The spa's detail page. When `section` is set the spa also gets its own block on the resort page
+   * (Park Hyatt); otherwise it is reached from the Wellness block.
+   */
+  spa?: { item: ResortDetailItem; section?: ResortGallerySection };
+  gallery: ResortGallerySection;
 }

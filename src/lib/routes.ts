@@ -3,12 +3,21 @@
  * Replaces the old per-component hardcoded "/passover-collection-2027/..." string templates.
  */
 
+/** The one commercial offering with real program pages today. */
+export const PASSOVER_OFFERING_ID = "passover-collection-2027";
+
 export function offeringHref(offeringId: string): string {
   return `/offerings/${offeringId}`;
 }
 
+/** A program's overview page: the first page a guest sees after choosing the program. */
 export function programHref(offeringId: string, programId: string): string {
   return `${offeringHref(offeringId)}/programs/${programId}`;
+}
+
+/** The program's details hub (hotels, attractions, ...), reached with "See Details" from the overview. */
+export function programDetailsHref(offeringId: string, programId: string): string {
+  return `${programHref(offeringId, programId)}/details`;
 }
 
 export function resortHref(
@@ -90,3 +99,9 @@ export function inquireHref(params: InquireHrefParams): string {
   if (params.service) search.set("service", params.service);
   return `/inquire?${search.toString()}`;
 }
+
+/**
+ * Casa Nizuc is a year-round resort, but the route system has a single Casa Nizuc resort page and it
+ * lives under the Diamond Blue program, so every "Casa Nizuc" link on the site points here.
+ */
+export const CASA_NIZUC_HREF = resortHref(PASSOVER_OFFERING_ID, "blue", "casa-nizuc");

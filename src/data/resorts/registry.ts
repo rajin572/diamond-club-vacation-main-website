@@ -1,16 +1,13 @@
-import type { ResortData } from "@/components/resorts/resorts.types";
+import type { ResortData, ResortDetailItem } from "@/components/resorts/resorts.types";
+import type { ResortDetailKind } from "@/components/resorts/ResortDetailView";
 import { EDITION_RESORT_DATA } from "./edition.data";
 import { ST_REGIS_RESORT_DATA } from "./st-regis.data";
-import { WALDORF_ASTORIA_RESORT_DATA } from "./waldorf-astoria.data";
-import { PARK_HYATT_RESORT_DATA } from "./park-hyatt.data";
 import { CASA_NIZUC_DATA } from "./casa-nizuc.data";
 import { getProgram } from "@/data/programs/registry";
 
 export const resortsRegistry = {
   edition: EDITION_RESORT_DATA,
   "st-regis": ST_REGIS_RESORT_DATA,
-  "waldorf-astoria": WALDORF_ASTORIA_RESORT_DATA,
-  "park-hyatt": PARK_HYATT_RESORT_DATA,
   "casa-nizuc": CASA_NIZUC_DATA,
 } satisfies Record<string, ResortData>;
 
@@ -45,4 +42,26 @@ export function getResortRouteParams() {
       },
     ];
   });
+}
+
+/** The detail pages (room, restaurant, pool, spa) a resort has, in display order. */
+export function getResortDetailItems(resort: ResortData, kind: ResortDetailKind): ResortDetailItem[] {
+  switch (kind) {
+    case "room":
+      return resort.rooms.items;
+    case "restaurant":
+      return resort.dining?.items ?? [];
+    case "pool":
+      return resort.pools?.items ?? [];
+    case "spa":
+      return resort.spa ? [resort.spa.item] : [];
+  }
+}
+
+export function getResortDetailItem(
+  resort: ResortData,
+  kind: ResortDetailKind,
+  itemId: string
+): ResortDetailItem | undefined {
+  return getResortDetailItems(resort, kind).find((item) => item.id === itemId);
 }

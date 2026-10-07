@@ -1,32 +1,19 @@
-import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
-import { ExperienceCategoryView } from "@/components/experiences";
-import KidsProgramView from "@/components/kidsProgram/KidsProgramView";
-import KidsDayCampView from "@/components/kidsDayCamp/KidsDayCampView";
-import { getExperienceData, getKidsProgramData, getKidsDayCampData } from "@/data/experiences/registry";
-import { getProgram, programsRegistry } from "@/data/programs/registry";
+import { ExperienceCategoryView, KidsDayCampView } from "@/components/experiences";
+import { getAllExperienceSlugsForProgram, getExperienceData, getKidsDayCampData } from "@/data/experiences/registry";
+import { buildExperienceNav } from "@/data/experiences/nav";
+import { programsRegistry } from "@/data/programs/registry";
 import { experienceHref } from "@/lib/routes";
-
-const CATEGORY_TYPES = ["attractions", "entertainment", "scholars"] as const;
 
 interface PageProps {
   params: Promise<{ offeringId: string; programId: string; experienceType: string }>;
 }
 
 export async function generateStaticParams() {
-  const experienceTypes = [...CATEGORY_TYPES, "kids-program", "kids-day-camp"];
-
   return Object.values(programsRegistry).flatMap(({ id: programId, offeringId }) =>
-    experienceTypes
-      .filter(
-        (experienceType) =>
-          getExperienceData(programId, experienceType) ||
-          (experienceType === "kids-program" && getKidsProgramData(programId)) ||
-          (experienceType === "kids-day-camp" && getKidsDayCampData(programId))
-      )
-      .map((experienceType) => ({ offeringId, programId, experienceType }))
+    getAllExperienceSlugsForProgram(programId).map((experienceType) => ({ offeringId, programId, experienceType }))
   );
 }
 
@@ -34,43 +21,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { offeringId, programId, experienceType } = await params;
   const canonicalUrl = experienceHref(offeringId, programId, experienceType);
 
-  const categoryData = getExperienceData(programId, experienceType);
-  if (categoryData) {
+  const category = getExperienceData(programId, experienceType);
+  if (category) {
     return {
-      title: `${categoryData.breadcrumbLabel} | Passover 2027`,
-      description: categoryData.header.description,
+      title: `${category.title} | ${category.programTitle}`,
+      description: category.description,
       alternates: { canonical: canonicalUrl },
       openGraph: {
-        title: `${categoryData.breadcrumbLabel} | ${siteConfig.name}`,
-        description: categoryData.header.description,
+        title: `${category.title} | ${siteConfig.name}`,
+        description: category.description,
         url: canonicalUrl,
         siteName: siteConfig.name,
         locale: "en_US",
         type: "website",
+        images: [{ url: category.heroImage.src, alt: category.title }],
       },
     };
   }
 
-  if (experienceType === "kids-program") {
-    const data = getKidsProgramData(programId);
-    if (data) {
-      return {
-        title: "Kids Program | Passover 2027",
-        description: data.description,
-        alternates: { canonical: canonicalUrl },
-      };
-    }
-  }
-
-  if (experienceType === "kids-day-camp") {
-    const data = getKidsDayCampData(programId);
-    if (data) {
-      return {
-        title: "Day Camp & Teen Program | Passover 2027",
-        description: data.hero.description,
-        alternates: { canonical: canonicalUrl },
-      };
-    }
+  const dayCamp = experienceType === "kids-day-camp" ? getKidsDayCampData(programId) : undefined;
+  if (dayCamp) {
+    return {
+      title: `${dayCamp.hero.title} | ${dayCamp.programName}`,
+      description: dayCamp.hero.description,
+      alternates: { canonical: canonicalUrl },
+    };
   }
 
   return { title: "Experience Not Found" };
@@ -78,32 +53,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ExperiencePage({ params }: PageProps) {
   const { offeringId, programId, experienceType } = await params;
+  const nav = buildExperienceNav(offeringId, programId);
 
-  const categoryData = getExperienceData(programId, experienceType);
-  if (categoryData) {
-    return <ExperienceCategoryView offeringId={offeringId} data={categoryData} />;
+  const category = getExperienceData(programId, experienceType);
+  if (category) {
+    return <ExperienceCategoryView offeringId={offeringId} data={category} nav={nav} />;
   }
 
-  if (experienceType === "kids-program") {
-    const data = getKidsProgramData(programId);
-    if (data) {
-      const program = getProgram(programId);
-      return (
-        <KidsProgramView
-          offeringId={offeringId}
-          programId={programId}
-          programTitle={program?.title ? `${program.title.part1}${program.title.part2}` : programId}
-          data={data}
-        />
-      );
-    }
-  }
-
-  if (experienceType === "kids-day-camp") {
-    const data = getKidsDayCampData(programId);
-    if (data) {
-      return <KidsDayCampView offeringId={offeringId} programId={programId} data={data} />;
-    }
+  const dayCamp = experienceType === "kids-day-camp" ? getKidsDayCampData(programId) : undefined;
+  if (dayCamp) {
+    return <KidsDayCampView data={dayCamp} nav={nav} />;
   }
 
   notFound();

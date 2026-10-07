@@ -1,8 +1,7 @@
-import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ResortRoomDetailView } from "@/components/resorts";
-import { getResort, getResortRouteParams } from "@/data/resorts/registry";
+import { ResortDetailView } from "@/components/resorts";
+import { getResort, getResortDetailItem, getResortDetailItems, getResortRouteParams } from "@/data/resorts/registry";
 
 interface PageProps {
   params: Promise<{ offeringId: string; programId: string; resortId: string; roomId: string }>;
@@ -12,21 +11,21 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   return getResortRouteParams().flatMap(({ resort, params }) =>
-    resort.rooms.map((room) => ({ ...params, roomId: room.id }))
+    getResortDetailItems(resort, "room").map((room) => ({ ...params, roomId: room.id }))
   );
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { resortId, roomId } = await params;
   const resort = getResort(resortId);
-  const room = resort?.rooms.find((r) => r.id === roomId);
+  const room = resort && getResortDetailItem(resort, "room", roomId);
 
-  if (!room) {
+  if (!resort || !room) {
     return { title: "Room Not Found" };
   }
 
   return {
-    title: `${room.title} | ${resort!.resortName}`,
+    title: `${room.title} | ${resort.resortName}`,
     description: room.description,
   };
 }
@@ -34,10 +33,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function RoomPage({ params }: PageProps) {
   const { offeringId, programId, resortId, roomId } = await params;
   const resort = getResort(resortId);
+  const room = resort && getResortDetailItem(resort, "room", roomId);
 
-  if (!resort || resort.programId !== programId || !resort.rooms.some((r) => r.id === roomId)) {
+  if (!resort || resort.programId !== programId || !room) {
     notFound();
   }
 
-  return <ResortRoomDetailView offeringId={offeringId} programId={programId} data={resort} roomId={roomId} />;
+  return <ResortDetailView offeringId={offeringId} programId={programId} data={resort} item={room} kind="room" />;
 }

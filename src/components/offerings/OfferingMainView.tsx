@@ -1,23 +1,38 @@
-import React from "react";
+import { DesignCard, DetailHero, SectionTitle, Wrap } from "@/components/shared/design";
+import type { ProgramSummary } from "@/components/programs/programs.types";
 import type { OfferingData } from "./offerings.types";
-import OfferingHero from "./OfferingHero";
-import OfferingPrograms from "./OfferingPrograms";
-import OfferingCompare from "./OfferingCompare";
-import OfferingInquiryBanner from "./OfferingInquiryBanner";
 
 interface OfferingMainViewProps {
   data: OfferingData;
+  programs: ProgramSummary[];
 }
 
-export const OfferingMainView: React.FC<OfferingMainViewProps> = ({ data }) => {
+/** An offering landing page: hero plus one card per program (client design: passover.html). */
+export function OfferingMainView({ data, programs }: OfferingMainViewProps) {
   return (
-    <div className="w-full flex flex-col bg-background-color">
-      <OfferingHero data={data.hero} />
-      <OfferingPrograms offeringId={data.id} data={data.programsSection} />
-      <OfferingCompare data={data.compare} />
-      <OfferingInquiryBanner data={data.inquiry} />
-    </div>
+    <>
+      <DetailHero
+        image={data.hero.image}
+        kicker={data.hero.kicker}
+        title={data.hero.headline}
+        subtitle={data.hero.subtext}
+      />
+      <Wrap>
+        <SectionTitle title={data.programsSection.title} description={data.programsSection.description} />
+        <div className="dcv-grid3">
+          {programs.map((program) => (
+            <DesignCard
+              key={program.id}
+              image={program.image}
+              title={program.title}
+              description={program.description}
+              href={program.href}
+            />
+          ))}
+        </div>
+      </Wrap>
+    </>
   );
-};
+}
 
 export default OfferingMainView;

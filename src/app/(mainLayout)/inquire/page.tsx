@@ -1,25 +1,27 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import type { Metadata } from "next";
-import InquireWizard from "@/components/inquire/InquireWizard";
+import { DetailHero } from "@/components/shared/design";
+import InquireForm from "@/components/inquire/InquireForm";
+import { AllImages } from "../../../../public/images/AllImages";
 
 export const metadata: Metadata = {
   title: "Inquire",
-  description:
-    "Plan your vacation in six short steps -- Passover 2027, Sukkot 2026, or a private event with Diamond Club Vacations.",
+  description: "Tell us about your trip and your group — Passover 2027, Casa Nizuc, weddings and private events with Diamond Club Vacations.",
 };
 
 export default function InquirePage() {
   return (
-    <div className="w-full min-h-[calc(100vh)] bg-background-color">
-      <Suspense
-        fallback={
-          <div className="w-full py-32 flex items-center justify-center font-outfit text-zinc-500">
-            Loading inquiry form...
-          </div>
-        }
-      >
-        <InquireWizard />
+    <>
+      <DetailHero
+        image={AllImages.inquirySource01}
+        kicker="Diamond Club Vacations"
+        title="Inquire"
+        subtitle="Tell us about your trip and your group."
+      />
+      {/* useSearchParams (destination preselect) must sit under a Suspense boundary. */}
+      <Suspense fallback={<div className="dcv-inquiry-shell dcv-notice">Loading inquiry form…</div>}>
+        <InquireForm />
       </Suspense>
-    </div>
+    </>
   );
 }

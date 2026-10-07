@@ -4,40 +4,28 @@ import type { ExperienceCategoryData } from "@/components/experiences/experience
 export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
   "diamond-club-reserve": {
     programId: "diamond-club-reserve",
-    programTitle: "Diamond Club Reserve",
+    programTitle: "DIAMOND CLUB RESERVE",
     experienceType: "entertainment",
-    variant: "gallery",
-    breadcrumbLabel: "Entertainment",
-    badgeStyle: "dot",
-    accentColor: "#BD9343",
-    gridColumns: 3,
-    header: {
-      badge: "Experiences",
-      titlePart1: "Enter",
-      titlePart2: "tainment",
-      description:
-        "Nightly shows, headline performers and late-night parties, planned throughout the holiday for every age.",
-    },
+    title: "Entertainment",
+    description: "Nightly shows, headline performers and late-night parties, planned throughout the holiday for every age.",
+    heroImage: AllImages.entertainment1,
+    columns: 3,
     items: [
       {
         id: "after-party",
         title: "The After Party",
         tag: "Nightly",
         description: "As night falls, SO’OL beach club comes alive with DJ parties, hookah, disco and casino nights.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "The After Party photo",
-        modal: {
+        image: AllImages.entertainment1,
+        details: {
           title: "The After Party",
           tag: "Nightly",
-          longDescription:
+          paragraphs: [
             "When the main event ends, the night is just beginning. DJ parties, hookah, disco, casino nights and more await.",
-          when: "Nightly, after the evening program",
-          where: "SO’OL beach club",
-          mainPhotoPlaceholder: "The After Party — main photo",
-          thumbnails: [
-            { id: "t1", label: "DJ photo", placeholderText: "DJ photo" },
-            { id: "t2", label: "Music photo", placeholderText: "Music photo" },
-            { id: "t3", label: "Lounge photo", placeholderText: "Lounge photo" },
+          ],
+          facts: [
+            { label: "When", value: "Nightly, after the evening program" },
+            { label: "Where", value: "SO’OL beach club" },
           ],
         },
       },
@@ -46,20 +34,16 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         title: "Fire Shows",
         tag: "Evenings",
         description: "An incredible lineup of nightly entertainment under the Riviera Maya sky.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "Fire Shows photo",
-        modal: {
+        image: AllImages.entertainment1,
+        details: {
           title: "Fire Shows",
           tag: "Evenings",
-          longDescription:
+          paragraphs: [
             "An incredible lineup of nightly entertainment under the Riviera Maya sky featuring world-class fire artists, acrobats, and mesmerizing light choreography.",
-          when: "Select evenings during Chol Hamoed",
-          where: "Beachfront Amphitheater",
-          mainPhotoPlaceholder: "Fire Shows — main photo",
-          thumbnails: [
-            { id: "t1", label: "Fire Show 1", placeholderText: "Fire dancer photo" },
-            { id: "t2", label: "Acrobats", placeholderText: "Acrobats photo" },
-            { id: "t3", label: "Stage", placeholderText: "Stage photo" },
+          ],
+          facts: [
+            { label: "When", value: "Select evenings during Chol Hamoed" },
+            { label: "Where", value: "Beachfront Amphitheater" },
           ],
         },
       },
@@ -68,20 +52,16 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         title: "DJ Pinny & Yiddi",
         tag: "Featured",
         description: "DJ Pinny and DJ Yiddi are set to ignite the party and keep the celebration going.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "DJ Pinny & Yiddi photo",
-        modal: {
+        image: AllImages.entertainment1,
+        details: {
           title: "DJ Pinny & Yiddi",
           tag: "Featured",
-          longDescription:
+          paragraphs: [
             "DJ Pinny and DJ Yiddi bring their signature high-octane energy to the dancefloor, blending contemporary Jewish beats, global remixes, and celebratory anthems.",
-          when: "Chol Hamoed late-night sessions",
-          where: "Kanai Ballroom & SO’OL Club",
-          mainPhotoPlaceholder: "DJ Pinny & Yiddi — main photo",
-          thumbnails: [
-            { id: "t1", label: "DJ Booth", placeholderText: "DJ booth photo" },
-            { id: "t2", label: "Crowd", placeholderText: "Dancefloor crowd" },
-            { id: "t3", label: "Lighting", placeholderText: "Lighting production" },
+          ],
+          facts: [
+            { label: "When", value: "Chol Hamoed late-night sessions" },
+            { label: "Where", value: "Kanai Ballroom & SO’OL Club" },
           ],
         },
       },
@@ -89,44 +69,25 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         id: "kumzits-nussi-benyomin",
         title: "Kumzits with Nussi & Benyomin",
         tag: "Details to be announced",
-        isTba: true,
         description: "Details coming soon.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "Kumzits with Nussi & Benyomin photo",
-        modal: {
-          title: "Kumzits with Nussi & Benyomin",
-          tag: "Details to be announced",
-          longDescription:
-            "Heartfelt melodies, acoustic harmonies, and uplifting singing beside the Caribbean surf with Nussi and Benyomin.",
-          when: "Evening sessions following tefillah",
-          where: "Beachside fire pit lounge",
-          mainPhotoPlaceholder: "Kumzits — main photo",
-          thumbnails: [
-            { id: "t1", label: "Fire Pit", placeholderText: "Fire pit photo" },
-            { id: "t2", label: "Guitar", placeholderText: "Acoustic set" },
-            { id: "t3", label: "Singers", placeholderText: "Kumzits crowd" },
-          ],
-        },
+        image: AllImages.entertainment1,
+        tba: true,
       },
       {
         id: "comedian-elon-gold",
         title: "Comedian Elon Gold",
         tag: "Featured",
         description: "From his Orthodox upbringing to being an NYU dropout, comedian Elon Gold brings his renowned stand-up.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "Comedian Elon Gold photo",
-        modal: {
+        image: AllImages.entertainment1,
+        details: {
           title: "Comedian Elon Gold",
           tag: "Featured",
-          longDescription:
+          paragraphs: [
             "From his Orthodox upbringing to being an NYU dropout, comedian Elon Gold brings his renowned stand-up comedy performance, sharing hilarious and relatable observations.",
-          when: "Chol Hamoed Headline Evening",
-          where: "Main Kanai Ballroom",
-          mainPhotoPlaceholder: "Elon Gold — main photo",
-          thumbnails: [
-            { id: "t1", label: "On Stage", placeholderText: "Stage performance" },
-            { id: "t2", label: "Laughing Crowd", placeholderText: "Audience photo" },
-            { id: "t3", label: "Portrait", placeholderText: "Elon Gold portrait" },
+          ],
+          facts: [
+            { label: "When", value: "Chol Hamoed Headline Evening" },
+            { label: "Where", value: "Main Kanai Ballroom" },
           ],
         },
       },
@@ -134,117 +95,36 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         id: "concert",
         title: "Concert",
         tag: "Details to be announced",
-        isTba: true,
         description: "Details coming soon.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "Concert photo",
-        modal: {
-          title: "Concert",
-          tag: "Details to be announced",
-          longDescription:
-            "A spectacular headline musical concert featuring premier Jewish music superstars backed by a full symphonic ensemble under the stars.",
-          when: "Chol Hamoed Gala Night",
-          where: "Grand Amphitheater Stage",
-          mainPhotoPlaceholder: "Concert — main photo",
-          thumbnails: [
-            { id: "t1", label: "Stage", placeholderText: "Concert stage" },
-            { id: "t2", label: "Orchestra", placeholderText: "Live orchestra" },
-            { id: "t3", label: "Audience", placeholderText: "Gala audience" },
-          ],
-        },
+        image: AllImages.entertainment1,
+        tba: true,
       },
     ],
-    inquireBanner: {
-      headlinePart1: "Celebrate with us for ",
-      headlinePart2: "Passover 2027",
-      buttonText: "Inquire",
-    },
-  },
-  guttaway: {
-    programId: "guttaway",
-    programTitle: "Guttaway a DCV Program",
-    experienceType: "entertainment",
-    variant: "gallery",
-    breadcrumbLabel: "Entertainment",
-    badgeStyle: "dot",
-    accentColor: "#00549c",
-    gridColumns: 3,
-    header: {
-      badge: "Experiences",
-      titlePart1: "Enter",
-      titlePart2: "tainment",
-      description:
-        "Nightly shows, headline performers and late-night parties, planned throughout the holiday for every age.",
-    },
-    items: [
-      {
-        id: "to-be-announced",
-        title: "To be announced",
-        tag: "Details to be announced",
-        isTba: true,
-        ctaText: "View details",
-        description: "Incredible lineup of nightly entertainment.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "Entertainment photo",
-        modal: {
-          title: "To be announced",
-          tag: "Nightly",
-          longDescription:
-            "Incredible lineup of nightly entertainment. Full details will be announced closer to the program.",
-          when: "Nightly, after the evening program",
-          where: "SO’OL beach club",
-          mainPhotoPlaceholder: "Entertainment — main photo",
-          thumbnails: [
-            { id: "t1", label: "DJ photo", placeholderText: "DJ photo" },
-            { id: "t2", label: "Music photo", placeholderText: "Music photo" },
-            { id: "t3", label: "Lounge photo", placeholderText: "Lounge photo" },
-          ],
-        },
-      },
-    ],
-    inquireBanner: {
-      headlinePart1: "Celebrate with us for ",
-      headlinePart2: "Passover 2027",
-      buttonText: "Inquire",
-    },
   },
   blue: {
     programId: "blue",
     programTitle: "Diamond Blue by DCV",
     experienceType: "entertainment",
-    variant: "gallery",
-    breadcrumbLabel: "Entertainment",
-    badgeStyle: "dot",
-    accentColor: "#00549c",
-    gridColumns: 3,
-    header: {
-      badge: "Experiences",
-      titlePart1: "Enter",
-      titlePart2: "tainment",
-      description:
-        "Nightly shows, headline performers and late-night parties, planned throughout the holiday for every age.",
-    },
+    title: "Entertainment",
+    description: "Nightly shows, headline performers and late-night parties, planned throughout the holiday for every age.",
+    heroImage: AllImages.entertainment1,
+    columns: 3,
     items: [
       {
         id: "after-party",
         title: "The After Party",
         tag: "Nightly",
-        description:
-          "As night falls, SO’OL beach club comes alive with DJ parties, hookah, disco and casino nights.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "The After Party photo",
-        modal: {
+        description: "As night falls, SO’OL beach club comes alive with DJ parties, hookah, disco and casino nights.",
+        image: AllImages.entertainment1,
+        details: {
           title: "The After Party",
           tag: "Nightly",
-          longDescription:
+          paragraphs: [
             "When the main event ends, the night is just beginning. DJ parties, hookah, disco, casino nights and more await.",
-          when: "Nightly, after the evening program",
-          where: "SO’OL beach club",
-          mainPhotoPlaceholder: "The After Party — main photo",
-          thumbnails: [
-            { id: "t1", label: "DJ photo", placeholderText: "DJ photo" },
-            { id: "t2", label: "Music photo", placeholderText: "Music photo" },
-            { id: "t3", label: "Lounge photo", placeholderText: "Lounge photo" },
+          ],
+          facts: [
+            { label: "When", value: "Nightly, after the evening program" },
+            { label: "Where", value: "SO’OL beach club" },
           ],
         },
       },
@@ -253,20 +133,16 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         title: "Fire Shows",
         tag: "Evenings",
         description: "An incredible lineup of nightly entertainment.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "Fire Shows photo",
-        modal: {
+        image: AllImages.entertainment1,
+        details: {
           title: "Fire Shows",
           tag: "Evenings",
-          longDescription:
+          paragraphs: [
             "An incredible lineup of nightly entertainment under the Cancun sky featuring acrobats, fire manipulators, and percussion rhythms.",
-          when: "Select evenings during Chol Hamoed",
-          where: "Casa Nizuc Beachfront",
-          mainPhotoPlaceholder: "Fire Shows — main photo",
-          thumbnails: [
-            { id: "t1", label: "Fire Show 1", placeholderText: "Fire show photo" },
-            { id: "t2", label: "Fire Show 2", placeholderText: "Acrobatics photo" },
-            { id: "t3", label: "Fire Show 3", placeholderText: "Crowd photo" },
+          ],
+          facts: [
+            { label: "When", value: "Select evenings during Chol Hamoed" },
+            { label: "Where", value: "Casa Nizuc Beachfront" },
           ],
         },
       },
@@ -275,20 +151,16 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         title: "DJ Pinny & Yiddi",
         tag: "Featured",
         description: "DJ Pinny and DJ Yiddi are set to ignite the party and keep the celebration going.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "DJ Pinny & Yiddi photo",
-        modal: {
+        image: AllImages.entertainment1,
+        details: {
           title: "DJ Pinny & Yiddi",
           tag: "Music & Beats",
-          longDescription:
+          paragraphs: [
             "High-energy sets bringing the best Jewish, Israeli, and electronic beats to the dance floor for memorable late-night celebrations.",
-          when: "Nightly afterparties and poolside sets",
-          where: "Beach Club & Pool Stage",
-          mainPhotoPlaceholder: "DJ Pinny & Yiddi — main photo",
-          thumbnails: [
-            { id: "t1", label: "DJ Set", placeholderText: "DJ Set photo" },
-            { id: "t2", label: "Crowd", placeholderText: "Crowd dancing" },
-            { id: "t3", label: "Stage", placeholderText: "Stage lights" },
+          ],
+          facts: [
+            { label: "When", value: "Nightly afterparties and poolside sets" },
+            { label: "Where", value: "Beach Club & Pool Stage" },
           ],
         },
       },
@@ -297,20 +169,16 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         title: "Kumzits with Nussi and Benyomin",
         tag: "Featured",
         description: "Kumzits together with Nussi Liberman and Benjamin Lerner.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "Kumzits photo",
-        modal: {
+        image: AllImages.entertainment1,
+        details: {
           title: "Kumzits with Nussi and Benyomin",
           tag: "Soulful Kumzits",
-          longDescription:
+          paragraphs: [
             "Soul-stirring acoustic singing, classic niggunim, and heartwarming stories around the firepit at La Aldea.",
-          when: "Chol Hamoed evenings",
-          where: "La Aldea Firepit",
-          mainPhotoPlaceholder: "Kumzits — main photo",
-          thumbnails: [
-            { id: "t1", label: "Kumzits", placeholderText: "Kumzits singing" },
-            { id: "t2", label: "Guitars", placeholderText: "Acoustic guitars" },
-            { id: "t3", label: "Firepit", placeholderText: "Night campfire" },
+          ],
+          facts: [
+            { label: "When", value: "Chol Hamoed evenings" },
+            { label: "Where", value: "La Aldea Firepit" },
           ],
         },
       },
@@ -318,30 +186,20 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         id: "comedian-dovi-neuburger",
         title: "Comedian Dovi Neuburger",
         tag: "Featured",
-        description:
-          "From his Orthodox upbringing to being an NYU dropout, comedian Dovi Neuburger brings his stand-up.",
-        image: AllImages.entertainment,
-        imagePlaceholderText: "Comedian Dovi Neuburger photo",
-        modal: {
+        description: "From his Orthodox upbringing to being an NYU dropout, comedian Dovi Neuburger brings his stand-up.",
+        image: AllImages.entertainment1,
+        details: {
           title: "Comedian Dovi Neuburger",
           tag: "Comedy Night",
-          longDescription:
+          paragraphs: [
             "Hilarious observational humor, quick-witted crowd work, and clean comedy tailored for the whole family.",
-          when: "Chol Hamoed Evening Show",
-          where: "Grand Nizuc Ballroom",
-          mainPhotoPlaceholder: "Comedy Show — main photo",
-          thumbnails: [
-            { id: "t1", label: "Show 1", placeholderText: "Stage photo" },
-            { id: "t2", label: "Show 2", placeholderText: "Audience laughter" },
-            { id: "t3", label: "Show 3", placeholderText: "Encore" },
+          ],
+          facts: [
+            { label: "When", value: "Chol Hamoed Evening Show" },
+            { label: "Where", value: "Grand Nizuc Ballroom" },
           ],
         },
       },
     ],
-    inquireBanner: {
-      headlinePart1: "Celebrate with us for ",
-      headlinePart2: "Passover 2027",
-      buttonText: "Inquire",
-    },
   },
 };

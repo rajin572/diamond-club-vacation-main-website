@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "./design.css";
 
 @custom-variant dark (&:is(.dark *));
 @theme default {
@@ -8,7 +9,7 @@
   --font-mono: var(--font-outfit), "Outfit", sans-serif;
   --font-heading: var(--font-cormorant), "Cormorant Garamond", serif;
   --color-primary-color: #ffffff;
-  --color-background-color: #fcfcfb;
+  --color-background-color: #fbf7ef;
   --color-secondary-color: #00549c;
   --color-base-color: #131313;
   --color-base-secondary-color: #5e6062;

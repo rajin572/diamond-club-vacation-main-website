@@ -1,8 +1,7 @@
-import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ResortRestaurantDetailView } from "@/components/resorts";
-import { getResort, getResortRouteParams } from "@/data/resorts/registry";
+import { ResortDetailView } from "@/components/resorts";
+import { getResort, getResortDetailItem, getResortDetailItems, getResortRouteParams } from "@/data/resorts/registry";
 
 interface PageProps {
   params: Promise<{ offeringId: string; programId: string; resortId: string; restaurantId: string }>;
@@ -12,21 +11,21 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   return getResortRouteParams().flatMap(({ resort, params }) =>
-    resort.dining.map((venue) => ({ ...params, restaurantId: venue.id }))
+    getResortDetailItems(resort, "restaurant").map((venue) => ({ ...params, restaurantId: venue.id }))
   );
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { resortId, restaurantId } = await params;
   const resort = getResort(resortId);
-  const venue = resort?.dining.find((d) => d.id === restaurantId);
+  const venue = resort && getResortDetailItem(resort, "restaurant", restaurantId);
 
-  if (!venue) {
+  if (!resort || !venue) {
     return { title: "Restaurant Not Found" };
   }
 
   return {
-    title: `${venue.title} | ${resort!.resortName}`,
+    title: `${venue.title} | ${resort.resortName}`,
     description: venue.description,
   };
 }
@@ -34,12 +33,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function RestaurantPage({ params }: PageProps) {
   const { offeringId, programId, resortId, restaurantId } = await params;
   const resort = getResort(resortId);
+  const venue = resort && getResortDetailItem(resort, "restaurant", restaurantId);
 
-  if (!resort || resort.programId !== programId || !resort.dining.some((d) => d.id === restaurantId)) {
+  if (!resort || resort.programId !== programId || !venue) {
     notFound();
   }
 
-  return (
-    <ResortRestaurantDetailView offeringId={offeringId} programId={programId} data={resort} restaurantId={restaurantId} />
-  );
+  return <ResortDetailView offeringId={offeringId} programId={programId} data={resort} item={venue} kind="restaurant" />;
 }

@@ -1,22 +1,10 @@
-import React from "react";
-import Navbar from "@/components/shared/Navbar";
-import Footer from "@/components/shared/Footer";
-import LenisSmoothScroll from "@/components/ui/CustomUi/animation/components/LenisSmoothScroll";
+import SiteShell from "@/components/shared/SiteShell";
 import { NotFoundView } from "@/components/notFound";
 
 export default function NotFound() {
   return (
-    <>
-      <LenisSmoothScroll />
-      <div className="fixed top-0 h-fit! w-full z-100!">
-        <Navbar />
-      </div>
-      <div className="relative min-h-screen flex flex-col justify-between overflow-x-clip bg-background-color">
-        <main className="flex-1 pt-20">
-          <NotFoundView />
-        </main>
-        <Footer />
-      </div>
-    </>
+    <SiteShell>
+      <NotFoundView />
+    </SiteShell>
   );
 }

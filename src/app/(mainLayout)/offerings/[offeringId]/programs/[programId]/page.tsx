@@ -1,8 +1,7 @@
-import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
-import { ProgramMainView } from "@/components/programs";
+import { ProgramOverviewView } from "@/components/programs";
 import { getProgram, programsRegistry } from "@/data/programs/registry";
 import { programHref } from "@/lib/routes";
 
@@ -25,33 +24,33 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Program Not Found" };
   }
 
-  const pageTitle = `${program.title.part1}${program.title.part2} | Passover 2027`;
+  const pageTitle = `${program.title} | Passover 2027`;
   const pageUrl = programHref(offeringId, programId);
-  const ogImage = typeof program.images.primary.src === "string" ? program.images.primary.src : program.images.primary.src.src;
+  const description = program.overview.about[0] ?? program.tagline;
 
   return {
     title: pageTitle,
-    description: program.description,
-    keywords: program.metaKeywords,
+    description,
+    keywords: program.keywords,
     alternates: { canonical: pageUrl },
     openGraph: {
       title: `${pageTitle} | ${siteConfig.name}`,
-      description: program.description,
+      description,
       url: pageUrl,
       siteName: siteConfig.name,
       locale: "en_US",
       type: "website",
-      images: [{ url: ogImage, alt: pageTitle }],
+      images: [{ url: program.overview.heroImage.src, alt: pageTitle }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${pageTitle} | ${siteConfig.name}`,
-      description: program.description,
+      description,
     },
   };
 }
 
-export default async function ProgramPage({ params }: PageProps) {
+export default async function ProgramOverviewPage({ params }: PageProps) {
   const { offeringId, programId } = await params;
   const program = getProgram(programId);
 
@@ -59,5 +58,5 @@ export default async function ProgramPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ProgramMainView offeringId={offeringId} data={program} />;
+  return <ProgramOverviewView offeringId={offeringId} data={program} />;
 }

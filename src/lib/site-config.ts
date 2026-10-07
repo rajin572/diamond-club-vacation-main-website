@@ -8,12 +8,12 @@
  * replace `contact` with the real business details before launch.
  */
 export const siteConfig = {
-  name: "Diamond Club Vacation",
-  title: "Diamond Club Vacation | Exclusive Points-Based Vacation Club",
+  name: "Diamond Club Vacations",
+  title: "Diamond Club Vacations | Luxury Kosher Hospitality Worldwide",
   description:
-    "Join Diamond Club Vacation and unlock flexible points, premium resort stays, and dedicated concierge support for members worldwide.",
+    "Luxury kosher hospitality built around exceptional destinations: the Passover Collection 2027, year-round Casa Nizuc, destination weddings and private events.",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.diamondclubvacation.com",
-  ogImage: "/images/homepage/heroBackground.jpg",
+  ogImage: "/images/mainDesign/home-hero-image.png",
   contact: {
     phone: "+1 (555) 010-0142",
     email: "support@diamondclubvacation.com",

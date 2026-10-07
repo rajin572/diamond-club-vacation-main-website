@@ -1,20 +1,16 @@
-"use client";
-
-import React, { useState } from "react";
-import type { ResortData } from "./resorts.types";
-import ResortBreadcrumb from "./ResortBreadcrumb";
-import ResortHero from "./ResortHero";
-import ResortSectionNav from "./ResortSectionNav";
-import ResortAboutSection from "./ResortAboutSection";
-import ResortRoomsSection from "./ResortRoomsSection";
-import ResortDiningSection from "./ResortDiningSection";
-import ResortPoolSection from "./ResortPoolSection";
-import ResortWellnessSection from "./ResortWellnessSection";
-import ResortSpaSection from "./ResortSpaSection";
-import ResortGallerySection from "./ResortGallerySection";
-import ResortInquireBanner from "./ResortInquireBanner";
-import ResortPhotoModal from "./ResortPhotoModal";
-import ResortDetailsModal from "./ResortDetailsModal";
+import Link from "next/link";
+import {
+  DesignCard,
+  DetailHero,
+  PhotoGallery,
+  RoomCard,
+  SectionTitle,
+  SubNav,
+  Wrap,
+} from "@/components/shared/design";
+import type { DesignLink } from "@/components/shared/design";
+import { experienceHref, inquireHref, restaurantHref, poolHref, roomHref, spaHref } from "@/lib/routes";
+import type { ResortData, ResortDetailItem, ResortTarget } from "./resorts.types";
 
 interface ResortMainViewProps {
   offeringId: string;
@@ -22,112 +18,146 @@ interface ResortMainViewProps {
   data: ResortData;
 }
 
-export const ResortMainView: React.FC<ResortMainViewProps> = ({ offeringId, programId, data }) => {
-  const [galleryOpen, setGalleryOpen] = useState(false);
-  const [detailsOpen, setDetailsOpen] = useState(false);
+function overviewGridClass(cardCount: number): string {
+  if (cardCount <= 2) return "dcv-grid2";
+  if (cardCount % 4 === 0) return "dcv-grid4";
+  return "dcv-grid3";
+}
+
+/** Pill links under a section heading, one per venue that has its own detail page. */
+function VenueChips({ label, items, hrefFor }: { label: string; items: ResortDetailItem[]; hrefFor: (id: string) => string }) {
+  if (items.length === 0) return null;
 
   return (
-    <main className="w-full min-h-screen bg-[#FCFCFB] pt-20 sm:pt-20 md:pt-20 flex flex-col">
-      <ResortBreadcrumb
-        offeringId={offeringId}
-        programId={programId}
-        programTitle={data.programTitle}
-        resortId={data.resortId}
-        resortName={data.resortName}
-      />
-
-      <ResortHero
-        programId={programId}
-        resortId={data.resortId}
-        resortName={data.resortName}
-        shortName={data.shortName}
-        tagline={data.tagline}
-        heroImage={data.heroImage}
-        heroCtas={data.heroCtas}
-        onOpenGallery={() => setGalleryOpen(true)}
-        onOpenDetails={() => setDetailsOpen(true)}
-      />
-
-      <ResortSectionNav programId={programId} resortId={data.resortId} />
-
-      {data.about && (
-        <ResortAboutSection
-          about={data.about}
-          details={data.details}
-          onOpenDetails={() => setDetailsOpen(true)}
-        />
-      )}
-
-      <ResortRoomsSection
-        offeringId={offeringId}
-        programId={programId}
-        resortId={data.resortId}
-        rooms={data.rooms}
-        sectionTitle={data.roomsTitle}
-        sectionDescription={data.roomsDescription}
-      />
-
-      <ResortDiningSection
-        offeringId={offeringId}
-        programId={programId}
-        resortId={data.resortId}
-        dining={data.dining}
-        sectionTitle={data.diningTitle}
-        sectionDescription={data.diningDescription}
-      />
-
-      <ResortPoolSection
-        offeringId={offeringId}
-        programId={programId}
-        resortId={data.resortId}
-        pools={data.pools}
-        intro={data.poolsIntro}
-        sectionTitle={data.poolsTitle}
-        sectionDescription={data.poolsDescription}
-      />
-
-      <ResortWellnessSection
-        offeringId={offeringId}
-        programId={programId}
-        resortId={data.resortId}
-        wellness={data.wellnessActivities ?? data.wellness}
-        sectionTitle={data.wellnessTitle}
-        sectionDescription={data.wellnessDescription}
-      />
-
-      <ResortSpaSection
-        offeringId={offeringId}
-        programId={programId}
-        resortId={data.resortId}
-        spa={data.spa}
-      />
-
-      <ResortGallerySection resortName={data.resortName} gallery={data.gallery} />
-
-      <ResortInquireBanner
-        programId={programId}
-        resortId={data.resortId}
-        resortName={data.resortName}
-        heroImage={data.heroImage}
-      />
-
-      <ResortPhotoModal
-        isOpen={galleryOpen}
-        onClose={() => setGalleryOpen(false)}
-        photos={data.gallery}
-        title={data.resortName}
-      />
-
-      {data.details && (
-        <ResortDetailsModal
-          isOpen={detailsOpen}
-          onClose={() => setDetailsOpen(false)}
-          title={`Resort details`}
-          details={data.details}
-        />
-      )}
-    </main>
+    <nav className="dcv-gallery-tabs" aria-label={label}>
+      {items.map((item) => (
+        <Link key={item.id} href={hrefFor(item.id)}>
+          {item.title}
+        </Link>
+      ))}
+    </nav>
   );
-};
+}
+
+/**
+ * A complete hotel page: hero, floating sub navigation, "discover" cards, then one block per category
+ * (rooms, dining, pools, wellness, spa, gallery). Every resort (St. Regis, EDITION, Park Hyatt, Waldorf,
+ * Casa Nizuc) renders through this one component (client design: st-regis.html and its sub pages).
+ */
+export function ResortMainView({ offeringId, programId, data }: ResortMainViewProps) {
+  const targetHref = (target: ResortTarget): string =>
+    target.type === "section" ? `#${target.section}` : experienceHref(offeringId, programId, target.experienceType);
+
+  const navItems: DesignLink[] = data.showSubNav
+    ? [
+        { label: data.overviewLabel, href: "#overview" },
+        ...data.overview.cards.map((card) => ({ label: card.navLabel ?? card.title, href: targetHref(card.target) })),
+        ...(data.subNavInquire
+          ? [{ label: "Inquire", href: inquireHref({ destination: programId, resort: data.resortId }) }]
+          : []),
+      ]
+    : [];
+
+  const { rooms, dining, pools, wellness, spa, gallery } = data;
+
+  return (
+    <>
+      <DetailHero image={data.heroImage} kicker={data.kicker} title={data.resortName} subtitle={data.tagline} />
+      <SubNav items={navItems} label={`${data.resortName} sections`} />
+
+      <Wrap id="overview">
+        {data.overview.title && (
+          <SectionTitle title={data.overview.title} description={data.overview.description} />
+        )}
+        <div className={overviewGridClass(data.overview.cards.length)}>
+          {data.overview.cards.map((card) => (
+            <DesignCard
+              key={card.id}
+              image={card.image}
+              title={card.title}
+              description={card.description}
+              href={targetHref(card.target)}
+            />
+          ))}
+        </div>
+      </Wrap>
+
+      <Wrap id="rooms" className="dcv-wrap--stack">
+        <SectionTitle title={rooms.title} description={rooms.description} />
+        <div className="dcv-roomlist">
+          {rooms.items.map((room) => (
+            <RoomCard
+              key={room.id}
+              image={room.image}
+              title={room.title}
+              meta={room.subtitle}
+              href={rooms.linkToDetails ? roomHref(offeringId, programId, data.resortId, room.id) : undefined}
+            />
+          ))}
+        </div>
+      </Wrap>
+
+      {dining && (
+        <Wrap id="dining" className="dcv-wrap--stack">
+          <SectionTitle title={dining.title} description={dining.description} />
+          <VenueChips
+            label={`${data.resortName} restaurants`}
+            items={dining.items}
+            hrefFor={(id) => restaurantHref(offeringId, programId, data.resortId, id)}
+          />
+          <PhotoGallery images={dining.images} alt={`${data.resortName} dining`} />
+        </Wrap>
+      )}
+
+      {pools && (
+        <Wrap id="pools" className="dcv-wrap--stack">
+          <SectionTitle title={pools.title} description={pools.description} />
+          <VenueChips
+            label={`${data.resortName} pools`}
+            items={pools.items}
+            hrefFor={(id) => poolHref(offeringId, programId, data.resortId, id)}
+          />
+          <PhotoGallery images={pools.images} alt={`${data.resortName} pools and beach`} />
+        </Wrap>
+      )}
+
+      {wellness && (
+        <Wrap id="wellness" className="dcv-wrap--stack">
+          <SectionTitle title={wellness.title} description={wellness.description} />
+          <div className="dcv-gallery-tabs">
+            {spa && !spa.section && (
+              <Link className="dcv-on" href={spaHref(offeringId, programId, data.resortId)}>
+                {spa.item.title} →
+              </Link>
+            )}
+            {wellness.activities.map((activity) => (
+              <span key={activity.id} title={activity.description}>
+                {activity.title}
+              </span>
+            ))}
+          </div>
+          <PhotoGallery images={wellness.images} alt={`${data.resortName} wellness`} />
+        </Wrap>
+      )}
+
+      {spa?.section && (
+        <Wrap id="spa" className="dcv-wrap--stack">
+          <SectionTitle title={spa.section.title} description={spa.section.description} />
+          <div className="dcv-gallery-tabs">
+            <Link className="dcv-on" href={spaHref(offeringId, programId, data.resortId)}>
+              {spa.item.title} details →
+            </Link>
+          </div>
+          <PhotoGallery images={spa.section.images} alt={`${data.resortName} spa`} />
+        </Wrap>
+      )}
+
+      <Wrap id="gallery" className="dcv-wrap--stack">
+        <SectionTitle title={gallery.title} description={gallery.description} />
+        <PhotoGallery images={gallery.images} alt={`${data.resortName} gallery`} />
+      </Wrap>
+    </>
+  );
+}
 
 export default ResortMainView;

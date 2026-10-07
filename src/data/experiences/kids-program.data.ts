@@ -1,161 +1,85 @@
 import { AllImages } from "../../../public/images/AllImages";
-import type { KidsProgramData } from "@/components/kidsProgram/kidsProgram.types";
+import type { ExperienceCategoryData } from "@/components/experiences/experiences.types";
 
-export const KIDS_PROGRAM_BY_PROGRAM: Record<string, KidsProgramData> = {
+export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
   "diamond-club-reserve": {
-    badge: "Experiences",
-    headline: { part1: "Kids ", part2: "Program" },
-    description:
-      "A full program for every age, from supervised play for the youngest guests to a dedicated teen program, so parents can relax and enjoy the holiday.",
-    programs: [
+    programId: "diamond-club-reserve",
+    programTitle: "DIAMOND CLUB RESERVE",
+    experienceType: "kids-program",
+    title: "Kids Program",
+    description: "A full program for every age, from supervised play for the youngest guests to a dedicated teen program, so parents can relax and enjoy the holiday.",
+    heroImage: AllImages.kids1,
+    columns: 2,
+    items: [
       {
         id: "day-camp-teen-program",
-        tag: "Ages 18 months to teens",
         title: "Day Camp & Teen Program",
-        description:
-          "An action-packed day camp for all your kids, filled with activities, events, sports, games, live shows and entertainment, led by our counselors.",
-        linkText: "See details",
-        isModalTrigger: false,
-        images: {
-          main: AllImages.kidsProgram,
-          mainPlaceholder: "Day camp photo",
-          secondary1: AllImages.ecoAdventureParks,
-          secondary1Placeholder: "Water park photo",
-          secondary2: AllImages.entertainment,
-          secondary2Placeholder: "Counselors photo",
-        },
+        tag: "Ages 18 months to teens",
+        description: "An action-packed day camp for all your kids, filled with activities, events, sports, games, live shows and entertainment, led by our counselors.",
+        image: AllImages.kids1,
+        linkTo: "kids-day-camp",
+        linkLabel: "See details →",
       },
       {
         id: "babysitting",
-        tag: "For infants and toddlers",
         title: "Babysitting",
-        description:
-          "A free, responsible babysitting service is available during camp hours in our dedicated baby room. Private babysitting is also available.",
-        linkText: "See details",
-        isModalTrigger: true,
-        images: { main: AllImages.kidsProgram, mainPlaceholder: "Babysitting photo" },
-      },
-    ],
-    babysittingModal: {
-      category: "Kids Program",
-      tag: "Free during camp hours",
-      title: "Babysitting",
-      description:
-        "A free, responsible babysitting service is available during camp hours in our special Toddler’s Camp. Private babysitting is available for a fee.",
-      when: "During camp hours",
-      where: "Toddler’s Camp",
-      privateNote: "Available for a fee",
-      ctaText: "Ask about babysitting",
-      image: AllImages.kidsProgram,
-      imagePlaceholderText: "Babysitting photo",
-    },
-    inquireBanner: {
-      headline: { part1: "Bring the whole family for ", part2: "Passover 2027" },
-      buttonText: "Inquire",
-    },
-  },
-  guttaway: {
-    badge: "Experiences",
-    headline: { part1: "Kids ", part2: "Program" },
-    description:
-      "A full program for every age, from supervised play for the youngest guests to a dedicated teen program, so parents can relax and enjoy the holiday.",
-    programs: [
-      {
-        id: "day-camp-teen-program",
-        tag: "Ages 18 months to teens",
-        title: "Day Camp & Teen Program",
-        description:
-          "An action-packed day camp for all your kids, filled with activities, events, sports, games, live shows and entertainment, led by our counselors.",
-        linkText: "See details",
-        isModalTrigger: false,
-        images: {
-          main: AllImages.kidsProgram,
-          mainPlaceholder: "Day camp photo",
-          secondary1: AllImages.ecoAdventureParks,
-          secondary1Placeholder: "Water park photo",
-          secondary2: AllImages.entertainment,
-          secondary2Placeholder: "Counselors photo",
+        tag: "For infants and toddlers",
+        description: "A free, responsible babysitting service is available during camp hours in our dedicated baby room. Private babysitting is also available.",
+        image: AllImages.kids1,
+        linkLabel: "See details →",
+        details: {
+          title: "Babysitting",
+          tag: "Free during camp hours",
+          paragraphs: [
+            "A free, responsible babysitting service is available during camp hours in our special Toddler’s Camp. Private babysitting is available for a fee.",
+          ],
+          facts: [
+            { label: "When", value: "During camp hours" },
+            { label: "Where", value: "Toddler’s Camp" },
+            { label: "Private babysitting", value: "Available for a fee" },
+          ],
         },
       },
-      {
-        id: "babysitting",
-        tag: "For infants and toddlers",
-        title: "Babysitting",
-        description:
-          "A free, responsible babysitting service is available during camp hours in our dedicated baby room. Private babysitting is also available.",
-        linkText: "See details",
-        isModalTrigger: true,
-        images: { main: AllImages.kidsProgram, mainPlaceholder: "Babysitting photo" },
-      },
     ],
-    babysittingModal: {
-      category: "Kids Program",
-      tag: "Free during camp hours",
-      title: "Babysitting",
-      description:
-        "A free, responsible babysitting service is available during camp hours in our special Toddler’s Camp. Private babysitting is available for a fee.",
-      when: "During camp hours",
-      where: "Toddler’s Camp",
-      privateNote: "Available for a fee",
-      ctaText: "Ask about babysitting",
-      image: AllImages.kidsProgram,
-      imagePlaceholderText: "Babysitting photo",
-    },
-    inquireBanner: {
-      headline: { part1: "Bring the whole family for ", part2: "Passover 2027" },
-      buttonText: "Inquire",
-    },
   },
   blue: {
-    badge: "Experiences",
-    headline: { part1: "Kids ", part2: "Program" },
-    description:
-      "A full program for every age, from supervised play for the youngest guests to a dedicated teen program, so parents can relax and enjoy the holiday.",
-    programs: [
+    programId: "blue",
+    programTitle: "Diamond Blue by DCV",
+    experienceType: "kids-program",
+    title: "Kids Program",
+    description: "A full program for every age, from supervised play for the youngest guests to a dedicated teen program, so parents can relax and enjoy the holiday.",
+    heroImage: AllImages.kids1,
+    columns: 2,
+    items: [
       {
         id: "day-camp-teen-program",
-        tag: "Ages 18 months to teens",
         title: "Day Camp & Teen Program",
-        description:
-          "An action-packed day camp for all your kids, filled with activities, events, sports, games, live shows and entertainment, led by our counselors.",
-        linkText: "See details",
-        isModalTrigger: false,
-        images: {
-          main: AllImages.kidsProgram,
-          mainPlaceholder: "Day camp photo",
-          secondary1: AllImages.ecoAdventureParks,
-          secondary1Placeholder: "Water park photo",
-          secondary2: AllImages.experience1,
-          secondary2Placeholder: "Counselors photo",
-        },
+        tag: "Ages 18 months to teens",
+        description: "An action-packed day camp for all your kids, filled with activities, events, sports, games, live shows and entertainment, led by our counselors.",
+        image: AllImages.kids1,
+        linkTo: "kids-day-camp",
+        linkLabel: "See details →",
       },
       {
         id: "babysitting",
-        tag: "For infants and toddlers",
         title: "Babysitting",
-        description:
-          "A free, responsible babysitting service is available during camp hours in our dedicated baby room. Private babysitting is also available.",
-        linkText: "See details",
-        isModalTrigger: true,
-        images: { main: AllImages.kidsProgram, mainPlaceholder: "Babysitting photo" },
+        tag: "For infants and toddlers",
+        description: "A free, responsible babysitting service is available during camp hours in our dedicated baby room. Private babysitting is also available.",
+        image: AllImages.kids1,
+        linkLabel: "See details →",
+        details: {
+          title: "Babysitting",
+          tag: "Free during camp hours",
+          paragraphs: [
+            "A free, responsible babysitting service is available during camp hours in our special Toddler’s Camp. Private babysitting is available for a fee.",
+          ],
+          facts: [
+            { label: "When", value: "During camp hours" },
+            { label: "Where", value: "Toddler’s Camp" },
+            { label: "Private babysitting", value: "Available for a fee" },
+          ],
+        },
       },
     ],
-    babysittingModal: {
-      category: "Kids Program",
-      tag: "Free during camp hours",
-      title: "Babysitting",
-      description:
-        "A free, responsible babysitting service is available during camp hours in our special Toddler’s Camp. Private babysitting is available for a fee.",
-      when: "During camp hours",
-      where: "Toddler’s Camp",
-      privateNote: "Available for a fee",
-      ctaText: "Ask about babysitting",
-      image: AllImages.kidsProgram,
-      imagePlaceholderText: "Babysitting photo",
-    },
-    inquireBanner: {
-      headline: { part1: "Bring the whole family for ", part2: "Passover 2027" },
-      buttonText: "Inquire",
-    },
   },
 };

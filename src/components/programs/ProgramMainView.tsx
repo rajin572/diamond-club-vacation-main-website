@@ -1,54 +1,62 @@
-import React from "react";
-import type { ProgramData } from "./programs.types";
-import ProgramHero from "./ProgramHero";
-import ProgramTabs from "./ProgramTabs";
-import ProgramAbout from "./ProgramAbout";
-import ProgramWhereYouStay from "./ProgramWhereYouStay";
-import ProgramExperiences from "./ProgramExperiences";
-import ProgramExplore from "./ProgramExplore";
-import ProgramInquiryBanner from "./ProgramInquiryBanner";
-import ProgramSimpleHero from "./ProgramSimpleHero";
-import ProgramSimpleAbout from "./ProgramSimpleAbout";
-import { inquireHref as buildInquireHref } from "@/lib/routes";
+import { DesignCard, DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
+import type { DesignLink } from "@/components/shared/design";
+import { experienceHref, inquireHref, programHref, resortHref } from "@/lib/routes";
+import type { ProgramCardData, ProgramData, ProgramTarget } from "./programs.types";
 
 interface ProgramMainViewProps {
   offeringId: string;
   data: ProgramData;
 }
 
-/**
- * Renders every program (Diamond Club Reserve, Guttaway, Blue, and any future program) from one
- * component. Sections render only when the program's data includes them — a program with just
- * hero/about content (no `hero`/`tabs`/`whereYouStay`/etc.) gets a lighter page automatically,
- * without a separate component tree.
- */
-export const ProgramMainView: React.FC<ProgramMainViewProps> = ({ offeringId, data }) => {
-  const inquireHref = buildInquireHref({ destination: data.id });
+function targetHref(offeringId: string, programId: string, target: ProgramTarget): string {
+  return target.type === "resort"
+    ? resortHref(offeringId, programId, target.resortId)
+    : experienceHref(offeringId, programId, target.experienceType);
+}
 
-  if (!data.hero) {
-    return (
-      <div className="w-full flex flex-col bg-background-color min-h-[70vh]">
-        <ProgramSimpleHero data={data} inquireHref={inquireHref} />
-        <ProgramSimpleAbout data={data} />
-      </div>
-    );
-  }
+/**
+ * Renders every program (Diamond Club Reserve, Guettaway, Diamond Blue, and any future program) from one
+ * component (client design: reserve.html / guettaway.html / diamond-blue.html).
+ */
+export function ProgramMainView({ offeringId, data }: ProgramMainViewProps) {
+  const cardLinks = (cards: ProgramCardData[]) =>
+    cards.map((card) => (
+      <DesignCard
+        key={card.id}
+        image={card.image}
+        title={card.title}
+        description={card.description}
+        href={targetHref(offeringId, data.id, card.target)}
+      />
+    ));
+
+  const navItems: DesignLink[] = (data.nav ?? []).map((item) => ({
+    label: item.label,
+    href:
+      item.target.type === "overview"
+        ? programHref(offeringId, data.id)
+        : item.target.type === "inquire"
+          ? inquireHref({ destination: data.id })
+          : targetHref(offeringId, data.id, item.target),
+  }));
 
   return (
-    <div className="w-full flex flex-col bg-background-color">
-      <ProgramHero data={data.hero} inquireHref={inquireHref} />
-      {data.tabs && <ProgramTabs tabs={data.tabs} inquireHref={inquireHref} />}
-      {data.about && <ProgramAbout data={data.about} inquireHref={inquireHref} />}
-      {data.whereYouStay && (
-        <ProgramWhereYouStay offeringId={offeringId} programId={data.id} data={data.whereYouStay} />
-      )}
-      {data.experiences && (
-        <ProgramExperiences offeringId={offeringId} programId={data.id} data={data.experiences} />
-      )}
-      {data.explore && <ProgramExplore offeringId={offeringId} programId={data.id} data={data.explore} />}
-      <ProgramInquiryBanner data={data.inquiry} inquireHref={inquireHref} />
-    </div>
+    <>
+      <DetailHero image={data.heroImage} kicker={data.kicker} title={data.title} subtitle={data.tagline} />
+      <SubNav items={navItems} label={`${data.title} sections`} />
+      <Wrap>
+        <SectionTitle title={data.stay.title} description={data.stay.description} />
+        <div className={data.stay.columns === 4 ? "dcv-grid4" : "dcv-grid2"}>{cardLinks(data.stay.cards)}</div>
+
+        {data.destination && (
+          <>
+            <SectionTitle title={data.destination.title} className="mt-[70px]" />
+            <div className="dcv-grid3">{cardLinks(data.destination.cards)}</div>
+          </>
+        )}
+      </Wrap>
+    </>
   );
-};
+}
 
 export default ProgramMainView;

@@ -1,64 +1,36 @@
-"use client";
-
-import React, { useState } from "react";
-import ExperienceBreadcrumb from "./ExperienceBreadcrumb";
-import ExperienceHeader from "./ExperienceHeader";
-import ExperienceGrid from "./ExperienceGrid";
-import ExperienceInquireBanner from "./ExperienceInquireBanner";
-import ExperienceDetailModal from "./ExperienceDetailModal";
-import type { ExperienceCategoryData, ExperienceItem } from "./experiences.types";
+import { DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
+import type { DesignLink } from "@/components/shared/design";
+import { experienceHref, inquireHref } from "@/lib/routes";
+import ExperienceCards from "./ExperienceCards";
+import type { ExperienceCategoryData } from "./experiences.types";
 
 interface ExperienceCategoryViewProps {
   offeringId: string;
   data: ExperienceCategoryData;
+  nav: DesignLink[];
 }
 
-export const ExperienceCategoryView: React.FC<ExperienceCategoryViewProps> = ({ offeringId, data }) => {
-  const [selectedIndex, setSelectedIndex] = useState<number | undefined>(undefined);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleSelect = (_item: ExperienceItem, index: number) => {
-    setSelectedIndex(index);
-    setIsModalOpen(true);
-  };
+/** Attractions / entertainment / scholars / kids program (client design: edition-entertainment.html and siblings). */
+export function ExperienceCategoryView({ offeringId, data, nav }: ExperienceCategoryViewProps) {
+  const items = data.items.map((item) => ({
+    ...item,
+    href: item.linkTo ? experienceHref(offeringId, data.programId, item.linkTo) : undefined,
+  }));
 
   return (
-    <main className="w-full min-h-screen bg-[#FCFCFB] pt-20 sm:pt-20 md:pt-20">
-      <ExperienceBreadcrumb
-        offeringId={offeringId}
-        programId={data.programId}
-        programTitle={data.programTitle}
-        categoryLabel={data.breadcrumbLabel}
-      />
-
-      <ExperienceHeader
-        badge={data.header.badge}
-        titlePart1={data.header.titlePart1}
-        titlePart2={data.header.titlePart2}
-        description={data.header.description}
-        badgeStyle={data.badgeStyle}
-        accentColor={data.accentColor}
-      />
-
-      <ExperienceGrid items={data.items} columns={data.gridColumns} onSelect={handleSelect} />
-
-      <ExperienceInquireBanner
-        programId={data.programId}
-        experienceType={data.experienceType}
-        headlinePart1={data.inquireBanner.headlinePart1}
-        headlinePart2={data.inquireBanner.headlinePart2}
-        buttonText={data.inquireBanner.buttonText}
-      />
-
-      <ExperienceDetailModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        items={data.items}
-        initialIndex={selectedIndex}
-        categoryLabel={data.breadcrumbLabel}
-      />
-    </main>
+    <>
+      <DetailHero image={data.heroImage} kicker={data.programTitle} title={data.title} subtitle={data.programTitle} />
+      <SubNav items={nav} label={`${data.programTitle} sections`} />
+      <Wrap>
+        <SectionTitle title={data.title} description={data.description} />
+        <ExperienceCards
+          items={items}
+          columns={data.columns}
+          inquireHref={inquireHref({ destination: data.programId, topic: data.experienceType })}
+        />
+      </Wrap>
+    </>
   );
-};
+}
 
 export default ExperienceCategoryView;
