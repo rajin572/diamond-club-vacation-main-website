@@ -32,7 +32,7 @@ function AboutParagraphs({ paragraphs, strong }: { paragraphs: string[]; strong?
 
 /**
  * The page a guest lands on after picking a program (client brief: partner strip, highlights, "About This
- * Event", "See Details"). "See Details" opens the program's details hub with its hotels and attractions.
+ * Event", "See Details"). "See Details" opens the program's details hub with its hotels and experiences.
  */
 export function ProgramOverviewView({ offeringId, data }: ProgramOverviewViewProps) {
   const { overview } = data;
@@ -41,7 +41,7 @@ export function ProgramOverviewView({ offeringId, data }: ProgramOverviewViewPro
 
   return (
     <>
-      <DetailHero image={overview.heroImage} kicker={data.kicker} title={data.title} subtitle={data.tagline} />
+      <DetailHero image={overview.heroImage} title={data.title} subtitle={overview.tagline} />
 
       <Wrap>
         {overview.partnersLogo ? (

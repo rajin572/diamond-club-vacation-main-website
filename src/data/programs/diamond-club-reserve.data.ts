@@ -9,11 +9,17 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
   tagline: "The Riviera Maya, Kanai · our most exclusive Passover experience",
   heroImage: AllImages.reserveIntro1,
   card: {
-    description: "Our most exclusive Passover experience at Kanai.",
+    subtitle: "Our most exclusive Passover experience",
+    location: "THE RIVIERA MAYA, KANAI",
     image: AllImages.passoverCollectionDiamondClubReserve,
+    logos: [
+      { image: AllImages.logoStRegisWhite, alt: "St. Regis Kanai" },
+      { image: AllImages.logoEditionWhite, alt: "The Riviera Maya EDITION at Kanai" },
+    ],
   },
   overview: {
     heroImage: AllImages.reserveIntro1,
+    tagline: "Our most exclusive Passover experience",
     partners: [],
     partnersLogo: {
       image: AllImages.reservePartnerLogos,
@@ -36,42 +42,69 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
     { label: "Overview", target: { type: "overview" } },
     { label: "St. Regis", target: { type: "resort", resortId: "st-regis" } },
     { label: "EDITION", target: { type: "resort", resortId: "edition" } },
-    { label: "Attractions", target: { type: "experience", experienceType: "attractions" } },
     { label: "Inquire", target: { type: "inquire" } },
   ],
-  stay: {
-    title: "Where you’ll stay",
-    description:
-      "Choose your hotel first. Rooms, dining, pools, wellness, entertainment, kids programming and scholars live inside the hotel experience—not as disconnected Reserve pages.",
-    columns: 2,
-    cards: [
-      {
-        id: "st-regis",
-        title: "The St. Regis Kanai Resort",
-        description: "Explore rooms and suites, dining, pools, wellness, spa, entertainment, kids, scholars and gallery.",
-        image: AllImages.stregis1,
-        target: { type: "resort", resortId: "st-regis" },
-      },
-      {
-        id: "edition",
-        title: "The Riviera Maya EDITION at Kanai",
-        description: "Explore the complete EDITION hotel experience and its own room and resort photography.",
-        image: AllImages.edition1,
-        target: { type: "resort", resortId: "edition" },
-      },
-    ],
-  },
-  destination: {
-    title: "Explore the destination",
-    cards: [
-      {
-        id: "attractions",
-        title: "Attractions",
-        description: "Cancun Underwater Museum, Chichén Itzá, Xplor Park and more.",
-        image: AllImages.stregis1,
-        target: { type: "experience", experienceType: "attractions" },
-      },
-    ],
-  },
+  sections: [
+    {
+      title: "Where you’ll stay",
+      blocks: [
+        {
+          columns: 2,
+          cards: [
+            {
+              id: "st-regis",
+              title: "The St. Regis Kanai Resort",
+              image: AllImages.passoverCollectionDiamondClubReserve,
+              logos: [{ image: AllImages.logoStRegisWhite, alt: "St. Regis Kanai" }],
+              target: { type: "resort", resortId: "st-regis" },
+            },
+            {
+              id: "edition",
+              title: "The Edition Resort",
+              image: AllImages.reserveEditionResort,
+              logos: [{ image: AllImages.logoEditionWhite, alt: "The Riviera Maya EDITION at Kanai" }],
+              target: { type: "resort", resortId: "edition" },
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Experiences",
+      blocks: [
+        {
+          columns: 3,
+          cards: [
+            {
+              id: "entertainment",
+              title: "Entertainment",
+              image: AllImages.reserveEntertainment,
+              target: { type: "experience", experienceType: "entertainment" },
+            },
+            {
+              id: "kids-program",
+              title: "Kids Program",
+              image: AllImages.reserveKidsProgram,
+              target: { type: "experience", experienceType: "kids-program" },
+            },
+            {
+              id: "scholars",
+              title: "Scholars",
+              image: AllImages.reserveScholars,
+              target: { type: "experience", experienceType: "scholars" },
+            },
+          ],
+        },
+        {
+          // No pages for these two yet, so they are static tiles.
+          columns: 2,
+          cards: [
+            { id: "our-chefs", title: "Our Chefs", image: AllImages.reserveOurChefs },
+            { id: "kosher-supervision", title: "Kosher Supervision", image: AllImages.reserveKosherSupervision },
+          ],
+        },
+      ],
+    },
+  ],
   keywords: ["diamond club reserve", "st. regis kanai", "riviera maya edition", "passover 2027", "kosher luxury resort"],
 };

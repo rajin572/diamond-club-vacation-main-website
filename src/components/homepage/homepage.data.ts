@@ -4,10 +4,10 @@ import type { HomePageData } from "./homepage.types";
 
 export const HOME_PAGE_DATA: HomePageData = {
   hero: {
-    eyebrow: "An Elevated Pesach Experience",
-    headline: "Diamond Club Vacations",
-    tagline: ["Exceptional destinations", "unforgettable experiences", "for the heimish family"],
+    headline: "Luxury Kosher Hospitality Worldwide",
+    subtext: "Vacations. Passover. Weddings. Events.",
     backgroundImage: AllImages.homeHeroImage,
+    logo: { image: AllImages.logo, alt: "Diamond Club Vacations" },
   },
   services: [
     {
@@ -20,7 +20,7 @@ export const HOME_PAGE_DATA: HomePageData = {
     {
       id: "casa-nizuc",
       title: "Casa Nizuc",
-      description: "A year-round luxury kosher resort experience.",
+      description: "Year-round luxury kosher hospitality in the heart of Riviera Maya.",
       href: CASA_NIZUC_HREF,
       image: AllImages.homeCasaNizuc,
     },

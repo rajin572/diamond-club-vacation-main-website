@@ -14,21 +14,23 @@ function targetHref(offeringId: string, programId: string, target: ProgramTarget
     : experienceHref(offeringId, programId, target.experienceType);
 }
 
+const GRID_CLASS = { 2: "dcv-grid2", 3: "dcv-grid3", 4: "dcv-grid4" } as const;
+
 /**
- * Renders every program (Diamond Club Reserve, Guettaway, Diamond Blue, and any future program) from one
- * component (client design: reserve.html / guettaway.html / diamond-blue.html).
+ * A program's details page (reached with "See Details" from its overview): grouped cards for where to stay,
+ * the experiences and what to explore. One component for every program (client app: "Diamond Club Reserve").
  */
 export function ProgramMainView({ offeringId, data }: ProgramMainViewProps) {
-  const cardLinks = (cards: ProgramCardData[]) =>
-    cards.map((card) => (
-      <DesignCard
-        key={card.id}
-        image={card.image}
-        title={card.title}
-        description={card.description}
-        href={targetHref(offeringId, data.id, card.target)}
-      />
-    ));
+  const card = (item: ProgramCardData) => (
+    <DesignCard
+      key={item.id}
+      image={item.image}
+      title={item.title}
+      description={item.description}
+      logos={item.logos}
+      href={item.target ? targetHref(offeringId, data.id, item.target) : undefined}
+    />
+  );
 
   const navItems: DesignLink[] = (data.nav ?? []).map((item) => ({
     label: item.label,
@@ -45,15 +47,18 @@ export function ProgramMainView({ offeringId, data }: ProgramMainViewProps) {
       <DetailHero image={data.heroImage} kicker={data.kicker} title={data.title} subtitle={data.tagline} />
       <SubNav items={navItems} label={`${data.title} sections`} />
       <Wrap>
-        <SectionTitle title={data.stay.title} description={data.stay.description} />
-        <div className={data.stay.columns === 4 ? "dcv-grid4" : "dcv-grid2"}>{cardLinks(data.stay.cards)}</div>
-
-        {data.destination && (
-          <>
-            <SectionTitle title={data.destination.title} className="mt-[70px]" />
-            <div className="dcv-grid3">{cardLinks(data.destination.cards)}</div>
-          </>
-        )}
+        {data.sections.map((section, index) => (
+          <div key={section.title} className={index > 0 ? "dcv-program-section" : undefined}>
+            <SectionTitle title={section.title} description={section.description} />
+            <div className="dcv-card-blocks">
+              {section.blocks.map((block, blockIndex) => (
+                <div key={blockIndex} className={GRID_CLASS[block.columns]}>
+                  {block.cards.map(card)}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </Wrap>
     </>
   );

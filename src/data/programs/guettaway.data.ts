@@ -8,9 +8,14 @@ export const GUTTAWAY_DATA: ExternalProgramData = {
   offeringId: "passover-collection-2027",
   title: "Guettaway A DCV Program",
   card: {
-    description:
-      "Elevated Pesach for the Heimish family across Waldorf Astoria Riviera Maya and Park Hyatt Riviera Maya.",
+    subtitle: "Elevated Pesach for the Heimish Family",
+    location: "THE RIVIERA MAYA, AMAI",
     image: AllImages.passoverCollectionGuettawayADvcProgram,
+    // Text stand-ins until the Waldorf Astoria and Park Hyatt logo artwork is supplied.
+    logos: [
+      { text: "Waldorf Astoria", alt: "Waldorf Astoria Riviera Maya" },
+      { text: "Park Hyatt", alt: "Park Hyatt Riviera Maya" },
+    ],
   },
   externalUrl: GUETTAWAYS_URL,
 };

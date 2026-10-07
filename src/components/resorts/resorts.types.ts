@@ -34,7 +34,7 @@ export interface ResortCategoryCard {
   title: string;
   /** Shorter label for the sub navigation when it differs from the card title (e.g. "Gallery"). */
   navLabel?: string;
-  description: string;
+  description?: string;
   image: DesignImage;
   target: ResortTarget;
 }
@@ -56,11 +56,15 @@ export interface ResortData {
   programTitle: string;
   resortId: string;
   resortName: string;
-  /** Hero eyebrow, e.g. "DIAMOND CLUB RESERVE" or "Passover 2027". */
-  kicker: string;
-  /** Hero sub-line. */
+  /** Hero eyebrow, e.g. "Passover 2027"; omit for none. */
+  kicker?: string;
+  /** Hero sub-line; also the page's meta description. */
   tagline: string;
+  /** Show `tagline` under the hero title (default true). */
+  showTagline?: boolean;
   heroImage: DesignImage;
+  /** The hotel's wordmark shown above the hero title (white artwork). */
+  heroLogo?: { image: DesignImage; alt: string };
 
   /** First label of the floating sub navigation ("Hotel Overview", "Overview", ...). */
   overviewLabel: string;

@@ -1,5 +1,6 @@
-import { DesignCard, DetailHero, SectionTitle, Wrap } from "@/components/shared/design";
+import { DetailHero, SectionTitle, Wrap } from "@/components/shared/design";
 import type { ProgramSummary } from "@/components/programs/programs.types";
+import ProgramCard from "./ProgramCard";
 import type { OfferingData } from "./offerings.types";
 
 interface OfferingMainViewProps {
@@ -7,7 +8,7 @@ interface OfferingMainViewProps {
   programs: ProgramSummary[];
 }
 
-/** An offering landing page: hero plus one card per program (client design: passover.html). */
+/** An offering landing page: hero with the brand badge, then one card per program (client app: "Passover Collection 2027"). */
 export function OfferingMainView({ data, programs }: OfferingMainViewProps) {
   return (
     <>
@@ -16,18 +17,13 @@ export function OfferingMainView({ data, programs }: OfferingMainViewProps) {
         kicker={data.hero.kicker}
         title={data.hero.headline}
         subtitle={data.hero.subtext}
+        logo={data.hero.logo}
       />
       <Wrap>
         <SectionTitle title={data.programsSection.title} description={data.programsSection.description} />
         <div className="dcv-grid3">
           {programs.map((program) => (
-            <DesignCard
-              key={program.id}
-              image={program.image}
-              title={program.title}
-              description={program.description}
-              href={program.href}
-            />
+            <ProgramCard key={program.id} program={program} />
           ))}
         </div>
       </Wrap>

@@ -6,4 +6,5 @@ export { StatsRow, FeatureGroup } from "./DetailBlocks";
 export { DesignButton } from "./DesignButton";
 export { PhotoGallery, PhotoStack } from "./PhotoGallery";
 export { Modal } from "./Modal";
-export type { DesignImage, DesignLink, DesignStat, DesignFeatureGroup } from "./types";
+export { CardLogos } from "./CardLogos";
+export type { CardLogo, DesignImage, DesignLink, DesignStat, DesignFeatureGroup } from "./types";

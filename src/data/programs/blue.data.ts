@@ -9,11 +9,14 @@ export const BLUE_DATA: ProgramData = {
   tagline: "Luxury made accessible.",
   heroImage: AllImages.casa2,
   card: {
-    description: "Luxury made accessible with Casa Nizuc as the hotel experience.",
+    subtitle: "Luxury made accessible",
+    location: "CANCUN MEXICO",
     image: AllImages.passoverCollectionDiamondBlueByDcv,
+    logos: [{ image: AllImages.home3, alt: "Casa Nizuc Resort & Spa", blend: true }],
   },
   overview: {
     heroImage: AllImages.passoverCollectionDiamondBlueByDcv,
+    tagline: "Luxury made accessible",
     partners: [
       { name: "Casa Nizuc", detail: "A Tribute Portfolio Resort" },
       { name: "Marriott Bonvoy" },
@@ -35,41 +38,47 @@ export const BLUE_DATA: ProgramData = {
     { label: "Overview", target: { type: "overview" } },
     { label: "Inquire", target: { type: "inquire" } },
   ],
-  stay: {
-    title: "Where you’ll stay",
-    description:
-      "Casa Nizuc is the hotel for this program, while Diamond Blue by DCV’s entertainment, kids program, scholars and attractions remain program-specific.",
-    columns: 4,
-    cards: [
-      {
-        id: "casa-nizuc",
-        title: "Casa Nizuc",
-        description: "Explore the hotel.",
-        image: AllImages.casa1,
-        target: { type: "resort", resortId: "casa-nizuc" },
-      },
-      {
-        id: "entertainment",
-        title: "Entertainment",
-        description: "Program entertainment.",
-        image: AllImages.entertainment1,
-        target: { type: "experience", experienceType: "entertainment" },
-      },
-      {
-        id: "kids-program",
-        title: "Kids Program",
-        description: "Family programming.",
-        image: AllImages.kids1,
-        target: { type: "experience", experienceType: "kids-program" },
-      },
-      {
-        id: "scholars",
-        title: "Scholars",
-        description: "Featured speakers.",
-        image: AllImages.home1,
-        target: { type: "experience", experienceType: "scholars" },
-      },
-    ],
-  },
+  sections: [
+    {
+      title: "Where you’ll stay",
+      description:
+        "Casa Nizuc is the hotel for this program, while Diamond Blue by DCV’s entertainment, kids program and scholars remain program-specific.",
+      blocks: [
+        {
+          columns: 4,
+          cards: [
+            {
+              id: "casa-nizuc",
+              title: "Casa Nizuc",
+              description: "Explore the hotel.",
+              image: AllImages.casa1,
+              target: { type: "resort", resortId: "casa-nizuc" },
+            },
+            {
+              id: "entertainment",
+              title: "Entertainment",
+              description: "Program entertainment.",
+              image: AllImages.entertainment1,
+              target: { type: "experience", experienceType: "entertainment" },
+            },
+            {
+              id: "kids-program",
+              title: "Kids Program",
+              description: "Family programming.",
+              image: AllImages.kids1,
+              target: { type: "experience", experienceType: "kids-program" },
+            },
+            {
+              id: "scholars",
+              title: "Scholars",
+              description: "Featured speakers.",
+              image: AllImages.home1,
+              target: { type: "experience", experienceType: "scholars" },
+            },
+          ],
+        },
+      ],
+    },
+  ],
   keywords: ["diamond blue", "casa nizuc", "accessible luxury passover", "passover 2027"],
 };

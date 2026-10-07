@@ -17,7 +17,7 @@ interface ExperienceCardsProps {
   inquireHref: string;
 }
 
-/** Card grid for attractions, entertainment, scholars and the kids program, with a details pop-up per card. */
+/** Card grid for entertainment, scholars and the kids program, with a details pop-up per card. */
 export function ExperienceCards({ items, columns, inquireHref }: ExperienceCardsProps) {
   const [openId, setOpenId] = useState<string | null>(null);
   const close = useCallback(() => setOpenId(null), []);
@@ -39,10 +39,6 @@ export function ExperienceCards({ items, columns, inquireHref }: ExperienceCards
                 <Link className="dcv-link" href={item.href}>
                   {item.linkLabel ?? "Explore →"}
                 </Link>
-              ) : item.mapUrl ? (
-                <a className="dcv-link" href={item.mapUrl} target="_blank" rel="noopener noreferrer">
-                  {item.linkLabel ?? "See on map"}
-                </a>
               ) : item.details ? (
                 <button type="button" className="dcv-link" aria-label={`${item.title}: ${item.linkLabel ?? "Explore"}`} onClick={() => setOpenId(item.id)}>
                   {item.linkLabel ?? "Explore →"}

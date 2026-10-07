@@ -15,7 +15,7 @@ export function programHref(offeringId: string, programId: string): string {
   return `${offeringHref(offeringId)}/programs/${programId}`;
 }
 
-/** The program's details hub (hotels, attractions, ...), reached with "See Details" from the overview. */
+/** The program's details hub (hotels, experiences, ...), reached with "See Details" from the overview. */
 export function programDetailsHref(offeringId: string, programId: string): string {
   return `${programHref(offeringId, programId)}/details`;
 }

@@ -17,3 +17,12 @@ export interface DesignFeatureGroup {
   title: string;
   items: string[];
 }
+
+/** A brand mark overlaid on a card's photo: artwork, or plain text until artwork is available. */
+export interface CardLogo {
+  image?: DesignImage;
+  text?: string;
+  alt: string;
+  /** Artwork is white on a black background: blend it onto the photo instead of showing the black. */
+  blend?: boolean;
+}

@@ -62,7 +62,13 @@ export function ResortMainView({ offeringId, programId, data }: ResortMainViewPr
 
   return (
     <>
-      <DetailHero image={data.heroImage} kicker={data.kicker} title={data.resortName} subtitle={data.tagline} />
+      <DetailHero
+        image={data.heroImage}
+        kicker={data.kicker}
+        title={data.resortName}
+        subtitle={data.showTagline === false ? undefined : data.tagline}
+        logo={data.heroLogo ? { ...data.heroLogo, wordmark: true } : undefined}
+      />
       <SubNav items={navItems} label={`${data.resortName} sections`} />
 
       <Wrap id="overview">

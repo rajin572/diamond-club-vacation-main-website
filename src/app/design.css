@@ -1574,3 +1574,110 @@ button.dcv-link {
     padding: 14px 10px;
   }
 }
+
+/* ---------- brand badge on hero banners ---------- */
+.dcv-hero .dcv-hero-logo {
+  display: block;
+  width: clamp(64px, 8vw, 96px);
+  height: auto;
+  margin: 0 0 14px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.35));
+}
+.dcv-hero-words .dcv-hero-badge {
+  display: block;
+  width: clamp(72px, 9vw, 104px);
+  height: auto;
+  margin: 0 auto 22px;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.35));
+}
+.dcv-hero-words .dcv-hero-sub {
+  font: 400 clamp(15px, 1.6vw, 19px) / 1.5 var(--dcv-sans);
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+
+/* ---------- Passover program cards (photo + brand marks + location) ---------- */
+.dcv-card-media {
+  position: relative;
+}
+.dcv-card .dcv-card-logos {
+  position: absolute;
+  inset: 0 0 auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 3vw, 28px);
+  padding: 20px 16px 48px;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(180deg, rgba(4, 15, 24, 0.66), rgba(4, 15, 24, 0.3) 60%, transparent);
+  pointer-events: none;
+}
+.dcv-card .dcv-card-logos img {
+  width: auto;
+  height: clamp(40px, 4vw, 58px);
+  max-width: 42%;
+  object-fit: contain;
+  border-radius: 0;
+}
+.dcv-card .dcv-card-logos img.dcv-blend {
+  height: clamp(86px, 9vw, 126px);
+  max-width: 70%;
+  mix-blend-mode: screen;
+}
+.dcv-card-logos span {
+  color: #fff;
+  font: 400 clamp(11px, 1.1vw, 14px) / 1.25 var(--dcv-serif);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.dcv-program-card h3 {
+  font-size: clamp(22px, 2vw, 26px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.dcv-program-card p {
+  margin-bottom: 12px;
+}
+.dcv-card-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9a6b1d;
+}
+.dcv-card-location svg {
+  flex: none;
+}
+
+/* ---------- program details page: grouped card sections ---------- */
+.dcv-program-section {
+  margin-top: 64px;
+}
+.dcv-card-blocks {
+  display: grid;
+  gap: 24px;
+}
+/* Static tiles (no page yet): no lift, no pointer */
+.dcv-card--static:hover {
+  transform: none;
+  box-shadow: 0 14px 34px rgba(24, 29, 31, 0.08);
+}
+@media (min-width: 901px) {
+  .dcv-grid3 .dcv-card--static:nth-child(2n):hover {
+    transform: translateY(16px);
+  }
+}
+/* wide brand lock-ups (St. Regis, Edition) are shorter than the round badge or tall emblems */
+.dcv-card .dcv-card-logos img {
+  height: clamp(30px, 3vw, 44px);
+}
+.dcv-hero .dcv-hero-logo--wordmark {
+  width: clamp(150px, 18vw, 230px);
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
+}

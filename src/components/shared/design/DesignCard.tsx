@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { DesignImage } from "./types";
+import { CardLogos } from "./CardLogos";
+import type { CardLogo, DesignImage } from "./types";
 
 const CARD_SIZES = "(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw";
 
@@ -8,15 +9,18 @@ interface DesignCardProps {
   image: DesignImage;
   title: string;
   description?: string;
+  /** Without `href` the card is a static tile (no link, no hover lift). */
   href?: string;
   linkLabel?: string;
   /** Open `href` in a new tab (used for external map links). */
   external?: boolean;
   alt?: string;
   sizes?: string;
+  /** Brand marks laid over the photo. */
+  logos?: CardLogo[];
 }
 
-/** Image card with a title, blurb and "Explore →" link (client design: `.card`). */
+/** Image card with a title, optional blurb and "Explore →" link; the whole card is the link (client design: `.card`). */
 export function DesignCard({
   image,
   title,
@@ -26,10 +30,20 @@ export function DesignCard({
   external,
   alt = "",
   sizes = CARD_SIZES,
+  logos,
 }: DesignCardProps) {
+  const photo = <Image src={image} alt={alt} sizes={sizes} />;
+
   return (
-    <article className="dcv-card">
-      <Image src={image} alt={alt} sizes={sizes} />
+    <article className={href ? "dcv-card" : "dcv-card dcv-card--static"}>
+      {logos && logos.length > 0 ? (
+        <div className="dcv-card-media">
+          {photo}
+          <CardLogos logos={logos} />
+        </div>
+      ) : (
+        photo
+      )}
       <div className="dcv-body">
         <h3>{title}</h3>
         {description && <p>{description}</p>}

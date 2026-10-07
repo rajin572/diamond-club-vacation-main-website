@@ -1,11 +1,11 @@
 import type { DesignImage } from "@/components/shared/design";
 
 export interface HomeHeroData {
-  eyebrow: string;
   headline: string;
-  /** Short phrases rendered on one line, separated by bullets. */
-  tagline: string[];
+  subtext: string;
   backgroundImage: DesignImage;
+  /** Brand badge shown above the headline. */
+  logo: { image: DesignImage; alt: string };
 }
 
 export interface HomeServiceItem {

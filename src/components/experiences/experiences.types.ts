@@ -21,19 +21,17 @@ export interface ExperienceItem {
   image: DesignImage;
   /** Details still to be announced: the card is shown without a link. */
   tba?: boolean;
-  /** External "See on map" link (attractions). */
-  mapUrl?: string;
   /** Slug of another experience page of the same program this card links to (e.g. "kids-day-camp"). */
   linkTo?: string;
   linkLabel?: string;
   details?: ExperienceDetails;
 }
 
-/** Attractions, entertainment, scholars and the kids program all share this card-grid page. */
+/** Entertainment, scholars and the kids program all share this card-grid page. */
 export interface ExperienceCategoryData {
   programId: string;
   programTitle: string;
-  /** Slug used in the URL and to look this data up in the registry, e.g. "attractions". */
+  /** Slug used in the URL and to look this data up in the registry, e.g. "entertainment". */
   experienceType: string;
   title: string;
   description: string;

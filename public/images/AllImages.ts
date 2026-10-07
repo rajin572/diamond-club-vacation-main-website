@@ -1,5 +1,14 @@
 import logo from "./logo.png";
 import reservePartnerLogos from "./mainDesign/reserve-partner-logos.png";
+import logoStRegisWhite from "./mainDesign/logo-st-regis-white.png";
+import logoEditionWhite from "./mainDesign/logo-edition-white.png";
+import reserveAttractions from "./mainDesign/reserve-attractions.jpg";
+import reserveKosherSupervision from "./mainDesign/reserve-kosher-supervision.png";
+import reserveOurChefs from "./mainDesign/reserve-our-chefs.png";
+import reserveScholars from "./mainDesign/reserve-scholars.png";
+import reserveKidsProgram from "./mainDesign/reserve-kids-program.png";
+import reserveEntertainment from "./mainDesign/reserve-entertainment.png";
+import reserveEditionResort from "./mainDesign/reserve-edition-resort.png";
 
 // Main Design (client HTML design assets, copied from diamond-club-main-design/assets)
 import attractions1 from "./mainDesign/attractions-1.jpg";
@@ -320,6 +329,15 @@ import waldorfRooms4 from "./mainDesign/waldorf-rooms-4.jpg";
 export const AllImages = {
   logo,
   reservePartnerLogos,
+  logoStRegisWhite,
+  logoEditionWhite,
+  reserveAttractions,
+  reserveKosherSupervision,
+  reserveOurChefs,
+  reserveScholars,
+  reserveKidsProgram,
+  reserveEntertainment,
+  reserveEditionResort,
 
   // Main Design (client HTML design assets)
   attractions1,

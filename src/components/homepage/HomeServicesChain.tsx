@@ -5,7 +5,7 @@ import type { HomeServiceItem } from "./homepage.types";
 /** Four overlapping circular tiles linking to the main services; the whole circle is the link (client design: index.html `.chain`). */
 export function HomeServicesChain({ services }: { services: HomeServiceItem[] }) {
   return (
-    <section className="dcv-chain-wrap" aria-label="Our services">
+    <section className="dcv-chain-wrap" aria-label="Explore our services">
       <div className="dcv-chain">
         {services.map((service) => (
           <Link key={service.id} className="dcv-bubble" href={service.href} aria-label={`${service.title}: ${service.description}`}>

@@ -39,8 +39,10 @@ export function getProgramSummaries(offering: OfferingData): ProgramSummary[] {
         {
           id: internal.id,
           title: internal.title,
-          description: internal.card.description,
+          subtitle: internal.card.subtitle,
+          location: internal.card.location,
           image: internal.card.image,
+          logos: internal.card.logos,
           href: programHref(offering.id, internal.id),
           external: false,
         },
@@ -52,8 +54,10 @@ export function getProgramSummaries(offering: OfferingData): ProgramSummary[] {
         {
           id: external.id,
           title: external.title,
-          description: external.card.description,
+          subtitle: external.card.subtitle,
+          location: external.card.location,
           image: external.card.image,
+          logos: external.card.logos,
           href: external.externalUrl,
           external: true,
         },

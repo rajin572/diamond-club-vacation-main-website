@@ -10,7 +10,7 @@ interface ExperienceCategoryViewProps {
   nav: DesignLink[];
 }
 
-/** Attractions / entertainment / scholars / kids program (client design: edition-entertainment.html and siblings). */
+/** Entertainment / scholars / kids program (client design: edition-entertainment.html and siblings). */
 export function ExperienceCategoryView({ offeringId, data, nav }: ExperienceCategoryViewProps) {
   const items = data.items.map((item) => ({
     ...item,

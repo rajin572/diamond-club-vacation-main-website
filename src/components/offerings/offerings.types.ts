@@ -5,15 +5,17 @@ export interface OfferingData {
   /** Used for the browser title and structured data. */
   title: string;
   hero: {
-    kicker: string;
+    kicker?: string;
     headline: string;
     subtext: string;
     image: DesignImage;
+    /** Brand badge shown above the headline. */
+    logo?: { image: DesignImage; alt: string };
   };
   /** Programs shown on the offering page, in order (hosted here or linked out). */
   programIds: string[];
   programsSection: {
     title: string;
-    description: string;
+    description?: string;
   };
 }

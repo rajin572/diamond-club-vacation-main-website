@@ -1,4 +1,4 @@
-import type { DesignImage } from "@/components/shared/design";
+import type { CardLogo, DesignImage } from "@/components/shared/design";
 
 /** Where a program card or nav item points; resolved to a URL with `lib/routes` at render time. */
 export type ProgramTarget =
@@ -8,9 +8,25 @@ export type ProgramTarget =
 export interface ProgramCardData {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   image: DesignImage;
-  target: ProgramTarget;
+  /** Omit for a static tile (content that has no page of its own yet). */
+  target?: ProgramTarget;
+  /** Brand marks laid over the photo (e.g. the St. Regis logo). */
+  logos?: CardLogo[];
+}
+
+/** A row of cards sharing one grid. */
+export interface ProgramCardBlock {
+  columns: 2 | 3 | 4;
+  cards: ProgramCardData[];
+}
+
+/** A titled group on the details page ("Where you'll stay", "Experiences", "Explore"). */
+export interface ProgramSection {
+  title: string;
+  description?: string;
+  blocks: ProgramCardBlock[];
 }
 
 export interface ProgramNavItem {
@@ -25,9 +41,20 @@ export interface ProgramPartner {
   detail?: string;
 }
 
+/** How a program is shown on its offering page (Passover Programs list). */
+export interface ProgramCardContent {
+  subtitle: string;
+  /** Shown with a pin icon, e.g. "THE RIVIERA MAYA, KANAI". */
+  location: string;
+  image: DesignImage;
+  logos?: CardLogo[];
+}
+
 /** Content of the program's overview page (the page shown before "See Details"). */
 export interface ProgramOverviewData {
   heroImage: DesignImage;
+  /** Line under the title in the overview hero. */
+  tagline: string;
   /** Partner strip as text. Ignored when `partnersLogo` is provided. */
   partners: ProgramPartner[];
   /** Partner strip as the supplied logo artwork (one image holding all the logos). */
@@ -39,7 +66,7 @@ export interface ProgramOverviewData {
   aboutStrong?: string;
 }
 
-/** A program hosted on this site: overview page + details hub (hotels, attractions, ...). */
+/** A program hosted on this site: overview page + details hub (hotels, experiences, ...). */
 export interface ProgramData {
   id: string;
   offeringId: string;
@@ -49,21 +76,12 @@ export interface ProgramData {
   tagline: string;
   heroImage: DesignImage;
   /** How this program is shown on its offering page. */
-  card: { description: string; image: DesignImage };
+  card: ProgramCardContent;
   overview: ProgramOverviewData;
   /** Floating pill navigation under the hero of the details page. */
   nav?: ProgramNavItem[];
-  stay: {
-    title: string;
-    description: string;
-    columns: 2 | 4;
-    cards: ProgramCardData[];
-  };
-  /** Optional second block of cards (e.g. attractions around the destination). */
-  destination?: {
-    title: string;
-    cards: ProgramCardData[];
-  };
+  /** The details page: hotels and experiences. */
+  sections: ProgramSection[];
   keywords?: string[];
 }
 
@@ -72,7 +90,7 @@ export interface ExternalProgramData {
   id: string;
   offeringId: string;
   title: string;
-  card: { description: string; image: DesignImage };
+  card: ProgramCardContent;
   externalUrl: string;
 }
 
@@ -80,8 +98,10 @@ export interface ExternalProgramData {
 export interface ProgramSummary {
   id: string;
   title: string;
-  description: string;
+  subtitle: string;
+  location: string;
   image: DesignImage;
+  logos?: CardLogo[];
   href: string;
   external: boolean;
 }

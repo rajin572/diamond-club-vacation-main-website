@@ -5,14 +5,13 @@ export const PASSOVER_COLLECTION_2027_DATA: OfferingData = {
   id: "passover-collection-2027",
   title: "Passover Collection 2027",
   hero: {
-    kicker: "Passover",
     headline: "Passover Collection 2027",
-    subtext: "World-class hospitality. Exceptional moments.",
+    subtext: "World-Class Hospitality, Exceptional Moments",
     image: AllImages.passoverCollectionHero,
+    logo: { image: AllImages.logo, alt: "Diamond Club Vacations" },
   },
   programIds: ["diamond-club-reserve", "guttaway", "blue"],
   programsSection: {
-    title: "Three distinct programs",
-    description: "Each program has its own hotels, rooms, dining and program content. Hotel assets are kept separate.",
+    title: "Passover Programs - 2027",
   },
 };
