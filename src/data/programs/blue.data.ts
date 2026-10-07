@@ -36,45 +36,72 @@ export const BLUE_DATA: ProgramData = {
   },
   nav: [
     { label: "Overview", target: { type: "overview" } },
+    { label: "Casa Nizuc", target: { type: "resort", resortId: "casa-nizuc" } },
+    { label: "Attractions", target: { type: "experience", experienceType: "attractions" } },
     { label: "Inquire", target: { type: "inquire" } },
   ],
   sections: [
     {
       title: "Where you’ll stay",
-      description:
-        "Casa Nizuc is the hotel for this program, while Diamond Blue by DCV’s entertainment, kids program and scholars remain program-specific.",
       blocks: [
         {
-          columns: 4,
+          columns: 2,
           cards: [
             {
               id: "casa-nizuc",
               title: "Casa Nizuc",
-              description: "Explore the hotel.",
-              image: AllImages.casa1,
+              image: AllImages.passoverCollectionDiamondBlueByDcv,
+              // Text stand-in for the "Casa Nizuc – A Tribute Portfolio Resort" mark until the artwork is supplied.
+              logos: [{ text: "Casa Nizuc", alt: "Casa Nizuc, a Tribute Portfolio Resort" }],
               target: { type: "resort", resortId: "casa-nizuc" },
             },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Programs",
+      blocks: [
+        {
+          columns: 3,
+          cards: [
             {
               id: "entertainment",
               title: "Entertainment",
-              description: "Program entertainment.",
-              image: AllImages.entertainment1,
+              image: AllImages.blueEntertainment,
               target: { type: "experience", experienceType: "entertainment" },
             },
             {
               id: "kids-program",
               title: "Kids Program",
-              description: "Family programming.",
-              image: AllImages.kids1,
+              image: AllImages.reserveKidsProgram,
               target: { type: "experience", experienceType: "kids-program" },
             },
             {
               id: "scholars",
               title: "Scholars",
-              description: "Featured speakers.",
-              image: AllImages.home1,
+              image: AllImages.blueScholars,
               target: { type: "experience", experienceType: "scholars" },
             },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Explore",
+      blocks: [
+        {
+          // Beach Club and La Aldea have no pages yet, so they are static tiles.
+          columns: 3,
+          cards: [
+            {
+              id: "attractions",
+              title: "Attractions",
+              image: AllImages.reserveAttractions,
+              target: { type: "experience", experienceType: "attractions" },
+            },
+            { id: "beach-club", title: "Beach Club", image: AllImages.blueBeachClub },
+            { id: "la-aldea", title: "La Aldea", image: AllImages.blueLaAldea },
           ],
         },
       ],

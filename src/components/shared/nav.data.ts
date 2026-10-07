@@ -7,7 +7,6 @@ export const PRIMARY_NAV: DesignLink[] = [
   { label: "Weddings & Events", href: offeringHref("weddings-events") },
   { label: "Experiences", href: "/experiences" },
   { label: "About", href: "/about" },
-  { label: "Guest Login", href: "/login" },
 ];
 
 export const INQUIRE_LINK: DesignLink = { label: "Inquire", href: "/inquire" };
@@ -40,7 +39,6 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Guest",
     links: [
-      { label: "Guest Login", href: "/login" },
       { label: "About", href: "/about" },
       { label: "Contact", href: "/inquire" },
     ],

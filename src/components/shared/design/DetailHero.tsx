@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AllImages } from "../../../../public/images/AllImages";
 import type { DesignImage } from "./types";
 
 interface DetailHeroProps {
@@ -6,23 +7,29 @@ interface DetailHeroProps {
   kicker?: string;
   title: string;
   subtitle?: string;
-  /** Brand badge shown above the title (the round Diamond Club Vacations logo). */
+  /** CSS object-position of the photo, for tall or off-centre images (e.g. "50% 20%"). */
+  imagePosition?: string;
+  /** Brand mark shown above the title. Defaults to the round Diamond Club Vacations badge on every page. */
   logo?: { image: DesignImage; alt: string; /** Wide wordmark (hotel logo) instead of the round badge. */ wordmark?: boolean };
 }
 
+const DEFAULT_LOGO = { image: AllImages.logo, alt: "Diamond Club Vacations" };
+
 /** The rounded-bottom hero used by every inner page (client design: `.detailHero`). */
-export function DetailHero({ image, kicker, title, subtitle, logo }: DetailHeroProps) {
+export function DetailHero({ image, kicker, title, subtitle, imagePosition, logo = DEFAULT_LOGO }: DetailHeroProps) {
   return (
     <section className="dcv-hero">
-      <Image src={image} alt="" priority sizes="100vw" />
+      <Image src={image} alt="" priority sizes="100vw" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
       <div className="dcv-copy">
-        {logo && <Image
+        {logo && (
+          <Image
             className={logo.wordmark ? "dcv-hero-logo dcv-hero-logo--wordmark" : "dcv-hero-logo"}
             src={logo.image}
             alt={logo.alt}
             priority
             sizes={logo.wordmark ? "230px" : "104px"}
-          />}
+          />
+        )}
         {kicker && <div className="dcv-kicker">{kicker}</div>}
         <h1>{title}</h1>
         {subtitle && <div>{subtitle}</div>}

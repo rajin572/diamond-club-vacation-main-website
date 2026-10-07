@@ -6,8 +6,8 @@ import { CASA_NIZUC_DATA } from "./casa-nizuc.data";
 import { getProgram } from "@/data/programs/registry";
 
 export const resortsRegistry = {
-  edition: EDITION_RESORT_DATA,
   "st-regis": ST_REGIS_RESORT_DATA,
+  edition: EDITION_RESORT_DATA,
   "casa-nizuc": CASA_NIZUC_DATA,
 } satisfies Record<string, ResortData>;
 

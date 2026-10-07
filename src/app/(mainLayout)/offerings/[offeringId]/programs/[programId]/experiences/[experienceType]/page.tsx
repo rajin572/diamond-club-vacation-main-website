@@ -23,13 +23,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const category = getExperienceData(programId, experienceType);
   if (category) {
+    const description = category.description ?? `${category.title} · ${category.programTitle}`;
     return {
       title: `${category.title} | ${category.programTitle}`,
-      description: category.description,
+      description,
       alternates: { canonical: canonicalUrl },
       openGraph: {
         title: `${category.title} | ${siteConfig.name}`,
-        description: category.description,
+        description,
         url: canonicalUrl,
         siteName: siteConfig.name,
         locale: "en_US",

@@ -42,6 +42,7 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
     { label: "Overview", target: { type: "overview" } },
     { label: "St. Regis", target: { type: "resort", resortId: "st-regis" } },
     { label: "EDITION", target: { type: "resort", resortId: "edition" } },
+    { label: "Attractions", target: { type: "experience", experienceType: "attractions" } },
     { label: "Inquire", target: { type: "inquire" } },
   ],
   sections: [
@@ -101,6 +102,22 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
           cards: [
             { id: "our-chefs", title: "Our Chefs", image: AllImages.reserveOurChefs },
             { id: "kosher-supervision", title: "Kosher Supervision", image: AllImages.reserveKosherSupervision },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Explore",
+      blocks: [
+        {
+          columns: 3,
+          cards: [
+            {
+              id: "attractions",
+              title: "Attractions",
+              image: AllImages.reserveAttractions,
+              target: { type: "experience", experienceType: "attractions" },
+            },
           ],
         },
       ],

@@ -1,6 +1,6 @@
 import { DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
-import { experienceHref, inquireHref } from "@/lib/routes";
+import { experienceHref } from "@/lib/routes";
 import ExperienceCards from "./ExperienceCards";
 import type { ExperienceCategoryData } from "./experiences.types";
 
@@ -10,7 +10,7 @@ interface ExperienceCategoryViewProps {
   nav: DesignLink[];
 }
 
-/** Entertainment / scholars / kids program (client design: edition-entertainment.html and siblings). */
+/** Entertainment / attractions / scholars / kids program: a hero, then a card grid with a details viewer. */
 export function ExperienceCategoryView({ offeringId, data, nav }: ExperienceCategoryViewProps) {
   const items = data.items.map((item) => ({
     ...item,
@@ -19,14 +19,20 @@ export function ExperienceCategoryView({ offeringId, data, nav }: ExperienceCate
 
   return (
     <>
-      <DetailHero image={data.heroImage} kicker={data.programTitle} title={data.title} subtitle={data.programTitle} />
+      <DetailHero
+        image={data.heroImage}
+        imagePosition={data.heroImagePosition}
+        kicker={data.programTitle}
+        title={data.title}
+      />
       <SubNav items={nav} label={`${data.programTitle} sections`} />
       <Wrap>
         <SectionTitle title={data.title} description={data.description} />
         <ExperienceCards
           items={items}
           columns={data.columns}
-          inquireHref={inquireHref({ destination: data.programId, topic: data.experienceType })}
+          layout={data.layout}
+          viewerTitle={data.viewerTitle ?? data.title}
         />
       </Wrap>
     </>

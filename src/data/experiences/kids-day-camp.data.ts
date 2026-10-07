@@ -7,79 +7,72 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
     programName: "DIAMOND CLUB RESERVE",
     hero: {
       title: "Day Camp & Teen Program",
-      description: "An action-packed day camp schedule for all your kids, filled with activities, events, sports, games, live shows and entertainment, led by our counselors.",
-      image: AllImages.kids1,
+      description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
+      image: AllImages.reserveKidsProgram,
+      imagePosition: "50% 24%",
     },
     overview: {
-      title: "An unforgettable Passover for every age",
-      description: "We make sure every child, from our youngest guests to our teens, has an incredible Passover filled with fun, friendship, adventure and meaningful experiences.",
+      title: "An unforgettable Passover experience for every age.",
+      description: "We make sure every child—from our youngest guests to our teens—has an incredible Passover filled with fun, friendship, adventure, and meaningful experiences.",
     },
     team: [
       {
         id: "shlomo-meisels",
         role: "Day Camp Director",
         name: "Shlomo Meisels",
-        bio: "Oversees the complete children’s program, keeping it organized, exciting and memorable from start to finish.",
+        bio: "Overseeing our complete children’s program and ensuring an organized, exciting, and memorable experience from start to finish.",
       },
       {
         id: "soussan-sports",
         role: "Sports",
         name: "Soussan Sports",
-        bio: "Professional sports programming with coaching, tournaments, competitions, team activities and outdoor fun.",
+        bio: "Professional sports programming featuring coaching, tournaments, competitions, team activities, and outdoor fun.",
       },
       {
         id: "sara-kiddies",
         role: "Kiddies Program",
         name: "Led by Sara",
-        bio: "A warm and nurturing environment for our youngest guests, with age-appropriate games, crafts and supervised play.",
+        bio: "A warm and nurturing environment for our youngest guests, featuring age-appropriate games, crafts, activities, and supervised play.",
       },
     ],
     activities: [
       {
         id: "kids-day-camp",
         title: "Kids Day Camp",
-        description: "Action-packed days filled with treasure hunts, arts & crafts, sports, pool activities, blow-ups, shows, competitions, themed activities, entertainment and more.",
+        description: "Action-packed days filled with treasure hunts, arts & crafts, sports, pool activities, blowups, shows, competitions, themed activities, entertainment, and more.",
       },
       {
         id: "teen-program",
         title: "Teen Program",
-        description: "Dedicated programming created for teens, including sports, social events, entertainment, outings and activities designed for their age group.",
+        description: "Dedicated programming created specifically for teens, including sports, social events, outings, and activities designed for their age group.",
       },
       {
         id: "chol-hamoed-trips",
         title: "Chol Hamoed Trips & Adventures",
-        description: "The excitement goes beyond the resort, with special off-property trips and experiences during Chol Hamoed.",
+        description: "The excitement goes beyond the resort with special off-property trips and experiences during Chol Hamoed.",
       },
       {
         id: "evening-entertainment",
         title: "Evening Entertainment",
-        description: "Special activities, shows, competitions and extended Chol Hamoed programming for our older children.",
+        description: "Special activities, shows, competitions, and extended Chol Hamoed programming for our older children.",
       },
     ],
     ageGroups: [
-      { group: "Infants", ages: "18 months – 2 years", highlights: "Supervised play in the baby room" },
-      { group: "Toddlers", ages: "3 – 5", highlights: "Age-appropriate games, crafts and activities" },
-      {
-        group: "Children",
-        ages: "6 – 9",
-        highlights: "Day camp, pool activities, shows and competitions",
-      },
+      { group: "Infants", ages: "Ages 18m–2y" },
+      { group: "Toddlers", ages: "Ages 3–5" },
+      { group: "Children", ages: "Ages 6–9" },
       {
         group: "Pre-Teens",
-        ages: "10 – 12",
+        ages: "Ages 10–12",
         highlights: "Extended evening programming during Chol Hamoed",
       },
-      {
-        group: "Teens",
-        ages: "13+",
-        highlights: "Dedicated activities, sports, social events and outings",
-      },
+      { group: "Teens", highlights: "Dedicated teen activities, sports, social events, and outings" },
     ],
     dining: {
-      title: "Children’s dining",
+      title: "Children’s Dining",
       paragraphs: [
         "Delicious, kid-friendly meals are served nightly in our dedicated Children’s Dining Room.",
-        "Camp and dining hours are coordinated with the overall entertainment and activity schedule, giving parents time to relax and enjoy the program while the kids are having an incredible experience of their own.",
+        "Our convenient camp and dining hours are thoughtfully coordinated with the overall entertainment and activity schedule, giving parents time to relax and enjoy the program while the kids are having an incredible experience of their own.",
       ],
     },
     babysitting: {
@@ -92,86 +85,22 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
     programId: "blue",
     programName: "Diamond Blue by DCV",
     hero: {
-      title: "Day Camp & Teen Program",
-      description: "An action-packed day camp schedule for all your kids, filled with activities, events, sports, games, live shows and entertainment, led by our counselors.",
-      image: AllImages.kids1,
+      title: "Day Camp",
+      description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
+      image: AllImages.reserveKidsProgram,
+      imagePosition: "50% 24%",
     },
-    overview: {
-      title: "An unforgettable Passover for every age",
-      description: "We make sure every child, from our youngest guests to our teens, has an incredible Passover filled with fun, friendship, adventure and meaningful experiences.",
-    },
-    team: [
-      {
-        id: "shlomo-meisels",
-        role: "Day Camp Director",
-        name: "Shlomo Meisels",
-        bio: "Oversees the complete children’s program, keeping it organized, exciting and memorable from start to finish.",
-      },
-      {
-        id: "soussan-sports",
-        role: "Sports",
-        name: "Soussan Sports",
-        bio: "Professional sports programming with coaching, tournaments, competitions, team activities and outdoor fun.",
-      },
-      {
-        id: "sara-kiddies",
-        role: "Kiddies Program",
-        name: "Led by Sara",
-        bio: "A warm and nurturing environment for our youngest guests, with age-appropriate games, crafts and supervised play.",
-      },
-    ],
-    activities: [
-      {
-        id: "kids-day-camp",
-        title: "Kids Day Camp",
-        description: "Action-packed days filled with treasure hunts, arts & crafts, sports, pool activities, blow-ups, shows, competitions, themed activities, entertainment and more.",
-      },
-      {
-        id: "teen-program",
-        title: "Teen Program",
-        description: "Dedicated programming created for teens, including sports, social events, entertainment, outings and activities designed for their age group.",
-      },
-      {
-        id: "chol-hamoed-trips",
-        title: "Chol Hamoed Trips & Adventures",
-        description: "The excitement goes beyond the resort, with special off-property trips and experiences during Chol Hamoed.",
-      },
-      {
-        id: "evening-entertainment",
-        title: "Evening Entertainment",
-        description: "Special activities, shows, competitions and extended Chol Hamoed programming for our older children.",
-      },
-    ],
-    ageGroups: [
-      { group: "Infants", ages: "18 months – 2 years", highlights: "Supervised play in the baby room" },
-      { group: "Toddlers", ages: "3 – 5", highlights: "Age-appropriate games, crafts and activities" },
-      {
-        group: "Children",
-        ages: "6 – 9",
-        highlights: "Day camp, pool activities, shows and competitions",
-      },
-      {
-        group: "Pre-Teens",
-        ages: "10 – 12",
-        highlights: "Extended evening programming during Chol Hamoed",
-      },
-      {
-        group: "Teens",
-        ages: "13+",
-        highlights: "Dedicated activities, sports, social events and outings",
-      },
-    ],
-    dining: {
-      title: "Children’s dining",
-      paragraphs: [
-        "Delicious, kid-friendly meals are served nightly in our dedicated Children’s Dining Room.",
-        "Camp and dining hours are coordinated with the overall entertainment and activity schedule, giving parents time to relax and enjoy the program while the kids are having an incredible experience of their own.",
+    program: {
+      title: "Day Camp Program",
+      items: [
+        "Treasure Hunts",
+        "Arts & Crafts",
+        "Sports & Tournaments",
+        "Outdoor Play Areas",
+        "Blowup Castles",
+        "The Talent Show",
+        "Face Painting",
       ],
-    },
-    babysitting: {
-      title: "Babysitting",
-      description: "Babysitting is available during camp hours in our dedicated baby room.",
-      rateText: "Private babysitting is also available for $20 per hour.",
     },
   },
 };

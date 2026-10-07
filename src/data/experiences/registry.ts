@@ -1,4 +1,5 @@
 import type { ExperienceCategoryData, KidsDayCampData } from "@/components/experiences/experiences.types";
+import { ATTRACTIONS_BY_PROGRAM } from "./attractions.data";
 import { ENTERTAINMENT_BY_PROGRAM } from "./entertainment.data";
 import { SCHOLARS_BY_PROGRAM } from "./scholars.data";
 import { KIDS_PROGRAM_BY_PROGRAM } from "./kids-program.data";
@@ -6,6 +7,7 @@ import { KIDS_DAY_CAMP_BY_PROGRAM } from "./kids-day-camp.data";
 
 /** Card-grid experience pages, keyed by experience type then program id. */
 const categoriesByType: Record<string, Record<string, ExperienceCategoryData>> = {
+  attractions: ATTRACTIONS_BY_PROGRAM,
   entertainment: ENTERTAINMENT_BY_PROGRAM,
   "kids-program": KIDS_PROGRAM_BY_PROGRAM,
   scholars: SCHOLARS_BY_PROGRAM,
@@ -13,6 +15,7 @@ const categoriesByType: Record<string, Record<string, ExperienceCategoryData>> =
 
 /** Order and labels of the experience pages in a program's sub navigation. */
 export const EXPERIENCE_NAV_LABELS: Record<string, string> = {
+  attractions: "Attractions",
   entertainment: "Entertainment",
   "kids-program": "Kids Program",
   scholars: "Scholars",

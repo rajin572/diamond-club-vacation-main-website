@@ -317,13 +317,12 @@ export function PhotoGallery({ images, alt }: PhotoGalleryProps) {
 interface PhotoStackProps {
   images: DesignImage[];
   alt: string;
-  /** How many thumbnails to show before the "Open full gallery" button. */
+  /** How many thumbnails to show. */
   limit?: number;
-  buttonLabel?: string;
 }
 
 /** Vertical thumbnail stack for a detail page's side panel; every thumbnail opens the full viewer. */
-export function PhotoStack({ images, alt, limit = 4, buttonLabel = "Open full gallery" }: PhotoStackProps) {
+export function PhotoStack({ images, alt, limit = 4 }: PhotoStackProps) {
   const [active, setActive] = useState<number | null>(null);
   const close = useCallback(() => setActive(null), []);
 
@@ -342,11 +341,6 @@ export function PhotoStack({ images, alt, limit = 4, buttonLabel = "Open full ga
           <Image className="dcv-aside-photo" src={image} alt={`${alt} ${index + 1}`} sizes="(max-width: 900px) 100vw, 30vw" />
         </button>
       ))}
-      <p style={{ margin: "16px 0 0" }}>
-        <button type="button" className="dcv-btn" onClick={() => setActive(0)}>
-          {buttonLabel}
-        </button>
-      </p>
       {active !== null && <Lightbox images={images} index={active} alt={alt} onClose={close} onChange={setActive} />}
     </>
   );

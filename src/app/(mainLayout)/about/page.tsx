@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { InfoPageView, buildInfoPageMetadata } from "@/components/infoPage";
-import { getInfoPage } from "@/data/pages/info-pages.data";
+import { ComingSoonView, buildComingSoonMetadata } from "@/components/comingSoon";
+import { getComingSoonPage } from "@/data/pages/coming-soon.data";
 
-const page = getInfoPage("about");
+const page = getComingSoonPage("about");
 
-export const metadata: Metadata = buildInfoPageMetadata(page, "/about");
+export const metadata: Metadata = buildComingSoonMetadata(page);
 
 export default function AboutPage() {
-  return <InfoPageView data={page} />;
+  return <ComingSoonView data={page} />;
 }

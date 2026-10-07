@@ -9,6 +9,24 @@ import reserveScholars from "./mainDesign/reserve-scholars.png";
 import reserveKidsProgram from "./mainDesign/reserve-kids-program.png";
 import reserveEntertainment from "./mainDesign/reserve-entertainment.png";
 import reserveEditionResort from "./mainDesign/reserve-edition-resort.png";
+import blueLaAldea from "./mainDesign/blue-la-aldea.jpg";
+import blueBeachClub from "./mainDesign/blue-beach-club.jpg";
+import blueScholars from "./mainDesign/blue-scholars.jpg";
+import blueEntertainment from "./mainDesign/blue-entertainment.png";
+import blueScholarLawrenceHajioff from "./mainDesign/blue-scholar-lawrence-hajioff.png";
+import blueEntertainmentDoviNeuburger from "./mainDesign/blue-entertainment-dovi-neuburger.png";
+import reserveAttractionXcaret from "./mainDesign/reserve-attraction-xcaret.jpg";
+import reserveAttractionXplor from "./mainDesign/reserve-attraction-xplor.jpg";
+import reserveAttractionChichenItza from "./mainDesign/reserve-attraction-chichen-itza.jpg";
+import reserveAttractionUnderwaterMuseum from "./mainDesign/reserve-attraction-underwater-museum.png";
+import reserveScholarMichaelMizrahi from "./mainDesign/reserve-scholar-michael-mizrahi.png";
+import reserveScholarChananGordon from "./mainDesign/reserve-scholar-chanan-gordon.png";
+import reserveBabysitting from "./mainDesign/reserve-babysitting.png";
+import reserveEntertainmentConcert from "./mainDesign/reserve-entertainment-concert.jpg";
+import reserveEntertainmentElonGold from "./mainDesign/reserve-entertainment-elon-gold.png";
+import reserveEntertainmentKumzits from "./mainDesign/reserve-entertainment-kumzits.png";
+import reserveEntertainmentDjPinnyYiddi from "./mainDesign/reserve-entertainment-dj-pinny-yiddi.png";
+import reserveEntertainmentNightlife from "./mainDesign/reserve-entertainment-nightlife.png";
 
 // Main Design (client HTML design assets, copied from diamond-club-main-design/assets)
 import attractions1 from "./mainDesign/attractions-1.jpg";
@@ -338,6 +356,24 @@ export const AllImages = {
   reserveKidsProgram,
   reserveEntertainment,
   reserveEditionResort,
+  blueLaAldea,
+  blueBeachClub,
+  blueScholars,
+  blueEntertainment,
+  blueScholarLawrenceHajioff,
+  blueEntertainmentDoviNeuburger,
+  reserveAttractionXcaret,
+  reserveAttractionXplor,
+  reserveAttractionChichenItza,
+  reserveAttractionUnderwaterMuseum,
+  reserveScholarMichaelMizrahi,
+  reserveScholarChananGordon,
+  reserveBabysitting,
+  reserveEntertainmentConcert,
+  reserveEntertainmentElonGold,
+  reserveEntertainmentKumzits,
+  reserveEntertainmentDjPinnyYiddi,
+  reserveEntertainmentNightlife,
 
   // Main Design (client HTML design assets)
   attractions1,

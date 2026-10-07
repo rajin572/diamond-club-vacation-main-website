@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { OfferingMainView } from "@/components/offerings";
-import { InfoPageView, buildInfoPageMetadata } from "@/components/infoPage";
+import { ComingSoonView, buildComingSoonMetadata } from "@/components/comingSoon";
 import { getOffering, offeringsRegistry } from "@/data/offerings/registry";
 import { getProgramSummaries } from "@/data/programs/registry";
-import { getInfoPageForOffering, infoPageOfferingIds } from "@/data/pages/info-pages.data";
+import { comingSoonOfferingIds, getComingSoonForOffering } from "@/data/pages/coming-soon.data";
 import { offeringHref } from "@/lib/routes";
 
 interface PageProps {
@@ -13,15 +13,15 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return [...Object.keys(offeringsRegistry), ...infoPageOfferingIds].map((offeringId) => ({ offeringId }));
+  return [...Object.keys(offeringsRegistry), ...comingSoonOfferingIds].map((offeringId) => ({ offeringId }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { offeringId } = await params;
   const offering = getOffering(offeringId);
-  const infoPage = getInfoPageForOffering(offeringId);
+  const comingSoon = getComingSoonForOffering(offeringId);
 
-  if (infoPage) return buildInfoPageMetadata(infoPage, offeringHref(offeringId));
+  if (comingSoon) return buildComingSoonMetadata(comingSoon);
   if (!offering) return { title: "Offering Not Found" };
 
   const pageUrl = offeringHref(offeringId);
@@ -50,8 +50,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function OfferingPage({ params }: PageProps) {
   const { offeringId } = await params;
 
-  const infoPage = getInfoPageForOffering(offeringId);
-  if (infoPage) return <InfoPageView data={infoPage} />;
+  const comingSoon = getComingSoonForOffering(offeringId);
+  if (comingSoon) return <ComingSoonView data={comingSoon} />;
 
   const offering = getOffering(offeringId);
   if (!offering) notFound();
