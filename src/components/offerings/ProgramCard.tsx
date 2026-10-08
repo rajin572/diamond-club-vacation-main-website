@@ -6,7 +6,7 @@ import type { ProgramSummary } from "@/components/programs/programs.types";
 
 /**
  * A program on the Passover page: photo with the partner brands over it, then name, one-line pitch and
- * location. The whole card is one link (to the program's overview, or to another website for external programs).
+ * location. The whole card is one link to the program's overview.
  */
 export function ProgramCard({ program }: { program: ProgramSummary }) {
   return (

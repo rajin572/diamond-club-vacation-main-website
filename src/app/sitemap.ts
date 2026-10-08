@@ -4,7 +4,7 @@ import { getAllOfferings } from "@/data/offerings/registry";
 import { getProgramsForOffering } from "@/data/programs/registry";
 import { getResortsForProgram } from "@/data/resorts/registry";
 import { getAllExperienceSlugsForProgram } from "@/data/experiences/registry";
-import { experienceHref, offeringHref, programDetailsHref, programHref, resortHref } from "@/lib/routes";
+import { experienceHref, offeringHref, programHref, resortHref } from "@/lib/routes";
 
 // Lists every public page. Detail pages (rooms, restaurants, pools, spa) are reachable from their resort page.
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -30,13 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: "weekly",
         priority: 0.8,
-      });
-
-      entries.push({
-        url: url(programDetailsHref(offering.id, program.id)),
-        lastModified: now,
-        changeFrequency: "weekly",
-        priority: 0.7,
       });
 
       for (const resort of getResortsForProgram(program.id)) {

@@ -64,4 +64,35 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
       },
     ],
   },
+  guttaway: {
+    programId: "guttaway",
+    programTitle: "Guettaway A DCV Program",
+    experienceType: "kids-program",
+    title: "Kids Program",
+    heroImage: AllImages.reserveKidsProgram,
+    heroImagePosition: "50% 24%",
+    columns: 2,
+    items: [
+      {
+        id: "day-camp",
+        title: "Day Camp",
+        description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
+        image: AllImages.reserveKidsProgram,
+        imageFocus: "top",
+        linkTo: "kids-day-camp",
+      },
+      {
+        id: "babysitting",
+        title: "Babysitting",
+        description: "A free, responsible babysitting service will be available during camp hours in our special Toddler’s Camp. Private babysitting is available for a fee.",
+        image: AllImages.reserveBabysitting,
+        details: {
+          title: "Babysitting",
+          paragraphs: [
+            "A free, responsible babysitting service will be available during camp hours in our special Toddler’s Camp. Private babysitting is available for a fee.",
+          ],
+        },
+      },
+    ],
+  },
 };

@@ -73,7 +73,7 @@ export default async function OfferingPage({ params }: PageProps) {
       "@type": "Offer",
       name: program.title,
       description: `${program.subtitle} — ${program.location}`,
-      url: program.external ? program.href : `${siteConfig.siteUrl}${program.href}`,
+      url: `${siteConfig.siteUrl}${program.href}`,
     })),
   };
 

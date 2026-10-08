@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
-import { ProgramOverviewView } from "@/components/programs";
+import { ProgramMainView } from "@/components/programs";
 import { getProgram, programsRegistry } from "@/data/programs/registry";
 import { programHref } from "@/lib/routes";
 
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const pageTitle = `${program.title} | Passover 2027`;
   const pageUrl = programHref(offeringId, programId);
-  const description = program.overview.about[0] ?? program.tagline;
+  const description = program.about.about[0] ?? program.tagline;
 
   return {
     title: pageTitle,
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: siteConfig.name,
       locale: "en_US",
       type: "website",
-      images: [{ url: program.overview.heroImage.src, alt: pageTitle }],
+      images: [{ url: program.heroImage.src, alt: pageTitle }],
     },
     twitter: {
       card: "summary_large_image",
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function ProgramOverviewPage({ params }: PageProps) {
+export default async function ProgramPage({ params }: PageProps) {
   const { offeringId, programId } = await params;
   const program = getProgram(programId);
 
@@ -58,5 +58,5 @@ export default async function ProgramOverviewPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ProgramOverviewView offeringId={offeringId} data={program} />;
+  return <ProgramMainView offeringId={offeringId} data={program} />;
 }

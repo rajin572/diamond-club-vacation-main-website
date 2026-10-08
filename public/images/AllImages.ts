@@ -8,6 +8,8 @@ import reserveOurChefs from "./mainDesign/reserve-our-chefs.png";
 import reserveScholars from "./mainDesign/reserve-scholars.png";
 import reserveKidsProgram from "./mainDesign/reserve-kids-program.png";
 import reserveEntertainment from "./mainDesign/reserve-entertainment.png";
+import dayCampCollage from "./mainDesign/day-camp-collage.png";
+import waldorfAerial from "./mainDesign/waldorf-aerial.png";
 import reserveEditionResort from "./mainDesign/reserve-edition-resort.png";
 import blueLaAldea from "./mainDesign/blue-la-aldea.jpg";
 import blueBeachClub from "./mainDesign/blue-beach-club.jpg";
@@ -355,6 +357,8 @@ export const AllImages = {
   reserveScholars,
   reserveKidsProgram,
   reserveEntertainment,
+  dayCampCollage,
+  waldorfAerial,
   reserveEditionResort,
   blueLaAldea,
   blueBeachClub,

@@ -10,12 +10,16 @@ import {
 } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
 import { experienceHref, inquireHref, restaurantHref, poolHref, roomHref, spaHref } from "@/lib/routes";
+import { ProgramSections, programSectionId } from "@/components/programs/ProgramExtras";
+import type { ProgramData } from "@/components/programs/programs.types";
 import type { ResortData, ResortDetailItem, ResortTarget } from "./resorts.types";
 
 interface ResortMainViewProps {
   offeringId: string;
   programId: string;
   data: ResortData;
+  /** The program this hotel belongs to; its experience / explore sections are shown here. */
+  program?: ProgramData;
 }
 
 function overviewGridClass(cardCount: number): string {
@@ -44,13 +48,14 @@ function VenueChips({ label, items, hrefFor }: { label: string; items: ResortDet
  * (rooms, dining, pools, wellness, spa, gallery). Every resort (St. Regis, EDITION, Park Hyatt, Waldorf,
  * Casa Nizuc) renders through this one component (client design: st-regis.html and its sub pages).
  */
-export function ResortMainView({ offeringId, programId, data }: ResortMainViewProps) {
+export function ResortMainView({ offeringId, programId, data, program }: ResortMainViewProps) {
   const targetHref = (target: ResortTarget): string =>
     target.type === "section" ? `#${target.section}` : experienceHref(offeringId, programId, target.experienceType);
 
   const navItems: DesignLink[] = data.showSubNav
     ? [
         { label: data.overviewLabel, href: "#overview" },
+        ...(program ? program.sections.map((section) => ({ label: section.title, href: `#${programSectionId(section.title)}` })) : []),
         ...data.overview.cards.map((card) => ({ label: card.navLabel ?? card.title, href: targetHref(card.target) })),
         ...(data.subNavInquire
           ? [{ label: "Inquire", href: inquireHref({ destination: programId, resort: data.resortId }) }]
@@ -87,6 +92,12 @@ export function ResortMainView({ offeringId, programId, data }: ResortMainViewPr
           ))}
         </div>
       </Wrap>
+
+      {program && (
+        <>
+          <ProgramSections offeringId={offeringId} programId={programId} sections={program.sections} />
+        </>
+      )}
 
       <Wrap id="rooms" className="dcv-wrap--stack">
         <SectionTitle title={rooms.title} description={rooms.description} />

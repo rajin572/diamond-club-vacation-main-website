@@ -14,9 +14,7 @@ export const BLUE_DATA: ProgramData = {
     image: AllImages.passoverCollectionDiamondBlueByDcv,
     logos: [{ image: AllImages.home3, alt: "Casa Nizuc Resort & Spa", blend: true }],
   },
-  overview: {
-    heroImage: AllImages.passoverCollectionDiamondBlueByDcv,
-    tagline: "Luxury made accessible",
+  about: {
     partners: [
       { name: "Casa Nizuc", detail: "A Tribute Portfolio Resort" },
       { name: "Marriott Bonvoy" },
@@ -34,31 +32,21 @@ export const BLUE_DATA: ProgramData = {
       "Set at the brand-new Casa Nizuc Resort, Diamond Blue brings together great food, entertainment and warm hospitality for a memorable Passover in the Riviera Maya.",
     ],
   },
-  nav: [
-    { label: "Overview", target: { type: "overview" } },
-    { label: "Casa Nizuc", target: { type: "resort", resortId: "casa-nizuc" } },
-    { label: "Attractions", target: { type: "experience", experienceType: "attractions" } },
-    { label: "Inquire", target: { type: "inquire" } },
-  ],
+  hotels: {
+    title: "Where you’ll stay",
+    columns: 1,
+    cards: [
+      {
+        id: "casa-nizuc",
+        title: "Casa Nizuc",
+        image: AllImages.passoverCollectionDiamondBlueByDcv,
+        // Text stand-in for the "Casa Nizuc – A Tribute Portfolio Resort" mark until the artwork is supplied.
+        logos: [{ text: "Casa Nizuc", alt: "Casa Nizuc, a Tribute Portfolio Resort" }],
+        target: { type: "resort", resortId: "casa-nizuc" },
+      },
+    ],
+  },
   sections: [
-    {
-      title: "Where you’ll stay",
-      blocks: [
-        {
-          columns: 2,
-          cards: [
-            {
-              id: "casa-nizuc",
-              title: "Casa Nizuc",
-              image: AllImages.passoverCollectionDiamondBlueByDcv,
-              // Text stand-in for the "Casa Nizuc – A Tribute Portfolio Resort" mark until the artwork is supplied.
-              logos: [{ text: "Casa Nizuc", alt: "Casa Nizuc, a Tribute Portfolio Resort" }],
-              target: { type: "resort", resortId: "casa-nizuc" },
-            },
-          ],
-        },
-      ],
-    },
     {
       title: "Programs",
       blocks: [

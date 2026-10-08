@@ -17,9 +17,7 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
       { image: AllImages.logoEditionWhite, alt: "The Riviera Maya EDITION at Kanai" },
     ],
   },
-  overview: {
-    heroImage: AllImages.reserveIntro1,
-    tagline: "Our most exclusive Passover experience",
+  about: {
     partners: [],
     partnersLogo: {
       image: AllImages.reservePartnerLogos,
@@ -38,38 +36,27 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
       "With 2 miles of pristine white sand, Kanai’s beaches sit just half a mile from one of the world’s largest coral reefs—a vibrant underwater haven of diverse marine life and stunning coral formations, making it a true paradise of nature.",
     ],
   },
-  nav: [
-    { label: "Overview", target: { type: "overview" } },
-    { label: "St. Regis", target: { type: "resort", resortId: "st-regis" } },
-    { label: "EDITION", target: { type: "resort", resortId: "edition" } },
-    { label: "Attractions", target: { type: "experience", experienceType: "attractions" } },
-    { label: "Inquire", target: { type: "inquire" } },
-  ],
+  hotels: {
+    title: "Where you’ll stay",
+    columns: 2,
+    cards: [
+      {
+        id: "st-regis",
+        title: "The St. Regis Kanai Resort",
+        image: AllImages.passoverCollectionDiamondClubReserve,
+        logos: [{ image: AllImages.logoStRegisWhite, alt: "St. Regis Kanai" }],
+        target: { type: "resort", resortId: "st-regis" },
+      },
+      {
+        id: "edition",
+        title: "The Edition Resort",
+        image: AllImages.reserveEditionResort,
+        logos: [{ image: AllImages.logoEditionWhite, alt: "The Riviera Maya EDITION at Kanai" }],
+        target: { type: "resort", resortId: "edition" },
+      },
+    ],
+  },
   sections: [
-    {
-      title: "Where you’ll stay",
-      blocks: [
-        {
-          columns: 2,
-          cards: [
-            {
-              id: "st-regis",
-              title: "The St. Regis Kanai Resort",
-              image: AllImages.passoverCollectionDiamondClubReserve,
-              logos: [{ image: AllImages.logoStRegisWhite, alt: "St. Regis Kanai" }],
-              target: { type: "resort", resortId: "st-regis" },
-            },
-            {
-              id: "edition",
-              title: "The Edition Resort",
-              image: AllImages.reserveEditionResort,
-              logos: [{ image: AllImages.logoEditionWhite, alt: "The Riviera Maya EDITION at Kanai" }],
-              target: { type: "resort", resortId: "edition" },
-            },
-          ],
-        },
-      ],
-    },
     {
       title: "Experiences",
       blocks: [

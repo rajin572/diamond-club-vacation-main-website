@@ -13,9 +13,6 @@ export function HomeServicesChain({ services }: { services: HomeServiceItem[] })
             <div className="dcv-txt">
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <span className="dcv-go" aria-hidden="true">
-                →
-              </span>
             </div>
           </Link>
         ))}

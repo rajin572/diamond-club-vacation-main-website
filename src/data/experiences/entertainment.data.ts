@@ -129,4 +129,21 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
       },
     ],
   },
+  guttaway: {
+    programId: "guttaway",
+    programTitle: "Guettaway A DCV Program",
+    experienceType: "entertainment",
+    title: "Entertainment",
+    heroImage: AllImages.blueEntertainment,
+    columns: 3,
+    items: [
+      {
+        id: "to-be-announced",
+        title: "To be announced",
+        description: "Incredible lineup of nightly entertainment",
+        image: AllImages.figmaProgram01,
+        details: { title: "To be announced", paragraphs: ["Incredible lineup of nightly entertainment"] },
+      },
+    ],
+  },
 };

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { ResortMainView } from "@/components/resorts";
 import { getResort, getResortRouteParams } from "@/data/resorts/registry";
+import { getProgram } from "@/data/programs/registry";
 import { resortHref } from "@/lib/routes";
 
 interface PageProps {
@@ -46,5 +47,5 @@ export default async function ResortPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ResortMainView offeringId={offeringId} programId={programId} data={resort} />;
+  return <ResortMainView offeringId={offeringId} programId={programId} data={resort} program={getProgram(programId)} />;
 }

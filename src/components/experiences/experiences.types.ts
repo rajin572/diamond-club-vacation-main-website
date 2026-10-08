@@ -78,6 +78,8 @@ export interface KidsDayCampData {
   programId: string;
   programName: string;
   hero: { title: string; description: string; image: DesignImage; imagePosition?: string };
+  /** Content not ready: the page shows "Coming Soon" under the intro. */
+  comingSoon?: boolean;
   overview?: { title: string; description: string };
   /** A plain checklist (e.g. "Treasure Hunts", "Arts & Crafts") shown as the program. */
   program?: { title: string; items: string[] };

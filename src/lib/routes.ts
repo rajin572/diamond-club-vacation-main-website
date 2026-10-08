@@ -10,14 +10,9 @@ export function offeringHref(offeringId: string): string {
   return `/offerings/${offeringId}`;
 }
 
-/** A program's overview page: the first page a guest sees after choosing the program. */
+/** A program's page: its hotels. */
 export function programHref(offeringId: string, programId: string): string {
   return `${offeringHref(offeringId)}/programs/${programId}`;
-}
-
-/** The program's details hub (hotels, experiences, ...), reached with "See Details" from the overview. */
-export function programDetailsHref(offeringId: string, programId: string): string {
-  return `${programHref(offeringId, programId)}/details`;
 }
 
 export function resortHref(

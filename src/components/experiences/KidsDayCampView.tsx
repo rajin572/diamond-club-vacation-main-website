@@ -15,7 +15,7 @@ interface KidsDayCampViewProps {
  */
 export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
   const inquire = inquireHref({ destination: data.programId, topic: "kids-day-camp" });
-  const { overview, program, team, activities, ageGroups, dining, babysitting } = data;
+  const { overview, program, team, activities, ageGroups, dining, babysitting, comingSoon } = data;
 
   return (
     <>
@@ -27,6 +27,14 @@ export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
         subtitle={data.hero.description}
       />
       <SubNav items={nav} label={`${data.programName} sections`} />
+
+      {comingSoon && (
+        <Wrap>
+          <p className="dcv-lead" style={{ textAlign: "center" }}>
+            Coming Soon
+          </p>
+        </Wrap>
+      )}
 
       {overview && (
         <Wrap>

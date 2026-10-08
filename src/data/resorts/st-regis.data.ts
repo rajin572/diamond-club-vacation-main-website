@@ -1,6 +1,7 @@
 import { AllImages } from "../../../public/images/AllImages";
 import type { ResortData } from "@/components/resorts/resorts.types";
 import { rotate } from "./helpers";
+import { EDITION_RESORT_DATA } from "./edition.data";
 
 /** The St. Regis Kanai Resort — content from the client's HTML design (diamond-club-main-design). */
 export const ST_REGIS_RESORT_DATA: ResortData = {
@@ -194,121 +195,8 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
       },
     ],
   },
-  dining: {
-    title: "Dining",
-    description: "Restaurants and bars are kept specific to this hotel.",
-    images: AllImages.series.stregisDining,
-    items: [
-      {
-        id: "toro",
-        title: "Toro",
-        subtitle: "Latin American · Dinner",
-        image: AllImages.series.stregisDining[0],
-        description: "Dine amid an eclectic, well-appointed residential setting at Toro. This bespoke dining venue invites guests to sample dishes reflecting the spirit of Mexico and Latin America, under the direction of Chef Richard Sandoval.",
-        stats: [
-          { label: "Cuisine", value: "Latin American" },
-          { label: "Meal Period", value: "Dinner" },
-          { label: "Hours", value: "5:30 PM – 11:00 PM" },
-          { label: "Dress Code", value: "Casual" },
-        ],
-        groups: [
-          { title: "Schedule", items: ["Mon, Wed, Fri – Sun: 5:30 PM – 11:00 PM", "Tue, Thu: Closed"] },
-          { title: "Good to know", items: ["Location: Terrace & indoor seating"] },
-        ],
-        gallery: rotate(AllImages.series.stregisDining, 0),
-      },
-      {
-        id: "sool-steakhouse",
-        title: "SO’OL Steak House",
-        subtitle: "Steakhouse · Dinner",
-        image: AllImages.series.stregisDining[1],
-        description: "Prime cuts, coastal Mexican flavours and wood-fired preparations in an intimate open-air beach setting.",
-        stats: [
-          { label: "Cuisine", value: "Steakhouse" },
-          { label: "Meal Period", value: "Dinner" },
-          { label: "Hours", value: "6:00 PM – 11:00 PM" },
-          { label: "Dress Code", value: "Smart Casual" },
-        ],
-        groups: [
-          { title: "Schedule", items: ["Mon – Sun: 6:00 PM – 11:00 PM"] },
-          { title: "Good to know", items: ["Location: Beachfront terrace"] },
-        ],
-        gallery: rotate(AllImages.series.stregisDining, 1),
-      },
-      {
-        id: "pool-bar",
-        title: "Pool Bar",
-        subtitle: "Mediterranean · All day",
-        image: AllImages.series.stregisDining[2],
-        description: "Light Mediterranean refreshments, fresh juices, and casual poolside fare throughout the sunny afternoon.",
-        stats: [
-          { label: "Cuisine", value: "Mediterranean" },
-          { label: "Meal Period", value: "All day" },
-          { label: "Hours", value: "10:00 AM – 7:00 PM" },
-          { label: "Dress Code", value: "Resort Casual" },
-        ],
-        groups: [
-          { title: "Schedule", items: ["Mon – Sun: 10:00 AM – 7:00 PM"] },
-          { title: "Good to know", items: ["Location: Main Pool deck"] },
-        ],
-        gallery: rotate(AllImages.series.stregisDining, 2),
-      },
-      {
-        id: "kitchen-restaurant",
-        title: "Kitchen Restaurant",
-        subtitle: "International · Breakfast & lunch",
-        image: AllImages.series.stregisDining[3],
-        description: "Expansive breakfast spreads, seasonal international dining, and freshly prepared delicacies in an open show-kitchen environment.",
-        stats: [
-          { label: "Cuisine", value: "International" },
-          { label: "Meal Period", value: "Breakfast & lunch" },
-          { label: "Hours", value: "7:00 AM – 4:00 PM" },
-          { label: "Dress Code", value: "Casual" },
-        ],
-        groups: [
-          { title: "Schedule", items: ["Mon – Sun: 7:00 AM – 4:00 PM"] },
-          { title: "Good to know", items: ["Location: Resort main level"] },
-        ],
-        gallery: rotate(AllImages.series.stregisDining, 3),
-      },
-      {
-        id: "mexican-cantina",
-        title: "Mexican Cantina",
-        subtitle: "Latin American · Lunch & Dinner",
-        image: AllImages.series.stregisDining[4],
-        description: "Traditional Mexican regional flavours prepared with authentic chiles, handmade kosher corn tortillas, and slow-roasted specialties.",
-        stats: [
-          { label: "Cuisine", value: "Latin American" },
-          { label: "Meal Period", value: "Lunch & Dinner" },
-          { label: "Hours", value: "1:00 PM – 10:00 PM" },
-          { label: "Dress Code", value: "Resort Casual" },
-        ],
-        groups: [
-          { title: "Schedule", items: ["Mon – Sun: 1:00 PM – 10:00 PM"] },
-          { title: "Good to know", items: ["Location: Garden pavilion"] },
-        ],
-        gallery: rotate(AllImages.series.stregisDining, 4),
-      },
-      {
-        id: "coco-cafe",
-        title: "Coco Café",
-        subtitle: "Café & desserts · All Day",
-        image: AllImages.series.stregisDining[5],
-        description: "Fresh roasted specialty coffees, single-origin espressos, exotic herbal teas, cold brews, and kosher pastries on the go.",
-        stats: [
-          { label: "Cuisine", value: "Café & desserts" },
-          { label: "Meal Period", value: "All Day" },
-          { label: "Hours", value: "6:30 AM – 9:00 PM" },
-          { label: "Dress Code", value: "Casual" },
-        ],
-        groups: [
-          { title: "Schedule", items: ["Mon – Sun: 6:30 AM – 9:00 PM"] },
-          { title: "Good to know", items: ["Location: Main lobby promenade"] },
-        ],
-        gallery: rotate(AllImages.series.stregisDining, 5),
-      },
-    ],
-  },
+  // Both Kanai hotels share one dining program, so St. Regis uses the Edition restaurants.
+  dining: EDITION_RESORT_DATA.dining,
   pools: {
     title: "Pools & Beach",
     description: "Pools, beach areas, cabanas and resort water experiences.",

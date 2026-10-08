@@ -8,8 +8,8 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
     hero: {
       title: "Day Camp & Teen Program",
       description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
-      image: AllImages.reserveKidsProgram,
-      imagePosition: "50% 24%",
+      image: AllImages.dayCampCollage,
+      imagePosition: "50% 20%",
     },
     overview: {
       title: "An unforgettable Passover experience for every age.",
@@ -87,8 +87,8 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
     hero: {
       title: "Day Camp",
       description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
-      image: AllImages.reserveKidsProgram,
-      imagePosition: "50% 24%",
+      image: AllImages.dayCampCollage,
+      imagePosition: "50% 20%",
     },
     program: {
       title: "Day Camp Program",
@@ -102,5 +102,16 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
         "Face Painting",
       ],
     },
+  },
+  guttaway: {
+    programId: "guttaway",
+    programName: "Guettaway A DCV Program",
+    hero: {
+      title: "Day Camp",
+      description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
+      image: AllImages.dayCampCollage,
+      imagePosition: "50% 20%",
+    },
+    comingSoon: true,
   },
 };

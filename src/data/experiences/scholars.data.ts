@@ -69,4 +69,42 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
       },
     ],
   },
+  guttaway: {
+    programId: "guttaway",
+    programTitle: "Guettaway A DCV Program",
+    experienceType: "scholars",
+    title: "Scholars",
+    viewerTitle: "Scholars Details",
+    layout: "people",
+    heroImage: AllImages.reserveScholars,
+    columns: 3,
+    items: [
+      {
+        id: "rabbi-lawrence-hajioff",
+        title: "Rabbi Lawrence Hajioff",
+        description: "Rabbi Lawrence Hajioff grew up in London, England. After graduating with honors in political science from University of Manchester, he worked for MTV in news production and won a national competition to become “Jewish Stand-Up Comedian of the Year.” After deciding to pursue a career as a rabbi, Hajioff studied in Israel and then Monsey, New York, where he received his rabbinical smicha ordination.",
+        image: AllImages.blueScholarLawrenceHajioff,
+        details: {
+          title: "Rabbi Lawrence Hajioff",
+          paragraphs: [
+            "Rabbi Lawrence Hajioff grew up in London, England. After graduating with honors in political science from University of Manchester, he worked for MTV in news production and won a national competition to become “Jewish Stand-Up Comedian of the Year.” After deciding to pursue a career as a rabbi, Hajioff studied in Israel and then Monsey, New York, where he received his rabbinical smicha ordination.",
+          ],
+        },
+      },
+      {
+        id: "speaker-tba-1",
+        title: "Speaker to be announced",
+        description: "Details coming soon",
+        tba: true,
+        linkLabel: "Coming soon",
+      },
+      {
+        id: "speaker-tba-2",
+        title: "Speaker to be announced",
+        description: "Details coming soon",
+        tba: true,
+        linkLabel: "Coming soon",
+      },
+    ],
+  },
 };
