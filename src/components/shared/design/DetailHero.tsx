@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { AllImages } from "../../../../public/images/AllImages";
 import type { DesignImage } from "./types";
 
 interface DetailHeroProps {
@@ -9,31 +8,28 @@ interface DetailHeroProps {
   subtitle?: string;
   /** CSS object-position of the photo, for tall or off-centre images (e.g. "50% 20%"). */
   imagePosition?: string;
-  /** Brand mark shown above the title. Defaults to the round Diamond Club Vacations badge on every page. */
-  logo?: { image: DesignImage; alt: string; /** Wide wordmark (hotel logo) instead of the round badge. */ wordmark?: boolean };
+  /** Kept for backwards compatibility but not rendered on the banner per design requirements. */
+  logo?: { image: DesignImage; alt: string; wordmark?: boolean };
 }
 
-const DEFAULT_LOGO = { image: AllImages.logo, alt: "Diamond Club Vacations" };
-
-/** The rounded-bottom hero used by every inner page (client design: `.detailHero`). */
-export function DetailHero({ image, kicker, title, subtitle, imagePosition, logo = DEFAULT_LOGO }: DetailHeroProps) {
+/** The rounded-bottom hero used by inner pages, updated with centralized typography and no banner logo. */
+export function DetailHero({ image, kicker, title, subtitle, imagePosition }: DetailHeroProps) {
   return (
     <section className="dcv-hero">
-      <Image src={image} alt="" priority sizes="100vw" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
+      <Image
+        src={image}
+        alt=""
+        priority
+        sizes="100vw"
+        style={imagePosition ? { objectPosition: imagePosition } : undefined}
+      />
       <div className="dcv-copy">
-        {logo && (
-          <Image
-            className={logo.wordmark ? "dcv-hero-logo dcv-hero-logo--wordmark" : "dcv-hero-logo"}
-            src={logo.image}
-            alt={logo.alt}
-            priority
-            sizes={logo.wordmark ? "230px" : "104px"}
-          />
-        )}
         {kicker && <div className="dcv-kicker">{kicker}</div>}
         <h1>{title}</h1>
-        {subtitle && <div>{subtitle}</div>}
+        {subtitle && <div className="dcv-hero-subtitle">{subtitle}</div>}
       </div>
     </section>
   );
 }
+
+export default DetailHero;

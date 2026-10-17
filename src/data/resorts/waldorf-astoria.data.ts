@@ -5,10 +5,10 @@ import { rotate } from "./helpers";
 /** Waldorf Astoria Riviera Maya — content from the client's HTML design (diamond-club-main-design). */
 export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   programId: "guttaway",
-  programTitle: "Guettaway A DCV Program",
+  programTitle: "guettaway a Diamond Club production",
   resortId: "waldorf-astoria",
   resortName: "Waldorf Astoria Riviera Maya",
-  tagline: "Guettaway A DCV Program",
+  tagline: "guettaway a Diamond Club production",
   showTagline: false,
   heroImage: AllImages.waldorfAerial,
   overviewLabel: "Overview",

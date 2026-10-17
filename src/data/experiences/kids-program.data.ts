@@ -66,7 +66,7 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
   },
   guttaway: {
     programId: "guttaway",
-    programTitle: "Guettaway A DCV Program",
+    programTitle: "guettaway a Diamond Club production",
     experienceType: "kids-program",
     title: "Kids Program",
     heroImage: AllImages.reserveKidsProgram,

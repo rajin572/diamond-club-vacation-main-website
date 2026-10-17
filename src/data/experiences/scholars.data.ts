@@ -71,7 +71,7 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
   },
   guttaway: {
     programId: "guttaway",
-    programTitle: "Guettaway A DCV Program",
+    programTitle: "guettaway a Diamond Club production",
     experienceType: "scholars",
     title: "Scholars",
     viewerTitle: "Scholars Details",

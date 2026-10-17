@@ -5,11 +5,11 @@ import { rotate } from "./helpers";
 /** Park Hyatt Riviera Maya — content from the client's HTML design (diamond-club-main-design). */
 export const PARK_HYATT_RESORT_DATA: ResortData = {
   programId: "guttaway",
-  programTitle: "Guettaway A DCV Program",
+  programTitle: "guettaway a Diamond Club production",
   resortId: "park-hyatt",
   resortName: "Park Hyatt Riviera Maya",
   kicker: "Passover 2027",
-  tagline: "Guettaway A DCV Program",
+  tagline: "guettaway a Diamond Club production",
   heroImage: AllImages.series.parkHyatt[0],
   overviewLabel: "Overview",
   showSubNav: true,

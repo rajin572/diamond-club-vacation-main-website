@@ -1,0 +1,180 @@
+"use client";
+
+import { useState } from "react";
+import type { ChangeEvent, FormEvent } from "react";
+import Link from "next/link";
+import { Send, CheckCircle2 } from "lucide-react";
+
+interface ContactValues {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
+
+export function ContactForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [values, setValues] = useState<ContactValues>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const onField = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setValues((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const onSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    setError("");
+
+    if (!values.firstName.trim() || !values.lastName.trim()) {
+      setError("Please provide your full name.");
+      return;
+    }
+    if (!values.email.trim() || !/^\S+@\S+\.\S+$/.test(values.email.trim())) {
+      setError("Please provide a valid email address.");
+      return;
+    }
+    if (!values.phone.trim()) {
+      setError("Please provide your phone number.");
+      return;
+    }
+    if (!values.message.trim()) {
+      setError("Please write your message.");
+      return;
+    }
+
+    setSubmitted(true);
+    window.scrollTo({ top: 120, behavior: "smooth" });
+  };
+
+  if (submitted) {
+    return (
+      <main className="dcv-inquiry-shell">
+        <div className="dcv-review" style={{ textAlign: "center", padding: "48px 24px" }}>
+          <div style={{ display: "inline-flex", justifyContent: "center", marginBottom: 16 }}>
+            <CheckCircle2 size={48} color="#9a7a38" />
+          </div>
+          <h2>Thank you{values.firstName ? `, ${values.firstName}` : ""}.</h2>
+          <p style={{ marginTop: 8, fontSize: 16, color: "#555" }}>
+            Your message has been received. A member of our concierge team will reach out to you shortly.
+          </p>
+          <p style={{ marginTop: 28 }}>
+            <Link className="dcv-btn" href="/">
+              Back to Home
+            </Link>
+          </p>
+        </div>
+      </main>
+    );
+  }
+
+  return (
+    <main className="dcv-inquiry-shell">
+      <div style={{ textAlign: "center", marginBottom: 32 }}>
+        <div className="dcv-kicker" style={{ marginBottom: 8 }}>DIAMOND CLUB VACATIONS</div>
+        <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", margin: "0 0 10px", fontFamily: "var(--dcv-serif)" }}>
+          Contact Us
+        </h1>
+        <p style={{ color: "#666", maxWidth: 540, margin: "0 auto", fontSize: 15 }}>
+          Have questions about our programs, destinations, or bespoke services? Send us a message and our team will get back to you promptly.
+        </p>
+      </div>
+
+      <form onSubmit={onSubmit} noValidate style={{ maxWidth: 720, margin: "0 auto" }}>
+        <div className="dcv-formgrid">
+          <label className="dcv-field-label">
+            First Name *
+            <input
+              name="firstName"
+              autoComplete="given-name"
+              placeholder="e.g. David"
+              value={values.firstName}
+              onChange={onField}
+            />
+          </label>
+
+          <label className="dcv-field-label">
+            Last Name *
+            <input
+              name="lastName"
+              autoComplete="family-name"
+              placeholder="e.g. Cohen"
+              value={values.lastName}
+              onChange={onField}
+            />
+          </label>
+
+          <label className="dcv-field-label">
+            Email *
+            <input
+              name="email"
+              type="email"
+              autoComplete="email"
+              placeholder="e.g. david@example.com"
+              value={values.email}
+              onChange={onField}
+            />
+          </label>
+
+          <label className="dcv-field-label">
+            Phone Number *
+            <input
+              name="phone"
+              type="tel"
+              autoComplete="tel"
+              placeholder="e.g. +1 (555) 000-0000"
+              value={values.phone}
+              onChange={onField}
+            />
+          </label>
+
+          <label className="dcv-field-label dcv-wide">
+            Subject (Optional)
+            <input
+              name="subject"
+              placeholder="e.g. General Inquiry, Private Event, Membership"
+              value={values.subject}
+              onChange={onField}
+            />
+          </label>
+
+          <label className="dcv-field-label dcv-wide">
+            Message *
+            <textarea
+              name="message"
+              rows={5}
+              placeholder="How can we assist you with your luxury kosher travel plans?"
+              value={values.message}
+              onChange={onField}
+            />
+          </label>
+        </div>
+
+        {error && (
+          <p className="dcv-notice" role="alert" style={{ color: "#b3261e", marginTop: 16 }}>
+            {error}
+          </p>
+        )}
+
+        <div className="dcv-actions" style={{ justifyContent: "center", marginTop: 28 }}>
+          <button type="submit" className="dcv-btn" style={{ minWidth: 200, gap: 8 }}>
+            <Send size={15} />
+            <span>Send Message</span>
+          </button>
+        </div>
+      </form>
+    </main>
+  );
+}
+
+export default ContactForm;
+

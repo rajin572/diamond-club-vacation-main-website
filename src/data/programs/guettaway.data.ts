@@ -4,7 +4,7 @@ import type { ProgramData } from "@/components/programs/programs.types";
 export const GUTTAWAY_DATA: ProgramData = {
   id: "guttaway",
   offeringId: "passover-collection-2027",
-  title: "Guettaway A DCV Program",
+  title: "guettaway a Diamond Club production",
   kicker: "Passover 2027",
   tagline: "Elevated Pesach for the Heimish Family",
   heroImage: AllImages.guettawayMain1,

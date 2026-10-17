@@ -131,7 +131,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
   },
   guttaway: {
     programId: "guttaway",
-    programTitle: "Guettaway A DCV Program",
+    programTitle: "guettaway a Diamond Club production",
     experienceType: "entertainment",
     title: "Entertainment",
     heroImage: AllImages.blueEntertainment,

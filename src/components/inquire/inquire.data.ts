@@ -6,21 +6,52 @@ export interface InquireExperienceOption {
 }
 
 export const EXPERIENCE_OPTIONS: InquireExperienceOption[] = [
-  { id: "diamond-club-reserve", label: "DIAMOND CLUB RESERVE", aliases: ["reserve", "diamond-club-reserve"] },
+  {
+    id: "diamond-club-reserve",
+    label: "DIAMOND CLUB RESERVE",
+    aliases: [
+      "reserve",
+      "diamond-club-reserve",
+      "st-regis",
+      "the-st-regis",
+      "edition",
+      "the-edition",
+    ],
+  },
   {
     id: "guttaway",
-    label: "Guettaway A DCV Program",
-    aliases: ["guttaway", "guettaway", "guttaway-a-dcv-program", "gold", "diamond-club-gold"],
+    label: "guettaway a Diamond Club production",
+    aliases: [
+      "guttaway",
+      "guettaway",
+      "guttaway-a-dcv-program",
+      "guettaway-a-diamond-club-production",
+      "gold",
+      "diamond-club-gold",
+      "waldorf",
+      "waldorf-astoria",
+      "park-hyatt",
+    ],
   },
   {
     id: "blue",
     label: "Diamond Blue by DCV",
-    aliases: ["blue", "diamond-blue", "diamond-club-blue", "diamond-club-blue-by-dcv"],
+    aliases: ["blue", "diamond-blue", "diamond-club-blue", "diamond-club-blue-by-dcv", "casa-nizuc"],
   },
   { id: "casa-nizuc", label: "Casa Nizuc — Year Round", aliases: ["casa-nizuc", "casa"] },
   { id: "weddings-events", label: "Wedding / Destination Event", aliases: ["weddings-events", "weddings", "wedding"] },
   { id: "private-events", label: "Private Event", aliases: ["private-events", "private-event"] },
 ];
+
+export const RESORT_DISPLAY_NAMES: Record<string, string> = {
+  "st-regis": "The St. Regis Kanai",
+  "the-st-regis": "The St. Regis Kanai",
+  "edition": "The Riviera Maya EDITION",
+  "the-edition": "The Riviera Maya EDITION",
+  "waldorf-astoria": "Waldorf Astoria Riviera Maya",
+  "park-hyatt": "Park Hyatt Riviera Maya",
+  "casa-nizuc": "Casa Nizuc",
+};
 
 export function resolveExperienceOption(destination: string | null): string {
   const normalized = destination?.toLowerCase().trim();
@@ -28,6 +59,31 @@ export function resolveExperienceOption(destination: string | null): string {
   return (
     EXPERIENCE_OPTIONS.find((option) => option.aliases.includes(normalized))?.label ?? EXPERIENCE_OPTIONS[0].label
   );
+}
+
+export function resolveDetailedExperience(
+  destination: string | null,
+  resort: string | null
+): { label: string; isLocked: boolean } {
+  const normDest = destination?.toLowerCase().trim();
+  const normResort = resort?.toLowerCase().trim();
+
+  // If no destination or destination is "all", user can select freely
+  if (!normDest || normDest === "all") {
+    if (normResort && RESORT_DISPLAY_NAMES[normResort]) {
+      const base = resolveExperienceOption(normResort);
+      return { label: `${base} — ${RESORT_DISPLAY_NAMES[normResort]}`, isLocked: true };
+    }
+    return { label: EXPERIENCE_OPTIONS[0].label, isLocked: false };
+  }
+
+  const base = resolveExperienceOption(normDest);
+  if (normResort && RESORT_DISPLAY_NAMES[normResort]) {
+    return { label: `${base} — ${RESORT_DISPLAY_NAMES[normResort]}`, isLocked: true };
+  }
+
+  // Pre-locked to the specific program/destination
+  return { label: base, isLocked: true };
 }
 
 export const REFERRAL_OPTIONS = [

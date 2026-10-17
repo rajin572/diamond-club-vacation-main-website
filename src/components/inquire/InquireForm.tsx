@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Lock } from "lucide-react";
 import {
   COMMUNITY_OPTIONS,
   EXPERIENCE_OPTIONS,
   REFERRAL_OPTIONS,
-  resolveExperienceOption,
+  resolveDetailedExperience,
 } from "./inquire.data";
 
 type YesNo = "Yes" | "No" | "";
@@ -88,14 +89,22 @@ function YesNoField({
   );
 }
 
-/** Five-step inquiry form (client design: inquire.html). */
+/** Five-step inquiry form with locked resort pre-selection when coming from a specific hotel/program. */
 export function InquireForm() {
   const searchParams = useSearchParams();
+
+  const detailedExp = useMemo(() => {
+    return resolveDetailedExperience(
+      searchParams.get("destination") ?? searchParams.get("program"),
+      searchParams.get("resort")
+    );
+  }, [searchParams]);
+
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [values, setValues] = useState<InquiryValues>(() => ({
-    experience: resolveExperienceOption(searchParams.get("destination") ?? searchParams.get("program")),
+    experience: detailedExp.label,
     adults: "2",
     children: "0",
     rooms: "1",
@@ -135,7 +144,6 @@ export function InquireForm() {
 
   const onSubmit = (event: FormEvent) => {
     event.preventDefault();
-    // No inquiry endpoint exists yet; connect the CRM / email service here and send `values`.
     setSubmitted(true);
     window.scrollTo({ top: 120, behavior: "smooth" });
   };
@@ -170,16 +178,28 @@ export function InquireForm() {
         {step === 0 && (
           <section>
             <div className="dcv-kicker">STEP 1 · YOUR TRIP</div>
-            <h2>Pick a vacation and tell us about your group</h2>
+            <h2>Tell us about your group</h2>
             <div className="dcv-formgrid">
               <label className="dcv-field-label dcv-wide">
                 Experience
-                <select name="experience" value={values.experience} onChange={onField}>
-                  {EXPERIENCE_OPTIONS.map((option) => (
-                    <option key={option.id}>{option.label}</option>
-                  ))}
-                </select>
+                {detailedExp.isLocked ? (
+                  <div className="dcv-locked-experience">
+                    <span className="dcv-locked-text">{values.experience}</span>
+                    <span className="dcv-locked-badge">
+                      <Lock size={12} />
+                      <span>Locked for this program</span>
+                    </span>
+                    <input type="hidden" name="experience" value={values.experience} />
+                  </div>
+                ) : (
+                  <select name="experience" value={values.experience} onChange={onField}>
+                    {EXPERIENCE_OPTIONS.map((option) => (
+                      <option key={option.id}>{option.label}</option>
+                    ))}
+                  </select>
+                )}
               </label>
+
               <label className="dcv-field-label">
                 Adults · Age 18+
                 <input name="adults" type="number" min={1} value={values.adults} onChange={onField} />

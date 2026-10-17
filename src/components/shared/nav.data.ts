@@ -40,7 +40,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Guest",
     links: [
       { label: "About", href: "/about" },
-      { label: "Contact", href: "/inquire" },
+      { label: "Contact", href: "/contact" },
     ],
   },
 ];
