@@ -500,6 +500,9 @@ import dcvDiningLobbyBar from "./mainDesign/dcv-dining-lobby-bar.jpg";
 import dcvDiningPizzo from "./mainDesign/dcv-dining-pizzo.jpg";
 import dcvDiningKitchenDairyRestaurant from "./mainDesign/dcv-dining-kitchen-dairy-restaurant.jpg";
 import dcvDiningKitchen from "./mainDesign/dcv-dining-kitchen.jpg";
+import kosherSupervisionRabbi from "./kosher-supervision-rabbi.jpg";
+import rabbiLawrenceHajioffFace from "./rabbi-lawrence-hajioff-face.jpg";
+import rabbiLawrenceHajioffNew from "./rabbi-lawrence-hajioff-new.jpg";
 
 export const AllImages = {
   logo,
@@ -1009,6 +1012,9 @@ export const AllImages = {
   dcvDiningPizzo,
   dcvDiningKitchenDairyRestaurant,
   dcvDiningKitchen,
+  kosherSupervisionRabbi,
+  rabbiLawrenceHajioffFace,
+  rabbiLawrenceHajioffNew,
   series: {
     attractions: [attractions1, attractions2, attractions3, attractions4, attractions5, attractions6, attractions7],
     casa: [casa1, casa2, casa3, casa4, casa5, casa6],

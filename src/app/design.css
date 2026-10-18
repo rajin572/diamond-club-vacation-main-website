@@ -2474,6 +2474,19 @@ button.dcv-link {
   max-width: 680px;
 }
 
+/* The pop-up's body scrolls (the title bar stays put) when the message is taller than the screen. */
+.dcv-dining-popup-modal .dcv-brochure-preview-wrap {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Children of a scrolling flex column must keep their height (the rabbi photo was shrinking to nothing). */
+.dcv-dining-popup-modal .dcv-brochure-preview-wrap > * {
+  flex-shrink: 0;
+}
+
 .dcv-supervision-details-grid {
   display: flex;
   flex-direction: column;
@@ -2573,6 +2586,18 @@ button.dcv-link {
   margin-bottom: 0;
 }
 
+.dcv-dining-modal-bio h3 {
+  margin: 26px 0 10px;
+  font-family: var(--dcv-serif);
+  font-size: 22px;
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+.dcv-dining-modal-bio h3:first-child {
+  margin-top: 0;
+}
+
 .dcv-kashrus-badges {
   display: flex;
   flex-wrap: wrap;
@@ -2596,9 +2621,11 @@ button.dcv-link {
   text-transform: uppercase;
 }
 
+/* Default focus at the top (faces, rooms); a card sets its own object-position inline when its photo needs another one
+   (the square One Kosher logo is centered). */
 .dcv-dining-blocks .dcv-card img {
   object-fit: cover;
-  object-position: center top !important;
+  object-position: center top;
 }
 
 /* Serves / Hours lines on dining cards */

@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-import { X, CheckCircle2, Award, ShieldCheck } from "lucide-react";
+import { X, ShieldCheck } from "lucide-react";
 import { AllImages } from "../../../public/images/AllImages";
 
 interface DiningModalProps {
@@ -55,17 +55,15 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
         </button>
 
         {isGuettaway ? (
-          /* GUETTAWAY KOSHER SUPERVISION (Rabbi Nesanel Sommer / Kehillas Bnei Yitzchok) */
+          /* GUETTAWAY KASHRUS: the client's message, word for word (Rabbi Nesanel Sommer / Kehillas Bnei Yitzchok) */
           <>
             <div className="dcv-brochure-header">
-              <div className="dcv-brochure-kicker">KASHRUS CERTIFICATION · GUETTAWAY</div>
-              <h2 className="dcv-brochure-title">Strict Rabbinical Supervision</h2>
-              <p className="dcv-brochure-sub">
-                Under the Strict Supervision of Rabbi Nesanel Sommer &amp; Kehillas Bnei Yitzchok
-              </p>
+              <div className="dcv-brochure-kicker">GUETTAWAY, A DIAMOND CLUB PRODUCTION</div>
+              <h2 className="dcv-brochure-title">Kashrus</h2>
+              <p className="dcv-brochure-sub">Under the Strict Supervision of Rabbi Nesanel Sommer</p>
             </div>
 
-            <div className="dcv-brochure-preview-wrap">
+            <div className="dcv-brochure-preview-wrap" data-lenis-prevent>
               <div className="dcv-dining-modal-banner-wrap">
                 <Image
                   src={AllImages.kosherGettSupervision}
@@ -74,24 +72,6 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
                   height={140}
                   priority
                 />
-              </div>
-
-              <div className="dcv-kashrus-badges">
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Non-Gebrokts
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Shmura Matzah
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Cholov Yisroel
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Bishul Yisroel
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Full-Time Mashgichim
-                </span>
               </div>
 
               <div className="dcv-dining-modal-bio">
@@ -107,38 +87,19 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
                 <p>
                   From elegant Yom Tov dining to our exceptional Chol Hamoed culinary experiences, guests can indulge in world-class cuisine with complete confidence and peace of mind.
                 </p>
+                <h3>Our Kashrus Standards</h3>
               </div>
 
-              <div className="dcv-supervision-details-grid">
-                <div className="dcv-supervision-feat">
-                  <div className="dcv-feat-icon">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <strong>Strict Glatt Kosher &amp; Mehadrin Meat</strong>
-                    <span>All beef, veal, lamb, and poultry are exclusively 100% Glatt Kosher with Chassidishe Shechita standards.</span>
-                  </div>
-                </div>
-
-                <div className="dcv-supervision-feat">
-                  <div className="dcv-feat-icon">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <strong>Cholov Yisroel &amp; Bishul Yisroel</strong>
-                    <span>All dairy delicacies, artisan cheeses, and morning fare are strictly Cholov Yisroel. All cooking follows strict Bishul Yisroel.</span>
-                  </div>
-                </div>
-
-                <div className="dcv-supervision-feat">
-                  <div className="dcv-feat-icon">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <strong>24/7 Dedicated Mashgichim Team</strong>
-                    <span>A full-time, experienced rabbinical team is on-site 24 hours a day in every kitchen, prep station, and service venue.</span>
-                  </div>
-                </div>
+              <div className="dcv-kashrus-badges">
+                <span className="dcv-kashrus-badge">
+                  <ShieldCheck size={14} /> Non-Gebrokts
+                </span>
+                <span className="dcv-kashrus-badge">
+                  <ShieldCheck size={14} /> Shmura Matzah
+                </span>
+                <span className="dcv-kashrus-badge">
+                  <ShieldCheck size={14} /> Cholov Yisroel
+                </span>
               </div>
 
               <div className="dcv-dining-modal-footer">
@@ -153,118 +114,43 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
             </div>
           </>
         ) : (
-          /* DIAMOND CLUB RESERVE KOSHER SUPERVISION (Rabbi Nissim Hilu / One Kosher) */
+          /* DIAMOND CLUB RESERVE KOSHER SUPERVISION: the client's message, word for word, with the rabbi's photo on top */
           <>
             <div className="dcv-brochure-header">
-              <div className="dcv-brochure-kicker">KOSHER CERTIFICATION &amp; SUPERVISION · PASSOVER 2027</div>
-              <h2 className="dcv-brochure-title">Rabbi Nissim Hilu</h2>
-              <p className="dcv-brochure-sub">Founder &amp; Director, One Kosher</p>
+              <div className="dcv-brochure-kicker">PASSOVER 2027 · DIAMOND CLUB RESERVE</div>
+              <h2 className="dcv-brochure-title">Kosher Supervision</h2>
             </div>
 
-            <div className="dcv-brochure-preview-wrap">
+            <div className="dcv-brochure-preview-wrap" data-lenis-prevent>
               <div className="dcv-dining-modal-portrait-wrap">
                 <Image
-                  src={AllImages.rabbiNissimHilu}
-                  alt="Rabbi Nissim Hilu - Founder & Director, One Kosher"
-                  width={260}
-                  height={320}
+                  src={AllImages.kosherSupervisionRabbi}
+                  alt="Rabbi Nissim Hilu, Kosher Supervision"
+                  width={480}
+                  height={776}
                   priority
                 />
               </div>
 
-              <div className="dcv-kashrus-badges">
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> One Kosher Supervision
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Glatt Kosher Mehadrin
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Cholov Yisroel
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Non-Gebrokts
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Shmura Matzah
-                </span>
-              </div>
-
               <div className="dcv-dining-modal-bio">
+                <h3>Food To Perfection</h3>
                 <p>
-                  With more than 26 years of experience in kosher certification and supervision, <strong>Rabbi Nissim Hilu</strong> is a highly respected authority in international kosher standards, recognized for his expertise, leadership, and unwavering commitment to excellence.
+                  For over a decade the Diamond Club Vacations Team has been organizing Passover programs at luxury resorts, our dedication to offering the best in kosher vacations has been enjoyed by hundreds of families and thousands of guests from all over the world. our dedicated team welcomes the opportunity and is looking forward to serving you once again for Passover 2025 in Kanai.
                 </p>
                 <p>
-                  As the founder and director of <strong>One Kosher</strong>, Rabbi Hilu has played an instrumental role in advancing kosher standards throughout Mexico, Colombia, Panama, and beyond. His extensive experience spans luxury resorts, prestigious restaurants, and large-scale hospitality operations, where he has developed innovative systems that combine the highest standards of kosher supervision with exceptional culinary experiences.
+                  Our In House Catering Lead by our Executive Chef Donny Rogoff and his five star team, with many years of Passover Glatt kosher experience leading and managing culinary teams at the most prestige’s hotels, Donny will once again Bring his award-winning International culinary team to Diamond Club Vacations for Passover 2026 and will be coordinating our outstanding gourmet cuisine. Whether it’s in our dining room, tea room, or the barbecue or the restaurants, an array of impressive delights will await your dining pleasure.
                 </p>
                 <p>
-                  A respected educator, author, and industry leader, Rabbi Hilu brings a wealth of knowledge, international experience, and a meticulous attention to detail to every program under his supervision.
+                  Our culinary team as well as our popular in house pastry team is a collection of the most professional world class gourmet chefs in the kosher food industry, with years of experience working with the leading catering companies, on Pesach and year-round.
+                </p>
+
+                <h3>Kosher Supervision</h3>
+                <p>
+                  Rabbi Nissim Hilu is a leading authority in kosher certification, with over 26 years of experience in kosher quality systems and food industry logistics. He is the founder and General Manager of One Kosher, providing certification and training across Mexico, Colombia, and Panama. His work spans top-tier restaurants and resorts in major Latin American destinations.
                 </p>
                 <p>
-                  <strong>Diamond Club Vacations is honored to work with Rabbi Nissim Hilu and One Kosher</strong>, whose dedication to uncompromising standards and exceptional quality helps ensure a truly elevated kosher dining experience at our luxury Pesach destinations.
+                  The entire resort and it will be exclusively Kosher for Pesach, following the highest level of Kashrus. All dining will be strictly Glatt kosher and Bet Yossef meats, Cholov Yisroel, Shmurah Matza.
                 </p>
-              </div>
-
-              <div className="dcv-supervision-details-grid">
-                <div className="dcv-supervision-feat">
-                  <div className="dcv-feat-icon">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <strong>Strict Glatt Kosher &amp; Mehadrin Meat</strong>
-                    <span>All beef, veal, lamb, and poultry are exclusively 100% Glatt Kosher with Chassidishe Shechita options available upon request.</span>
-                  </div>
-                </div>
-
-                <div className="dcv-supervision-feat">
-                  <div className="dcv-feat-icon">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <strong>Cholov Yisroel &amp; Bishul Yisroel</strong>
-                    <span>All dairy delicacies, artisan cheeses, yogurts, and morning fare are strictly Cholov Yisroel. All cooking follows strict Bishul Yisroel.</span>
-                  </div>
-                </div>
-
-                <div className="dcv-supervision-feat">
-                  <div className="dcv-feat-icon">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <strong>24/7 Dedicated Mashgichim Team</strong>
-                    <span>A full-time, experienced rabbinical team is on-site 24 hours a day in every kitchen, prep kitchen, and delivery station throughout the holiday.</span>
-                  </div>
-                </div>
-
-                <div className="dcv-supervision-feat">
-                  <div className="dcv-feat-icon">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <strong>Meticulous Kitchen Kashering</strong>
-                    <span>Complete steam cleaning, boiling water immersion (Hag&apos;alah), and blowtorch kashering of all hotel cooking infrastructure prior to Pesach.</span>
-                  </div>
-                </div>
-
-                <div className="dcv-supervision-feat">
-                  <div className="dcv-feat-icon">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <strong>Non-Gebrokts &amp; Gluten-Free Available</strong>
-                    <span>Extensive non-gebrokts options and certified gluten-free Passover offerings prepared in segregated kitchen areas.</span>
-                  </div>
-                </div>
-
-                <div className="dcv-supervision-feat">
-                  <div className="dcv-feat-icon">
-                    <CheckCircle2 size={20} />
-                  </div>
-                  <div>
-                    <strong>Handmade Shmurah Matzah</strong>
-                    <span>Traditional round handmade Shmurah Matzah provided throughout all Yom Tov Seders and holiday meals.</span>
-                  </div>
-                </div>
               </div>
 
               <div className="dcv-dining-modal-footer">
@@ -284,7 +170,7 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
   );
 }
 
-export function CelebrityChefsModal({ isOpen, onClose }: DiningModalProps) {
+export function CelebrityChefsModal({ isOpen, onClose, programId }: DiningModalProps) {
   useEffect(() => {
     if (!isOpen) return;
 
@@ -301,6 +187,8 @@ export function CelebrityChefsModal({ isOpen, onClose }: DiningModalProps) {
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
+
+  const isGuettaway = programId === "guttaway" || programId === "guettaway";
 
   return (
     <div
@@ -328,7 +216,7 @@ export function CelebrityChefsModal({ isOpen, onClose }: DiningModalProps) {
           <p className="dcv-brochure-sub">Executive Chef | Culinary Excellence</p>
         </div>
 
-        <div className="dcv-brochure-preview-wrap">
+        <div className="dcv-brochure-preview-wrap" data-lenis-prevent>
           <div className="dcv-dining-modal-portrait-wrap" style={{ maxWidth: "340px" }}>
             <Image
               src={AllImages.chefChaimLevy}
@@ -350,53 +238,11 @@ export function CelebrityChefsModal({ isOpen, onClose }: DiningModalProps) {
               From elegant Yom Tov dinners and beautifully curated buffets to festive Chol Hamoed dining, Chef Levy understands that extraordinary hospitality begins at the table. His focus on quality, variety, and thoughtful execution reflects the standards expected of a premier luxury Pesach experience.
             </p>
             <p>
-              <strong>Diamond Club Vacations is delighted to welcome Chef Chaim Levy to our culinary lineup for Pesach 2027.</strong> His passion for exceptional food and dedication to the dining experience will contribute to an unforgettable celebration of flavor, tradition, and world-class hospitality.
+              <strong>
+                {isGuettaway ? "Guettaway, A Diamond Club Production," : "Diamond Club Vacations"} is delighted to welcome Chef Chaim Levy to our culinary lineup for Pesach 2027.
+              </strong>{" "}
+              His passion for exceptional food and dedication to the dining experience will contribute to an unforgettable celebration of flavor, tradition, and world-class hospitality.
             </p>
-            <p style={{ marginTop: "14px", fontStyle: "italic", color: "#666" }}>
-              Our In-House Catering Team brings decades of Passover Glatt Kosher experience leading and managing five-star culinary brigades at prestigious luxury resorts worldwide, coordinating outstanding gourmet cuisine across our signature oceanfront restaurants, lavish buffets, beach barbecues, and decadent all-day tea rooms.
-            </p>
-          </div>
-
-          <div className="dcv-supervision-details-grid">
-            <div className="dcv-supervision-feat">
-              <div className="dcv-feat-icon">
-                <Award size={20} />
-              </div>
-              <div>
-                <strong>Acclaimed International Culinary Leadership</strong>
-                <span>Celebrated executive chefs with Michelin-starred backgrounds and luxury five-star resort pedigree overseeing all food production.</span>
-              </div>
-            </div>
-
-            <div className="dcv-supervision-feat">
-              <div className="dcv-feat-icon">
-                <Award size={20} />
-              </div>
-              <div>
-                <strong>Artisanal Daily Banquets &amp; Themed Dinners</strong>
-                <span>Nightly gastronomic showcases including open-fire Mexican barbecues, French bistro classics, Mediterranean seafood, and heritage Ashkenazi favorites.</span>
-              </div>
-            </div>
-
-            <div className="dcv-supervision-feat">
-              <div className="dcv-feat-icon">
-                <Award size={20} />
-              </div>
-              <div>
-                <strong>Master Pastry &amp; All-Day Tearoom</strong>
-                <span>World-class French pastry chefs presenting decadent dessert galleries, Belgian chocolate artistry, and continuous artisan coffee service.</span>
-              </div>
-            </div>
-
-            <div className="dcv-supervision-feat">
-              <div className="dcv-feat-icon">
-                <Award size={20} />
-              </div>
-              <div>
-                <strong>Custom Children &amp; Dietary Menus</strong>
-                <span>Dedicated culinary stations for children, toddlers, and specialized dietary preferences with tailored daily options.</span>
-              </div>
-            </div>
           </div>
 
           <div className="dcv-dining-modal-footer">

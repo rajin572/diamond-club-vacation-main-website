@@ -30,7 +30,7 @@ export function ResortDiningCards({
   const isGuettaway = programId === "guettaway" || resortId === "waldorf-astoria" || resortId === "park-hyatt";
   const supervisionImage = isGuettaway
     ? AllImages.kosherGettSupervision
-    : AllImages.rabbiNissimHiluCard;
+    : AllImages.reserveKosherSupervision;
   const chefImage = AllImages.chefChaimLevyCard;
   const diningImage = dining.images[0] ?? AllImages.stregis2;
   const diningPageUrl = diningHref(offeringId, programId, resortId);
@@ -86,7 +86,7 @@ export function ResortDiningCards({
               alt="Kosher Supervision"
               sizes="(max-width: 900px) 100vw, 50vw"
               priority={false}
-              style={{ objectPosition: "center top" }}
+              style={{ objectPosition: isGuettaway ? "center top" : "center" }}
             />
             <div className="dcv-body">
               <h3>Kosher Supervision</h3>

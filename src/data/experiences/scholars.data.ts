@@ -10,20 +10,22 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
     viewerTitle: "Scholars Details",
     layout: "people",
     heroImage: AllImages.reserveScholars,
-    columns: 3,
+    columns: 2,
     items: [
       {
         id: "rabbi-lawrence-hajioff",
         title: "Rabbi Lawrence Hajioff",
         description: "Renowned educator, accomplished author, lecturer, and inspirational speaker whose powerful messages resonate with audiences of all backgrounds.",
-        image: AllImages.rabbiLawrenceHajioff,
+        // Rabbi Hajioff's photo as supplied by the developer on 2026-10-18. The earlier photos (a different man) are kept:
+        // AllImages.rabbiLawrenceHajioff (full) and AllImages.rabbiLawrenceHajioffFace (face crop of it).
+        image: AllImages.rabbiLawrenceHajioffNew,
         details: {
           title: "Rabbi Lawrence Hajioff",
           paragraphs: [
             "Renowned for his dynamic personality, captivating speaking style, and extraordinary ability to bring Torah teachings to life, Rabbi Lawrence Hajioff is a highly respected educator, accomplished author, lecturer, and inspirational speaker whose powerful messages resonate with audiences of all backgrounds.",
             "As the author of several books exploring Jewish wisdom, spirituality, and personal growth, Rabbi Hajioff has dedicated his career to making timeless Torah teachings accessible, engaging, and relevant to modern life. With a unique combination of wisdom, humor, and practical insight, he has earned a reputation for transforming profound concepts into meaningful lessons that inspire and empower his audiences.",
             "His thought-provoking lectures explore fascinating themes of faith, relationships, Jewish history, personal development, and the deeper meaning of our traditions. Whether delivering an uplifting Yom Tov message, sharing captivating insights from his writings, or connecting personally with guests, Rabbi Hajioff brings an infectious enthusiasm and refreshing perspective that makes every encounter memorable.",
-            "Diamond Club Vacations is delighted to welcome Rabbi Lawrence Hajioff to our distinguished lineup of inspirational speakers and Torah scholars at The St. Regis & The EDITION Riviera Maya for Pesach 2027. His engaging presentations, literary accomplishments, and inspiring insights will add another extraordinary dimension to a Yom Tov experience that beautifully combines spiritual enrichment, meaningful connections, and world-class luxury hospitality.",
+            "Diamond Club Vacations is delighted to welcome Rabbi Lawrence Hajioff to our distinguished lineup of inspirational speakers and Torah scholars at The EDITION Riviera Maya for Pesach 2027. His engaging presentations, literary accomplishments, and inspiring insights will add another extraordinary dimension to a Yom Tov experience that beautifully combines spiritual enrichment, meaningful connections, and world-class luxury hospitality.",
           ],
         },
       },
@@ -40,21 +42,22 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
           ],
         },
       },
-      {
-        id: "rabbi-eli-stefansky",
-        title: "Rabbi Eli Stefansky",
-        description: "Founder of Mercaz Daf Yomi (MDY) | Internationally Renowned Educator & Inspirational Speaker.",
-        image: AllImages.rabbiEliStefanskyDafyomi,
-        details: {
-          title: "Daf Yomi by R' Eli Stefansky (Mercaz Daf Yomi)",
-          paragraphs: [
-            "A remarkable personality and one of the most influential figures in contemporary religious education, Rabbi Eli Stefansky has inspired tens of thousands of people around the world through his extraordinary passion, infectious enthusiasm, and unique ability to make learning engaging, accessible, and deeply meaningful.",
-            "As the founder of Mercaz Daf Yomi (MDY) in Ramat Beit Shemesh, Israel, Rabbi Stefansky has transformed a small gathering of dedicated learners into a worldwide movement reaching more than 30,000 participants. His immensely popular daily Daf Yomi lectures and 8 Minute Daf series have become a global phenomenon, bringing together individuals from diverse backgrounds through a shared commitment to learning, personal growth, and spiritual connection.",
-            "A successful entrepreneur turned dedicated educator, Rabbi Stefansky brings a refreshing combination of real-world experience, humor, warmth, and genuine passion to everything he does. His energetic presentations and relatable approach have earned him an extraordinary following, inspiring audiences to embrace consistency, purpose, and meaningful personal development.",
-            "Beyond his remarkable accomplishments, it is his ability to connect with people on a personal level that makes Rabbi Stefansky truly exceptional. His enthusiasm, authenticity, and powerful messages leave a lasting impression on audiences of all ages.",
-          ],
-        },
-      },
+      // Removed from the page on 2026-10-18 at the developer's request (kept here; remove the leading "//" to show it again).
+      // {
+      //   id: "rabbi-eli-stefansky",
+      //   title: "Rabbi Eli Stefansky",
+      //   description: "Founder of Mercaz Daf Yomi (MDY) | Internationally Renowned Educator & Inspirational Speaker.",
+      //   image: AllImages.rabbiEliStefanskyDafyomi,
+      //   details: {
+      //     title: "Daf Yomi by R' Eli Stefansky (Mercaz Daf Yomi)",
+      //     paragraphs: [
+      //       "A remarkable personality and one of the most influential figures in contemporary religious education, Rabbi Eli Stefansky has inspired tens of thousands of people around the world through his extraordinary passion, infectious enthusiasm, and unique ability to make learning engaging, accessible, and deeply meaningful.",
+      //       "As the founder of Mercaz Daf Yomi (MDY) in Ramat Beit Shemesh, Israel, Rabbi Stefansky has transformed a small gathering of dedicated learners into a worldwide movement reaching more than 30,000 participants. His immensely popular daily Daf Yomi lectures and 8 Minute Daf series have become a global phenomenon, bringing together individuals from diverse backgrounds through a shared commitment to learning, personal growth, and spiritual connection.",
+      //       "A successful entrepreneur turned dedicated educator, Rabbi Stefansky brings a refreshing combination of real-world experience, humor, warmth, and genuine passion to everything he does. His energetic presentations and relatable approach have earned him an extraordinary following, inspiring audiences to embrace consistency, purpose, and meaningful personal development.",
+      //       "Beyond his remarkable accomplishments, it is his ability to connect with people on a personal level that makes Rabbi Stefansky truly exceptional. His enthusiasm, authenticity, and powerful messages leave a lasting impression on audiences of all ages.",
+      //     ],
+      //   },
+      // },
     ],
   },
   blue: {

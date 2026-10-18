@@ -40,7 +40,7 @@ export function ResortDiningPageView({
 
   const supervisionImage = isGuettaway
     ? AllImages.kosherGettSupervision
-    : AllImages.rabbiNissimHiluCard;
+    : AllImages.reserveKosherSupervision;
   const chefImage = AllImages.chefChaimLevyCard;
   const heroImage = dining?.images?.[0] ?? data.heroImage;
 
@@ -95,7 +95,7 @@ export function ResortDiningPageView({
               alt="Kosher Supervision"
               sizes="(max-width: 900px) 100vw, 50vw"
               priority={false}
-              style={{ objectPosition: "center top" }}
+              style={{ objectPosition: isGuettaway ? "center top" : "center" }}
             />
             <div className="dcv-body">
               <div className="dcv-card-tag">Glatt Kosher · Cholov Yisroel</div>
