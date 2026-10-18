@@ -405,6 +405,46 @@ import stregisDineBackBarBottlesOrchids from "./mainDesign/stregis-dine-back-bar
 import stregisDineGarnishedRedCocktailTropicalGreenery from "./mainDesign/stregis-dine-garnished-red-cocktail-tropical-greenery.webp";
 import stregisDineAfternoonTeaServiceTheLibrary from "./mainDesign/stregis-dine-afternoon-tea-service-the-library.webp";
 import stregisDinePikNikGrabAndGoDisplay from "./mainDesign/stregis-dine-pik-nik-grab-and-go-display.webp";
+import editionMr32231245360521 from "./mainDesign/edition-mr-3223-12453-60521.jpg";
+import editionMrGuestBathroom1220956424 from "./mainDesign/edition-mr-guest-bathroom-12209-56424.jpg";
+import editionMrGuestRoom2QnBd1425486157 from "./mainDesign/edition-mr-guest-room-2-qn-bd-14254-86157.jpg";
+import editionMrDeluxe3232035737 from "./mainDesign/edition-mr-deluxe-32320-35737.jpg";
+import editionMrOceanViewBed29193 from "./mainDesign/edition-mr-ocean-view-bed-29193.jpg";
+import editionMrOceanView3757667053 from "./mainDesign/edition-mr-ocean-view-37576-67053.jpg";
+import editionMrOceanViewBath22965 from "./mainDesign/edition-mr-ocean-view-bath-22965.jpg";
+import editionMr33303552303297 from "./mainDesign/edition-mr-3330-35523-03297.jpg";
+import editionMrPremier2752226914 from "./mainDesign/edition-mr-premier-27522-26914.jpg";
+import editionMrPlungePool19828 from "./mainDesign/edition-mr-plunge-pool-19828.jpg";
+import editionMrPremier1793062995 from "./mainDesign/edition-mr-premier-17930-62995.jpg";
+import editionMrPremier1648596580 from "./mainDesign/edition-mr-premier-16485-96580.jpg";
+import editionMrCunekBedroom20041060464901 from "./mainDesign/edition-mr-cunek-bedroom-2004-10604-64901.jpg";
+import editionMrPremierOceanviewDouble36203 from "./mainDesign/edition-mr-premier-oceanview-double-36203.jpg";
+import editionMrOnebedroomSuite37546 from "./mainDesign/edition-mr-onebedroom-suite-37546.jpg";
+import editionMrOneBedroomSuite1511924957 from "./mainDesign/edition-mr-one-bedroom-suite-15119-24957.jpg";
+import editionMrOneBedroom23453 from "./mainDesign/edition-mr-one-bedroom-23453.jpg";
+import editionMrOneBedroomSuite1141439716 from "./mainDesign/edition-mr-one-bedroom-suite-11414-39716.jpg";
+import editionMrCunekBedroom20033597555066 from "./mainDesign/edition-mr-cunek-bedroom-2003-35975-55066.jpg";
+import editionMrSuperiorSuite1001020650 from "./mainDesign/edition-mr-superior-suite-10010-20650.jpg";
+import editionMrSuperiorSuite1642372685 from "./mainDesign/edition-mr-superior-suite-16423-72685.jpg";
+import editionMr29274SuperiorSuite09440 from "./mainDesign/edition-mr-29274-superior-suite-09440.jpg";
+import editionMr12022293441385 from "./mainDesign/edition-mr-1202-22934-41385.jpg";
+import editionMrBathroom3244345240 from "./mainDesign/edition-mr-bathroom-32443-45240.jpg";
+import editionMrBeachfrontVilla1810013 from "./mainDesign/edition-mr-beachfront-villa-18-10013.jpg";
+import editionMrBeachfrontExterior27225 from "./mainDesign/edition-mr-beachfront-exterior-27225.jpg";
+import editionMrBeachfrontExterior18437 from "./mainDesign/edition-mr-beachfront-exterior-18437.jpg";
+import editionMrVillaBathroom34557 from "./mainDesign/edition-mr-villa-bathroom-34557.jpg";
+import editionMrJadeSuite2736678886 from "./mainDesign/edition-mr-jade-suite27366-78886.jpg";
+import editionMrJadeSuite2784572173 from "./mainDesign/edition-mr-jade-suite27845-72173.jpg";
+import editionMrJadeSuiteBed34956 from "./mainDesign/edition-mr-jade-suite-bed-34956.jpg";
+import editionMrObsidianLiving13707 from "./mainDesign/edition-mr-obsidian-living-13707.jpg";
+import editionMrObsidian2299440111 from "./mainDesign/edition-mr-obsidian-22994-40111.jpg";
+import editionMrObsidian4242944086 from "./mainDesign/edition-mr-obsidian-42429-44086.jpg";
+import editionMrObsidianSuiteB20022 from "./mainDesign/edition-mr-obsidian-suite-b-20022.jpg";
+import editionMrObsidianSuite27702 from "./mainDesign/edition-mr-obsidian-suite-27702.jpg";
+import editionMrCunekEditionSuite1607141233 from "./mainDesign/edition-mr-cunek-edition-suite-16071-41233.jpg";
+import editionMrEditionSuite16060 from "./mainDesign/edition-mr-edition-suite-16060.jpg";
+import editionMrEditionTerrace27581 from "./mainDesign/edition-mr-edition-terrace-27581.jpg";
+import editionMrCunekEditionSuite1249821344 from "./mainDesign/edition-mr-cunek-edition-suite-12498-21344.jpg";
 
 export const AllImages = {
   logo,
@@ -818,6 +858,48 @@ export const AllImages = {
   stregisDineGarnishedRedCocktailTropicalGreenery,
   stregisDineAfternoonTeaServiceTheLibrary,
   stregisDinePikNikGrabAndGoDisplay,
+  // The Riviera Maya EDITION rooms (Marriott rate list, hotel code CUNEK)
+  editionMrMarker: true,
+  editionMr32231245360521,
+  editionMrGuestBathroom1220956424,
+  editionMrGuestRoom2QnBd1425486157,
+  editionMrDeluxe3232035737,
+  editionMrOceanViewBed29193,
+  editionMrOceanView3757667053,
+  editionMrOceanViewBath22965,
+  editionMr33303552303297,
+  editionMrPremier2752226914,
+  editionMrPlungePool19828,
+  editionMrPremier1793062995,
+  editionMrPremier1648596580,
+  editionMrCunekBedroom20041060464901,
+  editionMrPremierOceanviewDouble36203,
+  editionMrOnebedroomSuite37546,
+  editionMrOneBedroomSuite1511924957,
+  editionMrOneBedroom23453,
+  editionMrOneBedroomSuite1141439716,
+  editionMrCunekBedroom20033597555066,
+  editionMrSuperiorSuite1001020650,
+  editionMrSuperiorSuite1642372685,
+  editionMr29274SuperiorSuite09440,
+  editionMr12022293441385,
+  editionMrBathroom3244345240,
+  editionMrBeachfrontVilla1810013,
+  editionMrBeachfrontExterior27225,
+  editionMrBeachfrontExterior18437,
+  editionMrVillaBathroom34557,
+  editionMrJadeSuite2736678886,
+  editionMrJadeSuite2784572173,
+  editionMrJadeSuiteBed34956,
+  editionMrObsidianLiving13707,
+  editionMrObsidian2299440111,
+  editionMrObsidian4242944086,
+  editionMrObsidianSuiteB20022,
+  editionMrObsidianSuite27702,
+  editionMrCunekEditionSuite1607141233,
+  editionMrEditionSuite16060,
+  editionMrEditionTerrace27581,
+  editionMrCunekEditionSuite1249821344,
   series: {
     attractions: [attractions1, attractions2, attractions3, attractions4, attractions5, attractions6, attractions7],
     casa: [casa1, casa2, casa3, casa4, casa5, casa6],
