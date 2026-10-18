@@ -353,6 +353,50 @@ import waldorfRooms1 from "./mainDesign/waldorf-rooms-1.jpg";
 import waldorfRooms2 from "./mainDesign/waldorf-rooms-2.jpg";
 import waldorfRooms3 from "./mainDesign/waldorf-rooms-3.jpg";
 import waldorfRooms4 from "./mainDesign/waldorf-rooms-4.jpg";
+import stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomTubShower from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace--deluxe-room-ocean-view-bathroom-tub-shower.webp";
+import stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomVanityTub from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace--deluxe-room-ocean-view-bathroom-vanity-tub.webp";
+import stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomVanity from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace--deluxe-room-ocean-view-bathroom-vanity.webp";
+import stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewClosetVanity from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace--deluxe-room-ocean-view-closet-vanity.webp";
+import stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewKingBedSofa from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace--deluxe-room-ocean-view-king-bed-sofa.webp";
+import stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewKingBedTerraceDoors from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace--deluxe-room-ocean-view-king-bed-terrace-doors.webp";
+import stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewTwoBedsTerraceSeating from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace--deluxe-room-ocean-view-two-beds-terrace-seating.webp";
+import stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewTwoBedsWoodHeadboard from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace--deluxe-room-ocean-view-two-beds-wood-headboard.webp";
+import stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewVanityKingBed from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace--deluxe-room-ocean-view-vanity-king-bed.webp";
+import stregisWebDeluxeRoomOceanViewTerraceSeating from "./mainDesign/stregis-web-deluxe-room-ocean-view-terrace-seating.webp";
+import stregisWebGrandRoomOceanViewPrivatePoolBathroom from "./mainDesign/stregis-web-grand-room-ocean-view-private-pool-bathroom.webp";
+import stregisWebGrandRoomOceanViewPrivatePoolKingBed from "./mainDesign/stregis-web-grand-room-ocean-view-private-pool-king-bed.webp";
+import stregisWebGrandRoomOceanViewPrivatePoolShowerAmenities from "./mainDesign/stregis-web-grand-room-ocean-view-private-pool-shower-amenities.webp";
+import stregisWebGrandRoomOceanViewPrivatePoolTerrace from "./mainDesign/stregis-web-grand-room-ocean-view-private-pool-terrace.webp";
+import stregisWebGrandRoomOceanViewPrivatePoolTwoDoubleBedsInterior from "./mainDesign/stregis-web-grand-room-ocean-view-private-pool-two-double-beds-interior.webp";
+import stregisWebGrandRoomOceanViewPrivatePoolTwoDoubleBeds from "./mainDesign/stregis-web-grand-room-ocean-view-private-pool-two-double-beds.webp";
+import stregisWebStudioOceanViewCornerOutdoorShower from "./mainDesign/stregis-web-studio-ocean-view-corner-outdoor-shower.webp";
+import stregisWebStudioOceanViewCornerTerrace from "./mainDesign/stregis-web-studio-ocean-view-corner-terrace.webp";
+import stregisWebStudioOceanViewCorner from "./mainDesign/stregis-web-studio-ocean-view-corner.webp";
+import stregisWebSuiteOceanViewBathroomCloset from "./mainDesign/stregis-web-suite-ocean-view-bathroom-closet.webp";
+import stregisWebSuiteOceanViewBathtubSuiteOceanViewKingBedBathtub from "./mainDesign/stregis-web-suite-ocean-view-bathtub--suite-ocean-view-king-bed-bathtub.webp";
+import stregisWebSuiteOceanViewBathtubSuiteOceanViewKingBedDetail from "./mainDesign/stregis-web-suite-ocean-view-bathtub--suite-ocean-view-king-bed-detail.webp";
+import stregisWebSuiteOceanViewBathtubSuiteOceanViewTerraceBathtubLoungers from "./mainDesign/stregis-web-suite-ocean-view-bathtub--suite-ocean-view-terrace-bathtub-loungers.webp";
+import stregisWebSuiteOceanViewCornerSuiteOceanViewBathroomVanityAndSoakingTub from "./mainDesign/stregis-web-suite-ocean-view-corner--suite-ocean-view-bathroom-vanity-and-soaking-tub.webp";
+import stregisWebSuiteOceanViewCornerSuiteOceanViewBathroomVanityDetail from "./mainDesign/stregis-web-suite-ocean-view-corner--suite-ocean-view-bathroom-vanity-detail.webp";
+import stregisWebSuiteOceanViewCornerSuiteOceanViewKingBed from "./mainDesign/stregis-web-suite-ocean-view-corner--suite-ocean-view-king-bed.webp";
+import stregisWebSuiteOceanViewCornerSuiteOceanViewLivingAndDiningArea from "./mainDesign/stregis-web-suite-ocean-view-corner--suite-ocean-view-living-and-dining-area.webp";
+import stregisWebSuiteOceanViewCornerSuiteOceanViewLivingRoom from "./mainDesign/stregis-web-suite-ocean-view-corner--suite-ocean-view-living-room.webp";
+import stregisWebSuiteOceanViewCornerSuiteOceanViewSculpturalChairDetail from "./mainDesign/stregis-web-suite-ocean-view-corner--suite-ocean-view-sculptural-chair-detail.webp";
+import stregisWebSuiteOceanViewCornerSuiteOceanViewTerraceSoakingTub from "./mainDesign/stregis-web-suite-ocean-view-corner--suite-ocean-view-terrace-soaking-tub.webp";
+import stregisWebSuiteOceanViewCornerSuiteOceanViewWetBarAndPantry from "./mainDesign/stregis-web-suite-ocean-view-corner--suite-ocean-view-wet-bar-and-pantry.webp";
+import stregisWebSuiteOceanViewDuskTerracePlungePool from "./mainDesign/stregis-web-suite-ocean-view-dusk-terrace-plunge-pool.webp";
+import stregisWebSuiteOceanViewKingBed from "./mainDesign/stregis-web-suite-ocean-view-king-bed.webp";
+import stregisWebSuiteOceanViewPrivatePoolKingBed from "./mainDesign/stregis-web-suite-ocean-view-private-pool-king-bed.webp";
+import stregisWebSuiteOceanViewPrivatePoolLivingRoom from "./mainDesign/stregis-web-suite-ocean-view-private-pool-living-room.webp";
+import stregisWebSuiteOceanViewPrivatePoolTerrace from "./mainDesign/stregis-web-suite-ocean-view-private-pool-terrace.webp";
+import stregisWebSuiteOceanViewTerraceOceanViewSuiteDiningArea from "./mainDesign/stregis-web-suite-ocean-view-terrace--ocean-view-suite-dining-area.webp";
+import stregisWebSuiteOceanViewTerraceOceanViewSuiteFurnishedTerrace from "./mainDesign/stregis-web-suite-ocean-view-terrace--ocean-view-suite-furnished-terrace.webp";
+import stregisWebSuiteOceanViewTerraceOceanViewSuiteLivingRoomTerrace from "./mainDesign/stregis-web-suite-ocean-view-terrace--ocean-view-suite-living-room-terrace.webp";
+import stregisWebSuiteOceanViewTerraceOceanViewSuiteTerraceView from "./mainDesign/stregis-web-suite-ocean-view-terrace--ocean-view-suite-terrace-view.webp";
+import stregisWebSuiteOceanViewTerraceOceanViewSuiteVanityWalkInCloset from "./mainDesign/stregis-web-suite-ocean-view-terrace--ocean-view-suite-vanity-walk-in-closet.webp";
+import stregisWebSuiteOceanViewTerracePlungePool from "./mainDesign/stregis-web-suite-ocean-view-terrace-plunge-pool.webp";
+import stregisWebSuiteOneBedOceanViewBathtubSuiteOneBedOceanViewKingBedBalcony from "./mainDesign/stregis-web-suite-one-bed-ocean-view-bathtub--suite-one-bed-ocean-view-king-bed-balcony.webp";
+import stregisWebSuiteOneBedOceanViewTerraceKingBed from "./mainDesign/stregis-web-suite-one-bed-ocean-view-terrace-king-bed.webp";
 
 export const AllImages = {
   logo,
@@ -710,6 +754,52 @@ export const AllImages = {
   waldorfRooms2,
   waldorfRooms3,
   waldorfRooms4,
+  // The St. Regis Kanai Resort rooms (stregiskanairesort.com/rooms-and-suites)
+  stregisWebRoomsMarker: true,
+  stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomTubShower,
+  stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomVanityTub,
+  stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomVanity,
+  stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewClosetVanity,
+  stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewKingBedSofa,
+  stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewKingBedTerraceDoors,
+  stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewTwoBedsTerraceSeating,
+  stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewTwoBedsWoodHeadboard,
+  stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewVanityKingBed,
+  stregisWebDeluxeRoomOceanViewTerraceSeating,
+  stregisWebGrandRoomOceanViewPrivatePoolBathroom,
+  stregisWebGrandRoomOceanViewPrivatePoolKingBed,
+  stregisWebGrandRoomOceanViewPrivatePoolShowerAmenities,
+  stregisWebGrandRoomOceanViewPrivatePoolTerrace,
+  stregisWebGrandRoomOceanViewPrivatePoolTwoDoubleBedsInterior,
+  stregisWebGrandRoomOceanViewPrivatePoolTwoDoubleBeds,
+  stregisWebStudioOceanViewCornerOutdoorShower,
+  stregisWebStudioOceanViewCornerTerrace,
+  stregisWebStudioOceanViewCorner,
+  stregisWebSuiteOceanViewBathroomCloset,
+  stregisWebSuiteOceanViewBathtubSuiteOceanViewKingBedBathtub,
+  stregisWebSuiteOceanViewBathtubSuiteOceanViewKingBedDetail,
+  stregisWebSuiteOceanViewBathtubSuiteOceanViewTerraceBathtubLoungers,
+  stregisWebSuiteOceanViewCornerSuiteOceanViewBathroomVanityAndSoakingTub,
+  stregisWebSuiteOceanViewCornerSuiteOceanViewBathroomVanityDetail,
+  stregisWebSuiteOceanViewCornerSuiteOceanViewKingBed,
+  stregisWebSuiteOceanViewCornerSuiteOceanViewLivingAndDiningArea,
+  stregisWebSuiteOceanViewCornerSuiteOceanViewLivingRoom,
+  stregisWebSuiteOceanViewCornerSuiteOceanViewSculpturalChairDetail,
+  stregisWebSuiteOceanViewCornerSuiteOceanViewTerraceSoakingTub,
+  stregisWebSuiteOceanViewCornerSuiteOceanViewWetBarAndPantry,
+  stregisWebSuiteOceanViewDuskTerracePlungePool,
+  stregisWebSuiteOceanViewKingBed,
+  stregisWebSuiteOceanViewPrivatePoolKingBed,
+  stregisWebSuiteOceanViewPrivatePoolLivingRoom,
+  stregisWebSuiteOceanViewPrivatePoolTerrace,
+  stregisWebSuiteOceanViewTerraceOceanViewSuiteDiningArea,
+  stregisWebSuiteOceanViewTerraceOceanViewSuiteFurnishedTerrace,
+  stregisWebSuiteOceanViewTerraceOceanViewSuiteLivingRoomTerrace,
+  stregisWebSuiteOceanViewTerraceOceanViewSuiteTerraceView,
+  stregisWebSuiteOceanViewTerraceOceanViewSuiteVanityWalkInCloset,
+  stregisWebSuiteOceanViewTerracePlungePool,
+  stregisWebSuiteOneBedOceanViewBathtubSuiteOneBedOceanViewKingBedBalcony,
+  stregisWebSuiteOneBedOceanViewTerraceKingBed,
   series: {
     attractions: [attractions1, attractions2, attractions3, attractions4, attractions5, attractions6, attractions7],
     casa: [casa1, casa2, casa3, casa4, casa5, casa6],
