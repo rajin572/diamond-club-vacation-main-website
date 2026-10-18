@@ -160,11 +160,22 @@ export function ResortDiningPageView({
                   {item.subtitle && <div className="dcv-card-tag">{item.subtitle}</div>}
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
+                  {item.stats && item.stats.some((stat) => stat.label === "Serves" || stat.label === "Hours") && (
+                    <ul className="dcv-card-meta">
+                      {item.stats
+                        .filter((stat) => stat.label === "Serves" || stat.label === "Hours")
+                        .map((stat) => (
+                          <li key={stat.label}>
+                            <b>{stat.label}:</b> {stat.value}
+                          </li>
+                        ))}
+                    </ul>
+                  )}
                   <Link
                     href={restaurantHref(offeringId, programId, data.resortId, item.id)}
                     className="dcv-link"
                   >
-                    View Menus &amp; Details →
+                    View details →
                   </Link>
                 </div>
               </article>

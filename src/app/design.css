@@ -2600,3 +2600,19 @@ button.dcv-link {
   object-fit: cover;
   object-position: center top !important;
 }
+
+/* Serves / Hours lines on dining cards */
+.dcv-card-meta {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--dcv-muted);
+}
+.dcv-card-meta b {
+  color: #9a6b1d;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}

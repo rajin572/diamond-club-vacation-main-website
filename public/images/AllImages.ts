@@ -397,6 +397,14 @@ import stregisWebSuiteOceanViewTerraceOceanViewSuiteVanityWalkInCloset from "./m
 import stregisWebSuiteOceanViewTerracePlungePool from "./mainDesign/stregis-web-suite-ocean-view-terrace-plunge-pool.webp";
 import stregisWebSuiteOneBedOceanViewBathtubSuiteOneBedOceanViewKingBedBalcony from "./mainDesign/stregis-web-suite-one-bed-ocean-view-bathtub--suite-one-bed-ocean-view-king-bed-balcony.webp";
 import stregisWebSuiteOneBedOceanViewTerraceKingBed from "./mainDesign/stregis-web-suite-one-bed-ocean-view-terrace-king-bed.webp";
+import stregisDineSeasideRe from "./mainDesign/stregis-dine-seaside-re.webp";
+import stregisDineOceanFacingDiningRoom from "./mainDesign/stregis-dine-ocean-facing-dining-room.webp";
+import stregisDinePatternedTileDiningRoom from "./mainDesign/stregis-dine-patterned-tile-dining-room.webp";
+import stregisDineOutdoorDiningTerrace from "./mainDesign/stregis-dine-outdoor-dining-terrace.webp";
+import stregisDineBackBarBottlesOrchids from "./mainDesign/stregis-dine-back-bar-bottles-orchids.webp";
+import stregisDineGarnishedRedCocktailTropicalGreenery from "./mainDesign/stregis-dine-garnished-red-cocktail-tropical-greenery.webp";
+import stregisDineAfternoonTeaServiceTheLibrary from "./mainDesign/stregis-dine-afternoon-tea-service-the-library.webp";
+import stregisDinePikNikGrabAndGoDisplay from "./mainDesign/stregis-dine-pik-nik-grab-and-go-display.webp";
 
 export const AllImages = {
   logo,
@@ -800,6 +808,16 @@ export const AllImages = {
   stregisWebSuiteOceanViewTerracePlungePool,
   stregisWebSuiteOneBedOceanViewBathtubSuiteOneBedOceanViewKingBedBalcony,
   stregisWebSuiteOneBedOceanViewTerraceKingBed,
+  // The St. Regis Kanai Resort dining (stregiskanairesort.com/dine-and-drink)
+  stregisDineMarker: true,
+  stregisDineSeasideRe,
+  stregisDineOceanFacingDiningRoom,
+  stregisDinePatternedTileDiningRoom,
+  stregisDineOutdoorDiningTerrace,
+  stregisDineBackBarBottlesOrchids,
+  stregisDineGarnishedRedCocktailTropicalGreenery,
+  stregisDineAfternoonTeaServiceTheLibrary,
+  stregisDinePikNikGrabAndGoDisplay,
   series: {
     attractions: [attractions1, attractions2, attractions3, attractions4, attractions5, attractions6, attractions7],
     casa: [casa1, casa2, casa3, casa4, casa5, casa6],

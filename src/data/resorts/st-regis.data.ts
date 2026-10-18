@@ -1,7 +1,7 @@
 import { AllImages } from "../../../public/images/AllImages";
 import type { ResortData } from "@/components/resorts/resorts.types";
 import { rotate } from "./helpers";
-import { EDITION_RESORT_DATA } from "./edition.data";
+import { RESERVE_DINING } from "./reserve-dining.data";
 
 /** The St. Regis Kanai Resort — content from the client's HTML design (diamond-club-main-design). */
 export const ST_REGIS_RESORT_DATA: ResortData = {
@@ -588,12 +588,7 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
       },
     ],
   },
-  dining: {
-    title: "Dining",
-    description: "Glatt Kosher fine dining, beachfront restaurants, tea rooms, and poolside dining shared across Diamond Club Reserve at Kanai.",
-    images: [AllImages.stregis2, ...AllImages.series.editionDining],
-    items: EDITION_RESORT_DATA.dining!.items,
-  },
+  dining: RESERVE_DINING,
   pools: {
     title: "Pools & Beach",
     description: "Pools, beach areas, cabanas and resort water experiences.",
