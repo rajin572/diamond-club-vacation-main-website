@@ -17,7 +17,7 @@ export function ComingSoonView({ data }: { data: ComingSoonPageData }) {
               We are putting the finishing touches on this page. In the meantime, our team is happy to answer any question.
             </p>
             <div className="dcv-coming-actions">
-              <DesignButton href="/inquire">Inquire</DesignButton>
+              <DesignButton href="/contact">Contact us</DesignButton>
               <Link className="dcv-link" href="/">
                 Back to home
               </Link>

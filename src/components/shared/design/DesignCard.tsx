@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CardLogos } from "./CardLogos";
+import { SectionLink } from "./SectionLink";
 import type { CardLogo, DesignImage } from "./types";
 
 const CARD_SIZES = "(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw";
@@ -53,9 +54,9 @@ export function DesignCard({
               {linkLabel}
             </a>
           ) : (
-            <Link className="dcv-link" href={href} aria-label={`${title}: ${linkLabel}`}>
+            <SectionLink className="dcv-link" href={href} aria-label={`${title}: ${linkLabel}`}>
               {linkLabel}
-            </Link>
+            </SectionLink>
           ))}
       </div>
     </article>

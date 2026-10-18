@@ -76,19 +76,6 @@ export const GUTTAWAY_DATA: ProgramData = {
               image: AllImages.reserveKidsProgram,
               target: { type: "experience", experienceType: "kids-program" },
             },
-            { id: "spa", title: "Spa", image: AllImages.guettawayMain6 },
-          ],
-        },
-        {
-          columns: 2,
-          cards: [
-            { id: "kosher-supervision", title: "Kosher Supervision", image: AllImages.guettawayMain7 },
-            { id: "chefs", title: "Chefs", image: AllImages.guettawayMain8 },
-          ],
-        },
-        {
-          columns: 3,
-          cards: [
             {
               id: "scholars",
               title: "Scholars",
@@ -100,14 +87,14 @@ export const GUTTAWAY_DATA: ProgramData = {
       ],
     },
     {
-      title: "Explore",
+      title: "Local Attractions",
       blocks: [
         {
           columns: 3,
           cards: [
             {
               id: "attractions",
-              title: "Attractions",
+              title: "Local Attractions",
               image: AllImages.reserveAttractions,
               target: { type: "experience", experienceType: "attractions" },
             },

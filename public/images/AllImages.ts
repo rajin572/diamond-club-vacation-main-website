@@ -29,6 +29,14 @@ import reserveEntertainmentElonGold from "./mainDesign/reserve-entertainment-elo
 import reserveEntertainmentKumzits from "./mainDesign/reserve-entertainment-kumzits.png";
 import reserveEntertainmentDjPinnyYiddi from "./mainDesign/reserve-entertainment-dj-pinny-yiddi.png";
 import reserveEntertainmentNightlife from "./mainDesign/reserve-entertainment-nightlife.png";
+import rabbiLawrenceHajioff from "./rabbi-lawrence-hajioff.jpg";
+import rabbiNissimHilu from "./rabbi-nissim-hilu.jpg";
+import rabbiEliStefanskyDafyomi from "./rabbi-eli-stefansky-dafyomi.jpg";
+import kosherGettSupervision from "./kosher-gett-supervision.jpg";
+import chefChaimLevy from "./chef-chaim-levy.jpg";
+import chefChaimLevyCard from "./chef-chaim-levy-card.jpg";
+import rabbiNissimHiluCard from "./rabbi-nissim-hilu-card.jpg";
+import zushaConcert from "./zusha.jpeg";
 
 // Main Design (client HTML design assets, copied from diamond-club-main-design/assets)
 import attractions1 from "./mainDesign/attractions-1.jpg";
@@ -378,6 +386,14 @@ export const AllImages = {
   reserveEntertainmentKumzits,
   reserveEntertainmentDjPinnyYiddi,
   reserveEntertainmentNightlife,
+  rabbiLawrenceHajioff,
+  rabbiNissimHilu,
+  rabbiEliStefanskyDafyomi,
+  kosherGettSupervision,
+  chefChaimLevy,
+  chefChaimLevyCard,
+  rabbiNissimHiluCard,
+  zushaConcert,
 
   // Main Design (client HTML design assets)
   attractions1,

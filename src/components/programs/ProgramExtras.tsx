@@ -75,10 +75,12 @@ interface ProgramSectionsProps {
   offeringId: string;
   programId: string;
   sections: ProgramSection[];
+  /** The hotel these cards are shown in; experience links carry it so the hotel context is kept. */
+  resortId?: string;
 }
 
 /** The program's experience / explore card groups, shown inside each hotel page. */
-export function ProgramSections({ offeringId, programId, sections }: ProgramSectionsProps) {
+export function ProgramSections({ offeringId, programId, sections, resortId }: ProgramSectionsProps) {
   const card = (item: ProgramCardData) => (
     <DesignCard
       key={item.id}
@@ -86,15 +88,28 @@ export function ProgramSections({ offeringId, programId, sections }: ProgramSect
       title={item.title}
       description={item.description}
       logos={item.logos}
-      href={item.target?.type === "experience" ? experienceHref(offeringId, programId, item.target.experienceType) : undefined}
+      href={item.target?.type === "experience" ? experienceHref(offeringId, programId, item.target.experienceType, resortId) : undefined}
     />
   );
 
   return (
     <>
-      {sections.map((section) => (
-        <Wrap key={section.title} id={programSectionId(section.title)} className="dcv-wrap--stack">
-          <SectionTitle title={section.title} description={section.description} />
+      {sections.map((section) => {
+        const secId = programSectionId(section.title);
+        const isExp = secId === "experiences" || secId === "programs";
+        const isExplore = secId === "explore" || secId === "local-attractions";
+        const mainId = isExp ? "experiences" : isExplore ? "explore" : secId;
+
+        return (
+          <Wrap key={section.title} id={mainId} className="dcv-wrap--stack">
+            {isExp && <span id="programs" className="sr-only" tabIndex={-1} />}
+            {isExplore && (
+              <>
+                <span id="local-attractions" className="sr-only" tabIndex={-1} />
+                <span id="attractions" className="sr-only" tabIndex={-1} />
+              </>
+            )}
+            <SectionTitle title={section.title} description={section.description} />
           <div className="dcv-card-blocks">
             {section.blocks.map((block, index) => (
               <div key={index} className={GRID_CLASS[block.columns]}>
@@ -103,7 +118,8 @@ export function ProgramSections({ offeringId, programId, sections }: ProgramSect
             ))}
           </div>
         </Wrap>
-      ))}
+        );
+      })}
     </>
   );
 }

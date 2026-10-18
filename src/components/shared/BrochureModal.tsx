@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { Download, ExternalLink, X, FileText, CheckCircle2 } from "lucide-react";
+import { Download, ExternalLink, X } from "lucide-react";
 
 interface BrochureModalProps {
   open: boolean;
@@ -51,13 +51,9 @@ export function BrochureModal({ open, onClose }: BrochureModalProps) {
         </button>
 
         <div className="dcv-brochure-header">
-          <div className="dcv-brochure-kicker">PASSOVER COLLECTION 2027</div>
           <h2 id="brochure-modal-title" className="dcv-brochure-title">
-            Diamond Club Vacations Brochure
+            Passover 2027 Brochure
           </h2>
-          <p className="dcv-brochure-sub">
-            Preview our official Passover 2027 guide featuring destinations, luxury resorts, gourmet culinary programs, and exclusive accommodations.
-          </p>
 
           <div className="dcv-brochure-actions">
             <a
@@ -81,43 +77,6 @@ export function BrochureModal({ open, onClose }: BrochureModalProps) {
         </div>
 
         <div className="dcv-brochure-preview-wrap">
-          <div className="dcv-brochure-summary-card">
-            <div className="dcv-brochure-highlights-badge">
-              <FileText size={14} />
-              <span>Brochure Highlights</span>
-            </div>
-            <div className="dcv-brochure-features-list">
-              <div className="dcv-brochure-feat">
-                <CheckCircle2 size={16} className="dcv-feat-icon" />
-                <div>
-                  <strong>guettaway a Diamond Club production</strong>
-                  <span>Waldorf Astoria & Park Hyatt Riviera Maya</span>
-                </div>
-              </div>
-              <div className="dcv-brochure-feat">
-                <CheckCircle2 size={16} className="dcv-feat-icon" />
-                <div>
-                  <strong>Diamond Blue by DCV</strong>
-                  <span>Casa Nizuc — Beachfront Luxury at Exceptional Value</span>
-                </div>
-              </div>
-              <div className="dcv-brochure-feat">
-                <CheckCircle2 size={16} className="dcv-feat-icon" />
-                <div>
-                  <strong>Diamond Club Reserve</strong>
-                  <span>The St. Regis Kanai & The Riviera Maya EDITION</span>
-                </div>
-              </div>
-              <div className="dcv-brochure-feat">
-                <CheckCircle2 size={16} className="dcv-feat-icon" />
-                <div>
-                  <strong>Strictly Glatt Kosher Hospitality</strong>
-                  <span>Celebrated Chefs, Full Tea Rooms, Kids Camps & Scholars</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div className="dcv-brochure-frame-container">
             <iframe
               src="/brochure.pdf#view=FitH"
@@ -132,4 +91,3 @@ export function BrochureModal({ open, onClose }: BrochureModalProps) {
 }
 
 export default BrochureModal;
-

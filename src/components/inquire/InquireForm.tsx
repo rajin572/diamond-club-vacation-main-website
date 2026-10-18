@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Lock } from "lucide-react";
 import {
   COMMUNITY_OPTIONS,
   EXPERIENCE_OPTIONS,
@@ -165,6 +164,7 @@ export function InquireForm() {
   }
 
   const reviewRows = REVIEW_LABELS.filter(([key]) => values[key]);
+  const hotelReviewRow = detailedExp.hotel ? { label: "Hotel", value: detailedExp.hotel } : null;
 
   return (
     <main className="dcv-inquiry-shell">
@@ -185,10 +185,6 @@ export function InquireForm() {
                 {detailedExp.isLocked ? (
                   <div className="dcv-locked-experience">
                     <span className="dcv-locked-text">{values.experience}</span>
-                    <span className="dcv-locked-badge">
-                      <Lock size={12} />
-                      <span>Locked for this program</span>
-                    </span>
                     <input type="hidden" name="experience" value={values.experience} />
                   </div>
                 ) : (
@@ -199,6 +195,16 @@ export function InquireForm() {
                   </select>
                 )}
               </label>
+
+              {detailedExp.hotel && (
+                <label className="dcv-field-label dcv-wide">
+                  Hotel
+                  <div className="dcv-locked-experience">
+                    <span className="dcv-locked-text">{detailedExp.hotel}</span>
+                    <input type="hidden" name="hotel" value={detailedExp.hotel} />
+                  </div>
+                </label>
+              )}
 
               <label className="dcv-field-label">
                 Adults · Age 18+
@@ -346,6 +352,11 @@ export function InquireForm() {
               {reviewRows.map(([key, label]) => (
                 <div key={key}>
                   <b>{label}:</b> {values[key]}
+                  {key === "experience" && hotelReviewRow && (
+                    <div>
+                      <b>{hotelReviewRow.label}:</b> {hotelReviewRow.value}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

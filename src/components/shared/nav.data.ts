@@ -33,7 +33,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     links: [
       { label: "Weddings", href: offeringHref("weddings-events") },
       { label: "Private Events", href: offeringHref("private-events") },
-      { label: "Plan Your Stay", href: "/inquire" },
+      { label: "Plan Your Stay", href: "/contact" },
     ],
   },
   {

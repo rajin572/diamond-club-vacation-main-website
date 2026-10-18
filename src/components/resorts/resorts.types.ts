@@ -27,6 +27,7 @@ export type ResortSectionId = "rooms" | "dining" | "pools" | "wellness" | "spa" 
 /** Where an overview card or sub-nav item points: a section of the resort page, or a program-level experience page. */
 export type ResortTarget =
   | { type: "section"; section: ResortSectionId }
+  | { type: "spa" }
   | { type: "experience"; experienceType: string };
 
 export interface ResortCategoryCard {

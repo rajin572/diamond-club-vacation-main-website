@@ -3,12 +3,14 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { ExperienceCategoryView, KidsDayCampView } from "@/components/experiences";
 import { getAllExperienceSlugsForProgram, getExperienceData, getKidsDayCampData } from "@/data/experiences/registry";
-import { buildExperienceNav } from "@/data/experiences/nav";
+import { getResortsForProgram } from "@/data/resorts/registry";
+import { buildHotelSubNav } from "@/lib/hotel-subnav";
 import { programsRegistry } from "@/data/programs/registry";
 import { experienceHref } from "@/lib/routes";
 
 interface PageProps {
   params: Promise<{ offeringId: string; programId: string; experienceType: string }>;
+  searchParams?: Promise<{ resort?: string }>;
 }
 
 export async function generateStaticParams() {
@@ -52,18 +54,29 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return { title: "Experience Not Found" };
 }
 
-export default async function ExperiencePage({ params }: PageProps) {
+export default async function ExperiencePage({ params, searchParams }: PageProps) {
   const { offeringId, programId, experienceType } = await params;
-  const nav = buildExperienceNav(offeringId, programId);
+  const resolvedSearchParams = searchParams ? await searchParams : {};
+  const currentResortId =
+    resolvedSearchParams.resort ||
+    getResortsForProgram(programId)[0]?.resortId ||
+    "st-regis";
+
+  const nav = buildHotelSubNav({
+    offeringId,
+    programId,
+    resortId: currentResortId,
+    isHotelMainPage: false,
+  });
 
   const category = getExperienceData(programId, experienceType);
   if (category) {
-    return <ExperienceCategoryView offeringId={offeringId} data={category} nav={nav} />;
+    return <ExperienceCategoryView offeringId={offeringId} data={category} nav={nav} resortId={currentResortId} />;
   }
 
   const dayCamp = experienceType === "kids-day-camp" ? getKidsDayCampData(programId) : undefined;
   if (dayCamp) {
-    return <KidsDayCampView data={dayCamp} nav={nav} />;
+    return <KidsDayCampView data={dayCamp} nav={nav} resortId={currentResortId} />;
   }
 
   notFound();

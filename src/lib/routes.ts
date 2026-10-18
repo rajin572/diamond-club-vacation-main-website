@@ -41,6 +41,14 @@ export function poolHref(
   return `${resortHref(offeringId, programId, resortId)}/pools/${poolId}`;
 }
 
+export function diningHref(
+  offeringId: string,
+  programId: string,
+  resortId: string
+): string {
+  return `${resortHref(offeringId, programId, resortId)}/dining`;
+}
+
 export function restaurantHref(
   offeringId: string,
   programId: string,
@@ -58,12 +66,18 @@ export function spaHref(
   return `${resortHref(offeringId, programId, resortId)}/spa`;
 }
 
+/**
+ * An experience page of a program. Pass `resortId` when linking from inside a hotel so the page keeps
+ * that hotel's sub navigation and its Inquire button stays locked to the same hotel.
+ */
 export function experienceHref(
   offeringId: string,
   programId: string,
-  experienceType: string
+  experienceType: string,
+  resortId?: string
 ): string {
-  return `${programHref(offeringId, programId)}/experiences/${experienceType}`;
+  const base = `${programHref(offeringId, programId)}/experiences/${experienceType}`;
+  return resortId ? `${base}?resort=${encodeURIComponent(resortId)}` : base;
 }
 
 export interface InquireHrefParams {

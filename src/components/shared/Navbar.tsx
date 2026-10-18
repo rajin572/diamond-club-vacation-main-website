@@ -1,27 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PRIMARY_NAV } from "./nav.data";
 import { MobileMenu } from "./MobileMenu";
 import { BrochureModal } from "./BrochureModal";
+import { getInquireContext } from "@/lib/inquire-context";
+import { inquireHref } from "@/lib/routes";
 import { AllImages } from "../../../public/images/AllImages";
+
+function subscribeToLocation(onChange: () => void) {
+  window.addEventListener("popstate", onChange);
+  return () => window.removeEventListener("popstate", onChange);
+}
 
 /** Announcement bar + sticky header with updated left brand mark, brochure modal, and context-aware action button. */
 export function Navbar() {
   const [brochureOpen, setBrochureOpen] = useState(false);
   const pathname = usePathname();
+  // Read the query string without useSearchParams, which would force a Suspense boundary around the whole header.
+  const search = useSyncExternalStore(subscribeToLocation, () => window.location.search, () => "");
 
-  // "when i am on Passover Programs - 2027 pages the inquire button will be show otherwise contact button will be show here"
-  const isPassoverPage = pathname ? (
-    pathname === "/offerings/passover-collection-2027" ||
-    pathname.startsWith("/offerings/passover-collection-2027/")
-  ) : false;
-
-  const actionLabel = isPassoverPage ? "INQUIRE" : "CONTACT";
-  const actionHref = isPassoverPage ? "/inquire?holiday=passover-2027" : "/contact";
+  // Inquire inside a program or one of its hotels (locked to that program, and hotel when there is one); Contact elsewhere.
+  const inquiry = getInquireContext(pathname, search);
+  const actionLabel = inquiry ? "INQUIRE" : "CONTACT";
+  const actionHref = inquiry ? inquireHref({ destination: inquiry.programId, resort: inquiry.resortId }) : "/contact";
 
   return (
     <>
@@ -63,7 +68,7 @@ export function Navbar() {
               </Link>
             ))}
 
-            {/* Inquire on Passover 2027 pages; Contact on all other pages */}
+            {/* Inquire inside a program / hotel; Contact on all other pages */}
             <Link className="dcv-btn" href={actionHref}>
               {actionLabel}
             </Link>
@@ -73,7 +78,7 @@ export function Navbar() {
             links={PRIMARY_NAV}
             inquire={{ label: actionLabel, href: actionHref }}
             onOpenBrochure={() => setBrochureOpen(true)}
-            isPassoverPage={isPassoverPage}
+            isPassoverPage={Boolean(inquiry)}
           />
         </div>
       </header>

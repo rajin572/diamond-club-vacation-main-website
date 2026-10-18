@@ -11,6 +11,7 @@ import {
 } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
 import { inquireHref, resortHref } from "@/lib/routes";
+import { buildHotelSubNav } from "@/lib/hotel-subnav";
 import type { ResortData, ResortDetailItem } from "./resorts.types";
 
 export type ResortDetailKind = "room" | "restaurant" | "pool" | "spa";
@@ -45,7 +46,6 @@ interface ResortDetailViewProps {
  */
 export function ResortDetailView({ offeringId, programId, data, item, kind }: ResortDetailViewProps) {
   const config = KIND[kind];
-  const hotelHref = resortHref(offeringId, programId, data.resortId);
 
   const inquire =
     kind === "room"
@@ -56,12 +56,12 @@ export function ResortDetailView({ offeringId, programId, data, item, kind }: Re
           ? inquireHref({ destination: programId, resort: data.resortId, pool: item.id })
           : inquireHref({ destination: programId, resort: data.resortId, topic: "spa" });
 
-  const navItems: DesignLink[] = [
-    { label: "Hotel", href: hotelHref },
-    { label: config.sectionLabel, href: `${hotelHref}#${config.section}` },
-    ...(kind !== "restaurant" && data.dining ? [{ label: "Dining", href: `${hotelHref}#dining` }] : []),
-    { label: "Gallery", href: `${hotelHref}#gallery` },
-  ];
+  const navItems: DesignLink[] = buildHotelSubNav({
+    offeringId,
+    programId,
+    resortId: data.resortId,
+    isHotelMainPage: false,
+  });
 
   const heroImage = item.gallery[0] ?? item.image;
   const stats = (item.stats ?? []).slice(0, 4);

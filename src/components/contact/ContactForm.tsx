@@ -5,9 +5,11 @@ import type { ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 import { Send, CheckCircle2 } from "lucide-react";
 
+/** The contact form is always about the brand as a whole; the field is shown but cannot be changed. */
+const CONTACT_EXPERIENCE = "Diamond Club Vacations";
+
 interface ContactValues {
-  firstName: string;
-  lastName: string;
+  fullName: string;
   email: string;
   phone: string;
   subject: string;
@@ -18,8 +20,7 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [values, setValues] = useState<ContactValues>({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
     phone: "",
     subject: "",
@@ -35,7 +36,7 @@ export function ContactForm() {
     event.preventDefault();
     setError("");
 
-    if (!values.firstName.trim() || !values.lastName.trim()) {
+    if (!values.fullName.trim()) {
       setError("Please provide your full name.");
       return;
     }
@@ -63,7 +64,7 @@ export function ContactForm() {
           <div style={{ display: "inline-flex", justifyContent: "center", marginBottom: 16 }}>
             <CheckCircle2 size={48} color="#9a7a38" />
           </div>
-          <h2>Thank you{values.firstName ? `, ${values.firstName}` : ""}.</h2>
+          <h2>Thank you{values.fullName.trim() ? `, ${values.fullName.trim().split(/\s+/)[0]}` : ""}.</h2>
           <p style={{ marginTop: 8, fontSize: 16, color: "#555" }}>
             Your message has been received. A member of our concierge team will reach out to you shortly.
           </p>
@@ -91,24 +92,21 @@ export function ContactForm() {
 
       <form onSubmit={onSubmit} noValidate style={{ maxWidth: 720, margin: "0 auto" }}>
         <div className="dcv-formgrid">
-          <label className="dcv-field-label">
-            First Name *
-            <input
-              name="firstName"
-              autoComplete="given-name"
-              placeholder="e.g. David"
-              value={values.firstName}
-              onChange={onField}
-            />
+          <label className="dcv-field-label dcv-wide">
+            Experience
+            <div className="dcv-locked-experience">
+              <span className="dcv-locked-text">{CONTACT_EXPERIENCE}</span>
+              <input type="hidden" name="experience" value={CONTACT_EXPERIENCE} />
+            </div>
           </label>
 
-          <label className="dcv-field-label">
-            Last Name *
+          <label className="dcv-field-label dcv-wide">
+            Full Name *
             <input
-              name="lastName"
-              autoComplete="family-name"
-              placeholder="e.g. Cohen"
-              value={values.lastName}
+              name="fullName"
+              autoComplete="name"
+              placeholder="e.g. David Cohen"
+              value={values.fullName}
               onChange={onField}
             />
           </label>

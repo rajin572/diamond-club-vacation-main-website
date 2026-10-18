@@ -17,7 +17,7 @@ export function NotFoundView() {
         <div className="dcv-content2">
           <div>
             <h2>Let us help you find your way</h2>
-            <p className="dcv-lead">Try one of these pages, or start an inquiry and we will help you directly.</p>
+            <p className="dcv-lead">Try one of these pages, or contact us and we will help you directly.</p>
             <nav className="dcv-gallery-tabs" aria-label="Popular pages">
               {PRIMARY_NAV.map((link) => (
                 <Link key={link.href} href={link.href}>
@@ -30,7 +30,7 @@ export function NotFoundView() {
             <p style={{ margin: "0 0 16px" }}>
               <DesignButton href="/">Back to home</DesignButton>
             </p>
-            <DesignButton href="/inquire">Start an inquiry</DesignButton>
+            <DesignButton href="/contact">Contact us</DesignButton>
           </aside>
         </div>
       </Wrap>

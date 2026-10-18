@@ -19,21 +19,14 @@ export const CASA_NIZUC_DATA: ResortData = {
     cards: [
       {
         id: "rooms",
-        title: "Rooms & Suits",
+        title: "Rooms & Suites",
         description: "Classic, Deluxe and Nizuc Suite categories.",
         image: AllImages.series.casaRooms[0],
         target: { type: "section", section: "rooms" },
       },
       {
-        id: "dining",
-        title: "Dining",
-        description: "Mayim, Âshân, Zait and Noam.",
-        image: AllImages.series.casaDining[0],
-        target: { type: "section", section: "dining" },
-      },
-      {
         id: "pools",
-        title: "Pools & Beach",
+        title: "Pools & Beaches",
         description: "Resort pool and beach experiences.",
         image: AllImages.series.casaRoomDetail[0],
         target: { type: "section", section: "pools" },
@@ -41,13 +34,13 @@ export const CASA_NIZUC_DATA: ResortData = {
       {
         id: "wellness",
         title: "Wellness & Fitness",
-        description: "Spa, fitness and restorative experiences.",
+        description: "Fitness and restorative experiences.",
         image: AllImages.series.casa[1],
         target: { type: "section", section: "wellness" },
       },
       {
         id: "gallery",
-        title: "Resort Gallery",
+        title: "Gallery",
         navLabel: "Gallery",
         description: "A Casa Nizuc-only gallery.",
         image: AllImages.series.casaRoomGallery[0],
@@ -56,7 +49,7 @@ export const CASA_NIZUC_DATA: ResortData = {
     ],
   },
   rooms: {
-    title: "Rooms & Suits",
+    title: "Rooms & Suites",
     description: "",
     linkToDetails: true,
     items: [

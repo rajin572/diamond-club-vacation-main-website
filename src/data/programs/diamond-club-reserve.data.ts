@@ -58,7 +58,7 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
   },
   sections: [
     {
-      title: "Experiences",
+      title: "Programs",
       blocks: [
         {
           columns: 3,
@@ -83,25 +83,17 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
             },
           ],
         },
-        {
-          // No pages for these two yet, so they are static tiles.
-          columns: 2,
-          cards: [
-            { id: "our-chefs", title: "Our Chefs", image: AllImages.reserveOurChefs },
-            { id: "kosher-supervision", title: "Kosher Supervision", image: AllImages.reserveKosherSupervision },
-          ],
-        },
       ],
     },
     {
-      title: "Explore",
+      title: "Local Attractions",
       blocks: [
         {
           columns: 3,
           cards: [
             {
               id: "attractions",
-              title: "Attractions",
+              title: "Local Attractions",
               image: AllImages.reserveAttractions,
               target: { type: "experience", experienceType: "attractions" },
             },

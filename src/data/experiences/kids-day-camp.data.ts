@@ -90,6 +90,14 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       image: AllImages.dayCampCollage,
       imagePosition: "50% 20%",
     },
+    team: [
+      {
+        id: "ariana-mizrahi",
+        role: "Day Camp Director",
+        name: "Ariana Mizrahi",
+        bio: "With a passion for working with children and creating meaningful, fun-filled experiences, Ariana Mizrahi brings enthusiasm, creativity, and a warm, caring approach to her role as Day Camp Director at Diamond Blue, developing an engaging program filled with exciting activities, creative projects, interactive games, and memorable experiences.",
+      },
+    ],
     program: {
       title: "Day Camp Program",
       items: [

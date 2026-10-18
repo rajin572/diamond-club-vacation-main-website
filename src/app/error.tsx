@@ -15,7 +15,7 @@ export default function Error({ reset }: { error: Error & { digest?: string }; r
         </div>
         <h1 style={{ fontSize: "clamp(36px, 5vw, 60px)", margin: "12px 0 16px" }}>We hit an unexpected problem</h1>
         <p className="dcv-lead" style={{ maxWidth: 560, margin: "0 auto 28px" }}>
-          Please try again. If the problem continues, start an inquiry and our team will help you directly.
+          Please try again. If the problem continues, contact us and our team will help you directly.
         </p>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           <button type="button" className="dcv-btn" onClick={reset}>
@@ -24,8 +24,8 @@ export default function Error({ reset }: { error: Error & { digest?: string }; r
           <Link className="dcv-btn" href="/">
             Back to home
           </Link>
-          <Link className="dcv-btn" href="/inquire">
-            Start an inquiry
+          <Link className="dcv-btn" href="/contact">
+            Contact us
           </Link>
         </div>
       </section>

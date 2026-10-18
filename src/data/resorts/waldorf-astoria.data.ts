@@ -19,19 +19,13 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
     cards: [
       {
         id: "rooms",
-        title: "Rooms & Suits",
+        title: "Rooms & Suites",
         image: AllImages.series.waldorf[0],
         target: { type: "section", section: "rooms" },
       },
       {
-        id: "dining",
-        title: "Dining",
-        image: AllImages.series.waldorf[1],
-        target: { type: "section", section: "dining" },
-      },
-      {
         id: "pools",
-        title: "Pools & Beach",
+        title: "Pools & Beaches",
         image: AllImages.series.waldorf[2],
         target: { type: "section", section: "pools" },
       },
@@ -50,7 +44,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
     ],
   },
   rooms: {
-    title: "Rooms & Suits",
+    title: "Rooms & Suites",
     description: "",
     linkToDetails: false,
     items: [

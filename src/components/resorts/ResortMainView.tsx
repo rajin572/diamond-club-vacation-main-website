@@ -10,9 +10,11 @@ import {
 } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
 import { experienceHref, inquireHref, restaurantHref, poolHref, roomHref, spaHref } from "@/lib/routes";
+import { buildHotelSubNav } from "@/lib/hotel-subnav";
 import { ProgramSections, programSectionId } from "@/components/programs/ProgramExtras";
+import { ResortDiningCards } from "./ResortDiningSection";
 import type { ProgramData } from "@/components/programs/programs.types";
-import type { ResortData, ResortDetailItem, ResortTarget } from "./resorts.types";
+import type { ResortCategoryCard, ResortData, ResortDetailItem, ResortTarget } from "./resorts.types";
 
 interface ResortMainViewProps {
   offeringId: string;
@@ -24,6 +26,7 @@ interface ResortMainViewProps {
 
 function overviewGridClass(cardCount: number): string {
   if (cardCount <= 2) return "dcv-grid2";
+  if (cardCount === 5) return "dcv-grid5";
   if (cardCount % 4 === 0) return "dcv-grid4";
   return "dcv-grid3";
 }
@@ -49,21 +52,39 @@ function VenueChips({ label, items, hrefFor }: { label: string; items: ResortDet
  * Casa Nizuc) renders through this one component (client design: st-regis.html and its sub pages).
  */
 export function ResortMainView({ offeringId, programId, data, program }: ResortMainViewProps) {
-  const targetHref = (target: ResortTarget): string =>
-    target.type === "section" ? `#${target.section}` : experienceHref(offeringId, programId, target.experienceType);
+  const targetHref = (target: ResortTarget): string => {
+    if (target.type === "section") return `#${target.section}`;
+    // The spa has its own block on the page (Park Hyatt) or its own detail page (every other hotel).
+    if (target.type === "spa") {
+      return data.spa?.section ? "#spa" : spaHref(offeringId, programId, data.resortId);
+    }
+    return experienceHref(offeringId, programId, target.experienceType, data.resortId);
+  };
 
   const navItems: DesignLink[] = data.showSubNav
-    ? [
-        { label: data.overviewLabel, href: "#overview" },
-        ...(program ? program.sections.map((section) => ({ label: section.title, href: `#${programSectionId(section.title)}` })) : []),
-        ...data.overview.cards.map((card) => ({ label: card.navLabel ?? card.title, href: targetHref(card.target) })),
-        ...(data.subNavInquire
-          ? [{ label: "Inquire", href: inquireHref({ destination: programId, resort: data.resortId }) }]
-          : []),
-      ]
+    ? buildHotelSubNav({
+        offeringId,
+        programId,
+        resortId: data.resortId,
+        isHotelMainPage: true,
+      })
     : [];
 
   const { rooms, dining, pools, wellness, spa, gallery } = data;
+
+  // The spa is its own card right after "Wellness & Fitness" (client request), built from the hotel's spa data.
+  const overviewCards: ResortCategoryCard[] = [...data.overview.cards];
+  if (spa && !overviewCards.some((card) => card.id === "spa")) {
+    const wellnessIndex = overviewCards.findIndex((card) => card.id === "wellness");
+    const wellnessCard = overviewCards[wellnessIndex];
+    overviewCards.splice(wellnessIndex + 1 || overviewCards.length, 0, {
+      id: "spa",
+      title: "Spa",
+      description: wellnessCard?.description ? spa.item.subtitle : undefined,
+      image: spa.item.image,
+      target: { type: "spa" },
+    });
+  }
 
   return (
     <>
@@ -76,12 +97,18 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
       />
       <SubNav items={navItems} label={`${data.resortName} sections`} />
 
+      {/* =========================================================================
+          SECTION 1 (CARDS): All high-level category cards at the top
+          ========================================================================= */}
+
+      {/* 1. Hotel Cards */}
       <Wrap id="overview">
-        {data.overview.title && (
-          <SectionTitle title={data.overview.title} description={data.overview.description} />
-        )}
-        <div className={overviewGridClass(data.overview.cards.length)}>
-          {data.overview.cards.map((card) => (
+        <SectionTitle
+          title={data.overview.title || "Hotel"}
+          description={data.overview.description || "Accommodations, oceanfront pools, restorative wellness, and private sanctuaries."}
+        />
+        <div className={overviewGridClass(overviewCards.length)}>
+          {overviewCards.map((card) => (
             <DesignCard
               key={card.id}
               image={card.image}
@@ -93,12 +120,32 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
         </div>
       </Wrap>
 
-      {program && (
-        <>
-          <ProgramSections offeringId={offeringId} programId={programId} sections={program.sections} />
-        </>
+      {/* 2. Dining Cards */}
+      {dining && (
+        <ResortDiningCards
+          offeringId={offeringId}
+          programId={programId}
+          resortId={data.resortId}
+          resortName={data.resortName}
+          dining={dining}
+        />
       )}
 
+      {/* 3 & 4. Programs & Local Attractions Cards */}
+      {program && (
+        <ProgramSections
+          offeringId={offeringId}
+          programId={programId}
+          sections={program.sections}
+          resortId={data.resortId}
+        />
+      )}
+
+      {/* =========================================================================
+          SECTION 2 (DETAILS): All in-depth detail blocks on the bottom
+          ========================================================================= */}
+
+      {/* Details 1: Rooms & Suites */}
       <Wrap id="rooms" className="dcv-wrap--stack">
         <SectionTitle title={rooms.title} description={rooms.description} />
         <div className="dcv-roomlist">
@@ -114,18 +161,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
         </div>
       </Wrap>
 
-      {dining && (
-        <Wrap id="dining" className="dcv-wrap--stack">
-          <SectionTitle title={dining.title} description={dining.description} />
-          <VenueChips
-            label={`${data.resortName} restaurants`}
-            items={dining.items}
-            hrefFor={(id) => restaurantHref(offeringId, programId, data.resortId, id)}
-          />
-          <PhotoGallery images={dining.images} alt={`${data.resortName} dining`} />
-        </Wrap>
-      )}
-
+      {/* Details 2: Pools & Beaches */}
       {pools && (
         <Wrap id="pools" className="dcv-wrap--stack">
           <SectionTitle title={pools.title} description={pools.description} />
@@ -138,6 +174,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
         </Wrap>
       )}
 
+      {/* Details 4: Wellness & Fitness */}
       {wellness && (
         <Wrap id="wellness" className="dcv-wrap--stack">
           <SectionTitle title={wellness.title} description={wellness.description} />
@@ -157,6 +194,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
         </Wrap>
       )}
 
+      {/* Details 5: Spa */}
       {spa?.section && (
         <Wrap id="spa" className="dcv-wrap--stack">
           <SectionTitle title={spa.section.title} description={spa.section.description} />
@@ -169,6 +207,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
         </Wrap>
       )}
 
+      {/* Details 6: Gallery */}
       <Wrap id="gallery" className="dcv-wrap--stack">
         <SectionTitle title={gallery.title} description={gallery.description} />
         <PhotoGallery images={gallery.images} alt={`${data.resortName} gallery`} />

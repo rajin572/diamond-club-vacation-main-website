@@ -76,7 +76,7 @@ export const BLUE_DATA: ProgramData = {
       ],
     },
     {
-      title: "Explore",
+      title: "Local Attractions",
       blocks: [
         {
           // Beach Club and La Aldea have no pages yet, so they are static tiles.
@@ -84,7 +84,7 @@ export const BLUE_DATA: ProgramData = {
           cards: [
             {
               id: "attractions",
-              title: "Attractions",
+              title: "Local Attractions",
               image: AllImages.reserveAttractions,
               target: { type: "experience", experienceType: "attractions" },
             },

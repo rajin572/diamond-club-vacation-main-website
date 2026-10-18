@@ -19,11 +19,9 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
     title: "",
     description: "",
     cards: [
-      { id: "rooms", title: "Rooms & Suits", image: AllImages.stregisRooms1, target: { type: "section", section: "rooms" } },
-      { id: "dining", title: "Dining", image: AllImages.stregis2, target: { type: "section", section: "dining" } },
-      { id: "pools", title: "Pools & Beach", image: AllImages.stregis3, target: { type: "section", section: "pools" } },
+      { id: "rooms", title: "Rooms & Suites", image: AllImages.stregisRooms1, target: { type: "section", section: "rooms" } },
+      { id: "pools", title: "Pools & Beaches", image: AllImages.stregis3, target: { type: "section", section: "pools" } },
       { id: "wellness", title: "Wellness & Fitness", image: AllImages.stregis4, target: { type: "section", section: "wellness" } },
-      { id: "spa", title: "Spa", image: AllImages.stregis5, target: { type: "section", section: "spa" } },
       { id: "gallery", title: "Gallery", image: AllImages.stregis6, target: { type: "section", section: "gallery" } },
     ],
   },
@@ -195,8 +193,13 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
       },
     ],
   },
-  // Both Kanai hotels share one dining program, so St. Regis uses the Edition restaurants.
-  dining: EDITION_RESORT_DATA.dining,
+  // Both Kanai hotels share one dining program, so St. Regis uses the shared kosher restaurants.
+  dining: {
+    title: "Dining",
+    description: "Glatt Kosher fine dining, beachfront restaurants, tea rooms, and poolside dining shared across Diamond Club Reserve at Kanai.",
+    images: [AllImages.stregis2, ...AllImages.series.editionDining],
+    items: EDITION_RESORT_DATA.dining!.items,
+  },
   pools: {
     title: "Pools & Beach",
     description: "Pools, beach areas, cabanas and resort water experiences.",

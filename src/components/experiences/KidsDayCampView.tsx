@@ -7,14 +7,16 @@ import type { KidsDayCampData } from "./experiences.types";
 interface KidsDayCampViewProps {
   data: KidsDayCampData;
   nav: DesignLink[];
+  /** The hotel the visitor came from; the inquiry is locked to it. */
+  resortId?: string;
 }
 
 /**
  * The "Day Camp" page. Every block is optional so each program shows exactly what its content has:
  * overview, a checklist program, activities with the team, age groups, dining and babysitting.
  */
-export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
-  const inquire = inquireHref({ destination: data.programId, topic: "kids-day-camp" });
+export function KidsDayCampView({ data, nav, resortId }: KidsDayCampViewProps) {
+  const inquire = inquireHref({ destination: data.programId, resort: resortId, topic: "kids-day-camp" });
   const { overview, program, team, activities, ageGroups, dining, babysitting, comingSoon } = data;
 
   return (

@@ -64,26 +64,22 @@ export function resolveExperienceOption(destination: string | null): string {
 export function resolveDetailedExperience(
   destination: string | null,
   resort: string | null
-): { label: string; isLocked: boolean } {
+): { label: string; isLocked: boolean; hotel: string | null } {
   const normDest = destination?.toLowerCase().trim();
   const normResort = resort?.toLowerCase().trim();
+  const hotel = normResort ? (RESORT_DISPLAY_NAMES[normResort] ?? null) : null;
 
   // If no destination or destination is "all", user can select freely
   if (!normDest || normDest === "all") {
-    if (normResort && RESORT_DISPLAY_NAMES[normResort]) {
-      const base = resolveExperienceOption(normResort);
-      return { label: `${base} — ${RESORT_DISPLAY_NAMES[normResort]}`, isLocked: true };
+    if (normResort && hotel) {
+      // Only a hotel is known: its program is the Experience.
+      return { label: resolveExperienceOption(normResort), isLocked: true, hotel };
     }
-    return { label: EXPERIENCE_OPTIONS[0].label, isLocked: false };
+    return { label: EXPERIENCE_OPTIONS[0].label, isLocked: false, hotel: null };
   }
 
-  const base = resolveExperienceOption(normDest);
-  if (normResort && RESORT_DISPLAY_NAMES[normResort]) {
-    return { label: `${base} — ${RESORT_DISPLAY_NAMES[normResort]}`, isLocked: true };
-  }
-
-  // Pre-locked to the specific program/destination
-  return { label: base, isLocked: true };
+  // Coming from inside a program/hotel: the Experience is just the program name; the hotel is kept separately.
+  return { label: resolveExperienceOption(normDest), isLocked: true, hotel };
 }
 
 export const REFERRAL_OPTIONS = [

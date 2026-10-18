@@ -1,9 +1,11 @@
 "use client";
 
 import { gsap, ScrollTrigger } from "@/lib/gsap-util";
+import { setLenisInstance } from "@/lib/lenis-instance";
+import { jumpToHashSection } from "@/lib/scroll-to-section";
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { ReactLenis, LenisRef } from "lenis/react";
+import { ReactLenis, LenisRef, useLenis } from "lenis/react";
 import "lenis/dist/lenis.css";
 
 const LenisSmoothScroll = () => {
@@ -32,11 +34,28 @@ const LenisSmoothScroll = () => {
         };
     }, []);
 
-    // Scroll to top and refresh triggers whenever the route changes
+    // Shared with scroll-to-section so in-page links scroll through Lenis, not around it. `useLenis` re-renders once
+    // the instance exists (it is created after this component's first effects run).
+    const lenisInstance = useLenis();
     useEffect(() => {
-        const lenis = lenisRef.current?.lenis;
-        lenis?.scrollTo(0, { immediate: true });
-        window.scrollTo(0, 0);
+        setLenisInstance(lenisInstance ?? null);
+        return () => setLenisInstance(null);
+    }, [lenisInstance]);
+
+    // Whenever the route changes: land on the URL's #section if it has one, otherwise on the top; refresh triggers.
+    // The very first run is the page load itself: the browser already put the page where it belongs (top, a restored
+    // position after reload, or a #section), and forcing the top here would yank a user who has already started
+    // scrolling or clicking before hydration finished.
+    const isFirstRun = useRef(true);
+    useEffect(() => {
+        const firstRun = isFirstRun.current;
+        isFirstRun.current = false;
+
+        if (!jumpToHashSection() && !firstRun) {
+            const lenis = lenisRef.current?.lenis;
+            lenis?.scrollTo(0, { immediate: true });
+            window.scrollTo(0, 0);
+        }
 
         // Small timeout allows Next.js page components to mount and calculate heights
         const timer = setTimeout(() => {

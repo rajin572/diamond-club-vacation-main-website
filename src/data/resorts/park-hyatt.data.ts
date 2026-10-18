@@ -20,21 +20,14 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
     cards: [
       {
         id: "rooms",
-        title: "Rooms & Suits",
+        title: "Rooms & Suites",
         description: "Rooms, deluxe suites and premium suites.",
         image: AllImages.series.parkHyatt[1],
         target: { type: "section", section: "rooms" },
       },
       {
-        id: "dining",
-        title: "Dining",
-        description: "IK’AL, Patisserie Market and Café, Bruma Woodfire and Alchemia.",
-        image: AllImages.series.parkHyatt[2],
-        target: { type: "section", section: "dining" },
-      },
-      {
         id: "pools",
-        title: "Pools & Beach",
+        title: "Pools & Beaches",
         description: "Infinity Panoramic Pool and resort water experiences.",
         image: AllImages.series.parkHyatt[3],
         target: { type: "section", section: "pools" },
@@ -47,15 +40,8 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
         target: { type: "section", section: "wellness" },
       },
       {
-        id: "spa",
-        title: "Spa",
-        description: "Hydrotherapy pools, Turkish hammam, steam, chromotherapy and treatments.",
-        image: AllImages.series.parkHyatt[5],
-        target: { type: "section", section: "spa" },
-      },
-      {
         id: "gallery",
-        title: "Resort Gallery",
+        title: "Gallery",
         navLabel: "Gallery",
         description: "Park Hyatt imagery only.",
         image: AllImages.series.parkHyatt[6],
