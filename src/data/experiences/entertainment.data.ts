@@ -11,21 +11,8 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
     columns: 3,
     items: [
       {
-        id: "surprise-concert",
-        title: "Surprise Concert",
-        description: "A surprise superstar. One spectacular night. An unforgettable concert. The biggest surprise of Pesach is yet to be revealed.",
-        image: AllImages.reserveEntertainmentConcert,
-        details: {
-          title: "Get Ready For The Unexpected",
-          paragraphs: [
-            "A surprise superstar. One spectacular night. An unforgettable concert.",
-            "The biggest surprise of Pesach is yet to be revealed. Headliner announcement coming soon.",
-          ],
-        },
-      },
-      {
         id: "zusha",
-        title: "Zusha Live Concert",
+        title: "Zusha",
         description: "Experience an electrifying night of soul-stirring music, infectious energy, and uplifting melodies.",
         image: AllImages.zushaConcert,
         details: {
@@ -45,6 +32,19 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
           title: "Renowned Comedian Elon Gold",
           paragraphs: [
             "From his Orthodox upbringing to being an NYU dropout, comedian Elon Gold brings his renowned stand-up comedy and unforgettable humor to Diamond Club Vacations.",
+          ],
+        },
+      },
+      {
+        id: "surprise-concert",
+        title: "Get Ready For The Unexpected",
+        description: "A surprise superstar. One spectacular night. An unforgettable concert. The biggest surprise of Pesach is yet to be revealed.",
+        image: AllImages.reserveEntertainmentConcert,
+        details: {
+          title: "Get Ready For The Unexpected",
+          paragraphs: [
+            "A surprise superstar. One spectacular night. An unforgettable concert.",
+            "The biggest surprise of Pesach is yet to be revealed. Headliner announcement coming soon.",
           ],
         },
       },
@@ -162,7 +162,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
       },
       {
         id: "zusha",
-        title: "Zusha Live Concert",
+        title: "Zusha",
         description: "Experience an electrifying night of soul-stirring music, infectious energy, and uplifting melodies.",
         image: AllImages.zushaConcert,
         details: {

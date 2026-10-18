@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ResortDetailView } from "@/components/resorts";
+import { hasDetailPage } from "@/components/resorts/resort-items";
 import { getResort, getResortDetailItem, getResortDetailItems, getResortRouteParams } from "@/data/resorts/registry";
 
 interface PageProps {
@@ -11,7 +12,7 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   return getResortRouteParams().flatMap(({ resort, params }) =>
-    getResortDetailItems(resort, "restaurant").map((venue) => ({ ...params, restaurantId: venue.id }))
+    getResortDetailItems(resort, "restaurant").filter(hasDetailPage).map((venue) => ({ ...params, restaurantId: venue.id }))
   );
 }
 
@@ -35,7 +36,7 @@ export default async function RestaurantPage({ params }: PageProps) {
   const resort = getResort(resortId);
   const venue = resort && getResortDetailItem(resort, "restaurant", restaurantId);
 
-  if (!resort || resort.programId !== programId || !venue) {
+  if (!resort || resort.programId !== programId || !venue || !hasDetailPage(venue)) {
     notFound();
   }
 

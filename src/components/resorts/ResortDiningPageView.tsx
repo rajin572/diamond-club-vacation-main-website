@@ -16,6 +16,7 @@ import { restaurantHref, inquireHref } from "@/lib/routes";
 import { buildHotelSubNav } from "@/lib/hotel-subnav";
 import { AllImages } from "../../../public/images/AllImages";
 import type { ResortData } from "./resorts.types";
+import { hasDetailPage } from "./resort-items";
 import { KosherSupervisionModal, CelebrityChefsModal } from "./DiningModals";
 
 interface ResortDiningPageViewProps {
@@ -143,14 +144,12 @@ export function ResortDiningPageView({
       {/* SECTION 2: Complete Passover Restaurant Venues Grid */}
       {dining && dining.items.length > 0 && (
         <Wrap id="restaurants" className="dcv-wrap--stack">
-          <SectionTitle
-            title="Kosher Restaurants &amp; Venues"
-            description="All resort venues are converted exclusively to 100% Glatt Kosher for Passover, offering diverse gastronomic expressions crafted by our master chefs."
-          />
+          <SectionTitle title={dining.title} description={dining.description} />
 
           <div className="dcv-grid3">
             {dining.items.map((item) => (
-              <article key={item.id} className="dcv-card">
+              // A venue with only a photo and a name (no text) is a plain tile: no "View details" link, no page.
+              <article key={item.id} className={hasDetailPage(item) ? "dcv-card" : "dcv-card dcv-card--static"}>
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -159,7 +158,7 @@ export function ResortDiningPageView({
                 <div className="dcv-body">
                   {item.subtitle && <div className="dcv-card-tag">{item.subtitle}</div>}
                   <h3>{item.title}</h3>
-                  <p>{item.description}</p>
+                  {item.description && <p>{item.description}</p>}
                   {item.stats && item.stats.some((stat) => stat.label === "Serves" || stat.label === "Hours") && (
                     <ul className="dcv-card-meta">
                       {item.stats
@@ -171,12 +170,14 @@ export function ResortDiningPageView({
                         ))}
                     </ul>
                   )}
-                  <Link
-                    href={restaurantHref(offeringId, programId, data.resortId, item.id)}
-                    className="dcv-link"
-                  >
-                    View details →
-                  </Link>
+                  {hasDetailPage(item) && (
+                    <Link
+                      href={restaurantHref(offeringId, programId, data.resortId, item.id)}
+                      className="dcv-link"
+                    >
+                      View details →
+                    </Link>
+                  )}
                 </div>
               </article>
             ))}

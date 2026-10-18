@@ -1,11 +1,8 @@
 import { AllImages } from "../../../public/images/AllImages";
 import type { ResortListSection } from "@/components/resorts/resorts.types";
 
-/**
- * Restaurants and bars of the DIAMOND CLUB RESERVE program. The St. Regis Kanai Resort and The Riviera Maya EDITION
- * share one dining program, so both hotels use this section (content: stregiskanairesort.com/dine-and-drink).
- */
-export const RESERVE_DINING: ResortListSection = {
+/** Restaurants and bars from the hotel's own site, stregiskanairesort.com/dine-and-drink (7 venues, with descriptions, hours). */
+const HOTEL_SITE_DINING: ResortListSection = {
   title: "Dine & Drink",
   description:
     "Savor eight distinctive restaurants and bars, from contemporary Latin cuisine at Toro and Middle Eastern flavors at Chaya to beachfront seafood at Riviera. Gather for afternoon tea and Mexican cacao tastings in The Library, linger over cocktails at the intimate bar, or enjoy casual bites at Jack’s Club and Pik Nik, with vegetarian and vegan menu options available.",
@@ -113,3 +110,99 @@ export const RESERVE_DINING: ResortListSection = {
     },
   ],
 };
+
+/**
+ * Restaurants and bars from the client's website, www.dcpassovervacations.com/restaurants: his 8 photos with their names.
+ * The page has no text per restaurant, so these cards show a photo and a name only.
+ */
+const CLIENT_DINING: ResortListSection = {
+  title: "The Diamond Club Dining Experience",
+  description:
+    "We are proud to feature great unique indoor & outdoor Dining options including 4 Luxury Bars, all stocked with top shelf wines and Liquors.",
+  images: [
+    AllImages.dcvDiningBanner,
+    AllImages.dcvDiningSoolBeachClub,
+    AllImages.dcvDiningGalato,
+    AllImages.dcvDiningKiis,
+    AllImages.dcvDiningOceanaFishAndChips,
+    AllImages.dcvDiningLobbyBar,
+    AllImages.dcvDiningPizzo,
+    AllImages.dcvDiningKitchenDairyRestaurant,
+    AllImages.dcvDiningKitchen,
+  ],
+  items: [
+    {
+      id: "sool-beach-club",
+      title: "So'ol Beach Club",
+      subtitle: "",
+      image: AllImages.dcvDiningSoolBeachClub,
+      description: "",
+      gallery: [AllImages.dcvDiningSoolBeachClub],
+    },
+    {
+      id: "galato",
+      title: "Galato",
+      subtitle: "",
+      image: AllImages.dcvDiningGalato,
+      description: "",
+      gallery: [AllImages.dcvDiningGalato],
+    },
+    {
+      id: "kiis",
+      title: "KIIS",
+      subtitle: "",
+      image: AllImages.dcvDiningKiis,
+      description: "",
+      gallery: [AllImages.dcvDiningKiis],
+    },
+    {
+      id: "oceana-fish-and-chips",
+      title: "Oceana Fish & Chips",
+      subtitle: "",
+      image: AllImages.dcvDiningOceanaFishAndChips,
+      description: "",
+      gallery: [AllImages.dcvDiningOceanaFishAndChips],
+    },
+    {
+      id: "lobby-bar",
+      title: "Lobby Bar",
+      subtitle: "",
+      image: AllImages.dcvDiningLobbyBar,
+      description: "",
+      gallery: [AllImages.dcvDiningLobbyBar],
+    },
+    {
+      id: "pizzo",
+      title: "PIZZO",
+      subtitle: "",
+      image: AllImages.dcvDiningPizzo,
+      description: "",
+      gallery: [AllImages.dcvDiningPizzo],
+    },
+    {
+      id: "kitchen-dairy-restaurant",
+      title: "Kitchen Dairy Restaurant",
+      subtitle: "",
+      image: AllImages.dcvDiningKitchenDairyRestaurant,
+      description: "",
+      gallery: [AllImages.dcvDiningKitchenDairyRestaurant],
+    },
+    {
+      id: "kitchen",
+      title: "Kitchen",
+      subtitle: "",
+      image: AllImages.dcvDiningKitchen,
+      description: "",
+      gallery: [AllImages.dcvDiningKitchen],
+    },
+  ],
+};
+
+/** The dining versions. Switch with: npm run rooms -- dining=client | dining=hotel-site (see scripts/swap-rooms.mjs). */
+export const RESERVE_DINING_VERSIONS = {
+  client: CLIENT_DINING,
+  "hotel-site": HOTEL_SITE_DINING,
+} as const;
+
+// @dining:active
+export const RESERVE_DINING: ResortListSection = RESERVE_DINING_VERSIONS["client"];

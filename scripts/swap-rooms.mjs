@@ -14,6 +14,7 @@
  *   npm run rooms -- full                    the long lists: Edition 19 rooms (Marriott) + St. Regis 15 rooms
  *   npm run rooms -- edition=editionhotels   one hotel only (names are printed by "status")
  *   npm run rooms -- edition=client st-regis=hotel-site
+ *   npm run rooms -- dining=client           the dining list of both hotels (client = client's restaurants, hotel-site = stregiskanairesort.com)
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -28,6 +29,30 @@ const PRESETS = {
   client: { edition: "client", "st-regis": "client" },
   full: { edition: "marriott", "st-regis": "hotel-site" },
 };
+
+const DINING_FILE = "src/data/resorts/reserve-dining.data.ts";
+const DINING_ACTIVE = /^(export const RESERVE_DINING: ResortListSection = RESERVE_DINING_VERSIONS\[")([^"]+)("\];)$/m;
+
+function readDining() {
+  const file = path.join(root, DINING_FILE);
+  const text = fs.readFileSync(file, "utf8");
+  const active = DINING_ACTIVE.exec(text);
+  if (!active) throw new Error(`${DINING_FILE}: could not find the "RESERVE_DINING = RESERVE_DINING_VERSIONS[...]" line`);
+  const body = /export const RESERVE_DINING_VERSIONS = \{([\s\S]*?)\} as const;/.exec(text);
+  const names = body ? [...body[1].matchAll(/^\s*"?([A-Za-z][\w-]*)"?\s*:/gm)].map((m) => m[1]) : [];
+  return { file, text, active: active[2], names };
+}
+
+function setDining(target) {
+  const d = readDining();
+  if (!d.names.includes(target)) throw new Error(`dining: no list called "${target}". Available: ${d.names.join(", ")}`);
+  if (d.active === target) {
+    console.log(`dining: already on "${target}"`);
+    return;
+  }
+  fs.writeFileSync(d.file, d.text.replace(DINING_ACTIVE, `$1${target}$3`));
+  console.log(`dining: switched to "${target}"`);
+}
 
 const BEGIN = /^\s*\/\/ @rooms:begin (\S+) \| (.*)$/;
 const END = /^\s*\/\/ @rooms:end (\S+)\s*$/;
@@ -74,6 +99,10 @@ function load(hotel) {
 }
 
 function status() {
+  const dining = readDining();
+  console.log(`
+dining  (${DINING_FILE}), used by both hotels`);
+  for (const name of dining.names) console.log(`  ${name === dining.active ? "ON " : "off"}  ${name}`);
   for (const hotel of Object.keys(FILES)) {
     const { blocks } = load(hotel);
     console.log(`\n${hotel}  (${FILES[hotel]})`);
@@ -116,12 +145,15 @@ function main(args) {
   const plan = {};
   for (const arg of args) {
     if (PRESETS[arg]) Object.assign(plan, PRESETS[arg]);
-    else if (/^(edition|st-regis)=/.test(arg)) {
+    else if (/^(edition|st-regis|dining)=/.test(arg)) {
       const [hotel, name] = arg.split("=");
       plan[hotel] = name;
-    } else throw new Error(`Unknown argument "${arg}". Try: status | client | full | edition=<list> | st-regis=<list>`);
+    } else throw new Error(`Unknown argument "${arg}". Try: status | client | full | edition=<list> | st-regis=<list> | dining=<list>`);
   }
-  for (const [hotel, target] of Object.entries(plan)) setActive(hotel, target);
+  for (const [hotel, target] of Object.entries(plan)) {
+    if (hotel === "dining") setDining(target);
+    else setActive(hotel, target);
+  }
   console.log("");
   status();
 }

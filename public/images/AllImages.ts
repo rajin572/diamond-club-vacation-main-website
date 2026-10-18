@@ -491,6 +491,15 @@ import dcvRoomEditionJadeSuite from "./mainDesign/dcv-room-edition-jade-suite.jp
 import dcvRoomStRegisDeluxeRoom from "./mainDesign/dcv-room-st-regis-deluxe-room.jpg";
 import dcvRoomStRegisGrandLuxePlungePoolRoom from "./mainDesign/dcv-room-st-regis-grand-luxe-plunge-pool-room.jpg";
 import dcvRoomStRegisRivieraLuxeRoom from "./mainDesign/dcv-room-st-regis-riviera-luxe-room.jpg";
+import dcvDiningBanner from "./mainDesign/dcv-dining-banner.jpg";
+import dcvDiningSoolBeachClub from "./mainDesign/dcv-dining-sool-beach-club.jpg";
+import dcvDiningGalato from "./mainDesign/dcv-dining-galato.jpg";
+import dcvDiningKiis from "./mainDesign/dcv-dining-kiis.jpg";
+import dcvDiningOceanaFishAndChips from "./mainDesign/dcv-dining-oceana-fish-and-chips.jpg";
+import dcvDiningLobbyBar from "./mainDesign/dcv-dining-lobby-bar.jpg";
+import dcvDiningPizzo from "./mainDesign/dcv-dining-pizzo.jpg";
+import dcvDiningKitchenDairyRestaurant from "./mainDesign/dcv-dining-kitchen-dairy-restaurant.jpg";
+import dcvDiningKitchen from "./mainDesign/dcv-dining-kitchen.jpg";
 
 export const AllImages = {
   logo,
@@ -991,6 +1000,15 @@ export const AllImages = {
   dcvRoomStRegisDeluxeRoom,
   dcvRoomStRegisGrandLuxePlungePoolRoom,
   dcvRoomStRegisRivieraLuxeRoom,
+  dcvDiningBanner,
+  dcvDiningSoolBeachClub,
+  dcvDiningGalato,
+  dcvDiningKiis,
+  dcvDiningOceanaFishAndChips,
+  dcvDiningLobbyBar,
+  dcvDiningPizzo,
+  dcvDiningKitchenDairyRestaurant,
+  dcvDiningKitchen,
   series: {
     attractions: [attractions1, attractions2, attractions3, attractions4, attractions5, attractions6, attractions7],
     casa: [casa1, casa2, casa3, casa4, casa5, casa6],
