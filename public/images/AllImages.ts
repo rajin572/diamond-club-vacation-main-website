@@ -405,6 +405,43 @@ import stregisDineBackBarBottlesOrchids from "./mainDesign/stregis-dine-back-bar
 import stregisDineGarnishedRedCocktailTropicalGreenery from "./mainDesign/stregis-dine-garnished-red-cocktail-tropical-greenery.webp";
 import stregisDineAfternoonTeaServiceTheLibrary from "./mainDesign/stregis-dine-afternoon-tea-service-the-library.webp";
 import stregisDinePikNikGrabAndGoDisplay from "./mainDesign/stregis-dine-pik-nik-grab-and-go-display.webp";
+import editionWebEbCunekEdCunek322312453605211Scaled from "./mainDesign/edition-web-eb-cunek-ed-cunek-3223-12453-605211-scaled.jpg";
+import editionWebKanai114200414BathRgbV2 from "./mainDesign/edition-web-kanai1-14-2004-14-bath-rgb-v2.jpg";
+import editionWebKanai215c220157RgbV1 from "./mainDesign/edition-web-kanai2-15c-2201-57-rgb-v1.jpg";
+import editionWebKanai116200414RgbV2 from "./mainDesign/edition-web-kanai1-16-2004-14-rgb-v2.jpg";
+import editionWebKanai112200314RgbV1 from "./mainDesign/edition-web-kanai1-12-2003-14-rgb-v1.jpg";
+import editionWebKanai113b200365RgbV2 from "./mainDesign/edition-web-kanai1-13b-2003-65-rgb-v2.jpg";
+import editionWebKanai1111202190RgbV1 from "./mainDesign/edition-web-kanai1-11-1202-190-rgb-v1.jpg";
+import editionWebKanai115120256BathRgbV1 from "./mainDesign/edition-web-kanai1-15-1202-56-bath-rgb-v1.jpg";
+import editionWebKanai110d1202RgbV1 from "./mainDesign/edition-web-kanai1-10d-1202-rgb-v1.jpg";
+import editionWebKanai1091202RgbV1 from "./mainDesign/edition-web-kanai1-09-1202-rgb-v1.jpg";
+import editionWebKanai1041202RgbV1 from "./mainDesign/edition-web-kanai1-04-1202-rgb-v1.jpg";
+import editionWebKanai201a3132RgbV1 from "./mainDesign/edition-web-kanai2-01a-3132-rgb-v1.jpg";
+import editionWebKanai202a3132RgbV1 from "./mainDesign/edition-web-kanai2-02a-3132-rgb-v1.jpg";
+import editionWebKanai208a3137RgbV2 from "./mainDesign/edition-web-kanai2-08a-3137-rgb-v2.jpg";
+import editionWebKanai2093137RgbV1 from "./mainDesign/edition-web-kanai2-09-3137-rgb-v1.jpg";
+import editionWebKanai1183130RgbV1Scaled from "./mainDesign/edition-web-kanai1-18-3130-rgb-v1-scaled.jpg";
+import editionWebKanai219c3030RgbV1 from "./mainDesign/edition-web-kanai2-19c-3030-rgb-v1.jpg";
+import editionWebKanai1193330RgbV2 from "./mainDesign/edition-web-kanai1-19-3330-rgb-v2.jpg";
+import editionWebKanai2143137RgbV2 from "./mainDesign/edition-web-kanai2-14-3137-rgb-v2.jpg";
+import editionWebKanai526aVillaPolRgbV2 from "./mainDesign/edition-web-kanai5-26a-villa-pol-rgb-v2.jpg";
+import editionWebEdtKanai530VillaRgbV1Scaled from "./mainDesign/edition-web-edt-kanai5-30-villa-rgb-v1-scaled.jpg";
+import editionWebEdtKanai531VillaRgbV1Scaled from "./mainDesign/edition-web-edt-kanai5-31-villa-rgb-v1-scaled.jpg";
+import editionWebKanai519dVillaRgbV1Scaled from "./mainDesign/edition-web-kanai5-19d-villa-rgb-v1-scaled.jpg";
+import editionWebKanai517aVillaRgbV1Scaled from "./mainDesign/edition-web-kanai5-17a-villa-rgb-v1-scaled.jpg";
+import editionWebKanai516VillaRgbV1Scaled from "./mainDesign/edition-web-kanai5-16-villa-rgb-v1-scaled.jpg";
+import editionWebKanai515cVillaRgbV1Scaled from "./mainDesign/edition-web-kanai5-15c-villa-rgb-v1-scaled.jpg";
+import editionWebKanai529VillaRgbV1Scaled from "./mainDesign/edition-web-kanai5-29-villa-rgb-v1-scaled.jpg";
+import editionWebEdtKanai514VillaRgbV1Scaled from "./mainDesign/edition-web-edt-kanai5-14-villa-rgb-v1-scaled.jpg";
+import editionWebEdtKanai532VillaRgbV1Scaled from "./mainDesign/edition-web-edt-kanai5-32-villa-rgb-v1-scaled.jpg";
+import editionWebEdtKanai513VillaRgbV1Scaled from "./mainDesign/edition-web-edt-kanai5-13-villa-rgb-v1-scaled.jpg";
+import editionWebKanai525VillaRgbV1 from "./mainDesign/edition-web-kanai5-25-villa-rgb-v1.jpg";
+import editionWebKanai520aVillaRgbV1 from "./mainDesign/edition-web-kanai5-20a-villa-rgb-v1.jpg";
+import editionWebEdtKanai534VillaRgbV1 from "./mainDesign/edition-web-edt-kanai5-34-villa-rgb-v1.jpg";
+import editionWebKanai533VillaRgbV1 from "./mainDesign/edition-web-kanai5-33-villa-rgb-v1.jpg";
+import editionWebKanai518VillaRgbV1Scaled from "./mainDesign/edition-web-kanai5-18-villa-rgb-v1-scaled.jpg";
+import editionWeb40Kanai275RgbV2 from "./mainDesign/edition-web-40-kanai2-75-rgb-v2.jpg";
+import editionWeb42Kanai279bRgbV2 from "./mainDesign/edition-web-42-kanai2-79b-rgb-v2.jpg";
 import editionMr32231245360521 from "./mainDesign/edition-mr-3223-12453-60521.jpg";
 import editionMrGuestBathroom1220956424 from "./mainDesign/edition-mr-guest-bathroom-12209-56424.jpg";
 import editionMrGuestRoom2QnBd1425486157 from "./mainDesign/edition-mr-guest-room-2-qn-bd-14254-86157.jpg";
@@ -445,6 +482,15 @@ import editionMrCunekEditionSuite1607141233 from "./mainDesign/edition-mr-cunek-
 import editionMrEditionSuite16060 from "./mainDesign/edition-mr-edition-suite-16060.jpg";
 import editionMrEditionTerrace27581 from "./mainDesign/edition-mr-edition-terrace-27581.jpg";
 import editionMrCunekEditionSuite1249821344 from "./mainDesign/edition-mr-cunek-edition-suite-12498-21344.jpg";
+import dcvRoomEditionDeluxeRoom from "./mainDesign/dcv-room-edition-deluxe-room.jpg";
+import dcvRoomEditionDeluxeRoomOceanView from "./mainDesign/dcv-room-edition-deluxe-room-ocean-view.jpg";
+import dcvRoomEditionPremierPlungePoolRoom from "./mainDesign/dcv-room-edition-premier-plunge-pool-room.jpg";
+import dcvRoomEditionOneBedroomPlungePoolSuite from "./mainDesign/dcv-room-edition-one-bedroom-plunge-pool-suite.jpg";
+import dcvRoomEditionSuperiorOneBedroomSuite from "./mainDesign/dcv-room-edition-superior-one-bedroom-suite.jpg";
+import dcvRoomEditionJadeSuite from "./mainDesign/dcv-room-edition-jade-suite.jpg";
+import dcvRoomStRegisDeluxeRoom from "./mainDesign/dcv-room-st-regis-deluxe-room.jpg";
+import dcvRoomStRegisGrandLuxePlungePoolRoom from "./mainDesign/dcv-room-st-regis-grand-luxe-plunge-pool-room.jpg";
+import dcvRoomStRegisRivieraLuxeRoom from "./mainDesign/dcv-room-st-regis-riviera-luxe-room.jpg";
 
 export const AllImages = {
   logo,
@@ -858,8 +904,44 @@ export const AllImages = {
   stregisDineGarnishedRedCocktailTropicalGreenery,
   stregisDineAfternoonTeaServiceTheLibrary,
   stregisDinePikNikGrabAndGoDisplay,
-  // The Riviera Maya EDITION rooms (Marriott rate list, hotel code CUNEK)
-  editionMrMarker: true,
+  // The Riviera Maya EDITION rooms (cards of dcpassovervacations.com/rooms, details and photos from the linked editionhotels.com pages)
+  editionWebEbCunekEdCunek322312453605211Scaled,
+  editionWebKanai114200414BathRgbV2,
+  editionWebKanai215c220157RgbV1,
+  editionWebKanai116200414RgbV2,
+  editionWebKanai112200314RgbV1,
+  editionWebKanai113b200365RgbV2,
+  editionWebKanai1111202190RgbV1,
+  editionWebKanai115120256BathRgbV1,
+  editionWebKanai110d1202RgbV1,
+  editionWebKanai1091202RgbV1,
+  editionWebKanai1041202RgbV1,
+  editionWebKanai201a3132RgbV1,
+  editionWebKanai202a3132RgbV1,
+  editionWebKanai208a3137RgbV2,
+  editionWebKanai2093137RgbV1,
+  editionWebKanai1183130RgbV1Scaled,
+  editionWebKanai219c3030RgbV1,
+  editionWebKanai1193330RgbV2,
+  editionWebKanai2143137RgbV2,
+  editionWebKanai526aVillaPolRgbV2,
+  editionWebEdtKanai530VillaRgbV1Scaled,
+  editionWebEdtKanai531VillaRgbV1Scaled,
+  editionWebKanai519dVillaRgbV1Scaled,
+  editionWebKanai517aVillaRgbV1Scaled,
+  editionWebKanai516VillaRgbV1Scaled,
+  editionWebKanai515cVillaRgbV1Scaled,
+  editionWebKanai529VillaRgbV1Scaled,
+  editionWebEdtKanai514VillaRgbV1Scaled,
+  editionWebEdtKanai532VillaRgbV1Scaled,
+  editionWebEdtKanai513VillaRgbV1Scaled,
+  editionWebKanai525VillaRgbV1,
+  editionWebKanai520aVillaRgbV1,
+  editionWebEdtKanai534VillaRgbV1,
+  editionWebKanai533VillaRgbV1,
+  editionWebKanai518VillaRgbV1Scaled,
+  editionWeb40Kanai275RgbV2,
+  editionWeb42Kanai279bRgbV2,
   editionMr32231245360521,
   editionMrGuestBathroom1220956424,
   editionMrGuestRoom2QnBd1425486157,
@@ -900,6 +982,15 @@ export const AllImages = {
   editionMrEditionSuite16060,
   editionMrEditionTerrace27581,
   editionMrCunekEditionSuite1249821344,
+  dcvRoomEditionDeluxeRoom,
+  dcvRoomEditionDeluxeRoomOceanView,
+  dcvRoomEditionPremierPlungePoolRoom,
+  dcvRoomEditionOneBedroomPlungePoolSuite,
+  dcvRoomEditionSuperiorOneBedroomSuite,
+  dcvRoomEditionJadeSuite,
+  dcvRoomStRegisDeluxeRoom,
+  dcvRoomStRegisGrandLuxePlungePoolRoom,
+  dcvRoomStRegisRivieraLuxeRoom,
   series: {
     attractions: [attractions1, attractions2, attractions3, attractions4, attractions5, attractions6, attractions7],
     casa: [casa1, casa2, casa3, casa4, casa5, casa6],

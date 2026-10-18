@@ -30,6 +30,9 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
     description: "Choose from 124 guestrooms, 19 suites and a Presidential Suite, each designed for indoor-outdoor living with a private terrace or plunge pool. Every accommodation includes Signature Butler Service, with in-room WiFi available and connecting rooms supporting family stays.",
     linkToDetails: true,
     items: [
+    // Room lists. Only one block is switched on (not commented); swap with: npm run rooms -- client | full | status
+
+    // @rooms:begin hotel-site | stregiskanairesort.com/rooms-and-suites: 15 rooms and suites with the hotel photos
       {
         id: "grand-luxe-guest-room",
         title: "Grand Luxe Guest Room",
@@ -586,6 +589,312 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
           AllImages.stregisWebGrandRoomOceanViewPrivatePoolShowerAmenities,
         ],
       },
+    // @rooms:end hotel-site
+
+    // @rooms:begin client | Client's website www.dcpassovervacations.com/rooms: 3 rooms
+    //       {
+    //         id: "deluxe-room",
+    //         title: "Deluxe Room",
+    //         subtitle: "1 King or 2 Queen Beds · Ocean View",
+    //         image: AllImages.dcvRoomStRegisDeluxeRoom,
+    //         description: "The Deluxe Room Two Beds Ocean View Terrace at The St. Regis Kanai Resort, Riviera Maya offers 592 sq. ft. of individually furnished and individually decorated space, opening to a deck or patio with an Ocean View. Designed for up to 4 guests, it brings the Caribbean outlook into a refined indoor-outdoor setting, with blackout drapes, air conditioning, cable TV service, wireless internet access, and thoughtful details such as bathrobes, slippers, recycling, LED light bulbs, a visual fire alarm, Braille signage, and a pet-friendly room designation. Connecting/adjoining rooms are available, and practical comforts include a laptop-compatible safe, phone, wet bar, minibar, espresso maker, television, and in-room massage available. The private bathroom includes bathrobes, toilet paper, a separate bathtub and shower, and a rainfall showerhead, with accessibility features including a grab bar near the toilet and a toilet grab bar height of 86 centimeters. Your stay includes the signature service experience associated with every room and suite at The St. Regis Kanai Resort, Riviera Maya, including access to St. Regis Signature Butler Service. Beyond the room, the resort offers a family-friendly Riviera Maya setting with restaurants and bars ranging from beachside dining to regional, Middle Eastern, and Mexican-Mediterranean flavors. Guests may also enjoy outdoor pools, a dedicated kids club for ages 4 to 12, the resort spa by appointment, and the ease of complimentary self-parking and valet parking, while returning to an ocean-view terrace room made for relaxed, all-day comfort.",
+    //         stats: [
+    //           { label: "Room Size", value: "592 sq. ft. / 55 sq. m." },
+    //           { label: "View", value: "Ocean View" },
+    //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
+    //           { label: "Guests", value: "4 Guests" },
+    //         ],
+    //         groups: [
+    //           {
+    //             title: "Highlights",
+    //             items: [
+    //               "1 King or 2 Queen Beds",
+    //               "Rollaway bed available upon request",
+    //               "Private, furnished terrace",
+    //             ],
+    //           },
+    //           {
+    //             title: "What's included in this room",
+    //             items: [
+    //               "Private deck and patio open to sweeping ocean views",
+    //               "592 sq. ft. bedroom layout with individually decorated interiors",
+    //               "Private bath offers a separate tub, rainfall shower, and robes",
+    //               "Wet bar and inviting seating nook with individually furnished décor",
+    //               "Stocked minibar and espresso maker for easy in-room refreshment",
+    //               "55-inch television, free WiFi, and a laptop-compatible safe",
+    //               "Includes St. Regis Signature Butler Service and connecting room access",
+    //             ],
+    //           },
+    //         ],
+    //         gallery: [
+    //           AllImages.dcvRoomStRegisDeluxeRoom,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewKingBedTerraceDoors,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewKingBedSofa,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewClosetVanity,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceSeating,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomTubShower,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomVanityTub,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomVanity,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewTwoBedsTerraceSeating,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewTwoBedsWoodHeadboard,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewVanityKingBed,
+    //         ],
+    //       },
+    //       {
+    //         id: "grand-luxe-plunge-pool-room",
+    //         title: "Grand Luxe Plunge Pool Room",
+    //         subtitle: "1 King or 2 Queen Beds · Ocean View",
+    //         image: AllImages.dcvRoomStRegisGrandLuxePlungePoolRoom,
+    //         description: "The Grand Luxe Guest Room at The St. Regis Kanai Resort, Riviera Maya offers 592 sq. ft. of polished comfort in a serene Riviera Maya setting. Designed for guests who want generous space within the resort, the room opens to a view of the surrounding resort landscape, creating a calm sense of place from morning through evening. The layout gives couples, small families or close companions room to settle in with ease, while a private terrace or plunge pool extends the living experience outdoors. The bathroom completes the stay with a refined, residential feel, giving the room a composed balance of privacy, comfort and space. Your stay includes access to the all-inclusive experience at The St. Regis Kanai Resort, Riviera Maya, where days can move from relaxed dining to poolside leisure and the white-sand beachfront. Guests may enjoy the resort’s restaurants and bars, family-friendly spaces, adults-only pool areas, The St. Regis Spa, the fitness center and the attentive St. Regis Signature Butler Service available to all room categories. It is an effortless way to experience the resort’s mangrove-reserve setting while returning to a spacious Grand Luxe Guest Room designed for unhurried rest.",
+    //         stats: [
+    //           { label: "Room Size", value: "592 sq. ft. / 55 sq. m." },
+    //           { label: "View", value: "Ocean View" },
+    //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
+    //           { label: "Guests", value: "4 Guests" },
+    //         ],
+    //         groups: [
+    //           {
+    //             title: "Highlights",
+    //             items: [
+    //               "1 King or 2 Queen Beds",
+    //               "Private, furnished terrace",
+    //             ],
+    //           },
+    //           {
+    //             title: "What's included in this room",
+    //             items: [
+    //               "Private terrace or plunge pool opening onto the resort's tropical landscape",
+    //               "592 sq. ft. of thoughtfully laid-out living and sleeping space",
+    //               "Marble bathroom with soaking tub, rain shower and plush robes",
+    //               "Relaxed seating nook dressed in warm, residential-inspired coastal décor",
+    //               "Well-stocked minibar with local snacks and premium beverages",
+    //               "Smart TV, in-room coffee maker, Wi-Fi, safe and attentive room service",
+    //               "All-inclusive dining, bars and St. Regis Signature Butler Service included",
+    //             ],
+    //           },
+    //         ],
+    //         gallery: [
+    //           AllImages.dcvRoomStRegisGrandLuxePlungePoolRoom,
+    //           AllImages.stregisWebGrandRoomOceanViewPrivatePoolKingBed,
+    //           AllImages.stregisWebGrandRoomOceanViewPrivatePoolBathroom,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewClosetVanity,
+    //           AllImages.stregisWebGrandRoomOceanViewPrivatePoolTerrace,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomTubShower,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomVanityTub,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewBathroomVanity,
+    //           AllImages.stregisWebGrandRoomOceanViewPrivatePoolTwoDoubleBeds,
+    //           AllImages.stregisWebDeluxeRoomOceanViewTerraceDeluxeRoomOceanViewVanityKingBed,
+    //           AllImages.stregisWebGrandRoomOceanViewPrivatePoolShowerAmenities,
+    //           AllImages.stregisWebGrandRoomOceanViewPrivatePoolTwoDoubleBedsInterior,
+    //         ],
+    //       },
+    //       {
+    //         id: "riviera-luxe-room",
+    //         title: "Riviera Luxe Room",
+    //         subtitle: "1 King · Ocean View",
+    //         image: AllImages.dcvRoomStRegisRivieraLuxeRoom,
+    //         description: "Room One Bed Ocean View Corner at The St. Regis Kanai Resort, Riviera Maya offers 592 sq. ft. of refined indoor comfort with an Ocean View. Set in a corner position, this room is designed for guests who want a bright, serene base with a direct sense of the Riviera Maya seascape. Its layout supports easy relaxation between days by the water, while the bathroom provides a private space to refresh before dinner or unwind at the end of the day. Your stay places you within the all-inclusive experience of The St. Regis Kanai Resort, Riviera Maya, where dining, drinks, and resort moments can be enjoyed with ease throughout your time on property. From your ocean-view room, the experience is simple and seamless: settle in, wake to the view, and let the rhythm of the resort shape each day.",
+    //         stats: [
+    //           { label: "Room Size", value: "592 sq. ft. / 55 sq. m." },
+    //           { label: "View", value: "Ocean View" },
+    //           { label: "Bedding", value: "1 King" },
+    //           { label: "Guests", value: "3 Guests" },
+    //         ],
+    //         groups: [
+    //           {
+    //             title: "Highlights",
+    //             items: [
+    //               "1 King",
+    //               "Ocean view",
+    //               "Outdoor bathtub",
+    //               "Corner room",
+    //               "Private, furnished terrace",
+    //             ],
+    //           },
+    //           {
+    //             title: "What's included in this room",
+    //             items: [
+    //               "Private furnished terrace with panoramic ocean views from this corner room",
+    //               "592 sq. ft. corner layout with a bright, open living space",
+    //               "Marble bathroom with a separate soaking tub and rainfall shower",
+    //               "Relaxed sitting area dressed in bespoke, coastal-inspired contemporary furnishings",
+    //               "In-room minibar stocked with spirits, snacks, and chilled beverages",
+    //               "55-inch flat-screen TV, espresso maker, Wi-Fi, in-room safe, and room service",
+    //               "Signature St. Regis Butler Service and resort privileges included throughout",
+    //             ],
+    //           },
+    //         ],
+    //         gallery: [
+    //           AllImages.dcvRoomStRegisRivieraLuxeRoom,
+    //           AllImages.stregisWebGrandRoomOceanViewPrivatePoolShowerAmenities,
+    //         ],
+    //       },
+    // @rooms:end client
+
+    // @rooms:begin original | The original three rooms
+    //       {
+    //         id: "deluxe-room",
+    //         title: "Deluxe Room",
+    //         subtitle: "1 King or 2 Queen Beds · Ocean View",
+    //         image: AllImages.stregisRooms1,
+    //         description: "One king or two queen beds, with a rollaway bed available on request, and a private furnished terrace overlooking the ocean.",
+    //         stats: [
+    //           { label: "Room Size", value: "592 sq. ft. / 55 sq. m." },
+    //           { label: "View", value: "Ocean View" },
+    //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
+    //           { label: "Outdoor Space", value: "Private furnished terrace" },
+    //         ],
+    //         groups: [
+    //           {
+    //             title: "Beds & Bedding",
+    //             items: [
+    //               "1 King or 2 Queen Beds",
+    //               "Cribs permitted",
+    //               "Duvet and Frette luxury linens",
+    //               "Rollaway bed available upon request",
+    //             ],
+    //           },
+    //           {
+    //             title: "Room Features",
+    //             items: [
+    //               "Air-conditioned",
+    //               "Connecting rooms available (for some rooms)",
+    //               "Private furnished terrace",
+    //             ],
+    //           },
+    //           {
+    //             title: "Bath & Bathroom Features",
+    //             items: [
+    //               "Marble bathroom",
+    //               "Separate bathtub and shower",
+    //               "Double vanities",
+    //               "Whirlpool fits 1",
+    //               "Lighted makeup mirror",
+    //               "Hair dryer",
+    //               "Robe",
+    //               "Slippers",
+    //             ],
+    //           },
+    //           { title: "Furniture & Furnishings", items: ["Oversized chair", "Alarm clock"] },
+    //           {
+    //             title: "Internet & Phones",
+    //             items: [
+    //               "Cordless phone",
+    //               "Voicemail and speaker phone",
+    //               "Complimentary wireless internet",
+    //             ],
+    //           },
+    //         ],
+    //         gallery: rotate(AllImages.series.stregisRoomDetail.slice(0, 10), 0),
+    //       },
+    //       {
+    //         id: "grand-luxe-suite",
+    //         title: "Grand Luxe Plunge Pool Room",
+    //         subtitle: "1 King or 2 Queen Beds · Ocean View",
+    //         image: AllImages.stregisRooms2,
+    //         description: "One king or two queen beds, with a private heated plunge pool on an expansive terrace overlooking the turquoise Caribbean.",
+    //         stats: [
+    //           { label: "Room Size", value: "950 sq. ft. / 88 sq. m." },
+    //           { label: "View", value: "Ocean View" },
+    //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
+    //           { label: "Outdoor Space", value: "Private furnished terrace" },
+    //         ],
+    //         groups: [
+    //           {
+    //             title: "Beds & Bedding",
+    //             items: [
+    //               "1 King or 2 Queen Beds",
+    //               "Cribs permitted",
+    //               "Duvet and Frette luxury linens",
+    //               "Rollaway bed available upon request",
+    //             ],
+    //           },
+    //           {
+    //             title: "Room Features",
+    //             items: ["Air-conditioned", "Private plunge pool", "Private furnished terrace"],
+    //           },
+    //           {
+    //             title: "Bath & Bathroom Features",
+    //             items: [
+    //               "Marble bathroom",
+    //               "Separate bathtub and shower",
+    //               "Double vanities",
+    //               "Whirlpool fits 1",
+    //               "Lighted makeup mirror",
+    //               "Hair dryer",
+    //               "Robe",
+    //               "Slippers",
+    //             ],
+    //           },
+    //           { title: "Furniture & Furnishings", items: ["Oversized chair", "Alarm clock"] },
+    //           {
+    //             title: "Internet & Phones",
+    //             items: [
+    //               "Cordless phone",
+    //               "Voicemail and speaker phone",
+    //               "Complimentary wireless internet",
+    //             ],
+    //           },
+    //         ],
+    //         gallery: rotate(AllImages.series.stregisRoomDetail.slice(0, 10), 1),
+    //       },
+    //       {
+    //         id: "riviera-luxe-room",
+    //         title: "Riviera Luxe Room",
+    //         subtitle: "1 King · Ocean View",
+    //         image: AllImages.stregisRooms3,
+    //         description: "Spacious guestroom with panoramic ocean views, refined contemporary furnishings, and a private furnished outdoor terrace.",
+    //         stats: [
+    //           { label: "Room Size", value: "640 sq. ft. / 60 sq. m." },
+    //           { label: "View", value: "Ocean View" },
+    //           { label: "Bedding", value: "1 King Bed" },
+    //           { label: "Outdoor Space", value: "Private furnished terrace" },
+    //         ],
+    //         groups: [
+    //           {
+    //             title: "Beds & Bedding",
+    //             items: [
+    //               "1 King Bed",
+    //               "Cribs permitted",
+    //               "Duvet and Frette luxury linens",
+    //               "Rollaway bed available upon request",
+    //             ],
+    //           },
+    //           {
+    //             title: "Room Features",
+    //             items: [
+    //               "Air-conditioned",
+    //               "Connecting rooms available (for some rooms)",
+    //               "Private furnished terrace",
+    //             ],
+    //           },
+    //           {
+    //             title: "Bath & Bathroom Features",
+    //             items: [
+    //               "Marble bathroom",
+    //               "Separate bathtub and shower",
+    //               "Double vanities",
+    //               "Whirlpool fits 1",
+    //               "Lighted makeup mirror",
+    //               "Hair dryer",
+    //               "Robe",
+    //               "Slippers",
+    //             ],
+    //           },
+    //           { title: "Furniture & Furnishings", items: ["Oversized chair", "Alarm clock"] },
+    //           {
+    //             title: "Internet & Phones",
+    //             items: [
+    //               "Cordless phone",
+    //               "Voicemail and speaker phone",
+    //               "Complimentary wireless internet",
+    //             ],
+    //           },
+    //         ],
+    //         gallery: rotate(AllImages.series.stregisRoomDetail.slice(0, 10), 2),
+    //       },
+    // @rooms:end original
+
     ],
   },
   dining: RESERVE_DINING,
