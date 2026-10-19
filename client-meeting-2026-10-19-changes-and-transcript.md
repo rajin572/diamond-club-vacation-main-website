@@ -131,7 +131,7 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 
 ### 10. Pools & Beaches (P1 00:21:48 – 00:33:09) — 🟡 PARTLY DONE
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: pools show "All day" instead of times (every hotel); going into a pool and back lands on the same section (a "← Back to Pools & Beach" link on every pool page; browser Back already worked). **Not done:** Whirlpool and Cabanas, a photo per pool, the "adults only" decision.
+> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: St. Regis pools replaced with the Marriott Experiences list (Cabanas, Family, Serenity, Main, Whirlpool, each with its Marriott photo); pools show "All day" instead of times (every hotel); going into a pool and back lands on the same section (a "← Back to Pools & Beach" link on every pool page; browser Back already worked). **Not done:** more photos per pool (Marriott gives one each), the other hotels' pools, the "adults only" decision (the Marriott pools have no adults-only text).
 - "The pool and beach needs to be updated" (P1 00:21:48).
 - **Schedule: "all day"** (no times, all Passover) for every pool, in the cards and in the pop-up (P1 00:23:32–00:24:26, 00:27:55–00:28:28). Monday's schedule has to be all Passover.
 - Take the pools from the St. Regis hotel website (link sent in Fiverr), the same way the rooms were taken. Every pool has its **own pictures** (P1 00:24:33).

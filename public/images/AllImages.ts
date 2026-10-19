@@ -520,6 +520,11 @@ import waldorfWebWaldorfAstoriaCancun203OceanFrontKingBedGuestroomK1rp from "./m
 import waldorfWebWaldorfAstoriaCancun109PoolViewSwimUpKingGuestroomK1lvo from "./mainDesign/waldorf-web-waldorf-astoria-cancun-109-pool-view-swim-up-king-guestroom-k1lvo.webp";
 import waldorfWebWaldorfAstoriaCancunMasterCornerSuiteSwimUp1 from "./mainDesign/waldorf-web-waldorf-astoria-cancun-master-corner-suite-swim-up-1.webp";
 import waldorfWeb108PoolViewSwimUp2QueenBedGuestroomQ2lvo from "./mainDesign/waldorf-web-108-pool-view-swim-up-2-queen-bed-guestroom-q2lvo.webp";
+import stregisMarriottPoolCabanas from "./mainDesign/stregis-marriott-pool-cabanas.webp";
+import stregisMarriottPoolFamilyPool from "./mainDesign/stregis-marriott-pool-family-pool.webp";
+import stregisMarriottPoolSerenityPool from "./mainDesign/stregis-marriott-pool-serenity-pool.webp";
+import stregisMarriottPoolMainPool from "./mainDesign/stregis-marriott-pool-main-pool.webp";
+import stregisMarriottPoolWhirlpool from "./mainDesign/stregis-marriott-pool-whirlpool.webp";
 
 export const AllImages = {
   logo,
@@ -1094,6 +1099,11 @@ export const AllImages = {
   waldorfWebWaldorfAstoriaCancun109PoolViewSwimUpKingGuestroomK1lvo,
   waldorfWebWaldorfAstoriaCancunMasterCornerSuiteSwimUp1,
   waldorfWeb108PoolViewSwimUp2QueenBedGuestroomQ2lvo,
+  stregisMarriottPoolCabanas,
+  stregisMarriottPoolFamilyPool,
+  stregisMarriottPoolSerenityPool,
+  stregisMarriottPoolMainPool,
+  stregisMarriottPoolWhirlpool,
 };
 
 
