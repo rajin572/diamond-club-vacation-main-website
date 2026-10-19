@@ -503,6 +503,23 @@ import dcvDiningKitchen from "./mainDesign/dcv-dining-kitchen.jpg";
 import kosherSupervisionRabbi from "./kosher-supervision-rabbi.jpg";
 import rabbiLawrenceHajioffFace from "./rabbi-lawrence-hajioff-face.jpg";
 import rabbiLawrenceHajioffNew from "./rabbi-lawrence-hajioff-new.jpg";
+import waldorfWeb610DeluxeOceanFrontSuiteWithKingBedK1rvp11 from "./mainDesign/waldorf-web-610-deluxe-ocean-front-suite-with-king-bed-k1rvp1-1.webp";
+import waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4 from "./mainDesign/waldorf-web-634-deluxe-ocean-front-king-guestroom-k1rv-4.webp";
+import waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx14 from "./mainDesign/waldorf-web-628-ocean-front-suite-with-king-size-bed-k1rvx1-4.webp";
+import waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv2 from "./mainDesign/waldorf-web-633-deluxe-ocean-front-two-queen-beds-guestroom-q2rv-2.webp";
+import waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv2 from "./mainDesign/waldorf-web-634-deluxe-ocean-front-king-guestroom-k1rv-2.webp";
+import waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv1 from "./mainDesign/waldorf-web-634-deluxe-ocean-front-king-guestroom-k1rv-1.webp";
+import waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv1 from "./mainDesign/waldorf-web-633-deluxe-ocean-front-two-queen-beds-guestroom-q2rv-1.webp";
+import waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx12 from "./mainDesign/waldorf-web-628-ocean-front-suite-with-king-size-bed-k1rvx1-2.webp";
+import waldorfWebWaldorfAstoriaCancunMaster602c from "./mainDesign/waldorf-web-waldorf-astoria-cancun-master602c.webp";
+import waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv from "./mainDesign/waldorf-web-634-deluxe-ocean-front-king-guestroom-k1rv.webp";
+import waldorfWebWaldorfAstoriaCunHab602 from "./mainDesign/waldorf-web-waldorf-astoria-cun-hab-602.webp";
+import waldorfWebWaldorfAstoriaCunPresidential06 from "./mainDesign/waldorf-web-waldorf-astoria-cun-presidential-06.webp";
+import waldorfWebWaldorfAstoriaCancunAda from "./mainDesign/waldorf-web-waldorf-astoria-cancun-ada.webp";
+import waldorfWebWaldorfAstoriaCancun203OceanFrontKingBedGuestroomK1rp from "./mainDesign/waldorf-web-waldorf-astoria-cancun-203-ocean-front-king-bed-guestroom-k1rp.webp";
+import waldorfWebWaldorfAstoriaCancun109PoolViewSwimUpKingGuestroomK1lvo from "./mainDesign/waldorf-web-waldorf-astoria-cancun-109-pool-view-swim-up-king-guestroom-k1lvo.webp";
+import waldorfWebWaldorfAstoriaCancunMasterCornerSuiteSwimUp1 from "./mainDesign/waldorf-web-waldorf-astoria-cancun-master-corner-suite-swim-up-1.webp";
+import waldorfWeb108PoolViewSwimUp2QueenBedGuestroomQ2lvo from "./mainDesign/waldorf-web-108-pool-view-swim-up-2-queen-bed-guestroom-q2lvo.webp";
 
 export const AllImages = {
   logo,
@@ -1060,6 +1077,23 @@ export const AllImages = {
     waldorfRoomDetail: [waldorfRoomDetail1, waldorfRoomDetail2, waldorfRoomDetail3, waldorfRoomDetail4, waldorfRoomDetail5, waldorfRoomDetail6, waldorfRoomDetail7, waldorfRoomDetail8, waldorfRoomDetail9, waldorfRoomDetail10, waldorfRoomDetail11],
     waldorfRooms: [waldorfRooms1, waldorfRooms2, waldorfRooms3, waldorfRooms4],
   },
+  waldorfWeb610DeluxeOceanFrontSuiteWithKingBedK1rvp11,
+  waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4,
+  waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx14,
+  waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv2,
+  waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv2,
+  waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv1,
+  waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv1,
+  waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx12,
+  waldorfWebWaldorfAstoriaCancunMaster602c,
+  waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv,
+  waldorfWebWaldorfAstoriaCunHab602,
+  waldorfWebWaldorfAstoriaCunPresidential06,
+  waldorfWebWaldorfAstoriaCancunAda,
+  waldorfWebWaldorfAstoriaCancun203OceanFrontKingBedGuestroomK1rp,
+  waldorfWebWaldorfAstoriaCancun109PoolViewSwimUpKingGuestroomK1lvo,
+  waldorfWebWaldorfAstoriaCancunMasterCornerSuiteSwimUp1,
+  waldorfWeb108PoolViewSwimUp2QueenBedGuestroomQ2lvo,
 };
 
 

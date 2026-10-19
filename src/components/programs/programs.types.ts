@@ -80,6 +80,17 @@ export interface ProgramData {
   about: ProgramAboutData;
   sections: ProgramSection[];
   keywords?: string[];
+  /** Shown as a Brochure button on the program page and on each of its hotel pages. */
+  brochure?: ProgramBrochure;
+}
+
+/** The program's own brochure (each program has a different one). */
+export interface ProgramBrochure {
+  /** Heading of the viewer pop-up. */
+  title: string;
+  /** The PDF, served from /public. */
+  pdfHref: string;
+  downloadName: string;
 }
 
 /** A program as listed on its offering page. */

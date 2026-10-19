@@ -1,6 +1,7 @@
 import { DesignCard, DetailHero, SectionTitle, Wrap } from "@/components/shared/design";
 import { resortHref } from "@/lib/routes";
 import { ProgramAbout } from "./ProgramExtras";
+import { ProgramBrochureButton } from "./ProgramBrochureButton";
 import type { ProgramData } from "./programs.types";
 
 interface ProgramMainViewProps {
@@ -17,7 +18,13 @@ export function ProgramMainView({ offeringId, data }: ProgramMainViewProps) {
 
   return (
     <>
-      <DetailHero image={data.heroImage} kicker={data.kicker} title={data.title} subtitle={data.tagline} />
+      <DetailHero
+        image={data.heroImage}
+        kicker={data.kicker}
+        title={data.title}
+        subtitle={data.tagline}
+        actions={data.brochure ? <ProgramBrochureButton brochure={data.brochure} /> : undefined}
+      />
       <Wrap>
         <SectionTitle title={hotels.title} />
         <div className={hotels.columns === 1 ? "dcv-grid1" : "dcv-grid2"}>

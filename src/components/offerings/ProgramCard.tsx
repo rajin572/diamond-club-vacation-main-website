@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { CardLogos } from "@/components/shared/design";
+import { formatProgramTitle, plainProgramTitle } from "@/lib/program-title";
 import type { ProgramSummary } from "@/components/programs/programs.types";
 
 /**
@@ -16,13 +17,13 @@ export function ProgramCard({ program }: { program: ProgramSummary }) {
         {program.logos && <CardLogos logos={program.logos} />}
       </div>
       <div className="dcv-body">
-        <h3>{program.title}</h3>
+        <h3>{formatProgramTitle(program.title)}</h3>
         <p>{program.subtitle}</p>
         <div className="dcv-card-location">
           <MapPin size={16} aria-hidden="true" />
           {program.location}
         </div>
-        <Link className="dcv-link" href={program.href} aria-label={`${program.title}: ${program.subtitle}. Explore`}>
+        <Link className="dcv-link" href={program.href} aria-label={`${plainProgramTitle(program.title)}: ${program.subtitle}. Explore`}>
           Explore →
         </Link>
       </div>

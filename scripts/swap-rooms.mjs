@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Swaps which room list the Edition and St. Regis pages show.
+ * Swaps which room list the Edition, St. Regis and Waldorf Astoria pages show.
  *
  * Each hotel data file keeps several room lists as blocks between
  *   // @rooms:begin <name> | <description>
@@ -10,8 +10,8 @@
  *
  * Usage (from the project root):
  *   npm run rooms -- status                  show which list is on in each hotel
- *   npm run rooms -- client                  the client's website lists: Edition 6 rooms + St. Regis 3 rooms
- *   npm run rooms -- full                    the long lists: Edition 19 rooms (Marriott) + St. Regis 15 rooms
+ *   npm run rooms -- client                  the client's website lists: Edition 6 rooms + St. Regis 3 rooms + Waldorf original 4 rooms
+ *   npm run rooms -- full                    the long lists: Edition 19 rooms (Marriott) + St. Regis 15 rooms + Waldorf 15 rooms (Hilton)
  *   npm run rooms -- edition=editionhotels   one hotel only (names are printed by "status")
  *   npm run rooms -- edition=client st-regis=hotel-site
  *   npm run rooms -- dining=client           the dining list of both hotels (client = client's restaurants, hotel-site = stregiskanairesort.com)
@@ -24,10 +24,11 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const FILES = {
   edition: "src/data/resorts/edition.data.ts",
   "st-regis": "src/data/resorts/st-regis.data.ts",
+  waldorf: "src/data/resorts/waldorf-astoria.data.ts",
 };
 const PRESETS = {
-  client: { edition: "client", "st-regis": "client" },
-  full: { edition: "marriott", "st-regis": "hotel-site" },
+  client: { edition: "client", "st-regis": "client", waldorf: "original" },
+  full: { edition: "marriott", "st-regis": "hotel-site", waldorf: "hotel-site" },
 };
 
 const DINING_FILE = "src/data/resorts/reserve-dining.data.ts";
@@ -145,10 +146,10 @@ function main(args) {
   const plan = {};
   for (const arg of args) {
     if (PRESETS[arg]) Object.assign(plan, PRESETS[arg]);
-    else if (/^(edition|st-regis|dining)=/.test(arg)) {
+    else if (/^(edition|st-regis|waldorf|dining)=/.test(arg)) {
       const [hotel, name] = arg.split("=");
       plan[hotel] = name;
-    } else throw new Error(`Unknown argument "${arg}". Try: status | client | full | edition=<list> | st-regis=<list> | dining=<list>`);
+    } else throw new Error(`Unknown argument "${arg}". Try: status | client | full | edition=<list> | st-regis=<list> | waldorf=<list> | dining=<list>`);
   }
   for (const [hotel, target] of Object.entries(plan)) {
     if (hotel === "dining") setDining(target);

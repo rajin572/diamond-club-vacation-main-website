@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PRIMARY_NAV } from "./nav.data";
 import { MobileMenu } from "./MobileMenu";
-import { BrochureModal } from "./BrochureModal";
 import { getInquireContext } from "@/lib/inquire-context";
 import { inquireHref } from "@/lib/routes";
 import { AllImages } from "../../../public/images/AllImages";
@@ -16,9 +15,8 @@ function subscribeToLocation(onChange: () => void) {
   return () => window.removeEventListener("popstate", onChange);
 }
 
-/** Announcement bar + sticky header with updated left brand mark, brochure modal, and context-aware action button. */
+/** Announcement bar + sticky header with the brand mark and the context-aware action button (the Brochure buttons live on the program pages). */
 export function Navbar() {
-  const [brochureOpen, setBrochureOpen] = useState(false);
   const pathname = usePathname();
   // Read the query string without useSearchParams, which would force a Suspense boundary around the whole header.
   const search = useSyncExternalStore(subscribeToLocation, () => window.location.search, () => "");
@@ -51,17 +49,6 @@ export function Navbar() {
           </Link>
 
           <nav className="dcv-navlinks" aria-label="Primary">
-            {/* Brochure button added before Passover, with blinking animation, opens PDF modal */}
-            <button
-              type="button"
-              className="dcv-nav-brochure"
-              onClick={() => setBrochureOpen(true)}
-              aria-label="Open brochure with download option"
-            >
-              <span className="dcv-brochure-pulse-dot" aria-hidden="true" />
-              <span>Brochure</span>
-            </button>
-
             {PRIMARY_NAV.map((link) => (
               <Link key={link.href} href={link.href}>
                 {link.label}
@@ -77,13 +64,10 @@ export function Navbar() {
           <MobileMenu
             links={PRIMARY_NAV}
             inquire={{ label: actionLabel, href: actionHref }}
-            onOpenBrochure={() => setBrochureOpen(true)}
             isPassoverPage={Boolean(inquiry)}
           />
         </div>
       </header>
-
-      <BrochureModal open={brochureOpen} onClose={() => setBrochureOpen(false)} />
     </>
   );
 }

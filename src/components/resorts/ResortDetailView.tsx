@@ -1,5 +1,5 @@
+import Link from "next/link";
 import {
-  DesignButton,
   DetailHero,
   FeatureGroup,
   PhotoGallery,
@@ -10,8 +10,8 @@ import {
   Wrap,
 } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
-import { inquireHref, resortHref } from "@/lib/routes";
 import { buildHotelSubNav } from "@/lib/hotel-subnav";
+import { diningHref, resortHref } from "@/lib/routes";
 import type { ResortData, ResortDetailItem } from "./resorts.types";
 
 export type ResortDetailKind = "room" | "restaurant" | "pool" | "spa";
@@ -22,14 +22,13 @@ interface KindConfig {
   /** Section of the resort page this kind of detail page belongs to. */
   section: "rooms" | "dining" | "pools" | "wellness";
   sectionLabel: string;
-  inquireLabel: string;
 }
 
 const KIND: Record<ResortDetailKind, KindConfig> = {
-  room: { aboutTitle: "About this room", asideTitle: "Room Gallery", section: "rooms", sectionLabel: "All Rooms", inquireLabel: "Inquire about this room" },
-  restaurant: { aboutTitle: "About this restaurant", asideTitle: "Gallery", section: "dining", sectionLabel: "Dining", inquireLabel: "Inquire about dining" },
-  pool: { aboutTitle: "About this pool", asideTitle: "Gallery", section: "pools", sectionLabel: "Pools & Beach", inquireLabel: "Inquire about this pool" },
-  spa: { aboutTitle: "About the spa", asideTitle: "Spa Gallery", section: "wellness", sectionLabel: "Wellness", inquireLabel: "Inquire about the spa" },
+  room: { aboutTitle: "About this room", asideTitle: "Room Gallery", section: "rooms", sectionLabel: "All Rooms" },
+  restaurant: { aboutTitle: "About this restaurant", asideTitle: "Gallery", section: "dining", sectionLabel: "Dining" },
+  pool: { aboutTitle: "About this pool", asideTitle: "Gallery", section: "pools", sectionLabel: "Pools & Beach" },
+  spa: { aboutTitle: "About the spa", asideTitle: "Spa Gallery", section: "wellness", sectionLabel: "Wellness" },
 };
 
 interface ResortDetailViewProps {
@@ -47,21 +46,15 @@ interface ResortDetailViewProps {
 export function ResortDetailView({ offeringId, programId, data, item, kind }: ResortDetailViewProps) {
   const config = KIND[kind];
 
-  const inquire =
-    kind === "room"
-      ? inquireHref({ destination: programId, resort: data.resortId, room: item.id })
-      : kind === "restaurant"
-        ? inquireHref({ destination: programId, resort: data.resortId, dining: item.id })
-        : kind === "pool"
-          ? inquireHref({ destination: programId, resort: data.resortId, pool: item.id })
-          : inquireHref({ destination: programId, resort: data.resortId, topic: "spa" });
-
   const navItems: DesignLink[] = buildHotelSubNav({
     offeringId,
     programId,
     resortId: data.resortId,
     isHotelMainPage: false,
   });
+
+  // Back to the list this page was opened from, so the visitor lands on the same section, not at the top of the hotel page.
+  const backHref = kind === "restaurant" ? diningHref(offeringId, programId, data.resortId) : `${resortHref(offeringId, programId, data.resortId)}#${config.section}`;
 
   const heroImage = item.gallery[0] ?? item.image;
   const stats = (item.stats ?? []).slice(0, 4);
@@ -72,6 +65,11 @@ export function ResortDetailView({ offeringId, programId, data, item, kind }: Re
       <SubNav items={navItems} label={`${data.resortName} sections`} />
 
       <Wrap>
+        <p style={{ margin: "0 0 18px" }}>
+          <Link className="dcv-link" href={backHref}>
+            ← Back to {config.sectionLabel}
+          </Link>
+        </p>
         <StatsRow stats={stats} />
         <div className="dcv-content2">
           <div>
@@ -84,9 +82,6 @@ export function ResortDetailView({ offeringId, programId, data, item, kind }: Re
           <aside>
             <h2>{config.asideTitle}</h2>
             <PhotoStack images={item.gallery} alt={`${item.title} at ${data.resortName}`} />
-            <p style={{ margin: "16px 0 0" }}>
-              <DesignButton href={inquire}>{config.inquireLabel}</DesignButton>
-            </p>
           </aside>
         </div>
       </Wrap>

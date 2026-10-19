@@ -8,6 +8,11 @@ export const GUTTAWAY_DATA: ProgramData = {
   kicker: "Passover 2027",
   tagline: "Elevated Pesach for the Heimish Family",
   heroImage: AllImages.guettawayMain1,
+  brochure: {
+    title: "GUETTAWAY Brochure",
+    pdfHref: "/brochures/guettaway.pdf",
+    downloadName: "Guettaway-Pesach-2027-Brochure.pdf",
+  },
   card: {
     subtitle: "Elevated Pesach for the Heimish Family",
     location: "THE RIVIERA MAYA, AMAI",
@@ -59,7 +64,7 @@ export const GUTTAWAY_DATA: ProgramData = {
   },
   sections: [
     {
-      title: "Programs",
+      title: "Program",
       blocks: [
         {
           columns: 3,

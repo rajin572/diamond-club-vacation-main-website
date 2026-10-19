@@ -5,6 +5,14 @@ import Image from "next/image";
 import { X, ShieldCheck } from "lucide-react";
 import { AllImages } from "../../../public/images/AllImages";
 
+/**
+ * Client request 2026-10-19 for the Diamond Club Reserve Kosher Supervision pop-up: the rabbi's picture comes out (a nicer picture on a
+ * background will be supplied) and the "Food To Perfection" text (catering / chef) is not part of it: only the Kosher Supervision text stays.
+ * Both are kept, switched off, so they can be turned back on.
+ */
+const SHOW_RESERVE_RABBI_PORTRAIT = false;
+const SHOW_RESERVE_FOOD_TO_PERFECTION = false;
+
 interface DiningModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -122,6 +130,7 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
             </div>
 
             <div className="dcv-brochure-preview-wrap" data-lenis-prevent>
+              {SHOW_RESERVE_RABBI_PORTRAIT && (
               <div className="dcv-dining-modal-portrait-wrap">
                 <Image
                   src={AllImages.kosherSupervisionRabbi}
@@ -131,8 +140,11 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
                   priority
                 />
               </div>
+              )}
 
               <div className="dcv-dining-modal-bio">
+                {SHOW_RESERVE_FOOD_TO_PERFECTION && (
+                  <>
                 <h3>Food To Perfection</h3>
                 <p>
                   For over a decade the Diamond Club Vacations Team has been organizing Passover programs at luxury resorts, our dedication to offering the best in kosher vacations has been enjoyed by hundreds of families and thousands of guests from all over the world. our dedicated team welcomes the opportunity and is looking forward to serving you once again for Passover 2025 in Kanai.
@@ -143,6 +155,8 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
                 <p>
                   Our culinary team as well as our popular in house pastry team is a collection of the most professional world class gourmet chefs in the kosher food industry, with years of experience working with the leading catering companies, on Pesach and year-round.
                 </p>
+                  </>
+                )}
 
                 <h3>Kosher Supervision</h3>
                 <p>

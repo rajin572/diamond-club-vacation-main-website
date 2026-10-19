@@ -8,6 +8,11 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
   kicker: "Passover 2027",
   tagline: "The Riviera Maya, Kanai · our most exclusive Passover experience",
   heroImage: AllImages.reserveIntro1,
+  brochure: {
+    title: "Diamond Club Reserve Brochure",
+    pdfHref: "/brochure.pdf",
+    downloadName: "Diamond-Club-Reserve-Passover-2027-Brochure.pdf",
+  },
   card: {
     subtitle: "Our most exclusive Passover experience",
     location: "THE RIVIERA MAYA, KANAI",
@@ -58,7 +63,7 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
   },
   sections: [
     {
-      title: "Programs",
+      title: "Program",
       blocks: [
         {
           columns: 3,

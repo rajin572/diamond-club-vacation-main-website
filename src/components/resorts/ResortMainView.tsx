@@ -12,6 +12,7 @@ import type { DesignLink } from "@/components/shared/design";
 import { experienceHref, inquireHref, restaurantHref, poolHref, roomHref, spaHref } from "@/lib/routes";
 import { buildHotelSubNav } from "@/lib/hotel-subnav";
 import { ProgramSections, programSectionId } from "@/components/programs/ProgramExtras";
+import { ProgramBrochureButton } from "@/components/programs/ProgramBrochureButton";
 import { ResortDiningCards } from "./ResortDiningSection";
 import type { ProgramData } from "@/components/programs/programs.types";
 import type { ResortCategoryCard, ResortData, ResortDetailItem, ResortTarget } from "./resorts.types";
@@ -94,6 +95,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
         title={data.resortName}
         subtitle={data.showTagline === false ? undefined : data.tagline}
         logo={data.heroLogo ? { ...data.heroLogo, wordmark: true } : undefined}
+        actions={program?.brochure ? <ProgramBrochureButton brochure={program.brochure} /> : undefined}
       />
       <SubNav items={navItems} label={`${data.resortName} sections`} />
 

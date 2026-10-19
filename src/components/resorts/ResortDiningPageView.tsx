@@ -19,6 +19,13 @@ import type { ResortData } from "./resorts.types";
 import { hasDetailPage } from "./resort-items";
 import { KosherSupervisionModal, CelebrityChefsModal } from "./DiningModals";
 
+/**
+ * Client request 2026-10-19: the Kosher Supervision / Chef cards ("Passover Culinary Program") and the inquiry block belong
+ * to the hotel page, not the Dining page, which lists only the restaurants. Kept here, switched off, so they can be turned back on.
+ */
+const SHOW_CULINARY_PROGRAM_ON_DINING_PAGE = false;
+const SHOW_DINING_INQUIRY_ON_DINING_PAGE = false;
+
 interface ResortDiningPageViewProps {
   offeringId: string;
   programId: string;
@@ -70,6 +77,7 @@ export function ResortDiningPageView({
       <SubNav items={navItems} label={`${data.resortName} sections`} />
 
       {/* SECTION 1: Culinary Overview & Interactive Modals */}
+      {SHOW_CULINARY_PROGRAM_ON_DINING_PAGE && (
       <Wrap className="dcv-wrap--stack">
         <SectionTitle
           title="Passover Culinary Program"
@@ -140,6 +148,7 @@ export function ResortDiningPageView({
           </article>
         </div>
       </Wrap>
+      )}
 
       {/* SECTION 2: Complete Passover Restaurant Venues Grid */}
       {dining && dining.items.length > 0 && (
@@ -251,6 +260,7 @@ export function ResortDiningPageView({
       )}
 
       {/* SECTION 5: Inquire / Reservations CTA */}
+      {SHOW_DINING_INQUIRY_ON_DINING_PAGE && (
       <Wrap className="dcv-wrap--stack">
         <div
           style={{
@@ -290,6 +300,7 @@ export function ResortDiningPageView({
           </div>
         </div>
       </Wrap>
+      )}
 
       {/* Modals */}
       <KosherSupervisionModal

@@ -96,7 +96,7 @@ export function ProgramSections({ offeringId, programId, sections, resortId }: P
     <>
       {sections.map((section) => {
         const secId = programSectionId(section.title);
-        const isExp = secId === "experiences" || secId === "programs";
+        const isExp = secId === "experiences" || secId === "programs" || secId === "program";
         const isExplore = secId === "explore" || secId === "local-attractions";
         const mainId = isExp ? "experiences" : isExplore ? "explore" : secId;
 

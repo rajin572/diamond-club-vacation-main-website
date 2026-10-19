@@ -1,14 +1,27 @@
 "use client";
 
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Download, ExternalLink, X } from "lucide-react";
 
 interface BrochureModalProps {
   open: boolean;
   onClose: () => void;
+  /** The PDF to show; every program has its own brochure. */
+  pdfHref?: string;
+  /** Heading of the pop-up, e.g. "GUETTAWAY Brochure". */
+  title?: string;
+  /** File name offered by the Download button. */
+  downloadName?: string;
 }
 
-export function BrochureModal({ open, onClose }: BrochureModalProps) {
+export function BrochureModal({
+  open,
+  onClose,
+  pdfHref = "/brochure.pdf",
+  title = "Passover 2027 Brochure",
+  downloadName = "Diamond-Club-Vacations-Passover-2027-Brochure.pdf",
+}: BrochureModalProps) {
   useEffect(() => {
     if (!open) return;
 
@@ -29,7 +42,8 @@ export function BrochureModal({ open, onClose }: BrochureModalProps) {
 
   if (!open) return null;
 
-  return (
+  // Portal to <body> so the sticky navbar / hero stacking contexts can never cover the modal.
+  return createPortal(
     <div
       className="dcv-brochure-overlay"
       role="dialog"
@@ -52,20 +66,20 @@ export function BrochureModal({ open, onClose }: BrochureModalProps) {
 
         <div className="dcv-brochure-header">
           <h2 id="brochure-modal-title" className="dcv-brochure-title">
-            Passover 2027 Brochure
+            {title}
           </h2>
 
           <div className="dcv-brochure-actions">
             <a
-              href="/brochure.pdf"
-              download="Diamond-Club-Vacations-Passover-2027-Brochure.pdf"
+              href={pdfHref}
+              download={downloadName}
               className="dcv-btn dcv-brochure-dl-btn"
             >
               <Download size={16} />
               <span>Download PDF</span>
             </a>
             <a
-              href="/brochure.pdf"
+              href={pdfHref}
               target="_blank"
               rel="noopener noreferrer"
               className="dcv-btn dcv-btn--ghost dcv-brochure-view-btn"
@@ -79,14 +93,15 @@ export function BrochureModal({ open, onClose }: BrochureModalProps) {
         <div className="dcv-brochure-preview-wrap">
           <div className="dcv-brochure-frame-container">
             <iframe
-              src="/brochure.pdf#view=FitH"
-              title="Diamond Club Vacations Passover 2027 Brochure"
+              src={`${pdfHref}#view=FitH`}
+              title={title}
               className="dcv-brochure-iframe"
             />
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }
 

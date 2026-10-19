@@ -2450,12 +2450,15 @@ button.dcv-link {
   gap: 24px;
 }
 
+/* Client request 2026-10-19: the Dining picture is a bigger box in the middle, not a long strip across the page. */
 .dcv-dining-top-card {
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .dcv-dining-top-card img {
-  height: 340px !important;
+  height: 460px !important;
   width: 100%;
   object-fit: cover;
 }
@@ -2642,4 +2645,27 @@ button.dcv-link {
   color: #9a6b1d;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+/* Buttons under a hero title (the program's Brochure button). */
+.dcv-hero-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+.dcv-brochure-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border: 0;
+}
+/* Second line of the Guettaway title: "A Diamond Club Production". */
+.dcv-title-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.42em;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
 }

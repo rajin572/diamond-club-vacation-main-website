@@ -3,18 +3,17 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, FileText } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import type { DesignLink } from "./design/types";
 
 interface MobileMenuProps {
   links: DesignLink[];
   inquire: DesignLink;
-  onOpenBrochure?: () => void;
   isPassoverPage?: boolean;
 }
 
 /** Hamburger + dropdown shown below 900px, where the client's design hides the link row. */
-export function MobileMenu({ links, inquire, onOpenBrochure, isPassoverPage }: MobileMenuProps) {
+export function MobileMenu({ links, inquire, isPassoverPage }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -41,20 +40,6 @@ export function MobileMenu({ links, inquire, onOpenBrochure, isPassoverPage }: M
       </button>
       {open && (
         <nav id="dcv-mobile-menu" className="dcv-mobile-menu" aria-label="Mobile">
-          {/* Brochure button placed before Passover */}
-          <button
-            type="button"
-            className="dcv-mobile-brochure-link"
-            onClick={() => {
-              setOpen(false);
-              onOpenBrochure?.();
-            }}
-          >
-            <span className="dcv-brochure-pulse-dot" aria-hidden="true" />
-            <FileText size={16} />
-            <span>Brochure</span>
-          </button>
-
           {links.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}

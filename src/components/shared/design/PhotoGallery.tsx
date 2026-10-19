@@ -9,6 +9,8 @@ const MIN_SCALE = 1;
 const MAX_SCALE = 5;
 const TAP_ZOOM = 2.5;
 const BUTTON_STEP = 1.5;
+/** Sideways distance (px) that counts as a swipe to the next / previous photo. */
+const SWIPE_DISTANCE = 50;
 
 interface View {
   scale: number;
@@ -50,9 +52,10 @@ interface GestureState {
 /**
  * One photo with zoom: click/tap toggles 1x <-> 2.5x at the pointer, the mouse wheel and pinch zoom
  * continuously, drag pans, and the toolbar / + - 0 keys zoom about the centre. Remounted (via `key`)
- * for every photo so each one opens fitted to the screen.
+ * for every photo so each one opens fitted to the screen. A quick sideways swipe on a fitted photo (phones)
+ * calls  to go to the next / previous photo.
  */
-function ZoomStage({ image, label }: { image: DesignImage; label: string }) {
+function ZoomStage({ image, label, onSwipe }: { image: DesignImage; label: string; onSwipe?: (direction: "next" | "prev") => void }) {
   const stageRef = useRef<HTMLDivElement>(null);
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const gesture = useRef<GestureState | null>(null);
@@ -155,8 +158,12 @@ function ZoomStage({ image, label }: { image: DesignImage; label: string }) {
     if (!state) return;
 
     if (pointers.current.size === 0) {
+      const dx = event.clientX - state.startX;
+      const dy = event.clientY - state.startY;
+      const swiped = event.type === "pointerup" && !state.pinched && view.scale <= MIN_SCALE && Math.abs(dx) > SWIPE_DISTANCE && Math.abs(dx) > Math.abs(dy) * 1.5;
+      if (swiped) onSwipe?.(dx < 0 ? "next" : "prev");
       // A tap (no drag, no pinch) toggles zoom at the tapped point.
-      if (!state.moved && !state.pinched && event.type === "pointerup") {
+      if (!swiped && !state.moved && !state.pinched && event.type === "pointerup") {
         const rect = measure();
         const cx = event.clientX - rect.left - rect.width / 2;
         const cy = event.clientY - rect.top - rect.height / 2;
@@ -256,7 +263,12 @@ function Lightbox({ images, index, alt, onClose, onChange }: LightboxProps) {
       onClick={onClose}
     >
       <figure onClick={(event) => event.stopPropagation()}>
-        <ZoomStage key={index} image={images[index]} label={`${alt} ${index + 1}`} />
+        <ZoomStage
+          key={index}
+          image={images[index]}
+          label={`${alt} ${index + 1}`}
+          onSwipe={count > 1 ? (direction) => (direction === "next" ? next() : prev()) : undefined}
+        />
       </figure>
       <button type="button" className="dcv-lb-close" aria-label="Close" onClick={onClose}>
         ×

@@ -1,13 +1,12 @@
 import { CheckCheck } from "lucide-react";
-import { DesignButton, DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
+import { DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
-import { inquireHref } from "@/lib/routes";
 import type { KidsDayCampData } from "./experiences.types";
 
 interface KidsDayCampViewProps {
   data: KidsDayCampData;
   nav: DesignLink[];
-  /** The hotel the visitor came from; the inquiry is locked to it. */
+  /** The hotel the visitor came from. */
   resortId?: string;
 }
 
@@ -15,8 +14,7 @@ interface KidsDayCampViewProps {
  * The "Day Camp" page. Every block is optional so each program shows exactly what its content has:
  * overview, a checklist program, activities with the team, age groups, dining and babysitting.
  */
-export function KidsDayCampView({ data, nav, resortId }: KidsDayCampViewProps) {
-  const inquire = inquireHref({ destination: data.programId, resort: resortId, topic: "kids-day-camp" });
+export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
   const { overview, program, team, activities, ageGroups, dining, babysitting, comingSoon } = data;
 
   return (
@@ -133,7 +131,6 @@ export function KidsDayCampView({ data, nav, resortId }: KidsDayCampViewProps) {
                 <h2>{babysitting.title}</h2>
                 <p className="dcv-copy-text">{babysitting.description}</p>
                 <p className="dcv-copy-text">{babysitting.rateText}</p>
-                <DesignButton href={inquire}>Ask about babysitting</DesignButton>
               </aside>
             )}
           </div>

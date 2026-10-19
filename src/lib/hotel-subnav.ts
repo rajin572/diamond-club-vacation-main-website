@@ -1,6 +1,6 @@
 import type { DesignLink } from "@/components/shared/design";
 import { getResort } from "@/data/resorts/registry";
-import { diningHref, resortHref, spaHref } from "@/lib/routes";
+import { diningHref, programHref, resortHref, spaHref } from "@/lib/routes";
 
 interface BuildHotelSubNavOptions {
   offeringId: string;
@@ -11,8 +11,9 @@ interface BuildHotelSubNavOptions {
 
 /**
  * Builds the canonical hotel subnav bar matching the exact client specification:
+ * 0. Home (the program page with its hotels)
  * 1. Hotel Overview
- * 2. Programs
+ * 2. Program
  * 3. Local Attractions
  * 4. Rooms & Suites
  * 5. Dining
@@ -33,11 +34,16 @@ export function buildHotelSubNav({
 
   const links: DesignLink[] = [
     {
+      // Back to the program's hotel list, so another hotel of the program can be picked at once.
+      label: "Home",
+      href: programHref(offeringId, programId),
+    },
+    {
       label: resort?.overviewLabel ?? "Hotel Overview",
       href: isHotelMainPage ? "#overview" : hotelBase,
     },
     {
-      label: "Programs",
+      label: "Program",
       href: `${prefix}#experiences`,
     },
     {

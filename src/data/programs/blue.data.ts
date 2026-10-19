@@ -8,6 +8,11 @@ export const BLUE_DATA: ProgramData = {
   kicker: "Passover 2027",
   tagline: "Luxury made accessible.",
   heroImage: AllImages.casa2,
+  brochure: {
+    title: "Diamond Blue Brochure",
+    pdfHref: "/brochure.pdf",
+    downloadName: "Diamond-Blue-Passover-2027-Brochure.pdf",
+  },
   card: {
     subtitle: "Luxury made accessible",
     location: "CANCUN MEXICO",
@@ -48,7 +53,7 @@ export const BLUE_DATA: ProgramData = {
   },
   sections: [
     {
-      title: "Programs",
+      title: "Program",
       blocks: [
         {
           columns: 3,
