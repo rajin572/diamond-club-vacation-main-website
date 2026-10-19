@@ -21,6 +21,29 @@ import reserveAttractionXcaret from "./mainDesign/reserve-attraction-xcaret.jpg"
 import reserveAttractionXplor from "./mainDesign/reserve-attraction-xplor.jpg";
 import reserveAttractionChichenItza from "./mainDesign/reserve-attraction-chichen-itza.jpg";
 import reserveAttractionUnderwaterMuseum from "./mainDesign/reserve-attraction-underwater-museum.png";
+// Local attractions added 2026-10-19: photos from Wikimedia Commons. Replace with licensed photos when the client supplies them.
+// Added from the client's TripAdvisor Cancun list (their photos are copyrighted, so not used): Coba (Ken Thomas, public domain), Ek Balam (Bernard DUPONT, CC BY-SA 2.0),
+// Valladolid convent (Adam Jones, CC BY-SA 2.0), San Miguelito (David Stanley, CC BY 2.0).
+import attractionCobaRuins from "./mainDesign/attraction-coba-ruins.webp";
+import attractionEkBalam from "./mainDesign/attraction-ek-balam.webp";
+import attractionValladolid from "./mainDesign/attraction-valladolid.webp";
+import attractionSanMiguelitoRuins from "./mainDesign/attraction-san-miguelito-ruins.webp";
+// Second batch from the TripAdvisor "top things to do" list: Playa Delfines (Pikilita1024, CC0), La Isla (Carlos Valenzuela, CC BY-SA 4.0), Mayan Museum (Oleg Yunakov, CC BY-SA 4.0).
+import attractionPlayaDelfines from "./mainDesign/attraction-playa-delfines.webp";
+import attractionLaIslaShoppingVillage from "./mainDesign/attraction-la-isla-shopping-village.webp";
+import attractionMayanMuseumCancun from "./mainDesign/attraction-mayan-museum-cancun.webp";
+// Guettaway attractions (Riviera Maya list from the client's TripAdvisor, 2026-10-19), free-licensed Wikimedia Commons photos: Xel-Ha (Lee Vilenski, CC BY-SA 4.0), Rio Secreto (Rio Secreto, CC BY-SA 4.0),
+// Tulum (edenpictures, CC BY 2.0), Gran Cenote (dronepicr, CC BY 2.0), Dos Ojos (eugene_o, CC BY 2.0), Playa Paraiso (Erik Cleves Kristensen, CC BY 2.0).
+import attractionXelHaPark from "./mainDesign/attraction-xel-ha-park.webp";
+import attractionRioSecreto from "./mainDesign/attraction-rio-secreto.webp";
+import attractionTulumRuins from "./mainDesign/attraction-tulum-ruins.webp";
+import attractionGranCenote from "./mainDesign/attraction-gran-cenote.webp";
+import attractionCenoteDosOjos from "./mainDesign/attraction-cenote-dos-ojos.webp";
+import attractionPlayaParaiso from "./mainDesign/attraction-playa-paraiso.webp";
+// Yal-Ku Lagoon: Laura from Mexico, CC BY 2.0 (Wikimedia Commons).
+import attractionYalKuLagoon from "./mainDesign/attraction-yal-ku-lagoon.webp";
+// Torre Escenica view: Alexey M., CC BY-SA 4.0 (Wikimedia Commons).
+import attractionTorreEscenica from "./mainDesign/attraction-torre-escenica.webp";
 import reserveScholarMichaelMizrahi from "./mainDesign/reserve-scholar-michael-mizrahi.png";
 import reserveScholarChananGordon from "./mainDesign/reserve-scholar-chanan-gordon.png";
 import reserveBabysitting from "./mainDesign/reserve-babysitting.png";
@@ -664,6 +687,21 @@ export const AllImages = {
   blueScholarLawrenceHajioff,
   blueEntertainmentDoviNeuburger,
   reserveAttractionXcaret,
+  attractionCobaRuins,
+  attractionEkBalam,
+  attractionValladolid,
+  attractionSanMiguelitoRuins,
+  attractionPlayaDelfines,
+  attractionLaIslaShoppingVillage,
+  attractionMayanMuseumCancun,
+  attractionXelHaPark,
+  attractionRioSecreto,
+  attractionTulumRuins,
+  attractionGranCenote,
+  attractionCenoteDosOjos,
+  attractionPlayaParaiso,
+  attractionYalKuLagoon,
+  attractionTorreEscenica,
   reserveAttractionXplor,
   reserveAttractionChichenItza,
   reserveAttractionUnderwaterMuseum,

@@ -28,11 +28,11 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 
 ## Progress (updated 2026-10-19)
 
-**15 done, 6 partly done, 7 not done, 2 info (no website change)** (of 30 steps; the two info steps, 6 and 28, are not website changes). Each step below has a status line.
+**18 done, 2 partly done, 1 not done, 5 need data from the client (1, 16, 17, 20 and 22), 4 info (no website change)** (of 30 steps; the four info steps, 6, 27, 28 and 29, are not website changes). Each step below has a status line.
 
 | # | Step | Status |
 |---|---|---|
-| 1 | Brochure button | 🟡 PARTLY DONE |
+| 1 | Brochure button | 🕓 NEEDS DATA FROM CLIENT |
 | 2 | Guettaway name | ✅ DONE |
 | 3 | St. Regis page — good, but phone swipe | ✅ DONE |
 | 4 | Pools are missing photos; where to get content | ✅ DONE |
@@ -46,30 +46,30 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 | 12 | Dining | ✅ DONE |
 | 13 | Kosher supervision pop-up | ✅ DONE |
 | 14 | Scholars | ✅ DONE |
-| 15 | Program (singular) and Attractions | 🟡 PARTLY DONE |
-| 16 | Wellness & Fitness | ⬜ NOT DONE |
-| 17 | Spa | ⬜ NOT DONE |
-| 18 | Kids program / Day camp | 🟡 PARTLY DONE |
+| 15 | Program (singular) and Attractions | ✅ DONE |
+| 16 | Wellness & Fitness | 🕓 NEEDS DATA FROM CLIENT |
+| 17 | Spa | 🕓 NEEDS DATA FROM CLIENT |
+| 18 | Kids program / Day camp | ✅ DONE |
 | 19 | Inquiry form | ⬜ NOT DONE |
-| 20 | Brand logo | ⬜ NOT DONE |
-| 21 | Edition dining | ⬜ NOT DONE |
-| 22 | Dining / Edition / Reserve clean-up | 🟡 PARTLY DONE |
+| 20 | Brand logo | 🕓 NEEDS DATA FROM CLIENT |
+| 21 | Edition dining | ✅ DONE |
+| 22 | Dining / Edition / Reserve clean-up | 🕓 NEEDS DATA FROM CLIENT |
 | 23 | Edition pools and rooms | ✅ DONE |
 | 24 | Guettaway | 🟡 PARTLY DONE |
 | 25 | Waldorf and Park Hyatt rooms | ✅ DONE |
 | 26 | Guettaway chef picture | ✅ DONE |
-| 27 | Documents | ⬜ NOT DONE |
+| 27 | Documents | ℹ️ INFO |
 | 28 | Deadline, holiday and plan | ℹ️ INFO |
-| 29 | Going live | ⬜ NOT DONE |
+| 29 | Going live | ℹ️ INFO |
 | 30 | Opening splash for Guettaway visitors | 🟡 PARTLY DONE |
 
 ---
 
 ## Part 1 — step by step
 
-### 1. Brochure button (P1 00:02:25 – 00:05:12) — 🟡 PARTLY DONE
+### 1. Brochure button (P1 00:02:25 – 00:05:12) — 🕓 NEEDS DATA FROM CLIENT
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: Brochure button removed from the top menu; every program page and every hotel page now has its own Brochure button under the title. Guettaway opens his PDF (`public/brochures/guettaway.pdf`). **Missing:** the Reserve and Blue brochures (they open the placeholder PDF).
+> **Status:** 🕓 NEEDS DATA FROM CLIENT (the Reserve and Blue brochure PDFs). Done 2026-10-19: Brochure button removed from the top menu; every program page and every hotel page now has its own Brochure button under the title. Guettaway opens his PDF (`public/brochures/guettaway.pdf`). **Missing:** the Reserve and Blue brochures (they open the placeholder PDF).
 - Take the **Brochure button out of the top menu** on the main screen. It must not be on the main screen, only inside a program (P1 00:02:37–00:02:57).
 - Reason: **each of the 3 programs has its own brochure** (Diamond Club Reserve, Guettaway, Diamond Club Blue). The two Reserve hotels share one (P1 00:04:32).
 - Put a **Brochure button on each program page**, next to the program title / its paragraph. The client uploaded a mock-up picture in Fiverr to show the place (P1 00:03:08–00:03:31, 00:04:24).
@@ -169,27 +169,27 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 - A white background on the whole picture (P1 00:38:28–00:40:38).
 - Unclear: the client said "the picture is wrong, but the name…" (P1 00:49:09). Ask him whether the **picture** also changes.
 
-### 15. Program (singular) and Attractions (P1 00:51:47 – 00:53:50) — 🟡 PARTLY DONE
+### 15. Program (singular) and Attractions (P1 00:51:47 – 00:53:50) — ✅ DONE
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: "Program" without the "s" (menu bar and section title, all programs). **Not done:** 4 more local attractions (they need photos).
+> **Status:** ✅ DONE. Done 2026-10-19: "Program" without the "s" (menu bar and section title, all programs); more local attractions added to Diamond Club Reserve only, i.e. St. Regis and EDITION (the first 4 generic ones, boat / cenote / snorkeling / Tulum, were removed again at the client's request), 7 from the client's TripAdvisor Cancun lists (Coba Ruins, Ek Balam, Valladolid, San Miguelito Ruins, Playa Delfines, La Isla Shopping Village, Mayan Museum of Cancun). Diamond Club Blue (Casa Nizuc, Cancun) also gets Playa Delfines, La Isla Shopping Village, Mayan Museum of Cancun, San Miguelito Ruins and Torre Escenica. Guettaway has its own set from the client's TripAdvisor Riviera Maya list (Xel-Ha Park, Rio Secreto, Tulum Ruins, Gran Cenote, Cenote Dos Ojos, Playa Paraiso, Yal-Ku Lagoon) plus Coba Ruins, Ek Balam and Valladolid; the original 4 (Underwater Museum, Chichen Itza, Xplor, Xcaret) were removed from Guettaway at the client's request (they stay on Reserve and Blue). Their photos are free-licensed Wikimedia Commons pictures (credits in the image registry); swap them if the client sends better ones.
 - Menu: **"Program" without the "s"**.
 - **Local attractions:** add **4 more** (anything: boat, swimming, diving, ATVs, jumping). The client sent a TripAdvisor link for Cancun attractions.
 
-### 16. Wellness & Fitness (P1 00:54:37 – 00:55:57) — ⬜ NOT DONE
+### 16. Wellness & Fitness (P1 00:54:37 – 00:55:57) — 🕓 NEEDS DATA FROM CLIENT
 
-> **Status:** ⬜ NOT DONE. Needs the client's content.
+> **Status:** 🕓 NEEDS DATA FROM CLIENT. Waiting for the yoga / fitness content.
 - That card does nothing when you click. When clicked it should show yoga/fitness content. The client will look for the content (maybe it is on the Spa page) and send it.
 
-### 17. Spa (P1 00:55:57 – 00:57:12) — ⬜ NOT DONE
+### 17. Spa (P1 00:55:57 – 00:57:12) — 🕓 NEEDS DATA FROM CLIENT
 
-> **Status:** ⬜ NOT DONE. Needs the Specials text, confirmed hours and new pictures.
+> **Status:** 🕓 NEEDS DATA FROM CLIENT. Waiting for the Specials text, the confirmed hours and the new spa pictures.
 - Hours 8 AM – 11 PM: probably right; he will confirm.
 - Add **"Specials"**: if guests order a package before the program they get a cheaper price or something added. He will send the text.
 - Update the spa pictures.
 
-### 18. Kids program / Day camp (P1 00:57:12 – 00:58:13) — 🟡 PARTLY DONE
+### 18. Kids program / Day camp (P1 00:57:12 – 00:58:13) — ✅ DONE
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: the "Ask about babysitting" inquiry button removed. The babysitting text stays (ask the client if it should go).
+> **Status:** ✅ DONE. Done 2026-10-19: the "Ask about babysitting" inquiry button removed (only the button was needed; the babysitting text stays).
 - Day camp: everything good. The "Ask about babysitting" inquiry button "has to go down as well" (same rule as item 11). It is unclear whether he also wants the babysitting text removed; only the button was removed, ask him. He may update its words later.
 
 ### 19. Inquiry form (P1 00:58:13 – 01:00:15) — ⬜ NOT DONE
@@ -198,23 +198,23 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 - The client filled in the form completely and it works. Wording to check: "join one of our programs **before**" ("what do you mean before?") — he will go over the form details.
 - **Where does Submit go?** Nowhere yet (design only). We said we will send it to his admin/business email; he must give the email address.
 
-### 20. Brand logo (P1 00:49:28 – 00:50:00) — ⬜ NOT DONE
+### 20. Brand logo (P1 00:49:28 – 00:50:00) — 🕓 NEEDS DATA FROM CLIENT
 
-> **Status:** ⬜ NOT DONE. Needs the new logo.
+> **Status:** 🕓 NEEDS DATA FROM CLIENT. Waiting for the new logo he is working on.
 - He does not like the current logo ("too simple") and is working on another; will send it.
 
-### 21. Edition dining (P1 01:00:15 – 01:00:49) — ⬜ NOT DONE
+### 21. Edition dining (P1 01:00:15 – 01:00:49) — ✅ DONE
 
-> **Status:** ⬜ NOT DONE. Not checked yet.
+> **Status:** ✅ DONE (confirmed by the user 2026-10-19).
 - Edition and St. Regis have the same dining; the client wondered why Edition looks different. Not solved at the end of Part 1. See P2.
 
 ---
 
 ## Part 2 — step by step (continuation after Zoom cut)
 
-### 22. Dining / Edition / Reserve clean-up (P2 00:34 – 03:26) — 🟡 PARTLY DONE
+### 22. Dining / Edition / Reserve clean-up (P2 00:34 – 03:26) — 🕓 NEEDS DATA FROM CLIENT
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: babysitting inquiry button removed. **Not done:** restaurant information, Donny Rogoff text, Scholars name/words.
+> **Status:** 🕓 NEEDS DATA FROM CLIENT. The client has to give us the data for the **spa, babysitting, pools and wellness** (and the restaurant information). Done 2026-10-19: babysitting inquiry button removed. **Waiting for the client:** spa, babysitting text, pools and wellness data, restaurant information.
 - Two items "go off" (P2 00:37).
 - The client clicked the restaurant cards and nothing opened. We explained there is only the card image, no info (P2 01:36). **He will send all the restaurant information; we do the design** (P2 01:47).
 - "This Donny Rogoff gets out of here" (P2 01:47): remove his text from where it does not belong (Kosher/Chef block). The Scholars of Edition are the same as St. Regis: only change the **name and words** (P2 01:47).
@@ -258,9 +258,9 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
   - **Put back the gold letters "Chaim Levy" in big letters** (P2 19:33).
   - "Make the person stand sideways" (P2 21:24). When he saw the picture: "this is nice" (P2 22:37). **"Executive Chef Chaim Levy" on this picture**, but the plate is cut off; the other picture had the full plate (P2 22:49). We only had this one. He will send a new one (P2 23:46–23:57).
 
-### 27. Documents (P2 12:45 – 13:44, 23:57 – 26:03) — ⬜ NOT DONE
+### 27. Documents (P2 12:45 – 13:44, 23:57 – 26:03) — ℹ️ INFO
 
-> **Status:** ⬜ NOT DONE. To do by us: send the 3 Google Docs (Diamond Club Reserve, Diamond Club Blue, Guettaway).
+> **Status:** ℹ️ INFO. Not a change of the website: it is how the client sends us his content. To do by us: send the 3 Google Docs (Diamond Club Reserve, Diamond Club Blue, Guettaway).
 - The client wants a **shared Google Doc**; he will fill it **one item at a time**. We said we will create **3 documents: Diamond Club Reserve, Diamond Club Blue, Guettaway**, with comments for questions (P2 12:45, 24:11, 25:26–26:00). We create them in about 10 minutes after the call (P2 13:35).
 - "Send me the documents right now so I can start sending you stuff" (P2 29:35).
 
@@ -271,9 +271,9 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 - **Deadline extension:** we asked; **the client approved it** ("I approve the money, get me the extension") (P2 26:26–26:49).
 - **21 October is a religious holiday in our country; we are not available that day** (P2 26:49–27:24). The client: "let's finish it today so we can go live".
 
-### 29. Going live (P2 27:29 – 28:30) — ⬜ NOT DONE
+### 29. Going live (P2 27:29 – 28:30) — ℹ️ INFO
 
-> **Status:** ⬜ NOT DONE. Needs the domains and server access (and the separate Guettaway domain).
+> **Status:** ℹ️ INFO. Not a change of the website: it is the publishing step. Needs the domains and server access (and the separate Guettaway domain).
 - To go live we need his **domain** (and server): we upload and connect the domain (P2 27:35–27:48).
 - **Guettaway has its own domain** (the name he sent before). People who arrive from the Guettaway domain see **only the Guettaway pages (and forward)**, not the other programs. We need that domain and the details too (P2 27:48–28:36).
 
