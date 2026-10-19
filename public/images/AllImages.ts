@@ -552,6 +552,49 @@ import stregisMarriottPoolMainPool from "./mainDesign/stregis-marriott-pool-main
 import stregisMarriottPoolWhirlpool from "./mainDesign/stregis-marriott-pool-whirlpool.webp";
 import editionMarriottPoolSoolBeachClub from "./mainDesign/edition-marriott-pool-sool-beach-club.webp";
 import editionMarriottPoolMainPool from "./mainDesign/edition-marriott-pool-main-pool.webp";
+import parkHyattPoolPoolsAndCabanas from "./mainDesign/park-hyatt-pool-pools-and-cabanas.webp";
+import parkHyattSpaVelaraSpa from "./mainDesign/park-hyatt-spa-velara-spa.webp";
+import parkHyattDiningBeachGrillIkal from "./mainDesign/park-hyatt-dining-beach-grill-ikal.webp";
+import parkHyattDiningPatisserieMarketCafe from "./mainDesign/park-hyatt-dining-patisserie-market-cafe.webp";
+import parkHyattDiningNutreKitchen from "./mainDesign/park-hyatt-dining-nutre-kitchen.webp";
+import parkHyattDiningBrumaSignatureRestaurant from "./mainDesign/park-hyatt-dining-bruma-signature-restaurant.webp";
+import parkHyattWellnessFitnessCenter from "./mainDesign/park-hyatt-wellness-fitness-center.webp";
+import parkHyattWellnessChampionshipGolf from "./mainDesign/park-hyatt-wellness-championship-golf.webp";
+// Waldorf Astoria Riviera Maya: photos from the hotel's Hilton pages (dining, spa, things to do).
+import waldorfDiningMalpequeSunsetTerrace from "./mainDesign/waldorf-dining-malpeque-sunset-terrace.webp";
+import waldorfDiningMalpequeDish from "./mainDesign/waldorf-dining-malpeque-dish.webp";
+import waldorfDiningMalpequeTerrace from "./mainDesign/waldorf-dining-malpeque-terrace.webp";
+import waldorfDiningMalpequeFirepit from "./mainDesign/waldorf-dining-malpeque-firepit.webp";
+import waldorfDiningChayaRestaurant from "./mainDesign/waldorf-dining-chaya-restaurant.webp";
+import waldorfDiningChayaCrudito from "./mainDesign/waldorf-dining-chaya-crudito.webp";
+import waldorfDiningChayaBreakfast from "./mainDesign/waldorf-dining-chaya-breakfast.webp";
+import waldorfDiningJaoDining from "./mainDesign/waldorf-dining-jao-dining.webp";
+import waldorfDiningJaoTlayuda from "./mainDesign/waldorf-dining-jao-tlayuda.webp";
+import waldorfDiningJaoTerrace from "./mainDesign/waldorf-dining-jao-terrace.webp";
+import waldorfDiningPeacockAlleyDessert from "./mainDesign/waldorf-dining-peacock-alley-dessert.webp";
+import waldorfDiningPeacockAlleyLounge from "./mainDesign/waldorf-dining-peacock-alley-lounge.webp";
+import waldorfDiningPeacockAlleyBar from "./mainDesign/waldorf-dining-peacock-alley-bar.webp";
+import waldorfDiningPoolBarPool from "./mainDesign/waldorf-dining-pool-bar-pool.webp";
+import waldorfDiningPoolBarBbq from "./mainDesign/waldorf-dining-pool-bar-bbq.webp";
+import waldorfDiningPoolBarCocktails from "./mainDesign/waldorf-dining-pool-bar-cocktails.webp";
+import waldorfSpaHydrotherapyPool from "./mainDesign/waldorf-spa-hydrotherapy-pool.webp";
+import waldorfSpaSteamRitual from "./mainDesign/waldorf-spa-steam-ritual.webp";
+import waldorfSpaMassage from "./mainDesign/waldorf-spa-massage.webp";
+import waldorfSpaCouplesMassage from "./mainDesign/waldorf-spa-couples-massage.webp";
+import waldorfSpaFacial from "./mainDesign/waldorf-spa-facial.webp";
+import waldorfSpaRobesWalk from "./mainDesign/waldorf-spa-robes-walk.webp";
+import waldorfSpaWaterJet from "./mainDesign/waldorf-spa-water-jet.webp";
+import waldorfSpaRitual from "./mainDesign/waldorf-spa-ritual.webp";
+import waldorfSpaCopalOfferings from "./mainDesign/waldorf-spa-copal-offerings.webp";
+import waldorfSpaBeautySalon from "./mainDesign/waldorf-spa-beauty-salon.webp";
+import waldorfWellnessPaddleBoarding from "./mainDesign/waldorf-wellness-paddle-boarding.webp";
+import waldorfWellnessBeachYoga from "./mainDesign/waldorf-wellness-beach-yoga.webp";
+import waldorfWellnessGolfCarts from "./mainDesign/waldorf-wellness-golf-carts.webp";
+import waldorfWellnessGolfAerial from "./mainDesign/waldorf-wellness-golf-aerial.webp";
+import waldorfWellnessGolfCourse from "./mainDesign/waldorf-wellness-golf-course.webp";
+import waldorfWellnessTennisCourt from "./mainDesign/waldorf-wellness-tennis-court.webp";
+import waldorfWellnessYogaClass from "./mainDesign/waldorf-wellness-yoga-class.webp";
+import waldorfWellnessFitnessCenter from "./mainDesign/waldorf-wellness-fitness-center.webp";
 import reserveProgram2026N01 from "./mainDesign/reserve-program-2026-01.webp";
 import reserveProgram2026N02 from "./mainDesign/reserve-program-2026-02.webp";
 import reserveProgram2026N03 from "./mainDesign/reserve-program-2026-03.webp";
@@ -609,6 +652,14 @@ import guettawayProgram2026N14 from "./mainDesign/guettaway-program-2026-14.webp
 import guettawayProgram2026N15 from "./mainDesign/guettaway-program-2026-15.webp";
 import guettawayProgram2026N16 from "./mainDesign/guettaway-program-2026-16.webp";
 import guettawayProgram2026N17 from "./mainDesign/guettaway-program-2026-17.webp";
+import guettawayProgram2026N18 from "./mainDesign/guettaway-program-2026-18.webp";
+import guettawayProgram2026N19 from "./mainDesign/guettaway-program-2026-19.webp";
+import guettawayProgram2026N20 from "./mainDesign/guettaway-program-2026-20.webp";
+import guettawayProgram2026N21 from "./mainDesign/guettaway-program-2026-21.webp";
+import guettawayProgram2026N22 from "./mainDesign/guettaway-program-2026-22.webp";
+import guettawayProgram2026N23 from "./mainDesign/guettaway-program-2026-23.webp";
+import guettawayProgram2026N24 from "./mainDesign/guettaway-program-2026-24.webp";
+import guettawayProgram2026N25 from "./mainDesign/guettaway-program-2026-25.webp";
 import parkHyattRoomCanphP0007KingRoomInteriorView from "./mainDesign/park-hyatt-room-canph-p0007-king-room-interior-view.webp";
 import parkHyattRoomCanphP0009KingRoomSeatingArea from "./mainDesign/park-hyatt-room-canph-p0009-king-room-seating-area.webp";
 import parkHyattRoomCanphP0014KingRoomTableSeating from "./mainDesign/park-hyatt-room-canph-p0014-king-room-table-seating.webp";
@@ -1261,6 +1312,48 @@ export const AllImages = {
   stregisMarriottPoolSerenityPool,
   stregisMarriottPoolMainPool,
   stregisMarriottPoolWhirlpool,
+  parkHyattPoolPoolsAndCabanas,
+  parkHyattSpaVelaraSpa,
+  parkHyattDiningBeachGrillIkal,
+  parkHyattDiningPatisserieMarketCafe,
+  parkHyattDiningNutreKitchen,
+  parkHyattDiningBrumaSignatureRestaurant,
+  parkHyattWellnessFitnessCenter,
+  parkHyattWellnessChampionshipGolf,
+  waldorfDiningMalpequeSunsetTerrace,
+  waldorfDiningMalpequeDish,
+  waldorfDiningMalpequeTerrace,
+  waldorfDiningMalpequeFirepit,
+  waldorfDiningChayaRestaurant,
+  waldorfDiningChayaCrudito,
+  waldorfDiningChayaBreakfast,
+  waldorfDiningJaoDining,
+  waldorfDiningJaoTlayuda,
+  waldorfDiningJaoTerrace,
+  waldorfDiningPeacockAlleyDessert,
+  waldorfDiningPeacockAlleyLounge,
+  waldorfDiningPeacockAlleyBar,
+  waldorfDiningPoolBarPool,
+  waldorfDiningPoolBarBbq,
+  waldorfDiningPoolBarCocktails,
+  waldorfSpaHydrotherapyPool,
+  waldorfSpaSteamRitual,
+  waldorfSpaMassage,
+  waldorfSpaCouplesMassage,
+  waldorfSpaFacial,
+  waldorfSpaRobesWalk,
+  waldorfSpaWaterJet,
+  waldorfSpaRitual,
+  waldorfSpaCopalOfferings,
+  waldorfSpaBeautySalon,
+  waldorfWellnessPaddleBoarding,
+  waldorfWellnessBeachYoga,
+  waldorfWellnessGolfCarts,
+  waldorfWellnessGolfAerial,
+  waldorfWellnessGolfCourse,
+  waldorfWellnessTennisCourt,
+  waldorfWellnessYogaClass,
+  waldorfWellnessFitnessCenter,
   editionMarriottPoolSoolBeachClub,
   editionMarriottPoolMainPool,
   reserveProgram2026N01,
@@ -1320,6 +1413,14 @@ export const AllImages = {
   guettawayProgram2026N15,
   guettawayProgram2026N16,
   guettawayProgram2026N17,
+  guettawayProgram2026N18,
+  guettawayProgram2026N19,
+  guettawayProgram2026N20,
+  guettawayProgram2026N21,
+  guettawayProgram2026N22,
+  guettawayProgram2026N23,
+  guettawayProgram2026N24,
+  guettawayProgram2026N25,
   parkHyattRoomCanphP0007KingRoomInteriorView,
   parkHyattRoomCanphP0009KingRoomSeatingArea,
   parkHyattRoomCanphP0014KingRoomTableSeating,
