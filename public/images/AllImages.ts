@@ -525,6 +525,65 @@ import stregisMarriottPoolFamilyPool from "./mainDesign/stregis-marriott-pool-fa
 import stregisMarriottPoolSerenityPool from "./mainDesign/stregis-marriott-pool-serenity-pool.webp";
 import stregisMarriottPoolMainPool from "./mainDesign/stregis-marriott-pool-main-pool.webp";
 import stregisMarriottPoolWhirlpool from "./mainDesign/stregis-marriott-pool-whirlpool.webp";
+import editionMarriottPoolSoolBeachClub from "./mainDesign/edition-marriott-pool-sool-beach-club.webp";
+import editionMarriottPoolMainPool from "./mainDesign/edition-marriott-pool-main-pool.webp";
+import reserveProgram2026N01 from "./mainDesign/reserve-program-2026-01.webp";
+import reserveProgram2026N02 from "./mainDesign/reserve-program-2026-02.webp";
+import reserveProgram2026N03 from "./mainDesign/reserve-program-2026-03.webp";
+import reserveProgram2026N04 from "./mainDesign/reserve-program-2026-04.webp";
+import reserveProgram2026N05 from "./mainDesign/reserve-program-2026-05.webp";
+import reserveProgram2026N06 from "./mainDesign/reserve-program-2026-06.webp";
+import reserveProgram2026N07 from "./mainDesign/reserve-program-2026-07.webp";
+import reserveProgram2026N08 from "./mainDesign/reserve-program-2026-08.webp";
+import reserveProgram2026N09 from "./mainDesign/reserve-program-2026-09.webp";
+import reserveProgram2026N10 from "./mainDesign/reserve-program-2026-10.webp";
+import reserveProgram2026N11 from "./mainDesign/reserve-program-2026-11.webp";
+import reserveProgram2026N12 from "./mainDesign/reserve-program-2026-12.webp";
+import reserveProgram2026N13 from "./mainDesign/reserve-program-2026-13.webp";
+import reserveProgram2026N14 from "./mainDesign/reserve-program-2026-14.webp";
+import reserveProgram2026N15 from "./mainDesign/reserve-program-2026-15.webp";
+import reserveProgram2026N16 from "./mainDesign/reserve-program-2026-16.webp";
+import reserveProgram2026N17 from "./mainDesign/reserve-program-2026-17.webp";
+import reserveProgram2026N18 from "./mainDesign/reserve-program-2026-18.webp";
+import reserveProgram2026N19 from "./mainDesign/reserve-program-2026-19.webp";
+import reserveProgram2026N20 from "./mainDesign/reserve-program-2026-20.webp";
+import reserveProgram2026N21 from "./mainDesign/reserve-program-2026-21.webp";
+import reserveProgram2026N22 from "./mainDesign/reserve-program-2026-22.webp";
+import reserveProgram2026N23 from "./mainDesign/reserve-program-2026-23.webp";
+import reserveProgram2026N24 from "./mainDesign/reserve-program-2026-24.webp";
+import reserveProgram2026N25 from "./mainDesign/reserve-program-2026-25.webp";
+import reserveProgram2026N26 from "./mainDesign/reserve-program-2026-26.webp";
+import reserveProgram2026N27 from "./mainDesign/reserve-program-2026-27.webp";
+import reserveProgram2026N28 from "./mainDesign/reserve-program-2026-28.webp";
+import reserveProgram2026N29 from "./mainDesign/reserve-program-2026-29.webp";
+import reserveProgram2026N30 from "./mainDesign/reserve-program-2026-30.webp";
+import reserveProgram2026N31 from "./mainDesign/reserve-program-2026-31.webp";
+import reserveProgram2026N32 from "./mainDesign/reserve-program-2026-32.webp";
+import reserveProgram2026N33 from "./mainDesign/reserve-program-2026-33.webp";
+import reserveProgram2026N34 from "./mainDesign/reserve-program-2026-34.webp";
+import reserveProgram2026N35 from "./mainDesign/reserve-program-2026-35.webp";
+import reserveProgram2026N36 from "./mainDesign/reserve-program-2026-36.webp";
+import reserveProgram2026N37 from "./mainDesign/reserve-program-2026-37.webp";
+import reserveProgram2026N38 from "./mainDesign/reserve-program-2026-38.webp";
+import reserveProgram2026N39 from "./mainDesign/reserve-program-2026-39.webp";
+import reserveProgram2026N40 from "./mainDesign/reserve-program-2026-40.webp";
+import guettawayProgram2026N01 from "./mainDesign/guettaway-program-2026-01.webp";
+import guettawayProgram2026N02 from "./mainDesign/guettaway-program-2026-02.webp";
+import guettawayProgram2026N03 from "./mainDesign/guettaway-program-2026-03.webp";
+import guettawayProgram2026N04 from "./mainDesign/guettaway-program-2026-04.webp";
+import guettawayProgram2026N05 from "./mainDesign/guettaway-program-2026-05.webp";
+import guettawayProgram2026N06 from "./mainDesign/guettaway-program-2026-06.webp";
+import guettawayProgram2026N07 from "./mainDesign/guettaway-program-2026-07.webp";
+import guettawayProgram2026N08 from "./mainDesign/guettaway-program-2026-08.webp";
+import guettawayProgram2026N09 from "./mainDesign/guettaway-program-2026-09.webp";
+import guettawayProgram2026N10 from "./mainDesign/guettaway-program-2026-10.webp";
+import guettawayProgram2026N11 from "./mainDesign/guettaway-program-2026-11.webp";
+import guettawayProgram2026N12 from "./mainDesign/guettaway-program-2026-12.webp";
+import guettawayProgram2026N13 from "./mainDesign/guettaway-program-2026-13.webp";
+import guettawayProgram2026N14 from "./mainDesign/guettaway-program-2026-14.webp";
+import guettawayProgram2026N15 from "./mainDesign/guettaway-program-2026-15.webp";
+import guettawayProgram2026N16 from "./mainDesign/guettaway-program-2026-16.webp";
+import guettawayProgram2026N17 from "./mainDesign/guettaway-program-2026-17.webp";
 
 export const AllImages = {
   logo,
@@ -1104,6 +1163,65 @@ export const AllImages = {
   stregisMarriottPoolSerenityPool,
   stregisMarriottPoolMainPool,
   stregisMarriottPoolWhirlpool,
+  editionMarriottPoolSoolBeachClub,
+  editionMarriottPoolMainPool,
+  reserveProgram2026N01,
+  reserveProgram2026N02,
+  reserveProgram2026N03,
+  reserveProgram2026N04,
+  reserveProgram2026N05,
+  reserveProgram2026N06,
+  reserveProgram2026N07,
+  reserveProgram2026N08,
+  reserveProgram2026N09,
+  reserveProgram2026N10,
+  reserveProgram2026N11,
+  reserveProgram2026N12,
+  reserveProgram2026N13,
+  reserveProgram2026N14,
+  reserveProgram2026N15,
+  reserveProgram2026N16,
+  reserveProgram2026N17,
+  reserveProgram2026N18,
+  reserveProgram2026N19,
+  reserveProgram2026N20,
+  reserveProgram2026N21,
+  reserveProgram2026N22,
+  reserveProgram2026N23,
+  reserveProgram2026N24,
+  reserveProgram2026N25,
+  reserveProgram2026N26,
+  reserveProgram2026N27,
+  reserveProgram2026N28,
+  reserveProgram2026N29,
+  reserveProgram2026N30,
+  reserveProgram2026N31,
+  reserveProgram2026N32,
+  reserveProgram2026N33,
+  reserveProgram2026N34,
+  reserveProgram2026N35,
+  reserveProgram2026N36,
+  reserveProgram2026N37,
+  reserveProgram2026N38,
+  reserveProgram2026N39,
+  reserveProgram2026N40,
+  guettawayProgram2026N01,
+  guettawayProgram2026N02,
+  guettawayProgram2026N03,
+  guettawayProgram2026N04,
+  guettawayProgram2026N05,
+  guettawayProgram2026N06,
+  guettawayProgram2026N07,
+  guettawayProgram2026N08,
+  guettawayProgram2026N09,
+  guettawayProgram2026N10,
+  guettawayProgram2026N11,
+  guettawayProgram2026N12,
+  guettawayProgram2026N13,
+  guettawayProgram2026N14,
+  guettawayProgram2026N15,
+  guettawayProgram2026N16,
+  guettawayProgram2026N17,
 };
 
 

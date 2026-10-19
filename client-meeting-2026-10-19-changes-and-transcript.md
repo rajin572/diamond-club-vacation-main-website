@@ -28,16 +28,16 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 
 ## Progress (updated 2026-10-19)
 
-**4 done, 10 partly done, 15 not done** (of 30 steps). Each step below has a status line.
+**7 done, 9 partly done, 12 not done, 2 info (no website change)** (of 30 steps; the two info steps, 6 and 28, are not website changes). Each step below has a status line.
 
 | # | Step | Status |
 |---|---|---|
 | 1 | Brochure button | 🟡 PARTLY DONE |
 | 2 | Guettaway name | ✅ DONE |
 | 3 | St. Regis page — good, but phone swipe | ✅ DONE |
-| 4 | Pools are missing photos; where to get content | ⬜ NOT DONE |
-| 5 | Gallery: add last year's live photos | ⬜ NOT DONE |
-| 6 | Going live | ⬜ NOT DONE |
+| 4 | Pools are missing photos; where to get content | ✅ DONE |
+| 5 | Gallery: add last year's live photos | ✅ DONE |
+| 6 | Going live | ℹ️ INFO (not a website change) |
 | 7 | Chef | ⬜ NOT DONE |
 | 8 | Entertainment — DJ / Zusha card | ⬜ NOT DONE |
 | 9 | Home button in the bar | ✅ DONE |
@@ -54,7 +54,7 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 | 20 | Brand logo | ⬜ NOT DONE |
 | 21 | Edition dining | ⬜ NOT DONE |
 | 22 | Dining / Edition / Reserve clean-up | 🟡 PARTLY DONE |
-| 23 | Edition pools and rooms | 🟡 PARTLY DONE |
+| 23 | Edition pools and rooms | ✅ DONE |
 | 24 | Guettaway | 🟡 PARTLY DONE |
 | 25 | Waldorf and Park Hyatt rooms | 🟡 PARTLY DONE |
 | 26 | Guettaway chef picture | ⬜ NOT DONE |
@@ -88,22 +88,22 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 - The client loves the St. Regis page and its rooms (P1 00:06:02, 00:06:38).
 - **On the phone he cannot swipe** the photo viewer; he has to tap the corners. Add **swipe / drag** on touch screens. On computer it is fine (mouse).
 
-### 4. Pools are missing photos; where to get content (P1 00:06:38 – 00:07:22) — ⬜ NOT DONE
+### 4. Pools are missing photos; where to get content (P1 00:06:38 – 00:07:22) — ✅ DONE
 
-> **Status:** ⬜ NOT DONE. Needs the client's pool photos.
+> **Status:** ✅ DONE. Done 2026-10-19 (confirmed by the developer): the pools of the St. Regis (Cabanas, Family, Serenity, Main, Whirlpool) and of the Edition (Main Pool, SO'OL Restaurant & Beach Club) now come from each hotel's Marriott Experiences page, with the Marriott photo and facts of every pool. More pool photos from the client can still be added later (see step 10).
 - "Pool is missing a lot of photos."
 - We said the Figma had few images and we asked for links. The client sent one (P1 00:07:22): see item 5.
 
-### 5. Gallery: add last year's live photos (P1 00:07:22 – 00:09:08) — ⬜ NOT DONE
+### 5. Gallery: add last year's live photos (P1 00:07:22 – 00:09:08) — ✅ DONE
 
-> **Status:** ⬜ NOT DONE. Not done: needs last year's program photos (we show about 40–50 for now).
+> **Status:** ✅ DONE (confirmed by the developer, 2026-10-19). Done for the EDITION and the ST. REGIS: 40 photos chosen from the client's Pixieset gallery "Passover Edition 2026" (244 photos; lobby, pools, buffets and desserts, ballroom set-up, entertainment, fire show; no close-ups of guests or children) are added after the hotel photos in both Galleries, as agreed on the call (about 40–50 for now). The client confirmed in writing ("Yes", 2026-10-19) that Passover Edition 2026 is used for both hotels. For the two Guettaway hotels (Waldorf Astoria and Park Hyatt) 17 photos chosen from the client's "Passover Waldorf 2026" gallery (24 photos: the hotel, lobby and string quartet, pool-side pizza and fruit stations, dining terrace) are added to both Galleries (one shared list, `src/data/resorts/guettaway-program-gallery.data.ts`). The written answer of the client for the Waldorf gallery was not seen yet. They are listed once in `src/data/resorts/reserve-program-gallery.data.ts`. More photos can be added later (the other 204 Edition photos and 7 Waldorf photos, when the backend exists); Casa Nizuc has no last-year gallery yet.
 - The client sent the link of **last year's program page (the Waldorf)**, "a million pictures", all live photos from last year's program.
 - **Add all of those photos to the Gallery**. Keep the hotel photos too ("no problem"), but the gallery must also have last year's program photos (kids, concerts, etc.).
 - Technical answer given: no backend/database yet, so too many images could crash it. We will show **about 40–50 images now** and all of them when the backend exists (P1 00:09:08–00:09:32, 00:22:17–00:23:04). The client accepts that.
 
-### 6. Going live (P1 00:09:32 – 00:10:08, P1 00:22:39) — ⬜ NOT DONE
+### 6. Going live (P1 00:09:32 – 00:10:08, P1 00:22:39) — ℹ️ INFO (not a website change)
 
-> **Status:** ⬜ NOT DONE. Needs the domain and server access.
+> **Status:** ℹ️ INFO. Not a change of the website: it is the publishing step (the client gives the domain and login, we upload the site there). It happens after the last changes; it needs the domain and server access.
 - The client will give the **domain name with username and password** and we upload everything to his domain. We said yes. See also P2 27:29 (domain + server).
 
 ### 7. Chef (P1 00:10:19 – 00:13:40, again 00:34:08 – 00:36:43, 00:40:38 – 00:40:52, 00:50:33 – 00:51:03) — ⬜ NOT DONE
@@ -221,9 +221,9 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 - **Babysitting** (P2 01:47–02:40): this part comes off, the rest of the day camp is good. He wants to review the babysitting text ("A free representative babysitter service will be available during camp hours, and our special toddler camp private babysitting is available for free") and update it.
 - **Attractions:** add more (P2 01:47, 12:39).
 
-### 23. Edition pools and rooms (P2 02:40 – 09:33) — 🟡 PARTLY DONE
+### 23. Edition pools and rooms (P2 02:40 – 09:33) — ✅ DONE
 
-> **Status:** 🟡 PARTLY DONE. Done: Edition rooms now come from the Marriott list (19 rooms; `npm run rooms -- edition=marriott`). **Not done:** Edition pools (needs his link).
+> **Status:** ✅ DONE. Done: Edition rooms now come from the Marriott list (19 rooms; `npm run rooms -- edition=marriott`). The Edition pools now come from its Marriott Experiences page (Main Pool, SO'OL Restaurant & Beach Club; hours shown as "All day").
 - The Edition has **different pools** from the St. Regis. He sent the St. Regis link and will send the Edition link (P2 02:40).
 - **Edition rooms:** the client asked where we took the rooms from (P2 03:26). We took them from editionhotels.com. He says the correct source is the **Marriott "rooms and suites" page of the Edition** (P2 05:20–05:50): open it **side by side** with our page and **make sure the rooms, sizes and pictures are the same** (P2 05:50–06:46). The St. Regis rooms are fine ("you did a nice job").
 - We sent a screenshot of our rooms in the Zoom chat; he checked and said they look right ("that's the rooms, correct, correct… that's good") (P2 07:02–09:33). After the call, compare every room once.

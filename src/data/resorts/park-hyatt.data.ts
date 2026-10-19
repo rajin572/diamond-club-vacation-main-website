@@ -1,6 +1,7 @@
 import { AllImages } from "../../../public/images/AllImages";
 import type { ResortData } from "@/components/resorts/resorts.types";
 import { rotate } from "./helpers";
+import { GUETTAWAY_PROGRAM_GALLERY } from "./guettaway-program-gallery.data";
 
 /** Park Hyatt Riviera Maya — content from the client's HTML design (diamond-club-main-design). */
 export const PARK_HYATT_RESORT_DATA: ResortData = {
@@ -692,7 +693,7 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
   },
   gallery: {
     title: "Resort Gallery",
-    description: "Photography of Park Hyatt Riviera Maya.",
-    images: AllImages.series.parkHyatt.slice(12, 21),
+    description: "Photography of Park Hyatt Riviera Maya, and moments from last year's Passover program.",
+    images: [...AllImages.series.parkHyatt.slice(12, 21), ...GUETTAWAY_PROGRAM_GALLERY],
   },
 };

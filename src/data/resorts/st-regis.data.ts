@@ -1,6 +1,10 @@
 import { AllImages } from "../../../public/images/AllImages";
 import type { ResortData } from "@/components/resorts/resorts.types";
 import { rotate } from "./helpers";
+import { RESERVE_PROGRAM_GALLERY } from "./reserve-program-gallery.data";
+
+/** The client confirmed (2026-10-19) that the Passover Edition 2026 photos are used for both the St. Regis and the Edition. */
+const SHOW_EDITION_PROGRAM_PHOTOS = true;
 import { RESERVE_DINING } from "./reserve-dining.data";
 
 /** The St. Regis Kanai Resort — content from the client's HTML design (diamond-club-main-design). */
@@ -933,6 +937,7 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
         image: AllImages.stregisMarriottPoolFamilyPool,
         description: "Included with your stay. Outdoor pool on the property, with a lifeguard on duty and towels provided.",
         stats: [
+          { label: "Type", value: "Outdoor, on property" },
           { label: "Hours", value: "Mon-Sun 8:00 AM-11:00 PM" },
           { label: "Location", value: "Outdoor. On Property" },
           { label: "Fee", value: "Complimentary" },
@@ -946,17 +951,18 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
       {
         id: "serenity-pool",
         title: "Serenity Pool",
-        subtitle: "Outdoor, on property",
+        subtitle: "Adults only, on property",
         image: AllImages.stregisMarriottPoolSerenityPool,
-        description: "Included with your stay. Outdoor spa and wellness pool on the property, with a lifeguard on duty and towels provided.",
+        description: "Included with your stay. Adults-only, outdoor spa and wellness pool on the property, with a lifeguard on duty and towels provided.",
         stats: [
+          { label: "Type", value: "Adults only, on property" },
           { label: "Hours", value: "Mon-Sun 8:00 AM-11:00 PM" },
           { label: "Location", value: "Outdoor. On Property" },
           { label: "Fee", value: "Complimentary" },
         ],
         groups: [
           { title: "Schedule", items: ["Mon-Sun 8:00 AM-11:00 PM"] },
-          { title: "Features", items: ["Lifeguard on Duty", "Towels provided", "Spa/Wellness Pool"] },
+          { title: "Features", items: ["Adults only", "Lifeguard on Duty", "Towels provided", "Spa/Wellness Pool"] },
         ],
         gallery: [AllImages.stregisMarriottPoolSerenityPool],
       },
@@ -967,6 +973,7 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
         image: AllImages.stregisMarriottPoolMainPool,
         description: "Included with your stay. Outdoor pool on the property, with a lifeguard on duty and towels provided.",
         stats: [
+          { label: "Type", value: "Outdoor, on property" },
           { label: "Hours", value: "Mon-Sun 8:00 AM-11:00 PM" },
           { label: "Location", value: "Outdoor. On Property" },
           { label: "Fee", value: "Complimentary" },
@@ -1143,7 +1150,8 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
   },
   gallery: {
     title: "Gallery",
-    description: "A dedicated visual collection for this hotel only.",
-    images: AllImages.series.stregisResortGallery,
+    description: "The hotel, and moments from last year's Passover program.",
+    // The hotel's own photos, then the Passover Edition 2026 program photos (shared with the EDITION; set the flag above to false to hide them).
+    images: [...AllImages.series.stregisResortGallery, ...(SHOW_EDITION_PROGRAM_PHOTOS ? RESERVE_PROGRAM_GALLERY : [])],
   },
 };

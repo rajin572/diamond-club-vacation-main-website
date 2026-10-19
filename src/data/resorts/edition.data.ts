@@ -1,6 +1,7 @@
 import { AllImages } from "../../../public/images/AllImages";
 import type { ResortData } from "@/components/resorts/resorts.types";
 import { rotate } from "./helpers";
+import { RESERVE_PROGRAM_GALLERY } from "./reserve-program-gallery.data";
 import { RESERVE_DINING } from "./reserve-dining.data";
 
 /** The Riviera Maya EDITION at Kanai — content from the client's HTML design (diamond-club-main-design). */
@@ -3674,50 +3675,91 @@ export const EDITION_RESORT_DATA: ResortData = {
   pools: {
     title: "Pools & Beach",
     description: "Pools, beach areas, cabanas and resort water experiences.",
-    images: AllImages.series.editionPools,
+    images: [AllImages.editionMarriottPoolMainPool, AllImages.editionMarriottPoolSoolBeachClub],
+    // The previous pools (kept, switched off): Main Pool, SO’OL Beach Club Pool and Lagoon Pool, with the photos in AllImages.series.editionPools.
+    // images: AllImages.series.editionPools,
     items: [
+      // Pools from the hotel's Marriott "Experiences" page (marriott.com/en-us/hotels/cunek-the-riviera-maya-edition-at-kanai/experiences/).
+      // The program shows "All day" instead of the opening hours (see withAllDayPools in registry.ts).
       {
         id: "main-pool",
         title: "Main Pool",
-        subtitle: "Outdoor · Outdoor, on property",
-        image: AllImages.series.editionPools[0],
-        description: "The iconic curved central pool surrounded by lush greenery, daybeds, floating loungers and attentive towel service.",
+        subtitle: "Outdoor, on property · Infinity pool",
+        image: AllImages.editionMarriottPoolMainPool,
+        description: "Included with your stay. Heated infinity pool on the property, with a lifeguard on duty and towels provided.",
         stats: [
-          { label: "Type", value: "Outdoor" },
-          { label: "Hours", value: "7:00 AM – 8:00 PM" },
-          { label: "Location", value: "Outdoor, on property" },
+          { label: "Type", value: "Outdoor, on property" },
+          { label: "Hours", value: "Mon-Sun 9:00 AM-6:00 PM" },
+          { label: "Location", value: "Outdoor. On Property" },
+          { label: "Fee", value: "Complimentary" },
         ],
-        groups: [{ title: "Schedule", items: ["Monday – Sunday: 7:00 AM – 8:00 PM"] }],
-        gallery: rotate(AllImages.series.editionPools, 0),
+        groups: [
+          { title: "Schedule", items: ["Mon-Sun 9:00 AM-6:00 PM"] },
+          { title: "Features", items: ["Lifeguard on Duty", "Pool Heated", "Infinity Pool", "Towels provided"] },
+        ],
+        gallery: [AllImages.editionMarriottPoolMainPool],
       },
       {
         id: "sool-beach-club-pool",
-        title: "SO’OL Beach Club Pool",
-        subtitle: "Beach · Kanai Beachfront",
-        image: AllImages.series.editionPools[1],
-        description: "Exclusive oceanfront beach club pool with rhythmic waves, sunloungers, VIP cabanas and direct white-sand beach access.",
+        title: "SO'OL Restaurant & Beach Club - Adults Only",
+        subtitle: "Adults only · Outdoor, on property",
+        image: AllImages.editionMarriottPoolSoolBeachClub,
+        description: "Accessible by a picturesque palm tree-lined sand boardwalk from the Lagoon to the ocean, the SO’OL Beach Club embraces the Tulum aesthetic and features an infinity pool, dining and lounge areas along the beach, and a central outdoor grill, allowing guests to witness the chef's culinary artistry.",
         stats: [
-          { label: "Type", value: "Beach" },
-          { label: "Hours", value: "9:00 AM – 7:00 PM" },
-          { label: "Location", value: "Kanai Beachfront" },
+          { label: "Type", value: "Adults only, outdoor, on property" },
+          { label: "Hours", value: "Mon-Sun 12:00 PM-5:00 PM" },
+          { label: "Location", value: "Outdoor. On Property" },
+          { label: "Fee", value: "Complimentary" },
         ],
-        groups: [{ title: "Schedule", items: ["Monday – Sunday: 9:00 AM – 7:00 PM"] }],
-        gallery: rotate(AllImages.series.editionPools, 1),
-      },
-      {
-        id: "lagoon-pool",
-        title: "Lagoon Pool",
-        subtitle: "Outdoor · Mangrove Sanctuary Wing",
-        image: AllImages.series.editionPools[2],
-        description: "A serene lagoon-inspired pool nestled in the mangroves for peaceful relaxation, reading and contemplative quiet time.",
-        stats: [
-          { label: "Type", value: "Outdoor" },
-          { label: "Hours", value: "8:00 AM – 7:00 PM" },
-          { label: "Location", value: "Mangrove Sanctuary Wing" },
+        groups: [
+          { title: "Schedule", items: ["Mon-Sun 12:00 PM-5:00 PM"] },
+          { title: "Features", items: ["Adults only", "Lifeguard on Duty", "Pool Heated", "Adult-Only Pool", "Infinity Pool", "Towels provided"] },
         ],
-        groups: [{ title: "Schedule", items: ["Monday – Sunday: 8:00 AM – 7:00 PM"] }],
-        gallery: rotate(AllImages.series.editionPools, 2),
+        gallery: [AllImages.editionMarriottPoolSoolBeachClub],
       },
+      // ---- Previous pools (kept, switched off) ----
+      // {
+      //   id: "main-pool",
+      //   title: "Main Pool",
+      //   subtitle: "Outdoor · Outdoor, on property",
+      //   image: AllImages.series.editionPools[0],
+      //   description: "The iconic curved central pool surrounded by lush greenery, daybeds, floating loungers and attentive towel service.",
+      //   stats: [
+      //     { label: "Type", value: "Outdoor" },
+      //     { label: "Hours", value: "7:00 AM – 8:00 PM" },
+      //     { label: "Location", value: "Outdoor, on property" },
+      //   ],
+      //   groups: [{ title: "Schedule", items: ["Monday – Sunday: 7:00 AM – 8:00 PM"] }],
+      //   gallery: rotate(AllImages.series.editionPools, 0),
+      // },
+      // {
+      //   id: "sool-beach-club-pool",
+      //   title: "SO’OL Beach Club Pool",
+      //   subtitle: "Beach · Kanai Beachfront",
+      //   image: AllImages.series.editionPools[1],
+      //   description: "Exclusive oceanfront beach club pool with rhythmic waves, sunloungers, VIP cabanas and direct white-sand beach access.",
+      //   stats: [
+      //     { label: "Type", value: "Beach" },
+      //     { label: "Hours", value: "9:00 AM – 7:00 PM" },
+      //     { label: "Location", value: "Kanai Beachfront" },
+      //   ],
+      //   groups: [{ title: "Schedule", items: ["Monday – Sunday: 9:00 AM – 7:00 PM"] }],
+      //   gallery: rotate(AllImages.series.editionPools, 1),
+      // },
+      // {
+      //   id: "lagoon-pool",
+      //   title: "Lagoon Pool",
+      //   subtitle: "Outdoor · Mangrove Sanctuary Wing",
+      //   image: AllImages.series.editionPools[2],
+      //   description: "A serene lagoon-inspired pool nestled in the mangroves for peaceful relaxation, reading and contemplative quiet time.",
+      //   stats: [
+      //     { label: "Type", value: "Outdoor" },
+      //     { label: "Hours", value: "8:00 AM – 7:00 PM" },
+      //     { label: "Location", value: "Mangrove Sanctuary Wing" },
+      //   ],
+      //   groups: [{ title: "Schedule", items: ["Monday – Sunday: 8:00 AM – 7:00 PM"] }],
+      //   gallery: rotate(AllImages.series.editionPools, 2),
+      // },
     ],
   },
   wellness: {
@@ -3803,7 +3845,7 @@ export const EDITION_RESORT_DATA: ResortData = {
   },
   gallery: {
     title: "Gallery",
-    description: "A dedicated visual collection for this hotel only.",
-    images: AllImages.series.editionResortGallery.slice(0, 9),
+    description: "The hotel, and moments from last year's Passover program.",
+    images: [...AllImages.series.editionResortGallery.slice(0, 9), ...RESERVE_PROGRAM_GALLERY],
   },
 };

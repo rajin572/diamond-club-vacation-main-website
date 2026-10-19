@@ -1,6 +1,7 @@
 import { AllImages } from "../../../public/images/AllImages";
 import type { ResortData } from "@/components/resorts/resorts.types";
 import { rotate } from "./helpers";
+import { GUETTAWAY_PROGRAM_GALLERY } from "./guettaway-program-gallery.data";
 
 /** Waldorf Astoria Riviera Maya — content from the client's HTML design (diamond-club-main-design). */
 export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
@@ -731,7 +732,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   },
   gallery: {
     title: "Gallery",
-    description: "",
-    images: [AllImages.series.waldorf[4], ...AllImages.series.waldorfGallery],
+    description: "The hotel, and moments from last year's Passover program.",
+    images: [AllImages.series.waldorf[4], ...AllImages.series.waldorfGallery, ...GUETTAWAY_PROGRAM_GALLERY],
   },
 };
