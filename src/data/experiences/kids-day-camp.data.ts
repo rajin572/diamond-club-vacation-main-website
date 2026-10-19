@@ -113,7 +113,7 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
   },
   guttaway: {
     programId: "guttaway",
-    programName: "guettaway a Diamond Club production",
+    programName: "Guettaway a Diamond Club production",
     hero: {
       title: "Day Camp",
       description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",

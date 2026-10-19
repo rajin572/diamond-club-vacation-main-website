@@ -136,7 +136,7 @@ const CLIENT_DINING: ResortListSection = {
       title: "So'ol Beach Club",
       subtitle: "",
       image: AllImages.dcvDiningSoolBeachClub,
-      description: "",
+      description: "Enjoy relaxed beachfront dining with refreshing flavors, light bites, and tropical favorites, all served in a beautiful setting overlooking the Caribbean Sea.",
       gallery: [AllImages.dcvDiningSoolBeachClub],
     },
     {
@@ -144,7 +144,7 @@ const CLIENT_DINING: ResortListSection = {
       title: "Galato",
       subtitle: "",
       image: AllImages.dcvDiningGalato,
-      description: "",
+      description: "A delightful destination for refreshing frozen treats, delicious ice cream, and sweet indulgences, perfect for a relaxing afternoon under the Riviera Maya sun.",
       gallery: [AllImages.dcvDiningGalato],
     },
     {
@@ -152,7 +152,7 @@ const CLIENT_DINING: ResortListSection = {
       title: "KIIS",
       subtitle: "",
       image: AllImages.dcvDiningKiis,
-      description: "",
+      description: "An elegant dining experience featuring beautifully prepared dishes, creative flavors, and a sophisticated atmosphere designed for memorable evenings.",
       gallery: [AllImages.dcvDiningKiis],
     },
     {
@@ -160,7 +160,7 @@ const CLIENT_DINING: ResortListSection = {
       title: "Oceana Fish & Chips",
       subtitle: "",
       image: AllImages.dcvDiningOceanaFishAndChips,
-      description: "",
+      description: "Enjoy fresh seafood favorites, crispy fish and chips, and delicious coastal-inspired dishes in a vibrant, open-air tropical setting.",
       gallery: [AllImages.dcvDiningOceanaFishAndChips],
     },
     {
@@ -168,7 +168,7 @@ const CLIENT_DINING: ResortListSection = {
       title: "Lobby Bar",
       subtitle: "",
       image: AllImages.dcvDiningLobbyBar,
-      description: "",
+      description: "A sophisticated gathering place offering handcrafted cocktails, premium beverages, and a relaxed atmosphere to unwind and socialize.",
       gallery: [AllImages.dcvDiningLobbyBar],
     },
     {
@@ -176,7 +176,7 @@ const CLIENT_DINING: ResortListSection = {
       title: "PIZZO",
       subtitle: "",
       image: AllImages.dcvDiningPizzo,
-      description: "",
+      description: "A casual and inviting dining destination serving freshly prepared pizza, flavorful specialties, and delicious bites in a lively outdoor atmosphere.",
       gallery: [AllImages.dcvDiningPizzo],
     },
     {
@@ -192,8 +192,24 @@ const CLIENT_DINING: ResortListSection = {
       title: "Kitchen",
       subtitle: "",
       image: AllImages.dcvDiningKitchen,
-      description: "",
+      description: "Start every morning with a lavish breakfast featuring freshly prepared favorites and an extensive selection of gourmet offerings. During Chol Hamoed, return for an exceptional dinner experience showcasing our signature culinary creations.",
       gallery: [AllImages.dcvDiningKitchen],
+    },
+    {
+      id: "grand-ballroom-yom-tov-dining",
+      title: "Grand Ballroom – Yom Tov Dining",
+      subtitle: "Festive holiday meals",
+      image: AllImages.reserveGrandBallroomYomTov,
+      description: "Celebrate Yom Tov in the elegant Grand Ballroom, transformed into a beautiful dining setting for our festive holiday meals. Enjoy exceptional gourmet cuisine, attentive service, and a warm, inviting atmosphere as family and friends gather to celebrate together.",
+      gallery: [AllImages.reserveGrandBallroomYomTov],
+    },
+    {
+      id: "grand-ballroom-shabbat-yom-tov-kiddushim",
+      title: "Grand Ballroom – Shabbat & Yom Tov Kiddushim",
+      subtitle: "Kiddushim",
+      image: AllImages.reserveGrandBallroomKiddushim,
+      description: "Experience our lavish Shabbat and Yom Tov Kiddushim, featuring an impressive selection of gourmet specialties, traditional favorites, premium wines, and beautifully presented delicacies. A wonderful opportunity to gather, socialize, and celebrate in an elegant and festive atmosphere.",
+      gallery: [AllImages.reserveGrandBallroomKiddushim],
     },
   ],
 };

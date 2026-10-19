@@ -6,7 +6,7 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
     programId: "diamond-club-reserve",
     programTitle: "DIAMOND CLUB RESERVE",
     experienceType: "scholars",
-    title: "Scholars",
+    title: "Scholars & Cantor",
     viewerTitle: "Scholars Details",
     layout: "people",
     heroImage: AllImages.reserveScholars,
@@ -42,6 +42,22 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
             "Known for his ability to communicate meaningful insights in a relatable and engaging manner, Rabbi Rubanowitz delivers thought-provoking lectures and uplifting messages that connect timeless teachings with the realities of modern life. His presentations explore themes of faith, personal growth, family values, and the deeper meaning of our traditions, offering fresh perspectives that leave audiences both inspired and enriched.",
             "With a personable approach and a genuine passion for connecting with others, Rabbi Rubanowitz has a special ability to create an atmosphere of warmth, reflection, and spiritual inspiration. Whether delivering an insightful Yom Tov lecture, sharing meaningful life lessons, or engaging with guests in personal conversations, his presence adds depth and significance to the holiday experience.",
             "Diamond Club Vacations is delighted to welcome Rabbi Shalom Rubanowitz to our distinguished lineup of inspirational speakers at The EDITION Riviera Maya for Pesach 2027. His engaging presentations, meaningful insights, and welcoming personality will contribute to an extraordinary Yom Tov experience that brings together spiritual enrichment, cherished traditions, exceptional hospitality, and the finest in luxury beachfront living.",
+          ],
+        },
+      },
+      {
+        // Added from the client's Word document of 2026-10-19 ("Scholars & Cantor").
+        id: "cantor-nissim-saal",
+        title: "Cantor Nissim Saal",
+        description: "One of the most captivating and celebrated voices in contemporary cantorial music.",
+        image: AllImages.scholarCantorNissimSaal,
+        details: {
+          title: "Cantor Nissim Saal",
+          paragraphs: [
+            "Experience the extraordinary voice of Cantor Nissim Saal, one of the most captivating and celebrated voices in contemporary cantorial music.",
+            "Renowned for his breathtaking vocal range, heartfelt melodies, and commanding presence, Nissim brings unparalleled beauty and emotion to every prayer.",
+            "His magnificent renditions of traditional liturgy create an uplifting and deeply moving atmosphere, enriching the spirit of Shabbat and Yom Tov.",
+            "A world-class chazzan whose powerful voice and inspiring tefillot promise a truly unforgettable Yom Tov experience.",
           ],
         },
       },
@@ -99,7 +115,7 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
   },
   guttaway: {
     programId: "guttaway",
-    programTitle: "guettaway a Diamond Club production",
+    programTitle: "Guettaway a Diamond Club production",
     experienceType: "scholars",
     title: "Scholars",
     viewerTitle: "Scholars Details",
@@ -111,7 +127,7 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
         id: "rabbi-eli-mansour",
         title: "Rabbi Eli Mansour",
         description: "Renowned Spiritual Leader, International Speaker & Acclaimed Author (Edmond J. Safra Synagogue).",
-        image: AllImages.reserveScholars,
+        image: AllImages.scholarRabbiEliMansour,
         details: {
           title: "Rabbi Eli Mansour",
           paragraphs: [
@@ -126,7 +142,7 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
         id: "rabbi-avi-wiesenfeld",
         title: "Rabbi Avi Wiesenfeld",
         description: "Renowned International Speaker, Author & Rosh Yeshiva (Yeshivas Beis Dovid in Jerusalem).",
-        image: AllImages.reserveScholars,
+        image: AllImages.scholarRabbiAviWiesenfeld,
         details: {
           title: "Rabbi Avi Wiesenfeld",
           paragraphs: [
@@ -141,7 +157,7 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
         id: "rabbi-eli-stefansky",
         title: "Rabbi Eli Stefansky",
         description: "Founder of Mercaz Daf Yomi (MDY) | Internationally Renowned Educator & Inspirational Speaker.",
-        image: AllImages.rabbiEliStefanskyDafyomi,
+        image: AllImages.scholarRabbiEliStefansky,
         details: {
           title: "Rabbi Eli Stefansky (Mercaz Daf Yomi)",
           paragraphs: [

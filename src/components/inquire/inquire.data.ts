@@ -8,7 +8,7 @@ export interface InquireExperienceOption {
 export const EXPERIENCE_OPTIONS: InquireExperienceOption[] = [
   {
     id: "diamond-club-reserve",
-    label: "DIAMOND CLUB RESERVE",
+    label: "Diamond Club Reserve at Kanai",
     aliases: [
       "reserve",
       "diamond-club-reserve",
@@ -20,7 +20,7 @@ export const EXPERIENCE_OPTIONS: InquireExperienceOption[] = [
   },
   {
     id: "guttaway",
-    label: "guettaway a Diamond Club production",
+    label: "Guettaway a Diamond Club production",
     aliases: [
       "guttaway",
       "guettaway",

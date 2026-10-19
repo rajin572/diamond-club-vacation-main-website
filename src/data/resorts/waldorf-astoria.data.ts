@@ -6,10 +6,10 @@ import { GUETTAWAY_PROGRAM_GALLERY } from "./guettaway-program-gallery.data";
 /** Waldorf Astoria Riviera Maya — content from the client's HTML design (diamond-club-main-design). */
 export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   programId: "guttaway",
-  programTitle: "guettaway a Diamond Club production",
+  programTitle: "Guettaway a Diamond Club production",
   resortId: "waldorf-astoria",
   resortName: "Waldorf Astoria Riviera Maya",
-  tagline: "guettaway a Diamond Club production",
+  tagline: "Guettaway a Diamond Club production",
   showTagline: false,
   heroImage: AllImages.waldorfAerial,
   overviewLabel: "Overview",
@@ -1051,6 +1051,23 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
         stats: [{ label: "Hours", value: "10:00 AM – 6:00 PM" }],
         groups: [{ title: "Schedule", items: ["Daily: 10:00 AM – 6:00 PM","Hours and days of operation subject to change"] }],
         gallery: [AllImages.waldorfDiningPoolBarPool, AllImages.waldorfDiningPoolBarBbq, AllImages.waldorfDiningPoolBarCocktails],
+      },
+      // Added from the client's Word document of 2026-10-19. The Yom Tov Dining photo is still to come (the Kiddushim photo is used for both for now).
+      {
+        id: "grand-ballroom-yom-tov-dining",
+        title: "Grand Ballroom – Yom Tov Dining",
+        subtitle: "Festive holiday meals",
+        image: AllImages.guettawayGrandBallroomKiddushim,
+        description: "Celebrate Yom Tov in the elegant Grand Ballroom, transformed into a beautiful dining setting for our festive holiday meals. Enjoy exceptional gourmet cuisine, attentive service, and a warm, inviting atmosphere as family and friends gather to celebrate together.",
+        gallery: [AllImages.guettawayGrandBallroomKiddushim],
+      },
+      {
+        id: "grand-ballroom-shabbat-yom-tov-kiddushim",
+        title: "Grand Ballroom – Shabbat & Yom Tov Kiddushim",
+        subtitle: "Kiddushim",
+        image: AllImages.guettawayGrandBallroomKiddushim,
+        description: "Experience our lavish Shabbat and Yom Tov Kiddushim, featuring an impressive selection of gourmet specialties, traditional favorites, premium wines, and beautifully presented delicacies. A wonderful opportunity to gather, socialize, and celebrate in an elegant and festive atmosphere.",
+        gallery: [AllImages.guettawayGrandBallroomKiddushim],
       },
     ],
   },

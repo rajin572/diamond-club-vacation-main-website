@@ -36,15 +36,21 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         },
       },
       {
-        id: "surprise-concert",
-        title: "Get Ready For The Unexpected",
-        description: "A surprise superstar. One spectacular night. An unforgettable concert. The biggest surprise of Pesach is yet to be revealed.",
+        id: "ben-tzur",
+        title: "Ben Tzur – Live in Concert",
+        description: "One of Israel’s biggest stars. The hits everyone is singing. One spectacular night.",
+        // The client asked for the artist photo to be put in; none was sent yet, so the concert photo stays until it comes.
         image: AllImages.reserveEntertainmentConcert,
         details: {
-          title: "Get Ready For The Unexpected",
+          title: "Ben Tzur – Live in Concert",
           paragraphs: [
-            "A surprise superstar. One spectacular night. An unforgettable concert.",
-            "The biggest surprise of Pesach is yet to be revealed. Headliner announcement coming soon.",
+            "Israel’s breakout superstar of 2026.",
+            "Get ready for an extraordinary night as Ben Tzur, one of Israel’s hottest and most celebrated musical sensations, takes center stage for an unforgettable live concert!",
+            "Following a phenomenal year of chart-topping hits, sold-out performances, and a meteoric rise to stardom, Ben Tzur has become one of the most exciting names in Israeli music. With smash hits including “Ahavat Hashem,” “Ish HaPele,” “Kol Akava Letova,” “Abba,” and “Neshamot Tzmeot,” his music has captured the hearts of millions.",
+            "Fresh off spectacular performances at Israel’s most prestigious concert venues, Ben Tzur brings his unmistakable voice, incredible stage presence, and electrifying energy to an exclusive Diamond Club Vacations performance.",
+            "Prepare for a breathtaking evening featuring a full live band, dazzling stage production, powerful melodies, and the biggest hits that have taken Israel by storm.",
+            "One of Israel’s biggest stars. The hits everyone is singing. One spectacular night.",
+            "This Passover, experience the superstar sensation of Ben Tzur LIVE — an extraordinary musical celebration and one of the crown jewels of our 2027 entertainment lineup!",
           ],
         },
       },
@@ -142,21 +148,25 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
   },
   guttaway: {
     programId: "guttaway",
-    programTitle: "guettaway a Diamond Club production",
+    programTitle: "Guettaway a Diamond Club production",
     experienceType: "entertainment",
     title: "Entertainment",
     heroImage: AllImages.blueEntertainment,
     columns: 3,
     items: [
       {
-        id: "dovi-meisels",
-        title: "Dovi Meisels",
-        description: "Soulful vocals and heart-stirring kumzits by acclaimed Chassidic recording artist Dovi Meisels.",
-        image: AllImages.reserveEntertainmentConcert,
+        id: "shulem-lemmer",
+        title: "Shulem Lemmer",
+        description: "Experience an extraordinary evening with internationally acclaimed vocalist Shulem Lemmer, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",
+        image: AllImages.entertainmentShulemLemmer,
+        imageFocus: "top",
         details: {
-          title: "Dovi Meisels Live in Concert",
+          title: "Shulem Lemmer – Live in Concert",
           paragraphs: [
-            "Experience an unforgettable evening of soulful melodies and uplifting Chassidic music with renowned singer Dovi Meisels.",
+            "Experience an extraordinary evening with internationally acclaimed vocalist Shulem Lemmer, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",
+            "Renowned for his breathtaking performances, soulful melodies, and powerful stage presence, Shulem brings a spectacular blend of timeless classics, beloved favorites, and uplifting music to the stage.",
+            "From deeply moving ballads to exhilarating musical masterpieces, prepare for an unforgettable concert filled with passion, elegance, and extraordinary talent.",
+            "One extraordinary voice. A world-class performance. An unforgettable night of music!",
           ],
         },
       },
@@ -186,13 +196,15 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         },
       },
       {
-        id: "dj",
-        title: "DJ",
-        description: "High-energy live DJ sets keeping the celebration vibrant through every evening.",
-        image: AllImages.reserveEntertainmentDjPinnyYiddi,
+        id: "dovi-meisels",
+        title: "Dovi Meisels",
+        description: "Soulful vocals and heart-stirring kumzits by acclaimed Chassidic recording artist Dovi Meisels.",
+        image: AllImages.entertainmentDoviMeiselsGuitar,
         details: {
-          title: "Live DJ Sets",
-          paragraphs: ["Curated playlists, uplifting sets, and energetic party beats."],
+          title: "Dovi Meisels Live in Concert",
+          paragraphs: [
+            "Experience an unforgettable evening of soulful melodies and uplifting Chassidic music with renowned singer Dovi Meisels.",
+          ],
         },
       },
       {

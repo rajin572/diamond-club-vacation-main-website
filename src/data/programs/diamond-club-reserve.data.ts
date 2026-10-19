@@ -82,7 +82,7 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
             },
             {
               id: "scholars",
-              title: "Scholars",
+              title: "Scholars & Cantor",
               image: AllImages.reserveScholars,
               target: { type: "experience", experienceType: "scholars" },
             },

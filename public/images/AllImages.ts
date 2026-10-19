@@ -609,6 +609,18 @@ import casaNizucRoomTwoDoubles from "./mainDesign/casa-nizuc-room-two-doubles.we
 import casaNizucRoomSuiteLiving from "./mainDesign/casa-nizuc-room-suite-living.webp";
 import casaNizucRoomKingBath from "./mainDesign/casa-nizuc-room-king-bath.webp";
 import casaNizucSpaWellnessCenter from "./mainDesign/casa-nizuc-spa-wellness-center.webp";
+// Photos from the client's two Word documents of 2026-10-19 (entertainment, rabbis, cantor, Grand Ballroom) and the Park Hyatt Living Room / Brisa photos.
+import entertainmentShulemLemmer from "./mainDesign/entertainment-shulem-lemmer.webp";
+import entertainmentDoviMeiselsGuitar from "./mainDesign/entertainment-dovi-meisels-guitar.webp";
+import scholarRabbiAviWiesenfeld from "./mainDesign/scholar-rabbi-avi-wiesenfeld.webp";
+import scholarRabbiEliStefansky from "./mainDesign/scholar-rabbi-eli-stefansky.webp";
+import scholarRabbiEliMansour from "./mainDesign/scholar-rabbi-eli-mansour.webp";
+import scholarCantorNissimSaal from "./mainDesign/scholar-cantor-nissim-saal.webp";
+import reserveGrandBallroomYomTov from "./mainDesign/reserve-grand-ballroom-yom-tov.webp";
+import reserveGrandBallroomKiddushim from "./mainDesign/reserve-grand-ballroom-kiddushim.webp";
+import guettawayGrandBallroomKiddushim from "./mainDesign/guettaway-grand-ballroom-kiddushim.webp";
+import parkHyattDiningLivingRoom from "./mainDesign/park-hyatt-dining-living-room.webp";
+import parkHyattDiningBrisaPoolBar from "./mainDesign/park-hyatt-dining-brisa-pool-bar.webp";
 // Casa Nizuc gallery: photos from the hotel's Marriott photos page.
 import casaNizucGallery00 from "./mainDesign/casa-nizuc-gallery-00.webp";
 import casaNizucGallery01 from "./mainDesign/casa-nizuc-gallery-01.webp";
@@ -1409,6 +1421,17 @@ export const AllImages = {
   casaNizucRoomSuiteLiving,
   casaNizucRoomKingBath,
   casaNizucSpaWellnessCenter,
+  entertainmentShulemLemmer,
+  entertainmentDoviMeiselsGuitar,
+  scholarRabbiAviWiesenfeld,
+  scholarRabbiEliStefansky,
+  scholarRabbiEliMansour,
+  scholarCantorNissimSaal,
+  reserveGrandBallroomYomTov,
+  reserveGrandBallroomKiddushim,
+  guettawayGrandBallroomKiddushim,
+  parkHyattDiningLivingRoom,
+  parkHyattDiningBrisaPoolBar,
   casaNizucGallery00,
   casaNizucGallery01,
   casaNizucGallery02,
