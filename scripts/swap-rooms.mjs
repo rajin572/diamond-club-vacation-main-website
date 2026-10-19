@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Swaps which room list the Edition, St. Regis and Waldorf Astoria pages show.
+ * Swaps which room list the Edition, St. Regis, Waldorf Astoria and Park Hyatt pages show.
  *
  * Each hotel data file keeps several room lists as blocks between
  *   // @rooms:begin <name> | <description>
@@ -25,10 +25,11 @@ const FILES = {
   edition: "src/data/resorts/edition.data.ts",
   "st-regis": "src/data/resorts/st-regis.data.ts",
   waldorf: "src/data/resorts/waldorf-astoria.data.ts",
+  "park-hyatt": "src/data/resorts/park-hyatt.data.ts",
 };
 const PRESETS = {
-  client: { edition: "client", "st-regis": "client", waldorf: "original" },
-  full: { edition: "marriott", "st-regis": "hotel-site", waldorf: "hotel-site" },
+  client: { edition: "client", "st-regis": "client", waldorf: "original", "park-hyatt": "original" },
+  full: { edition: "marriott", "st-regis": "hotel-site", waldorf: "hotel-site", "park-hyatt": "hyatt-site" },
 };
 
 const DINING_FILE = "src/data/resorts/reserve-dining.data.ts";
@@ -146,10 +147,10 @@ function main(args) {
   const plan = {};
   for (const arg of args) {
     if (PRESETS[arg]) Object.assign(plan, PRESETS[arg]);
-    else if (/^(edition|st-regis|waldorf|dining)=/.test(arg)) {
+    else if (/^(edition|st-regis|waldorf|park-hyatt|dining)=/.test(arg)) {
       const [hotel, name] = arg.split("=");
       plan[hotel] = name;
-    } else throw new Error(`Unknown argument "${arg}". Try: status | client | full | edition=<list> | st-regis=<list> | waldorf=<list> | dining=<list>`);
+    } else throw new Error(`Unknown argument "${arg}". Try: status | client | full | edition=<list> | st-regis=<list> | waldorf=<list> | park-hyatt=<list> | dining=<list>`);
   }
   for (const [hotel, target] of Object.entries(plan)) {
     if (hotel === "dining") setDining(target);

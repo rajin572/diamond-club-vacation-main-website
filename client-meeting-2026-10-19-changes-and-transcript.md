@@ -242,7 +242,7 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 
 ### 25. Waldorf and Park Hyatt rooms (P2 13:45 – 17:03) — 🟡 PARTLY DONE
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: Waldorf Astoria rooms — all 15 rooms and suites of the Hilton list (names, sleeps, features, a photo each; 17 photos). Extra photos per room need `waldorf-rooms.json` (browser script `scripts/browser-save-room-details.js`). **Not done:** Park Hyatt rooms (hyatt.com blocks automated access; needs the saved page).
+> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: **Waldorf Astoria** now shows 12 rooms and suites from the Hilton rooms page, each with its full Hilton text, size, highlights, all-inclusive benefits and every card and pop-up photo (4 to 8 photos per room); **Park Hyatt** now shows the 11 rooms and suites of hyatt.com (Hyatt text, size, bed, view, amenities) with the Hyatt photos. The previous lists are kept as commented blocks (`npm run rooms -- waldorf=...` / `park-hyatt=...`). **Not done:** the Waldorf "Ocean Front Master Corner Suite with King Bed" (its pop-up was missed), and the extra photos of 9 Park Hyatt rooms (hyatt.com gives only 1 photo per room on the rooms page; the room pages give more).
 - Our Edition rooms are updated (P2 13:45).
 - **Waldorf Astoria Riviera Maya** (Hilton): "there are many more rooms than we have". Link sent in Zoom and in Fiverr (P2 13:57–15:09).
 - **Park Hyatt Riviera Maya** (it is Hyatt, not Hilton; a brand-new hotel): link sent in Fiverr. We said the rooms page looked like only 5 rooms; the client wants all rooms on the site (P2 15:13–16:44).

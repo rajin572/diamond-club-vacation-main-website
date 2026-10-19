@@ -2669,3 +2669,159 @@ button.dcv-link {
   text-transform: uppercase;
   font-weight: 400;
 }
+
+/* ---- Guettaway opening splash (client request 2026-10-19, item 30) ----
+   Shown only when <html data-guettaway-splash> is set by the inline script in GuettawaySplash.tsx, i.e. for
+   visitors arriving from the Guettaway link. The whole timeline is CSS, so it clears itself even if JS fails. */
+.dcv-splash {
+  display: none;
+}
+html[data-guettaway-splash] {
+  overflow: hidden;
+}
+html[data-guettaway-splash] .dcv-splash {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  background: radial-gradient(ellipse at 50% 40%, #0d4a5c 0%, #07303d 55%, #041c25 100%);
+  animation: dcv-splash-out 0.6s ease 3.2s forwards;
+}
+@keyframes dcv-splash-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+.dcv-splash__water {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 100%;
+  transform: translateY(100%);
+  animation: dcv-splash-rise 2.6s cubic-bezier(0.45, 0, 0.2, 1) 0.2s forwards;
+}
+@keyframes dcv-splash-rise {
+  to {
+    transform: translateY(58%);
+  }
+}
+.dcv-splash__wave {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 200%;
+  height: 90px;
+  transform: translateY(-89px);
+}
+.dcv-splash__wave--back {
+  fill: rgba(70, 176, 196, 0.35);
+  animation: dcv-splash-drift 5s linear infinite;
+}
+.dcv-splash__wave--front {
+  fill: rgba(120, 208, 224, 0.28);
+  animation: dcv-splash-drift 3.4s linear infinite reverse;
+}
+.dcv-splash__water::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(120, 208, 224, 0.28), rgba(10, 70, 90, 0.5));
+}
+@keyframes dcv-splash-drift {
+  to {
+    margin-left: -100%;
+  }
+}
+.dcv-splash__ripples {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+.dcv-splash__ripples span {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  margin: -80px 0 0 -80px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0;
+  animation: dcv-splash-ripple 2.4s ease-out infinite;
+}
+.dcv-splash__ripples span:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.dcv-splash__ripples span:nth-child(3) {
+  animation-delay: 1.6s;
+}
+@keyframes dcv-splash-ripple {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.4);
+  }
+}
+.dcv-splash__brand {
+  position: relative;
+  z-index: 1;
+  margin-top: -12vh;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  animation: dcv-splash-brand 1.2s ease 0.5s forwards;
+}
+@keyframes dcv-splash-brand {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    letter-spacing: 0.5em;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    letter-spacing: 0.28em;
+  }
+}
+.dcv-splash__name {
+  margin: 0;
+  font-family: var(--dcv-serif);
+  font-size: clamp(34px, 7vw, 76px);
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  padding-left: 0.28em;
+}
+.dcv-splash__sub {
+  margin: 14px 0 0;
+  font: 400 clamp(10px, 1.4vw, 14px) var(--dcv-sans);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-guettaway-splash] .dcv-splash {
+    animation-duration: 0.4s;
+    animation-delay: 1.4s;
+  }
+  .dcv-splash__water,
+  .dcv-splash__wave,
+  .dcv-splash__ripples span,
+  .dcv-splash__brand {
+    animation: none;
+  }
+  .dcv-splash__water {
+    transform: translateY(58%);
+  }
+  .dcv-splash__brand {
+    opacity: 1;
+  }
+  .dcv-splash__ripples {
+    display: none;
+  }
+}

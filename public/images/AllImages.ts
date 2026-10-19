@@ -584,6 +584,62 @@ import guettawayProgram2026N14 from "./mainDesign/guettaway-program-2026-14.webp
 import guettawayProgram2026N15 from "./mainDesign/guettaway-program-2026-15.webp";
 import guettawayProgram2026N16 from "./mainDesign/guettaway-program-2026-16.webp";
 import guettawayProgram2026N17 from "./mainDesign/guettaway-program-2026-17.webp";
+import parkHyattRoomCanphP0007KingRoomInteriorView from "./mainDesign/park-hyatt-room-canph-p0007-king-room-interior-view.webp";
+import parkHyattRoomCanphP0009KingRoomSeatingArea from "./mainDesign/park-hyatt-room-canph-p0009-king-room-seating-area.webp";
+import parkHyattRoomCanphP0014KingRoomTableSeating from "./mainDesign/park-hyatt-room-canph-p0014-king-room-table-seating.webp";
+import parkHyattRoomCanphR0014KingGuestroomView from "./mainDesign/park-hyatt-room-canph-r0014-king-guestroom-view.webp";
+import parkHyattRoomCanphP0002BeverageStation from "./mainDesign/park-hyatt-room-canph-p0002-beverage-station.webp";
+import parkHyattRoomCanphP0004KingRoomBalcony from "./mainDesign/park-hyatt-room-canph-p0004-king-room-balcony.webp";
+import parkHyattRoomCanphP0005KingRoomEntryArtwork from "./mainDesign/park-hyatt-room-canph-p0005-king-room-entry-artwork.webp";
+import parkHyattRoomCanphP0033OneKingBedSuiteOceanViewPlungePoolDeluxeView from "./mainDesign/park-hyatt-room-canph-p0033-one-king-bed-suite-ocean-view-plunge-pool-deluxe-view.webp";
+import parkHyattRoomCanphP0034OneKingBedSuiteOceanViewPlungePoolDeluxeLayout from "./mainDesign/park-hyatt-room-canph-p0034-one-king-bed-suite-ocean-view-plunge-pool-deluxe-layout.webp";
+import parkHyattRoomCanphP0035OneKingBedSuiteOceanViewPlungePoolDeluxeLivingRoom from "./mainDesign/park-hyatt-room-canph-p0035-one-king-bed-suite-ocean-view-plunge-pool-deluxe-living-room.webp";
+import parkHyattRoomCanphP0036OneKingBedSuiteOceanViewPlungePoolDeluxeTerracePlunge from "./mainDesign/park-hyatt-room-canph-p0036-one-king-bed-suite-ocean-view-plunge-pool-deluxe-terrace-plunge.webp";
+import parkHyattRoomCanphP0037OneKingBedSuiteOceanViewPlungePoolDeluxeTerrace from "./mainDesign/park-hyatt-room-canph-p0037-one-king-bed-suite-ocean-view-plunge-pool-deluxe-terrace.webp";
+import parkHyattRoomCanphP0038OneKingBedSuiteOceanViewPlungePoolDeluxeDoorway from "./mainDesign/park-hyatt-room-canph-p0038-one-king-bed-suite-ocean-view-plunge-pool-deluxe-doorway.webp";
+import parkHyattRoomCanphP0032OneKingBedSuiteOceanViewPlungePoolDeluxeBathroom from "./mainDesign/park-hyatt-room-canph-p0032-one-king-bed-suite-ocean-view-plunge-pool-deluxe-bathroom.webp";
+import parkHyattRoomCanphP0020BathroomWithBathtub from "./mainDesign/park-hyatt-room-canph-p0020-bathroom-with-bathtub.webp";
+import parkHyattRoomCanphP0021BedroomInterior from "./mainDesign/park-hyatt-room-canph-p0021-bedroom-interior.webp";
+import parkHyattRoomCanphP0022BedroomOceanView from "./mainDesign/park-hyatt-room-canph-p0022-bedroom-ocean-view.webp";
+import parkHyattRoomCanphP0023DecorDetail from "./mainDesign/park-hyatt-room-canph-p0023-decor-detail.webp";
+import parkHyattRoomCanphP0024DiningArea from "./mainDesign/park-hyatt-room-canph-p0024-dining-area.webp";
+import parkHyattRoomCanphP0025LivingRoom from "./mainDesign/park-hyatt-room-canph-p0025-living-room.webp";
+import parkHyattRoomCanphP0026OceanFrontPrivatePoolTerrace from "./mainDesign/park-hyatt-room-canph-p0026-ocean-front-private-pool-terrace.webp";
+import parkHyattRoomCanphP0027ShowerDetail from "./mainDesign/park-hyatt-room-canph-p0027-shower-detail.webp";
+import parkHyattRoomCanphP0028BathroomBathtub from "./mainDesign/park-hyatt-room-canph-p0028-bathroom-bathtub.webp";
+import parkHyattRoomCanphP0030CoffeeStation from "./mainDesign/park-hyatt-room-canph-p0030-coffee-station.webp";
+import waldorfRoomWaldorfAstoriaCancun206OceanFront2QueenBedsGuestroomQ2rp2 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-206-ocean-front-2-queen-beds-guestroom-q2rp-2.webp";
+import waldorfRoom634DeluxeOceanFrontKingGuestroomK1rv3 from "./mainDesign/waldorf-room-634-deluxe-ocean-front-king-guestroom-k1rv-3.webp";
+import waldorfRoomWaldorfAstoriaCancun1021411b from "./mainDesign/waldorf-room-waldorf-astoria-cancun-1021411b.webp";
+import waldorfRoomWaldorfAstoriaCancun102103 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-102103.webp";
+import waldorfRoomWaldorfAstoriaCancun108PoolViewSwimUp2QueenBedGuestroomQ2lvo from "./mainDesign/waldorf-room-waldorf-astoria-cancun-108-pool-view-swim-up-2-queen-bed-guestroom-q2lvo.webp";
+import waldorfRoomWaldorfAstoriaCancunSuite628e from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suite628e.webp";
+import waldorfRoom628OceanFrontSuiteWithKingSizeBedK1rvx13 from "./mainDesign/waldorf-room-628-ocean-front-suite-with-king-size-bed-k1rvx1-3.webp";
+import waldorfRoom628OceanFrontSuiteWithKingSizeBedK1rvx11 from "./mainDesign/waldorf-room-628-ocean-front-suite-with-king-size-bed-k1rvx1-1.webp";
+import waldorfRoom610DeluxeOceanFrontSuiteWithKingBedK1rvp1 from "./mainDesign/waldorf-room-610-deluxe-ocean-front-suite-with-king-bed-k1rvp1.webp";
+import waldorfRoom636DeluxeOceanFrontSuiteWithKingBedK1rvp12 from "./mainDesign/waldorf-room-636-deluxe-ocean-front-suite-with-king-bed-k1rvp1-2.webp";
+import waldorfRoom610DeluxeOceanFrontSuiteWithKingBedK1rvp12 from "./mainDesign/waldorf-room-610-deluxe-ocean-front-suite-with-king-bed-k1rvp1-2.webp";
+import waldorfRoom636DeluxeOceanFrontSuiteWithKingBedK1rvp1 from "./mainDesign/waldorf-room-636-deluxe-ocean-front-suite-with-king-bed-k1rvp1.webp";
+import waldorfRoomWaldorfAstoriaCancunSuite610d from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suite610d.webp";
+import waldorfRoom636DeluxeOceanFrontSuiteWithKingBedK1rvp11 from "./mainDesign/waldorf-room-636-deluxe-ocean-front-suite-with-king-bed-k1rvp1-1.webp";
+import waldorfRoomWaldorfAstoriaCancunMaster602e from "./mainDesign/waldorf-room-waldorf-astoria-cancun-master602e.webp";
+import waldorfRoomWaldorfAstoriaCancunMaster602b from "./mainDesign/waldorf-room-waldorf-astoria-cancun-master602b.webp";
+import waldorfRoomWaldorfAstoriaCancunMaster602a from "./mainDesign/waldorf-room-waldorf-astoria-cancun-master602a.webp";
+import waldorfRoomWaldorfAstoriaCancun1128290a from "./mainDesign/waldorf-room-waldorf-astoria-cancun-1128290a.webp";
+import waldorfRoomWaldorfAstoriaCancun1128222 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-1128222.webp";
+import waldorfRoomWaldorfAstoriaCunPresidential05 from "./mainDesign/waldorf-room-waldorf-astoria-cun-presidential-05.webp";
+import waldorfRoom326PresidentialSuiteK1zvu14 from "./mainDesign/waldorf-room-326-presidential-suite-k1zvu1-4.webp";
+import waldorfRoomWaldorfAstoriaCancun326PresidentialSuiteK1zvu1 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-326-presidential-suite-k1zvu1.webp";
+import waldorfRoomWaldorfAstoriaCunPresidential08 from "./mainDesign/waldorf-room-waldorf-astoria-cun-presidential-08.webp";
+import waldorfRoom326PresidentialSuiteK1zvu11 from "./mainDesign/waldorf-room-326-presidential-suite-k1zvu1-1.webp";
+import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00039 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suiteamai-diana-balderadsc00039.webp";
+import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00381 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suiteamai-diana-balderadsc00381.webp";
+import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00325 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suiteamai-diana-balderadsc00325.webp";
+import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00071 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suiteamai-diana-balderadsc00071.webp";
+import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00494 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suiteamai-diana-balderadsc00494.webp";
+import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00014 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suiteamai-diana-balderadsc00014.webp";
+import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00099 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suiteamai-diana-balderadsc00099.webp";
+import waldorfRoomWaldorfAstoriaCancunMaster602d from "./mainDesign/waldorf-room-waldorf-astoria-cancun-master602d.webp";
 
 export const AllImages = {
   logo,
@@ -1222,6 +1278,62 @@ export const AllImages = {
   guettawayProgram2026N15,
   guettawayProgram2026N16,
   guettawayProgram2026N17,
+  parkHyattRoomCanphP0007KingRoomInteriorView,
+  parkHyattRoomCanphP0009KingRoomSeatingArea,
+  parkHyattRoomCanphP0014KingRoomTableSeating,
+  parkHyattRoomCanphR0014KingGuestroomView,
+  parkHyattRoomCanphP0002BeverageStation,
+  parkHyattRoomCanphP0004KingRoomBalcony,
+  parkHyattRoomCanphP0005KingRoomEntryArtwork,
+  parkHyattRoomCanphP0033OneKingBedSuiteOceanViewPlungePoolDeluxeView,
+  parkHyattRoomCanphP0034OneKingBedSuiteOceanViewPlungePoolDeluxeLayout,
+  parkHyattRoomCanphP0035OneKingBedSuiteOceanViewPlungePoolDeluxeLivingRoom,
+  parkHyattRoomCanphP0036OneKingBedSuiteOceanViewPlungePoolDeluxeTerracePlunge,
+  parkHyattRoomCanphP0037OneKingBedSuiteOceanViewPlungePoolDeluxeTerrace,
+  parkHyattRoomCanphP0038OneKingBedSuiteOceanViewPlungePoolDeluxeDoorway,
+  parkHyattRoomCanphP0032OneKingBedSuiteOceanViewPlungePoolDeluxeBathroom,
+  parkHyattRoomCanphP0020BathroomWithBathtub,
+  parkHyattRoomCanphP0021BedroomInterior,
+  parkHyattRoomCanphP0022BedroomOceanView,
+  parkHyattRoomCanphP0023DecorDetail,
+  parkHyattRoomCanphP0024DiningArea,
+  parkHyattRoomCanphP0025LivingRoom,
+  parkHyattRoomCanphP0026OceanFrontPrivatePoolTerrace,
+  parkHyattRoomCanphP0027ShowerDetail,
+  parkHyattRoomCanphP0028BathroomBathtub,
+  parkHyattRoomCanphP0030CoffeeStation,
+  waldorfRoomWaldorfAstoriaCancun206OceanFront2QueenBedsGuestroomQ2rp2,
+  waldorfRoom634DeluxeOceanFrontKingGuestroomK1rv3,
+  waldorfRoomWaldorfAstoriaCancun1021411b,
+  waldorfRoomWaldorfAstoriaCancun102103,
+  waldorfRoomWaldorfAstoriaCancun108PoolViewSwimUp2QueenBedGuestroomQ2lvo,
+  waldorfRoomWaldorfAstoriaCancunSuite628e,
+  waldorfRoom628OceanFrontSuiteWithKingSizeBedK1rvx13,
+  waldorfRoom628OceanFrontSuiteWithKingSizeBedK1rvx11,
+  waldorfRoom610DeluxeOceanFrontSuiteWithKingBedK1rvp1,
+  waldorfRoom636DeluxeOceanFrontSuiteWithKingBedK1rvp12,
+  waldorfRoom610DeluxeOceanFrontSuiteWithKingBedK1rvp12,
+  waldorfRoom636DeluxeOceanFrontSuiteWithKingBedK1rvp1,
+  waldorfRoomWaldorfAstoriaCancunSuite610d,
+  waldorfRoom636DeluxeOceanFrontSuiteWithKingBedK1rvp11,
+  waldorfRoomWaldorfAstoriaCancunMaster602e,
+  waldorfRoomWaldorfAstoriaCancunMaster602b,
+  waldorfRoomWaldorfAstoriaCancunMaster602a,
+  waldorfRoomWaldorfAstoriaCancun1128290a,
+  waldorfRoomWaldorfAstoriaCancun1128222,
+  waldorfRoomWaldorfAstoriaCunPresidential05,
+  waldorfRoom326PresidentialSuiteK1zvu14,
+  waldorfRoomWaldorfAstoriaCancun326PresidentialSuiteK1zvu1,
+  waldorfRoomWaldorfAstoriaCunPresidential08,
+  waldorfRoom326PresidentialSuiteK1zvu11,
+  waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00039,
+  waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00381,
+  waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00325,
+  waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00071,
+  waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00494,
+  waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00014,
+  waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00099,
+  waldorfRoomWaldorfAstoriaCancunMaster602d,
 };
 
 

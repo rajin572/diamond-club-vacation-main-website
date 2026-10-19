@@ -41,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       data-scroll-behavior="smooth"
       className={`${outfit.variable} ${cormorantGaramond.variable} h-full antialiased`}
     >
