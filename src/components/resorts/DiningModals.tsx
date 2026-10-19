@@ -6,11 +6,11 @@ import { X, ShieldCheck } from "lucide-react";
 import { AllImages } from "../../../public/images/AllImages";
 
 /**
- * Client request 2026-10-19 for the Diamond Club Reserve Kosher Supervision pop-up: the rabbi's picture comes out (a nicer picture on a
- * background will be supplied) and the "Food To Perfection" text (catering / chef) is not part of it: only the Kosher Supervision text stays.
- * Both are kept, switched off, so they can be turned back on.
+ * Client request 2026-10-19 for the Diamond Club Reserve Kosher Supervision pop-up: the old rabbi picture came out and a nicer one on a
+ * background was supplied (Rabbi Hilu in front of the One Kosher wall, now shown at the top). The "Food To Perfection" text
+ * (catering / chef) is not part of it: only the Kosher Supervision text stays. It is kept, switched off, so it can be turned back on.
  */
-const SHOW_RESERVE_RABBI_PORTRAIT = false;
+const SHOW_RESERVE_RABBI_PORTRAIT = true;
 const SHOW_RESERVE_FOOD_TO_PERFECTION = false;
 
 interface DiningModalProps {
@@ -131,12 +131,12 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
 
             <div className="dcv-brochure-preview-wrap" data-lenis-prevent>
               {SHOW_RESERVE_RABBI_PORTRAIT && (
-              <div className="dcv-dining-modal-portrait-wrap">
+              <div className="dcv-dining-modal-portrait-wrap" style={{ maxWidth: "460px" }}>
                 <Image
-                  src={AllImages.kosherSupervisionRabbi}
+                  src={AllImages.rabbiNissimHiluOneKosher}
                   alt="Rabbi Nissim Hilu, Kosher Supervision"
-                  width={480}
-                  height={776}
+                  width={1371}
+                  height={1148}
                   priority
                 />
               </div>
@@ -184,6 +184,62 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
   );
 }
 
+/** Diamond Club Reserve / Blue chef pop-up: Donny Rogoff, the client's text word for word (2026-10-19). */
+function DonnyRogoffModal({ onClose }: { onClose: () => void }) {
+  return (
+    <div className="dcv-brochure-overlay" role="dialog" aria-modal="true" onClick={onClose}>
+      <div className="dcv-brochure-modal dcv-dining-popup-modal" onClick={(e) => e.stopPropagation()}>
+        <button type="button" className="dcv-brochure-close" onClick={onClose} aria-label="Close chef modal">
+          <X size={20} />
+        </button>
+
+        <div className="dcv-brochure-header">
+          <div className="dcv-brochure-kicker">CULINARY EXCELLENCE · PASSOVER 2027</div>
+          <h2 className="dcv-brochure-title">Chef Donny Rogoff</h2>
+          <p className="dcv-brochure-sub">Culinary Director | Diamond Club Vacations</p>
+        </div>
+
+        <div className="dcv-brochure-preview-wrap" data-lenis-prevent>
+          <div className="dcv-dining-modal-banner-wrap">
+            <Image
+              src={AllImages.chefDonnyRogoffCard}
+              alt="Executive Chef Donny Rogoff"
+              width={640}
+              height={256}
+              style={{ width: "100%", height: "auto", display: "block" }}
+              priority
+            />
+          </div>
+
+          <div className="dcv-dining-modal-bio">
+            <p>
+              With a passion for exceptional food, creative cuisine, and genuine hospitality, <strong>Chef Donny Rogoff</strong> brings his culinary expertise and thoughtful approach to his role as Culinary Director of Diamond Club Vacations.
+            </p>
+            <p>
+              Combining a deep appreciation for traditional flavors with fresh, contemporary ideas, Chef Rogoff focuses on creating memorable dining experiences that bring families and friends together around the table. His approach emphasizes quality ingredients, flavorful dishes, diverse menus, and careful attention to detail.
+            </p>
+            <p>
+              As Culinary Director, Chef Rogoff works closely with our talented chefs and kitchen teams to develop and oversee a comprehensive culinary program designed to offer something for everyone. From beautifully prepared Yom Tov meals and abundant holiday buffets to casual family dining, specialty stations, and delicious Chol Hamoed offerings, every menu is thoughtfully created with variety, quality, and guest satisfaction in mind.
+            </p>
+            <p>
+              His commitment to consistency, creativity, and warm hospitality ensures that guests of all ages can look forward to wonderful meals and enjoyable dining experiences throughout their stay.
+            </p>
+            <p>
+              <strong>Diamond Club Vacations is delighted to have Chef Donny Rogoff leading our culinary program for Pesach 2027</strong>, bringing together delicious food, generous variety, and the welcoming atmosphere that makes celebrating Pesach with family and friends so special.
+            </p>
+          </div>
+
+          <div className="dcv-dining-modal-footer">
+            <button type="button" className="dcv-btn dcv-btn--primary" onClick={onClose}>
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function CelebrityChefsModal({ isOpen, onClose, programId }: DiningModalProps) {
   useEffect(() => {
     if (!isOpen) return;
@@ -203,6 +259,9 @@ export function CelebrityChefsModal({ isOpen, onClose, programId }: DiningModalP
   if (!isOpen) return null;
 
   const isGuettaway = programId === "guttaway" || programId === "guettaway";
+
+  // Guettaway has its own chef (Chaim Levy); Diamond Club Reserve and Blue use Donny Rogoff.
+  if (!isGuettaway) return <DonnyRogoffModal onClose={onClose} />;
 
   return (
     <div
@@ -253,7 +312,7 @@ export function CelebrityChefsModal({ isOpen, onClose, programId }: DiningModalP
             </p>
             <p>
               <strong>
-                {isGuettaway ? "Guettaway, A Diamond Club Production," : "Diamond Club Vacations"} is delighted to welcome Chef Chaim Levy to our culinary lineup for Pesach 2027.
+                Guettaway, A Diamond Club Production, is delighted to welcome Chef Chaim Levy to our culinary lineup for Pesach 2027.
               </strong>{" "}
               His passion for exceptional food and dedication to the dining experience will contribute to an unforgettable celebration of flavor, tradition, and world-class hospitality.
             </p>

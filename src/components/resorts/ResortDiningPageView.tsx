@@ -47,8 +47,9 @@ export function ResortDiningPageView({
 
   const supervisionImage = isGuettaway
     ? AllImages.kosherGettSupervision
-    : AllImages.reserveKosherSupervision;
-  const chefImage = AllImages.chefChaimLevyCard;
+    : AllImages.rabbiNissimHiluOneKosher; // Reserve: Rabbi Hilu in front of the One Kosher wall (client 2026-10-19)
+  // Chaim Levy is the Guettaway chef only; Diamond Club Reserve (and Blue) go back to Donny Rogoff (client 2026-10-19).
+  const chefImage = isGuettaway ? AllImages.chefChaimLevyCard : AllImages.chefDonnyRogoffCard;
   const heroImage = dining?.images?.[0] ?? data.heroImage;
 
   const navItems: DesignLink[] = buildHotelSubNav({
@@ -81,7 +82,6 @@ export function ResortDiningPageView({
       <Wrap className="dcv-wrap--stack">
         <SectionTitle
           title="Passover Culinary Program"
-          description="Under the auspices of esteemed rabbinical authorities, our culinary program presents private and communal Seders, oceanfront signature restaurants, prime steakhouse cuts, artisanal bakeries, all-day tea rooms, and poolside refreshments."
         />
 
         <div className="dcv-grid2">
@@ -103,7 +103,8 @@ export function ResortDiningPageView({
               alt="Kosher Supervision"
               sizes="(max-width: 900px) 100vw, 50vw"
               priority={false}
-              style={{ objectPosition: isGuettaway ? "center top" : "center" }}
+              // The Guettaway banner is a wide wordmark (2048x725): show it whole (contain), never cropped (client 2026-10-19).
+              style={isGuettaway ? { objectFit: "contain", backgroundColor: "#fff" } : { objectPosition: "center 20%" }}
             />
             <div className="dcv-body">
               <div className="dcv-card-tag">Glatt Kosher · Cholov Yisroel</div>
@@ -131,10 +132,10 @@ export function ResortDiningPageView({
           >
             <Image
               src={chefImage}
-              alt="Celebrity Chefs"
+              alt={isGuettaway ? "Executive Chef Chaim Levy" : "Executive Chef Donny Rogoff"}
               sizes="(max-width: 900px) 100vw, 50vw"
               priority={false}
-              style={{ objectPosition: "center top" }}
+              style={{ objectFit: "contain", backgroundColor: "#fff" }}
             />
             <div className="dcv-body">
               <div className="dcv-card-tag">Master Chefs · Fine Dining</div>
@@ -153,7 +154,7 @@ export function ResortDiningPageView({
       {/* SECTION 2: Complete Passover Restaurant Venues Grid */}
       {dining && dining.items.length > 0 && (
         <Wrap id="restaurants" className="dcv-wrap--stack">
-          <SectionTitle title={dining.title} description={dining.description} />
+          <SectionTitle title={dining.title} />
 
           <div className="dcv-grid3">
             {dining.items.map((item) => (
@@ -198,7 +199,6 @@ export function ResortDiningPageView({
       <Wrap className="dcv-wrap--stack">
         <SectionTitle
           title="Holiday Culinary Experiences"
-          description="Crafted exclusively for our guests throughout the entire duration of Yom Tov and Chol HaMoed."
         />
 
         <div className="dcv-grid4">
@@ -253,7 +253,6 @@ export function ResortDiningPageView({
         <Wrap id="gallery" className="dcv-wrap--stack">
           <SectionTitle
             title="Culinary Photo Gallery"
-            description={`Gastronomic artistry and dining venues at ${data.resortName}.`}
           />
           <PhotoGallery images={dining.images} alt={`${data.resortName} dining`} />
         </Wrap>

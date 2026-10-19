@@ -109,7 +109,7 @@ export function ProgramSections({ offeringId, programId, sections, resortId }: P
                 <span id="attractions" className="sr-only" tabIndex={-1} />
               </>
             )}
-            <SectionTitle title={section.title} description={section.description} />
+            <SectionTitle title={section.title} />
           <div className="dcv-card-blocks">
             {section.blocks.map((block, index) => (
               <div key={index} className={GRID_CLASS[block.columns]}>

@@ -924,10 +924,15 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
         image: AllImages.stregisMarriottPoolCabanas,
         description: "Ocean view cabana with private swim-out pool, enhanced amenities, exclusive F&B selection and personalized service.",
         stats: [
+          { label: "Type", value: "Beach cabanas" },
           { label: "Hours", value: "All day" },
           { label: "Location", value: "Beach" },
+          { label: "Fee", value: "Included" },
         ],
-        groups: [{ title: "Schedule", items: ["All day"] }],
+        groups: [
+          { title: "Schedule", items: ["All day"] },
+          { title: "Features", items: ["Ocean view", "Private swim-out pool", "Enhanced amenities", "Exclusive F&B selection", "Personalized service"] },
+        ],
         gallery: [AllImages.stregisMarriottPoolCabanas],
       },
       {

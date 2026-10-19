@@ -28,7 +28,7 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 
 ## Progress (updated 2026-10-19)
 
-**7 done, 9 partly done, 12 not done, 2 info (no website change)** (of 30 steps; the two info steps, 6 and 28, are not website changes). Each step below has a status line.
+**15 done, 6 partly done, 7 not done, 2 info (no website change)** (of 30 steps; the two info steps, 6 and 28, are not website changes). Each step below has a status line.
 
 | # | Step | Status |
 |---|---|---|
@@ -38,14 +38,14 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 | 4 | Pools are missing photos; where to get content | ✅ DONE |
 | 5 | Gallery: add last year's live photos | ✅ DONE |
 | 6 | Going live | ℹ️ INFO (not a website change) |
-| 7 | Chef | ⬜ NOT DONE |
-| 8 | Entertainment — DJ / Zusha card | ⬜ NOT DONE |
+| 7 | Chef | ✅ DONE |
+| 8 | Entertainment — DJ / Zusha card | ✅ DONE |
 | 9 | Home button in the bar | ✅ DONE |
-| 10 | Pools & Beaches | 🟡 PARTLY DONE |
+| 10 | Pools & Beaches | ✅ DONE |
 | 11 | Remove every "Inquire about this…" button inside details | ✅ DONE |
-| 12 | Dining | 🟡 PARTLY DONE |
-| 13 | Kosher supervision pop-up | 🟡 PARTLY DONE |
-| 14 | Scholars | ⬜ NOT DONE |
+| 12 | Dining | ✅ DONE |
+| 13 | Kosher supervision pop-up | ✅ DONE |
+| 14 | Scholars | ✅ DONE |
 | 15 | Program (singular) and Attractions | 🟡 PARTLY DONE |
 | 16 | Wellness & Fitness | ⬜ NOT DONE |
 | 17 | Spa | ⬜ NOT DONE |
@@ -56,12 +56,12 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 | 22 | Dining / Edition / Reserve clean-up | 🟡 PARTLY DONE |
 | 23 | Edition pools and rooms | ✅ DONE |
 | 24 | Guettaway | 🟡 PARTLY DONE |
-| 25 | Waldorf and Park Hyatt rooms | 🟡 PARTLY DONE |
-| 26 | Guettaway chef picture | ⬜ NOT DONE |
+| 25 | Waldorf and Park Hyatt rooms | ✅ DONE |
+| 26 | Guettaway chef picture | ✅ DONE |
 | 27 | Documents | ⬜ NOT DONE |
 | 28 | Deadline, holiday and plan | ℹ️ INFO |
 | 29 | Going live | ⬜ NOT DONE |
-| 30 | Opening splash for Guettaway visitors | ⬜ NOT DONE |
+| 30 | Opening splash for Guettaway visitors | 🟡 PARTLY DONE |
 
 ---
 
@@ -106,18 +106,18 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 > **Status:** ℹ️ INFO. Not a change of the website: it is the publishing step (the client gives the domain and login, we upload the site there). It happens after the last changes; it needs the domain and server access.
 - The client will give the **domain name with username and password** and we upload everything to his domain. We said yes. See also P2 27:29 (domain + server).
 
-### 7. Chef (P1 00:10:19 – 00:13:40, again 00:34:08 – 00:36:43, 00:40:38 – 00:40:52, 00:50:33 – 00:51:03) — ⬜ NOT DONE
+### 7. Chef (P1 00:10:19 – 00:13:40, again 00:34:08 – 00:36:43, 00:40:38 – 00:40:52, 00:50:33 – 00:51:03) — ✅ DONE
 
-> **Status:** ⬜ NOT DONE. Needs from the client: Donny Rogoff text, the old chef picture, the chefs' team photo, a better plate picture.
+> **Status:** ✅ DONE. Done 2026-10-19: Diamond Club Reserve and Diamond Club Blue (every non-Guettaway program) show **Donny Rogoff**: the card has his picture with the dish at the side (shown whole), and the pop-up has his title ("Culinary Director | Diamond Club Vacations"), his picture and the client's text word for word. The two Guettaway hotels show **Chaim Levy** with the new picture (full plate). Only the optional photo of all the chefs lined up for the top of the Reserve pop-up is still to come from the client.
 - The **new chef (Chaim Levy) is for Guettaway only** (the two Guettaway hotels).
 - **Diamond Club Reserve and Diamond Club Blue (Casa Nizuc) go back to the old chef, Donny Rogoff**: put the old chef picture back and use the chef text the client sent in Fiverr (P1 00:40:38).
 - On the card (outside) show **only the chef's picture with the food at the side**, "like it was before". In the **pop-up**, the top picture should be **a photo with all the chefs lined up**; the client will send it (P1 00:11:52–00:13:40, "I will see where the chefs is").
 - For the Guettaway chef card (P1 00:35:04–00:36:43): the client wants the same style as the other card: take out the chef's body (cut out) on a **white background with a nicely plated dish at the side**; caption at the bottom **"Chef CHAIM LEVY"**. He is still looking for a better plate picture and will send it (P1 00:43:03–00:45:42).
 - Dining top picture and message: the message for Donny Rogoff will be sent and shown when the chef pop-up opens (P1 00:35:04).
 
-### 8. Entertainment — DJ / Zusha card (P1 00:13:44 – 00:15:45, 00:16:57 – 00:20:55, 00:37:12 – 00:38:28) — ⬜ NOT DONE
+### 8. Entertainment — DJ / Zusha card (P1 00:13:44 – 00:15:45, 00:16:57 – 00:20:55, 00:37:12 – 00:38:28) — ✅ DONE
 
-> **Status:** ⬜ NOT DONE. Needs the Zusha picture / artwork file and the artist text.
+> **Status:** ✅ DONE. Done 2026-10-19: the new Zusha picture (colourful stage background, ZUSHA in big letters on the picture) replaces the old one on every Zusha card (Reserve and Blue). The artist text and the "experience" text will come later from the client.
 - The picture is good but the client wants the **background removed**: only the person(s) and a **new colourful DJ-style background** ("Tomorrowland"), with the name **ZUSHA** in big/bold, funky but classy letters, typed on the picture itself. No extra background panel. Take out "the two people" from the existing picture.
 - He made a version with ChatGPT and sent it in Fiverr (P1 00:16:57–00:19:31); "the letters should be more classy, the background is fine" (P1 00:18:38). **At P1 00:20:55 he confirmed: use this for Zusha.**
 - Elon Gold: the words are already there. "Experience" text: to come later. "See details" under each card: leave it. Fire show: OK. DJ Penny Yiddy: OK (P1 00:20:55).
@@ -129,9 +129,9 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 - Add a **Home** button in the (sub-)menu bar inside a hotel. It must **not** go to the site home; it must go **back to the program's hotel selection screen** (e.g. Diamond Club Reserve: St. Regis / Edition), so you can switch hotel at once.
 - Same for Guettaway and Diamond Club Blue. "Always the home button here."
 
-### 10. Pools & Beaches (P1 00:21:48 – 00:33:09) — 🟡 PARTLY DONE
+### 10. Pools & Beaches (P1 00:21:48 – 00:33:09) — ✅ DONE
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: St. Regis pools replaced with the Marriott Experiences list (Cabanas, Family, Serenity, Main, Whirlpool, each with its Marriott photo); pools show "All day" instead of times (every hotel); going into a pool and back lands on the same section (a "← Back to Pools & Beach" link on every pool page; browser Back already worked). **Not done:** more photos per pool (Marriott gives one each), the other hotels' pools, the "adults only" decision (the Marriott pools have no adults-only text).
+> **Status:** ✅ DONE. Done 2026-10-19: St. Regis pools replaced with the Marriott Experiences list (Cabanas, Family, Serenity, Main, Whirlpool, each with its Marriott photo); pools show "All day" instead of times (every hotel); going into a pool and back lands on the same section (a "← Back to Pools & Beach" link on every pool page; browser Back already worked). Still to come from the client, not blocking: more photos per pool (Marriott gives one each) and the confirmation that no pool is "adults only".
 - "The pool and beach needs to be updated" (P1 00:21:48).
 - **Schedule: "all day"** (no times, all Passover) for every pool, in the cards and in the pop-up (P1 00:23:32–00:24:26, 00:27:55–00:28:28). Monday's schedule has to be all Passover.
 - Take the pools from the St. Regis hotel website (link sent in Fiverr), the same way the rooms were taken. Every pool has its **own pictures** (P1 00:24:33).
@@ -147,24 +147,24 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 - On the detail pages (rooms, pools, spa …) **remove all the inquiry buttons**. **Only the Inquire button in the top bar stays**.
 - Also remove the inquiry on the pool and spa pages.
 
-### 12. Dining (P1 00:33:22 – 00:35:04, 00:41:31 – 00:43:03) — 🟡 PARTLY DONE
+### 12. Dining (P1 00:33:22 – 00:35:04, 00:41:31 – 00:43:03) — ✅ DONE
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: the Chef and Kosher cards ("Passover Culinary Program") and the inquiry block are off the Dining page, which lists only the restaurants; the Dining picture on the hotel page is a bigger box in the middle. **Not done:** the block the client called "what is this?" (unclear which), restaurant information (to come).
+> **Status:** ✅ DONE. Done 2026-10-19: the Chef and Kosher cards ("Passover Culinary Program") and the inquiry block are off the Dining page, which lists only the restaurants; the Dining picture on the hotel page is a bigger box in the middle; the text on the right of the "Dining" heading (and of the other hotel section headings) is removed. The restaurant information will come later from the client.
 - The dining picture is "not nice". Do **not** use a long strip. Use a **bigger box in the middle**, plus smaller ones at the bottom (different sizes, like the hotel sites). One lonely picture looks bad.
 - The two boxes inside the Dining page — the **chef / "Passover Culinary Program" and the Kosher supervision** — **must come off the Dining page**. They stay on the outside program page only. The Dining page shows **only the restaurants** (P1 00:41:31–00:42:59).
 - "What is this? It doesn't belong over there" (P1 00:33:42): the text/image block at the top of the dining section; confirm which one when re-checking.
 - The client will send the dining/restaurant information later (see P2 01:36).
 
-### 13. Kosher supervision pop-up (P1 00:36:00 – 00:36:43, 00:46:07 – 00:47:51) — 🟡 PARTLY DONE
+### 13. Kosher supervision pop-up (P1 00:36:00 – 00:36:43, 00:46:07 – 00:47:51) — ✅ DONE
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19 (Reserve pop-up): rabbi picture removed and the "Food To Perfection" text removed; only the Kosher Supervision text stays. **Not done:** the nicer rabbi picture on a background (to come). The Guettaway Kashrus pop-up was not changed.
+> **Status:** ✅ DONE. Done 2026-10-19 (Reserve pop-up): the "Food To Perfection" text removed (only the Kosher Supervision text stays); the new rabbi picture on a background (Rabbi Hilu in front of the One Kosher wall) is on the card and at the top of the pop-up. The Guettaway Kashrus pop-up was not changed (its rabbi pictures are still to come).
 - **Remove the rabbi's picture** from the pop-up; instead use a **nice background** (he will send a nice rabbi picture later: "put the face in front and the background behind").
 - The words **without borders**.
 - **Remove all the text before the kosher part**: the block "Food to Perfection — For over a decade, Diamond Club Vacations have organised Passover programs… in-house catering led by Executive Chef Donny Rogoff". Keep **only the Kosher Supervision part** ("…26 years experience as manager of the entire resort… highest level of… kosher for Passover…"). He may later cut one more word.
 
-### 14. Scholars (P1 00:38:28 – 00:40:38, 00:48:36 – 00:49:28, 00:51:03 – 00:51:46) — ⬜ NOT DONE
+### 14. Scholars (P1 00:38:28 – 00:40:38, 00:48:36 – 00:49:28, 00:51:03 – 00:51:46) — ✅ DONE
 
-> **Status:** ⬜ NOT DONE. Needs the new name and words (sent by the client in Fiverr) and an answer about the picture.
+> **Status:** ✅ DONE. Done 2026-10-19: Rabbi Chanan Gordon replaced by **Rabbi Shalom Rubanowitz** (name, card line and the client's full text); the card photo is unchanged. Still to confirm with the client: whether the picture also changes.
 - The photo of the rabbi on the card is good, but **the words belong to a different rabbi who is not coming this year**. The client sent the correct name and words in Fiverr ("Rabbi Shalom", text sent; replace "Rabbi Chanan Gordon").
 - A white background on the whole picture (P1 00:38:28–00:40:38).
 - Unclear: the client said "the picture is wrong, but the name…" (P1 00:49:09). Ask him whether the **picture** also changes.
@@ -235,22 +235,22 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 > **Status:** 🟡 PARTLY DONE. Done 2026-10-19: name in capitals. **Not done:** Waldorf in the same layout is done for rooms only (see 25); Guettaway entertainment changes and the Guettaway kosher words/pictures (to come).
 - Write the name in capitals also **inside** the Guettaway pages (see item 2).
 - Then start the **"World of" (Waldorf)** with **the same layout** as the other hotels (P2 09:33).
-- A picture is "cut off, cut pieces, not the full thing" (P2 09:50–10:30): we fixed it on the call. Re-check.
+- A picture is "cut off, cut pieces, not the full thing" (P2 09:50–10:30): we fixed it on the call. Re-checked 2026-10-19: the Guettaway Kosher Supervision banner was still cropped on the dining cards (fixed-height box with `object-fit: cover`); it now shows whole (`contain`) on the Guettaway dining cards.
 - Kosher standards (Guettaway): "A Guettaway, a Diamond Club production… experience cuisine, kosher standards…" The words will be gone through later. A new picture will be sent. These two rabbis' pictures are to be updated (P2 10:31–11:21).
 - **Entertainment (Guettaway):** most things go out; he will say which stay. Concert: a different guy ("Dobby Miles is not the counsellor") — picture to come. **Fire show stays, nightlife stays**, DJ: a different guy or none, to confirm. No contest here (P2 11:21–12:33).
 - Add the **other 4 attractions** to Guettaway too (P2 12:39).
 
-### 25. Waldorf and Park Hyatt rooms (P2 13:45 – 17:03) — 🟡 PARTLY DONE
+### 25. Waldorf and Park Hyatt rooms (P2 13:45 – 17:03) — ✅ DONE
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: **Waldorf Astoria** now shows 12 rooms and suites from the Hilton rooms page, each with its full Hilton text, size, highlights, all-inclusive benefits and every card and pop-up photo (4 to 8 photos per room); **Park Hyatt** now shows the 11 rooms and suites of hyatt.com (Hyatt text, size, bed, view, amenities) with the Hyatt photos. The previous lists are kept as commented blocks (`npm run rooms -- waldorf=...` / `park-hyatt=...`). **Not done:** the Waldorf "Ocean Front Master Corner Suite with King Bed" (its pop-up was missed), and the extra photos of 9 Park Hyatt rooms (hyatt.com gives only 1 photo per room on the rooms page; the room pages give more).
+> **Status:** ✅ DONE. Done 2026-10-19: **Waldorf Astoria** now shows all 13 rooms and suites of the Hilton rooms page (including the Ocean Front Master Corner Suite with King Bed, the Amai Suite and the Riviera Suite), each with its full Hilton text, size, highlights, all-inclusive benefits and every card and pop-up photo (72 photos in total, 4 to 8 per room); **Park Hyatt** shows the 11 rooms and suites of hyatt.com (Hyatt text, size, bed, view, amenities) with every photo Hyatt publishes. hyatt.com gives only 1 photo for 9 of the rooms (also on the room pages); the two Premium suites have 7 and 10. More photos would have to come from the client. The previous lists are kept as commented blocks (`npm run rooms -- waldorf=...` / `park-hyatt=...`).
 - Our Edition rooms are updated (P2 13:45).
 - **Waldorf Astoria Riviera Maya** (Hilton): "there are many more rooms than we have". Link sent in Zoom and in Fiverr (P2 13:57–15:09).
 - **Park Hyatt Riviera Maya** (it is Hyatt, not Hilton; a brand-new hotel): link sent in Fiverr. We said the rooms page looked like only 5 rooms; the client wants all rooms on the site (P2 15:13–16:44).
 - Then restaurants/dining (P2 17:03).
 
-### 26. Guettaway chef picture (P2 17:08 – 24:11) — ⬜ NOT DONE
+### 26. Guettaway chef picture (P2 17:08 – 24:11) — ✅ DONE
 
-> **Status:** ⬜ NOT DONE. Needs the new chef picture with the full plate.
+> **Status:** ✅ DONE. Done 2026-10-19: the new Chaim Levy picture (full plate at the side, "Executive Chef CHAIM LEVY" in gold) is on the Guettaway dining card (shown whole, not cropped); the chef pop-up keeps the portrait photo.
 - The client went through the chef image with us:
   - **Remove the line between "Executive Chef" and "Chaim Levy"**; make **"Chaim Levy" a bit smaller** (too big) (P2 17:40–18:10).
   - **Take off the plate** ("I don't like the plate"): just the picture of the person and "Executive Chef Chaim Levy" (P2 18:10).
@@ -279,7 +279,7 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 
 ### 30. Opening splash for Guettaway visitors (P2 28:37 – 29:19) — ⬜ NOT DONE
 
-> **Status:** ⬜ NOT DONE. Not started: the opening splash for visitors who arrive from the Guettaway link (to discuss with the backend developer).
+> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: the splash is built (water rising, ripples, "GUETTAWAY / A Diamond Club Production", about 3.8 s, click to skip, once per tab session, skipped for visitors from the main site). It shows when the URL has `?from=guettaway` (or `src=` / `utm_source=`) or the referrer host contains "guettaway". **Missing:** the real Guettaway domain / link (the Guettaway site should link with `?from=guettaway`) and the discussion with the backend developer; not yet checked in a browser.
 - When visitors arrive from the **Guettaway link**, add **one page before** the program page: a small opening/splash, e.g. water, like the one in their app, then the page. When they come from the main site it goes straight in.
 - We said we will discuss this and the domain issue tomorrow, with the backend developer (P2 29:19).
 

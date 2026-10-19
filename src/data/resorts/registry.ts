@@ -15,7 +15,8 @@ function withAllDayPools(data: ResortData): ResortData {
   if (!data.pools) return data;
   const items = data.pools.items.map((item): ResortDetailItem => ({
     ...item,
-    stats: item.stats?.map((stat) => (stat.label === "Hours" ? { ...stat, value: "All day" } : stat)),
+    // No "Fee" line on pool details (client 2026-10-19); the Fee values stay in the hotel data files.
+    stats: item.stats?.filter((stat) => stat.label !== "Fee").map((stat) => (stat.label === "Hours" ? { ...stat, value: "All day" } : stat)),
     groups: item.groups?.map((group) => (group.title === "Schedule" ? { ...group, items: ["All day"] } : group)),
   }));
   return { ...data, pools: { ...data.pools, items } };

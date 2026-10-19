@@ -30,15 +30,18 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
         },
       },
       {
-        id: "rabbi-chanan-gordon",
-        title: "Rabbi Chanan Gordon",
-        description: "Prominent Torah scholar, attorney, and inspiring lecturer known for his articulate, intellectually stimulating presentations.",
+        // Replaces Rabbi Chanan Gordon (not coming this year). Name and text sent by the client 2026-10-19; the card photo is unchanged.
+        id: "rabbi-shalom-rubanowitz",
+        title: "Rabbi Shalom Rubanowitz",
+        description: "Engaging speaker and respected educator who brings a unique blend of inspiration, wisdom, and heartfelt connection to audiences of all ages.",
         image: AllImages.reserveScholarChananGordon,
         details: {
-          title: "Rabbi Chanan Gordon",
+          title: "Rabbi Shalom Rubanowitz",
           paragraphs: [
-            "Rabbi Chanan (Shayan) Gordon is a prominent Torah scholar, attorney, and acclaimed international lecturer known for his articulate, intellectually stimulating presentations that seamlessly bridge classical Jewish thought with contemporary global perspectives.",
-            "Holding advanced degrees in law and rabbinics, Rabbi Gordon captivates audiences worldwide with insightful Shiurim, dynamic panel discussions, and inspiring holiday sermons that enrich the Pesach experience for scholars and seekers alike.",
+            "With his captivating speaking style, genuine warmth, and profound appreciation for faith and tradition, Rabbi Shalom Rubanowitz is an engaging speaker and respected educator who brings a unique blend of inspiration, wisdom, and heartfelt connection to audiences of all ages.",
+            "Known for his ability to communicate meaningful insights in a relatable and engaging manner, Rabbi Rubanowitz delivers thought-provoking lectures and uplifting messages that connect timeless teachings with the realities of modern life. His presentations explore themes of faith, personal growth, family values, and the deeper meaning of our traditions, offering fresh perspectives that leave audiences both inspired and enriched.",
+            "With a personable approach and a genuine passion for connecting with others, Rabbi Rubanowitz has a special ability to create an atmosphere of warmth, reflection, and spiritual inspiration. Whether delivering an insightful Yom Tov lecture, sharing meaningful life lessons, or engaging with guests in personal conversations, his presence adds depth and significance to the holiday experience.",
+            "Diamond Club Vacations is delighted to welcome Rabbi Shalom Rubanowitz to our distinguished lineup of inspirational speakers at The EDITION Riviera Maya for Pesach 2027. His engaging presentations, meaningful insights, and welcoming personality will contribute to an extraordinary Yom Tov experience that brings together spiritual enrichment, cherished traditions, exceptional hospitality, and the finest in luxury beachfront living.",
           ],
         },
       },

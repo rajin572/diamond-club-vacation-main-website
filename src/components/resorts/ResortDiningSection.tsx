@@ -30,17 +30,16 @@ export function ResortDiningCards({
   const isGuettaway = programId === "guettaway" || resortId === "waldorf-astoria" || resortId === "park-hyatt";
   const supervisionImage = isGuettaway
     ? AllImages.kosherGettSupervision
-    : AllImages.reserveKosherSupervision;
-  const chefImage = AllImages.chefChaimLevyCard;
+    : AllImages.rabbiNissimHiluOneKosher; // Reserve: Rabbi Hilu in front of the One Kosher wall (client 2026-10-19)
+  // Chaim Levy is the Guettaway chef only; Diamond Club Reserve (and Blue) go back to Donny Rogoff (client 2026-10-19).
+  const chefImage = isGuettaway ? AllImages.chefChaimLevyCard : AllImages.chefDonnyRogoffCard;
   const diningImage = dining.images[0] ?? AllImages.stregis2;
   const diningPageUrl = diningHref(offeringId, programId, resortId);
 
   return (
     <Wrap className="dcv-wrap--stack">
-      <SectionTitle
-        title="Dining"
-        description="Curated kosher culinary excellence, acclaimed master chefs, and strict Glatt Kosher certification."
-      />
+      {/* No text on the right of the title (client 2026-10-19). */}
+      <SectionTitle title="Dining" />
 
       <div className="dcv-dining-blocks">
         {/* TOP: Dining Card - Navigates to dedicated dining page */}
@@ -86,7 +85,8 @@ export function ResortDiningCards({
               alt="Kosher Supervision"
               sizes="(max-width: 900px) 100vw, 50vw"
               priority={false}
-              style={{ objectPosition: isGuettaway ? "center top" : "center" }}
+              // The Guettaway banner is a wide wordmark (2048x725): show it whole (contain), never cropped (client 2026-10-19).
+              style={isGuettaway ? { objectFit: "contain", backgroundColor: "#fff" } : { objectPosition: "center 20%" }}
             />
             <div className="dcv-body">
               <h3>Kosher Supervision</h3>
@@ -110,10 +110,10 @@ export function ResortDiningCards({
           >
             <Image
               src={chefImage}
-              alt="Celebrity Chefs"
+              alt={isGuettaway ? "Executive Chef Chaim Levy" : "Executive Chef Donny Rogoff"}
               sizes="(max-width: 900px) 100vw, 50vw"
               priority={false}
-              style={{ objectPosition: "center top" }}
+              style={{ objectFit: "contain", backgroundColor: "#fff" }}
             />
             <div className="dcv-body">
               <h3>Celebrity Chefs</h3>

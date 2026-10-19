@@ -31,10 +31,12 @@ import reserveEntertainmentDjPinnyYiddi from "./mainDesign/reserve-entertainment
 import reserveEntertainmentNightlife from "./mainDesign/reserve-entertainment-nightlife.png";
 import rabbiLawrenceHajioff from "./rabbi-lawrence-hajioff.jpg";
 import rabbiNissimHilu from "./rabbi-nissim-hilu.jpg";
+import rabbiNissimHiluOneKosher from "./rabbi-nissim-hilu-one-kosher.jpg";
 import rabbiEliStefanskyDafyomi from "./rabbi-eli-stefansky-dafyomi.jpg";
 import kosherGettSupervision from "./kosher-gett-supervision.jpg";
 import chefChaimLevy from "./chef-chaim-levy.jpg";
 import chefChaimLevyCard from "./chef-chaim-levy-card.jpg";
+import chefDonnyRogoffCard from "./chef-donny-rogoff-card.webp";
 import rabbiNissimHiluCard from "./rabbi-nissim-hilu-card.jpg";
 import zushaConcert from "./zusha.jpeg";
 
@@ -679,6 +681,7 @@ export const AllImages = {
   kosherGettSupervision,
   chefChaimLevy,
   chefChaimLevyCard,
+  chefDonnyRogoffCard,
   rabbiNissimHiluCard,
   zushaConcert,
 
@@ -1150,6 +1153,7 @@ export const AllImages = {
   dcvDiningKitchenDairyRestaurant,
   dcvDiningKitchen,
   kosherSupervisionRabbi,
+  rabbiNissimHiluOneKosher,
   rabbiLawrenceHajioffFace,
   rabbiLawrenceHajioffNew,
   series: {

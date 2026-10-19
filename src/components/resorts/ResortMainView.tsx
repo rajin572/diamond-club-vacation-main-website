@@ -107,7 +107,6 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
       <Wrap id="overview">
         <SectionTitle
           title={data.overview.title || "Hotel"}
-          description={data.overview.description || "Accommodations, oceanfront pools, restorative wellness, and private sanctuaries."}
         />
         <div className={overviewGridClass(overviewCards.length)}>
           {overviewCards.map((card) => (
@@ -149,7 +148,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
 
       {/* Details 1: Rooms & Suites */}
       <Wrap id="rooms" className="dcv-wrap--stack">
-        <SectionTitle title={rooms.title} description={rooms.description} />
+        <SectionTitle title={rooms.title} />
         <div className="dcv-roomlist">
           {rooms.items.map((room) => (
             <RoomCard
@@ -166,7 +165,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
       {/* Details 2: Pools & Beaches */}
       {pools && (
         <Wrap id="pools" className="dcv-wrap--stack">
-          <SectionTitle title={pools.title} description={pools.description} />
+          <SectionTitle title={pools.title} />
           <VenueChips
             label={`${data.resortName} pools`}
             items={pools.items}
@@ -179,7 +178,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
       {/* Details 4: Wellness & Fitness */}
       {wellness && (
         <Wrap id="wellness" className="dcv-wrap--stack">
-          <SectionTitle title={wellness.title} description={wellness.description} />
+          <SectionTitle title={wellness.title} />
           <div className="dcv-gallery-tabs">
             {spa && !spa.section && (
               <Link className="dcv-on" href={spaHref(offeringId, programId, data.resortId)}>
@@ -199,7 +198,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
       {/* Details 5: Spa */}
       {spa?.section && (
         <Wrap id="spa" className="dcv-wrap--stack">
-          <SectionTitle title={spa.section.title} description={spa.section.description} />
+          <SectionTitle title={spa.section.title} />
           <div className="dcv-gallery-tabs">
             <Link className="dcv-on" href={spaHref(offeringId, programId, data.resortId)}>
               {spa.item.title} details →
@@ -211,7 +210,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
 
       {/* Details 6: Gallery */}
       <Wrap id="gallery" className="dcv-wrap--stack">
-        <SectionTitle title={gallery.title} description={gallery.description} />
+        <SectionTitle title={gallery.title} />
         <PhotoGallery images={gallery.images} alt={`${data.resortName} gallery`} />
       </Wrap>
     </>
