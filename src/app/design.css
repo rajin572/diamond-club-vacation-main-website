@@ -334,6 +334,12 @@
   max-width: 960px;
   text-align: center;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  /* Every banner title is written in capitals (client request 2026-10-19), e.g. "THE RIVIERA MAYA EDITION AT KANAI". */
+  text-transform: uppercase;
+}
+/* The "A Diamond Club Production" line under GUETTAWAY keeps its own case. */
+.dcv-hero h1 .dcv-title-sub {
+  text-transform: none;
 }
 .dcv-hero .dcv-hero-subtitle {
   font-family: var(--dcv-serif);
