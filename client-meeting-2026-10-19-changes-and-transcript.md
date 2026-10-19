@@ -28,7 +28,7 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 
 ## Progress (updated 2026-10-19)
 
-**18 done, 2 partly done, 1 not done, 5 need data from the client (1, 16, 17, 20 and 22), 4 info (no website change)** (of 30 steps; the four info steps, 6, 27, 28 and 29, are not website changes). Each step below has a status line.
+**19 done, 1 partly done, 1 not done, 5 need data from the client (1, 16, 17, 20 and 22), 4 info (no website change)** (of 30 steps; the four info steps, 6, 27, 28 and 29, are not website changes). Each step below has a status line.
 
 | # | Step | Status |
 |---|---|---|
@@ -55,7 +55,7 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 | 21 | Edition dining | ✅ DONE |
 | 22 | Dining / Edition / Reserve clean-up | 🕓 NEEDS DATA FROM CLIENT |
 | 23 | Edition pools and rooms | ✅ DONE |
-| 24 | Guettaway | 🟡 PARTLY DONE |
+| 24 | Guettaway | ✅ DONE |
 | 25 | Waldorf and Park Hyatt rooms | ✅ DONE |
 | 26 | Guettaway chef picture | ✅ DONE |
 | 27 | Documents | ℹ️ INFO |
@@ -230,9 +230,9 @@ The full transcript of both parts is at the end of this file, unchanged. The aut
 - The Edition has more than one pool (P2 07:02).
 - "I think you have everything ready to go. Minor changes."
 
-### 24. Guettaway (P2 08:56 – 11:21) — 🟡 PARTLY DONE
+### 24. Guettaway (P2 08:56 – 11:21) — ✅ DONE
 
-> **Status:** 🟡 PARTLY DONE. Done 2026-10-19: name in capitals. **Not done:** Waldorf in the same layout is done for rooms only (see 25); Guettaway entertainment changes and the Guettaway kosher words/pictures (to come).
+> **Status:** ✅ DONE (confirmed by the developer, 2026-10-19). Done: name in capitals; the Waldorf Astoria and the Park Hyatt in the same layout as the other hotels, with rooms (see 25), dining, pools, wellness & fitness, spa and gallery from each hotel's own site (Waldorf from the Hilton pages, Park Hyatt from hyatt.com); the Guettaway attractions set (Riviera Maya list, see 15).
 - Write the name in capitals also **inside** the Guettaway pages (see item 2).
 - Then start the **"World of" (Waldorf)** with **the same layout** as the other hotels (P2 09:33).
 - A picture is "cut off, cut pieces, not the full thing" (P2 09:50–10:30): we fixed it on the call. Re-checked 2026-10-19: the Guettaway Kosher Supervision banner was still cropped on the dining cards (fixed-height box with `object-fit: cover`); it now shows whole (`contain`) on the Guettaway dining cards.

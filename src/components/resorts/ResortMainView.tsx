@@ -201,7 +201,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
           <SectionTitle title={spa.section.title} />
           <div className="dcv-gallery-tabs">
             <Link className="dcv-on" href={spaHref(offeringId, programId, data.resortId)}>
-              {spa.item.title} details →
+              Spa details →
             </Link>
           </div>
           <PhotoGallery images={spa.section.images} alt={`${data.resortName} spa`} />

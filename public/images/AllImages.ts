@@ -595,6 +595,49 @@ import waldorfWellnessGolfCourse from "./mainDesign/waldorf-wellness-golf-course
 import waldorfWellnessTennisCourt from "./mainDesign/waldorf-wellness-tennis-court.webp";
 import waldorfWellnessYogaClass from "./mainDesign/waldorf-wellness-yoga-class.webp";
 import waldorfWellnessFitnessCenter from "./mainDesign/waldorf-wellness-fitness-center.webp";
+// Casa Nizuc dining photos: from the hotel's Marriott dining page.
+import casaNizucDiningMayim from "./mainDesign/casa-nizuc-dining-mayim.webp";
+import casaNizucDiningAshan from "./mainDesign/casa-nizuc-dining-ashan.webp";
+import casaNizucDiningZait from "./mainDesign/casa-nizuc-dining-zait.webp";
+import casaNizucDiningZaitTerrace from "./mainDesign/casa-nizuc-dining-zait-terrace.webp";
+import casaNizucDiningNoam from "./mainDesign/casa-nizuc-dining-noam.webp";
+import casaNizucDiningOfek from "./mainDesign/casa-nizuc-dining-ofek.webp";
+import casaNizucDiningMussa from "./mainDesign/casa-nizuc-dining-mussa.webp";
+// Casa Nizuc room photos and the spa photo: from the hotel's Marriott pages (the spa photo is Marriott's placeholder for it).
+import casaNizucRoomKingBalcony from "./mainDesign/casa-nizuc-room-king-balcony.webp";
+import casaNizucRoomTwoDoubles from "./mainDesign/casa-nizuc-room-two-doubles.webp";
+import casaNizucRoomSuiteLiving from "./mainDesign/casa-nizuc-room-suite-living.webp";
+import casaNizucRoomKingBath from "./mainDesign/casa-nizuc-room-king-bath.webp";
+import casaNizucSpaWellnessCenter from "./mainDesign/casa-nizuc-spa-wellness-center.webp";
+// Casa Nizuc gallery: photos from the hotel's Marriott photos page.
+import casaNizucGallery00 from "./mainDesign/casa-nizuc-gallery-00.webp";
+import casaNizucGallery01 from "./mainDesign/casa-nizuc-gallery-01.webp";
+import casaNizucGallery02 from "./mainDesign/casa-nizuc-gallery-02.webp";
+import casaNizucGallery03 from "./mainDesign/casa-nizuc-gallery-03.webp";
+import casaNizucGallery04 from "./mainDesign/casa-nizuc-gallery-04.webp";
+import casaNizucGallery05 from "./mainDesign/casa-nizuc-gallery-05.webp";
+import casaNizucGallery06 from "./mainDesign/casa-nizuc-gallery-06.webp";
+import casaNizucGallery08 from "./mainDesign/casa-nizuc-gallery-08.webp";
+import casaNizucGallery09 from "./mainDesign/casa-nizuc-gallery-09.webp";
+import casaNizucGallery13 from "./mainDesign/casa-nizuc-gallery-13.webp";
+import casaNizucGallery14 from "./mainDesign/casa-nizuc-gallery-14.webp";
+import casaNizucGallery16 from "./mainDesign/casa-nizuc-gallery-16.webp";
+import casaNizucGallery18 from "./mainDesign/casa-nizuc-gallery-18.webp";
+import casaNizucGallery19 from "./mainDesign/casa-nizuc-gallery-19.webp";
+import casaNizucGallery25 from "./mainDesign/casa-nizuc-gallery-25.webp";
+import casaNizucGallery26 from "./mainDesign/casa-nizuc-gallery-26.webp";
+import casaNizucGallery27 from "./mainDesign/casa-nizuc-gallery-27.webp";
+import casaNizucGallery28 from "./mainDesign/casa-nizuc-gallery-28.webp";
+import casaNizucGallery29 from "./mainDesign/casa-nizuc-gallery-29.webp";
+import casaNizucGallery30 from "./mainDesign/casa-nizuc-gallery-30.webp";
+import casaNizucGallery31 from "./mainDesign/casa-nizuc-gallery-31.webp";
+import casaNizucGallery32 from "./mainDesign/casa-nizuc-gallery-32.webp";
+import casaNizucGallery33 from "./mainDesign/casa-nizuc-gallery-33.webp";
+import casaNizucGallery38 from "./mainDesign/casa-nizuc-gallery-38.webp";
+import casaNizucGallery39 from "./mainDesign/casa-nizuc-gallery-39.webp";
+import casaNizucGallery40 from "./mainDesign/casa-nizuc-gallery-40.webp";
+import casaNizucGallery42 from "./mainDesign/casa-nizuc-gallery-42.webp";
+import casaNizucGallery43 from "./mainDesign/casa-nizuc-gallery-43.webp";
 import reserveProgram2026N01 from "./mainDesign/reserve-program-2026-01.webp";
 import reserveProgram2026N02 from "./mainDesign/reserve-program-2026-02.webp";
 import reserveProgram2026N03 from "./mainDesign/reserve-program-2026-03.webp";
@@ -1354,6 +1397,46 @@ export const AllImages = {
   waldorfWellnessTennisCourt,
   waldorfWellnessYogaClass,
   waldorfWellnessFitnessCenter,
+  casaNizucDiningMayim,
+  casaNizucDiningAshan,
+  casaNizucDiningZait,
+  casaNizucDiningZaitTerrace,
+  casaNizucDiningNoam,
+  casaNizucDiningOfek,
+  casaNizucDiningMussa,
+  casaNizucRoomKingBalcony,
+  casaNizucRoomTwoDoubles,
+  casaNizucRoomSuiteLiving,
+  casaNizucRoomKingBath,
+  casaNizucSpaWellnessCenter,
+  casaNizucGallery00,
+  casaNizucGallery01,
+  casaNizucGallery02,
+  casaNizucGallery03,
+  casaNizucGallery04,
+  casaNizucGallery05,
+  casaNizucGallery06,
+  casaNizucGallery08,
+  casaNizucGallery09,
+  casaNizucGallery13,
+  casaNizucGallery14,
+  casaNizucGallery16,
+  casaNizucGallery18,
+  casaNizucGallery19,
+  casaNizucGallery25,
+  casaNizucGallery26,
+  casaNizucGallery27,
+  casaNizucGallery28,
+  casaNizucGallery29,
+  casaNizucGallery30,
+  casaNizucGallery31,
+  casaNizucGallery32,
+  casaNizucGallery33,
+  casaNizucGallery38,
+  casaNizucGallery39,
+  casaNizucGallery40,
+  casaNizucGallery42,
+  casaNizucGallery43,
   editionMarriottPoolSoolBeachClub,
   editionMarriottPoolMainPool,
   reserveProgram2026N01,
