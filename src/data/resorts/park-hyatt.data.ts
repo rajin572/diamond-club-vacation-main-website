@@ -1005,14 +1005,14 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
         description: "Enjoy a delicious selection of light bites, refreshing snacks, and casual favorites served poolside or directly on the beach. The perfect spot to relax, soak up the sunshine, and enjoy a quick bite throughout the day.",
         gallery: [AllImages.parkHyattDiningBrisaPoolBar],
       },
-      // Added from the same document. The Yom Tov Dining photo is still to come (the Kiddushim photo is used for both for now).
+      // Added from the same document.
       {
         id: "grand-ballroom-yom-tov-dining",
         title: "Grand Ballroom – Yom Tov Dining",
         subtitle: "Festive holiday meals",
-        image: AllImages.guettawayGrandBallroomKiddushim,
-        description: "Celebrate Yom Tov in the elegant Grand Ballroom, transformed into a beautiful dining setting for our festive holiday meals. Enjoy exceptional gourmet cuisine, attentive service, and a warm, inviting atmosphere as family and friends gather to celebrate together.",
-        gallery: [AllImages.guettawayGrandBallroomKiddushim],
+        image: AllImages.guettawayGrandBallroomYomTov,
+        description: "**All Yom Tov Night Meals Will Be Held at the World of Astoria Grand Ballroom.**\n\nCelebrate Yom Tov in the elegant Grand Ballroom, transformed into a beautiful dining setting for our festive holiday meals. Enjoy exceptional gourmet cuisine, attentive service, and a warm, inviting atmosphere as family and friends gather to celebrate together.",
+        gallery: [AllImages.guettawayGrandBallroomYomTov],
       },
       {
         id: "grand-ballroom-shabbat-yom-tov-kiddushim",

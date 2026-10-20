@@ -523,7 +523,6 @@ import dcvDiningKiis from "./mainDesign/dcv-dining-kiis.jpg";
 import dcvDiningOceanaFishAndChips from "./mainDesign/dcv-dining-oceana-fish-and-chips.jpg";
 import dcvDiningLobbyBar from "./mainDesign/dcv-dining-lobby-bar.jpg";
 import dcvDiningPizzo from "./mainDesign/dcv-dining-pizzo.jpg";
-import dcvDiningKitchenDairyRestaurant from "./mainDesign/dcv-dining-kitchen-dairy-restaurant.jpg";
 import dcvDiningKitchen from "./mainDesign/dcv-dining-kitchen.jpg";
 import kosherSupervisionRabbi from "./kosher-supervision-rabbi.jpg";
 import rabbiLawrenceHajioffFace from "./rabbi-lawrence-hajioff-face.jpg";
@@ -579,15 +578,11 @@ import waldorfDiningPoolBarBbq from "./mainDesign/waldorf-dining-pool-bar-bbq.we
 import waldorfDiningPoolBarCocktails from "./mainDesign/waldorf-dining-pool-bar-cocktails.webp";
 import waldorfSpaHydrotherapyPool from "./mainDesign/waldorf-spa-hydrotherapy-pool.webp";
 import waldorfSpaSteamRitual from "./mainDesign/waldorf-spa-steam-ritual.webp";
-import waldorfSpaMassage from "./mainDesign/waldorf-spa-massage.webp";
-import waldorfSpaCouplesMassage from "./mainDesign/waldorf-spa-couples-massage.webp";
 import waldorfSpaFacial from "./mainDesign/waldorf-spa-facial.webp";
 import waldorfSpaRobesWalk from "./mainDesign/waldorf-spa-robes-walk.webp";
-import waldorfSpaWaterJet from "./mainDesign/waldorf-spa-water-jet.webp";
 import waldorfSpaRitual from "./mainDesign/waldorf-spa-ritual.webp";
 import waldorfSpaCopalOfferings from "./mainDesign/waldorf-spa-copal-offerings.webp";
 import waldorfSpaBeautySalon from "./mainDesign/waldorf-spa-beauty-salon.webp";
-import waldorfWellnessPaddleBoarding from "./mainDesign/waldorf-wellness-paddle-boarding.webp";
 import waldorfWellnessBeachYoga from "./mainDesign/waldorf-wellness-beach-yoga.webp";
 import waldorfWellnessGolfCarts from "./mainDesign/waldorf-wellness-golf-carts.webp";
 import waldorfWellnessGolfAerial from "./mainDesign/waldorf-wellness-golf-aerial.webp";
@@ -609,6 +604,12 @@ import casaNizucRoomTwoDoubles from "./mainDesign/casa-nizuc-room-two-doubles.we
 import casaNizucRoomSuiteLiving from "./mainDesign/casa-nizuc-room-suite-living.webp";
 import casaNizucRoomKingBath from "./mainDesign/casa-nizuc-room-king-bath.webp";
 import casaNizucSpaWellnessCenter from "./mainDesign/casa-nizuc-spa-wellness-center.webp";
+// The Guettaway logo (client 2026-10-20): cream oval with a palm tree, transparent background.
+import guettawayLogo from "./mainDesign/guettaway-logo.webp";
+// The kids collage without the orange "I love DC" box (client 2026-10-20: that symbol is only for the St. Regis); used by Guettaway.
+import guettawayKidsProgram from "./mainDesign/guettaway-kids-program.webp";
+// Photo sent by the client 2026-10-20 for the Waldorf Astoria Day Camp team box (Program Director Rabbi Binyomin Schwartz, with two boys).
+import dayCampDirectorBinyominSchwartz from "./mainDesign/day-camp-director-binyomin-schwartz.webp";
 // Photos from the client's two Word documents of 2026-10-19 (entertainment, rabbis, cantor, Grand Ballroom) and the Park Hyatt Living Room / Brisa photos.
 import entertainmentShulemLemmer from "./mainDesign/entertainment-shulem-lemmer.webp";
 import entertainmentDoviMeiselsGuitar from "./mainDesign/entertainment-dovi-meisels-guitar.webp";
@@ -616,9 +617,11 @@ import scholarRabbiAviWiesenfeld from "./mainDesign/scholar-rabbi-avi-wiesenfeld
 import scholarRabbiEliStefansky from "./mainDesign/scholar-rabbi-eli-stefansky.webp";
 import scholarRabbiEliMansour from "./mainDesign/scholar-rabbi-eli-mansour.webp";
 import scholarCantorNissimSaal from "./mainDesign/scholar-cantor-nissim-saal.webp";
+import scholarCameronErickson from "./mainDesign/scholar-cameron-erickson.webp";
 import reserveGrandBallroomYomTov from "./mainDesign/reserve-grand-ballroom-yom-tov.webp";
 import reserveGrandBallroomKiddushim from "./mainDesign/reserve-grand-ballroom-kiddushim.webp";
 import guettawayGrandBallroomKiddushim from "./mainDesign/guettaway-grand-ballroom-kiddushim.webp";
+import guettawayGrandBallroomYomTov from "./mainDesign/guettaway-grand-ballroom-yom-tov.webp";
 import parkHyattDiningLivingRoom from "./mainDesign/park-hyatt-dining-living-room.webp";
 import parkHyattDiningBrisaPoolBar from "./mainDesign/park-hyatt-dining-brisa-pool-bar.webp";
 // Casa Nizuc gallery: photos from the hotel's Marriott photos page.
@@ -709,7 +712,6 @@ import guettawayProgram2026N16 from "./mainDesign/guettaway-program-2026-16.webp
 import guettawayProgram2026N17 from "./mainDesign/guettaway-program-2026-17.webp";
 import guettawayProgram2026N18 from "./mainDesign/guettaway-program-2026-18.webp";
 import guettawayProgram2026N19 from "./mainDesign/guettaway-program-2026-19.webp";
-import guettawayProgram2026N20 from "./mainDesign/guettaway-program-2026-20.webp";
 import guettawayProgram2026N21 from "./mainDesign/guettaway-program-2026-21.webp";
 import guettawayProgram2026N22 from "./mainDesign/guettaway-program-2026-22.webp";
 import guettawayProgram2026N23 from "./mainDesign/guettaway-program-2026-23.webp";
@@ -1294,7 +1296,6 @@ export const AllImages = {
   dcvDiningOceanaFishAndChips,
   dcvDiningLobbyBar,
   dcvDiningPizzo,
-  dcvDiningKitchenDairyRestaurant,
   dcvDiningKitchen,
   kosherSupervisionRabbi,
   rabbiNissimHiluOneKosher,
@@ -1393,15 +1394,11 @@ export const AllImages = {
   waldorfDiningPoolBarCocktails,
   waldorfSpaHydrotherapyPool,
   waldorfSpaSteamRitual,
-  waldorfSpaMassage,
-  waldorfSpaCouplesMassage,
   waldorfSpaFacial,
   waldorfSpaRobesWalk,
-  waldorfSpaWaterJet,
   waldorfSpaRitual,
   waldorfSpaCopalOfferings,
   waldorfSpaBeautySalon,
-  waldorfWellnessPaddleBoarding,
   waldorfWellnessBeachYoga,
   waldorfWellnessGolfCarts,
   waldorfWellnessGolfAerial,
@@ -1421,15 +1418,20 @@ export const AllImages = {
   casaNizucRoomSuiteLiving,
   casaNizucRoomKingBath,
   casaNizucSpaWellnessCenter,
+  guettawayLogo,
+  guettawayKidsProgram,
+  dayCampDirectorBinyominSchwartz,
   entertainmentShulemLemmer,
   entertainmentDoviMeiselsGuitar,
   scholarRabbiAviWiesenfeld,
   scholarRabbiEliStefansky,
   scholarRabbiEliMansour,
   scholarCantorNissimSaal,
+  scholarCameronErickson,
   reserveGrandBallroomYomTov,
   reserveGrandBallroomKiddushim,
   guettawayGrandBallroomKiddushim,
+  guettawayGrandBallroomYomTov,
   parkHyattDiningLivingRoom,
   parkHyattDiningBrisaPoolBar,
   casaNizucGallery00,
@@ -1521,7 +1523,6 @@ export const AllImages = {
   guettawayProgram2026N17,
   guettawayProgram2026N18,
   guettawayProgram2026N19,
-  guettawayProgram2026N20,
   guettawayProgram2026N21,
   guettawayProgram2026N22,
   guettawayProgram2026N23,

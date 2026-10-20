@@ -8,10 +8,11 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
   kicker: "Passover 2027",
   tagline: "The Riviera Maya, Kanai · our most exclusive Passover experience",
   heroImage: AllImages.reserveIntro1,
+  // The 2026 Kanai info book (DC-Kanai-Info-Book-2026.pdf, sent by the client 2026-10-20) is used until the 2027 brochure exists.
   brochure: {
     title: "Diamond Club Reserve Brochure",
-    pdfHref: "/brochure.pdf",
-    downloadName: "Diamond-Club-Reserve-Passover-2027-Brochure.pdf",
+    pdfHref: "/brochures/diamond-club-reserve.pdf",
+    downloadName: "Diamond-Club-Reserve-Kanai-Info-Book-2026.pdf",
   },
   card: {
     subtitle: "Our most exclusive Passover experience",

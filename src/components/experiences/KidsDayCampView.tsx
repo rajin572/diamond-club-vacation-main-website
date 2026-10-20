@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckCheck } from "lucide-react";
 import { DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
@@ -79,6 +80,11 @@ export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
                 <h2>Our Team</h2>
                 {team.map((member) => (
                   <div key={member.id} style={{ marginBottom: 20 }}>
+                    {member.image && (
+                      <div className="dcv-team-photo">
+                        <Image src={member.image} alt={member.name} sizes="(max-width: 900px) 100vw, 360px" />
+                      </div>
+                    )}
                     <div className="dcv-card-tag">{member.role}</div>
                     <h3 style={{ fontSize: 22, margin: "0 0 6px" }}>{member.name}</h3>
                     <p className="dcv-copy-text" style={{ margin: 0 }}>

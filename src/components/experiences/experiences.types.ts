@@ -60,6 +60,8 @@ export interface KidsDayCampTeamMember {
   role: string;
   name: string;
   bio: string;
+  /** A photo shown in the team box. */
+  image?: DesignImage;
 }
 
 export interface KidsDayCampActivity {

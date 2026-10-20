@@ -18,6 +18,7 @@ export function OfferingMainView({ data, programs }: OfferingMainViewProps) {
         title={data.hero.headline}
         subtitle={data.hero.subtext}
         logo={data.hero.logo}
+        imagePosition={data.hero.imagePosition}
       />
       <Wrap>
         <SectionTitle title={data.programsSection.title} description={data.programsSection.description} />

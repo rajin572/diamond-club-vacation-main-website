@@ -14,7 +14,6 @@ export const GUETTAWAY_PROGRAM_GALLERY: DesignImage[] = [
   AllImages.guettawayProgram2026N12,
   AllImages.guettawayProgram2026N13,
   AllImages.guettawayProgram2026N19,
-  AllImages.guettawayProgram2026N20,
   AllImages.guettawayProgram2026N21,
   AllImages.guettawayProgram2026N08,
   AllImages.guettawayProgram2026N09,

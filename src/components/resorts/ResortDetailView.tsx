@@ -13,6 +13,7 @@ import type { DesignLink } from "@/components/shared/design";
 import { buildHotelSubNav } from "@/lib/hotel-subnav";
 import { diningHref, resortHref } from "@/lib/routes";
 import type { ResortData, ResortDetailItem } from "./resorts.types";
+import { DescriptionText } from "./DescriptionText";
 
 export type ResortDetailKind = "room" | "restaurant" | "pool" | "spa";
 
@@ -74,7 +75,9 @@ export function ResortDetailView({ offeringId, programId, data, item, kind }: Re
         <div className="dcv-content2">
           <div>
             <h2>{config.aboutTitle}</h2>
-            <p className="dcv-lead">{item.description}</p>
+            <p className="dcv-lead">
+              <DescriptionText text={item.description} />
+            </p>
             {(item.groups ?? []).map((group) => (
               <FeatureGroup key={group.title} group={group} />
             ))}

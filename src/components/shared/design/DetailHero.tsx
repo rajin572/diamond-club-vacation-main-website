@@ -25,6 +25,7 @@ export function DetailHero({ image, kicker, title, subtitle, imagePosition, acti
         alt=""
         priority
         sizes="100vw"
+        quality={90}
         style={imagePosition ? { objectPosition: imagePosition } : undefined}
       />
       <div className="dcv-copy">

@@ -9,6 +9,8 @@ export interface OfferingData {
     headline: string;
     subtext: string;
     image: DesignImage;
+    /** CSS object-position of the banner photo (which part of a tall photo shows in the wide banner). */
+    imagePosition?: string;
     /** Brand badge shown above the headline. */
     logo?: { image: DesignImage; alt: string };
   };

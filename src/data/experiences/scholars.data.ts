@@ -61,6 +61,22 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
           ],
         },
       },
+      {
+        // Added 2026-10-20 at the client's request (a special guest speaker for the Reserve, St. Regis and EDITION). The client's photo is a round crop.
+        id: "cameron-erickson",
+        title: "Cameron Erickson",
+        description: "Founder & CEO, Potomac GR | Washington, D.C.",
+        image: AllImages.scholarCameronErickson,
+        details: {
+          title: "Cameron Erickson",
+          paragraphs: [
+            "Founder & CEO, Potomac GR | Washington, D.C.",
+            "With six years of experience on Capitol Hill, serving Republican members of Congress and congressional committees, Cameron Erickson brings a fascinating insider’s perspective on Washington politics and the inner workings of Congress.",
+            "Now the Founder and CEO of Potomac GR, Cameron has addressed prestigious audiences at AIPAC, FDD, the RNC, and numerous other organizations. His popular presentation, “Inside Congress: An Insider’s Perspective They Don’t Tell You,” offers a captivating behind-the-scenes look at American politics.",
+            "We are delighted to welcome Cameron Erickson as a special guest speaker this Passover, bringing exclusive insights, engaging discussions, and a unique Washington perspective to our guests.",
+          ],
+        },
+      },
       // Removed from the page on 2026-10-18 at the developer's request (kept here; remove the leading "//" to show it again).
       // {
       //   id: "rabbi-eli-stefansky",

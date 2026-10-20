@@ -3,6 +3,9 @@ import type { ResortData } from "@/components/resorts/resorts.types";
 import { rotate } from "./helpers";
 import { GUETTAWAY_PROGRAM_GALLERY } from "./guettaway-program-gallery.data";
 
+/** Pool photos without people (client 2026-10-20: the Guettaway hotels are very Orthodox, so no swimwear or exposed photos). */
+const WALDORF_POOLS = [AllImages.series.waldorfPools[0], AllImages.series.waldorf[4], AllImages.series.waldorfPools[2], AllImages.guettawayMain1];
+
 /** Waldorf Astoria Riviera Maya — content from the client's HTML design (diamond-club-main-design). */
 export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   programId: "guttaway",
@@ -33,7 +36,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
       {
         id: "wellness",
         title: "Wellness & Fitness",
-        image: AllImages.waldorfWellnessPaddleBoarding,
+        image: AllImages.waldorfWellnessBeachYoga,
         target: { type: "section", section: "wellness" },
       },
       {
@@ -1052,14 +1055,14 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
         groups: [{ title: "Schedule", items: ["Daily: 10:00 AM – 6:00 PM","Hours and days of operation subject to change"] }],
         gallery: [AllImages.waldorfDiningPoolBarPool, AllImages.waldorfDiningPoolBarBbq, AllImages.waldorfDiningPoolBarCocktails],
       },
-      // Added from the client's Word document of 2026-10-19. The Yom Tov Dining photo is still to come (the Kiddushim photo is used for both for now).
+      // Added from the client's Word document of 2026-10-19.
       {
         id: "grand-ballroom-yom-tov-dining",
         title: "Grand Ballroom – Yom Tov Dining",
         subtitle: "Festive holiday meals",
-        image: AllImages.guettawayGrandBallroomKiddushim,
-        description: "Celebrate Yom Tov in the elegant Grand Ballroom, transformed into a beautiful dining setting for our festive holiday meals. Enjoy exceptional gourmet cuisine, attentive service, and a warm, inviting atmosphere as family and friends gather to celebrate together.",
-        gallery: [AllImages.guettawayGrandBallroomKiddushim],
+        image: AllImages.guettawayGrandBallroomYomTov,
+        description: "**All Yom Tov Night Meals Will Be Held at the World of Astoria Grand Ballroom.**\n\nCelebrate Yom Tov in the elegant Grand Ballroom, transformed into a beautiful dining setting for our festive holiday meals. Enjoy exceptional gourmet cuisine, attentive service, and a warm, inviting atmosphere as family and friends gather to celebrate together.",
+        gallery: [AllImages.guettawayGrandBallroomYomTov],
       },
       {
         id: "grand-ballroom-shabbat-yom-tov-kiddushim",
@@ -1074,13 +1077,13 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   pools: {
     title: "Pools & Beach",
     description: "",
-    images: [AllImages.series.waldorf[2], ...AllImages.series.waldorfPools],
+    images: [AllImages.series.waldorf[2], ...WALDORF_POOLS],
     items: [
       {
         id: "ocean-front-infinity-pool",
         title: "Ocean Front Infinity Pool",
         subtitle: "Beach · Oceanfront terrace",
-        image: AllImages.series.waldorfPools[0],
+        image: WALDORF_POOLS[0],
         description: "The centerpiece infinity pool visually blending into the Caribbean Sea, lined with submerged sun loungers, luxury daybeds, and attentive towel service.",
         stats: [
           { label: "Type", value: "Beach" },
@@ -1088,13 +1091,13 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
           { label: "Location", value: "Oceanfront terrace" },
         ],
         groups: [{ title: "Schedule", items: ["Monday to Sunday: 7:00 AM – 8:00 PM"] }],
-        gallery: rotate(AllImages.series.waldorfPools, 0),
+        gallery: rotate(WALDORF_POOLS, 0),
       },
       {
         id: "diamond-exclusive-beaches",
         title: "Diamond Exclusive Beaches",
         subtitle: "Beach · Riviera Maya Coastline",
-        image: AllImages.series.waldorfPools[1],
+        image: WALDORF_POOLS[1],
         description: "Pristine private white sand beaches exclusively reserved for Diamond Club guests, with dedicated loungers and personalized service.",
         stats: [
           { label: "Type", value: "Beach" },
@@ -1102,13 +1105,13 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
           { label: "Location", value: "Riviera Maya Coastline" },
         ],
         groups: [{ title: "Schedule", items: ["Monday to Sunday: 8:00 AM – 7:00 PM"] }],
-        gallery: rotate(AllImages.series.waldorfPools, 1),
+        gallery: rotate(WALDORF_POOLS, 1),
       },
       {
         id: "pool-bar",
         title: "Pool Bar",
         subtitle: "Pool · Poolside Deck",
-        image: AllImages.series.waldorfPools[2],
+        image: WALDORF_POOLS[2],
         description: "Shaded poolside bar serving handcrafted mocktails, fresh coconut water, tropical fruit smoothies, and light refreshments.",
         stats: [
           { label: "Type", value: "Pool" },
@@ -1118,13 +1121,13 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
         groups: [
           { title: "Schedule", items: ["Monday to Sunday: 10:00 AM – 6:30 PM"] },
         ],
-        gallery: rotate(AllImages.series.waldorfPools, 2),
+        gallery: rotate(WALDORF_POOLS, 2),
       },
       {
         id: "private-cabanas",
         title: "Private Cabanas",
         subtitle: "Beach · Beach & Poolfront",
-        image: AllImages.series.waldorfPools[3],
+        image: WALDORF_POOLS[3],
         description: "Exclusive shaded cabanas featuring plush daybeds, chilled towels, refreshing fruit platters, and dedicated attendant service.",
         stats: [
           { label: "Type", value: "Beach" },
@@ -1132,14 +1135,14 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
           { label: "Location", value: "Beach & Poolfront" },
         ],
         groups: [{ title: "Schedule", items: ["Monday to Sunday: 8:00 AM – 7:00 PM"] }],
-        gallery: rotate(AllImages.series.waldorfPools, 3),
+        gallery: rotate(WALDORF_POOLS, 3),
       },
     ],
   },
   wellness: {
     title: "Wellness & Fitness",
     description: "Kayaking and paddle boarding on the coastal waters, and world-class golf and tennis, with the spa on the property.",
-    images: [AllImages.waldorfWellnessPaddleBoarding, AllImages.waldorfWellnessBeachYoga, AllImages.waldorfWellnessGolfCarts, AllImages.waldorfWellnessGolfAerial, AllImages.waldorfWellnessGolfCourse, AllImages.waldorfWellnessTennisCourt, AllImages.waldorfWellnessYogaClass, AllImages.waldorfWellnessFitnessCenter],
+    images: [AllImages.waldorfWellnessBeachYoga, AllImages.waldorfWellnessYogaClass, AllImages.waldorfWellnessGolfCarts, AllImages.waldorfWellnessGolfAerial, AllImages.waldorfWellnessGolfCourse, AllImages.waldorfWellnessTennisCourt, AllImages.waldorfWellnessFitnessCenter],
     // From the hotel's Hilton "Things to do" page (hilton.com/en/hotels/cunwawa-waldorf-astoria-riviera-maya/things-to-do/). The day trips on that page
     // (Chichen Itza, sailing, whale sharks, Isla Mujeres, ATVs, cenotes) are not wellness: they are the program's attractions.
     activities: [
@@ -1201,13 +1204,13 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
           ],
         },
       ],
-      gallery: [AllImages.waldorfSpaHydrotherapyPool, AllImages.waldorfSpaSteamRitual, AllImages.waldorfSpaMassage, AllImages.waldorfSpaCouplesMassage, AllImages.waldorfSpaFacial, AllImages.waldorfSpaRobesWalk, AllImages.waldorfSpaWaterJet, AllImages.waldorfSpaRitual, AllImages.waldorfSpaCopalOfferings, AllImages.waldorfSpaBeautySalon],
+      gallery: [AllImages.waldorfSpaHydrotherapyPool, AllImages.waldorfSpaSteamRitual, AllImages.waldorfSpaFacial, AllImages.waldorfSpaRobesWalk, AllImages.waldorfSpaRitual, AllImages.waldorfSpaCopalOfferings, AllImages.waldorfSpaBeautySalon],
     },
     // Own block on the hotel page (like Pools and Wellness).
     section: {
       title: "Spa",
       description: "Discover a sanctuary of transformation where innovation meets Mayan tradition. Our spa experience blends locally sourced oils, fresh garden herbs, and healing crystals with advanced techniques to create a journey of renewal. Inspired by the Mayan Tree of Life, every treatment is designed to restore balance and elevate your sense of well-being.",
-      images: [AllImages.waldorfSpaHydrotherapyPool, AllImages.waldorfSpaSteamRitual, AllImages.waldorfSpaMassage, AllImages.waldorfSpaCouplesMassage, AllImages.waldorfSpaFacial, AllImages.waldorfSpaRobesWalk, AllImages.waldorfSpaWaterJet, AllImages.waldorfSpaRitual, AllImages.waldorfSpaCopalOfferings, AllImages.waldorfSpaBeautySalon],
+      images: [AllImages.waldorfSpaHydrotherapyPool, AllImages.waldorfSpaSteamRitual, AllImages.waldorfSpaFacial, AllImages.waldorfSpaRobesWalk, AllImages.waldorfSpaRitual, AllImages.waldorfSpaCopalOfferings, AllImages.waldorfSpaBeautySalon],
     },
   },
   gallery: {

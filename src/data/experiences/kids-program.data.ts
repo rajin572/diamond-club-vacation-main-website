@@ -69,7 +69,7 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
     programTitle: "Guettaway a Diamond Club production",
     experienceType: "kids-program",
     title: "Kids Program",
-    heroImage: AllImages.reserveKidsProgram,
+    heroImage: AllImages.guettawayKidsProgram,
     heroImagePosition: "50% 24%",
     columns: 2,
     items: [
@@ -77,19 +77,19 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
         id: "day-camp",
         title: "Day Camp",
         description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
-        image: AllImages.reserveKidsProgram,
+        image: AllImages.guettawayKidsProgram,
         imageFocus: "top",
         linkTo: "kids-day-camp",
       },
       {
         id: "babysitting",
         title: "Babysitting",
-        description: "A free, responsible babysitting service will be available during camp hours in our special Toddler’s Camp. Private babysitting is available for a fee.",
+        description: "Babysitting & Early Childcare is available for ages 0–2, for a fee, with gentle care, sensory play, music, and crafts.",
         image: AllImages.reserveBabysitting,
         details: {
           title: "Babysitting",
           paragraphs: [
-            "A free, responsible babysitting service will be available during camp hours in our special Toddler’s Camp. Private babysitting is available for a fee.",
+            "Babysitting & Early Childcare is available for ages 0–2, for a fee, with gentle care, sensory play, music, and crafts.",
           ],
         },
       },

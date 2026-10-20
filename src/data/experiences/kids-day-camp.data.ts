@@ -111,15 +111,53 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       ],
     },
   },
+  // From the client's page www.guettaways.com/kids-family-programs (client 2026-10-20: "Waldorf Astoria Day Camp").
   guttaway: {
     programId: "guttaway",
     programName: "Guettaway a Diamond Club production",
     hero: {
-      title: "Day Camp",
-      description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
-      image: AllImages.dayCampCollage,
+      title: "Waldorf Astoria Day Camp",
+      description: "The Kids Club is led by professional day camp directors and vetted counselors, with safety and supervision as top priorities. Scheduling is designed to sync with adult programming.",
+      image: AllImages.guettawayKidsProgram,
       imagePosition: "50% 20%",
     },
-    comingSoon: true,
+    overview: {
+      title: "Kids & Family Programs",
+      description: "The Guettaway Kids Club: age-appropriate programs for every child, from toddlers to teens, with scheduling that syncs with the adult program.",
+    },
+    program: {
+      title: "Kids Come First",
+      items: [
+        "Dedicated counselors for every age group",
+        "On-site activities and entertainment",
+        "Child-friendly menus and 24/7 kid-approved snacks",
+      ],
+    },
+    team: [
+      {
+        id: "binyomin-schwartz",
+        role: "Program Director",
+        name: "Rabbi Binyomin Schwartz",
+        image: AllImages.dayCampDirectorBinyominSchwartz,
+        bio: "With over 25 years of experience in children’s camps, Pesach programming, and children’s entertainment, Rabbi Schwartz focuses on age-appropriate scheduling, organization, child safety, and the social and emotional experience of each child.",
+      },
+    ],
+    activities: [
+      { id: "morning", title: "Morning", description: "Drop-off and age-specific programs." },
+      { id: "midday", title: "Midday", description: "Sports, pool time, and workshops." },
+      { id: "afternoon", title: "Afternoon", description: "Group activities, creative projects, or beach games." },
+      { id: "evening", title: "Evening", description: "Family dinner, then teen lounges, live shows, or bonfires." },
+    ],
+    ageGroups: [
+      { group: "Toddlers & Young Children", highlights: "Gentle care, sensory play, music, and crafts in safe, welcoming spaces." },
+      { group: "Elementary Kids", highlights: "Daily activities including sports, pool games, scavenger hunts, and creative projects." },
+      { group: "Tweens", highlights: "Competitions, performances, off-site excursions, and programs built around independence and energy." },
+      { group: "Teens", highlights: "Separate programming for boys and girls, including sports, workshops, and Chol Hamoed outings. Teen programs are directed by the Teen Division staff and include exclusive classes led by presenters." },
+    ],
+    babysitting: {
+      title: "Babysitting & Early Childcare",
+      description: "Available for ages 0–2, with gentle care, sensory play, music, and crafts.",
+      rateText: "Available for a fee.",
+    },
   },
 };

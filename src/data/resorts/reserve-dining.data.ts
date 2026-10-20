@@ -127,7 +127,6 @@ const CLIENT_DINING: ResortListSection = {
     AllImages.dcvDiningOceanaFishAndChips,
     AllImages.dcvDiningLobbyBar,
     AllImages.dcvDiningPizzo,
-    AllImages.dcvDiningKitchenDairyRestaurant,
     AllImages.dcvDiningKitchen,
   ],
   items: [
@@ -178,14 +177,6 @@ const CLIENT_DINING: ResortListSection = {
       image: AllImages.dcvDiningPizzo,
       description: "A casual and inviting dining destination serving freshly prepared pizza, flavorful specialties, and delicious bites in a lively outdoor atmosphere.",
       gallery: [AllImages.dcvDiningPizzo],
-    },
-    {
-      id: "kitchen-dairy-restaurant",
-      title: "Kitchen Dairy Restaurant",
-      subtitle: "",
-      image: AllImages.dcvDiningKitchenDairyRestaurant,
-      description: "",
-      gallery: [AllImages.dcvDiningKitchenDairyRestaurant],
     },
     {
       id: "kitchen",

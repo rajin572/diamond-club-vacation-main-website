@@ -78,7 +78,7 @@ export const GUTTAWAY_DATA: ProgramData = {
             {
               id: "kids-program",
               title: "Kids Program",
-              image: AllImages.reserveKidsProgram,
+              image: AllImages.guettawayKidsProgram,
               target: { type: "experience", experienceType: "kids-program" },
             },
             {

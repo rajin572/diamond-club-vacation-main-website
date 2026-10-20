@@ -184,7 +184,7 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
   );
 }
 
-/** Diamond Club Reserve / Blue chef pop-up: Donny Rogoff, the client's text word for word (2026-10-19). */
+/** Diamond Club Reserve / Blue chef pop-up: Executive Chef Donny Rogoff, the client's text word for word (2026-10-20, replaces the 2026-10-19 text). */
 function DonnyRogoffModal({ onClose }: { onClose: () => void }) {
   return (
     <div className="dcv-brochure-overlay" role="dialog" aria-modal="true" onClick={onClose}>
@@ -195,8 +195,8 @@ function DonnyRogoffModal({ onClose }: { onClose: () => void }) {
 
         <div className="dcv-brochure-header">
           <div className="dcv-brochure-kicker">CULINARY EXCELLENCE · PASSOVER 2027</div>
-          <h2 className="dcv-brochure-title">Chef Donny Rogoff</h2>
-          <p className="dcv-brochure-sub">Culinary Director | Diamond Club Vacations</p>
+          <h2 className="dcv-brochure-title">Executive Chef Donny Rogoff</h2>
+          <p className="dcv-brochure-sub">Executive Chef &amp; Director of Food and Beverage | Diamond Club Vacations</p>
         </div>
 
         <div className="dcv-brochure-preview-wrap" data-lenis-prevent>
@@ -213,19 +213,16 @@ function DonnyRogoffModal({ onClose }: { onClose: () => void }) {
 
           <div className="dcv-dining-modal-bio">
             <p>
-              With a passion for exceptional food, creative cuisine, and genuine hospitality, <strong>Chef Donny Rogoff</strong> brings his culinary expertise and thoughtful approach to his role as Culinary Director of Diamond Club Vacations.
+              Redefining the boundaries of luxury kosher hospitality, Executive Chef Donny Rogoff brings an exceptional blend of culinary vision, innovation, and international hospitality expertise.
             </p>
             <p>
-              Combining a deep appreciation for traditional flavors with fresh, contemporary ideas, Chef Rogoff focuses on creating memorable dining experiences that bring families and friends together around the table. His approach emphasizes quality ingredients, flavorful dishes, diverse menus, and careful attention to detail.
+              As Executive Chef and Director of Food and Beverage for Diamond Club Vacations, Chef Rogoff specializes in transforming world-renowned luxury hotel properties into fully operational, world-class kosher destinations. Collaborating with some of the most prestigious brands in global hospitality, he seamlessly integrates the complexities of kosher operations with the sophistication and exceptional standards of five-star luxury.
             </p>
             <p>
-              As Culinary Director, Chef Rogoff works closely with our talented chefs and kitchen teams to develop and oversee a comprehensive culinary program designed to offer something for everyone. From beautifully prepared Yom Tov meals and abundant holiday buffets to casual family dining, specialty stations, and delicious Chol Hamoed offerings, every menu is thoughtfully created with variety, quality, and guest satisfaction in mind.
+              With a background in fine dining, restaurant ownership, and international hospitality, his expertise extends far beyond the kitchen. From creating distinctive restaurant concepts and elevated culinary experiences to directing international logistics, staffing, and comprehensive food and beverage operations, Chef Rogoff brings ambitious visions to life.
             </p>
             <p>
-              His commitment to consistency, creativity, and warm hospitality ensures that guests of all ages can look forward to wonderful meals and enjoyable dining experiences throughout their stay.
-            </p>
-            <p>
-              <strong>Diamond Club Vacations is delighted to have Chef Donny Rogoff leading our culinary program for Pesach 2027</strong>, bringing together delicious food, generous variety, and the welcoming atmosphere that makes celebrating Pesach with family and friends so special.
+              Driven by creativity, precision, and an uncompromising commitment to excellence, he continues to elevate the world of luxury kosher hospitality — where exceptional cuisine, flawless execution, and unforgettable experiences come together.
             </p>
           </div>
 

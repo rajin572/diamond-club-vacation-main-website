@@ -17,6 +17,7 @@ import { buildHotelSubNav } from "@/lib/hotel-subnav";
 import { AllImages } from "../../../public/images/AllImages";
 import type { ResortData } from "./resorts.types";
 import { hasDetailPage } from "./resort-items";
+import { DescriptionText } from "./DescriptionText";
 import { KosherSupervisionModal, CelebrityChefsModal } from "./DiningModals";
 
 /**
@@ -168,7 +169,11 @@ export function ResortDiningPageView({
                 <div className="dcv-body">
                   {item.subtitle && <div className="dcv-card-tag">{item.subtitle}</div>}
                   <h3>{item.title}</h3>
-                  {item.description && <p>{item.description}</p>}
+                  {item.description && (
+                    <p>
+                      <DescriptionText text={item.description} />
+                    </p>
+                  )}
                   {item.stats && item.stats.some((stat) => stat.label === "Serves" || stat.label === "Hours") && (
                     <ul className="dcv-card-meta">
                       {item.stats
