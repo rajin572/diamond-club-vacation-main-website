@@ -44,3 +44,25 @@ export function getAboutHref(pathname: string | null): string {
   const match = new RegExp("^(/offerings/[^/]+/programs/[^/]+)").exec(pathname);
   return match ? match[1] + "/about" : MAIN_ABOUT_HREF;
 }
+
+/**
+ * Where the "Experiences" link of the header leads (client 2026-10-22): inside a hotel's pages (the hotel page, its rooms, dining, pools,
+ * spa..., or an experience page opened from the hotel) to the experiences of that hotel only (the "Program" block of its page);
+ * everywhere else to the main Experiences page.
+ */
+export const MAIN_EXPERIENCES_HREF = "/experiences";
+
+export function getExperiencesHref(pathname: string | null, search: string): string {
+  if (!pathname) return MAIN_EXPERIENCES_HREF;
+
+  const resortMatch = new RegExp("^(/offerings/[^/]+/programs/[^/]+)/resorts/([^/]+)").exec(pathname);
+  if (resortMatch) return resortMatch[0] + "#experiences";
+
+  if (EXPERIENCE_PATH.test(pathname)) {
+    const programMatch = new RegExp("^(/offerings/[^/]+/programs/[^/]+)").exec(pathname);
+    const resortId = new URLSearchParams(search).get("resort");
+    if (programMatch && resortId) return programMatch[1] + "/resorts/" + encodeURIComponent(resortId) + "#experiences";
+  }
+
+  return MAIN_EXPERIENCES_HREF;
+}

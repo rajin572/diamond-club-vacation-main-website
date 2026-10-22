@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PRIMARY_NAV } from "./nav.data";
 import { MobileMenu } from "./MobileMenu";
-import { getAboutHref, getInquireContext } from "@/lib/inquire-context";
+import { getAboutHref, getExperiencesHref, getInquireContext } from "@/lib/inquire-context";
 import { SectionLink } from "./design/SectionLink";
 import { inquireHref } from "@/lib/routes";
 import { AllImages } from "../../../public/images/AllImages";
@@ -29,7 +29,11 @@ export function Navbar() {
   // On the Inquire page itself there is no action button (client 2026-10-22).
   // "About" shows the About of the Passover program the visitor is in, or the main About page outside the programs.
   const aboutHref = getAboutHref(pathname);
-  const navLinks = PRIMARY_NAV.map((link) => (link.href === "/about" ? { ...link, href: aboutHref } : link));
+  // "Experiences" shows the experiences of the hotel the visitor is in, or the main Experiences page elsewhere.
+  const experiencesHref = getExperiencesHref(pathname, search);
+  const navLinks = PRIMARY_NAV.map((link) =>
+    link.href === "/about" ? { ...link, href: aboutHref } : link.href === "/experiences" ? { ...link, href: experiencesHref } : link
+  );
   const onInquirePage = pathname === "/inquire" || pathname.startsWith("/inquire/");
 
   return (
