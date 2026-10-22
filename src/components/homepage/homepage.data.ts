@@ -1,5 +1,5 @@
 import { AllImages } from "../../../public/images/AllImages";
-import { CASA_NIZUC_HREF, PASSOVER_OFFERING_ID, offeringHref } from "@/lib/routes";
+import { CASA_NIZUC_HREF, PASSOVER_OFFERING_ID, WEDDINGS_HREF, offeringHref } from "@/lib/routes";
 import type { HomePageData } from "./homepage.types";
 
 export const HOME_PAGE_DATA: HomePageData = {
@@ -28,7 +28,7 @@ export const HOME_PAGE_DATA: HomePageData = {
       id: "weddings-destination-events",
       title: "Weddings & Destination Events",
       description: "Extraordinary celebrations designed and produced by our expert team.",
-      href: offeringHref("weddings-events"),
+      href: WEDDINGS_HREF,
       image: AllImages.homeWeddingsDestinationEvents,
     },
     {

@@ -7,6 +7,13 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["127.0.0.1", "localhost", "10.10.28.44"],
   // 90 is used for the banner photos (sharper than the default 75, client 2026-10-20).
   images: { qualities: [75, 90] },
+  // The Weddings page lives at /weddings-events; the older addresses lead to it.
+  async redirects() {
+    return [
+      { source: "/offerings/weddings-events", destination: "/weddings-events", permanent: true },
+      { source: "/weddings", destination: "/weddings-events", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

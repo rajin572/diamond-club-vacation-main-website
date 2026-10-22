@@ -1,10 +1,10 @@
-import { CASA_NIZUC_HREF, PASSOVER_OFFERING_ID, offeringHref } from "@/lib/routes";
+import { CASA_NIZUC_HREF, PASSOVER_OFFERING_ID, WEDDINGS_HREF, offeringHref } from "@/lib/routes";
 import type { DesignLink } from "./design/types";
 
 export const PRIMARY_NAV: DesignLink[] = [
   { label: "Passover", href: offeringHref(PASSOVER_OFFERING_ID) },
   { label: "Casa Nizuc", href: CASA_NIZUC_HREF },
-  { label: "Weddings & Events", href: offeringHref("weddings-events") },
+  { label: "Weddings & Events", href: WEDDINGS_HREF },
   { label: "Experiences", href: "/experiences" },
   { label: "About", href: "/about" },
 ];
@@ -31,7 +31,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Events",
     links: [
-      { label: "Weddings", href: offeringHref("weddings-events") },
+      { label: "Weddings", href: WEDDINGS_HREF },
       { label: "Private Events", href: offeringHref("private-events") },
       { label: "Plan Your Stay", href: "/contact" },
     ],

@@ -35,7 +35,7 @@ export function getComingSoonPage(id: ComingSoonId): ComingSoonPageData {
 }
 
 /** Offering ids (under /offerings/) that are coming-soon placeholders. */
-export const comingSoonOfferingIds = ["weddings-events", "private-events"] as const;
+export const comingSoonOfferingIds = ["private-events"] as const;
 
 export function getComingSoonForOffering(offeringId: string): ComingSoonPageData | undefined {
   return (comingSoonOfferingIds as readonly string[]).includes(offeringId)

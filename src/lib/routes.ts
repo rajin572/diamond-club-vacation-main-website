@@ -10,6 +10,9 @@ export function offeringHref(offeringId: string): string {
   return `/offerings/${offeringId}`;
 }
 
+/** Weddings & Destination Events: its own page at /weddings-events, not under /offerings (client 2026-10-22). */
+export const WEDDINGS_HREF = "/weddings-events";
+
 /** A program's page: its hotels. */
 export function programHref(offeringId: string, programId: string): string {
   return `${offeringHref(offeringId)}/programs/${programId}`;
