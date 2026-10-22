@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
 import { ProgramMainView } from "@/components/programs";
 import { getProgram, programsRegistry } from "@/data/programs/registry";
-import { programHref } from "@/lib/routes";
+import { programHref, resortHref } from "@/lib/routes";
 
 interface PageProps {
   params: Promise<{ offeringId: string; programId: string }>;
@@ -56,6 +56,12 @@ export default async function ProgramPage({ params }: PageProps) {
 
   if (!program || program.offeringId !== offeringId) {
     notFound();
+  }
+
+  // A program with a single hotel (Diamond Blue: Casa Nizuc) has no hotel list to show: it opens the hotel's page directly (client 2026-10-22).
+  const [onlyHotel] = program.hotels.cards;
+  if (program.hotels.cards.length === 1 && onlyHotel.target?.type === "resort") {
+    redirect(resortHref(offeringId, programId, onlyHotel.target.resortId));
   }
 
   return <ProgramMainView offeringId={offeringId} data={program} />;

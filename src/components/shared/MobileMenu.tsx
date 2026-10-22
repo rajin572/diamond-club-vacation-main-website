@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { SectionLink } from "./design/SectionLink";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -43,9 +44,9 @@ export function MobileMenu({ links, inquire, isPassoverPage, hideAction }: Mobil
       {open && (
         <nav id="dcv-mobile-menu" className="dcv-mobile-menu" aria-label="Mobile">
           {links.map((link) => (
-            <Link key={link.href} href={link.href}>
+            <SectionLink key={link.label} href={link.href}>
               {link.label}
-            </Link>
+            </SectionLink>
           ))}
           {!hideAction && (
             <Link className="dcv-btn" href={buttonHref}>

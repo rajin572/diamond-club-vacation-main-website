@@ -59,6 +59,21 @@ export interface ProgramAboutData {
   about: string[];
   /** Bold lead-in at the start of the first `about` paragraph. */
   aboutStrong?: string;
+  /** The text shown in the About block of the program's own page, when it differs from the About page (Guettaway keeps its earlier text there). */
+  pageAbout?: { aboutTitle: string; about: string[] };
+  /** A designed About page (Guettaway): used instead of the plain text when set. `about` stays as the plain text (page description). */
+  story?: ProgramAboutStory;
+}
+
+export interface ProgramAboutStory {
+  /** Gold line under the title, e.g. "2 World-Class Resorts — 1 Incredible Guettaway." */
+  heading: string;
+  intro: string[];
+  quote: string;
+  resorts: string[];
+  vision: { title: string; subtitle: string; paragraphs: string[] };
+  closing: { title: string; text: string };
+  note: { title: string; text: string };
 }
 
 /**

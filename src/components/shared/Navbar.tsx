@@ -6,7 +6,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PRIMARY_NAV } from "./nav.data";
 import { MobileMenu } from "./MobileMenu";
-import { getInquireContext } from "@/lib/inquire-context";
+import { getAboutHref, getInquireContext } from "@/lib/inquire-context";
+import { SectionLink } from "./design/SectionLink";
 import { inquireHref } from "@/lib/routes";
 import { AllImages } from "../../../public/images/AllImages";
 
@@ -26,6 +27,9 @@ export function Navbar() {
   const actionLabel = inquiry ? "INQUIRE" : "CONTACT";
   const actionHref = inquiry ? inquireHref({ destination: inquiry.programId, resort: inquiry.resortId }) : "/contact";
   // On the Inquire page itself there is no action button (client 2026-10-22).
+  // "About" shows the About of the Passover program the visitor is in, or the main About page outside the programs.
+  const aboutHref = getAboutHref(pathname);
+  const navLinks = PRIMARY_NAV.map((link) => (link.href === "/about" ? { ...link, href: aboutHref } : link));
   const onInquirePage = pathname === "/inquire" || pathname.startsWith("/inquire/");
 
   return (
@@ -51,10 +55,10 @@ export function Navbar() {
           </Link>
 
           <nav className="dcv-navlinks" aria-label="Primary">
-            {PRIMARY_NAV.map((link) => (
-              <Link key={link.href} href={link.href}>
+            {navLinks.map((link) => (
+              <SectionLink key={link.label} href={link.href}>
                 {link.label}
-              </Link>
+              </SectionLink>
             ))}
 
             {/* Inquire inside a program / hotel; Contact on all other pages */}
@@ -66,7 +70,7 @@ export function Navbar() {
           </nav>
 
           <MobileMenu
-            links={PRIMARY_NAV}
+            links={navLinks}
             inquire={{ label: actionLabel, href: actionHref }}
             isPassoverPage={Boolean(inquiry)}
             hideAction={onInquirePage}

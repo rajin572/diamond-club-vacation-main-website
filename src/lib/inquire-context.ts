@@ -31,3 +31,16 @@ export function getInquireContext(pathname: string | null, search: string): Inqu
 
   return { programId };
 }
+
+/**
+ * Where the "About" link of the header leads (client 2026-10-22): inside a Passover program (Diamond Club Reserve, Guettaway,
+ * Diamond Blue) and everything under it, to that program's own About page (.../programs/<id>/about); everywhere else
+ * (home, Casa Nizuc, weddings, ...) to the main About page.
+ */
+export const MAIN_ABOUT_HREF = "/about";
+
+export function getAboutHref(pathname: string | null): string {
+  if (!pathname) return MAIN_ABOUT_HREF;
+  const match = new RegExp("^(/offerings/[^/]+/programs/[^/]+)").exec(pathname);
+  return match ? match[1] + "/about" : MAIN_ABOUT_HREF;
+}
