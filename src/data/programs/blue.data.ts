@@ -84,7 +84,7 @@ export const BLUE_DATA: ProgramData = {
       title: "Local Attractions",
       blocks: [
         {
-          // Beach Club and La Aldea have no pages yet, so they are static tiles.
+          // The Beach Club and La Aldea have no pages, so "See details →" opens a pop-up with the client's text (2026-10-22).
           columns: 3,
           cards: [
             {
@@ -93,8 +93,29 @@ export const BLUE_DATA: ProgramData = {
               image: AllImages.reserveAttractions,
               target: { type: "experience", experienceType: "attractions" },
             },
-            { id: "beach-club", title: "Beach Club", image: AllImages.blueBeachClub },
-            { id: "la-aldea", title: "La Aldea", image: AllImages.blueLaAldea },
+            {
+              id: "beach-club",
+              title: "Beach Club",
+              image: AllImages.blueBeachClub,
+              imagePosition: "center 40%",
+              details: {
+                title: "Exclusive Aldea Nizuc Beach Club",
+                paragraphs: [
+                  "Just a five-minute walk from the hotel, our exclusive beach club offers a beautiful Caribbean escape reserved for our guests. Soak up the sun, relax by the turquoise waters, and enjoy exciting daytime beach parties, refreshing drinks, and unforgettable moments by the sea.",
+                ],
+              },
+            },
+            {
+              id: "la-aldea",
+              title: "La Aldea",
+              image: AllImages.blueLaAldea,
+              details: {
+                title: "La Aldea Nizuc – A Vibrant Lifestyle Destination",
+                paragraphs: [
+                  "Discover La Aldea Nizuc, a vibrant destination where stunning architecture, lush nature, art, dining, shopping, and entertainment come together. Explore beautifully designed spaces, unique boutiques, and lively surroundings, all just steps from Casa Nizuc.",
+                ],
+              },
+            },
           ],
         },
       ],

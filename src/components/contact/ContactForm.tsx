@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 import { Send, CheckCircle2 } from "lucide-react";
+import { ContactDetails } from "./ContactDetails";
 
 /** The contact form is always about the brand as a whole; the field is shown but cannot be changed. */
 const CONTACT_EXPERIENCE = "Diamond Club Vacations";
@@ -89,6 +90,8 @@ export function ContactForm() {
           Have questions about our programs, destinations, or bespoke services? Send us a message and our team will get back to you promptly.
         </p>
       </div>
+
+      <ContactDetails />
 
       <form onSubmit={onSubmit} noValidate style={{ maxWidth: 720, margin: "0 auto" }}>
         <div className="dcv-formgrid">

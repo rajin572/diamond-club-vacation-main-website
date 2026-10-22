@@ -86,7 +86,7 @@ export function ExperienceCards({ items, columns, layout = "cards", viewerTitle 
               </div>
             </article>
           ) : (
-            <article key={item.id} className="dcv-card">
+            <article key={item.id} className={item.featured ? "dcv-card dcv-card--featured" : "dcv-card"}>
               {item.image && (
               <Image
                 className={item.imageFocus === "top" ? "dcv-focus-top" : undefined}

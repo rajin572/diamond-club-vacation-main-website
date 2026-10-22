@@ -12,6 +12,10 @@ export interface ProgramCardData {
   image: DesignImage;
   /** Omit for a static tile (content that has no page of its own yet). */
   target?: ProgramTarget;
+  /** A tile with text and no page of its own: "See details →" opens a pop-up with it (Casa Nizuc's Beach Club). */
+  details?: { title: string; paragraphs: string[]; tag?: string };
+  /** CSS object-position of the tile photo. */
+  imagePosition?: string;
   /** Brand marks laid over the photo (e.g. the St. Regis logo). */
   logos?: CardLogo[];
 }

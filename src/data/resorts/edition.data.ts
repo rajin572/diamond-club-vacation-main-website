@@ -3675,7 +3675,7 @@ export const EDITION_RESORT_DATA: ResortData = {
   pools: {
     title: "Pools & Beach",
     description: "Pools, beach areas, cabanas and resort water experiences.",
-    images: [AllImages.editionMarriottPoolMainPool, AllImages.editionMarriottPoolSoolBeachClub],
+    images: [AllImages.editionMarriottPoolMainPool, AllImages.editionMarriottPoolSoolBeachClub, AllImages.editionPierCabanas1, AllImages.editionPierCabanas2, AllImages.editionPoolBeachAerial, AllImages.editionPierCabanas3],
     // The previous pools (kept, switched off): Main Pool, SO’OL Beach Club Pool and Lagoon Pool, with the photos in AllImages.series.editionPools.
     // images: AllImages.series.editionPools,
     items: [
@@ -3701,21 +3701,32 @@ export const EDITION_RESORT_DATA: ResortData = {
       },
       {
         id: "sool-beach-club-pool",
-        title: "SO'OL Restaurant & Beach Club - Adults Only",
-        subtitle: "Adults only · Outdoor, on property",
+        title: "SO'OL Restaurant & Beach Club",
+        subtitle: "Outdoor, on property · Infinity pool",
         image: AllImages.editionMarriottPoolSoolBeachClub,
         description: "Accessible by a picturesque palm tree-lined sand boardwalk from the Lagoon to the ocean, the SO’OL Beach Club embraces the Tulum aesthetic and features an infinity pool, dining and lounge areas along the beach, and a central outdoor grill, allowing guests to witness the chef's culinary artistry.",
         stats: [
-          { label: "Type", value: "Adults only, outdoor, on property" },
+          { label: "Type", value: "Outdoor, on property" },
           { label: "Hours", value: "Mon-Sun 12:00 PM-5:00 PM" },
           { label: "Location", value: "Outdoor. On Property" },
           { label: "Fee", value: "Complimentary" },
         ],
         groups: [
           { title: "Schedule", items: ["Mon-Sun 12:00 PM-5:00 PM"] },
-          { title: "Features", items: ["Adults only", "Lifeguard on Duty", "Pool Heated", "Adult-Only Pool", "Infinity Pool", "Towels provided"] },
+          { title: "Features", items: ["Lifeguard on Duty", "Pool Heated", "Infinity Pool", "Towels provided"] },
         ],
         gallery: [AllImages.editionMarriottPoolSoolBeachClub],
+      },
+      // Added 2026-10-22 at the client's request (Zoom): the pier. All 4 photos the client sent are the pier; the text only describes the photos.
+      {
+        id: "pier",
+        title: "The Pier",
+        subtitle: "Beach · Over the Caribbean",
+        image: AllImages.editionPierCabanas1,
+        description: "Lounge beds and shaded cabanas on a wooden pier stretching out over the turquoise Caribbean.",
+        stats: [{ label: "Type", value: "Beach" }, { label: "Location", value: "The pier, on property" }],
+        groups: [{ title: "Features", items: ["Cabanas", "Lounge beds", "Ocean views"] }],
+        gallery: [AllImages.editionPierCabanas1, AllImages.editionPierCabanas2, AllImages.editionPoolBeachAerial, AllImages.editionPierCabanas3],
       },
       // ---- Previous pools (kept, switched off) ----
       // {

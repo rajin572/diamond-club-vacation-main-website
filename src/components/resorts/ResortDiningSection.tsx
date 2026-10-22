@@ -86,7 +86,7 @@ export function ResortDiningCards({
               sizes="(max-width: 900px) 100vw, 50vw"
               priority={false}
               // The Guettaway banner is a wide wordmark (2048x725): show it whole (contain), never cropped (client 2026-10-19).
-              style={isGuettaway ? { objectFit: "contain", backgroundColor: "#fff" } : { objectPosition: "center 20%" }}
+              style={{ objectFit: "cover", objectPosition: isGuettaway ? "center 30%" : "center 20%" }}
             />
             <div className="dcv-body">
               <h3>Kosher Supervision</h3>

@@ -30,7 +30,7 @@ export function DetailHero({ image, kicker, title, subtitle, imagePosition, acti
       />
       <div className="dcv-copy">
         {kicker && <div className="dcv-kicker">{kicker}</div>}
-        <h1>{formatProgramTitle(title)}</h1>
+        <h1>{formatProgramTitle(title, true)}</h1>
         {subtitle && <div className="dcv-hero-subtitle">{formatProgramTitle(subtitle)}</div>}
         {actions && <div className="dcv-hero-actions">{actions}</div>}
       </div>

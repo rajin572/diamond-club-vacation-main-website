@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-import { X, ShieldCheck } from "lucide-react";
+import { X } from "lucide-react";
 import { AllImages } from "../../../public/images/AllImages";
 
 /**
@@ -63,7 +63,7 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
         </button>
 
         {isGuettaway ? (
-          /* GUETTAWAY KASHRUS: the client's message, word for word (Rabbi Nesanel Sommer / Kehillas Bnei Yitzchok) */
+          /* GUETTAWAY KASHRUS: the client's message of 2026-10-22, word for word (Rabbi Nesanel Sommer, Rabbi Avrum Kahan as Head Mashgiach) */
           <>
             <div className="dcv-brochure-header">
               <div className="dcv-brochure-kicker">GUETTAWAY, A DIAMOND CLUB PRODUCTION</div>
@@ -75,39 +75,21 @@ export function KosherSupervisionModal({ isOpen, onClose, programId }: DiningMod
               <div className="dcv-dining-modal-banner-wrap">
                 <Image
                   src={AllImages.kosherGettSupervision}
-                  alt="Under Strict Supervision of Rabbi Nesanel Sommer - Non Gebrokts"
-                  width={560}
-                  height={140}
+                  alt="Rabbi Nesanel Sommer, under whose strict supervision the hotel is Kosher for Pesach"
+                  width={1371}
+                  height={1148}
+                  sizes="600px"
                   priority
                 />
               </div>
 
               <div className="dcv-dining-modal-bio">
                 <p>
-                  At <strong>Guettaway, A Diamond Club Production</strong>, exceptional cuisine and uncompromising Kashrus standards come together to create an extraordinary Pesach experience.
+                  Under the strict hashgacha of <strong>Rabbi Nesanel Sommer, with Rabbi Avrum Kahan serving as Head Mashgiach</strong>, the entire hotel is Kosher for Pesach, featuring separate Milchig and Fleishig kitchens, Shmura Matzah only, Cholov Yisroel, and Non-Gebrokts throughout.
                 </p>
                 <p>
-                  Under the strict supervision of <strong>Rabbi Nesanel Sommer and Kehillas Bnei Yitzchok</strong>, every aspect of our culinary program is carefully overseen, from ingredient selection and food preparation to the presentation of our exquisite dining experiences.
+                  Our dedicated, full-time team of mashgichim oversees every kitchen and food service area to ensure uncompromising Kashrus standards, allowing you to enjoy every meal with complete confidence and peace of mind.
                 </p>
-                <p>
-                  Our program features dedicated, separate Milchig and Fleishig kitchens, experienced full-time Mashgichim, and meticulous attention to the highest standards of Pesach Kashrus.
-                </p>
-                <p>
-                  From elegant Yom Tov dining to our exceptional Chol Hamoed culinary experiences, guests can indulge in world-class cuisine with complete confidence and peace of mind.
-                </p>
-                <h3>Our Kashrus Standards</h3>
-              </div>
-
-              <div className="dcv-kashrus-badges">
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Non-Gebrokts
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Shmura Matzah
-                </span>
-                <span className="dcv-kashrus-badge">
-                  <ShieldCheck size={14} /> Cholov Yisroel
-                </span>
               </div>
 
               <div className="dcv-dining-modal-footer">

@@ -21,7 +21,7 @@ export function OfferingMainView({ data, programs }: OfferingMainViewProps) {
         imagePosition={data.hero.imagePosition}
       />
       <Wrap>
-        <SectionTitle title={data.programsSection.title} description={data.programsSection.description} />
+        {data.programsSection.title && <SectionTitle title={data.programsSection.title} description={data.programsSection.description} />}
         <div className="dcv-grid3">
           {programs.map((program) => (
             <ProgramCard key={program.id} program={program} />

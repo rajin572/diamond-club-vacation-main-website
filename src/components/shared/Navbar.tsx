@@ -25,6 +25,8 @@ export function Navbar() {
   const inquiry = getInquireContext(pathname, search);
   const actionLabel = inquiry ? "INQUIRE" : "CONTACT";
   const actionHref = inquiry ? inquireHref({ destination: inquiry.programId, resort: inquiry.resortId }) : "/contact";
+  // On the Inquire page itself there is no action button (client 2026-10-22).
+  const onInquirePage = pathname === "/inquire" || pathname.startsWith("/inquire/");
 
   return (
     <>
@@ -56,15 +58,18 @@ export function Navbar() {
             ))}
 
             {/* Inquire inside a program / hotel; Contact on all other pages */}
-            <Link className="dcv-btn" href={actionHref}>
-              {actionLabel}
-            </Link>
+            {!onInquirePage && (
+              <Link className="dcv-btn" href={actionHref}>
+                {actionLabel}
+              </Link>
+            )}
           </nav>
 
           <MobileMenu
             links={PRIMARY_NAV}
             inquire={{ label: actionLabel, href: actionHref }}
             isPassoverPage={Boolean(inquiry)}
+            hideAction={onInquirePage}
           />
         </div>
       </header>

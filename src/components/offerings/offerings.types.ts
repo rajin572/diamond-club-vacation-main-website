@@ -17,7 +17,7 @@ export interface OfferingData {
   /** Programs shown on the offering page, in order (hosted here or linked out). */
   programIds: string[];
   programsSection: {
-    title: string;
+    title?: string;
     description?: string;
   };
 }

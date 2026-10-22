@@ -2,6 +2,8 @@ import Image from "next/image";
 import { ChevronsRight } from "lucide-react";
 import { DesignCard, SectionTitle, Wrap } from "@/components/shared/design";
 import { experienceHref } from "@/lib/routes";
+import { ProgramDetailsCard } from "./ProgramDetailsCard";
+import { DescriptionText } from "@/components/resorts/DescriptionText";
 import type { ProgramAboutData, ProgramCardData, ProgramSection } from "./programs.types";
 
 /** DOM id (and anchor) of a program section, e.g. "Experiences" -> "experiences". */
@@ -20,7 +22,7 @@ function AboutParagraphs({ paragraphs, strong }: { paragraphs: string[]; strong?
               {paragraph.slice(strong.length)}
             </>
           ) : (
-            paragraph
+            <DescriptionText text={paragraph} />
           )}
         </p>
       ))}
@@ -81,7 +83,17 @@ interface ProgramSectionsProps {
 
 /** The program's experience / explore card groups, shown inside each hotel page. */
 export function ProgramSections({ offeringId, programId, sections, resortId }: ProgramSectionsProps) {
-  const card = (item: ProgramCardData) => (
+  const card = (item: ProgramCardData) =>
+    item.details ? (
+      <ProgramDetailsCard
+        key={item.id}
+        image={item.image}
+        title={item.title}
+        description={item.description}
+        details={item.details}
+        imagePosition={item.imagePosition}
+      />
+    ) : (
     <DesignCard
       key={item.id}
       image={item.image}

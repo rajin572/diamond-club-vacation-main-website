@@ -8,6 +8,9 @@ const SHOW_EDITION_PROGRAM_PHOTOS = true;
 import { RESERVE_DINING } from "./reserve-dining.data";
 
 /** The St. Regis Kanai Resort — content from the client's HTML design (diamond-club-main-design). */
+/** The spa photos: the treatment beds first (moved from Wellness & Fitness, client 2026-10-22). The Casa Nizuc picture that was first is removed (it came from another hotel). */
+const ST_REGIS_SPA_PHOTOS = [AllImages.stregis4, ...AllImages.series.stregisSpa];
+
 export const ST_REGIS_RESORT_DATA: ResortData = {
   programId: "diamond-club-reserve",
   programTitle: "DIAMOND CLUB RESERVE",
@@ -25,7 +28,7 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
     cards: [
       { id: "rooms", title: "Rooms & Suites", image: AllImages.stregisRooms1, target: { type: "section", section: "rooms" } },
       { id: "pools", title: "Pools & Beaches", image: AllImages.stregis3, target: { type: "section", section: "pools" } },
-      { id: "wellness", title: "Wellness & Fitness", image: AllImages.stregis4, target: { type: "section", section: "wellness" } },
+      { id: "wellness", title: "Wellness & Fitness", image: AllImages.stregisWellness1, target: { type: "section", section: "wellness" } },
       { id: "gallery", title: "Gallery", image: AllImages.stregis6, target: { type: "section", section: "gallery" } },
     ],
   },
@@ -1069,7 +1072,8 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
   wellness: {
     title: "Wellness & Fitness",
     description: "Fitness, classes and restorative wellness experiences.",
-    images: [AllImages.stregis4, ...AllImages.series.stregisWellness],
+    // The treatment beds photo (stregis4) belongs to the spa, not to wellness & fitness (client 2026-10-22); more fitness photos are to come from the client.
+    images: AllImages.series.stregisWellness,
     activities: [
       {
         id: "yoga",
@@ -1145,12 +1149,12 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
           ],
         },
       ],
-      gallery: AllImages.series.stregisSpa,
+      gallery: ST_REGIS_SPA_PHOTOS,
     },
     section: {
       title: "Spa",
       description: "A sanctuary of calm with hydrotherapy pools, hammam and steam rooms, massages, facials and a full salon.",
-      images: AllImages.series.stregisSpa,
+      images: ST_REGIS_SPA_PHOTOS,
     },
   },
   gallery: {

@@ -10,6 +10,7 @@ import {
   REFERRAL_OPTIONS,
   resolveDetailedExperience,
 } from "./inquire.data";
+import { ContactDetails } from "@/components/contact/ContactDetails";
 
 type YesNo = "Yes" | "No" | "";
 
@@ -99,6 +100,9 @@ export function InquireForm() {
     );
   }, [searchParams]);
 
+  const isGuettaway = /guettaway/i.test(detailedExp.label);
+  const isPassover = /reserve|diamond blue/i.test(detailedExp.label);
+
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -173,6 +177,13 @@ export function InquireForm() {
           <span key={index} className={index <= step ? "dcv-on" : undefined} />
         ))}
       </div>
+
+      {/* Only the Guettaway, Reserve and Blue Inquire pages show contact details, before the form (client 2026-10-22); every other Inquire page has none. */}
+      {(isGuettaway || isPassover) && (
+        <div style={{ marginBottom: 40 }}>
+          <ContactDetails variant={isGuettaway ? "guettaway" : "passover"} />
+        </div>
+      )}
 
       <form onSubmit={onSubmit} noValidate>
         {step === 0 && (

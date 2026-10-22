@@ -140,7 +140,7 @@ export const CASA_NIZUC_DATA: ResortData = {
   dining: {
     title: "Dining",
     description: "Enjoy food and drinks offered at Casa Nizuc.",
-    images: [AllImages.casaNizucDiningMayim, AllImages.casaNizucDiningAshan, AllImages.casaNizucDiningZait, AllImages.casaNizucDiningZaitTerrace, AllImages.casaNizucDiningNoam, AllImages.casaNizucDiningOfek, AllImages.casaNizucDiningMussa],
+    images: [AllImages.casaNizucDiningMayim, AllImages.casaNizucDiningAshan, AllImages.casaNizucDiningZait, AllImages.casaNizucDiningZaitTerrace, AllImages.casaNizucDiningNoam, AllImages.casaNizucDiningOfek, AllImages.casaNizucDiningMussa, AllImages.casaNizucDiningGrandBallroom],
     // From the hotel's Marriott dining page (marriott.com/en-us/hotels/cunan-casa-nizuc-a-tribute-portfolio-resort/dining/): names, text, meal periods, dress code and photos as published.
     // Barawa (swim-up bar) and La Boya (poolside snack bar) are on that page too, without a photo, so they are not listed here.
     items: [
@@ -197,6 +197,15 @@ export const CASA_NIZUC_DATA: ResortData = {
         description: "Where time stands still. Discover the peace of your intended destination. Our cocktails tell unique stories, harmonizing with the clouds, the ocean, and the mangroves. The ideal backdrop for beginning your next memorable journey.",
         stats: [{ label: "Dress Code", value: "Casual" }],
         gallery: [AllImages.casaNizucDiningMussa],
+      },
+      // Added 2026-10-22 from the client's message (text and photo as sent).
+      {
+        id: "grand-ballroom-yom-tov-dining",
+        title: "Grand Ballroom – Yom Tov Dining",
+        subtitle: "Festive holiday dinners",
+        image: AllImages.casaNizucDiningGrandBallroom,
+        description: "Celebrate Yom Tov with elegant holiday dinners in our beautiful Grand Ballroom, featuring exceptional gourmet cuisine, attentive service, and a warm, festive atmosphere for family and friends.",
+        gallery: [AllImages.casaNizucDiningGrandBallroom],
       },
     ],
   },
@@ -280,26 +289,20 @@ export const CASA_NIZUC_DATA: ResortData = {
     ],
   },
   // From the Spa tab of the hotel's Marriott overview page ("Wellness Center"); its photo there is Marriott's "Photo Coming Soon" placeholder.
+  // The client's message of 2026-10-22 ("Spa & Wellness", for Casa Nizuc), word for word. The photo is still Marriott's placeholder.
   spa: {
     item: {
       id: "spa",
-      title: "Wellness Center",
-      subtitle: "Appointment required",
+      title: "Spa & Wellness",
+      subtitle: "Dedicated spa cabins",
       image: AllImages.casaNizucSpaWellnessCenter,
-      description: "A sanctuary where the art of living meets deep well-being. Sensory architecture and nature converge for unprecedented relaxation. Pause, reconnect, and find peace in organic design. Here, nature and art prove that living fully is the ultimate luxury.",
-      stats: [{ label: "Booking", value: "Appointment required" }],
-      groups: [
-        {
-          title: "Services, Treatments and Amenities",
-          items: ["Couples Massages", "Massages", "Separate Men & Women’s Lounges"],
-        },
-      ],
+      description: "While the full-service spa is still under development, dedicated spa cabins are available, offering a variety of relaxing massage treatments for a rejuvenating experience.",
       gallery: [AllImages.casaNizucSpaWellnessCenter],
     },
     // Own block on the hotel page (like Pools and Wellness).
     section: {
-      title: "Spa",
-      description: "A sanctuary where the art of living meets deep well-being. Sensory architecture and nature converge for unprecedented relaxation. Pause, reconnect, and find peace in organic design. Here, nature and art prove that living fully is the ultimate luxury.",
+      title: "Spa & Wellness",
+      description: "While the full-service spa is still under development, dedicated spa cabins are available, offering a variety of relaxing massage treatments for a rejuvenating experience.",
       images: [AllImages.casaNizucSpaWellnessCenter],
     },
   },

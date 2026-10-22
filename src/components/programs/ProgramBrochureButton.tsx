@@ -1,28 +1,21 @@
-"use client";
-
-import { useState } from "react";
-import { FileText } from "lucide-react";
-import { BrochureModal } from "@/components/shared/BrochureModal";
+import { Download } from "lucide-react";
 import type { ProgramBrochure } from "./programs.types";
 
-/** The program's own Brochure button (every program has a different brochure) with its pop-up viewer. */
+/**
+ * The program's own Brochure button (every program has a different brochure). It downloads the PDF right away:
+ * no pop-up and no preview (client request 2026-10-22).
+ */
 export function ProgramBrochureButton({ brochure }: { brochure: ProgramBrochure }) {
-  const [open, setOpen] = useState(false);
-
   return (
-    <>
-      <button type="button" className="dcv-btn dcv-brochure-btn" onClick={() => setOpen(true)} aria-label={`Open the ${brochure.title}`}>
-        <FileText size={16} aria-hidden="true" />
-        <span>Brochure</span>
-      </button>
-      <BrochureModal
-        open={open}
-        onClose={() => setOpen(false)}
-        pdfHref={brochure.pdfHref}
-        title={brochure.title}
-        downloadName={brochure.downloadName}
-      />
-    </>
+    <a
+      className="dcv-btn dcv-brochure-btn"
+      href={brochure.pdfHref}
+      download={brochure.downloadName}
+      aria-label={`Download the ${brochure.title}`}
+    >
+      <Download size={16} aria-hidden="true" />
+      <span>Brochure</span>
+    </a>
   );
 }
 

@@ -10,10 +10,12 @@ interface MobileMenuProps {
   links: DesignLink[];
   inquire: DesignLink;
   isPassoverPage?: boolean;
+  /** No Inquire / Contact button (the Inquire page itself). */
+  hideAction?: boolean;
 }
 
 /** Hamburger + dropdown shown below 900px, where the client's design hides the link row. */
-export function MobileMenu({ links, inquire, isPassoverPage }: MobileMenuProps) {
+export function MobileMenu({ links, inquire, isPassoverPage, hideAction }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -45,9 +47,11 @@ export function MobileMenu({ links, inquire, isPassoverPage }: MobileMenuProps) 
               {link.label}
             </Link>
           ))}
-          <Link className="dcv-btn" href={buttonHref}>
-            {buttonLabel}
-          </Link>
+          {!hideAction && (
+            <Link className="dcv-btn" href={buttonHref}>
+              {buttonLabel}
+            </Link>
+          )}
         </nav>
       )}
     </>

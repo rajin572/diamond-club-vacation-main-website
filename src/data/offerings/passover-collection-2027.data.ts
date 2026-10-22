@@ -13,7 +13,6 @@ export const PASSOVER_COLLECTION_2027_DATA: OfferingData = {
     logo: { image: AllImages.logo, alt: "Diamond Club Vacations" },
   },
   programIds: ["diamond-club-reserve", "guttaway", "blue"],
-  programsSection: {
-    title: "Passover Programs - 2027",
-  },
+  // No heading above the programs (client 2026-10-22: "Passover Programs - 2027" removed).
+  programsSection: {},
 };

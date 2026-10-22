@@ -27,6 +27,8 @@ export interface ExperienceItem {
   imageFocus?: "top" | "center";
   /** Details still to be announced: the card is shown without a link. */
   tba?: boolean;
+  /** One big card across the whole row (e.g. the live concert at the top of Blue's Entertainment). */
+  featured?: boolean;
   /** Slug of another experience page of the same program this card links to (e.g. "kids-day-camp"). */
   linkTo?: string;
   linkLabel?: string;

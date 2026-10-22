@@ -16,7 +16,6 @@ import blueBeachClub from "./mainDesign/blue-beach-club.jpg";
 import blueScholars from "./mainDesign/blue-scholars.jpg";
 import blueEntertainment from "./mainDesign/blue-entertainment.png";
 import blueScholarLawrenceHajioff from "./mainDesign/blue-scholar-lawrence-hajioff.png";
-import blueEntertainmentDoviNeuburger from "./mainDesign/blue-entertainment-dovi-neuburger.png";
 import reserveAttractionXcaret from "./mainDesign/reserve-attraction-xcaret.jpg";
 import reserveAttractionXplor from "./mainDesign/reserve-attraction-xplor.jpg";
 import reserveAttractionChichenItza from "./mainDesign/reserve-attraction-chichen-itza.jpg";
@@ -49,7 +48,6 @@ import reserveScholarChananGordon from "./mainDesign/reserve-scholar-chanan-gord
 import reserveBabysitting from "./mainDesign/reserve-babysitting.png";
 import reserveEntertainmentConcert from "./mainDesign/reserve-entertainment-concert.jpg";
 import reserveEntertainmentElonGold from "./mainDesign/reserve-entertainment-elon-gold.png";
-import reserveEntertainmentKumzits from "./mainDesign/reserve-entertainment-kumzits.png";
 import reserveEntertainmentDjPinnyYiddi from "./mainDesign/reserve-entertainment-dj-pinny-yiddi.png";
 import reserveEntertainmentNightlife from "./mainDesign/reserve-entertainment-nightlife.png";
 import rabbiLawrenceHajioff from "./rabbi-lawrence-hajioff.jpg";
@@ -339,7 +337,6 @@ import stregisRoomDetail9 from "./mainDesign/stregis-room-detail-9.jpg";
 import stregisRooms1 from "./mainDesign/stregis-rooms-1.jpg";
 import stregisRooms2 from "./mainDesign/stregis-rooms-2.jpg";
 import stregisRooms3 from "./mainDesign/stregis-rooms-3.jpg";
-import stregisSpa1 from "./mainDesign/stregis-spa-1.jpg";
 import stregisSpa2 from "./mainDesign/stregis-spa-2.jpg";
 import stregisSpa3 from "./mainDesign/stregis-spa-3.jpg";
 import stregisSpa4 from "./mainDesign/stregis-spa-4.jpg";
@@ -550,6 +547,11 @@ import stregisMarriottPoolSerenityPool from "./mainDesign/stregis-marriott-pool-
 import stregisMarriottPoolMainPool from "./mainDesign/stregis-marriott-pool-main-pool.webp";
 import stregisMarriottPoolWhirlpool from "./mainDesign/stregis-marriott-pool-whirlpool.webp";
 import editionMarriottPoolSoolBeachClub from "./mainDesign/edition-marriott-pool-sool-beach-club.webp";
+// EDITION: the pier, 4 photos sent by the client 2026-10-22.
+import editionPierCabanas1 from "./mainDesign/edition-pier-cabanas-1.webp";
+import editionPierCabanas2 from "./mainDesign/edition-pier-cabanas-2.webp";
+import editionPoolBeachAerial from "./mainDesign/edition-pool-beach-aerial.webp";
+import editionPierCabanas3 from "./mainDesign/edition-pier-cabanas-3.webp";
 import editionMarriottPoolMainPool from "./mainDesign/edition-marriott-pool-main-pool.webp";
 import parkHyattPoolPoolsAndCabanas from "./mainDesign/park-hyatt-pool-pools-and-cabanas.webp";
 import parkHyattSpaVelaraSpa from "./mainDesign/park-hyatt-spa-velara-spa.webp";
@@ -598,6 +600,7 @@ import casaNizucDiningZaitTerrace from "./mainDesign/casa-nizuc-dining-zait-terr
 import casaNizucDiningNoam from "./mainDesign/casa-nizuc-dining-noam.webp";
 import casaNizucDiningOfek from "./mainDesign/casa-nizuc-dining-ofek.webp";
 import casaNizucDiningMussa from "./mainDesign/casa-nizuc-dining-mussa.webp";
+import casaNizucDiningGrandBallroom from "./mainDesign/casa-nizuc-dining-grand-ballroom.webp";
 // Casa Nizuc room photos and the spa photo: from the hotel's Marriott pages (the spa photo is Marriott's placeholder for it).
 import casaNizucRoomKingBalcony from "./mainDesign/casa-nizuc-room-king-balcony.webp";
 import casaNizucRoomTwoDoubles from "./mainDesign/casa-nizuc-room-two-doubles.webp";
@@ -606,6 +609,12 @@ import casaNizucRoomKingBath from "./mainDesign/casa-nizuc-room-king-bath.webp";
 import casaNizucSpaWellnessCenter from "./mainDesign/casa-nizuc-spa-wellness-center.webp";
 // The Guettaway logo (client 2026-10-20): cream oval with a palm tree, transparent background.
 import guettawayLogo from "./mainDesign/guettaway-logo.webp";
+// The program logos have a transparent background: the colored ones are for light backgrounds, the white ones ("-white") for the dark banners. Sent by the client 2026-10-22.
+import guettawayLogoWhite from "./mainDesign/guettaway-logo-white.webp";
+import reserveLogo from "./mainDesign/reserve-logo.webp";
+import reserveLogoWhite from "./mainDesign/reserve-logo-white.webp";
+import blueLogo from "./mainDesign/blue-logo.webp";
+import blueLogoWhite from "./mainDesign/blue-logo-white.webp";
 // The kids collage without the orange "I love DC" box (client 2026-10-20: that symbol is only for the St. Regis); used by Guettaway.
 import guettawayKidsProgram from "./mainDesign/guettaway-kids-program.webp";
 // Photo sent by the client 2026-10-20 for the Waldorf Astoria Day Camp team box (Program Director Rabbi Binyomin Schwartz, with two boys).
@@ -793,7 +802,6 @@ export const AllImages = {
   blueScholars,
   blueEntertainment,
   blueScholarLawrenceHajioff,
-  blueEntertainmentDoviNeuburger,
   reserveAttractionXcaret,
   attractionCobaRuins,
   attractionEkBalam,
@@ -818,7 +826,6 @@ export const AllImages = {
   reserveBabysitting,
   reserveEntertainmentConcert,
   reserveEntertainmentElonGold,
-  reserveEntertainmentKumzits,
   reserveEntertainmentDjPinnyYiddi,
   reserveEntertainmentNightlife,
   rabbiLawrenceHajioff,
@@ -1107,7 +1114,6 @@ export const AllImages = {
   stregisRooms1,
   stregisRooms2,
   stregisRooms3,
-  stregisSpa1,
   stregisSpa2,
   stregisSpa3,
   stregisSpa4,
@@ -1338,7 +1344,7 @@ export const AllImages = {
     stregisResortGallery: [stregisResortGallery1, stregisResortGallery2, stregisResortGallery3, stregisResortGallery4, stregisResortGallery5, stregisResortGallery6, stregisResortGallery7],
     stregisRoomDetail: [stregisRoomDetail1, stregisRoomDetail2, stregisRoomDetail3, stregisRoomDetail4, stregisRoomDetail5, stregisRoomDetail6, stregisRoomDetail7, stregisRoomDetail8, stregisRoomDetail9, stregisRoomDetail10, stregisRoomDetail11],
     stregisRooms: [stregisRooms1, stregisRooms2, stregisRooms3],
-    stregisSpa: [stregisSpa1, stregisSpa2, stregisSpa3, stregisSpa4, stregisSpa5],
+    stregisSpa: [stregisSpa2, stregisSpa3, stregisSpa4, stregisSpa5],
     stregisWellness: [stregisWellness1],
     waldorf: [waldorf1, waldorf2, waldorf3, waldorf4, waldorf5, waldorf6],
     waldorfGallery: [waldorfGallery1, waldorfGallery2, waldorfGallery3, waldorfGallery4, waldorfGallery5, waldorfGallery6, waldorfGallery7, waldorfGallery8],
@@ -1413,12 +1419,18 @@ export const AllImages = {
   casaNizucDiningNoam,
   casaNizucDiningOfek,
   casaNizucDiningMussa,
+  casaNizucDiningGrandBallroom,
   casaNizucRoomKingBalcony,
   casaNizucRoomTwoDoubles,
   casaNizucRoomSuiteLiving,
   casaNizucRoomKingBath,
   casaNizucSpaWellnessCenter,
   guettawayLogo,
+  guettawayLogoWhite,
+  reserveLogo,
+  reserveLogoWhite,
+  blueLogo,
+  blueLogoWhite,
   guettawayKidsProgram,
   dayCampDirectorBinyominSchwartz,
   entertainmentShulemLemmer,
@@ -1463,6 +1475,10 @@ export const AllImages = {
   casaNizucGallery42,
   casaNizucGallery43,
   editionMarriottPoolSoolBeachClub,
+  editionPierCabanas1,
+  editionPierCabanas2,
+  editionPoolBeachAerial,
+  editionPierCabanas3,
   editionMarriottPoolMainPool,
   reserveProgram2026N01,
   reserveProgram2026N02,
