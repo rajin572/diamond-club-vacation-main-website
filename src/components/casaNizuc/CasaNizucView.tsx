@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowUpDown, CalendarDays, Check, Clock, Droplets, KeyRound, Landmark, Mail, Scale, Star, UtensilsCrossed, Wine } from "lucide-react";
+import { ProgramBrochureButton } from "@/components/programs";
 import { DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
@@ -43,11 +44,11 @@ function Lead({ text, caps }: { text: string; caps?: boolean }) {
 
 /** The year-round Casa Nizuc page, /casa-nizuc: the kosher resort that has it all. */
 export function CasaNizucView() {
-  const { hero, about, shabbat, dining, gkde, seasons, events, contact } = CASA_NIZUC_PAGE;
+  const { hero, brochure, about, shabbat, dining, gkde, seasons, events, contact } = CASA_NIZUC_PAGE;
 
   return (
     <>
-      <DetailHero image={hero.image} imagePosition={hero.imagePosition} kicker={hero.kicker} title={hero.title} subtitle={hero.subtitle} />
+      <DetailHero image={hero.image} imagePosition={hero.imagePosition} kicker={hero.kicker} title={hero.title} subtitle={hero.subtitle} actions={<ProgramBrochureButton brochure={brochure} />} />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
       {/* 01 About */}

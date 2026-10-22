@@ -16,6 +16,13 @@ export const CASA_NIZUC_PAGE = {
     imagePosition: "50% 42%",
   },
 
+  /** The packet itself, without the pages and boxes meant for the marketing team (public/brochures/casa-nizuc.pdf). Downloads right away, like the program brochures. */
+  brochure: {
+    title: "Casa Nizuc Brochure",
+    pdfHref: "/brochures/casa-nizuc.pdf",
+    downloadName: "Casa-Nizuc-Brochure.pdf",
+  },
+
   about: {
     heading: "The kosher resort that has it all.",
     lead: "Five kosher dining destinations. A synagogue under our roof. Shabbat elevators, a full Shabbat service and every holiday celebrated in style. Welcome to Casa Nizuc, Cancún.",
