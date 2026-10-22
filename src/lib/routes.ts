@@ -113,7 +113,7 @@ export function inquireHref(params: InquireHrefParams): string {
 }
 
 /**
- * Casa Nizuc is a year-round resort, but the route system has a single Casa Nizuc resort page and it
- * lives under the Diamond Blue program, so every "Casa Nizuc" link on the site points here.
+ * The year-round Casa Nizuc page (client 2026-10-22: completely separate from Diamond Blue's Casa Nizuc). Every "Casa Nizuc" link of the
+ * home page, the header and the footer points here.
  */
-export const CASA_NIZUC_HREF = resortHref(PASSOVER_OFFERING_ID, "blue", "casa-nizuc");
+export const CASA_NIZUC_HREF = "/casa-nizuc";

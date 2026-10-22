@@ -365,6 +365,269 @@
   border-color: #c9a45a;
   transform: translateX(-2px);
 }
+/* Casa Nizuc, the year-round kosher resort page (/casa-nizuc) */
+.dcv-cn-two {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 44px;
+  align-items: start;
+}
+.dcv-cn-two--flip {
+  grid-template-columns: 1fr 1fr;
+}
+.dcv-cn-copy p {
+  color: #444;
+  line-height: 1.85;
+  margin: 0 0 18px;
+}
+.dcv-cn-lead {
+  max-width: 860px;
+  margin: 0 0 32px;
+}
+.dcv-cn-glance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.dcv-cn-stat {
+  background: #fff;
+  border: 1px solid rgba(205, 172, 104, 0.45);
+  border-radius: 20px;
+  padding: 22px 18px;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(24, 29, 31, 0.06);
+}
+.dcv-cn-stat b {
+  display: block;
+  font: 400 clamp(34px, 4vw, 46px) / 1 var(--dcv-serif);
+  color: #b88124;
+  margin-bottom: 8px;
+}
+.dcv-cn-stat span {
+  font: 600 11px/1.4 var(--dcv-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #555;
+}
+.dcv-cn-facts {
+  list-style: none;
+  padding: 0;
+  margin: 34px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.dcv-cn-facts li {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(205, 172, 104, 0.3);
+}
+.dcv-cn-facts b {
+  font: 700 12px/1.6 var(--dcv-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a6420;
+}
+.dcv-cn-facts span {
+  color: #333;
+  line-height: 1.6;
+}
+.dcv-cn-sub {
+  font-size: clamp(24px, 2.6vw, 32px);
+  margin: 54px 0 12px;
+}
+.dcv-cn-quote {
+  font: italic 400 20px/1.5 var(--dcv-serif);
+  color: #555;
+  margin: 0 0 24px;
+}
+.dcv-cn-feature h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.dcv-cn-soon {
+  font: 700 10px/1 var(--dcv-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: #f6e7d3;
+  color: #8a6420;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-style: normal;
+}
+.dcv-cn-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 18px;
+}
+.dcv-cn-steps li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.dcv-cn-steps p {
+  margin: 4px 0 0;
+  color: #555;
+  line-height: 1.6;
+}
+.dcv-cn-step-n {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e4bd60, #b87f23);
+  color: #fff;
+  font: 700 15px/1 var(--dcv-serif);
+}
+.dcv-cn-card {
+  background: #fff;
+  border: 1px solid rgba(205, 172, 104, 0.45);
+  border-top: 4px solid #c9a45a;
+  border-radius: 22px;
+  padding: 28px 30px;
+  box-shadow: 0 14px 34px rgba(24, 29, 31, 0.07);
+}
+.dcv-cn-card h3 {
+  margin: 0 0 14px;
+}
+.dcv-cn-note {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 16px 0 0;
+}
+.dcv-wedding-table-wrap .dcv-cn-note {
+  padding: 0 18px 14px;
+  margin: 12px 0 0;
+}
+.dcv-cn-center {
+  text-align: center;
+}
+.dcv-cn-kind {
+  font: 700 11px/1.5 var(--dcv-sans);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a6420;
+  margin: 0 0 10px;
+}
+.dcv-cn-hours {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+.dcv-cn-price {
+  background: linear-gradient(135deg, #1d2b45, #101a2c);
+  color: #fff;
+  border-radius: 26px;
+  padding: 34px 32px;
+  text-align: center;
+  box-shadow: 0 20px 44px rgba(16, 26, 44, 0.26);
+}
+.dcv-cn-price b {
+  display: block;
+  font: 400 64px/1 var(--dcv-serif);
+  color: #f1d58b;
+  margin: 6px 0;
+}
+.dcv-cn-price span,
+.dcv-cn-price em {
+  display: block;
+  font-style: normal;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.dcv-cn-price h4 {
+  margin: 24px 0 10px;
+  font: 700 12px/1 var(--dcv-sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f1d58b;
+}
+.dcv-cn-price ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  text-align: left;
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+}
+.dcv-cn-ofek {
+  margin-top: 40px;
+  padding: 36px 40px;
+  border-radius: 26px;
+  background: #f6e7d3;
+  border: 1px solid rgba(205, 172, 104, 0.5);
+}
+.dcv-cn-ofek h3 {
+  margin: 0 0 8px;
+}
+.dcv-cn-ofek p {
+  color: #333;
+  line-height: 1.8;
+  margin: 0 0 14px;
+}
+.dcv-cn-ofek ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+  color: #333;
+}
+.dcv-cn-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 10px;
+  color: #444;
+  line-height: 1.6;
+  font-size: 14px;
+}
+.dcv-cn-cta {
+  text-align: center;
+  margin: 40px 0 0;
+}
+.dcv-cn-events {
+  display: grid;
+  gap: 16px;
+}
+.dcv-cn-contact {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto 26px;
+}
+@media (max-width: 900px) {
+  .dcv-cn-two,
+  .dcv-cn-two--flip,
+  .dcv-cn-contact {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dcv-cn-facts li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .dcv-cn-ofek {
+    padding: 26px 22px;
+  }
+}
 .dcv-title-with-logo {
   display: inline-flex;
   align-items: center;
