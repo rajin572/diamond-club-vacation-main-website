@@ -599,6 +599,15 @@ import casaNizucDiningZait from "./mainDesign/casa-nizuc-dining-zait.webp";
 import casaNizucDiningZaitTerrace from "./mainDesign/casa-nizuc-dining-zait-terrace.webp";
 import casaNizucDiningNoam from "./mainDesign/casa-nizuc-dining-noam.webp";
 import casaNizucDiningOfek from "./mainDesign/casa-nizuc-dining-ofek.webp";
+// Casa Nizuc page (/casa-nizuc): the renders of the client's Casa Nizuc Kosher Marketing Packet (October 2026).
+import casaNizucTowerNight from "./mainDesign/casa-nizuc-tower-night.webp";
+import casaNizucTowerDay from "./mainDesign/casa-nizuc-tower-day.webp";
+import casaNizucAshanRender from "./mainDesign/casa-nizuc-ashan-render.webp";
+import casaNizucMayimBuffet from "./mainDesign/casa-nizuc-mayim-buffet.webp";
+import casaNizucGkdeDining from "./mainDesign/casa-nizuc-gkde-dining.webp";
+import casaNizucOfekRooftop from "./mainDesign/casa-nizuc-ofek-rooftop.webp";
+import casaNizucEventsChandeliers from "./mainDesign/casa-nizuc-events-chandeliers.webp";
+import casaNizucSukkotBar from "./mainDesign/casa-nizuc-sukkot-bar.webp";
 import casaNizucDiningMussa from "./mainDesign/casa-nizuc-dining-mussa.webp";
 import casaNizucDiningGrandBallroom from "./mainDesign/casa-nizuc-dining-grand-ballroom.webp";
 // Casa Nizuc room photos and the spa photo: from the hotel's Marriott pages (the spa photo is Marriott's placeholder for it).
@@ -1418,6 +1427,14 @@ export const AllImages = {
   casaNizucDiningZaitTerrace,
   casaNizucDiningNoam,
   casaNizucDiningOfek,
+  casaNizucTowerNight,
+  casaNizucTowerDay,
+  casaNizucAshanRender,
+  casaNizucMayimBuffet,
+  casaNizucGkdeDining,
+  casaNizucOfekRooftop,
+  casaNizucEventsChandeliers,
+  casaNizucSukkotBar,
   casaNizucDiningMussa,
   casaNizucDiningGrandBallroom,
   casaNizucRoomKingBalcony,

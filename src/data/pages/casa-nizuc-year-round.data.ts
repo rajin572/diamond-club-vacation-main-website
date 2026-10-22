@@ -2,17 +2,18 @@ import { AllImages } from "../../../public/images/AllImages";
 
 /**
  * The year-round Casa Nizuc page (/casa-nizuc, client 2026-10-22: completely separate from Diamond Blue's Casa Nizuc).
- * Copy from the client's "Casa Nizuc Kosher Marketing Packet" (October 2026), pages 01 to 06. Left out on purpose, because the packet
- * lists them under "Confirm before publishing": the hechsher name, the GKDE stay dates and whether its price is per night or per stay,
- * the Ofek Saturday-night menu, age limit and prices, the holiday dates and the kids' ages for the holiday seasons. The Mikvah is "coming soon".
- * The packet's notes for the marketing team are not published.
+ * Copy and photos from the client's "Casa Nizuc Kosher Marketing Packet" (October 2026), pages 01 to 06 and the contact block: everything in
+ * normal type is published; the boxes "for the marketing team" are not. Items the packet still has to confirm and has no text for (the
+ * hechsher's name and logo, the GKDE stay dates, the Ofek Saturday-night menu, age limit and prices, the DCV phone / WhatsApp) are not shown.
+ * The Mikvah is "coming soon". The packet's photos of the Barawa pool bar show swimwear, so the aerial pool photo is used for it and for Summer.
  */
 export const CASA_NIZUC_PAGE = {
   hero: {
-    kicker: "CASA NIZUC · TRIBUTE PORTFOLIO RESORT · CANCÚN",
+    kicker: "A Tribute Portfolio Resort by Marriott · A DCV Concept",
     title: "The Kosher Resort That Has It All",
-    subtitle: "Dining, Shabbat, GKDE, the four seasons, events and celebrations, all under one roof.",
-    image: AllImages.casa2,
+    subtitle: "Dining · Shabbat · GKDE · The Four Seasons · Events & Celebrations",
+    image: AllImages.casaNizucTowerNight,
+    imagePosition: "50% 42%",
   },
 
   about: {
@@ -74,6 +75,7 @@ export const CASA_NIZUC_PAGE = {
       "GKDE guests: Shabbat meals are part of the experience; just reserve your table.",
     ],
     scheduleNote: "Weekly schedule at the front desk and on WhatsApp.",
+    image: AllImages.casaNizucAshanRender,
   },
 
   dining: {
@@ -81,11 +83,11 @@ export const CASA_NIZUC_PAGE = {
     lead: "From sunrise espresso to a steakhouse dinner 23 floors above the sea, every venue kosher, every day.",
     text: "At Casa Nizuc you don't eat at \"the kosher restaurant.\" You choose between five, each with its own kitchen, chef and personality. Meat is Glatt Kosher Beit Yosef. Dairy is Chalav Yisroel. Kosher wines are poured at every venue.",
     venues: [
-      { name: "Âshân", kind: "Signature Glatt Kosher Steakhouse · Beit Yosef", text: "Premium USDA Prime meats, handcrafted appetizers, exceptional global wines and a refined evening atmosphere. The dinner everyone talks about.", badge: "Included in GKDE", image: AllImages.casaNizucDiningAshan },
+      { name: "Âshân", kind: "Signature Glatt Kosher Steakhouse · Beit Yosef", text: "Premium USDA Prime meats, handcrafted appetizers, exceptional global wines and a refined evening atmosphere. The dinner everyone talks about.", badge: "Included in GKDE", image: AllImages.casaNizucAshanRender },
       { name: "Zait", kind: "Mediterranean Panoramic · Beit Yosef", text: "Perched on the 23rd floor, with panoramic Caribbean and hotel-zone views, authentic Mediterranean cuisine and Casa Nizuc's exclusive kosher Wine Cave.", badge: "Included in GKDE", image: AllImages.casaNizucDiningZait },
-      { name: "Mayim", kind: "Three-Meal Dairy Kitchen · Chalav Yisroel", text: "The only kosher international breakfast buffet in Cancún, with show cooking, Caribbean fruit and Mexican specialties. Fresh fish, hand-rolled pastas and desserts at lunch and dinner.", badge: "Included in GKDE", image: AllImages.casaNizucDiningMayim },
+      { name: "Mayim", kind: "Three-Meal Dairy Kitchen · Chalav Yisroel", text: "The only kosher international breakfast buffet in Cancún, with show cooking, Caribbean fruit and Mexican specialties. Fresh fish, hand-rolled pastas and desserts at lunch and dinner.", badge: "Included in GKDE", image: AllImages.casaNizucMayimBuffet },
       { name: "Noam", kind: "Artisan Coffee House & Ice Cream Parlour · Chalav Yisroel", text: "Fresh pastries, gourmet sandwiches, specialty coffee, fresh juices, grab-and-go and ice cream, all day long.", badge: "Included in GKDE", image: AllImages.casaNizucDiningNoam },
-      { name: "Ofek", kind: "Premium Adults-Only Rooftop Sky Pool & Lounge", text: "Live DJs, weekend events, a hookah lounge, handcrafted cocktails and premium kosher bites above the Caribbean.", badge: "Premium · booked separately", image: AllImages.casaNizucDiningOfek },
+      { name: "Ofek", kind: "Premium Adults-Only Rooftop Sky Pool & Lounge", text: "Live DJs, weekend events, a hookah lounge, handcrafted cocktails and premium kosher bites above the Caribbean.", badge: "Premium · booked separately", image: AllImages.casaNizucOfekRooftop },
       { name: "Barawa", kind: "Swim-Up Pool Bar", text: "Fresh cocktails, juices and light bites without leaving the water.", badge: "", image: AllImages.casaNizucGallery31 },
     ],
     meals: [
@@ -95,11 +97,11 @@ export const CASA_NIZUC_PAGE = {
       { meal: "Evening", hours: "", where: "Ofek (adults only)", what: "Premium rooftop: live DJs, weekend events, hookah lounge, cocktails and kosher bites. Not in GKDE." },
       { meal: "In-room dining", hours: "", where: "Your room", what: "Kosher in-room dining, delivered sealed." },
     ],
-    mealsNote: "Hours may change.",
   },
 
   gkde: {
     heading: "GKDE, the Gourmet Kosher Dining Experience",
+    image: AllImages.casaNizucGkdeDining,
     lead: "Immerse yourself in an all-gastronomic escape. Unlimited access to our elevated kosher dining concepts and refreshing soft beverages throughout your entire stay.",
     price: { from: "$200", adult: "per adult", child: "$80 per child" },
     includes: [
@@ -107,18 +109,20 @@ export const CASA_NIZUC_PAGE = {
       "Zait: Mediterranean Panoramic Restaurant & Wine Cave, Beit Yosef",
       "Mayim: Three-Meal Dairy Kitchen, Chalav Yisroel",
       "Noam: Artisan Coffee House & Ice Cream Parlour, Chalav Yisroel",
-      "Soft drinks and beer throughout your stay",
+      "Soft drinks and beer: throughout your stay",
     ],
     know: [
       "Only at Casa Nizuc.",
       "Soft drinks and beer included. Other alcoholic beverages and cocktails are not.",
       "$200 per adult, $80 per child when booked online. Booked at the front desk, GKDE is 20% higher.",
       "Two-bedroom family suites available.",
+      "Promotional code: GKDE2026",
       "Make memories. Earn points. Join Marriott Bonvoy for free.",
     ],
     ofekNote: "Ofek Rooftop is not included in GKDE.",
     ofek: {
       heading: "Ofek. Where the night begins.",
+      image: AllImages.casaNizucOfekRooftop,
       lead: "Casa Nizuc's adults-only rooftop sky pool and lounge. Live DJs, weekend events, hookah lounges and the best view in Cancún, all kosher.",
       text: "When the sun drops over the lagoon, the party moves upstairs. Ofek is our premium rooftop setting: handcrafted cocktails, a kosher bites menu, private lounges and a sky pool above the Caribbean. Weekends bring live DJs and special events; the hookah lounge stays open late. This is the night out your vacation has been missing.",
       points: [
@@ -136,11 +140,21 @@ export const CASA_NIZUC_PAGE = {
     lead: "Four times a year, Casa Nizuc becomes a complete kosher holiday program. All-inclusive extended packages are available to pre-book now.",
     text: "Shabbat and GKDE are here every week. Four seasons are bigger: every meal included, daily activities for every age and evenings worth staying up for. Book early, these seasons sell out first.",
     list: [
-      { name: "Sukkot", tagline: "Under the Caribbean sky", points: ["A resort sukkah for every Yom Tov and Chol Hamoed meal", "Full Yom Tov program and Simchat Torah hakafot", "Chol Hamoed excursions and evening entertainment"] },
-      { name: "Winter Break", tagline: "Swap the snow for the sea", points: ["Late December through New Year's", "Kids' club, teen program, Sky Court tournaments", "Gala dinners and live entertainment nightly"] },
-      { name: "Passover", tagline: "The Pesach program, perfected", points: ["Full kosher-for-Passover program, every meal", "Elegant Sedarim, tea room and late-night lounges", "Scholars-in-residence, kids' and teen programs, trips"] },
-      { name: "Summer", tagline: "The family summer, done right", points: ["Weekly arrivals all summer long", "Camp-style kids' program, waterslides, water sports", "Long Shabbatot, live music and rooftop sunsets"] },
+      { name: "Sukkot", image: AllImages.casaNizucSukkotBar, tagline: "Under the Caribbean sky", points: ["A resort sukkah for every Yom Tov and Chol Hamoed meal", "Full Yom Tov program and Simchat Torah hakafot", "Chol Hamoed excursions and evening entertainment"] },
+      { name: "Winter Break", image: AllImages.casaNizucTowerDay, tagline: "Swap the snow for the sea", points: ["Late December through New Year's", "Kids' club, teen program, Sky Court tournaments", "Gala dinners and live entertainment nightly"] },
+      { name: "Passover", image: AllImages.casaNizucTowerNight, tagline: "The Pesach program, perfected", points: ["Full kosher-for-Passover program, every meal", "Elegant Sedarim, tea room and late-night lounges", "Scholars-in-residence, kids' and teen programs, trips"] },
+      { name: "Summer", image: AllImages.casaNizucGallery31, tagline: "The family summer, done right", points: ["Weekly arrivals all summer long", "Camp-style kids' program, waterslides, water sports", "Long Shabbatot, live music and rooftop sunsets"] },
     ],
+    calendar: {
+      heading: "Season calendar 2026–2027",
+      lead: "All-inclusive extended packages available. Reserve early for the best suites.",
+      rows: [
+        { season: "Winter Break", dates: "Late Dec 2026 – early Jan 2027", program: "4–7 night packages, full programming" },
+        { season: "Passover", dates: "Pesach begins evening of Apr 21, 2027", program: "Full holiday program, all meals" },
+        { season: "Summer", dates: "Late Jun – late Aug 2027", program: "4–7 night packages, weekly arrivals" },
+        { season: "Sukkot", dates: "Begins mid-October 2027", program: "Full Yom Tov program, all meals" },
+      ],
+    },
     included: [
       { title: "All meals", text: "Every meal and Yom Tov feast, plus tea room and late-night snacks." },
       { title: "Davening & learning", text: "Minyanim in our synagogue, scholars and daily shiurim." },
@@ -153,6 +167,7 @@ export const CASA_NIZUC_PAGE = {
 
   events: {
     heading: "Your simcha. Our stage.",
+    image: AllImages.casaNizucEventsChandeliers,
     lead: "Weddings, bar and bat mitzvahs, sheva brachot and family celebrations, fully kosher, by the Caribbean.",
     text: "Planning a kosher simcha abroad usually means flying in caterers, chasing a mashgiach and hoping the hotel understands. At Casa Nizuc, it is already done. Every kitchen is kosher, the synagogue is in the building and our events team knows the difference between a kabbalat panim and a cocktail hour. Bring your guests. We'll take care of the rest.",
     list: [
@@ -181,6 +196,8 @@ export const CASA_NIZUC_PAGE = {
       { label: "Weddings, events & groups", email: "grupos@casanizuc.com" },
       { label: "General information", email: "info@casanizuc.com" },
     ],
+    holiday: { label: "Holiday programs", value: "Diamond Club Vacations", note: "Sukkot · Winter Break · Passover · Summer" },
+    designLine: "A DCV Concept",
     footer: "Casa Nizuc Resort & Spa · A Tribute Portfolio Resort by Marriott · Aldea Nizuc, Cancún",
     kosherLine: "All food and beverage outlets are under kosher supervision. Meat: Glatt Kosher Beit Yosef. Dairy: Chalav Yisroel.",
   },
