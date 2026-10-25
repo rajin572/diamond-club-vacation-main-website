@@ -22,6 +22,36 @@ const BEN_TZUR: ExperienceItem = {
   },
 };
 
+const ZUSHA: ExperienceItem = {
+  id: "zusha",
+  title: "Zusha",
+  description: "Experience an electrifying night of soul-stirring music, infectious energy, and uplifting melodies.",
+  image: AllImages.zushaConcert,
+  details: {
+    title: "Zusha Live Concert",
+    paragraphs: [
+      "Experience an electrifying night of soul-stirring music, infectious energy, and uplifting melodies.",
+      "An unforgettable musical journey filled with inspiration, joy, and the unmistakable magic of Zusha.",
+    ],
+  },
+};
+
+const YANKELOO: ExperienceItem = {
+  id: "yankeloo",
+  title: "Yankeloo",
+  description:
+    'Yankeloo is a spirited Jewish singer known for engaging covers, live kumzitz sessions, and an energetic stage presence. He reimagines classics and mainstream hits like "Chicken in the Corn," "Sweet Home Alabama," and "Perfect."',
+  image: AllImages.entertainmentYankeloo,
+  imageFocus: "top",
+  details: {
+    title: "Yankeloo",
+    paragraphs: [
+      'Yankeloo is a spirited Jewish singer known for engaging covers, live kumzitz sessions, and an energetic stage presence. He reimagines classics and mainstream hits like "Chicken in the Corn," "Sweet Home Alabama," and "Perfect."',
+      "Collaborations with artists such as Mendy Panski, plus street performances and Jerusalem kumzitz gatherings, highlight his versatility and community-driven musical spirit, worldwide joyful influence.",
+    ],
+  },
+};
+
 export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
   "diamond-club-reserve": {
     programId: "diamond-club-reserve",
@@ -31,19 +61,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
     heroImage: AllImages.reserveEntertainmentConcert,
     columns: 3,
     items: [
-      {
-        id: "zusha",
-        title: "Zusha",
-        description: "Experience an electrifying night of soul-stirring music, infectious energy, and uplifting melodies.",
-        image: AllImages.zushaConcert,
-        details: {
-          title: "Zusha Live Concert",
-          paragraphs: [
-            "Experience an electrifying night of soul-stirring music, infectious energy, and uplifting melodies.",
-            "An unforgettable musical journey filled with inspiration, joy, and the unmistakable magic of Zusha.",
-          ],
-        },
-      },
+      ZUSHA,
       {
         id: "comedian-elon-gold",
         title: "Renowned Comedian Elon Gold",
@@ -140,7 +158,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
     programTitle: "Guettaway a Diamond Club production",
     experienceType: "entertainment",
     title: "Entertainment",
-    heroImage: AllImages.blueEntertainment,
+    heroImage: AllImages.reserveEntertainmentConcert,
     columns: 3,
     items: [
       {
@@ -159,19 +177,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
           ],
         },
       },
-      {
-        id: "zusha",
-        title: "Zusha",
-        description: "Experience an electrifying night of soul-stirring music, infectious energy, and uplifting melodies.",
-        image: AllImages.zushaConcert,
-        details: {
-          title: "Zusha Live Concert",
-          paragraphs: [
-            "Experience an electrifying night of soul-stirring music, infectious energy, and uplifting melodies.",
-            "An unforgettable musical journey filled with inspiration, joy, and the unmistakable magic of Zusha.",
-          ],
-        },
-      },
+      YANKELOO,
       {
         id: "elon-gold",
         title: "Elon Gold",

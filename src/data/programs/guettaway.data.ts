@@ -123,7 +123,7 @@ export const GUTTAWAY_DATA: ProgramData = {
             {
               id: "entertainment",
               title: "Entertainment",
-              image: AllImages.blueEntertainment,
+              image: AllImages.reserveEntertainmentConcert,
               target: { type: "experience", experienceType: "entertainment" },
             },
             {

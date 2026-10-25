@@ -63,6 +63,7 @@ import chefChaimLevyCard from "./chef-chaim-levy-card.jpg";
 import chefDonnyRogoffCard from "./chef-donny-rogoff-card.webp";
 import rabbiNissimHiluCard from "./rabbi-nissim-hilu-card.jpg";
 import zushaConcert from "./zusha.jpeg";
+import entertainmentYankeloo from "./mainDesign/entertainment-yankeloo.jpg";
 
 // Main Design (client HTML design assets, copied from diamond-club-main-design/assets)
 import attractions1 from "./mainDesign/attractions-1.jpg";
@@ -852,6 +853,7 @@ export const AllImages = {
   chefDonnyRogoffCard,
   rabbiNissimHiluCard,
   zushaConcert,
+  entertainmentYankeloo,
 
   // Main Design (client HTML design assets)
   attractions1,

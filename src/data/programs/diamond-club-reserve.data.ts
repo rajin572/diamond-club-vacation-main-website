@@ -72,7 +72,7 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
             {
               id: "entertainment",
               title: "Entertainment",
-              image: AllImages.reserveEntertainment,
+              image: AllImages.reserveEntertainmentConcert,
               target: { type: "experience", experienceType: "entertainment" },
             },
             {
