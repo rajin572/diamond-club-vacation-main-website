@@ -136,7 +136,7 @@ export function ResortDiningPageView({
               alt={isGuettaway ? "Executive Chef Chaim Levy" : "Executive Chef Donny Rogoff"}
               sizes="(max-width: 900px) 100vw, 50vw"
               priority={false}
-              style={{ objectFit: "contain", backgroundColor: "#fff" }}
+              style={{ objectFit: "cover", objectPosition: "center" }}
             />
             <div className="dcv-body">
               <div className="dcv-card-tag">Master Chefs · Fine Dining</div>

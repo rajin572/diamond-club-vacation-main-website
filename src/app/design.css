@@ -1848,40 +1848,6 @@ button.dcv-link {
   text-transform: uppercase;
   color: #777;
 }
-/* Program About: eyebrow and closing banner (also used by the site About page) */
-.dcv-story-eyebrow {
-  display: block;
-  font: 700 12px/1.4 var(--dcv-sans);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #b88124;
-  margin-bottom: 16px;
-}
-.dcv-story-closing {
-  margin-top: 40px;
-  padding: 44px 40px;
-  border-radius: 28px;
-  text-align: center;
-  background: linear-gradient(135deg, #1d2b45, #101a2c);
-  color: #fff;
-  box-shadow: 0 20px 44px rgba(16, 26, 44, 0.28);
-}
-.dcv-story-closing h3 {
-  color: #f1d58b;
-  font-size: clamp(24px, 3vw, 34px);
-  margin: 0 0 14px;
-}
-.dcv-story-closing p {
-  max-width: 760px;
-  margin: 0 auto;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
-}
-@media (max-width: 900px) {
-  .dcv-story-closing {
-    padding: 32px 22px;
-  }
-}
 .dcv-overview {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
