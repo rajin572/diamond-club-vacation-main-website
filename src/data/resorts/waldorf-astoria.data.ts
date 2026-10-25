@@ -52,7 +52,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
     description: "",
     linkToDetails: true,
     items: [
-    // Room lists. Only one block is switched on (not commented); swap with: npm run rooms -- waldorf=hilton-rooms | hotel-site | original | status
+      // Room lists. Only one block is switched on (not commented); swap with: npm run rooms -- waldorf=hilton-rooms | hotel-site | original | status
 
       // @rooms:begin hilton-rooms | hilton.com rooms page: 13 rooms and suites with all card and pop-up photos
       {
@@ -541,461 +541,461 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
       // @rooms:end hilton-rooms
 
       // @rooms:begin hotel-site | hilton.com Waldorf Astoria Cancun rate list: 15 rooms and suites with the Hilton photos
-    //       {
-    //         id: "ocean-front-view-king-bed-guestroom",
-    //         title: "Ocean Front View King Bed Guestroom",
-    //         subtitle: "1 King Bed · Ocean View",
-    //         image: AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4,
-    //         description: "675 sq. ft. tranquil, modern guest room with private balcony and soaking tub. Room features include a plush king bed, sitting area, and table for two.",
-    //         stats: [
-    //           { label: "Room Size", value: "675 sq. ft." },
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Bedding", value: "1 King Bed" },
-    //           { label: "Guests", value: "3 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 3",
-    //               "Ocean view",
-    //               "Balcony",
-    //               "Dual vanity",
-    //               "Sofa",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4,
-    //           AllImages.waldorfWebWaldorfAstoriaCancun203OceanFrontKingBedGuestroomK1rp,
-    //           AllImages.waldorfWebWaldorfAstoriaCunHab602,
-    //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv1,
-    //         ],
-    //       },
-    //       {
-    //         id: "ocean-front-2-queen-beds-guestroom",
-    //         title: "Ocean Front 2 Queen Beds Guestroom",
-    //         subtitle: "2 Queen Beds · Ocean View",
-    //         image: AllImages.waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv1,
-    //         description: "Sleeps 4. Ocean view, balcony, dual vanity, sofa.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Bedding", value: "2 Queen Beds" },
-    //           { label: "Guests", value: "4 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 4",
-    //               "Ocean view",
-    //               "Balcony",
-    //               "Dual vanity",
-    //               "Sofa",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv1,
-    //         ],
-    //       },
-    //       {
-    //         id: "1-king-mobility-accessible-w-roll-in-shower",
-    //         title: "1 King Mobility Accessible W/ Roll-in Shower",
-    //         subtitle: "1 King Bed · Ocean View",
-    //         image: AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv,
-    //         description: "Sleeps 3. Ocean view, balcony, dual vanity, mobility accessible.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Bedding", value: "1 King Bed" },
-    //           { label: "Guests", value: "3 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 3",
-    //               "Ocean view",
-    //               "Balcony",
-    //               "Dual vanity",
-    //               "Mobility accessible",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv,
-    //         ],
-    //       },
-    //       {
-    //         id: "2-queen-mobility-accessible-w-roll-in-shower",
-    //         title: "2 Queen Mobility Accessible W/ Roll-in Shower",
-    //         subtitle: "2 Queen Beds · Ocean View",
-    //         image: AllImages.waldorfWebWaldorfAstoriaCancunAda,
-    //         description: "Sleeps 4. Ocean view, balcony, dual vanity, mobility accessible.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Bedding", value: "2 Queen Beds" },
-    //           { label: "Guests", value: "4 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 4",
-    //               "Ocean view",
-    //               "Balcony",
-    //               "Dual vanity",
-    //               "Mobility accessible",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWebWaldorfAstoriaCancunAda,
-    //         ],
-    //       },
-    //       {
-    //         id: "deluxe-ocean-front-king-bed-guestroom",
-    //         title: "Deluxe Ocean Front King Bed Guestroom",
-    //         subtitle: "1 King Bed · Ocean View",
-    //         image: AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv2,
-    //         description: "Sleeps 3. Ocean view, balcony, dual vanity, sofa.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Bedding", value: "1 King Bed" },
-    //           { label: "Guests", value: "3 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 3",
-    //               "Ocean view",
-    //               "Balcony",
-    //               "Dual vanity",
-    //               "Sofa",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv2,
-    //         ],
-    //       },
-    //       {
-    //         id: "deluxe-ocean-front-2-queen-beds-guestroom",
-    //         title: "Deluxe Ocean Front 2 Queen Beds Guestroom",
-    //         subtitle: "2 Queen Beds · Ocean View",
-    //         image: AllImages.waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv2,
-    //         description: "Sleeps 4. Ocean view, balcony, dual vanity, sofa.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Bedding", value: "2 Queen Beds" },
-    //           { label: "Guests", value: "4 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 4",
-    //               "Ocean view",
-    //               "Balcony",
-    //               "Dual vanity",
-    //               "Sofa",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv2,
-    //         ],
-    //       },
-    //       {
-    //         id: "swim-up-pool-1-king-guestroom",
-    //         title: "Swim up Pool 1 King Guestroom",
-    //         subtitle: "1 King Bed",
-    //         image: AllImages.waldorfWebWaldorfAstoriaCancun109PoolViewSwimUpKingGuestroomK1lvo,
-    //         description: "Sleeps 3. Terrace, dual vanity, minibar.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 King Bed" },
-    //           { label: "Guests", value: "3 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 3",
-    //               "Terrace",
-    //               "Dual vanity",
-    //               "Minibar",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWebWaldorfAstoriaCancun109PoolViewSwimUpKingGuestroomK1lvo,
-    //         ],
-    //       },
-    //       {
-    //         id: "swim-up-pool-2-queen-bed-guestroom",
-    //         title: "Swim up Pool 2 Queen Bed Guestroom",
-    //         subtitle: "2 Queen Beds",
-    //         image: AllImages.waldorfWeb108PoolViewSwimUp2QueenBedGuestroomQ2lvo,
-    //         description: "Sleeps 4. Terrace, dual vanity, minibar.",
-    //         stats: [
-    //           { label: "Bedding", value: "2 Queen Beds" },
-    //           { label: "Guests", value: "4 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 4",
-    //               "Terrace",
-    //               "Dual vanity",
-    //               "Minibar",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb108PoolViewSwimUp2QueenBedGuestroomQ2lvo,
-    //         ],
-    //       },
-    //       {
-    //         id: "ocean-front-suite-with-king-bed",
-    //         title: "Ocean Front Suite with King Bed",
-    //         subtitle: "1 King Bed · Ocean View",
-    //         image: AllImages.waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx12,
-    //         description: "Sleeps 3. Living area, ocean view, multi bedroom.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Bedding", value: "1 King Bed" },
-    //           { label: "Guests", value: "3 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 3",
-    //               "Living area",
-    //               "Ocean view",
-    //               "Multi bedroom",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx12,
-    //         ],
-    //       },
-    //       {
-    //         id: "deluxe-ocean-front-suite-with-king-bed",
-    //         title: "Deluxe Ocean Front Suite with King Bed",
-    //         subtitle: "1 King Bed · Ocean View",
-    //         image: AllImages.waldorfWeb610DeluxeOceanFrontSuiteWithKingBedK1rvp11,
-    //         description: "Sleeps 3. Dining area, ocean view, living area.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Bedding", value: "1 King Bed" },
-    //           { label: "Guests", value: "3 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 3",
-    //               "Dining area",
-    //               "Ocean view",
-    //               "Living area",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb610DeluxeOceanFrontSuiteWithKingBedK1rvp11,
-    //         ],
-    //       },
-    //       {
-    //         id: "connecting-rooms-1-king-2-queens",
-    //         title: "Connecting Rooms 1 King / 2 Queens",
-    //         subtitle: "Ocean View",
-    //         image: AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4,
-    //         description: "Sleeps 7. Ocean view, balcony, dual vanity, dining table and chairs.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Guests", value: "7 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 7",
-    //               "Ocean view",
-    //               "Balcony",
-    //               "Dual vanity",
-    //               "Dining table and chairs",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4,
-    //         ],
-    //       },
-    //       {
-    //         id: "connecting-suite-1-king-2-queens",
-    //         title: "Connecting Suite 1 King / 2 Queens",
-    //         subtitle: "Ocean View",
-    //         image: AllImages.waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx14,
-    //         description: "Sleeps 7. Living area, ocean view, balcony.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Guests", value: "7 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 7",
-    //               "Living area",
-    //               "Ocean view",
-    //               "Balcony",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx14,
-    //         ],
-    //       },
-    //       {
-    //         id: "ocean-front-master-corner-suite-with-king-bed",
-    //         title: "Ocean Front Master Corner Suite with King Bed",
-    //         subtitle: "1 King Bed · Ocean View",
-    //         image: AllImages.waldorfWebWaldorfAstoriaCancunMaster602c,
-    //         description: "Sleeps 3. Dining area, full-size refrigerator, corner room, ocean view, living area.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Bedding", value: "1 King Bed" },
-    //           { label: "Guests", value: "3 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 3",
-    //               "Dining area",
-    //               "Full-size refrigerator",
-    //               "Corner room",
-    //               "Ocean view",
-    //               "Living area",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWebWaldorfAstoriaCancunMaster602c,
-    //         ],
-    //       },
-    //       {
-    //         id: "ocean-front-swim-up-master-corner-suite",
-    //         title: "Ocean Front Swim up Master Corner Suite",
-    //         subtitle: "Ocean View",
-    //         image: AllImages.waldorfWebWaldorfAstoriaCancunMasterCornerSuiteSwimUp1,
-    //         description: "Sleeps 3. Dining area, full-size refrigerator, corner room, ocean view, living area.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Guests", value: "3 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 3",
-    //               "Dining area",
-    //               "Full-size refrigerator",
-    //               "Corner room",
-    //               "Ocean view",
-    //               "Living area",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWebWaldorfAstoriaCancunMasterCornerSuiteSwimUp1,
-    //         ],
-    //       },
-    //       {
-    //         id: "ocean-front-2-bedroom-presidential-suite",
-    //         title: "Ocean Front 2 Bedroom Presidential Suite",
-    //         subtitle: "Ocean View",
-    //         image: AllImages.waldorfWebWaldorfAstoriaCunPresidential06,
-    //         description: "Sleeps 7. Dining area, full-size refrigerator, ocean view, living area.",
-    //         stats: [
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Guests", value: "7 Guests" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Room highlights",
-    //             items: [
-    //               "Sleeps 7",
-    //               "Dining area",
-    //               "Full-size refrigerator",
-    //               "Ocean view",
-    //               "Living area",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: [
-    //           AllImages.waldorfWebWaldorfAstoriaCunPresidential06,
-    //         ],
-    //       },
+      //       {
+      //         id: "ocean-front-view-king-bed-guestroom",
+      //         title: "Ocean Front View King Bed Guestroom",
+      //         subtitle: "1 King Bed · Ocean View",
+      //         image: AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4,
+      //         description: "675 sq. ft. tranquil, modern guest room with private balcony and soaking tub. Room features include a plush king bed, sitting area, and table for two.",
+      //         stats: [
+      //           { label: "Room Size", value: "675 sq. ft." },
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Bedding", value: "1 King Bed" },
+      //           { label: "Guests", value: "3 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 3",
+      //               "Ocean view",
+      //               "Balcony",
+      //               "Dual vanity",
+      //               "Sofa",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4,
+      //           AllImages.waldorfWebWaldorfAstoriaCancun203OceanFrontKingBedGuestroomK1rp,
+      //           AllImages.waldorfWebWaldorfAstoriaCunHab602,
+      //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv1,
+      //         ],
+      //       },
+      //       {
+      //         id: "ocean-front-2-queen-beds-guestroom",
+      //         title: "Ocean Front 2 Queen Beds Guestroom",
+      //         subtitle: "2 Queen Beds · Ocean View",
+      //         image: AllImages.waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv1,
+      //         description: "Sleeps 4. Ocean view, balcony, dual vanity, sofa.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Bedding", value: "2 Queen Beds" },
+      //           { label: "Guests", value: "4 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 4",
+      //               "Ocean view",
+      //               "Balcony",
+      //               "Dual vanity",
+      //               "Sofa",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv1,
+      //         ],
+      //       },
+      //       {
+      //         id: "1-king-mobility-accessible-w-roll-in-shower",
+      //         title: "1 King Mobility Accessible W/ Roll-in Shower",
+      //         subtitle: "1 King Bed · Ocean View",
+      //         image: AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv,
+      //         description: "Sleeps 3. Ocean view, balcony, dual vanity, mobility accessible.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Bedding", value: "1 King Bed" },
+      //           { label: "Guests", value: "3 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 3",
+      //               "Ocean view",
+      //               "Balcony",
+      //               "Dual vanity",
+      //               "Mobility accessible",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv,
+      //         ],
+      //       },
+      //       {
+      //         id: "2-queen-mobility-accessible-w-roll-in-shower",
+      //         title: "2 Queen Mobility Accessible W/ Roll-in Shower",
+      //         subtitle: "2 Queen Beds · Ocean View",
+      //         image: AllImages.waldorfWebWaldorfAstoriaCancunAda,
+      //         description: "Sleeps 4. Ocean view, balcony, dual vanity, mobility accessible.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Bedding", value: "2 Queen Beds" },
+      //           { label: "Guests", value: "4 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 4",
+      //               "Ocean view",
+      //               "Balcony",
+      //               "Dual vanity",
+      //               "Mobility accessible",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWebWaldorfAstoriaCancunAda,
+      //         ],
+      //       },
+      //       {
+      //         id: "deluxe-ocean-front-king-bed-guestroom",
+      //         title: "Deluxe Ocean Front King Bed Guestroom",
+      //         subtitle: "1 King Bed · Ocean View",
+      //         image: AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv2,
+      //         description: "Sleeps 3. Ocean view, balcony, dual vanity, sofa.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Bedding", value: "1 King Bed" },
+      //           { label: "Guests", value: "3 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 3",
+      //               "Ocean view",
+      //               "Balcony",
+      //               "Dual vanity",
+      //               "Sofa",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv2,
+      //         ],
+      //       },
+      //       {
+      //         id: "deluxe-ocean-front-2-queen-beds-guestroom",
+      //         title: "Deluxe Ocean Front 2 Queen Beds Guestroom",
+      //         subtitle: "2 Queen Beds · Ocean View",
+      //         image: AllImages.waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv2,
+      //         description: "Sleeps 4. Ocean view, balcony, dual vanity, sofa.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Bedding", value: "2 Queen Beds" },
+      //           { label: "Guests", value: "4 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 4",
+      //               "Ocean view",
+      //               "Balcony",
+      //               "Dual vanity",
+      //               "Sofa",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb633DeluxeOceanFrontTwoQueenBedsGuestroomQ2rv2,
+      //         ],
+      //       },
+      //       {
+      //         id: "swim-up-pool-1-king-guestroom",
+      //         title: "Swim up Pool 1 King Guestroom",
+      //         subtitle: "1 King Bed",
+      //         image: AllImages.waldorfWebWaldorfAstoriaCancun109PoolViewSwimUpKingGuestroomK1lvo,
+      //         description: "Sleeps 3. Terrace, dual vanity, minibar.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 King Bed" },
+      //           { label: "Guests", value: "3 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 3",
+      //               "Terrace",
+      //               "Dual vanity",
+      //               "Minibar",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWebWaldorfAstoriaCancun109PoolViewSwimUpKingGuestroomK1lvo,
+      //         ],
+      //       },
+      //       {
+      //         id: "swim-up-pool-2-queen-bed-guestroom",
+      //         title: "Swim up Pool 2 Queen Bed Guestroom",
+      //         subtitle: "2 Queen Beds",
+      //         image: AllImages.waldorfWeb108PoolViewSwimUp2QueenBedGuestroomQ2lvo,
+      //         description: "Sleeps 4. Terrace, dual vanity, minibar.",
+      //         stats: [
+      //           { label: "Bedding", value: "2 Queen Beds" },
+      //           { label: "Guests", value: "4 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 4",
+      //               "Terrace",
+      //               "Dual vanity",
+      //               "Minibar",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb108PoolViewSwimUp2QueenBedGuestroomQ2lvo,
+      //         ],
+      //       },
+      //       {
+      //         id: "ocean-front-suite-with-king-bed",
+      //         title: "Ocean Front Suite with King Bed",
+      //         subtitle: "1 King Bed · Ocean View",
+      //         image: AllImages.waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx12,
+      //         description: "Sleeps 3. Living area, ocean view, multi bedroom.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Bedding", value: "1 King Bed" },
+      //           { label: "Guests", value: "3 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 3",
+      //               "Living area",
+      //               "Ocean view",
+      //               "Multi bedroom",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx12,
+      //         ],
+      //       },
+      //       {
+      //         id: "deluxe-ocean-front-suite-with-king-bed",
+      //         title: "Deluxe Ocean Front Suite with King Bed",
+      //         subtitle: "1 King Bed · Ocean View",
+      //         image: AllImages.waldorfWeb610DeluxeOceanFrontSuiteWithKingBedK1rvp11,
+      //         description: "Sleeps 3. Dining area, ocean view, living area.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Bedding", value: "1 King Bed" },
+      //           { label: "Guests", value: "3 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 3",
+      //               "Dining area",
+      //               "Ocean view",
+      //               "Living area",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb610DeluxeOceanFrontSuiteWithKingBedK1rvp11,
+      //         ],
+      //       },
+      //       {
+      //         id: "connecting-rooms-1-king-2-queens",
+      //         title: "Connecting Rooms 1 King / 2 Queens",
+      //         subtitle: "Ocean View",
+      //         image: AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4,
+      //         description: "Sleeps 7. Ocean view, balcony, dual vanity, dining table and chairs.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Guests", value: "7 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 7",
+      //               "Ocean view",
+      //               "Balcony",
+      //               "Dual vanity",
+      //               "Dining table and chairs",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb634DeluxeOceanFrontKingGuestroomK1rv4,
+      //         ],
+      //       },
+      //       {
+      //         id: "connecting-suite-1-king-2-queens",
+      //         title: "Connecting Suite 1 King / 2 Queens",
+      //         subtitle: "Ocean View",
+      //         image: AllImages.waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx14,
+      //         description: "Sleeps 7. Living area, ocean view, balcony.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Guests", value: "7 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 7",
+      //               "Living area",
+      //               "Ocean view",
+      //               "Balcony",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWeb628OceanFrontSuiteWithKingSizeBedK1rvx14,
+      //         ],
+      //       },
+      //       {
+      //         id: "ocean-front-master-corner-suite-with-king-bed",
+      //         title: "Ocean Front Master Corner Suite with King Bed",
+      //         subtitle: "1 King Bed · Ocean View",
+      //         image: AllImages.waldorfWebWaldorfAstoriaCancunMaster602c,
+      //         description: "Sleeps 3. Dining area, full-size refrigerator, corner room, ocean view, living area.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Bedding", value: "1 King Bed" },
+      //           { label: "Guests", value: "3 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 3",
+      //               "Dining area",
+      //               "Full-size refrigerator",
+      //               "Corner room",
+      //               "Ocean view",
+      //               "Living area",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWebWaldorfAstoriaCancunMaster602c,
+      //         ],
+      //       },
+      //       {
+      //         id: "ocean-front-swim-up-master-corner-suite",
+      //         title: "Ocean Front Swim up Master Corner Suite",
+      //         subtitle: "Ocean View",
+      //         image: AllImages.waldorfWebWaldorfAstoriaCancunMasterCornerSuiteSwimUp1,
+      //         description: "Sleeps 3. Dining area, full-size refrigerator, corner room, ocean view, living area.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Guests", value: "3 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 3",
+      //               "Dining area",
+      //               "Full-size refrigerator",
+      //               "Corner room",
+      //               "Ocean view",
+      //               "Living area",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWebWaldorfAstoriaCancunMasterCornerSuiteSwimUp1,
+      //         ],
+      //       },
+      //       {
+      //         id: "ocean-front-2-bedroom-presidential-suite",
+      //         title: "Ocean Front 2 Bedroom Presidential Suite",
+      //         subtitle: "Ocean View",
+      //         image: AllImages.waldorfWebWaldorfAstoriaCunPresidential06,
+      //         description: "Sleeps 7. Dining area, full-size refrigerator, ocean view, living area.",
+      //         stats: [
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Guests", value: "7 Guests" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Room highlights",
+      //             items: [
+      //               "Sleeps 7",
+      //               "Dining area",
+      //               "Full-size refrigerator",
+      //               "Ocean view",
+      //               "Living area",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: [
+      //           AllImages.waldorfWebWaldorfAstoriaCunPresidential06,
+      //         ],
+      //       },
       // @rooms:end hotel-site
 
       // @rooms:begin original | The original four rooms
-    //       {
-    //         id: "ocean-front-view",
-    //         title: "Ocean Front View",
-    //         subtitle: "1 King or 2 Queen Beds · Ocean View",
-    //         image: AllImages.series.waldorfRooms[0],
-    //         description: "One king or two queen beds, private balcony with plunge pool, and floor-to-ceiling windows framing dramatic views of the Caribbean sea.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Hotel", value: "Waldorf Astoria Riviera Maya" },
-    //         ],
-    //         gallery: rotate([AllImages.series.waldorfRooms[0], ...AllImages.series.waldorfRoomDetail], 0),
-    //       },
-    //       {
-    //         id: "deluxe-ocean-front-view-room",
-    //         title: "Deluxe Ocean Front View Room",
-    //         subtitle: "1 King or 2 Queen Beds · Ocean View",
-    //         image: AllImages.series.waldorfRooms[1],
-    //         description: "Spacious luxury bedroom with private furnished balcony, plunge pool, and expansive vistas of the turquoise waters.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Hotel", value: "Waldorf Astoria Riviera Maya" },
-    //         ],
-    //         gallery: rotate([AllImages.series.waldorfRooms[1], ...AllImages.series.waldorfRoomDetail], 0),
-    //       },
-    //       {
-    //         id: "swim-up-pool-room",
-    //         title: "Swim Up Pool Room",
-    //         subtitle: "1 King or 2 Queen Beds · Ocean View",
-    //         image: AllImages.series.waldorfRooms[2],
-    //         description: "Direct swim-up terrace access seamlessly connecting your private patio to the refreshing waters.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Hotel", value: "Waldorf Astoria Riviera Maya" },
-    //         ],
-    //         gallery: rotate([AllImages.series.waldorfRooms[2], ...AllImages.series.waldorfRoomDetail], 0),
-    //       },
-    //       {
-    //         id: "ocean-front-king-suite",
-    //         title: "Ocean Front King Suite",
-    //         subtitle: "1 King Bedroom · Ocean View",
-    //         image: AllImages.series.waldorfRooms[3],
-    //         description: "An expansive suite featuring a separate living salon, master bedroom overlooking the Caribbean, and an expansive oceanfront balcony.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 King Bedroom" },
-    //           { label: "View", value: "Ocean View" },
-    //           { label: "Hotel", value: "Waldorf Astoria Riviera Maya" },
-    //         ],
-    //         gallery: rotate([AllImages.series.waldorfRooms[3], ...AllImages.series.waldorfRoomDetail], 0),
-    //       },
+      //       {
+      //         id: "ocean-front-view",
+      //         title: "Ocean Front View",
+      //         subtitle: "1 King or 2 Queen Beds · Ocean View",
+      //         image: AllImages.series.waldorfRooms[0],
+      //         description: "One king or two queen beds, private balcony with plunge pool, and floor-to-ceiling windows framing dramatic views of the Caribbean sea.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Hotel", value: "Waldorf Astoria Riviera Maya" },
+      //         ],
+      //         gallery: rotate([AllImages.series.waldorfRooms[0], ...AllImages.series.waldorfRoomDetail], 0),
+      //       },
+      //       {
+      //         id: "deluxe-ocean-front-view-room",
+      //         title: "Deluxe Ocean Front View Room",
+      //         subtitle: "1 King or 2 Queen Beds · Ocean View",
+      //         image: AllImages.series.waldorfRooms[1],
+      //         description: "Spacious luxury bedroom with private furnished balcony, plunge pool, and expansive vistas of the turquoise waters.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Hotel", value: "Waldorf Astoria Riviera Maya" },
+      //         ],
+      //         gallery: rotate([AllImages.series.waldorfRooms[1], ...AllImages.series.waldorfRoomDetail], 0),
+      //       },
+      //       {
+      //         id: "swim-up-pool-room",
+      //         title: "Swim Up Pool Room",
+      //         subtitle: "1 King or 2 Queen Beds · Ocean View",
+      //         image: AllImages.series.waldorfRooms[2],
+      //         description: "Direct swim-up terrace access seamlessly connecting your private patio to the refreshing waters.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 King or 2 Queen Beds" },
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Hotel", value: "Waldorf Astoria Riviera Maya" },
+      //         ],
+      //         gallery: rotate([AllImages.series.waldorfRooms[2], ...AllImages.series.waldorfRoomDetail], 0),
+      //       },
+      //       {
+      //         id: "ocean-front-king-suite",
+      //         title: "Ocean Front King Suite",
+      //         subtitle: "1 King Bedroom · Ocean View",
+      //         image: AllImages.series.waldorfRooms[3],
+      //         description: "An expansive suite featuring a separate living salon, master bedroom overlooking the Caribbean, and an expansive oceanfront balcony.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 King Bedroom" },
+      //           { label: "View", value: "Ocean View" },
+      //           { label: "Hotel", value: "Waldorf Astoria Riviera Maya" },
+      //         ],
+      //         gallery: rotate([AllImages.series.waldorfRooms[3], ...AllImages.series.waldorfRoomDetail], 0),
+      //       },
       // @rooms:end original
     ],
   },
@@ -1130,7 +1130,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   wellness: {
     title: "Wellness & Fitness",
     description: "Kayaking and paddle boarding on the coastal waters, and world-class golf and tennis, with the spa on the property.",
-    images: [AllImages.waldorfWellnessBeachYoga, AllImages.waldorfWellnessYogaClass, AllImages.waldorfWellnessGolfCarts, AllImages.waldorfWellnessGolfAerial, AllImages.waldorfWellnessGolfCourse, AllImages.waldorfWellnessTennisCourt, AllImages.waldorfWellnessFitnessCenter],
+    images: [AllImages.waldorfWellnessBeachYoga, AllImages.waldorfWellnessGolfCarts, AllImages.waldorfWellnessGolfAerial, AllImages.waldorfWellnessTennisCourt, AllImages.waldorfWellnessFitnessCenter],
     // From the hotel's Hilton "Things to do" page (hilton.com/en/hotels/cunwawa-waldorf-astoria-riviera-maya/things-to-do/). The day trips on that page
     // (Chichen Itza, sailing, whale sharks, Isla Mujeres, ATVs, cenotes) are not wellness: they are the program's attractions.
     activities: [

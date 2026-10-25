@@ -6,11 +6,6 @@ import type { ComingSoonPageData } from "@/components/comingSoon/comingSoon.type
  * /offerings/[offeringId]).
  */
 export const comingSoonRegistry = {
-  about: {
-    id: "about",
-    title: "About",
-    tagline: "Luxury kosher hospitality built around exceptional destinations, thoughtful service and memorable experiences.",
-  },
   experiences: {
     id: "experiences",
     title: "Experiences",
