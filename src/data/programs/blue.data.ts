@@ -100,6 +100,7 @@ export const BLUE_DATA: ProgramData = {
               imagePosition: "center 40%",
               details: {
                 title: "Exclusive Aldea Nizuc Beach Club",
+                image: AllImages.casaNizucBeachClubMap,
                 paragraphs: [
                   "Just a five-minute walk from the hotel, our exclusive beach club offers a beautiful Caribbean escape reserved for our guests. Soak up the sun, relax by the turquoise waters, and enjoy exciting daytime beach parties, refreshing drinks, and unforgettable moments by the sea.",
                 ],

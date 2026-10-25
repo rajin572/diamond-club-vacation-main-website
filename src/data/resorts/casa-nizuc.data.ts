@@ -212,9 +212,9 @@ export const CASA_NIZUC_DATA: ResortData = {
   pools: {
     title: "Pools & Beach",
     description: "El Eden and Ofek pools, a whirlpool, a water slide and cabanas.",
-    images: [AllImages.casaNizucGallery31, AllImages.casaNizucGallery30, AllImages.casaNizucGallery28, AllImages.casaNizucGallery29, AllImages.casaNizucGallery19, AllImages.casaNizucDiningOfek],
+    images: [AllImages.casaNizucGallery31, AllImages.casaNizucPool, AllImages.casaNizucGallery30, AllImages.casaNizucGallery28, AllImages.casaNizucGallery29, AllImages.casaNizucGallery19, AllImages.casaNizucDiningOfek],
     // From the hotel's Marriott experiences page (marriott.com/en-us/hotels/cunan-casa-nizuc-a-tribute-portfolio-resort/experiences/).
-    // That page shows "Photo Coming Soon" for every pool, so the photos are the pool photos of the hotel's Marriott photos page (marriott.com/.../photos/), not one photo per pool.
+    // That page shows "Photo Coming Soon" for every pool, so the photos are the pool photos of the hotel's Marriott photos page (marriott.com/.../photos/), not one pool photo.
     items: [
       {
         id: "el-eden",
@@ -223,8 +223,8 @@ export const CASA_NIZUC_DATA: ResortData = {
         image: AllImages.casaNizucGallery31,
         description: "Outdoor pool on the property, with a children's pool, a swim-up bar and a lifeguard on duty. The pool is heated and towels are provided.",
         stats: [{ label: "Type", value: "Outdoor, on property" }, { label: "Location", value: "Outdoor. On property" }],
-        groups: [{ title: "Features", items: ["Children's pool","Lifeguard on duty","Pool heated","Swim-up bar","Towels provided"] }],
-        gallery: [AllImages.casaNizucGallery31, AllImages.casaNizucGallery30, AllImages.casaNizucGallery19],
+        groups: [{ title: "Features", items: ["Children's pool", "Lifeguard on duty", "Pool heated", "Swim-up bar", "Towels provided"] }],
+        gallery: [AllImages.casaNizucGallery31, AllImages.casaNizucPool, AllImages.casaNizucGallery30, AllImages.casaNizucGallery19],
       },
       {
         id: "ofek-pool",
@@ -233,7 +233,7 @@ export const CASA_NIZUC_DATA: ResortData = {
         image: AllImages.casaNizucGallery28,
         description: "Adult-only infinity pool on the property, heated, with a lifeguard on duty and towels provided.",
         stats: [{ label: "Type", value: "Outdoor, on property" }, { label: "Location", value: "Outdoor. On property" }],
-        groups: [{ title: "Features", items: ["Adult-only pool","Infinity pool","Pool heated","Lifeguard on duty","Towels provided"] }],
+        groups: [{ title: "Features", items: ["Adult-only pool", "Infinity pool", "Pool heated", "Lifeguard on duty", "Towels provided"] }],
         gallery: [AllImages.casaNizucGallery28, AllImages.casaNizucGallery29, AllImages.casaNizucDiningOfek],
       },
       {
@@ -268,7 +268,7 @@ export const CASA_NIZUC_DATA: ResortData = {
   wellness: {
     title: "Wellness & Fitness",
     description: "The Wellness Center, the Fitness Studio and the Dribblers family club.",
-    images: [AllImages.casaNizucGallery27, AllImages.casaNizucGallery32, AllImages.casaNizucGallery33, AllImages.casaNizucGallery26],
+    images: [AllImages.casaNizucGallery27],
     // From the hotel's Marriott experiences page. It has no photos for these ("Photo Coming Soon"), so the photos are the fitness center, kids club and tennis photos of its Marriott photos page.
     activities: [
       {
@@ -312,6 +312,7 @@ export const CASA_NIZUC_DATA: ResortData = {
     // From the hotel's Marriott photos page (marriott.com/en-us/hotels/cunan-casa-nizuc-a-tribute-portfolio-resort/photos/), in its order: hotel, rooms, suites, dining, recreation, kids club,
     // plus the synagogue, banquet halls and wedding set-up from Events and Meetings (the boardrooms and breakout lounges are left out).
     images: [
+      AllImages.casaNizucTower,
       AllImages.casaNizucGallery00,
       AllImages.casaNizucGallery01,
       AllImages.casaNizucGallery02,
@@ -344,6 +345,7 @@ export const CASA_NIZUC_DATA: ResortData = {
       AllImages.casaNizucGallery29,
       AllImages.casaNizucGallery30,
       AllImages.casaNizucGallery31,
+      AllImages.casaNizucPool,
       AllImages.casaNizucGallery32,
       AllImages.casaNizucGallery33,
       AllImages.casaNizucGallery38,

@@ -13,6 +13,9 @@ import waldorfAerial from "./mainDesign/waldorf-aerial.png";
 import reserveEditionResort from "./mainDesign/reserve-edition-resort.png";
 import blueLaAldea from "./mainDesign/blue-la-aldea.jpg";
 import blueBeachClub from "./mainDesign/blue-beach-club.jpg";
+import casaNizucBeachClubMap from "./mainDesign/casa-nizuc-beach-club-map.jpg";
+import casaNizucPool from "./mainDesign/casa-nizuc-pool.jpg";
+import casaNizucTower from "./mainDesign/casa-nizuc-tower.jpg";
 import blueScholars from "./mainDesign/blue-scholars.jpg";
 import blueEntertainment from "./mainDesign/blue-entertainment.png";
 import blueScholarLawrenceHajioff from "./mainDesign/blue-scholar-lawrence-hajioff.png";
@@ -808,6 +811,9 @@ export const AllImages = {
   reserveEditionResort,
   blueLaAldea,
   blueBeachClub,
+  casaNizucBeachClubMap,
+  casaNizucPool,
+  casaNizucTower,
   blueScholars,
   blueEntertainment,
   blueScholarLawrenceHajioff,

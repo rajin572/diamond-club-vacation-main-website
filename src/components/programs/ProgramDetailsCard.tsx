@@ -9,7 +9,7 @@ interface ProgramDetailsCardProps {
   image: DesignImage;
   title: string;
   description?: string;
-  details: { title: string; paragraphs: string[]; tag?: string };
+  details: { title: string; paragraphs: string[]; tag?: string; image?: DesignImage };
   /** CSS object-position of the card photo, so a tall photo shows its best part (not zoomed on one spot). */
   imagePosition?: string;
 }
@@ -20,7 +20,19 @@ export function ProgramDetailsCard({ image, title, description, details, imagePo
 
   return (
     <>
-      <article className="dcv-card">
+      <article
+        className="dcv-card dcv-card--interactive"
+        onClick={() => setOpen(true)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setOpen(true);
+          }
+        }}
+        style={{ cursor: "pointer" }}
+      >
         <Image
           src={image}
           alt={title}
@@ -30,7 +42,15 @@ export function ProgramDetailsCard({ image, title, description, details, imagePo
         <div className="dcv-body">
           <h3>{title}</h3>
           {description && <p>{description}</p>}
-          <button type="button" className="dcv-link" aria-label={`${title}: See details`} onClick={() => setOpen(true)}>
+          <button
+            type="button"
+            className="dcv-link"
+            aria-label={`${title}: See details`}
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpen(true);
+            }}
+          >
             See details →
           </button>
         </div>
@@ -38,7 +58,7 @@ export function ProgramDetailsCard({ image, title, description, details, imagePo
       {open && (
         <ExperienceViewer
           heading={title}
-          slides={[{ id: "details", title: details.title, image, tag: details.tag, paragraphs: details.paragraphs }]}
+          slides={[{ id: "details", title: details.title, image: details.image ?? image, tag: details.tag, paragraphs: details.paragraphs }]}
           index={0}
           layout="cards"
           onIndexChange={() => undefined}

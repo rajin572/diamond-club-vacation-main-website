@@ -36,7 +36,7 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
       {
         id: "wellness",
         title: "Wellness & Fitness",
-        description: "Fitness center and championship golf.",
+        description: "Fitness center.",
         image: AllImages.parkHyattWellnessFitnessCenter,
         target: { type: "section", section: "wellness" },
       },
@@ -1054,18 +1054,13 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
   },
   wellness: {
     title: "Wellness & Fitness",
-    description: "A fully equipped fitness center, and championship golf at El Tinto Golf Course and the Cancun Country Club.",
-    images: [AllImages.parkHyattWellnessFitnessCenter, AllImages.parkHyattWellnessChampionshipGolf],
+    description: "A fully equipped fitness center with cardio and strength machines, free weights, mats and lockers.",
+    images: [AllImages.parkHyattWellnessFitnessCenter],
     activities: [
       {
         id: "fitness-center",
         title: "Fitness Center",
         description: "A fully equipped fitness center with cardio and strength machines, free weights, mats and lockers.",
-      },
-      {
-        id: "championship-golf",
-        title: "Championship Golf",
-        description: "Discover preferred access and exclusive rates at El Tinto Golf Course and the Cancun Country Club’s exceptional leisure facilities. Refine your game at the driving range, then enjoy spirited matches on the tennis and padel courts—all in an atmosphere of effortless sophistication.",
       },
     ],
   },
