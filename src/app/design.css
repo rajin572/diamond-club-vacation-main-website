@@ -129,6 +129,30 @@
   margin-top: 4px;
   white-space: nowrap;
 }
+/* Header brands of the satellite domains, shown only on their site (data-site is set before paint, see lib/site-hosts) */
+.dcv-brand--passover,
+.dcv-brand--guettaway {
+  display: none;
+}
+html[data-site="passover"] .dcv-brand--passover,
+html[data-site="guettaway"] .dcv-brand--guettaway {
+  display: inline-flex;
+}
+/* Guettaway: the oval seal, not clickable */
+.dcv-brand--guettaway {
+  cursor: default;
+}
+.dcv-brand--guettaway:hover {
+  opacity: 1;
+}
+.dcv-brand--guettaway .dcv-brand-seal {
+  height: 54px;
+  width: auto;
+  flex-shrink: 0;
+}
+.dcv-brand--guettaway .dcv-brand-sub {
+  letter-spacing: 0.2em;
+}
 .dcv-logo {
   font-family: var(--dcv-serif);
   font-size: 23px;
@@ -982,6 +1006,12 @@ button.dcv-link {
   color: #aaa;
   max-width: 380px;
   line-height: 1.7;
+}
+
+/* ---------- satellite domains: header links hidden on dcpassovervacations.com / guettaways.com (lib/site-hosts) ---------- */
+html[data-site="passover"] [data-hide-on~="passover"],
+html[data-site="guettaway"] [data-hide-on~="guettaway"] {
+  display: none !important;
 }
 
 /* ---------- terms and conditions (/terms/[programId]) ---------- */
@@ -2670,6 +2700,12 @@ button.dcv-link {
     font-size: 9px;
     letter-spacing: 0.32em;
   }
+  .dcv-brand--guettaway .dcv-brand-seal {
+    height: 46px;
+  }
+  .dcv-brand--guettaway .dcv-brand-sub {
+    letter-spacing: 0.16em;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2689,6 +2725,13 @@ button.dcv-link {
   .dcv-brand-sub {
     font-size: 7.5px;
     letter-spacing: 0.28em;
+  }
+  .dcv-brand--guettaway .dcv-brand-seal {
+    height: 38px;
+  }
+  .dcv-brand--guettaway .dcv-brand-sub {
+    font-size: 6.5px;
+    letter-spacing: 0.12em;
   }
   .dcv-brochure-header {
     padding: 22px 20px 16px;

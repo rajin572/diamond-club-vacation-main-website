@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { SATELLITE_SITES } from "./src/lib/site-hosts";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -12,6 +13,13 @@ const nextConfig: NextConfig = {
     return [
       { source: "/offerings/weddings-events", destination: "/weddings-events", permanent: true },
       { source: "/weddings", destination: "/weddings-events", permanent: true },
+      // The same build is served on three domains: the satellite domains open on their own page (see src/lib/site-hosts.ts).
+      ...Object.values(SATELLITE_SITES).map((site) => ({
+        source: "/",
+        has: [{ type: "host" as const, value: site.hostPattern }],
+        destination: site.homePath,
+        permanent: false,
+      })),
     ];
   },
 };

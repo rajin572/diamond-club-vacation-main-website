@@ -44,7 +44,7 @@ export function MobileMenu({ links, inquire, isPassoverPage, hideAction }: Mobil
       {open && (
         <nav id="dcv-mobile-menu" className="dcv-mobile-menu" aria-label="Mobile">
           {links.map((link) => (
-            <SectionLink key={link.label} href={link.href}>
+            <SectionLink key={link.label} href={link.href} data-hide-on={link.hiddenOn?.join(" ")}>
               {link.label}
             </SectionLink>
           ))}

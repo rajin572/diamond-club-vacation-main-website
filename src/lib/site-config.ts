@@ -12,7 +12,7 @@ export const siteConfig = {
   title: "Diamond Club Vacations | Luxury Kosher Hospitality Worldwide",
   description:
     "Luxury kosher hospitality built around exceptional destinations: the Passover Collection 2027, year-round Casa Nizuc, destination weddings and private events.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.diamondclubvacation.com",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://dcvacations.com",
   ogImage: "/images/mainDesign/home-hero-image.png",
   contact: {
     phone: "+1 (555) 010-0142",

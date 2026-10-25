@@ -9,11 +9,26 @@ import { MobileMenu } from "./MobileMenu";
 import { getAboutHref, getExperiencesHref, getInquireContext } from "@/lib/inquire-context";
 import { SectionLink } from "./design/SectionLink";
 import { inquireHref } from "@/lib/routes";
+import { MAIN_SITE_URL } from "@/lib/site-hosts";
 import { AllImages } from "../../../public/images/AllImages";
 
 function subscribeToLocation(onChange: () => void) {
   window.addEventListener("popstate", onChange);
   return () => window.removeEventListener("popstate", onChange);
+}
+
+/** Round seal badge + vertical divider + DIAMOND CLUB / VACATIONS (client design). */
+function DiamondClubBrand() {
+  return (
+    <>
+      <Image src={AllImages.logo} alt="Diamond Club Vacations" width={54} height={54} priority className="dcv-brand-badge" />
+      <span className="dcv-brand-divider" aria-hidden="true" />
+      <div className="dcv-brand-text">
+        <span className="dcv-brand-title">DIAMOND CLUB</span>
+        <span className="dcv-brand-sub">VACATIONS</span>
+      </div>
+    </>
+  );
 }
 
 /** Announcement bar + sticky header with the brand mark and the context-aware action button (the Brochure buttons live on the program pages). */
@@ -41,26 +56,35 @@ export function Navbar() {
       <div className="dcv-top">LUXURY KOSHER HOSPITALITY · WORLDWIDE</div>
       <header className="dcv-header">
         <div className="dcv-nav">
-          {/* Left side brand: round seal badge + vertical divider + DIAMOND CLUB / VACATIONS */}
-          <Link className="dcv-brand" href="/" aria-label="Diamond Club Vacations home">
-            <Image
-              src={AllImages.logo}
-              alt="Diamond Club Vacations"
-              width={54}
-              height={54}
-              priority
-              className="dcv-brand-badge"
-            />
-            <span className="dcv-brand-divider" aria-hidden="true" />
-            <div className="dcv-brand-text">
-              <span className="dcv-brand-title">DIAMOND CLUB</span>
-              <span className="dcv-brand-sub">VACATIONS</span>
-            </div>
+          {/* Left side brand. Each site shows its own block (CSS, keyed on <html data-site>, see lib/site-hosts), so the right one is there before React loads. */}
+          <Link className="dcv-brand" data-hide-on="passover guettaway" href="/" aria-label="Diamond Club Vacations home">
+            <DiamondClubBrand />
           </Link>
+
+          {/* dcpassovervacations.com only: the logo and the name open the main site in a new tab (client 2026-10-25). */}
+          <a
+            className="dcv-brand dcv-brand--passover"
+            href={MAIN_SITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Diamond Club Vacations home (opens in a new tab)"
+          >
+            <DiamondClubBrand />
+          </a>
+
+          {/* guettaways.com only (shown by CSS, see design.css): the Guettaway seal and name, not a link (client 2026-10-25). */}
+          <div className="dcv-brand dcv-brand--guettaway" role="img" aria-label="Guettaway, a Diamond Club Production">
+            <Image src={AllImages.guettawayLogo} alt="" width={42} height={52} priority className="dcv-brand-seal" />
+            <span className="dcv-brand-divider" aria-hidden="true" />
+            <div className="dcv-brand-text" aria-hidden="true">
+              <span className="dcv-brand-title">GUETTAWAY</span>
+              <span className="dcv-brand-sub">A DIAMOND CLUB PRODUCTION</span>
+            </div>
+          </div>
 
           <nav className="dcv-navlinks" aria-label="Primary">
             {navLinks.map((link) => (
-              <SectionLink key={link.label} href={link.href}>
+              <SectionLink key={link.label} href={link.href} data-hide-on={link.hiddenOn?.join(" ")}>
                 {link.label}
               </SectionLink>
             ))}

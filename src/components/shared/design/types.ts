@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import type { SiteId } from "@/lib/site-hosts";
 
 /** Every photo on the public site is a statically imported asset from `public/images/AllImages.ts`. */
 export type DesignImage = StaticImageData;
@@ -6,6 +7,8 @@ export type DesignImage = StaticImageData;
 export interface DesignLink {
   label: string;
   href: string;
+  /** Header links only: the satellite sites (see lib/site-hosts) on which the link is hidden. */
+  hiddenOn?: SiteId[];
 }
 
 export interface DesignStat {
