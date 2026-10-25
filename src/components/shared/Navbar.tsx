@@ -72,15 +72,15 @@ export function Navbar() {
             <DiamondClubBrand />
           </a>
 
-          {/* guettaways.com only (shown by CSS, see design.css): the Guettaway seal and name, not a link (client 2026-10-25). */}
-          <div className="dcv-brand dcv-brand--guettaway" role="img" aria-label="Guettaway, a Diamond Club Production">
+          {/* guettaways.com only (shown by CSS, see design.css): the Guettaway seal and name; "/" there leads to the Guettaway page (client 2026-10-25). */}
+          <Link className="dcv-brand dcv-brand--guettaway" href="/" aria-label="Guettaway, a Diamond Club Production">
             <Image src={AllImages.guettawayLogo} alt="" width={42} height={52} priority className="dcv-brand-seal" />
             <span className="dcv-brand-divider" aria-hidden="true" />
             <div className="dcv-brand-text" aria-hidden="true">
               <span className="dcv-brand-title">GUETTAWAY</span>
               <span className="dcv-brand-sub">A DIAMOND CLUB PRODUCTION</span>
             </div>
-          </div>
+          </Link>
 
           <nav className="dcv-navlinks" aria-label="Primary">
             {navLinks.map((link) => (

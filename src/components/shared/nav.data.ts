@@ -2,12 +2,12 @@ import { CASA_NIZUC_HREF, PASSOVER_OFFERING_ID, TERMS_FOOTER_HREF, WEDDINGS_HREF
 import type { SiteId } from "@/lib/site-hosts";
 import type { DesignLink } from "./design/types";
 
-/** dcpassovervacations.com and guettaways.com do not show the Passover and Casa Nizuc links (client 2026-10-25). */
-const SATELLITE_ONLY: SiteId[] = ["passover", "guettaway"];
+/** guettaways.com does not show the Passover and Casa Nizuc links; dcpassovervacations.com keeps them (client 2026-10-25). */
+const HIDDEN_ON_GUETTAWAY: SiteId[] = ["guettaway"];
 
 export const PRIMARY_NAV: DesignLink[] = [
-  { label: "Passover", href: offeringHref(PASSOVER_OFFERING_ID), hiddenOn: SATELLITE_ONLY },
-  { label: "Casa Nizuc", href: CASA_NIZUC_HREF, hiddenOn: SATELLITE_ONLY },
+  { label: "Passover", href: offeringHref(PASSOVER_OFFERING_ID), hiddenOn: HIDDEN_ON_GUETTAWAY },
+  { label: "Casa Nizuc", href: CASA_NIZUC_HREF, hiddenOn: HIDDEN_ON_GUETTAWAY },
   { label: "Weddings & Events", href: WEDDINGS_HREF },
   { label: "Experiences", href: "/experiences" },
   { label: "About", href: "/about" },

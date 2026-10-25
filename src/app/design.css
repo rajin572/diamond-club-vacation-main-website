@@ -138,13 +138,7 @@ html[data-site="passover"] .dcv-brand--passover,
 html[data-site="guettaway"] .dcv-brand--guettaway {
   display: inline-flex;
 }
-/* Guettaway: the oval seal, not clickable */
-.dcv-brand--guettaway {
-  cursor: default;
-}
-.dcv-brand--guettaway:hover {
-  opacity: 1;
-}
+/* Guettaway: the oval seal */
 .dcv-brand--guettaway .dcv-brand-seal {
   height: 54px;
   width: auto;
