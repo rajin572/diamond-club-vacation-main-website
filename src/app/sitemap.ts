@@ -4,7 +4,8 @@ import { getAllOfferings } from "@/data/offerings/registry";
 import { getProgramsForOffering } from "@/data/programs/registry";
 import { getResortsForProgram } from "@/data/resorts/registry";
 import { getAllExperienceSlugsForProgram } from "@/data/experiences/registry";
-import { CASA_NIZUC_HREF, WEDDINGS_HREF, experienceHref, offeringHref, programHref, resortHref } from "@/lib/routes";
+import { getAllTerms } from "@/data/terms/registry";
+import { WEDDINGS_HREF, experienceHref, offeringHref, programHref, resortHref, termsHref } from "@/lib/routes";
 
 // Lists every public page. Detail pages (rooms, restaurants, pools, spa) are reachable from their resort page.
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -14,9 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [
     { url: siteConfig.siteUrl, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: url("/inquire"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: url(CASA_NIZUC_HREF), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: url(WEDDINGS_HREF), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
+
+  for (const terms of getAllTerms()) {
+    entries.push({ url: url(termsHref(terms.programId)), lastModified: now, changeFrequency: "yearly", priority: 0.3 });
+  }
 
   for (const offering of getAllOfferings()) {
     entries.push({

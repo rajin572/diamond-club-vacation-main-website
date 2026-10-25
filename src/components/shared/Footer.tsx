@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { TERMS_FOOTER_HREF } from "@/lib/routes";
 import { FOOTER_BLURB, FOOTER_COLUMNS } from "./nav.data";
+import TermsFooterLink from "./TermsFooterLink";
 
 /** Four-column dark footer with the rounded top (client design: `footer`). */
 export function Footer() {
@@ -16,9 +18,13 @@ export function Footer() {
           <div key={column.title}>
             <h4>{column.title}</h4>
             {column.links.map((link) => (
-              <Link key={`${column.title}-${link.label}`} href={link.href}>
-                {link.label}
-              </Link>
+              link.href === TERMS_FOOTER_HREF ? (
+                <TermsFooterLink key={`${column.title}-${link.label}`} label={link.label} />
+              ) : (
+                <Link key={`${column.title}-${link.label}`} href={link.href}>
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
         ))}

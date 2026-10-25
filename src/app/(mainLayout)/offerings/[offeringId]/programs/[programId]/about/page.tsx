@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DetailHero } from "@/components/shared/design";
-import { ProgramAbout, ProgramBrochureButton, ProgramStory } from "@/components/programs";
+import { ProgramAbout, ProgramBrochureButton, aboutDescription } from "@/components/programs";
 import { getProgram, programsRegistry } from "@/data/programs/registry";
 import { siteConfig } from "@/lib/site-config";
 import { BackButton } from "@/components/shared/BackButton";
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `About ${program.title} | Passover 2027`,
-    description: program.about.about[0] ?? program.tagline,
+    description: aboutDescription(program.about, program.tagline),
     openGraph: { title: `About ${program.title} | ${siteConfig.name}`, siteName: siteConfig.name, type: "website" },
   };
 }
@@ -46,7 +46,7 @@ export default async function ProgramAboutPage({ params }: PageProps) {
       <Wrap>
         <BackButton fallbackHref={programHref(offeringId, programId)} />
       </Wrap>
-      {program.about.story ? <ProgramStory story={program.about.story} /> : <ProgramAbout about={program.about} />}
+      <ProgramAbout about={program.about} />
     </>
   );
 }

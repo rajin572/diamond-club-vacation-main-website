@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
-import { ProgramMainView } from "@/components/programs";
+import { ProgramMainView, aboutDescription } from "@/components/programs";
 import { getProgram, programsRegistry } from "@/data/programs/registry";
 import { programHref, resortHref } from "@/lib/routes";
 
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const pageTitle = `${program.title} | Passover 2027`;
   const pageUrl = programHref(offeringId, programId);
-  const description = program.about.about[0] ?? program.tagline;
+  const description = aboutDescription(program.about, program.tagline);
 
   return {
     title: pageTitle,

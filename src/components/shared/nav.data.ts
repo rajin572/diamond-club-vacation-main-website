@@ -1,4 +1,4 @@
-import { CASA_NIZUC_HREF, PASSOVER_OFFERING_ID, WEDDINGS_HREF, offeringHref } from "@/lib/routes";
+import { CASA_NIZUC_HREF, PASSOVER_OFFERING_ID, TERMS_FOOTER_HREF, WEDDINGS_HREF, offeringHref } from "@/lib/routes";
 import type { DesignLink } from "./design/types";
 
 export const PRIMARY_NAV: DesignLink[] = [
@@ -41,6 +41,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     links: [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
+      { label: "Terms & Conditions", href: TERMS_FOOTER_HREF },
     ],
   },
 ];

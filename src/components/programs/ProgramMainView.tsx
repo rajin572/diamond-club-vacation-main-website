@@ -40,7 +40,7 @@ export function ProgramMainView({ offeringId, data }: ProgramMainViewProps) {
           ))}
         </div>
       </Wrap>
-      <ProgramAbout about={data.about.pageAbout ? { ...data.about, ...data.about.pageAbout } : data.about} />
+      <ProgramAbout about={data.about} />
     </>
   );
 }

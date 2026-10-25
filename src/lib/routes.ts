@@ -112,8 +112,26 @@ export function inquireHref(params: InquireHrefParams): string {
   return `/inquire?${search.toString()}`;
 }
 
+/** Every Passover program has its own terms and conditions page. */
+export function termsHref(programId: string): string {
+  return `/terms/${programId}`;
+}
+
+/** The footer link the Terms & Conditions entry carries; its real target depends on the page (see `termsHrefForPath`). */
+export const TERMS_FOOTER_HREF = "#terms";
+
 /**
- * The year-round Casa Nizuc page (client 2026-10-22: completely separate from Diamond Blue's Casa Nizuc). Every "Casa Nizuc" link of the
- * home page, the header and the footer points here.
+ * Where the footer's Terms & Conditions link goes from `pathname`: the terms of the program whose pages
+ * (/offerings/[offeringId]/programs/[programId]/...) or terms page the visitor is on, `null` everywhere else
+ * (home page, year-round Casa Nizuc, weddings, ...), where the link is not shown.
  */
-export const CASA_NIZUC_HREF = "/casa-nizuc";
+export function termsHrefForPath(pathname: string): string | null {
+  const match = pathname.match(/^\/offerings\/[^/]+\/programs\/([^/]+)/) ?? pathname.match(/^\/terms\/([^/]+)/);
+  return match ? termsHref(match[1]) : null;
+}
+
+/**
+ * Casa Nizuc is one page: the Diamond Blue (Passover) hotel page. Every "Casa Nizuc" link of the home page,
+ * the header and the footer points to it (client 2026-10-25, replacing the separate year-round page of 2026-10-22).
+ */
+export const CASA_NIZUC_HREF = resortHref(PASSOVER_OFFERING_ID, "blue", "casa-nizuc");

@@ -11,6 +11,11 @@ export function programSectionId(title: string): string {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
+/** The first plain paragraph of a program's About text (lines written between double stars are headings), for page descriptions. */
+export function aboutDescription(about: ProgramAboutData, fallback: string): string {
+  return about.about.find((paragraph) => !paragraph.startsWith("**")) ?? fallback;
+}
+
 function AboutParagraphs({ paragraphs, strong }: { paragraphs: string[]; strong?: string }) {
   return (
     <>
