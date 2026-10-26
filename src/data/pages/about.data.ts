@@ -14,7 +14,7 @@ export interface AboutPageData {
 }
 
 /**
- * The main About page, /about (shown from every page outside the Passover programs; inside a program the header leads to that program's About).
+ * The main About page, /about (the header and footer "About" links lead here from every page; a program's own About is reached from the hotel subnav).
  * The text is the client's "About Diamond Club Vacations" message; lines between double stars are shown in bold.
  */
 export const ABOUT_PAGE_DATA: AboutPageData = {

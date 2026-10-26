@@ -12,6 +12,8 @@ import { inquireHref } from "@/lib/routes";
 import { MAIN_SITE_URL } from "@/lib/site-hosts";
 import { AllImages } from "../../../public/images/AllImages";
 
+const GUETTAWAY_PROGRAM_ID = "guttaway";
+
 function subscribeToLocation(onChange: () => void) {
   window.addEventListener("popstate", onChange);
   return () => window.removeEventListener("popstate", onChange);
@@ -49,6 +51,8 @@ export function Navbar() {
     link.href === "/experiences" ? { ...link, href: experiencesHref } : link
   );
   const onInquirePage = pathname === "/inquire" || pathname.startsWith("/inquire/");
+  // Guettaway pages (its own domain, or the program and its hotels on the other sites) swap the main brand for the Guettaway one (client 2026-10-26).
+  const onGuettawayPage = inquiry?.programId === GUETTAWAY_PROGRAM_ID;
 
   return (
     <>
@@ -56,28 +60,37 @@ export function Navbar() {
       <header className="dcv-header">
         <div className="dcv-nav">
           {/* Left side brand. Each site shows its own block (CSS, keyed on <html data-site>, see lib/site-hosts), so the right one is there before React loads. */}
-          <Link className="dcv-brand" data-hide-on="passover guettaway" href="/" aria-label="Diamond Club Vacations home">
-            <DiamondClubBrand />
-          </Link>
+          {!onGuettawayPage && (
+            <Link className="dcv-brand" data-hide-on="passover guettaway" href="/" aria-label="Diamond Club Vacations home">
+              <DiamondClubBrand />
+            </Link>
+          )}
 
           {/* dcpassovervacations.com only: the logo and the name open the main site in a new tab (client 2026-10-25). */}
-          <a
-            className="dcv-brand dcv-brand--passover"
-            href={MAIN_SITE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Diamond Club Vacations home (opens in a new tab)"
-          >
-            <DiamondClubBrand />
-          </a>
+          {!onGuettawayPage && (
+            <a
+              className="dcv-brand dcv-brand--passover"
+              href={MAIN_SITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Diamond Club Vacations home (opens in a new tab)"
+            >
+              <DiamondClubBrand />
+            </a>
+          )}
 
-          {/* guettaways.com only (shown by CSS, see design.css): the Guettaway seal and name; "/" there leads to the Guettaway page (client 2026-10-25). */}
-          <Link className="dcv-brand dcv-brand--guettaway" href="/" aria-label="Guettaway, a Diamond Club Production">
-            <Image src={AllImages.guettawayLogo} alt="" width={42} height={52} priority className="dcv-brand-seal" />
+          {/* Guettaway: the Guettaway logo replaces the Diamond Club seal, next to "DIAMOND CLUB PRODUCTION" (client 2026-10-26; the logo in the hero stays).
+              Shown by CSS on guettaways.com (see design.css), and by `--on` on the Guettaway program's pages of the other sites. "/" leads to the Guettaway page there (client 2026-10-25). */}
+          <Link
+            className={`dcv-brand dcv-brand--guettaway${onGuettawayPage ? " dcv-brand--on" : ""}`}
+            href="/"
+            aria-label="Diamond Club Production, Guettaway home"
+          >
+            <Image src={AllImages.guettawayLogo} alt="Guettaway" width={42} height={52} priority className="dcv-brand-seal" />
             <span className="dcv-brand-divider" aria-hidden="true" />
-            <div className="dcv-brand-text" aria-hidden="true">
-              <span className="dcv-brand-title">GUETTAWAY</span>
-              <span className="dcv-brand-sub">A DIAMOND CLUB PRODUCTION</span>
+            <div className="dcv-brand-text">
+              <span className="dcv-brand-title">DIAMOND CLUB</span>
+              <span className="dcv-brand-sub">PRODUCTION</span>
             </div>
           </Link>
 

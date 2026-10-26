@@ -10,7 +10,7 @@ interface ProgramMainViewProps {
 }
 
 /**
- * A program's own page: its hotels, then the About block (and the header's About link leads to the program's About page). The experience / explore sections live
+ * A program's own page: its hotels, then the About block (the hotel subnav's About link leads to the program's About page). The experience / explore sections live
  * inside each hotel page (client request), so one component serves every program.
  */
 export function ProgramMainView({ offeringId, data }: ProgramMainViewProps) {

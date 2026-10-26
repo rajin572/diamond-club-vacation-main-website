@@ -94,7 +94,6 @@ export interface ProgramBrochure {
   title: string;
   /** The PDF, served from /public. */
   pdfHref: string;
-  downloadName: string;
 }
 
 /** A program as listed on its offering page. */

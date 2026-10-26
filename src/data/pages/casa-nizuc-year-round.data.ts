@@ -16,6 +16,20 @@ export const CASA_NIZUC_PAGE = {
     image: AllImages.series.casa[0],
   },
 
+  // The "Discover" cards at the top (client 2026-10-26, same as the Passover > Diamond Blue > Casa Nizuc page): each one leads to its section below.
+  // The lines are the sections' own headings, nothing new.
+  overview: {
+    title: "Discover Casa Nizuc",
+    cards: [
+      { id: "about", title: "About", description: "The kosher resort that has it all.", image: AllImages.casaNizucGallery00 },
+      { id: "shabbat", title: "Shabbat", description: "Shabbat, the way it should feel.", image: AllImages.casaNizucAshanRender },
+      { id: "dining", title: "Dining", description: "Five kosher destinations. One hotel.", image: AllImages.casaNizucDiningZait },
+      { id: "gkde", title: "GKDE", description: "The Gourmet Kosher Dining Experience", image: AllImages.casaNizucGkdeDining },
+      { id: "seasons", title: "Four Seasons", description: "Full programming. All inclusive.", image: AllImages.casaNizucTowerNight },
+      { id: "events", title: "Events & Celebrations", description: "Your simcha. Our stage.", image: AllImages.casaNizucEventsChandeliers },
+    ],
+  },
+
   about: {
     heading: "The kosher resort that has it all.",
     lead: "Five kosher dining destinations. A synagogue under our roof. Shabbat elevators, a full Shabbat service and every holiday celebrated in style. Welcome to Casa Nizuc, Cancún.",

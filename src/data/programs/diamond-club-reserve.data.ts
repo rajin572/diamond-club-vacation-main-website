@@ -12,7 +12,6 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
   brochure: {
     title: "Diamond Club Reserve Brochure",
     pdfHref: "/brochures/diamond-club-reserve.pdf",
-    downloadName: "Diamond-Club-Reserve-Kanai-Info-Book-2026.pdf",
   },
   card: {
     subtitle: "Our most exclusive Passover experience",

@@ -11,7 +11,6 @@ export const GUTTAWAY_DATA: ProgramData = {
   brochure: {
     title: "GUETTAWAY Brochure",
     pdfHref: "/brochures/guettaway.pdf",
-    downloadName: "Guettaway-Pesach-2027-Brochure.pdf",
   },
   card: {
     subtitle: "Elevated Pesach for the Heimish Family",

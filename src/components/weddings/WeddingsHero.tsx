@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { WEDDINGS_PAGE_DATA } from "@/data/pages/weddings.data";
 
 export function WeddingsHero() {
@@ -25,10 +25,11 @@ export function WeddingsHero() {
           <a
             className="dcv-btn dcv-brochure-btn"
             href={hero.brochureHref}
-            download={hero.brochureFilename}
-            aria-label="Download Casa Nizuc Wedding Presentation"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open the Casa Nizuc Wedding Presentation in a new tab"
           >
-            <Download size={16} aria-hidden="true" />
+            <ExternalLink size={16} aria-hidden="true" />
             <span>Brochure</span>
           </a>
         </div>

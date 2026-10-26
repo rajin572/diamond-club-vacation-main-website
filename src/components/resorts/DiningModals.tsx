@@ -269,12 +269,13 @@ export function CelebrityChefsModal({ isOpen, onClose, programId }: DiningModalP
         </div>
 
         <div className="dcv-brochure-preview-wrap" data-lenis-prevent>
-          <div className="dcv-dining-modal-portrait-wrap" style={{ maxWidth: "340px" }}>
+          <div className="dcv-dining-modal-banner-wrap">
             <Image
-              src={AllImages.chefChaimLevy}
+              src={AllImages.chefChaimLevyCard}
               alt="Executive Chef Chaim Levy"
-              width={340}
-              height={440}
+              width={640}
+              height={256}
+              style={{ width: "100%", height: "auto", display: "block" }}
               priority
             />
           </div>

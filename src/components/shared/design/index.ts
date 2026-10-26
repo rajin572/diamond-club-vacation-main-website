@@ -3,6 +3,8 @@ export { SubNav } from "./SubNav";
 export { Wrap, SectionTitle } from "./Wrap";
 export { DesignCard, RoomCard } from "./DesignCard";
 export { StatsRow, FeatureGroup } from "./DetailBlocks";
+export { InfoCardGrid, InfoModal } from "./InfoCards";
+export type { InfoCardData } from "./InfoCards";
 export { DesignButton } from "./DesignButton";
 export { PhotoGallery, PhotoStack } from "./PhotoGallery";
 export { CardLogos } from "./CardLogos";

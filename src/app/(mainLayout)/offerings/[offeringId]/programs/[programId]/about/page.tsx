@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-/** The About page of one Passover program (client 2026-10-22): the header's "About" link leads here from inside a program. */
+/** The About page of one Passover program (client 2026-10-22): the hotel subnav's "About" link leads here (the header and footer lead to the main /about). */
 export default async function ProgramAboutPage({ params }: PageProps) {
   const { offeringId, programId } = await params;
   const program = getProgram(programId);

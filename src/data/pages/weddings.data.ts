@@ -68,7 +68,6 @@ export const WEDDINGS_PAGE_DATA = {
     subtext: "Extraordinary celebrations designed and produced by our expert team.",
     image: AllImages.casaNizucGallery40,
     brochureHref: "/documents/Casa-Nizuc-Wedding-Presentation.pdf",
-    brochureFilename: "Casa-Nizuc-Wedding-Presentation.pdf",
   },
 
   vision: {

@@ -1,10 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowUpDown, CalendarDays, Check, Clock, Droplets, KeyRound, Landmark, Mail, Scale, Star, UtensilsCrossed, Wine } from "lucide-react";
-import { DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
-import type { DesignLink } from "@/components/shared/design";
+import { DesignCard, DetailHero, InfoCardGrid, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
+import type { DesignLink, InfoCardData } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
+import { AllImages } from "../../../public/images/AllImages";
 
 const SUB_NAV: DesignLink[] = [
   { label: "About", href: "#about" },
@@ -28,8 +28,6 @@ const FEATURE_ICONS: Record<string, ReactNode> = {
   Mikvah: <Droplets size={22} aria-hidden="true" />,
 };
 
-const SIZES = "(max-width: 900px) 100vw, 1360px";
-
 /** "Name: text" becomes a bold lead-in followed by the text, like the packet's lists. */
 function Lead({ text, caps }: { text: string; caps?: boolean }) {
   const at = text.indexOf(": ");
@@ -41,275 +39,314 @@ function Lead({ text, caps }: { text: string; caps?: boolean }) {
   );
 }
 
-/** The year-round Casa Nizuc page, /casa-nizuc: the kosher resort that has it all. */
-export function CasaNizucView() {
-  const { hero, about, shabbat, dining, gkde, seasons, events, contact } = CASA_NIZUC_PAGE;
-
+/** A table inside a pop-up (the same table style as the weddings page). */
+function PopupTable({ head, rows }: { head: string[]; rows: ReactNode[][] }) {
   return (
-    <>
-      <DetailHero image={hero.image} kicker={hero.kicker} title={hero.title} subtitle={hero.subtitle} />
-      <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
-
-      {/* 01 About */}
-      <Wrap id="about">
-        <SectionTitle title={about.heading} description={about.lead} />
-        <div className="dcv-cn-cols">
-          {about.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
-
-        <h3 className="dcv-cn-sub">At a glance</h3>
-        <div className="dcv-cn-glance">
-          {about.glance.map((item) => (
-            <div key={item.label} className="dcv-cn-stat">
-              <b>{item.value}</b>
-              <span>{item.label}</span>
-            </div>
-          ))}
-        </div>
-        <dl className="dcv-cn-facts">
-          {about.facts.map((fact) => (
-            <div key={fact.label}>
-              <dt>{fact.label}</dt>
-              <dd>{fact.value}</dd>
-            </div>
-          ))}
-        </dl>
-
-        <h3 className="dcv-cn-sub">Kosher-friendly by design</h3>
-        <p className="dcv-cn-quote">“{about.quote}”</p>
-        <div className="dcv-grid3 dcv-cn-features">
-          {about.features.map((feature) => (
-            <div key={feature.title} className={feature.soon ? "dcv-cn-feature dcv-cn-feature--soon" : "dcv-cn-feature"}>
-              {feature.soon && <em className="dcv-cn-soon">Coming soon</em>}
-              <span className="dcv-cn-icon">{FEATURE_ICONS[feature.title]}</span>
-              <h4>{feature.title}</h4>
-              <p>{feature.text}</p>
-            </div>
-          ))}
-        </div>
-      </Wrap>
-
-      {/* 02 Shabbat */}
-      <Wrap id="shabbat">
-        <div className="dcv-cn-banner">
-          <Image src={shabbat.image} alt="" sizes={SIZES} />
-        </div>
-        <SectionTitle title={shabbat.heading} description={shabbat.lead} />
-        <p className="dcv-cn-intro">{shabbat.text}</p>
-        <div className="dcv-cn-two">
-          <div>
-            <h3 className="dcv-cn-sub dcv-cn-sub--tight">Friday to Motzei Shabbat</h3>
-            <ol className="dcv-cn-steps">
-              {shabbat.steps.map((step, index) => (
-                <li key={step.title}>
-                  <span className="dcv-cn-step-n">{index + 1}</span>
-                  <div>
-                    <b>{step.title}</b>
-                    <p>{step.text}</p>
-                  </div>
-                </li>
+    <div className="dcv-wedding-table-wrap">
+      <table className="dcv-wedding-table">
+        <thead>
+          <tr>
+            {head.map((label) => (
+              <th key={label}>{label}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((cells, rowIndex) => (
+            <tr key={rowIndex}>
+              {cells.map((cell, cellIndex) => (
+                <td key={cellIndex}>{cell}</td>
               ))}
-            </ol>
-          </div>
-          <div>
-            <h3 className="dcv-cn-sub dcv-cn-sub--tight">What makes it a proper Shabbat</h3>
-            <ul className="dcv-cn-bullets">
-              {shabbat.proper.map((item) => (
-                <li key={item}>
-                  <Lead text={item} />
-                </li>
-              ))}
-            </ul>
-            <p className="dcv-cn-callout">{shabbat.scheduleNote}</p>
-          </div>
-        </div>
-      </Wrap>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
-      {/* 03 Dining */}
-      <Wrap id="dining">
-        <SectionTitle title={dining.heading} description={dining.lead} />
-        <p className="dcv-cn-intro">{dining.text}</p>
-        <div className="dcv-cn-venues">
-          {dining.venues.map((venue) => (
-            <article key={venue.name} className="dcv-cn-venue">
-              <Image src={venue.image} alt={venue.name} sizes="(max-width: 900px) 100vw, 680px" />
-              <div className="dcv-cn-venue-body">
-                <h3>{venue.name}</h3>
-                <p className="dcv-cn-kind">{venue.kind}</p>
-                <p>{venue.text}</p>
-                {venue.badge && <span className="dcv-cn-pill">{venue.badge}</span>}
+/**
+ * The year-round Casa Nizuc page, /casa-nizuc: the kosher resort that has it all.
+ * Built like the Passover > Diamond Blue > Casa Nizuc page (client 2026-10-26): hero, sticky sub navigation, "Discover" cards that lead to
+ * the sections, and image cards that open pop-ups. The content is unchanged.
+ */
+export function CasaNizucView() {
+  const { hero, overview, about, shabbat, dining, gkde, seasons, events, contact } = CASA_NIZUC_PAGE;
+
+  const aboutCards: InfoCardData[] = [
+    {
+      id: "resort",
+      image: hero.image,
+      title: "The Resort",
+      description: about.heading,
+      kicker: "CASA NIZUC · ABOUT",
+      subtitle: about.lead,
+      children: about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>),
+    },
+    {
+      id: "glance",
+      image: AllImages.casaNizucTowerDay,
+      title: "At a glance",
+      description: "Rooms, dining, pools and venues in numbers.",
+      kicker: "CASA NIZUC · ABOUT",
+      children: (
+        <>
+          <div className="dcv-cn-glance">
+            {about.glance.map((item) => (
+              <div key={item.label} className="dcv-cn-stat">
+                <b>{item.value}</b>
+                <span>{item.label}</span>
               </div>
-            </article>
-          ))}
-        </div>
-
-        <h3 className="dcv-cn-sub">Breakfast, lunch &amp; dinner at a glance</h3>
-        <div className="dcv-wedding-table-wrap">
-          <table className="dcv-wedding-table">
-            <thead>
-              <tr>
-                <th>Meal</th>
-                <th>Where</th>
-                <th>What to expect</th>
-              </tr>
-            </thead>
-            <tbody>
-              {dining.meals.map((row) => (
-                <tr key={row.meal}>
-                  <td>
-                    <b>{row.meal}</b>
-                    {row.hours && (
-                      <span className="dcv-cn-hours">
-                        <Clock size={12} aria-hidden="true" /> {row.hours}
-                      </span>
-                    )}
-                  </td>
-                  <td>{row.where}</td>
-                  <td>{row.what}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </Wrap>
-
-      {/* 04 GKDE */}
-      <Wrap id="gkde">
-        <div className="dcv-cn-banner dcv-cn-banner--badge">
-          <Image src={gkde.image} alt="" sizes={SIZES} />
-          <div className="dcv-cn-badge">
-            <span>From</span>
-            <b>{gkde.price.from}</b>
-            <span>{gkde.price.adult}</span>
-            <small>{gkde.price.child}</small>
+            ))}
           </div>
-        </div>
-        <SectionTitle title={gkde.heading} description={gkde.lead} />
-        <div className="dcv-cn-two">
-          <div>
-            <h3 className="dcv-cn-sub dcv-cn-sub--tight">Your GKDE includes</h3>
-            <ul className="dcv-cn-bullets">
-              {gkde.includes.map((item) => (
-                <li key={item}>
-                  <Lead text={item} caps />
-                </li>
-              ))}
-            </ul>
-            <p className="dcv-cn-fine">{gkde.ofekNote}</p>
-          </div>
-          <div>
-            <h3 className="dcv-cn-sub dcv-cn-sub--tight">Need to know</h3>
-            <ul className="dcv-cn-bullets">
-              {gkde.know.map((item) => (
-                <li key={item}>
-                  {item.includes("GKDE2026") ? (
-                    <>
-                      {item.split("GKDE2026")[0]}
-                      <strong className="dcv-cn-code">GKDE2026</strong>
-                    </>
-                  ) : (
-                    item
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Ofek premium */}
-        <article className="dcv-cn-ofek" id="ofek">
-          <div className="dcv-cn-ofek-img">
-            <Image src={gkde.ofek.image} alt="Ofek rooftop" sizes={SIZES} />
-          </div>
-          <div className="dcv-cn-ofek-body">
-            <h3>{gkde.ofek.heading}</h3>
-            <p className="dcv-cn-ofek-lead">{gkde.ofek.lead}</p>
-            <div className="dcv-cn-two dcv-cn-two--ofek">
-              <div>
-                <p>{gkde.ofek.text}</p>
+          <dl className="dcv-cn-facts">
+            {about.facts.map((fact) => (
+              <div key={fact.label}>
+                <dt>{fact.label}</dt>
+                <dd>{fact.value}</dd>
               </div>
-              <ul className="dcv-cn-bullets dcv-cn-bullets--light">
-                {gkde.ofek.points.map((point) => (
-                  <li key={point}>
-                    <Lead text={point} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </article>
-      </Wrap>
-
-      {/* 05 The four seasons */}
-      <Wrap id="seasons">
-        <SectionTitle title={seasons.heading} description={seasons.lead} />
-        <p className="dcv-cn-intro">{seasons.text}</p>
-        <div className="dcv-cn-seasons">
-          {seasons.list.map((season) => (
-            <article key={season.name} className="dcv-cn-season">
-              <Image src={season.image} alt={season.name} sizes="(max-width: 900px) 100vw, 680px" />
-              <div className="dcv-cn-venue-body">
-                <h3>{season.name}</h3>
-                <p className="dcv-cn-tagline">{season.tagline}</p>
-                <ul className="dcv-cn-checks">
-                  {season.points.map((point) => (
-                    <li key={point}>
-                      <Check size={16} aria-hidden="true" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
+            ))}
+          </dl>
+        </>
+      ),
+    },
+    {
+      id: "kosher-by-design",
+      image: AllImages.casaNizucGallery31,
+      title: "Kosher-friendly by design",
+      description: about.quote,
+      linkLabel: "See what is built in →",
+      kicker: "CASA NIZUC · ABOUT",
+      children: (
+        <>
+          <p className="dcv-cn-quote">“{about.quote}”</p>
+          <div className="dcv-grid3 dcv-cn-features">
+            {about.features.map((feature) => (
+              <div key={feature.title} className={feature.soon ? "dcv-cn-feature dcv-cn-feature--soon" : "dcv-cn-feature"}>
+                {feature.soon && <em className="dcv-cn-soon">Coming soon</em>}
+                <span className="dcv-cn-icon">{FEATURE_ICONS[feature.title]}</span>
+                <h4>{feature.title}</h4>
+                <p>{feature.text}</p>
               </div>
-            </article>
-          ))}
-        </div>
+            ))}
+          </div>
+        </>
+      ),
+    },
+  ];
 
-        <h3 className="dcv-cn-sub">{seasons.calendar.heading}</h3>
-        <p className="dcv-cn-tagline dcv-cn-tagline--plain">{seasons.calendar.lead}</p>
-        <div className="dcv-wedding-table-wrap">
-          <table className="dcv-wedding-table">
-            <thead>
-              <tr>
-                <th>Season</th>
-                <th>Dates</th>
-                <th>Program</th>
-              </tr>
-            </thead>
-            <tbody>
-              {seasons.calendar.rows.map((row) => (
-                <tr key={row.season}>
-                  <td>
-                    <b>{row.season}</b>
-                  </td>
-                  <td>{row.dates}</td>
-                  <td>{row.program}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+  const shabbatCards: InfoCardData[] = [
+    {
+      id: "shabbat",
+      image: shabbat.image,
+      title: "Shabbat",
+      description: shabbat.lead,
+      linkLabel: "View the Shabbat program →",
+      kicker: "CASA NIZUC · SHABBAT",
+      subtitle: shabbat.heading,
+      children: (
+        <>
+          <p>{shabbat.text}</p>
+          <h3>Friday to Motzei Shabbat</h3>
+          <ol className="dcv-cn-steps">
+            {shabbat.steps.map((step, index) => (
+              <li key={step.title}>
+                <span className="dcv-cn-step-n">{index + 1}</span>
+                <div>
+                  <b>{step.title}</b>
+                  <p>{step.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <h3>What makes it a proper Shabbat</h3>
+          <ul className="dcv-cn-bullets">
+            {shabbat.proper.map((item) => (
+              <li key={item}>
+                <Lead text={item} />
+              </li>
+            ))}
+          </ul>
+          <p className="dcv-cn-callout">{shabbat.scheduleNote}</p>
+        </>
+      ),
+    },
+  ];
 
-        <h3 className="dcv-cn-sub">Every program includes</h3>
-        <div className="dcv-grid3 dcv-cn-features">
-          {seasons.included.map((item) => (
-            <div key={item.title} className="dcv-cn-feature">
-              <h4>{item.title}</h4>
-              <p>{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </Wrap>
+  const diningCards: InfoCardData[] = [
+    {
+      id: "dining",
+      image: dining.venues[2].image,
+      title: "Dining",
+      description: dining.lead,
+      linkLabel: "Explore dining →",
+      kicker: "CASA NIZUC · DINING",
+      subtitle: dining.heading,
+      children: (
+        <>
+          <p>{dining.text}</p>
+          <h3>Breakfast, lunch &amp; dinner at a glance</h3>
+          <PopupTable
+            head={["Meal", "Where", "What to expect"]}
+            rows={dining.meals.map((row) => [
+              <>
+                <b>{row.meal}</b>
+                {row.hours && (
+                  <span className="dcv-cn-hours">
+                    <Clock size={12} aria-hidden="true" /> {row.hours}
+                  </span>
+                )}
+              </>,
+              row.where,
+              row.what,
+            ])}
+          />
+        </>
+      ),
+    },
+  ];
 
-      {/* 06 Events & celebrations */}
-      <Wrap id="events">
-        <div className="dcv-cn-banner">
-          <Image src={events.image} alt="" sizes={SIZES} />
-        </div>
-        <SectionTitle title={events.heading} description={events.lead} />
-        <p className="dcv-cn-intro">{events.text}</p>
-        <div className="dcv-cn-two">
+  const venueCards: InfoCardData[] = dining.venues.map((venue) => ({
+    id: venue.name,
+    image: venue.image,
+    title: venue.name,
+    description: venue.kind,
+    alt: venue.name,
+    kicker: "CASA NIZUC · DINING",
+    subtitle: venue.kind,
+    children: (
+      <>
+        <p>{venue.text}</p>
+        {venue.badge && <span className="dcv-cn-pill">{venue.badge}</span>}
+      </>
+    ),
+  }));
+
+  const gkdeCards: InfoCardData[] = [
+    {
+      id: "gkde",
+      image: gkde.image,
+      title: "GKDE",
+      description: gkde.lead,
+      linkLabel: "View GKDE →",
+      kicker: `FROM ${gkde.price.from} ${gkde.price.adult.toUpperCase()} · ${gkde.price.child.toUpperCase()}`,
+      subtitle: gkde.heading,
+      children: (
+        <>
+          <h3>Your GKDE includes</h3>
+          <ul className="dcv-cn-bullets">
+            {gkde.includes.map((item) => (
+              <li key={item}>
+                <Lead text={item} caps />
+              </li>
+            ))}
+          </ul>
+          <p className="dcv-cn-fine">{gkde.ofekNote}</p>
+          <h3>Need to know</h3>
+          <ul className="dcv-cn-bullets">
+            {gkde.know.map((item) => (
+              <li key={item}>
+                {item.includes("GKDE2026") ? (
+                  <>
+                    {item.split("GKDE2026")[0]}
+                    <strong className="dcv-cn-code">GKDE2026</strong>
+                  </>
+                ) : (
+                  item
+                )}
+              </li>
+            ))}
+          </ul>
+        </>
+      ),
+    },
+    {
+      id: "ofek",
+      image: gkde.ofek.image,
+      title: "Ofek",
+      description: gkde.ofek.heading,
+      linkLabel: "View Ofek →",
+      alt: "Ofek rooftop",
+      kicker: "CASA NIZUC · PREMIUM, NOT IN GKDE",
+      subtitle: gkde.ofek.lead,
+      children: (
+        <>
+          <p>{gkde.ofek.text}</p>
+          <ul className="dcv-cn-bullets">
+            {gkde.ofek.points.map((point) => (
+              <li key={point}>
+                <Lead text={point} />
+              </li>
+            ))}
+          </ul>
+        </>
+      ),
+    },
+  ];
+
+  const calendarCards: InfoCardData[] = [
+    {
+      id: "calendar",
+      image: seasons.list[2].image,
+      title: seasons.calendar.heading,
+      description: seasons.lead,
+      linkLabel: "View the calendar →",
+      kicker: "CASA NIZUC · FOUR SEASONS",
+      subtitle: seasons.heading,
+      children: (
+        <>
+          <p>{seasons.text}</p>
+          <h3>{seasons.calendar.heading}</h3>
+          <p>{seasons.calendar.lead}</p>
+          <PopupTable
+            head={["Season", "Dates", "Program"]}
+            rows={seasons.calendar.rows.map((row) => [<b key={row.season}>{row.season}</b>, row.dates, row.program])}
+          />
+          <h3>Every program includes</h3>
+          <ul className="dcv-cn-bullets">
+            {seasons.included.map((item) => (
+              <li key={item.title}>
+                <strong>{item.title}</strong> — {item.text}
+              </li>
+            ))}
+          </ul>
+        </>
+      ),
+    },
+  ];
+
+  const seasonCards: InfoCardData[] = seasons.list.map((season) => ({
+    id: season.name,
+    image: season.image,
+    title: season.name,
+    description: season.tagline,
+    alt: season.name,
+    kicker: "CASA NIZUC · FOUR SEASONS",
+    subtitle: season.tagline,
+    children: (
+      <ul className="dcv-cn-checks">
+        {season.points.map((point) => (
+          <li key={point}>
+            <Check size={16} aria-hidden="true" />
+            {point}
+          </li>
+        ))}
+      </ul>
+    ),
+  }));
+
+  const eventCards: InfoCardData[] = [
+    {
+      id: "events",
+      image: events.image,
+      title: "Events & Celebrations",
+      description: events.lead,
+      linkLabel: "View events & venues →",
+      kicker: "CASA NIZUC · EVENTS & CELEBRATIONS",
+      subtitle: events.heading,
+      children: (
+        <>
+          <p>{events.text}</p>
           <ul className="dcv-cn-bullets">
             {events.list.map((item) => (
               <li key={item.title}>
@@ -317,37 +354,25 @@ export function CasaNizucView() {
               </li>
             ))}
           </ul>
-          <div>
-            <div className="dcv-wedding-table-wrap">
-              <table className="dcv-wedding-table">
-                <thead>
-                  <tr>
-                    <th>Venue</th>
-                    <th>Banquet</th>
-                    <th>Reception</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {events.capacities.map((row) => (
-                    <tr key={row.venue}>
-                      <td>{row.venue}</td>
-                      <td>{row.banquet}</td>
-                      <td>{row.reception}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="dcv-cn-fine">{events.capacityNote}</p>
-          </div>
-        </div>
-      </Wrap>
+          <h3>Venue capacities</h3>
+          <PopupTable head={["Venue", "Banquet", "Reception"]} rows={events.capacities.map((row) => [row.venue, row.banquet, row.reception])} />
+          <p className="dcv-cn-fine">{events.capacityNote}</p>
+        </>
+      ),
+    },
+  ];
 
-      {/* Contact block and footer line */}
-      <section id="contact" className="dcv-wrap dcv-anchor dcv-cn-contact-wrap">
-        <div className="dcv-cn-contact">
-          <h2>{contact.heading}</h2>
-          <p className="dcv-cn-contact-lead">{contact.subtitle}</p>
+  const contactCards: InfoCardData[] = [
+    {
+      id: "contact",
+      image: AllImages.casaNizucGallery00,
+      title: contact.heading,
+      description: contact.subtitle,
+      linkLabel: "Get in touch →",
+      kicker: "CASA NIZUC · CONTACT",
+      subtitle: contact.subtitle,
+      children: (
+        <>
           <ul className="dcv-cn-contact-list">
             {contact.rows.map((row) => (
               <li key={row.email}>
@@ -366,11 +391,65 @@ export function CasaNizucView() {
               <Link href="/contact">{contact.holiday.value}</Link>
             </li>
           </ul>
-          <p className="dcv-cn-contact-fine">{contact.footer}</p>
-          <p className="dcv-cn-contact-fine">{contact.kosherLine}</p>
+          <p className="dcv-cn-fine">{contact.footer}</p>
+          <p className="dcv-cn-fine">{contact.kosherLine}</p>
           <p className="dcv-cn-contact-mark">{contact.designLine}</p>
+        </>
+      ),
+    },
+  ];
+
+  return (
+    <>
+      <DetailHero image={hero.image} kicker={hero.kicker} title={hero.title} subtitle={hero.subtitle} />
+      <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
+
+      {/* Discover cards: each one leads to its section below */}
+      <Wrap id="overview">
+        <SectionTitle title={overview.title} />
+        <div className="dcv-grid3">
+          {overview.cards.map((card) => (
+            <DesignCard key={card.id} image={card.image} title={card.title} description={card.description} href={`#${card.id}`} />
+          ))}
         </div>
-      </section>
+      </Wrap>
+
+      <Wrap id="about" className="dcv-wrap--stack">
+        <SectionTitle title="About" />
+        <InfoCardGrid cards={aboutCards} gridClass="dcv-grid3" />
+      </Wrap>
+
+      <Wrap id="shabbat" className="dcv-wrap--stack">
+        <SectionTitle title="Shabbat" />
+        <InfoCardGrid cards={shabbatCards} gridClass="dcv-grid2" featured />
+      </Wrap>
+
+      <Wrap id="dining" className="dcv-wrap--stack">
+        <SectionTitle title="Dining" />
+        <InfoCardGrid cards={diningCards} gridClass="dcv-grid2" featured />
+        <InfoCardGrid cards={venueCards} gridClass="dcv-grid3 dcv-cn-after" />
+      </Wrap>
+
+      <Wrap id="gkde" className="dcv-wrap--stack">
+        <SectionTitle title="GKDE" />
+        <InfoCardGrid cards={gkdeCards} gridClass="dcv-grid2" />
+      </Wrap>
+
+      <Wrap id="seasons" className="dcv-wrap--stack">
+        <SectionTitle title="Four Seasons" />
+        <InfoCardGrid cards={calendarCards} gridClass="dcv-grid2" featured />
+        <InfoCardGrid cards={seasonCards} gridClass="dcv-grid4 dcv-cn-after" />
+      </Wrap>
+
+      <Wrap id="events" className="dcv-wrap--stack">
+        <SectionTitle title="Events & Celebrations" />
+        <InfoCardGrid cards={eventCards} gridClass="dcv-grid2" featured />
+      </Wrap>
+
+      <Wrap id="contact" className="dcv-wrap--stack">
+        <SectionTitle title="Contact" />
+        <InfoCardGrid cards={contactCards} gridClass="dcv-grid2" featured />
+      </Wrap>
     </>
   );
 }
