@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PRIMARY_NAV } from "./nav.data";
 import { MobileMenu } from "./MobileMenu";
-import { getAboutHref, getExperiencesHref, getInquireContext } from "@/lib/inquire-context";
+import { getExperiencesHref, getInquireContext } from "@/lib/inquire-context";
 import { SectionLink } from "./design/SectionLink";
 import { inquireHref } from "@/lib/routes";
 import { MAIN_SITE_URL } from "@/lib/site-hosts";
@@ -42,12 +42,11 @@ export function Navbar() {
   const actionLabel = inquiry ? "INQUIRE" : "CONTACT";
   const actionHref = inquiry ? inquireHref({ destination: inquiry.programId, resort: inquiry.resortId }) : "/contact";
   // On the Inquire page itself there is no action button (client 2026-10-22).
-  // "About" shows the About of the Passover program the visitor is in, or the main About page outside the programs.
-  const aboutHref = getAboutHref(pathname);
+  // "About" always leads to the main About page (/about) per client specification.
   // "Experiences" shows the experiences of the hotel the visitor is in, or the main Experiences page elsewhere.
   const experiencesHref = getExperiencesHref(pathname, search);
   const navLinks = PRIMARY_NAV.map((link) =>
-    link.href === "/about" ? { ...link, href: aboutHref } : link.href === "/experiences" ? { ...link, href: experiencesHref } : link
+    link.href === "/experiences" ? { ...link, href: experiencesHref } : link
   );
   const onInquirePage = pathname === "/inquire" || pathname.startsWith("/inquire/");
 

@@ -12,7 +12,7 @@ interface BuildHotelSubNavOptions {
 /**
  * Builds the canonical hotel subnav bar matching the exact client specification:
  * 0. Home (the program page with its hotels)
- * 1. Hotel Overview
+ * 1. About (the program's About page)
  * 2. Program
  * 3. Local Attractions
  * 4. Rooms & Suites
@@ -39,8 +39,8 @@ export function buildHotelSubNav({
       href: programHref(offeringId, programId),
     },
     {
-      label: resort?.overviewLabel ?? "Hotel Overview",
-      href: isHotelMainPage ? "#overview" : hotelBase,
+      label: "About",
+      href: `${programHref(offeringId, programId)}/about`,
     },
     {
       label: "Program",
