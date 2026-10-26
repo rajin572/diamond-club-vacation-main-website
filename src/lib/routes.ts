@@ -131,7 +131,7 @@ export function termsHrefForPath(pathname: string): string | null {
 }
 
 /**
- * Casa Nizuc is one page: the Diamond Blue (Passover) hotel page. Every "Casa Nizuc" link of the home page,
- * the header and the footer points to it (client 2026-10-25, replacing the separate year-round page of 2026-10-22).
+ * The year-round Casa Nizuc page (client 2026-10-22: completely separate from Diamond Blue's Casa Nizuc under Passover). Every "Casa Nizuc" link of the home page,
+ * the header and the footer points here.
  */
-export const CASA_NIZUC_HREF = resortHref(PASSOVER_OFFERING_ID, "blue", "casa-nizuc");
+export const CASA_NIZUC_HREF = "/casa-nizuc";

@@ -88,7 +88,7 @@ export const BLUE_DATA: ProgramData = {
             {
               id: "scholars",
               title: "Scholars",
-              image: AllImages.blueScholars,
+              image: AllImages.reserveScholars,
               target: { type: "experience", experienceType: "scholars" },
             },
           ],

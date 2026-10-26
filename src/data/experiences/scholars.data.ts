@@ -102,7 +102,7 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
     title: "Scholars",
     viewerTitle: "Scholars Details",
     layout: "people",
-    heroImage: AllImages.blueScholars,
+    heroImage: AllImages.reserveScholars,
     columns: 2,
     items: [
       {
@@ -140,21 +140,6 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
     columns: 3,
     items: [
       {
-        id: "rabbi-eli-mansour",
-        title: "Rabbi Eli Mansour",
-        description: "Renowned Spiritual Leader, International Speaker & Acclaimed Author (Edmond J. Safra Synagogue).",
-        image: AllImages.scholarRabbiEliMansour,
-        details: {
-          title: "Rabbi Eli Mansour",
-          paragraphs: [
-            "One of the most respected and influential voices in the Sephardic community, Rabbi Eli Mansour is celebrated for his exceptional scholarship, captivating speaking style, and extraordinary ability to inspire audiences around the world.",
-            "As the spiritual leader of the prestigious Edmond J. Safra Synagogue in Brooklyn, New York, Rabbi Mansour has dedicated his life to education, community leadership, and preserving the richness of our traditions. His profound wisdom, engaging personality, and remarkable ability to connect timeless teachings with contemporary life have earned him widespread admiration across generations.",
-            "A distinguished author and educator, Rabbi Mansour is widely recognized for his acclaimed Daily Halacha series, which has reached audiences internationally through his extensive collection of lectures, publications, and online platforms. His writings include Patah Eliyahu: The Daily Halacha and the Sephardic Heritage Haggadah, reflecting his lifelong dedication to making profound teachings accessible, meaningful, and relevant.",
-            "Guettaway, A Diamond Club Production, is honored to welcome Rabbi Eli Mansour to our distinguished lineup of inspirational speakers for Pesach 2027 at the Waldorf Astoria and Park Hyatt Riviera Maya. His extraordinary knowledge, inspiring messages, and esteemed presence will bring an exceptional dimension of spiritual enrichment and meaningful connection to an unforgettable Yom Tov experience.",
-          ],
-        },
-      },
-      {
         id: "rabbi-avi-wiesenfeld",
         title: "Rabbi Avi Wiesenfeld",
         description: "Renowned International Speaker, Author & Rosh Yeshiva (Yeshivas Beis Dovid in Jerusalem).",
@@ -182,6 +167,14 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
             "Guettaway, A Diamond Club Production, is honored to welcome Rabbi Eli Stefansky to our distinguished lineup of inspirational speakers for Pesach 2027 at the Waldorf Astoria and Park Hyatt Riviera Maya. His extraordinary energy, captivating presentations, and inspiring presence promise to bring a truly memorable dimension to an exceptional Yom Tov experience.",
           ],
         },
+      },
+      // Rabbi Eli Mansour is not coming (client 2026-10-26): his place shows the "coming soon" card, like Diamond Blue. His photo stays in the image registry (scholarRabbiEliMansour).
+      {
+        id: "speaker-tba",
+        title: "Distinguished Guest Speaker",
+        description: "Additional inspiring guest lecturers and scholars to be announced soon.",
+        tba: true,
+        linkLabel: "Coming soon",
       },
     ],
   },
