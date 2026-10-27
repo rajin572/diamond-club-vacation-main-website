@@ -863,6 +863,9 @@ export const CASA_NIZUC_DATA: ResortData = {
     images: [
       AllImages.casaNizucTower,
       AllImages.casaNizucGallery00,
+      // The tower and the entrance, new photos from the client (2026-10-27).
+      AllImages.casaNizucTowerNew,
+      AllImages.casaNizucEntrance,
       AllImages.casaNizucGallery01,
       AllImages.casaNizucGallery02,
       AllImages.casaNizucGallery03,

@@ -97,12 +97,12 @@ export const CASA_NIZUC_PAGE = {
     lead: "From sunrise espresso to a steakhouse dinner 23 floors above the sea, every venue kosher, every day.",
     text: "At Casa Nizuc you don't eat at \"the kosher restaurant.\" You choose between five, each with its own kitchen, chef and personality. Meat is Glatt Kosher Beit Yosef. Dairy is Chalav Yisroel. Kosher wines are poured at every venue.",
     venues: [
-      { name: "Âshân", kind: "Signature Glatt Kosher Steakhouse · Beit Yosef", text: "Premium USDA Prime meats, handcrafted appetizers, exceptional global wines and a refined evening atmosphere. The dinner everyone talks about.", badge: "Included in GKDE", image: AllImages.casaNizucAshanRender },
+      { name: "Âshân", kind: "Signature Glatt Kosher Steakhouse · Beit Yosef", text: "Premium USDA Prime meats, handcrafted appetizers, exceptional global wines and a refined evening atmosphere. The dinner everyone talks about.", badge: "Included in GKDE", image: AllImages.casaNizucDiningAshan },
       { name: "Zait", kind: "Mediterranean Panoramic · Beit Yosef", text: "Perched on the 23rd floor, with panoramic Caribbean and hotel-zone views, authentic Mediterranean cuisine and Casa Nizuc's exclusive kosher Wine Cave.", badge: "Included in GKDE", image: AllImages.casaNizucDiningZait },
       { name: "Mayim", kind: "Three-Meal Dairy Kitchen · Chalav Yisroel", text: "The only kosher international breakfast buffet in Cancún, with show cooking, Caribbean fruit and Mexican specialties. Fresh fish, hand-rolled pastas and desserts at lunch and dinner.", badge: "Included in GKDE", image: AllImages.casaNizucMayimBuffet },
       { name: "Noam", kind: "Artisan Coffee House & Ice Cream Parlour · Chalav Yisroel", text: "Fresh pastries, gourmet sandwiches, specialty coffee, fresh juices, grab-and-go and ice cream, all day long.", badge: "Included in GKDE", image: AllImages.casaNizucDiningNoam },
       { name: "Ofek", kind: "Premium Adults-Only Rooftop Sky Pool & Lounge", text: "Live DJs, weekend events, a hookah lounge, handcrafted cocktails and premium kosher bites above the Caribbean.", badge: "Premium · booked separately", image: AllImages.casaNizucOfekRooftop },
-      { name: "Barawa", kind: "Swim-Up Pool Bar", text: "Fresh cocktails, juices and light bites without leaving the water.", badge: "", image: AllImages.casaNizucGallery31 },
+      { name: "Barawa", kind: "Swim-Up Pool Bar", text: "Fresh cocktails, juices and light bites without leaving the water.", badge: "", image: AllImages.casaNizucBarawaPoolBar },
     ],
     meals: [
       { meal: "Breakfast", hours: "7:00 – 11:00", where: "Mayim, Noam", what: "International dairy buffet with show cooking at Mayim; coffee, pastries and grab-and-go at Noam." },

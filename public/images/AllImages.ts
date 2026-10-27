@@ -668,6 +668,9 @@ import casaNizucGallery28 from "./mainDesign/casa-nizuc-gallery-28.webp";
 import casaNizucGallery29 from "./mainDesign/casa-nizuc-gallery-29.webp";
 import casaNizucGallery30 from "./mainDesign/casa-nizuc-gallery-30.webp";
 import casaNizucGallery31 from "./mainDesign/casa-nizuc-gallery-31.webp";
+import casaNizucBarawaPoolBar from "./mainDesign/casa-nizuc-barawa-pool-bar.webp";
+import casaNizucTowerNew from "./mainDesign/casa-nizuc-tower.webp";
+import casaNizucEntrance from "./mainDesign/casa-nizuc-entrance.webp";
 import casaNizucGallery32 from "./mainDesign/casa-nizuc-gallery-32.webp";
 import casaNizucGallery33 from "./mainDesign/casa-nizuc-gallery-33.webp";
 import casaNizucGallery38 from "./mainDesign/casa-nizuc-gallery-38.webp";
@@ -1492,6 +1495,9 @@ export const AllImages = {
   casaNizucGallery29,
   casaNizucGallery30,
   casaNizucGallery31,
+  casaNizucBarawaPoolBar,
+  casaNizucTowerNew,
+  casaNizucEntrance,
   casaNizucGallery32,
   casaNizucGallery33,
   casaNizucGallery38,
