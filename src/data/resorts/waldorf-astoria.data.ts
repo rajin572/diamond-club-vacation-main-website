@@ -1002,7 +1002,8 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   dining: {
     title: "Dining",
     description: "",
-    images: [AllImages.waldorfDiningMalpequeSunsetTerrace, AllImages.waldorfDiningMalpequeDish, AllImages.waldorfDiningMalpequeTerrace, AllImages.waldorfDiningMalpequeFirepit, AllImages.waldorfDiningChayaRestaurant, AllImages.waldorfDiningChayaCrudito, AllImages.waldorfDiningChayaBreakfast, AllImages.waldorfDiningJaoDining, AllImages.waldorfDiningJaoTlayuda, AllImages.waldorfDiningJaoTerrace, AllImages.waldorfDiningPeacockAlleyDessert, AllImages.waldorfDiningPeacockAlleyLounge, AllImages.waldorfDiningPeacockAlleyBar, AllImages.waldorfDiningPoolBarPool, AllImages.waldorfDiningPoolBarBbq, AllImages.waldorfDiningPoolBarCocktails],
+    images: [],
+    // images: [AllImages.waldorfDiningMalpequeSunsetTerrace, AllImages.waldorfDiningMalpequeDish, AllImages.waldorfDiningMalpequeTerrace, AllImages.waldorfDiningMalpequeFirepit, AllImages.waldorfDiningChayaRestaurant, AllImages.waldorfDiningChayaCrudito, AllImages.waldorfDiningChayaBreakfast, AllImages.waldorfDiningJaoDining, AllImages.waldorfDiningJaoTlayuda, AllImages.waldorfDiningJaoTerrace, AllImages.waldorfDiningPeacockAlleyDessert, AllImages.waldorfDiningPeacockAlleyLounge, AllImages.waldorfDiningPeacockAlleyBar, AllImages.waldorfDiningPoolBarPool, AllImages.waldorfDiningPoolBarBbq, AllImages.waldorfDiningPoolBarCocktails],
     items: [
       {
         id: "malpeque",

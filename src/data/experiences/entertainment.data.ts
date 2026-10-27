@@ -36,6 +36,33 @@ const ZUSHA: ExperienceItem = {
   },
 };
 
+/**
+ * Zusha and Ben Tzur have not signed their contracts yet (client 2026-10-27, crossed out in his screenshot), so their names and pictures
+ * stay off the site: their cards show "Something Is Coming" / "Something Big Is Coming" instead. When a contract is signed, set its flag to
+ * true and the real card comes back (the texts above are kept). The teasers are plain cards: no name, no link, the generic concert photo.
+ */
+const SHOW_ZUSHA = false;
+const SHOW_BEN_TZUR = false;
+
+const SOMETHING_IS_COMING: ExperienceItem = {
+  id: "something-is-coming",
+  title: "Something Is Coming",
+  image: AllImages.reserveEntertainmentConcert,
+  tba: true,
+  linkLabel: "Coming soon",
+};
+
+const SOMETHING_BIG_IS_COMING: ExperienceItem = {
+  id: "something-big-is-coming",
+  title: "Something Big Is Coming",
+  image: AllImages.reserveEntertainmentConcert,
+  tba: true,
+  linkLabel: "Coming soon",
+};
+
+const ZUSHA_SLOT = SHOW_ZUSHA ? ZUSHA : SOMETHING_IS_COMING;
+const BEN_TZUR_SLOT = SHOW_BEN_TZUR ? BEN_TZUR : SOMETHING_BIG_IS_COMING;
+
 const YANKELOO: ExperienceItem = {
   id: "yankeloo",
   title: "Yankeloo",
@@ -61,7 +88,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
     heroImage: AllImages.reserveEntertainmentConcert,
     columns: 3,
     items: [
-      ZUSHA,
+      ZUSHA_SLOT,
       {
         id: "comedian-elon-gold",
         title: "Renowned Comedian Elon Gold",
@@ -74,7 +101,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
           ],
         },
       },
-      BEN_TZUR,
+      BEN_TZUR_SLOT,
       {
         id: "after-party",
         title: "The After Party",
@@ -122,7 +149,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
     heroImage: AllImages.reserveEntertainmentConcert,
     columns: 3,
     items: [
-      { ...BEN_TZUR, featured: true },
+      { ...BEN_TZUR_SLOT, featured: true },
       {
         id: "after-party",
         title: "The After Party",

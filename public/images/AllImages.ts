@@ -1338,7 +1338,7 @@ export const AllImages = {
     editionResortGallery: [editionResortGallery1, editionResortGallery2, editionResortGallery3, editionResortGallery4, editionResortGallery5, editionResortGallery6, editionResortGallery7, editionResortGallery8, editionResortGallery9, editionResortGallery10],
     editionRoomDetail: [editionRoomDetail1, editionRoomDetail2, editionRoomDetail3, editionRoomDetail4, editionRoomDetail5, editionRoomDetail6, editionRoomDetail7],
     editionRooms: [editionRooms1, editionRooms2, editionRooms3, editionRooms4],
-    editionWellness: [editionWellness1, editionWellness2, editionWellness3, editionWellness4, editionWellness5],
+    editionWellness: [editionWellness1, editionWellness2, editionWellness3, editionWellness4],
     entertainment: [entertainment1],
     eventsSource: [eventsSource01, eventsSource02, eventsSource03, eventsSource04, eventsSource05, eventsSource06, eventsSource07, eventsSource08, eventsSource09],
     figmaAttraction: [figmaAttraction01, figmaAttraction02, figmaAttraction03, figmaAttraction04, figmaAttraction05, figmaAttraction06, figmaAttraction07, figmaAttraction08, figmaAttraction09],
