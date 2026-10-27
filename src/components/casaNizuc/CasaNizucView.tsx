@@ -1,10 +1,11 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
-import { ArrowUpDown, CalendarDays, Check, Clock, Droplets, KeyRound, Landmark, Mail, Scale, Star, UtensilsCrossed, Wine } from "lucide-react";
+import { ArrowUpDown, CalendarDays, Check, Droplets, KeyRound, Landmark, Scale, Star, UtensilsCrossed, Wine } from "lucide-react";
 import { DesignCard, DetailHero, InfoCardGrid, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignLink, InfoCardData } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { AllImages } from "../../../public/images/AllImages";
+import { PopupTable } from "./CasaNizucParts";
+import { casaNizucSectionHref } from "./CasaNizucSectionView";
 
 const SUB_NAV: DesignLink[] = [
   { label: "About", href: "#about" },
@@ -13,7 +14,6 @@ const SUB_NAV: DesignLink[] = [
   { label: "GKDE", href: "#gkde" },
   { label: "Four Seasons", href: "#seasons" },
   { label: "Events", href: "#events" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const FEATURE_ICONS: Record<string, ReactNode> = {
@@ -28,50 +28,13 @@ const FEATURE_ICONS: Record<string, ReactNode> = {
   Mikvah: <Droplets size={22} aria-hidden="true" />,
 };
 
-/** "Name: text" becomes a bold lead-in followed by the text, like the packet's lists. */
-function Lead({ text, caps }: { text: string; caps?: boolean }) {
-  const at = text.indexOf(": ");
-  if (at < 0) return <>{text}</>;
-  return (
-    <>
-      <strong className={caps ? "dcv-cn-caps" : undefined}>{text.slice(0, at)}</strong> — {text.slice(at + 2)}
-    </>
-  );
-}
-
-/** A table inside a pop-up (the same table style as the weddings page). */
-function PopupTable({ head, rows }: { head: string[]; rows: ReactNode[][] }) {
-  return (
-    <div className="dcv-wedding-table-wrap">
-      <table className="dcv-wedding-table">
-        <thead>
-          <tr>
-            {head.map((label) => (
-              <th key={label}>{label}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((cells, rowIndex) => (
-            <tr key={rowIndex}>
-              {cells.map((cell, cellIndex) => (
-                <td key={cellIndex}>{cell}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
 /**
  * The year-round Casa Nizuc page, /casa-nizuc: the kosher resort that has it all.
  * Built like the Passover > Diamond Blue > Casa Nizuc page (client 2026-10-26): hero, sticky sub navigation, "Discover" cards that lead to
- * the sections, and image cards that open pop-ups. The content is unchanged.
+ * the sections, and image cards that open pop-ups. Shabbat, Dining and GKDE (with Ofek) open their own pages instead (client 2026-10-27).
  */
 export function CasaNizucView() {
-  const { hero, overview, about, shabbat, dining, gkde, seasons, events, contact } = CASA_NIZUC_PAGE;
+  const { hero, overview, about, shabbat, dining, gkde, seasons, events } = CASA_NIZUC_PAGE;
 
   const aboutCards: InfoCardData[] = [
     {
@@ -142,34 +105,7 @@ export function CasaNizucView() {
       title: "Shabbat",
       description: shabbat.lead,
       linkLabel: "View the Shabbat program →",
-      kicker: "CASA NIZUC · SHABBAT",
-      subtitle: shabbat.heading,
-      children: (
-        <>
-          <p>{shabbat.text}</p>
-          <h3>Friday to Motzei Shabbat</h3>
-          <ol className="dcv-cn-steps">
-            {shabbat.steps.map((step, index) => (
-              <li key={step.title}>
-                <span className="dcv-cn-step-n">{index + 1}</span>
-                <div>
-                  <b>{step.title}</b>
-                  <p>{step.text}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <h3>What makes it a proper Shabbat</h3>
-          <ul className="dcv-cn-bullets">
-            {shabbat.proper.map((item) => (
-              <li key={item}>
-                <Lead text={item} />
-              </li>
-            ))}
-          </ul>
-          <p className="dcv-cn-callout">{shabbat.scheduleNote}</p>
-        </>
-      ),
+      href: casaNizucSectionHref("shabbat"),
     },
   ];
 
@@ -180,47 +116,9 @@ export function CasaNizucView() {
       title: "Dining",
       description: dining.lead,
       linkLabel: "Explore dining →",
-      kicker: "CASA NIZUC · DINING",
-      subtitle: dining.heading,
-      children: (
-        <>
-          <p>{dining.text}</p>
-          <h3>Breakfast, lunch &amp; dinner at a glance</h3>
-          <PopupTable
-            head={["Meal", "Where", "What to expect"]}
-            rows={dining.meals.map((row) => [
-              <>
-                <b>{row.meal}</b>
-                {row.hours && (
-                  <span className="dcv-cn-hours">
-                    <Clock size={12} aria-hidden="true" /> {row.hours}
-                  </span>
-                )}
-              </>,
-              row.where,
-              row.what,
-            ])}
-          />
-        </>
-      ),
+      href: casaNizucSectionHref("dining"),
     },
   ];
-
-  const venueCards: InfoCardData[] = dining.venues.map((venue) => ({
-    id: venue.name,
-    image: venue.image,
-    title: venue.name,
-    description: venue.kind,
-    alt: venue.name,
-    kicker: "CASA NIZUC · DINING",
-    subtitle: venue.kind,
-    children: (
-      <>
-        <p>{venue.text}</p>
-        {venue.badge && <span className="dcv-cn-pill">{venue.badge}</span>}
-      </>
-    ),
-  }));
 
   const gkdeCards: InfoCardData[] = [
     {
@@ -229,36 +127,7 @@ export function CasaNizucView() {
       title: "GKDE",
       description: gkde.lead,
       linkLabel: "View GKDE →",
-      kicker: `FROM ${gkde.price.from} ${gkde.price.adult.toUpperCase()} · ${gkde.price.child.toUpperCase()}`,
-      subtitle: gkde.heading,
-      children: (
-        <>
-          <h3>Your GKDE includes</h3>
-          <ul className="dcv-cn-bullets">
-            {gkde.includes.map((item) => (
-              <li key={item}>
-                <Lead text={item} caps />
-              </li>
-            ))}
-          </ul>
-          <p className="dcv-cn-fine">{gkde.ofekNote}</p>
-          <h3>Need to know</h3>
-          <ul className="dcv-cn-bullets">
-            {gkde.know.map((item) => (
-              <li key={item}>
-                {item.includes("GKDE2026") ? (
-                  <>
-                    {item.split("GKDE2026")[0]}
-                    <strong className="dcv-cn-code">GKDE2026</strong>
-                  </>
-                ) : (
-                  item
-                )}
-              </li>
-            ))}
-          </ul>
-        </>
-      ),
+      href: casaNizucSectionHref("gkde"),
     },
     {
       id: "ofek",
@@ -267,20 +136,7 @@ export function CasaNizucView() {
       description: gkde.ofek.heading,
       linkLabel: "View Ofek →",
       alt: "Ofek rooftop",
-      kicker: "CASA NIZUC · PREMIUM, NOT IN GKDE",
-      subtitle: gkde.ofek.lead,
-      children: (
-        <>
-          <p>{gkde.ofek.text}</p>
-          <ul className="dcv-cn-bullets">
-            {gkde.ofek.points.map((point) => (
-              <li key={point}>
-                <Lead text={point} />
-              </li>
-            ))}
-          </ul>
-        </>
-      ),
+      href: casaNizucSectionHref("ofek"),
     },
   ];
 
@@ -362,43 +218,6 @@ export function CasaNizucView() {
     },
   ];
 
-  const contactCards: InfoCardData[] = [
-    {
-      id: "contact",
-      image: AllImages.casaNizucGallery00,
-      title: contact.heading,
-      description: contact.subtitle,
-      linkLabel: "Get in touch →",
-      kicker: "CASA NIZUC · CONTACT",
-      subtitle: contact.subtitle,
-      children: (
-        <>
-          <ul className="dcv-cn-contact-list">
-            {contact.rows.map((row) => (
-              <li key={row.email}>
-                <span>{row.label}</span>
-                <a href={`mailto:${row.email}`}>
-                  <Mail size={16} aria-hidden="true" />
-                  {row.email}
-                </a>
-              </li>
-            ))}
-            <li>
-              <span>
-                {contact.holiday.label}
-                <small>{contact.holiday.note}</small>
-              </span>
-              <Link href="/contact">{contact.holiday.value}</Link>
-            </li>
-          </ul>
-          <p className="dcv-cn-fine">{contact.footer}</p>
-          <p className="dcv-cn-fine">{contact.kosherLine}</p>
-          <p className="dcv-cn-contact-mark">{contact.designLine}</p>
-        </>
-      ),
-    },
-  ];
-
   return (
     <>
       <DetailHero image={hero.image} kicker={hero.kicker} title={hero.title} subtitle={hero.subtitle} />
@@ -427,7 +246,6 @@ export function CasaNizucView() {
       <Wrap id="dining" className="dcv-wrap--stack">
         <SectionTitle title="Dining" />
         <InfoCardGrid cards={diningCards} gridClass="dcv-grid2" featured />
-        <InfoCardGrid cards={venueCards} gridClass="dcv-grid3 dcv-cn-after" />
       </Wrap>
 
       <Wrap id="gkde" className="dcv-wrap--stack">
@@ -444,11 +262,6 @@ export function CasaNizucView() {
       <Wrap id="events" className="dcv-wrap--stack">
         <SectionTitle title="Events & Celebrations" />
         <InfoCardGrid cards={eventCards} gridClass="dcv-grid2" featured />
-      </Wrap>
-
-      <Wrap id="contact" className="dcv-wrap--stack">
-        <SectionTitle title="Contact" />
-        <InfoCardGrid cards={contactCards} gridClass="dcv-grid2" featured />
       </Wrap>
     </>
   );

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { X } from "lucide-react";
 import type { DesignImage } from "./types";
 
@@ -19,8 +20,10 @@ export interface InfoCardData {
   kicker?: string;
   /** Line under the pop-up title. */
   subtitle?: string;
-  /** The pop-up's content. */
-  children: ReactNode;
+  /** The pop-up's content (not needed when the card leads to its own page). */
+  children?: ReactNode;
+  /** Opens this page instead of a pop-up. */
+  href?: string;
 }
 
 const CARD_SIZES = "(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw";
@@ -79,7 +82,7 @@ interface InfoCardGridProps {
 }
 
 /**
- * Image cards that open a pop-up with the details (client 2026-10-26: the main Casa Nizuc page uses the same cards and pop-ups as the
+ * Image cards that open a pop-up with the details (or their own page when `href` is set) (client 2026-10-26: the main Casa Nizuc page uses the same cards and pop-ups as the
  * Passover hotel pages). The whole card is the button, like the Kosher Supervision and Chefs cards.
  */
 export function InfoCardGrid({ cards, gridClass = "dcv-grid3", featured = false }: InfoCardGridProps) {
@@ -95,9 +98,15 @@ export function InfoCardGrid({ cards, gridClass = "dcv-grid3", featured = false 
             <div className="dcv-body">
               <h3>{card.title}</h3>
               {card.description && <p>{card.description}</p>}
-              <button type="button" className="dcv-link" aria-haspopup="dialog" onClick={() => setActiveId(card.id)}>
-                {card.linkLabel ?? "Explore →"}
-              </button>
+              {card.href ? (
+                <Link className="dcv-link" href={card.href} aria-label={`${card.title}: ${card.linkLabel ?? "Explore →"}`}>
+                  {card.linkLabel ?? "Explore →"}
+                </Link>
+              ) : (
+                <button type="button" className="dcv-link" aria-haspopup="dialog" onClick={() => setActiveId(card.id)}>
+                  {card.linkLabel ?? "Explore →"}
+                </button>
+              )}
             </div>
           </article>
         ))}
