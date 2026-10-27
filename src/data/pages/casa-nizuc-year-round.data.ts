@@ -11,7 +11,7 @@ export const CASA_NIZUC_PAGE = {
   hero: {
     kicker: "A Tribute Portfolio Resort by Marriott · A DCV Concept",
     title: "The Kosher Resort That Has It All",
-    subtitle: "Dining · Shabbat · GKDE · The Four Seasons · Events & Celebrations",
+    subtitle: "Dining · Shabbat · GKDE · Calendar of Events · Events & Celebrations",
     // The daytime aerial photo, the same banner as the Passover (Diamond Blue) Casa Nizuc page (client 2026-10-26).
     image: AllImages.series.casa[0],
   },
@@ -25,7 +25,7 @@ export const CASA_NIZUC_PAGE = {
       { id: "shabbat", title: "Shabbat", description: "Shabbat, the way it should feel.", image: AllImages.casaNizucAshanRender },
       { id: "dining", title: "Dining", description: "Five kosher destinations. One hotel.", image: AllImages.casaNizucDiningZait },
       { id: "gkde", title: "GKDE", description: "The Gourmet Kosher Dining Experience", image: AllImages.casaNizucGkdeDining },
-      { id: "seasons", title: "Four Seasons", description: "Full programming. All inclusive.", image: AllImages.casaNizucTowerNight },
+      { id: "calendar", title: "Calendar of Events", description: "Full programming. All inclusive.", image: AllImages.casaNizucTowerNight },
       { id: "events", title: "Events & Celebrations", description: "Your simcha. Our stage.", image: AllImages.casaNizucEventsChandeliers },
     ],
   },
@@ -150,9 +150,9 @@ export const CASA_NIZUC_PAGE = {
   },
 
   seasons: {
-    heading: "Four seasons. Full programming. All inclusive.",
+    heading: "Every holiday. Full programming. All inclusive.",
     lead: "Four times a year, Casa Nizuc becomes a complete kosher holiday program. All-inclusive extended packages are available to pre-book now.",
-    text: "Shabbat and GKDE are here every week. Four seasons are bigger: every meal included, daily activities for every age and evenings worth staying up for. Book early, these seasons sell out first.",
+    text: "Shabbat and GKDE are here every week. The holiday seasons are bigger: every meal included, daily activities for every age and evenings worth staying up for. Book early, these seasons sell out first.",
     list: [
       { name: "Sukkot", image: AllImages.casaNizucSukkotBar, tagline: "Under the Caribbean sky", points: ["A resort sukkah for every Yom Tov and Chol Hamoed meal", "Full Yom Tov program and Simchat Torah hakafot", "Chol Hamoed excursions and evening entertainment"] },
       { name: "Winter Break", image: AllImages.casaNizucTowerDay, tagline: "Swap the snow for the sea", points: ["Late December through New Year's", "Kids' club, teen program, Sky Court tournaments", "Gala dinners and live entertainment nightly"] },

@@ -1,14 +1,14 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { Clock } from "lucide-react";
-import { DetailHero, InfoCardGrid, PhotoStack, SubNav, Wrap } from "@/components/shared/design";
+import { Check, Clock } from "lucide-react";
+import { DetailHero, InfoCardGrid, PhotoStack, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignImage, DesignLink, InfoCardData } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { Lead, PopupTable } from "./CasaNizucParts";
 
 /** The pages that open from the year-round Casa Nizuc page (client 2026-10-27: new pages, not pop-ups). */
-export const CASA_NIZUC_SECTION_SLUGS = ["shabbat", "dining", "gkde", "ofek"] as const;
+export const CASA_NIZUC_SECTION_SLUGS = ["shabbat", "dining", "gkde", "ofek", "calendar"] as const;
 export type CasaNizucSectionSlug = (typeof CASA_NIZUC_SECTION_SLUGS)[number];
 
 export function isCasaNizucSectionSlug(slug: string): slug is CasaNizucSectionSlug {
@@ -24,7 +24,7 @@ const SUB_NAV: DesignLink[] = [
   { label: "Shabbat", href: `${CASA_NIZUC_HREF}#shabbat` },
   { label: "Dining", href: `${CASA_NIZUC_HREF}#dining` },
   { label: "GKDE", href: `${CASA_NIZUC_HREF}#gkde` },
-  { label: "Four Seasons", href: `${CASA_NIZUC_HREF}#seasons` },
+  { label: "Calendar of Events", href: `${CASA_NIZUC_HREF}#calendar` },
   { label: "Events", href: `${CASA_NIZUC_HREF}#events` },
 ];
 
@@ -42,9 +42,60 @@ interface SectionPage {
 }
 
 function getSectionPage(slug: CasaNizucSectionSlug): SectionPage {
-  const { shabbat, dining, gkde } = CASA_NIZUC_PAGE;
+  const { shabbat, dining, gkde, seasons } = CASA_NIZUC_PAGE;
 
   switch (slug) {
+    case "calendar":
+      return {
+        title: seasons.calendar.heading,
+        kicker: "CASA NIZUC · CALENDAR OF EVENTS",
+        subtitle: seasons.heading,
+        description: seasons.lead,
+        backSection: "calendar",
+        backLabel: "Calendar of Events",
+        gallery: [seasons.list[2].image, ...seasons.list.filter((_, index) => index !== 2).map((season) => season.image)],
+        body: (
+          <>
+            <p>{seasons.text}</p>
+            <h3>{seasons.calendar.heading}</h3>
+            <p>{seasons.calendar.lead}</p>
+            <PopupTable
+              head={["Season", "Dates", "Program"]}
+              rows={seasons.calendar.rows.map((row) => [<b key={row.season}>{row.season}</b>, row.dates, row.program])}
+            />
+            <h3>Every program includes</h3>
+            <ul className="dcv-cn-bullets">
+              {seasons.included.map((item) => (
+                <li key={item.title}>
+                  <strong>{item.title}</strong> — {item.text}
+                </li>
+              ))}
+            </ul>
+          </>
+        ),
+        after: (
+          <Wrap id="holidays" className="dcv-wrap--stack">
+            <SectionTitle title="All holidays" />
+            <div className="dcv-grid3 dcv-cn-features">
+              {seasons.list.map((season) => (
+                <div key={season.name} className="dcv-cn-feature">
+                  <h4>{season.name}</h4>
+                  <p>{season.tagline}</p>
+                  <ul className="dcv-cn-checks">
+                    {season.points.map((point) => (
+                      <li key={point}>
+                        <Check size={16} aria-hidden="true" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </Wrap>
+        ),
+      };
+
     case "shabbat":
       return {
         title: "Shabbat",

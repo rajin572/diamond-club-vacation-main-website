@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { ArrowUpDown, CalendarDays, Check, Droplets, KeyRound, Landmark, Scale, Star, UtensilsCrossed, Wine } from "lucide-react";
+import { ArrowUpDown, CalendarDays, Droplets, KeyRound, Landmark, Scale, Star, UtensilsCrossed, Wine } from "lucide-react";
 import { DesignCard, DetailHero, InfoCardGrid, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignLink, InfoCardData } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
@@ -12,7 +12,7 @@ const SUB_NAV: DesignLink[] = [
   { label: "Shabbat", href: "#shabbat" },
   { label: "Dining", href: "#dining" },
   { label: "GKDE", href: "#gkde" },
-  { label: "Four Seasons", href: "#seasons" },
+  { label: "Calendar of Events", href: "#calendar" },
   { label: "Events", href: "#events" },
 ];
 
@@ -147,49 +147,9 @@ export function CasaNizucView() {
       title: seasons.calendar.heading,
       description: seasons.lead,
       linkLabel: "View the calendar →",
-      kicker: "CASA NIZUC · FOUR SEASONS",
-      subtitle: seasons.heading,
-      children: (
-        <>
-          <p>{seasons.text}</p>
-          <h3>{seasons.calendar.heading}</h3>
-          <p>{seasons.calendar.lead}</p>
-          <PopupTable
-            head={["Season", "Dates", "Program"]}
-            rows={seasons.calendar.rows.map((row) => [<b key={row.season}>{row.season}</b>, row.dates, row.program])}
-          />
-          <h3>Every program includes</h3>
-          <ul className="dcv-cn-bullets">
-            {seasons.included.map((item) => (
-              <li key={item.title}>
-                <strong>{item.title}</strong> — {item.text}
-              </li>
-            ))}
-          </ul>
-        </>
-      ),
+      href: casaNizucSectionHref("calendar"),
     },
   ];
-
-  const seasonCards: InfoCardData[] = seasons.list.map((season) => ({
-    id: season.name,
-    image: season.image,
-    title: season.name,
-    description: season.tagline,
-    alt: season.name,
-    kicker: "CASA NIZUC · FOUR SEASONS",
-    subtitle: season.tagline,
-    children: (
-      <ul className="dcv-cn-checks">
-        {season.points.map((point) => (
-          <li key={point}>
-            <Check size={16} aria-hidden="true" />
-            {point}
-          </li>
-        ))}
-      </ul>
-    ),
-  }));
 
   const eventCards: InfoCardData[] = [
     {
@@ -253,10 +213,9 @@ export function CasaNizucView() {
         <InfoCardGrid cards={gkdeCards} gridClass="dcv-grid2" />
       </Wrap>
 
-      <Wrap id="seasons" className="dcv-wrap--stack">
-        <SectionTitle title="Four Seasons" />
+      <Wrap id="calendar" className="dcv-wrap--stack">
+        <SectionTitle title="Calendar of Events" />
         <InfoCardGrid cards={calendarCards} gridClass="dcv-grid2" featured />
-        <InfoCardGrid cards={seasonCards} gridClass="dcv-grid4 dcv-cn-after" />
       </Wrap>
 
       <Wrap id="events" className="dcv-wrap--stack">
