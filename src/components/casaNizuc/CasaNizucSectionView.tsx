@@ -47,7 +47,7 @@ function getSectionPage(slug: CasaNizucSectionSlug): SectionPage {
   switch (slug) {
     case "calendar":
       return {
-        title: seasons.calendar.heading,
+        title: "Calendar of Events",
         kicker: "CASA NIZUC · CALENDAR OF EVENTS",
         subtitle: seasons.heading,
         description: seasons.lead,
@@ -190,38 +190,40 @@ function getSectionPage(slug: CasaNizucSectionSlug): SectionPage {
     case "gkde":
       return {
         title: "GKDE",
-        kicker: `FROM ${gkde.price.from} ${gkde.price.adult.toUpperCase()} · ${gkde.price.child.toUpperCase()}`,
-        subtitle: gkde.heading,
+        kicker: "CASA NIZUC · GOURMET KOSHER DINING EXPERIENCE",
+        subtitle: gkde.tagline,
         description: gkde.lead,
         backSection: "gkde",
         backLabel: "GKDE",
-        gallery: [gkde.image, ...dining.venues.slice(0, 4).map((venue) => venue.image)],
+        gallery: [gkde.image, ...dining.venues.slice(0, 3).map((venue) => venue.image)],
         body: (
           <>
-            <h3>Your GKDE includes</h3>
+            {gkde.intro.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            <h3>{gkde.collectionTitle}</h3>
+            {gkde.venues.map((venue) => (
+              <div key={venue.name}>
+                <p>
+                  <strong className="dcv-cn-caps">{venue.name}</strong> | {venue.kind}
+                </p>
+                <p>{venue.text}</p>
+              </div>
+            ))}
+            <h3>{gkde.experience.title}</h3>
+            <p>{gkde.experience.text}</p>
+            <h3>{gkde.pricing.title}</h3>
             <ul className="dcv-cn-bullets">
-              {gkde.includes.map((item) => (
-                <li key={item}>
-                  <Lead text={item} caps />
-                </li>
+              {gkde.pricing.items.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
-            <p className="dcv-cn-fine">{gkde.ofekNote}</p>
-            <h3>Need to know</h3>
-            <ul className="dcv-cn-bullets">
-              {gkde.know.map((item) => (
-                <li key={item}>
-                  {item.includes("GKDE2026") ? (
-                    <>
-                      {item.split("GKDE2026")[0]}
-                      <strong className="dcv-cn-code">GKDE2026</strong>
-                    </>
-                  ) : (
-                    item
-                  )}
-                </li>
-              ))}
-            </ul>
+            <p className="dcv-cn-fine">{gkde.pricing.note}</p>
+            {gkde.closing.map((line) => (
+              <p key={line} className="dcv-cn-callout">
+                {line}
+              </p>
+            ))}
           </>
         ),
       };

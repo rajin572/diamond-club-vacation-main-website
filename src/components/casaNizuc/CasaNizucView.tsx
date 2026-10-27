@@ -144,7 +144,7 @@ export function CasaNizucView() {
     {
       id: "calendar",
       image: seasons.list[2].image,
-      title: seasons.calendar.heading,
+      title: "Calendar of Events",
       description: seasons.lead,
       linkLabel: "View the calendar →",
       href: casaNizucSectionHref("calendar"),

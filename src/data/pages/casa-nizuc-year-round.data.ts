@@ -114,26 +114,31 @@ export const CASA_NIZUC_PAGE = {
   },
 
   gkde: {
-    heading: "GKDE, the Gourmet Kosher Dining Experience",
+    // The client's GKDE text (2026-10-27), as sent. The old "Need to know" list (promo code, Bonvoy, two-bedroom suites, Ofek note) is not in it.
+    heading: "Gourmet Kosher Dining Experience",
     image: AllImages.casaNizucGkdeDining,
-    lead: "Immerse yourself in an all-gastronomic escape. Unlimited access to our elevated kosher dining concepts and refreshing soft beverages throughout your entire stay.",
-    price: { from: "$200", adult: "per adult", child: "$80 per child" },
-    includes: [
-      "Âshân: Signature Glatt Kosher Steakhouse, Beit Yosef",
-      "Zait: Mediterranean Panoramic Restaurant & Wine Cave, Beit Yosef",
-      "Mayim: Three-Meal Dairy Kitchen, Chalav Yisroel",
-      "Noam: Artisan Coffee House & Ice Cream Parlour, Chalav Yisroel",
-      "Soft drinks and beer: throughout your stay",
+    tagline: "A World of Exceptional Kosher Dining at Casa Nizuc",
+    lead: "Discover a new standard of kosher hospitality at Casa Nizuc, where exceptional cuisine, breathtaking Caribbean views, and sophisticated dining come together.",
+    intro: [
+      "Indulge in an extraordinary culinary journey with unlimited access to our distinctive kosher dining venues, from an elegant signature steakhouse and panoramic Mediterranean restaurant to contemporary dairy dining.",
+      "Whether enjoying a leisurely breakfast, a gourmet lunch, or an unforgettable evening overlooking the Caribbean, every experience is thoughtfully crafted to delight.",
     ],
-    know: [
-      "Only at Casa Nizuc.",
-      "Soft drinks and beer included. Other alcoholic beverages and cocktails are not.",
-      "$200 per adult, $80 per child when booked online. Booked at the front desk, GKDE is 20% higher.",
-      "Two-bedroom family suites available.",
-      "Promotional code: GKDE2026",
-      "Make memories. Earn points. Join Marriott Bonvoy for free.",
+    collectionTitle: "Explore Our Culinary Collection",
+    venues: [
+      { name: "Âshân", kind: "Signature Glatt Kosher Steakhouse — Beit Yosef", text: "An elevated steakhouse experience featuring premium USDA Prime cuts, expertly crafted appetizers, and an exceptional selection of international wines in a sophisticated evening setting." },
+      { name: "Zait", kind: "Panoramic Mediterranean Dining — Beit Yosef", text: "Located on the 23rd floor, Zait combines authentic Mediterranean flavors with spectacular views of the Caribbean Sea and Cancun skyline, complemented by an exclusive curated Wine Cave." },
+      { name: "Mayim", kind: "Contemporary Dairy Dining — Chalav Yisrael", text: "Start your morning with an abundant international breakfast buffet, fresh pastries, live cooking stations, and local specialties. Return for lunch or dinner featuring fresh fish, artisan pastas, vibrant salads, and chef-inspired creations." },
     ],
-    ofekNote: "Ofek Rooftop is not included in GKDE.",
+    experience: {
+      title: "One Exceptional Culinary Experience",
+      text: "Enjoy the freedom to explore Casa Nizuc’s three distinctive kosher dining venues throughout your stay, with dining and select beverages included in one convenient package.",
+    },
+    pricing: {
+      title: "Package Pricing",
+      items: ["Adults: $200 USD per day", "Children: $80 USD per day", "Save 20% compared with purchasing at the hotel."],
+      note: "Alcoholic beverages and specialty cocktails are available at an additional charge. Package includes soft drinks and beer.",
+    },
+    closing: ["Discover. Indulge. Experience Casa Nizuc.", "Reserve Your Gourmet Kosher Dining Experience."],
     ofek: {
       heading: "Ofek. Where the night begins.",
       image: AllImages.casaNizucOfekRooftop,
