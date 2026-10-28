@@ -9,6 +9,7 @@ import reserveScholars from "./mainDesign/reserve-scholars.png";
 import reserveKidsProgram from "./mainDesign/reserve-kids-program.png";
 import reserveEntertainment from "./mainDesign/reserve-entertainment.png";
 import dayCampCollage from "./mainDesign/day-camp-collage.png";
+import stRegisDayCampCounselor from "./mainDesign/st-regis-day-camp-counselor.webp";
 import waldorfAerial from "./mainDesign/waldorf-aerial.png";
 import reserveEditionResort from "./mainDesign/reserve-edition-resort.png";
 import blueLaAldea from "./mainDesign/blue-la-aldea.jpg";
@@ -632,6 +633,7 @@ import blueLogoWhite from "./mainDesign/blue-logo-white.webp";
 import guettawayKidsProgram from "./mainDesign/guettaway-kids-program.webp";
 // Photo sent by the client 2026-10-20 for the Waldorf Astoria Day Camp team box (Program Director Rabbi Binyomin Schwartz, with two boys).
 import dayCampDirectorBinyominSchwartz from "./mainDesign/day-camp-director-binyomin-schwartz.webp";
+import casaNizucDayCampDirectorArianaMizrahi from "./mainDesign/casa-nizuc-day-camp-director-ariana-mizrahi.webp";
 // Photos from the client's two Word documents of 2026-10-19 (entertainment, rabbis, cantor, Grand Ballroom) and the Park Hyatt Living Room / Brisa photos.
 import entertainmentShulemLemmer from "./mainDesign/entertainment-shulem-lemmer.webp";
 import entertainmentDoviMeiselsGuitar from "./mainDesign/entertainment-dovi-meisels-guitar.webp";
@@ -811,6 +813,7 @@ export const AllImages = {
   reserveKidsProgram,
   reserveEntertainment,
   dayCampCollage,
+  stRegisDayCampCounselor,
   waldorfAerial,
   reserveEditionResort,
   blueLaAldea,
@@ -1461,6 +1464,7 @@ export const AllImages = {
   blueLogoWhite,
   guettawayKidsProgram,
   dayCampDirectorBinyominSchwartz,
+  casaNizucDayCampDirectorArianaMizrahi,
   entertainmentShulemLemmer,
   entertainmentDoviMeiselsGuitar,
   scholarRabbiAviWiesenfeld,

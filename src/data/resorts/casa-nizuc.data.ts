@@ -27,7 +27,7 @@ export const CASA_NIZUC_DATA: ResortData = {
         id: "pools",
         title: "Pools & Beaches",
         description: "Resort pool and beach experiences.",
-        image: AllImages.casaNizucGallery31,
+        image: AllImages.casaNizucPool,
         target: { type: "section", section: "pools" },
       },
       {
@@ -68,58 +68,76 @@ export const CASA_NIZUC_DATA: ResortData = {
           { label: "Cots", value: "1 cot allowed" },
         ],
         groups: [
-          { title: "Beds and bedding", items: [
-            "Maximum capacity: 2",
-            "Queen or Double",
-            "Extra beds are not allowed",
-            "Cots are allowed: 1",
-            "Quilt",
-          ] },
-          { title: "Room features", items: [
-            "31m²/334ft²",
-            "With air conditioning",
-            "Individual climate control",
-            "Non-smoking room",
-            "Living area",
-          ] },
-          { title: "Bathroom features", items: [
-            "Shower",
-            "Lighted makeup mirror",
-            "Hair dryer",
-            "Coat",
-            "Slippers",
-          ] },
-          { title: "Furniture and decoration", items: [
-            "In-room safe (charges apply)",
-            "Desk, for writing/working, power outlet",
-            "Iron and ironing board",
-          ] },
-          { title: "Food and drinks", items: [
-            "Complimentary bottled water",
-            "Coffee and tea service",
-            "Instant hot water",
-            "Minibar",
-          ] },
-          { title: "Kitchen features", items: [
-            "Mini refrigerator",
-            "Plates and glasses",
-          ] },
-          { title: "Internet and telephones", items: [
-            "Telephones: 1",
-            "Cordless phone, Voicemail, and Speakerphone",
-            "Wireless Internet access (charges apply)",
-          ] },
-          { title: "Entertainment", items: [
-            "Premium movie channels",
-            "Cable/satellite",
-            "CNN and ESPN",
-            "Radio",
-          ] },
-          { title: "Accessibility", items: [
-            "This type of room does not offer rooms with facilities for people with mobility problems",
-            "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
-            "This type of room does not offer rooms with facilities for people with hearing problems",
-          ] },
+          {
+            title: "Beds and bedding", items: [
+              "Maximum capacity: 2",
+              "Queen or Double",
+              "Extra beds are not allowed",
+              "Cots are allowed: 1",
+              "Quilt",
+            ]
+          },
+          {
+            title: "Room features", items: [
+              "31m²/334ft²",
+              "With air conditioning",
+              "Individual climate control",
+              "Non-smoking room",
+              "Living area",
+            ]
+          },
+          {
+            title: "Bathroom features", items: [
+              "Shower",
+              "Lighted makeup mirror",
+              "Hair dryer",
+              "Coat",
+              "Slippers",
+            ]
+          },
+          {
+            title: "Furniture and decoration", items: [
+              "In-room safe (charges apply)",
+              "Desk, for writing/working, power outlet",
+              "Iron and ironing board",
+            ]
+          },
+          {
+            title: "Food and drinks", items: [
+              "Complimentary bottled water",
+              "Coffee and tea service",
+              "Instant hot water",
+              "Minibar",
+            ]
+          },
+          {
+            title: "Kitchen features", items: [
+              "Mini refrigerator",
+              "Plates and glasses",
+            ]
+          },
+          {
+            title: "Internet and telephones", items: [
+              "Telephones: 1",
+              "Cordless phone, Voicemail, and Speakerphone",
+              "Wireless Internet access (charges apply)",
+            ]
+          },
+          {
+            title: "Entertainment", items: [
+              "Premium movie channels",
+              "Cable/satellite",
+              "CNN and ESPN",
+              "Radio",
+            ]
+          },
+          {
+            title: "Accessibility", items: [
+              "This type of room does not offer rooms with facilities for people with mobility problems",
+              "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
+              "This type of room does not offer rooms with facilities for people with hearing problems",
+            ]
+          },
         ],
         gallery: [AllImages.casaNizucRoomTwoDoubles, AllImages.casaNizucRoomKingBalcony],
       },
@@ -136,57 +154,75 @@ export const CASA_NIZUC_DATA: ResortData = {
           { label: "Guests", value: "2 Guests (max.)" },
         ],
         groups: [
-          { title: "Beds and bedding", items: [
-            "Maximum capacity: 2",
-            "1 King",
-            "Extra beds are not allowed",
-            "Cots are allowed: 1",
-            "Quilt",
-          ] },
-          { title: "Room features", items: [
-            "37m²/398ft²",
-            "With air conditioning",
-            "Individual climate control",
-            "Non-smoking room",
-            "Living area",
-          ] },
-          { title: "Bathroom features", items: [
-            "Lighted makeup mirror",
-            "Hair dryer",
-            "Coat",
-            "Slippers",
-          ] },
-          { title: "Furniture and decoration", items: [
-            "In-room safe (charges apply)",
-            "Desk, for writing/working, power outlet",
-            "Iron and ironing board",
-          ] },
-          { title: "Food and drinks", items: [
-            "Complimentary bottled water",
-            "Coffee and tea service",
-            "Instant hot water",
-            "Minibar",
-          ] },
-          { title: "Kitchen features", items: [
-            "Mini refrigerator",
-            "Plates and glasses",
-          ] },
-          { title: "Internet and telephones", items: [
-            "Telephones: 1",
-            "Cordless phone, Voicemail, and Speakerphone",
-            "Wireless Internet access (charges apply)",
-          ] },
-          { title: "Entertainment", items: [
-            "Premium movie channels",
-            "Cable/satellite",
-            "CNN and ESPN",
-            "Radio",
-          ] },
-          { title: "Accessibility", items: [
-            "This type of room does not offer rooms with facilities for people with mobility problems",
-            "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
-            "This type of room does not offer rooms with facilities for people with hearing problems",
-          ] },
+          {
+            title: "Beds and bedding", items: [
+              "Maximum capacity: 2",
+              "1 King",
+              "Extra beds are not allowed",
+              "Cots are allowed: 1",
+              "Quilt",
+            ]
+          },
+          {
+            title: "Room features", items: [
+              "37m²/398ft²",
+              "With air conditioning",
+              "Individual climate control",
+              "Non-smoking room",
+              "Living area",
+            ]
+          },
+          {
+            title: "Bathroom features", items: [
+              "Lighted makeup mirror",
+              "Hair dryer",
+              "Coat",
+              "Slippers",
+            ]
+          },
+          {
+            title: "Furniture and decoration", items: [
+              "In-room safe (charges apply)",
+              "Desk, for writing/working, power outlet",
+              "Iron and ironing board",
+            ]
+          },
+          {
+            title: "Food and drinks", items: [
+              "Complimentary bottled water",
+              "Coffee and tea service",
+              "Instant hot water",
+              "Minibar",
+            ]
+          },
+          {
+            title: "Kitchen features", items: [
+              "Mini refrigerator",
+              "Plates and glasses",
+            ]
+          },
+          {
+            title: "Internet and telephones", items: [
+              "Telephones: 1",
+              "Cordless phone, Voicemail, and Speakerphone",
+              "Wireless Internet access (charges apply)",
+            ]
+          },
+          {
+            title: "Entertainment", items: [
+              "Premium movie channels",
+              "Cable/satellite",
+              "CNN and ESPN",
+              "Radio",
+            ]
+          },
+          {
+            title: "Accessibility", items: [
+              "This type of room does not offer rooms with facilities for people with mobility problems",
+              "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
+              "This type of room does not offer rooms with facilities for people with hearing problems",
+            ]
+          },
         ],
         gallery: [AllImages.casaNizucRoomKingBalcony, AllImages.casaNizucRoomKingBath],
       },
@@ -203,58 +239,76 @@ export const CASA_NIZUC_DATA: ResortData = {
           { label: "Guests", value: "4 Guests (max.)" },
         ],
         groups: [
-          { title: "Beds and bedding", items: [
-            "Maximum capacity: 4",
-            "2 Double",
-            "Extra beds are not allowed",
-            "Cribs are not allowed",
-            "Quilt",
-          ] },
-          { title: "Room features", items: [
-            "37m²/398ft²",
-            "With air conditioning",
-            "Individual climate control",
-            "Outdoor spaces: balcony (1)",
-            "Living area",
-          ] },
-          { title: "Bathroom features", items: [
-            "Shower",
-            "Lighted makeup mirror",
-            "Hair dryer",
-            "Coat",
-            "Slippers",
-          ] },
-          { title: "Furniture and decoration", items: [
-            "In-room safe (charges apply)",
-            "Desk, for writing/working, power outlet",
-            "Iron and ironing board",
-          ] },
-          { title: "Food and drinks", items: [
-            "Complimentary bottled water",
-            "Coffee and tea service",
-            "Instant hot water",
-            "Minibar",
-          ] },
-          { title: "Kitchen features", items: [
-            "Mini refrigerator",
-            "Plates and glasses",
-          ] },
-          { title: "Internet and telephones", items: [
-            "Telephones: 1",
-            "Cordless phone, Voicemail, and Speakerphone",
-            "Complimentary wireless Internet access",
-          ] },
-          { title: "Entertainment", items: [
-            "Premium movie channels",
-            "Cable/satellite",
-            "CNN and ESPN",
-            "Radio",
-          ] },
-          { title: "Accessibility", items: [
-            "This type of room does not offer rooms with facilities for people with mobility problems",
-            "This type of room offers rooms with facilities for people with mobility problems, including wheelchair-accessible showers.",
-            "This type of room offers rooms with facilities for people with hearing problems, including devices with alarms and visual notifications for the door and telephone.",
-          ] },
+          {
+            title: "Beds and bedding", items: [
+              "Maximum capacity: 4",
+              "2 Double",
+              "Extra beds are not allowed",
+              "Cribs are not allowed",
+              "Quilt",
+            ]
+          },
+          {
+            title: "Room features", items: [
+              "37m²/398ft²",
+              "With air conditioning",
+              "Individual climate control",
+              "Outdoor spaces: balcony (1)",
+              "Living area",
+            ]
+          },
+          {
+            title: "Bathroom features", items: [
+              "Shower",
+              "Lighted makeup mirror",
+              "Hair dryer",
+              "Coat",
+              "Slippers",
+            ]
+          },
+          {
+            title: "Furniture and decoration", items: [
+              "In-room safe (charges apply)",
+              "Desk, for writing/working, power outlet",
+              "Iron and ironing board",
+            ]
+          },
+          {
+            title: "Food and drinks", items: [
+              "Complimentary bottled water",
+              "Coffee and tea service",
+              "Instant hot water",
+              "Minibar",
+            ]
+          },
+          {
+            title: "Kitchen features", items: [
+              "Mini refrigerator",
+              "Plates and glasses",
+            ]
+          },
+          {
+            title: "Internet and telephones", items: [
+              "Telephones: 1",
+              "Cordless phone, Voicemail, and Speakerphone",
+              "Complimentary wireless Internet access",
+            ]
+          },
+          {
+            title: "Entertainment", items: [
+              "Premium movie channels",
+              "Cable/satellite",
+              "CNN and ESPN",
+              "Radio",
+            ]
+          },
+          {
+            title: "Accessibility", items: [
+              "This type of room does not offer rooms with facilities for people with mobility problems",
+              "This type of room offers rooms with facilities for people with mobility problems, including wheelchair-accessible showers.",
+              "This type of room offers rooms with facilities for people with hearing problems, including devices with alarms and visual notifications for the door and telephone.",
+            ]
+          },
         ],
         gallery: [AllImages.casaNizucRoomTwoDoubles],
       },
@@ -271,59 +325,77 @@ export const CASA_NIZUC_DATA: ResortData = {
           { label: "Guests", value: "2 Guests (max.)" },
         ],
         groups: [
-          { title: "Beds and bedding", items: [
-            "Maximum capacity: 2",
-            "1 King",
-            "Extra beds are not allowed",
-            "Cribs are not allowed",
-            "Quilt",
-          ] },
-          { title: "Room features", items: [
-            "37m²/398ft²",
-            "With air conditioning",
-            "Individual climate control",
-            "Non-smoking room",
-            "Outdoor spaces: balcony (1)",
-            "Living area",
-          ] },
-          { title: "Bathroom features", items: [
-            "Shower",
-            "Lighted makeup mirror",
-            "Hair dryer",
-            "Coat",
-            "Slippers",
-          ] },
-          { title: "Furniture and decoration", items: [
-            "In-room safe (charges apply)",
-            "Desk, for writing/working, power outlet",
-            "Iron and ironing board",
-          ] },
-          { title: "Food and drinks", items: [
-            "Complimentary bottled water",
-            "Coffee and tea service",
-            "Instant hot water",
-            "Minibar",
-          ] },
-          { title: "Kitchen features", items: [
-            "Mini refrigerator",
-            "Plates and glasses",
-          ] },
-          { title: "Internet and telephones", items: [
-            "Telephones: 1",
-            "Cordless phone, Voicemail, and Speakerphone",
-            "Wireless Internet access (charges apply)",
-          ] },
-          { title: "Entertainment", items: [
-            "Premium movie channels",
-            "Cable/satellite",
-            "CNN and ESPN",
-            "Radio",
-          ] },
-          { title: "Accessibility", items: [
-            "This type of room does not offer rooms with facilities for people with mobility problems",
-            "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
-            "This type of room does not offer rooms with facilities for people with hearing problems",
-          ] },
+          {
+            title: "Beds and bedding", items: [
+              "Maximum capacity: 2",
+              "1 King",
+              "Extra beds are not allowed",
+              "Cribs are not allowed",
+              "Quilt",
+            ]
+          },
+          {
+            title: "Room features", items: [
+              "37m²/398ft²",
+              "With air conditioning",
+              "Individual climate control",
+              "Non-smoking room",
+              "Outdoor spaces: balcony (1)",
+              "Living area",
+            ]
+          },
+          {
+            title: "Bathroom features", items: [
+              "Shower",
+              "Lighted makeup mirror",
+              "Hair dryer",
+              "Coat",
+              "Slippers",
+            ]
+          },
+          {
+            title: "Furniture and decoration", items: [
+              "In-room safe (charges apply)",
+              "Desk, for writing/working, power outlet",
+              "Iron and ironing board",
+            ]
+          },
+          {
+            title: "Food and drinks", items: [
+              "Complimentary bottled water",
+              "Coffee and tea service",
+              "Instant hot water",
+              "Minibar",
+            ]
+          },
+          {
+            title: "Kitchen features", items: [
+              "Mini refrigerator",
+              "Plates and glasses",
+            ]
+          },
+          {
+            title: "Internet and telephones", items: [
+              "Telephones: 1",
+              "Cordless phone, Voicemail, and Speakerphone",
+              "Wireless Internet access (charges apply)",
+            ]
+          },
+          {
+            title: "Entertainment", items: [
+              "Premium movie channels",
+              "Cable/satellite",
+              "CNN and ESPN",
+              "Radio",
+            ]
+          },
+          {
+            title: "Accessibility", items: [
+              "This type of room does not offer rooms with facilities for people with mobility problems",
+              "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
+              "This type of room does not offer rooms with facilities for people with hearing problems",
+            ]
+          },
         ],
         gallery: [AllImages.casaNizucRoomKingBath, AllImages.casaNizucRoomKingBalcony],
       },
@@ -340,59 +412,77 @@ export const CASA_NIZUC_DATA: ResortData = {
           { label: "Guests", value: "4 Guests (max.)" },
         ],
         groups: [
-          { title: "Beds and bedding", items: [
-            "Maximum capacity: 4",
-            "2 Double",
-            "Extra beds are not allowed",
-            "Cots are allowed: 1",
-            "Quilt",
-          ] },
-          { title: "Room features", items: [
-            "37m²/398ft²",
-            "With air conditioning",
-            "Individual climate control",
-            "Non-smoking room",
-            "Outdoor spaces: balcony (1)",
-            "Living area",
-          ] },
-          { title: "Bathroom features", items: [
-            "Shower",
-            "Lighted makeup mirror",
-            "Hair dryer",
-            "Coat",
-            "Slippers",
-          ] },
-          { title: "Furniture and decoration", items: [
-            "In-room safe (charges apply)",
-            "Desk, for writing/working, power outlet",
-            "Iron and ironing board",
-          ] },
-          { title: "Food and drinks", items: [
-            "Complimentary bottled water",
-            "Coffee and tea service",
-            "Instant hot water",
-            "Minibar",
-          ] },
-          { title: "Kitchen features", items: [
-            "Mini refrigerator",
-            "Plates and glasses",
-          ] },
-          { title: "Internet and telephones", items: [
-            "Telephones: 1",
-            "Cordless phone, Voicemail, and Speakerphone",
-            "Wireless Internet access (charges apply)",
-          ] },
-          { title: "Entertainment", items: [
-            "Premium movie channels",
-            "Cable/satellite",
-            "CNN and ESPN",
-            "Radio",
-          ] },
-          { title: "Accessibility", items: [
-            "This type of room does not offer rooms with facilities for people with mobility problems",
-            "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
-            "This type of room does not offer rooms with facilities for people with hearing problems",
-          ] },
+          {
+            title: "Beds and bedding", items: [
+              "Maximum capacity: 4",
+              "2 Double",
+              "Extra beds are not allowed",
+              "Cots are allowed: 1",
+              "Quilt",
+            ]
+          },
+          {
+            title: "Room features", items: [
+              "37m²/398ft²",
+              "With air conditioning",
+              "Individual climate control",
+              "Non-smoking room",
+              "Outdoor spaces: balcony (1)",
+              "Living area",
+            ]
+          },
+          {
+            title: "Bathroom features", items: [
+              "Shower",
+              "Lighted makeup mirror",
+              "Hair dryer",
+              "Coat",
+              "Slippers",
+            ]
+          },
+          {
+            title: "Furniture and decoration", items: [
+              "In-room safe (charges apply)",
+              "Desk, for writing/working, power outlet",
+              "Iron and ironing board",
+            ]
+          },
+          {
+            title: "Food and drinks", items: [
+              "Complimentary bottled water",
+              "Coffee and tea service",
+              "Instant hot water",
+              "Minibar",
+            ]
+          },
+          {
+            title: "Kitchen features", items: [
+              "Mini refrigerator",
+              "Plates and glasses",
+            ]
+          },
+          {
+            title: "Internet and telephones", items: [
+              "Telephones: 1",
+              "Cordless phone, Voicemail, and Speakerphone",
+              "Wireless Internet access (charges apply)",
+            ]
+          },
+          {
+            title: "Entertainment", items: [
+              "Premium movie channels",
+              "Cable/satellite",
+              "CNN and ESPN",
+              "Radio",
+            ]
+          },
+          {
+            title: "Accessibility", items: [
+              "This type of room does not offer rooms with facilities for people with mobility problems",
+              "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
+              "This type of room does not offer rooms with facilities for people with hearing problems",
+            ]
+          },
         ],
         gallery: [AllImages.casaNizucRoomTwoDoubles],
       },
@@ -409,62 +499,80 @@ export const CASA_NIZUC_DATA: ResortData = {
           { label: "Guests", value: "4 Guests (max.)" },
         ],
         groups: [
-          { title: "Beds and bedding", items: [
-            "Maximum capacity: 4",
-            "1 King",
-            "Sofa bed",
-            "Extra beds are allowed: 1",
-            "Cots are allowed: 1",
-            "Maximum number of cots/extra beds allowed: 1",
-            "Quilt",
-          ] },
-          { title: "Room features", items: [
-            "57m²/613ft²",
-            "With air conditioning",
-            "Individual climate control",
-            "Non-smoking room",
-            "Outdoor spaces: balcony (2)",
-            "Separate living room",
-          ] },
-          { title: "Bathroom features", items: [
-            "Shower",
-            "Lighted makeup mirror",
-            "Hair dryer",
-            "Coat",
-            "Slippers",
-          ] },
-          { title: "Furniture and decoration", items: [
-            "Couch",
-            "In-room safe (charges apply)",
-            "Desk, for writing/working, power outlet",
-            "Iron and ironing board",
-          ] },
-          { title: "Food and drinks", items: [
-            "Complimentary bottled water",
-            "Coffee and tea service",
-            "Instant hot water",
-            "Minibar",
-          ] },
-          { title: "Kitchen features", items: [
-            "Mini refrigerator",
-            "Plates and glasses",
-          ] },
-          { title: "Internet and telephones", items: [
-            "Telephones: 2",
-            "Cordless phone, Voicemail, and Speakerphone",
-            "Wireless Internet access (charges apply)",
-          ] },
-          { title: "Entertainment", items: [
-            "Premium movie channels",
-            "Cable/satellite",
-            "CNN and ESPN",
-            "Radio",
-          ] },
-          { title: "Accessibility", items: [
-            "This type of room does not offer rooms with facilities for people with mobility problems",
-            "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
-            "This type of room does not offer rooms with facilities for people with hearing problems",
-          ] },
+          {
+            title: "Beds and bedding", items: [
+              "Maximum capacity: 4",
+              "1 King",
+              "Sofa bed",
+              "Extra beds are allowed: 1",
+              "Cots are allowed: 1",
+              "Maximum number of cots/extra beds allowed: 1",
+              "Quilt",
+            ]
+          },
+          {
+            title: "Room features", items: [
+              "57m²/613ft²",
+              "With air conditioning",
+              "Individual climate control",
+              "Non-smoking room",
+              "Outdoor spaces: balcony (2)",
+              "Separate living room",
+            ]
+          },
+          {
+            title: "Bathroom features", items: [
+              "Shower",
+              "Lighted makeup mirror",
+              "Hair dryer",
+              "Coat",
+              "Slippers",
+            ]
+          },
+          {
+            title: "Furniture and decoration", items: [
+              "Couch",
+              "In-room safe (charges apply)",
+              "Desk, for writing/working, power outlet",
+              "Iron and ironing board",
+            ]
+          },
+          {
+            title: "Food and drinks", items: [
+              "Complimentary bottled water",
+              "Coffee and tea service",
+              "Instant hot water",
+              "Minibar",
+            ]
+          },
+          {
+            title: "Kitchen features", items: [
+              "Mini refrigerator",
+              "Plates and glasses",
+            ]
+          },
+          {
+            title: "Internet and telephones", items: [
+              "Telephones: 2",
+              "Cordless phone, Voicemail, and Speakerphone",
+              "Wireless Internet access (charges apply)",
+            ]
+          },
+          {
+            title: "Entertainment", items: [
+              "Premium movie channels",
+              "Cable/satellite",
+              "CNN and ESPN",
+              "Radio",
+            ]
+          },
+          {
+            title: "Accessibility", items: [
+              "This type of room does not offer rooms with facilities for people with mobility problems",
+              "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
+              "This type of room does not offer rooms with facilities for people with hearing problems",
+            ]
+          },
         ],
         gallery: [AllImages.casaNizucRoomSuiteLiving, AllImages.casaNizucRoomKingBalcony],
       },
@@ -481,60 +589,78 @@ export const CASA_NIZUC_DATA: ResortData = {
           { label: "Guests", value: "4 Guests (max.)" },
         ],
         groups: [
-          { title: "Beds and bedding", items: [
-            "Maximum capacity: 4",
-            "1 King",
-            "Sofa bed",
-            "Extra beds are allowed: 1",
-            "Cots are allowed: 1",
-            "Maximum number of cots/extra beds allowed: 1",
-            "Quilt",
-          ] },
-          { title: "Room features", items: [
-            "72m²/775ft²",
-            "With air conditioning",
-            "Individual climate control",
-            "Separate living room",
-          ] },
-          { title: "Bathroom features", items: [
-            "Shower",
-            "Lighted makeup mirror",
-            "Hair dryer",
-            "Coat",
-            "Slippers",
-          ] },
-          { title: "Furniture and decoration", items: [
-            "Couch",
-            "In-room safe (charges apply)",
-            "Desk, for writing/working, power outlet",
-            "Iron and ironing board",
-          ] },
-          { title: "Food and drinks", items: [
-            "Complimentary bottled water",
-            "Coffee and tea service",
-            "Instant hot water",
-            "Minibar",
-          ] },
-          { title: "Kitchen features", items: [
-            "Mini refrigerator",
-            "Plates and glasses",
-          ] },
-          { title: "Internet and telephones", items: [
-            "Telephones: 2",
-            "Cordless phone, Voicemail, and Speakerphone",
-            "Complimentary wireless Internet access",
-          ] },
-          { title: "Entertainment", items: [
-            "Premium movie channels",
-            "Cable/satellite",
-            "CNN and ESPN",
-            "Radio",
-          ] },
-          { title: "Accessibility", items: [
-            "This type of room does not offer rooms with facilities for people with mobility problems",
-            "This type of room offers rooms with facilities for people with mobility problems, including wheelchair-accessible showers.",
-            "This type of room does not offer rooms with facilities for people with hearing problems",
-          ] },
+          {
+            title: "Beds and bedding", items: [
+              "Maximum capacity: 4",
+              "1 King",
+              "Sofa bed",
+              "Extra beds are allowed: 1",
+              "Cots are allowed: 1",
+              "Maximum number of cots/extra beds allowed: 1",
+              "Quilt",
+            ]
+          },
+          {
+            title: "Room features", items: [
+              "72m²/775ft²",
+              "With air conditioning",
+              "Individual climate control",
+              "Separate living room",
+            ]
+          },
+          {
+            title: "Bathroom features", items: [
+              "Shower",
+              "Lighted makeup mirror",
+              "Hair dryer",
+              "Coat",
+              "Slippers",
+            ]
+          },
+          {
+            title: "Furniture and decoration", items: [
+              "Couch",
+              "In-room safe (charges apply)",
+              "Desk, for writing/working, power outlet",
+              "Iron and ironing board",
+            ]
+          },
+          {
+            title: "Food and drinks", items: [
+              "Complimentary bottled water",
+              "Coffee and tea service",
+              "Instant hot water",
+              "Minibar",
+            ]
+          },
+          {
+            title: "Kitchen features", items: [
+              "Mini refrigerator",
+              "Plates and glasses",
+            ]
+          },
+          {
+            title: "Internet and telephones", items: [
+              "Telephones: 2",
+              "Cordless phone, Voicemail, and Speakerphone",
+              "Complimentary wireless Internet access",
+            ]
+          },
+          {
+            title: "Entertainment", items: [
+              "Premium movie channels",
+              "Cable/satellite",
+              "CNN and ESPN",
+              "Radio",
+            ]
+          },
+          {
+            title: "Accessibility", items: [
+              "This type of room does not offer rooms with facilities for people with mobility problems",
+              "This type of room offers rooms with facilities for people with mobility problems, including wheelchair-accessible showers.",
+              "This type of room does not offer rooms with facilities for people with hearing problems",
+            ]
+          },
         ],
         gallery: [AllImages.casaNizucRoomSuiteLiving, AllImages.casaNizucRoomKingBath],
       },
@@ -551,62 +677,80 @@ export const CASA_NIZUC_DATA: ResortData = {
           { label: "Guests", value: "4 Guests (max.)" },
         ],
         groups: [
-          { title: "Beds and bedding", items: [
-            "Maximum capacity: 4",
-            "1 King",
-            "Sofa bed",
-            "Extra beds are allowed: 1",
-            "Cots are allowed: 1",
-            "Maximum number of cots/extra beds allowed: 1",
-            "Quilt",
-          ] },
-          { title: "Room features", items: [
-            "73m²/785ft²",
-            "With air conditioning",
-            "Individual climate control",
-            "Non-smoking room",
-            "Outdoor spaces: balcony (2)",
-            "Separate living room",
-          ] },
-          { title: "Bathroom features", items: [
-            "Shower",
-            "Lighted makeup mirror",
-            "Hair dryer",
-            "Coat",
-            "Slippers",
-          ] },
-          { title: "Furniture and decoration", items: [
-            "Couch",
-            "In-room safe (charges apply)",
-            "Desk, for writing/working, power outlet",
-            "Iron and ironing board",
-          ] },
-          { title: "Food and drinks", items: [
-            "Complimentary bottled water",
-            "Coffee and tea service",
-            "Instant hot water",
-            "Minibar",
-          ] },
-          { title: "Kitchen features", items: [
-            "Mini refrigerator",
-            "Plates and glasses",
-          ] },
-          { title: "Internet and telephones", items: [
-            "Telephones: 2",
-            "Cordless phone, Voicemail, and Speakerphone",
-            "Complimentary wireless Internet access",
-          ] },
-          { title: "Entertainment", items: [
-            "Premium movie channels",
-            "Cable/satellite",
-            "CNN and ESPN",
-            "Radio",
-          ] },
-          { title: "Accessibility", items: [
-            "This type of room does not offer rooms with facilities for people with mobility problems",
-            "This type of room offers rooms with facilities for people with mobility problems, including wheelchair-accessible showers.",
-            "This type of room offers rooms with facilities for people with hearing problems, including devices with alarms and visual notifications for the door and telephone.",
-          ] },
+          {
+            title: "Beds and bedding", items: [
+              "Maximum capacity: 4",
+              "1 King",
+              "Sofa bed",
+              "Extra beds are allowed: 1",
+              "Cots are allowed: 1",
+              "Maximum number of cots/extra beds allowed: 1",
+              "Quilt",
+            ]
+          },
+          {
+            title: "Room features", items: [
+              "73m²/785ft²",
+              "With air conditioning",
+              "Individual climate control",
+              "Non-smoking room",
+              "Outdoor spaces: balcony (2)",
+              "Separate living room",
+            ]
+          },
+          {
+            title: "Bathroom features", items: [
+              "Shower",
+              "Lighted makeup mirror",
+              "Hair dryer",
+              "Coat",
+              "Slippers",
+            ]
+          },
+          {
+            title: "Furniture and decoration", items: [
+              "Couch",
+              "In-room safe (charges apply)",
+              "Desk, for writing/working, power outlet",
+              "Iron and ironing board",
+            ]
+          },
+          {
+            title: "Food and drinks", items: [
+              "Complimentary bottled water",
+              "Coffee and tea service",
+              "Instant hot water",
+              "Minibar",
+            ]
+          },
+          {
+            title: "Kitchen features", items: [
+              "Mini refrigerator",
+              "Plates and glasses",
+            ]
+          },
+          {
+            title: "Internet and telephones", items: [
+              "Telephones: 2",
+              "Cordless phone, Voicemail, and Speakerphone",
+              "Complimentary wireless Internet access",
+            ]
+          },
+          {
+            title: "Entertainment", items: [
+              "Premium movie channels",
+              "Cable/satellite",
+              "CNN and ESPN",
+              "Radio",
+            ]
+          },
+          {
+            title: "Accessibility", items: [
+              "This type of room does not offer rooms with facilities for people with mobility problems",
+              "This type of room offers rooms with facilities for people with mobility problems, including wheelchair-accessible showers.",
+              "This type of room offers rooms with facilities for people with hearing problems, including devices with alarms and visual notifications for the door and telephone.",
+            ]
+          },
         ],
         gallery: [AllImages.casaNizucRoomSuiteLiving, AllImages.casaNizucRoomKingBalcony],
       },
@@ -623,64 +767,82 @@ export const CASA_NIZUC_DATA: ResortData = {
           { label: "Guests", value: "6 Guests (max.)" },
         ],
         groups: [
-          { title: "Beds and bedding", items: [
-            "Maximum capacity: 6",
-            "Bedroom 1: 1 King",
-            "Bedroom 2: 2 Double",
-            "Sofa bed",
-            "Extra beds are allowed: 1",
-            "Cots are allowed: 1",
-            "Maximum number of cots/extra beds allowed: 1",
-            "Quilt",
-          ] },
-          { title: "Room features", items: [
-            "93m²/1001ft²",
-            "With air conditioning",
-            "Individual climate control",
-            "Non-smoking room",
-            "Outdoor spaces: balcony (3)",
-            "Separate living room",
-          ] },
-          { title: "Bathroom features", items: [
-            "Bathrooms: 2",
-            "Shower",
-            "Lighted makeup mirror",
-            "Hair dryer",
-            "Coat",
-            "Slippers",
-          ] },
-          { title: "Furniture and decoration", items: [
-            "Couch",
-            "In-room safe (charges apply)",
-            "Desk, for writing/working, power outlet",
-            "Iron and ironing board",
-          ] },
-          { title: "Food and drinks", items: [
-            "Complimentary bottled water",
-            "Coffee and tea service",
-            "Instant hot water",
-            "Minibar",
-          ] },
-          { title: "Kitchen features", items: [
-            "Mini refrigerator",
-            "Plates and glasses",
-          ] },
-          { title: "Internet and telephones", items: [
-            "Telephones: 3",
-            "Cordless phone, Voicemail, and Speakerphone",
-            "Complimentary wireless Internet access",
-          ] },
-          { title: "Entertainment", items: [
-            "Premium movie channels",
-            "Cable/satellite",
-            "CNN and ESPN",
-            "Radio",
-          ] },
-          { title: "Accessibility", items: [
-            "This type of room does not offer rooms with facilities for people with mobility problems",
-            "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
-            "This type of room does not offer rooms with facilities for people with hearing problems",
-          ] },
+          {
+            title: "Beds and bedding", items: [
+              "Maximum capacity: 6",
+              "Bedroom 1: 1 King",
+              "Bedroom 2: 2 Double",
+              "Sofa bed",
+              "Extra beds are allowed: 1",
+              "Cots are allowed: 1",
+              "Maximum number of cots/extra beds allowed: 1",
+              "Quilt",
+            ]
+          },
+          {
+            title: "Room features", items: [
+              "93m²/1001ft²",
+              "With air conditioning",
+              "Individual climate control",
+              "Non-smoking room",
+              "Outdoor spaces: balcony (3)",
+              "Separate living room",
+            ]
+          },
+          {
+            title: "Bathroom features", items: [
+              "Bathrooms: 2",
+              "Shower",
+              "Lighted makeup mirror",
+              "Hair dryer",
+              "Coat",
+              "Slippers",
+            ]
+          },
+          {
+            title: "Furniture and decoration", items: [
+              "Couch",
+              "In-room safe (charges apply)",
+              "Desk, for writing/working, power outlet",
+              "Iron and ironing board",
+            ]
+          },
+          {
+            title: "Food and drinks", items: [
+              "Complimentary bottled water",
+              "Coffee and tea service",
+              "Instant hot water",
+              "Minibar",
+            ]
+          },
+          {
+            title: "Kitchen features", items: [
+              "Mini refrigerator",
+              "Plates and glasses",
+            ]
+          },
+          {
+            title: "Internet and telephones", items: [
+              "Telephones: 3",
+              "Cordless phone, Voicemail, and Speakerphone",
+              "Complimentary wireless Internet access",
+            ]
+          },
+          {
+            title: "Entertainment", items: [
+              "Premium movie channels",
+              "Cable/satellite",
+              "CNN and ESPN",
+              "Radio",
+            ]
+          },
+          {
+            title: "Accessibility", items: [
+              "This type of room does not offer rooms with facilities for people with mobility problems",
+              "This type of room does not offer rooms with facilities for people with mobility problems with wheelchair-accessible showers",
+              "This type of room does not offer rooms with facilities for people with hearing problems",
+            ]
+          },
         ],
         gallery: [AllImages.casaNizucRoomSuiteLiving, AllImages.casaNizucRoomTwoDoubles, AllImages.casaNizucRoomKingBalcony],
       },

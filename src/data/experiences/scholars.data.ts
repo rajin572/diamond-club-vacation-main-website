@@ -154,19 +154,26 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
           ],
         },
       },
+      // {
+      //   id: "rabbi-eli-stefansky",
+      //   title: "Rabbi Eli Stefansky",
+      //   description: "Founder of Mercaz Daf Yomi (MDY) | Internationally Renowned Educator & Inspirational Speaker.",
+      //   image: AllImages.scholarRabbiEliStefansky,
+      //   details: {
+      //     title: "Rabbi Eli Stefansky (Mercaz Daf Yomi)",
+      //     paragraphs: [
+      //       "A remarkable personality and one of the most influential figures in contemporary religious education, Rabbi Eli Stefansky has inspired tens of thousands of people around the world through his extraordinary passion, infectious enthusiasm, and unique ability to make learning engaging, accessible, and deeply meaningful.",
+      //       "As the founder of Mercaz Daf Yomi (MDY) in Ramat Beit Shemesh, Israel, Rabbi Stefansky has transformed a small gathering of dedicated learners into a worldwide movement reaching more than 30,000 participants. His immensely popular daily Daf Yomi lectures and 8 Minute Daf series have become a global phenomenon, bringing together individuals from diverse backgrounds through a shared commitment to learning, personal growth, and spiritual connection.",
+      //       "Guettaway, A Diamond Club Production, is honored to welcome Rabbi Eli Stefansky to our distinguished lineup of inspirational speakers for Pesach 2027 at the Waldorf Astoria and Park Hyatt Riviera Maya. His extraordinary energy, captivating presentations, and inspiring presence promise to bring a truly memorable dimension to an exceptional Yom Tov experience.",
+      //     ],
+      //   },
+      // },
       {
-        id: "rabbi-eli-stefansky",
-        title: "Rabbi Eli Stefansky",
-        description: "Founder of Mercaz Daf Yomi (MDY) | Internationally Renowned Educator & Inspirational Speaker.",
-        image: AllImages.scholarRabbiEliStefansky,
-        details: {
-          title: "Rabbi Eli Stefansky (Mercaz Daf Yomi)",
-          paragraphs: [
-            "A remarkable personality and one of the most influential figures in contemporary religious education, Rabbi Eli Stefansky has inspired tens of thousands of people around the world through his extraordinary passion, infectious enthusiasm, and unique ability to make learning engaging, accessible, and deeply meaningful.",
-            "As the founder of Mercaz Daf Yomi (MDY) in Ramat Beit Shemesh, Israel, Rabbi Stefansky has transformed a small gathering of dedicated learners into a worldwide movement reaching more than 30,000 participants. His immensely popular daily Daf Yomi lectures and 8 Minute Daf series have become a global phenomenon, bringing together individuals from diverse backgrounds through a shared commitment to learning, personal growth, and spiritual connection.",
-            "Guettaway, A Diamond Club Production, is honored to welcome Rabbi Eli Stefansky to our distinguished lineup of inspirational speakers for Pesach 2027 at the Waldorf Astoria and Park Hyatt Riviera Maya. His extraordinary energy, captivating presentations, and inspiring presence promise to bring a truly memorable dimension to an exceptional Yom Tov experience.",
-          ],
-        },
+        id: "speaker-tba",
+        title: "Something Big is Coming",
+        description: "",
+        tba: true,
+        linkLabel: "Coming soon",
       },
       // Rabbi Eli Mansour is not coming (client 2026-10-26): his place shows the "coming soon" card, like Diamond Blue. His photo stays in the image registry (scholarRabbiEliMansour).
       {

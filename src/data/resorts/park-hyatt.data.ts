@@ -11,6 +11,7 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
   resortName: "Park Hyatt Riviera Maya",
   kicker: "Passover 2027",
   tagline: "Guettaway a Diamond Club production",
+  showTagline: false,
   heroImage: AllImages.series.parkHyatt[0],
   overviewLabel: "Overview",
   showSubNav: true,

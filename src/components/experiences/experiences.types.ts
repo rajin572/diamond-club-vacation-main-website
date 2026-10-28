@@ -87,6 +87,8 @@ export interface KidsDayCampData {
   overview?: { title: string; description: string };
   /** A plain checklist (e.g. "Treasure Hunts", "Arts & Crafts") shown as the program. */
   program?: { title: string; items: string[] };
+  /** A box of its own above the program and team block, styled like "Our Team" (e.g. "The Director" with his photo). */
+  director?: { title: string; image: DesignImage; alt: string; role: string; name: string; bio: string };
   team?: KidsDayCampTeamMember[];
   activities?: KidsDayCampActivity[];
   ageGroups?: KidsDayCampAgeGroup[];

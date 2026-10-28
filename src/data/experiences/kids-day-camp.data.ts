@@ -15,13 +15,16 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       title: "An unforgettable Passover experience for every age.",
       description: "We make sure every child—from our youngest guests to our teens—has an incredible Passover filled with fun, friendship, adventure, and meaningful experiences.",
     },
+    // Its own box above the team, styled like "Our Team", with the director's photo and text (client 2026-10-28).
+    director: {
+      title: "Our Director",
+      image: AllImages.stRegisDayCampCounselor,
+      alt: "Shlomo Meisels, Day Camp Director",
+      role: "Day Camp Director",
+      name: "Shlomo Meisels",
+      bio: "Overseeing our complete children’s program and ensuring an organized, exciting, and memorable experience from start to finish.",
+    },
     team: [
-      {
-        id: "shlomo-meisels",
-        role: "Day Camp Director",
-        name: "Shlomo Meisels",
-        bio: "Overseeing our complete children’s program and ensuring an organized, exciting, and memorable experience from start to finish.",
-      },
       {
         id: "soussan-sports",
         role: "Sports",
@@ -95,6 +98,14 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       title: "An unforgettable Passover experience for every age.",
       description: "We make sure every child—from our youngest guests to our teens—has an incredible Passover filled with fun, friendship, adventure, and meaningful experiences.",
     },
+    // director: {
+    //   title: "Our Director",
+    //   image: AllImages.casaNizucDayCampDirectorArianaMizrahi,
+    //   alt: "Ariana Mizrahi, Day Camp Director",
+    //   role: "Day Camp Director",
+    //   name: "Ariana Mizrahi",
+    //   bio: "With a passion for working with children and creating meaningful, fun-filled experiences, Ariana Mizrahi brings enthusiasm, creativity, and a warm, caring approach to her role as Day Camp Director at Diamond Blue, developing an engaging program filled with exciting activities, creative projects, interactive games, and memorable experiences.",
+    // },
     team: [
       {
         id: "ariana-mizrahi",
@@ -157,7 +168,7 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       title: "Waldorf Astoria Day Camp",
       description: "The Kids Club is led by professional day camp directors and vetted counselors, with safety and supervision as top priorities. Scheduling is designed to sync with adult programming.",
       image: AllImages.guettawayKidsProgram,
-      imagePosition: "50% 20%",
+      imagePosition: "50% 45%",
     },
     overview: {
       title: "Kids & Family Programs",

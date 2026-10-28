@@ -1051,7 +1051,13 @@ button.dcv-link {
   font-size: clamp(26px, 3vw, 36px);
   margin: 0 0 16px;
 }
-.dcv-content2 > aside {
+/* the right column of boxes stacked: e.g. "The Director", then "Our Team" below it */
+.dcv-aside-stack {
+  display: grid;
+  gap: 26px;
+}
+.dcv-content2 > aside,
+.dcv-aside-stack > aside {
   border: 1px solid rgba(205, 172, 104, 0.28);
   border-radius: 26px;
   overflow: hidden;
@@ -1093,6 +1099,24 @@ button.dcv-link {
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
+}
+/* a shorter crop for a single photo (the director), full width of its box */
+.dcv-team-photo--wide {
+  aspect-ratio: 11 / 10;
+}
+.dcv-team-photo--wide img {
+  object-position: center 20%;
+}
+/* the day camp program cards, spaced like the other card grids (26px) */
+.dcv-feature-list {
+  display: grid;
+  gap: 26px;
+}
+.dcv-feature-list .dcv-feature-group {
+  margin-top: 0;
+}
+.dcv-team-member + .dcv-team-member {
+  margin-top: 32px;
 }
 .dcv-feature-group {
   border: 1px solid rgba(205, 172, 104, 0.28);
@@ -2069,7 +2093,8 @@ html[data-site="guettaway"] [data-hide-on~="guettaway"] {
   .dcv-feature-group {
     padding: 18px 20px;
   }
-  .dcv-content2 > aside {
+  .dcv-content2 > aside,
+  .dcv-aside-stack > aside {
     padding: 18px;
   }
   .dcv-footer .dcv-footer-inner {

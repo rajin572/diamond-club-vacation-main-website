@@ -16,7 +16,7 @@ interface KidsDayCampViewProps {
  * overview, a checklist program, activities with the team, age groups, dining and babysitting.
  */
 export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
-  const { overview, program, team, activities, ageGroups, dining, babysitting, comingSoon } = data;
+  const { overview, program, director, team, activities, ageGroups, dining, babysitting, comingSoon } = data;
 
   return (
     <>
@@ -57,42 +57,61 @@ export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
         </Wrap>
       )}
 
-      {((activities && activities.length > 0) || (team && team.length > 0)) && (
+      {((activities && activities.length > 0) || director || (team && team.length > 0)) && (
         <Wrap className="dcv-wrap--stack">
           <div className="dcv-content2">
             <div>
               {activities && activities.length > 0 && (
                 <>
                   <h2>Day Camp Program</h2>
-                  {activities.map((activity) => (
-                    <div key={activity.id} className="dcv-feature-group">
-                      <h3>{activity.title}</h3>
-                      <p className="dcv-copy-text" style={{ margin: 0 }}>
-                        {activity.description}
-                      </p>
-                    </div>
-                  ))}
+                  <div className="dcv-feature-list space-y-10!">
+                    {activities.map((activity) => (
+                      <div key={activity.id} className="dcv-feature-group">
+                        <h3>{activity.title}</h3>
+                        <p className="dcv-copy-text" style={{ margin: 0 }}>
+                          {activity.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </>
               )}
             </div>
-            {team && team.length > 0 && (
-              <aside>
-                <h2>Our Team</h2>
-                {team.map((member) => (
-                  <div key={member.id} style={{ marginBottom: 20 }}>
-                    {member.image && (
-                      <div className="dcv-team-photo">
-                        <Image src={member.image} alt={member.name} sizes="(max-width: 900px) 100vw, 360px" />
-                      </div>
-                    )}
-                    <div className="dcv-card-tag">{member.role}</div>
-                    <h3 style={{ fontSize: 22, margin: "0 0 6px" }}>{member.name}</h3>
+            {(director || (team && team.length > 0)) && (
+              <div className="dcv-aside-stack">
+                {director && (
+                  <aside>
+                    <h2>{director.title}</h2>
+                    <div className="dcv-team-photo dcv-team-photo--wide">
+                      <Image src={director.image} alt={director.alt} sizes="(max-width: 900px) 100vw, 360px" />
+                    </div>
+                    <div className="dcv-card-tag">{director.role}</div>
+                    <h3 style={{ fontSize: 22, margin: "0 0 6px" }}>{director.name}</h3>
                     <p className="dcv-copy-text" style={{ margin: 0 }}>
-                      {member.bio}
+                      {director.bio}
                     </p>
-                  </div>
-                ))}
-              </aside>
+                  </aside>
+                )}
+                {team && team.length > 0 && (
+                  <aside>
+                    <h2>Our Team</h2>
+                    {team.map((member) => (
+                      <div key={member.id} className="dcv-team-member">
+                        {member.image && (
+                          <div className="dcv-team-photo">
+                            <Image src={member.image} alt={member.name} sizes="(max-width: 900px) 100vw, 360px" />
+                          </div>
+                        )}
+                        <div className="dcv-card-tag">{member.role}</div>
+                        <h3 style={{ fontSize: 22, margin: "0 0 6px" }}>{member.name}</h3>
+                        <p className="dcv-copy-text" style={{ margin: 0 }}>
+                          {member.bio}
+                        </p>
+                      </div>
+                    ))}
+                  </aside>
+                )}
+              </div>
             )}
           </div>
         </Wrap>

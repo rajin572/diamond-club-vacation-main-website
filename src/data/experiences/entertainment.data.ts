@@ -63,6 +63,39 @@ const SOMETHING_BIG_IS_COMING: ExperienceItem = {
 const ZUSHA_SLOT = SHOW_ZUSHA ? ZUSHA : SOMETHING_IS_COMING;
 const BEN_TZUR_SLOT = SHOW_BEN_TZUR ? BEN_TZUR : SOMETHING_BIG_IS_COMING;
 
+const SHULEM_LEMMER: ExperienceItem = {
+  id: "shulem-lemmer",
+  title: "Shulem Lemmer",
+  description: "Experience an extraordinary evening with internationally acclaimed vocalist Shulem Lemmer, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",
+  image: AllImages.entertainmentShulemLemmer,
+  imageFocus: "top",
+  details: {
+    title: "Shulem Lemmer – Live in Concert",
+    paragraphs: [
+      "Experience an extraordinary evening with internationally acclaimed vocalist Shulem Lemmer, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",
+      "Renowned for his breathtaking performances, soulful melodies, and powerful stage presence, Shulem brings a spectacular blend of timeless classics, beloved favorites, and uplifting music to the stage.",
+      "From deeply moving ballads to exhilarating musical masterpieces, prepare for an unforgettable concert filled with passion, elegance, and extraordinary talent.",
+      "One extraordinary voice. A world-class performance. An unforgettable night of music!",
+    ],
+  },
+};
+
+/**
+ * Shulem Lemmer is off the Guettaway program for now (client 2026-10-28): the card announces that a big star will be named soon.
+ * When he, or the new artist, is confirmed, set the flag to true (or replace SHULEM_LEMMER) and the real card comes back.
+ */
+const SHOW_SHULEM_LEMMER = false;
+
+const BIG_STAR_ANNOUNCEMENT: ExperienceItem = {
+  id: "big-star-announcement",
+  title: "A Big Star Announcement Is Coming",
+  image: AllImages.reserveEntertainmentConcert,
+  tba: true,
+  linkLabel: "Announcement soon",
+};
+
+const SHULEM_LEMMER_SLOT = SHOW_SHULEM_LEMMER ? SHULEM_LEMMER : BIG_STAR_ANNOUNCEMENT;
+
 const YANKELOO: ExperienceItem = {
   id: "yankeloo",
   title: "Yankeloo",
@@ -188,22 +221,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
     heroImage: AllImages.reserveEntertainmentConcert,
     columns: 3,
     items: [
-      {
-        id: "shulem-lemmer",
-        title: "Shulem Lemmer",
-        description: "Experience an extraordinary evening with internationally acclaimed vocalist Shulem Lemmer, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",
-        image: AllImages.entertainmentShulemLemmer,
-        imageFocus: "top",
-        details: {
-          title: "Shulem Lemmer – Live in Concert",
-          paragraphs: [
-            "Experience an extraordinary evening with internationally acclaimed vocalist Shulem Lemmer, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",
-            "Renowned for his breathtaking performances, soulful melodies, and powerful stage presence, Shulem brings a spectacular blend of timeless classics, beloved favorites, and uplifting music to the stage.",
-            "From deeply moving ballads to exhilarating musical masterpieces, prepare for an unforgettable concert filled with passion, elegance, and extraordinary talent.",
-            "One extraordinary voice. A world-class performance. An unforgettable night of music!",
-          ],
-        },
-      },
+      SHULEM_LEMMER_SLOT,
       YANKELOO,
       {
         id: "elon-gold",

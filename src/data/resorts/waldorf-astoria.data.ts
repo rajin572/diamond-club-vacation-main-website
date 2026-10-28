@@ -1131,7 +1131,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   wellness: {
     title: "Wellness & Fitness",
     description: "Kayaking and paddle boarding on the coastal waters, and world-class golf and tennis, with the spa on the property.",
-    images: [AllImages.waldorfWellnessBeachYoga, AllImages.waldorfWellnessGolfCarts, AllImages.waldorfWellnessGolfAerial, AllImages.waldorfWellnessTennisCourt, AllImages.waldorfWellnessFitnessCenter],
+    images: [AllImages.waldorfWellnessFitnessCenter, AllImages.waldorfWellnessGolfAerial, AllImages.waldorfWellnessTennisCourt],
     // From the hotel's Hilton "Things to do" page (hilton.com/en/hotels/cunwawa-waldorf-astoria-riviera-maya/things-to-do/). The day trips on that page
     // (Chichen Itza, sailing, whale sharks, Isla Mujeres, ATVs, cenotes) are not wellness: they are the program's attractions.
     activities: [
@@ -1193,13 +1193,13 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
           ],
         },
       ],
-      gallery: [AllImages.waldorfSpaHydrotherapyPool, AllImages.waldorfSpaSteamRitual, AllImages.waldorfSpaFacial, AllImages.waldorfSpaRobesWalk, AllImages.waldorfSpaRitual, AllImages.waldorfSpaCopalOfferings, AllImages.waldorfSpaBeautySalon],
+      gallery: [AllImages.waldorfSpaHydrotherapyPool, AllImages.waldorfSpaCopalOfferings, AllImages.waldorfSpaBeautySalon],
     },
     // Own block on the hotel page (like Pools and Wellness).
     section: {
       title: "Spa",
       description: "Discover a sanctuary of transformation where innovation meets Mayan tradition. Our spa experience blends locally sourced oils, fresh garden herbs, and healing crystals with advanced techniques to create a journey of renewal. Inspired by the Mayan Tree of Life, every treatment is designed to restore balance and elevate your sense of well-being.",
-      images: [AllImages.waldorfSpaHydrotherapyPool, AllImages.waldorfSpaSteamRitual, AllImages.waldorfSpaFacial, AllImages.waldorfSpaRobesWalk, AllImages.waldorfSpaRitual, AllImages.waldorfSpaCopalOfferings, AllImages.waldorfSpaBeautySalon],
+      images: [AllImages.waldorfSpaHydrotherapyPool, AllImages.waldorfSpaCopalOfferings, AllImages.waldorfSpaBeautySalon],
     },
   },
   gallery: {
