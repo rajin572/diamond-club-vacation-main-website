@@ -10,7 +10,7 @@ export const PASSOVER_COLLECTION_2027_DATA: OfferingData = {
     image: AllImages.passoverCollectionHero,
     // The wide banner shows the beach: sand, hammocks, loungers and the palm trunks (client 2026-10-20).
     imagePosition: "50% 66%",
-    logo: { image: AllImages.logo, alt: "Diamond Club Vacations" },
+    // logo: { image: AllImages.logo, alt: "Diamond Club Vacations" },
   },
   programIds: ["diamond-club-reserve", "guttaway", "blue"],
   // No heading above the programs (client 2026-10-22: "Passover Programs - 2027" removed).

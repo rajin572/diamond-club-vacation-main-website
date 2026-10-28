@@ -851,7 +851,12 @@ export const CASA_NIZUC_DATA: ResortData = {
   dining: {
     title: "Dining",
     description: "Enjoy food and drinks offered at Casa Nizuc.",
-    images: [AllImages.casaNizucDiningMayim, AllImages.casaNizucDiningAshan, AllImages.casaNizucDiningZait, AllImages.casaNizucDiningZaitTerrace, AllImages.casaNizucDiningNoam, AllImages.casaNizucDiningOfek, AllImages.casaNizucDiningMussa, AllImages.casaNizucDiningGrandBallroom],
+    images: [AllImages.casaNizucDiningMayim, AllImages.casaNizucDiningAshan, AllImages.casaNizucDiningZait, AllImages.casaNizucDiningZaitTerrace, AllImages.casaNizucDiningNoam, AllImages.casaNizucDiningOfek, AllImages.casaNizucDiningMussa, AllImages.casaNizucDiningGrandBallroom, AllImages.guettawayDiningDessertBuffet,
+    AllImages.guettawayDiningStrawberryTartlets,
+    AllImages.guettawayDiningMousseTarts,
+    AllImages.guettawayDiningRoastedLambRack,
+    AllImages.guettawayDiningShawarmaRotisserie,
+    AllImages.guettawayDiningPizzaCutter,],
     // From the hotel's Marriott dining page (marriott.com/en-us/hotels/cunan-casa-nizuc-a-tribute-portfolio-resort/dining/): names, text, meal periods, dress code and photos as published.
     // Barawa (swim-up bar) and La Boya (poolside snack bar) are on that page too, without a photo, so they are not listed here.
     items: [
