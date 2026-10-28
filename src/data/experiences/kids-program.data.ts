@@ -32,6 +32,20 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
         },
       },
     ],
+    // gallery: {
+    //   title: "Kids & Family Photo Gallery",
+    //   description: "Experience the excitement of our youth programming, beachfront games, and water adventures.",
+    //   images: [
+    //     AllImages.reserveKidsProgram,
+    //     AllImages.dayCampCollage,
+    //     AllImages.reserveKidsBeachChessWide,
+    //     AllImages.reserveKidsWaterInflatables,
+    //     AllImages.reserveKidsBeachCornhole,
+    //     AllImages.reserveKidsBeachChessAction,
+    //     AllImages.reserveKidsBeachChessPortrait,
+    //     AllImages.reserveKidsBeachChessPlayers,
+    //   ],
+    // },
   },
   blue: {
     programId: "blue",
@@ -63,6 +77,20 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
         },
       },
     ],
+    // gallery: {
+    //   title: "Kids & Family Photo Gallery",
+    //   description: "Experience the excitement of our youth programming, beachfront games, and water adventures.",
+    //   images: [
+    //     AllImages.reserveKidsProgram,
+    //     AllImages.dayCampCollage,
+    //     AllImages.reserveKidsBeachChessWide,
+    //     AllImages.reserveKidsWaterInflatables,
+    //     AllImages.reserveKidsBeachCornhole,
+    //     AllImages.reserveKidsBeachChessAction,
+    //     AllImages.reserveKidsBeachChessPortrait,
+    //     AllImages.reserveKidsBeachChessPlayers,
+    //   ],
+    // },
   },
   guttaway: {
     programId: "guttaway",
@@ -94,5 +122,19 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
         },
       },
     ],
+    // gallery: {
+    //   title: "Kids & Family Photo Gallery",
+    //   description: "Step inside our extraordinary kids world with inflatable adventure zones, bounce arenas, and dedicated counselors.",
+    //   images: [
+    //     AllImages.guettawayKidsProgram,
+    //     AllImages.guettawayKidsBallroomBlowups,
+    //     AllImages.guettawayKidsGiantSlide,
+    //     AllImages.guettawayKidsBouncyJumping,
+    //     AllImages.guettawayKidsInflatablePlayground,
+    //     AllImages.guettawayKidsToddlerBouncyCastle,
+    //     AllImages.guettawayKidsBounceObstacleCourse,
+    //     AllImages.guettawayKidsSlideClimb,
+    //   ],
+    // },
   },
 };

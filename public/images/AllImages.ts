@@ -526,6 +526,42 @@ import dcvDiningOceanaFishAndChips from "./mainDesign/dcv-dining-oceana-fish-and
 import dcvDiningLobbyBar from "./mainDesign/dcv-dining-lobby-bar.jpg";
 import dcvDiningPizzo from "./mainDesign/dcv-dining-pizzo.jpg";
 import dcvDiningKitchen from "./mainDesign/dcv-dining-kitchen.jpg";
+// Diamond Club Reserve Dining (added 2026-10-28)
+import reserveDiningBuffetSpread from "./mainDesign/reserve-dining-buffet-spread.jpg";
+import reserveDiningMexicanStation from "./mainDesign/reserve-dining-mexican-station.jpg";
+import reserveDiningPastriesDisplay from "./mainDesign/reserve-dining-pastries-display.jpg";
+import reserveDiningPetitFours from "./mainDesign/reserve-dining-petit-fours.jpg";
+import reserveDiningMacarons from "./mainDesign/reserve-dining-macarons.jpg";
+import reserveDiningSalsaGuacamole from "./mainDesign/reserve-dining-salsa-guacamole.jpg";
+import reserveDiningMatzotDelicacies from "./mainDesign/reserve-dining-matzot-delicacies.jpg";
+import reserveDiningSnackBar from "./mainDesign/reserve-dining-snack-bar.jpg";
+// Diamond Club Reserve Kids Program & Day Camp (added 2026-10-28)
+import reserveKidsBeachChessWide from "./mainDesign/reserve-kids-beach-chess-wide.jpg";
+import reserveKidsBeachChessPortrait from "./mainDesign/reserve-kids-beach-chess-portrait.jpg";
+import reserveKidsBeachChessAction from "./mainDesign/reserve-kids-beach-chess-action.jpg";
+import reserveKidsBeachChessPlayers from "./mainDesign/reserve-kids-beach-chess-players.jpg";
+import reserveKidsBeachCornhole from "./mainDesign/reserve-kids-beach-cornhole.jpg";
+import reserveKidsWaterInflatables from "./mainDesign/reserve-kids-water-inflatables.jpg";
+// Guettaway Dining (added 2026-10-28)
+import guettawayDiningPrimeRibStation from "./mainDesign/guettaway-dining-prime-rib-station.jpg";
+import guettawayDiningFocacciaPizza from "./mainDesign/guettaway-dining-focaccia-pizza.jpg";
+import guettawayDiningSmokedBeefRibs from "./mainDesign/guettaway-dining-smoked-beef-ribs.jpg";
+import guettawayDiningDessertBuffet from "./mainDesign/guettaway-dining-dessert-buffet.jpg";
+import guettawayDiningBakedPizzaPan from "./mainDesign/guettaway-dining-baked-pizza-pan.jpg";
+import guettawayDiningStrawberryTartlets from "./mainDesign/guettaway-dining-strawberry-tartlets.jpg";
+import guettawayDiningMousseTarts from "./mainDesign/guettaway-dining-mousse-tarts.jpg";
+import guettawayDiningChefCarving from "./mainDesign/guettaway-dining-chef-carving.jpg";
+import guettawayDiningRoastedLambRack from "./mainDesign/guettaway-dining-roasted-lamb-rack.jpg";
+import guettawayDiningShawarmaRotisserie from "./mainDesign/guettaway-dining-shawarma-rotisserie.jpg";
+import guettawayDiningPizzaCutter from "./mainDesign/guettaway-dining-pizza-cutter.jpg";
+// Guettaway Kids Program & Day Camp (added 2026-10-28)
+import guettawayKidsBounceObstacleCourse from "./mainDesign/guettaway-kids-bounce-obstacle-course.jpg";
+import guettawayKidsInflatablePlayground from "./mainDesign/guettaway-kids-inflatable-playground.jpg";
+import guettawayKidsGiantSlide from "./mainDesign/guettaway-kids-giant-slide.jpg";
+import guettawayKidsToddlerBouncyCastle from "./mainDesign/guettaway-kids-toddler-bouncy-castle.jpg";
+import guettawayKidsBallroomBlowups from "./mainDesign/guettaway-kids-ballroom-blowups.jpg";
+import guettawayKidsBouncyJumping from "./mainDesign/guettaway-kids-bouncy-jumping.jpg";
+import guettawayKidsSlideClimb from "./mainDesign/guettaway-kids-slide-climb.jpg";
 import kosherSupervisionRabbi from "./kosher-supervision-rabbi.jpg";
 import rabbiLawrenceHajioffFace from "./rabbi-lawrence-hajioff-face.jpg";
 import rabbiLawrenceHajioffNew from "./rabbi-lawrence-hajioff-new.jpg";
@@ -1347,6 +1383,42 @@ export const AllImages = {
   dcvDiningLobbyBar,
   dcvDiningPizzo,
   dcvDiningKitchen,
+  // Diamond Club Reserve Dining (added 2026-10-28)
+  reserveDiningBuffetSpread,
+  reserveDiningMexicanStation,
+  reserveDiningPastriesDisplay,
+  reserveDiningPetitFours,
+  reserveDiningMacarons,
+  reserveDiningSalsaGuacamole,
+  reserveDiningMatzotDelicacies,
+  reserveDiningSnackBar,
+  // Diamond Club Reserve Kids Program & Day Camp (added 2026-10-28)
+  reserveKidsBeachChessWide,
+  reserveKidsBeachChessPortrait,
+  reserveKidsBeachChessAction,
+  reserveKidsBeachChessPlayers,
+  reserveKidsBeachCornhole,
+  reserveKidsWaterInflatables,
+  // Guettaway Dining (added 2026-10-28)
+  guettawayDiningPrimeRibStation,
+  guettawayDiningFocacciaPizza,
+  guettawayDiningSmokedBeefRibs,
+  guettawayDiningDessertBuffet,
+  guettawayDiningBakedPizzaPan,
+  guettawayDiningStrawberryTartlets,
+  guettawayDiningMousseTarts,
+  guettawayDiningChefCarving,
+  guettawayDiningRoastedLambRack,
+  guettawayDiningShawarmaRotisserie,
+  guettawayDiningPizzaCutter,
+  // Guettaway Kids Program & Day Camp (added 2026-10-28)
+  guettawayKidsBounceObstacleCourse,
+  guettawayKidsInflatablePlayground,
+  guettawayKidsGiantSlide,
+  guettawayKidsToddlerBouncyCastle,
+  guettawayKidsBallroomBlowups,
+  guettawayKidsBouncyJumping,
+  guettawayKidsSlideClimb,
   kosherSupervisionRabbi,
   rabbiNissimHiluOneKosher,
   rabbiLawrenceHajioffFace,

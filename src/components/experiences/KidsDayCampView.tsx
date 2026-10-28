@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CheckCheck } from "lucide-react";
-import { DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
+import { DetailHero, PhotoGallery, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
 import type { KidsDayCampData } from "./experiences.types";
 
@@ -13,10 +13,10 @@ interface KidsDayCampViewProps {
 
 /**
  * The "Day Camp" page. Every block is optional so each program shows exactly what its content has:
- * overview, a checklist program, activities with the team, age groups, dining and babysitting.
+ * overview, a checklist program, activities with the team, age groups, dining, babysitting, and gallery.
  */
 export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
-  const { overview, program, director, team, activities, ageGroups, dining, babysitting, comingSoon } = data;
+  const { overview, program, director, team, activities, ageGroups, dining, babysitting, comingSoon, gallery } = data;
 
   return (
     <>
@@ -159,6 +159,16 @@ export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
               </aside>
             )}
           </div>
+        </Wrap>
+      )}
+
+      {gallery && gallery.images && gallery.images.length > 0 && (
+        <Wrap id="gallery" className="dcv-wrap--stack">
+          <SectionTitle
+            title={gallery.title ?? "Day Camp Photo Gallery"}
+            description={gallery.description}
+          />
+          <PhotoGallery images={gallery.images} alt={`${data.programName} Day Camp`} />
         </Wrap>
       )}
     </>

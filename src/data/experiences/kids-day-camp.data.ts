@@ -83,6 +83,19 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       description: "Babysitting is available during camp hours in our dedicated baby room.",
       rateText: "Private babysitting is also available for $20 per hour.",
     },
+    gallery: {
+      title: "Day Camp Photo Gallery",
+      // description: "Action-packed days filled with beachfront giant chess, lawn games, water inflatables, sports tournaments, and supervised youth adventures.",
+      images: [
+        AllImages.dayCampCollage,
+        AllImages.reserveKidsBeachChessWide,
+        AllImages.reserveKidsWaterInflatables,
+        AllImages.reserveKidsBeachCornhole,
+        AllImages.reserveKidsBeachChessAction,
+        AllImages.reserveKidsBeachChessPortrait,
+        AllImages.reserveKidsBeachChessPlayers,
+      ],
+    },
   },
   // The day camp content of the Diamond Club Reserve (St. Regis / EDITION), as asked on 2026-10-22; only "Our Team" stays Diamond Blue's own.
   blue: {
@@ -151,6 +164,19 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       description: "Babysitting is available during camp hours in our dedicated baby room.",
       rateText: "Private babysitting is also available for $20 per hour.",
     },
+    gallery: {
+      title: "Day Camp Photo Gallery",
+      // description: "Action-packed days filled with beachfront giant chess, lawn games, water inflatables, sports tournaments, and supervised youth adventures.",
+      images: [
+        AllImages.dayCampCollage,
+        AllImages.reserveKidsBeachChessWide,
+        AllImages.reserveKidsWaterInflatables,
+        AllImages.reserveKidsBeachCornhole,
+        AllImages.reserveKidsBeachChessAction,
+        AllImages.reserveKidsBeachChessPortrait,
+        AllImages.reserveKidsBeachChessPlayers,
+      ],
+    },
   },
   // From the client's page www.guettaways.com/kids-family-programs (client 2026-10-20: "Waldorf Astoria Day Camp").
   guttaway: {
@@ -199,6 +225,20 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       title: "Babysitting & Early Childcare",
       description: "Available for ages 0–2, with gentle care, sensory play, music, and crafts.",
       rateText: "Available for a fee.",
+    },
+    gallery: {
+      title: "Day Camp Photo Gallery",
+      // description: "A world of excitement featuring our massive indoor inflatable playground, giant climbing slides, bounce castles, and endless activities.",
+      images: [
+        AllImages.guettawayKidsProgram,
+        AllImages.guettawayKidsBallroomBlowups,
+        AllImages.guettawayKidsGiantSlide,
+        AllImages.guettawayKidsBouncyJumping,
+        AllImages.guettawayKidsInflatablePlayground,
+        AllImages.guettawayKidsToddlerBouncyCastle,
+        AllImages.guettawayKidsBounceObstacleCourse,
+        AllImages.guettawayKidsSlideClimb,
+      ],
     },
   },
 };

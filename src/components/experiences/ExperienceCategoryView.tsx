@@ -1,4 +1,4 @@
-import { DetailHero, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
+import { DetailHero, PhotoGallery, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignLink } from "@/components/shared/design";
 import { experienceHref } from "@/lib/routes";
 import ExperienceCards from "./ExperienceCards";
@@ -12,7 +12,7 @@ interface ExperienceCategoryViewProps {
   resortId?: string;
 }
 
-/** Entertainment / attractions / scholars / kids program: a hero, then a card grid with a details viewer. */
+/** Entertainment / attractions / scholars / kids program: a hero, then a card grid with a details viewer and optional photo gallery. */
 export function ExperienceCategoryView({ offeringId, data, nav, resortId }: ExperienceCategoryViewProps) {
   const items = data.items.map((item) => ({
     ...item,
@@ -37,6 +37,15 @@ export function ExperienceCategoryView({ offeringId, data, nav, resortId }: Expe
           viewerTitle={data.viewerTitle ?? data.title}
         />
       </Wrap>
+      {data.gallery && data.gallery.images && data.gallery.images.length > 0 && (
+        <Wrap id="gallery" className="dcv-wrap--stack">
+          <SectionTitle
+            title={data.gallery.title ?? `${data.title} Photo Gallery`}
+            description={data.gallery.description}
+          />
+          <PhotoGallery images={data.gallery.images} alt={`${data.programTitle} ${data.title}`} />
+        </Wrap>
+      )}
     </>
   );
 }

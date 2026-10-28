@@ -55,6 +55,11 @@ export interface ExperienceCategoryData {
   layout?: "cards" | "people";
   columns: 2 | 3;
   items: ExperienceItem[];
+  gallery?: {
+    title?: string;
+    description?: string;
+    images: DesignImage[];
+  };
 }
 
 export interface KidsDayCampTeamMember {
@@ -94,4 +99,9 @@ export interface KidsDayCampData {
   ageGroups?: KidsDayCampAgeGroup[];
   dining?: { title: string; paragraphs: string[] };
   babysitting?: { title: string; description: string; rateText: string };
+  gallery?: {
+    title?: string;
+    description?: string;
+    images: DesignImage[];
+  };
 }

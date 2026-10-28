@@ -954,7 +954,25 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
   dining: {
     title: "Dining",
     description: "",
-    images: [AllImages.parkHyattDiningNutreKitchen, AllImages.parkHyattDiningBeachGrillIkal, AllImages.parkHyattDiningBrumaSignatureRestaurant, AllImages.parkHyattDiningPatisserieMarketCafe, AllImages.parkHyattDiningLivingRoom, AllImages.parkHyattDiningBrisaPoolBar],
+    images: [
+      AllImages.parkHyattDiningNutreKitchen,
+      AllImages.parkHyattDiningBeachGrillIkal,
+      AllImages.parkHyattDiningBrumaSignatureRestaurant,
+      AllImages.parkHyattDiningPatisserieMarketCafe,
+      AllImages.parkHyattDiningLivingRoom,
+      AllImages.parkHyattDiningBrisaPoolBar,
+      AllImages.guettawayDiningChefCarving,
+      AllImages.guettawayDiningPrimeRibStation,
+      AllImages.guettawayDiningBakedPizzaPan,
+      AllImages.guettawayDiningSmokedBeefRibs,
+      AllImages.guettawayDiningFocacciaPizza,
+      AllImages.guettawayDiningDessertBuffet,
+      AllImages.guettawayDiningStrawberryTartlets,
+      AllImages.guettawayDiningMousseTarts,
+      AllImages.guettawayDiningRoastedLambRack,
+      AllImages.guettawayDiningShawarmaRotisserie,
+      AllImages.guettawayDiningPizzaCutter,
+    ],
     // The Passover dining of the Park Hyatt, from the client's Word document of 2026-10-19 (names and texts); photos from the hotel's Hyatt site.
     // Previous list (Hyatt site: Beach Grill - IK'AL, Patisserie Market and Café, Nutre Kitchen, Signature Restaurant - Bruma) replaced.
     items: [
@@ -964,7 +982,12 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
         subtitle: "Breakfast & Dairy Dining",
         image: AllImages.parkHyattDiningNutreKitchen,
         description: "Start your morning with an extensive breakfast featuring live cooking stations and freshly prepared favorites. Open for lunch with a complete dairy menu, including a dedicated pizza station, with both beachfront and indoor dining available.",
-        gallery: [AllImages.parkHyattDiningNutreKitchen],
+        gallery: [
+          AllImages.parkHyattDiningNutreKitchen,
+          AllImages.guettawayDiningBakedPizzaPan,
+          AllImages.guettawayDiningFocacciaPizza,
+          AllImages.guettawayDiningPizzaCutter,
+        ],
       },
       {
         id: "ikal-beach-grill",
@@ -972,7 +995,11 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
         subtitle: "Beachfront BBQ & Casual Dining",
         image: AllImages.parkHyattDiningBeachGrillIkal,
         description: "Enjoy an all-day beachfront barbecue featuring freshly grilled favorites and a variety of specialties, served directly on the beach or in the comfort of our indoor dining area.",
-        gallery: [AllImages.parkHyattDiningBeachGrillIkal],
+        gallery: [
+          AllImages.parkHyattDiningBeachGrillIkal,
+          AllImages.guettawayDiningChefCarving,
+          AllImages.guettawayDiningShawarmaRotisserie,
+        ],
       },
       {
         id: "bruma-steakhouse",
@@ -980,7 +1007,12 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
         subtitle: "Signature Steakhouse Dining",
         image: AllImages.parkHyattDiningBrumaSignatureRestaurant,
         description: "A sophisticated specialty steakhouse offering exceptional cuts, expertly prepared dishes, and an elevated dinner experience during Chol Hamoed.",
-        gallery: [AllImages.parkHyattDiningBrumaSignatureRestaurant],
+        gallery: [
+          AllImages.parkHyattDiningBrumaSignatureRestaurant,
+          AllImages.guettawayDiningPrimeRibStation,
+          AllImages.guettawayDiningSmokedBeefRibs,
+          AllImages.guettawayDiningRoastedLambRack,
+        ],
       },
       {
         id: "patisserie-market-and-cafe",
@@ -988,7 +1020,12 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
         subtitle: "All-Day Coffee & Desserts",
         image: AllImages.parkHyattDiningPatisserieMarketCafe,
         description: "Your all-day destination for freshly brewed specialty coffees, an irresistible selection of premium kosher-for-Passover desserts, pastries, and sweet treats.",
-        gallery: [AllImages.parkHyattDiningPatisserieMarketCafe],
+        gallery: [
+          AllImages.parkHyattDiningPatisserieMarketCafe,
+          AllImages.guettawayDiningDessertBuffet,
+          AllImages.guettawayDiningStrawberryTartlets,
+          AllImages.guettawayDiningMousseTarts,
+        ],
       },
       {
         id: "the-living-room",
@@ -1004,7 +1041,10 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
         subtitle: "Poolside & Beachfront Bites",
         image: AllImages.parkHyattDiningBrisaPoolBar,
         description: "Enjoy a delicious selection of light bites, refreshing snacks, and casual favorites served poolside or directly on the beach. The perfect spot to relax, soak up the sunshine, and enjoy a quick bite throughout the day.",
-        gallery: [AllImages.parkHyattDiningBrisaPoolBar],
+        gallery: [
+          AllImages.parkHyattDiningBrisaPoolBar,
+          AllImages.guettawayDiningFocacciaPizza,
+        ],
       },
       // Added from the same document.
       {
