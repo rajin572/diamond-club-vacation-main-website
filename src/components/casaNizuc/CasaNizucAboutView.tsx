@@ -26,9 +26,9 @@ import { CASA_NIZUC_HREF } from "@/lib/routes";
 
 const SUB_NAV: DesignLink[] = [
   { label: "About", href: `${CASA_NIZUC_HREF}/about` },
-  { label: "Shabbat", href: `${CASA_NIZUC_HREF}#shabbat` },
-  { label: "Dining", href: `${CASA_NIZUC_HREF}#dining` },
-  { label: "GKDE", href: `${CASA_NIZUC_HREF}#gkde` },
+  { label: "Shabbat", href: `${CASA_NIZUC_HREF}/shabbat` },
+  { label: "Dining", href: `${CASA_NIZUC_HREF}/dining` },
+  { label: "GKDE", href: `${CASA_NIZUC_HREF}/gkde` },
   { label: "Calendar of Events", href: `${CASA_NIZUC_HREF}/calendar` },
   { label: "Events", href: `${CASA_NIZUC_HREF}#events` },
 ];
