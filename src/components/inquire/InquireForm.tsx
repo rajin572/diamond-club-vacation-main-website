@@ -110,6 +110,7 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
 
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
   const [values, setValues] = useState<InquiryValues>(() => ({
     experience: detailedExp.label,
@@ -150,10 +151,28 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
     goTo(4);
   };
 
-  const onSubmit = (event: FormEvent) => {
+  const onSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    setSubmitted(true);
-    window.scrollTo({ top: 120, behavior: "smooth" });
+    if (sending) return;
+    setError("");
+    setSending(true);
+    try {
+      const response = await fetch("/api/inquire", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...values, hotel: detailedExp.hotel ?? "", kind: isQuote ? "quote" : "inquiry" }),
+      });
+      if (!response.ok) {
+        const body = await response.json().catch(() => null);
+        throw new Error(body?.error ?? "We could not send your request. Please try again.");
+      }
+      setSubmitted(true);
+      window.scrollTo({ top: 120, behavior: "smooth" });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "We could not send your request. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   if (submitted) {
@@ -161,7 +180,11 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
       <main className="dcv-inquiry-shell">
         <div className="dcv-review">
           <h2>Thank you{values.firstName ? `, ${values.firstName}` : ""}.</h2>
-          <p>{isQuote ? "Your quote request has been received." : "Your inquiry has been prepared."}</p>
+          <p>
+            {isQuote
+              ? "Your quote request has been received. A confirmation email is on its way."
+              : "Your inquiry has been received. A confirmation email is on its way."}
+          </p>
           <p style={{ marginTop: 24 }}>
             <Link className="dcv-btn" href={isQuote ? "/casa-nizuc" : "/"}>
               {isQuote ? "Back to Casa Nizuc" : "Back to home"}
@@ -381,12 +404,17 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
                 ? "By submitting, you consent to be contacted regarding your customized quote."
                 : "By submitting, you consent to be contacted regarding your vacation inquiry."}
             </p>
+            {error && (
+              <p className="dcv-notice" role="alert" style={{ color: "#b3261e", marginTop: 16 }}>
+                {error}
+              </p>
+            )}
             <div className="dcv-actions">
-              <button type="button" className="dcv-btn" onClick={() => goTo(3)}>
+              <button type="button" className="dcv-btn" onClick={() => goTo(3)} disabled={sending}>
                 ← Back
               </button>
-              <button type="submit" className="dcv-btn">
-                {isQuote ? "Submit Quote Request →" : "Submit Inquiry →"}
+              <button type="submit" className="dcv-btn" disabled={sending}>
+                {sending ? "Sending…" : isQuote ? "Submit Quote Request →" : "Submit Inquiry →"}
               </button>
             </div>
           </section>

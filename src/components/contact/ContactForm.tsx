@@ -19,6 +19,7 @@ interface ContactValues {
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
   const [values, setValues] = useState<ContactValues>({
     fullName: "",
@@ -33,8 +34,9 @@ export function ContactForm() {
     setValues((prev) => ({ ...prev, [name]: value }));
   };
 
-  const onSubmit = (event: FormEvent) => {
+  const onSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    if (sending) return;
     setError("");
 
     if (!values.fullName.trim()) {
@@ -54,8 +56,24 @@ export function ContactForm() {
       return;
     }
 
-    setSubmitted(true);
-    window.scrollTo({ top: 120, behavior: "smooth" });
+    setSending(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (!response.ok) {
+        const body = await response.json().catch(() => null);
+        throw new Error(body?.error ?? "We could not send your message. Please try again.");
+      }
+      setSubmitted(true);
+      window.scrollTo({ top: 120, behavior: "smooth" });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "We could not send your message. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   if (submitted) {
@@ -167,9 +185,9 @@ export function ContactForm() {
         )}
 
         <div className="dcv-actions" style={{ justifyContent: "center", marginTop: 28 }}>
-          <button type="submit" className="dcv-btn" style={{ minWidth: 200, gap: 8 }}>
+          <button type="submit" className="dcv-btn" style={{ minWidth: 200, gap: 8 }} disabled={sending}>
             <Send size={15} />
-            <span>Send Message</span>
+            <span>{sending ? "Sending…" : "Send Message"}</span>
           </button>
         </div>
       </form>
