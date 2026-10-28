@@ -1,14 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Clock } from "lucide-react";
-import { DetailHero, PhotoGallery, SubNav, Wrap } from "@/components/shared/design";
+import { DetailHero, PhotoGallery, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignImage, DesignLink } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { AllImages } from "../../../public/images/AllImages";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
-import { Lead, PopupTable } from "./CasaNizucParts";
 import { CasaNizucCalendarView } from "./CasaNizucCalendarView";
 import { CasaNizucAboutView } from "./CasaNizucAboutView";
+import { CasaNizucDiningVenues, CasaNizucGkdeVenues } from "./CasaNizucDiningVenues";
 
 /** The pages that open from the year-round Casa Nizuc page. */
 export const CASA_NIZUC_SECTION_SLUGS = ["about", "shabbat", "dining", "gkde", "ofek", "calendar"] as const;
@@ -68,9 +66,15 @@ const OFEK_GALLERY_IMAGES: DesignImage[] = [
   AllImages.casaNizucDiningZaitTerrace,
 ];
 
+function splitLeadText(text: string): { title: string; desc: string } {
+  const at = text.indexOf(": ");
+  if (at < 0) return { title: text, desc: "" };
+  return { title: text.slice(0, at), desc: text.slice(at + 2) };
+}
+
 /**
- * Shabbat section page: styled matching the Calendar of Events design,
- * with full-width hero, logo, styled cards, and photo gallery at the very bottom.
+ * Shabbat section page: designed matching the authentic Passover Casa Nizuc design
+ * (DetailHero, SubNav, SectionTitle, dcv-card grids, callouts, and PhotoGallery at the bottom).
  */
 function ShabbatSection() {
   const { shabbat } = CASA_NIZUC_PAGE;
@@ -86,83 +90,74 @@ function ShabbatSection() {
       />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
-      <Wrap>
-        <p style={{ margin: "0 0 24px" }}>
+      {/* Intro & Overview */}
+      <Wrap className="dcv-wrap--stack">
+        <p style={{ margin: "0 0 16px" }}>
           <Link className="dcv-link" href={`${CASA_NIZUC_HREF}#shabbat`}>
             ← Back to Shabbat
           </Link>
         </p>
 
-        {/* Content stack matching Calendar of Events layout */}
-        <section className="dcv-calendar-content-stack" style={{ margin: "0 0 36px" }}>
-          <div style={{ maxWidth: 880 }}>
-            <h2 style={{ fontSize: 24, fontWeight: 700, color: "#1f383e", margin: "0 0 14px", fontFamily: "var(--dcv-serif)" }}>
-              {shabbat.heading}
-            </h2>
-            <p className="dcv-copy-text" style={{ fontSize: 16, color: "#2d4447", lineHeight: 1.6, margin: "0 0 14px", fontWeight: 500 }}>
-              {shabbat.lead}
-            </p>
-            <p className="dcv-copy-text" style={{ fontSize: 15, color: "#34484a", lineHeight: 1.6, margin: "0 0 14px" }}>
-              {shabbat.text}
-            </p>
+        <SectionTitle title={shabbat.heading} />
+        <p className="dcv-lead" style={{ maxWidth: 840, marginBottom: 16 }}>
+          {shabbat.lead}
+        </p>
+        <p style={{ fontSize: 16, color: "var(--dcv-muted)", lineHeight: 1.7, maxWidth: 900 }}>
+          {shabbat.text}
+        </p>
+      </Wrap>
 
-            {/* Friday to Motzei Shabbat 8-step cards */}
-            <div className="dcv-includes-card" style={{ marginTop: 28, marginBottom: 32 }}>
-              <h3 className="dcv-includes-title" style={{ fontSize: 20, margin: "0 0 18px", color: "#1f383e" }}>
-                Friday to Motzei Shabbat
-              </h3>
-              <div className="dcv-steps-grid">
-                {shabbat.steps.map((step, index) => (
-                  <div key={step.title} className="dcv-step-card">
-                    <div className="dcv-step-card-header">
-                      <span className="dcv-step-card-num">{index + 1}</span>
-                      <span className="dcv-step-card-title">{step.title}</span>
-                    </div>
-                    <p className="dcv-step-card-text">{step.text}</p>
-                  </div>
-                ))}
+      {/* Friday to Motzei Shabbat: 8-step cards */}
+      <Wrap className="dcv-wrap--stack">
+        <SectionTitle title="Friday to Motzei Shabbat" />
+        <div className="dcv-grid4">
+          {shabbat.steps.map((step, index) => (
+            <article key={step.title} className="dcv-card">
+              <div className="dcv-body">
+                <div className="dcv-card-tag">Step {index + 1}</div>
+                <h3 style={{ fontSize: 22 }}>{step.title}</h3>
+                <p>{step.text}</p>
               </div>
-            </div>
+            </article>
+          ))}
+        </div>
+      </Wrap>
 
-            {/* What makes it a proper Shabbat card */}
-            <div className="dcv-includes-card" style={{ marginBottom: 32 }}>
-              <h3 className="dcv-includes-title" style={{ fontSize: 20, margin: "0 0 18px", color: "#1f383e" }}>
-                What makes it a proper Shabbat
-              </h3>
-              <ul className="dcv-includes-list">
-                {shabbat.proper.map((item) => (
-                  <li key={item} className="dcv-includes-item">
-                    <span className="dcv-includes-bullet" aria-hidden="true" />
-                    <div className="dcv-includes-text">
-                      <Lead text={item} />
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              <p className="dcv-cn-callout" style={{ marginTop: 22 }}>
-                {shabbat.scheduleNote}
-              </p>
-            </div>
-          </div>
-        </section>
+      {/* What makes it a proper Shabbat: 6 cards */}
+      <Wrap className="dcv-wrap--stack">
+        <SectionTitle title="What makes it a proper Shabbat" />
+        <div className="dcv-grid3">
+          {shabbat.proper.map((item) => {
+            const { title, desc } = splitLeadText(item);
+            return (
+              <article key={item} className="dcv-card">
+                <div className="dcv-body">
+                  <div className="dcv-card-tag">Halachic Standard</div>
+                  <h3 style={{ fontSize: 22 }}>{title}</h3>
+                  <p>{desc}</p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+        <p className="dcv-cn-callout" style={{ maxWidth: 800, margin: "32px auto 0", textAlign: "center" }}>
+          {shabbat.scheduleNote}
+        </p>
+      </Wrap>
 
-        {/* Gallery at the very bottom */}
-        <section className="dcv-calendar-gallery-section" style={{ marginTop: 48, paddingTop: 10 }}>
-          <div className="dcv-section-title" style={{ marginBottom: 24 }}>
-            <div>
-              <h2 style={{ fontSize: "clamp(26px, 3vw, 36px)", margin: "4px 0 0" }}>Gallery</h2>
-            </div>
-          </div>
-          <PhotoGallery images={SHABBAT_GALLERY_IMAGES} alt="Casa Nizuc Shabbat Gallery" />
-        </section>
+      {/* Photo Gallery at the very bottom */}
+      <Wrap id="gallery" className="dcv-wrap--stack">
+        <SectionTitle title="Shabbat Gallery" />
+        <PhotoGallery images={SHABBAT_GALLERY_IMAGES} alt="Casa Nizuc Shabbat Gallery" />
       </Wrap>
     </>
   );
 }
 
 /**
- * Dining section page: styled matching the Calendar of Events design,
- * with full-width hero, logo, meals table, venue cards, and photo gallery at the very bottom.
+ * Dining section page: designed matching the authentic Passover Casa Nizuc design.
+ * Venues are interactive cards that open detailed hours and meal expectations on click.
+ * Standalone chart is hidden from main flow; meal schedule is accessible via venue cards.
  */
 function DiningSection() {
   const { dining } = CASA_NIZUC_PAGE;
@@ -178,103 +173,50 @@ function DiningSection() {
       />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
-      <Wrap>
-        <p style={{ margin: "0 0 24px" }}>
+      {/* Intro & Overview */}
+      <Wrap className="dcv-wrap--stack">
+        <p style={{ margin: "0 0 16px" }}>
           <Link className="dcv-link" href={`${CASA_NIZUC_HREF}#dining`}>
             ← Back to Dining
           </Link>
         </p>
 
-        {/* Content stack */}
-        <section className="dcv-calendar-content-stack" style={{ margin: "0 0 36px" }}>
-          <div style={{ maxWidth: 880 }}>
-            <h2 style={{ fontSize: 24, fontWeight: 700, color: "#1f383e", margin: "0 0 14px", fontFamily: "var(--dcv-serif)" }}>
-              {dining.heading}
-            </h2>
-            <p className="dcv-copy-text" style={{ fontSize: 16, color: "#2d4447", lineHeight: 1.6, margin: "0 0 14px", fontWeight: 500 }}>
-              {dining.lead}
-            </p>
-            <p className="dcv-copy-text" style={{ fontSize: 15, color: "#34484a", lineHeight: 1.6, margin: "0 0 20px" }}>
-              {dining.text}
-            </p>
+        <SectionTitle title={dining.heading} />
+        <p className="dcv-lead" style={{ maxWidth: 840, marginBottom: 16 }}>
+          {dining.lead}
+        </p>
+        <p style={{ fontSize: 16, color: "var(--dcv-muted)", lineHeight: 1.7, maxWidth: 900 }}>
+          {dining.text}
+        </p>
+      </Wrap>
 
-            {/* Breakfast, lunch & dinner at a glance table card */}
-            {/* <div className="dcv-includes-card" style={{ marginTop: 24, marginBottom: 36 }}>
-              <h3 className="dcv-includes-title" style={{ fontSize: 20, margin: "0 0 18px", color: "#1f383e" }}>
-                Breakfast, lunch &amp; dinner at a glance
-              </h3>
-              <PopupTable
-                head={["Meal", "Where", "What to expect"]}
-                rows={dining.meals.map((row) => [
-                  <span key={row.meal}>
-                    <b>{row.meal}</b>
-                    {row.hours && (
-                      <span className="dcv-cn-hours">
-                        <Clock size={12} aria-hidden="true" /> {row.hours}
-                      </span>
-                    )}
-                  </span>,
-                  row.where,
-                  row.what,
-                ])}
-              />
-            </div> */}
-          </div>
+      {/* Venues Grid (interactive cards that open venue details and meal hours) */}
+      <Wrap id="venues" className="dcv-wrap--stack">
+        <SectionTitle title="The Venues" />
+        <CasaNizucDiningVenues venues={dining.venues} meals={dining.meals} />
+      </Wrap>
 
-          {/* The Venues Grid */}
-          <div style={{ marginTop: 32, marginBottom: 12 }}>
-            <div className="dcv-section-title" style={{ marginBottom: 20 }}>
-              <div>
-                <h3 style={{ fontSize: 22, fontWeight: 700, color: "#1e383d", margin: 0, fontFamily: "var(--dcv-serif)" }}>
-                  The Venues
-                </h3>
-              </div>
-            </div>
-
-            <div className="dcv-venue-card-grid">
-              {dining.venues.map((venue) => (
-                <div key={venue.name} className="dcv-venue-card">
-                  <div className="dcv-venue-card-img-wrap">
-                    <Image
-                      src={venue.image}
-                      alt={venue.name}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
-                      style={{ objectFit: "cover" }}
-                    />
-                    {venue.badge && <span className="dcv-venue-card-badge">{venue.badge}</span>}
-                  </div>
-                  <div className="dcv-venue-card-body">
-                    <h4 className="dcv-venue-card-title">{venue.name}</h4>
-                    <span className="dcv-venue-card-subtitle">{venue.kind}</span>
-                    <p className="dcv-venue-card-text">{venue.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Gallery at the very bottom */}
-        <section className="dcv-calendar-gallery-section" style={{ marginTop: 48, paddingTop: 10 }}>
-          <div className="dcv-section-title" style={{ marginBottom: 24 }}>
-            <div>
-              <h2 style={{ fontSize: "clamp(26px, 3vw, 36px)", margin: "4px 0 0" }}>Gallery</h2>
-            </div>
-          </div>
-          <PhotoGallery images={DINING_GALLERY_IMAGES} alt="Casa Nizuc Dining Gallery" />
-        </section>
+      {/* Photo Gallery at the very bottom */}
+      <Wrap id="gallery" className="dcv-wrap--stack">
+        <SectionTitle title="Culinary Gallery" />
+        <PhotoGallery images={DINING_GALLERY_IMAGES} alt="Casa Nizuc Dining Gallery" />
       </Wrap>
     </>
   );
 }
 
 /**
- * GKDE section page: styled matching the Calendar of Events design,
- * with full-width hero, logo, collection cards, package pricing, and photo gallery at the very bottom.
+ * GKDE section page: designed matching the authentic Passover Casa Nizuc design
+ * (DetailHero, SubNav, SectionTitle, culinary collection cards, package pricing cards, and PhotoGallery at the bottom).
  */
 function GkdeSection() {
-  const { gkde } = CASA_NIZUC_PAGE;
+  const { gkde, dining } = CASA_NIZUC_PAGE;
+
+  const venueImages: Record<string, DesignImage> = {
+    "Âshân": AllImages.casaNizucDiningAshan,
+    "Zait": AllImages.casaNizucDiningZait,
+    "Mayim": AllImages.casaNizucMayimBuffet,
+  };
 
   return (
     <>
@@ -287,170 +229,147 @@ function GkdeSection() {
       />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
-      <Wrap>
-        <p style={{ margin: "0 0 24px" }}>
+      {/* Intro & Overview */}
+      <Wrap className="dcv-wrap--stack">
+        <p style={{ margin: "0 0 16px" }}>
           <Link className="dcv-link" href={`${CASA_NIZUC_HREF}#gkde`}>
             ← Back to GKDE
           </Link>
         </p>
 
-        {/* Content stack */}
-        <section className="dcv-calendar-content-stack" style={{ margin: "0 0 36px" }}>
-          <div style={{ maxWidth: 880 }}>
-            <h2 style={{ fontSize: 24, fontWeight: 700, color: "#1f383e", margin: "0 0 14px", fontFamily: "var(--dcv-serif)" }}>
-              {gkde.heading}
-            </h2>
-            <p className="dcv-copy-text" style={{ fontSize: 16, color: "#2d4447", lineHeight: 1.6, margin: "0 0 14px", fontWeight: 500 }}>
-              {gkde.lead}
-            </p>
-            {gkde.intro.map((paragraph) => (
-              <p key={paragraph} className="dcv-copy-text" style={{ fontSize: 15, color: "#34484a", lineHeight: 1.6, margin: "0 0 14px" }}>
-                {paragraph}
-              </p>
-            ))}
+        <SectionTitle title={gkde.heading} />
+        <p className="dcv-lead" style={{ maxWidth: 840, marginBottom: 16 }}>
+          {gkde.lead}
+        </p>
+        {gkde.intro.map((paragraph) => (
+          <p key={paragraph} style={{ fontSize: 16, color: "var(--dcv-muted)", lineHeight: 1.7, maxWidth: 900, marginBottom: 12 }}>
+            {paragraph}
+          </p>
+        ))}
+      </Wrap>
 
-            {/* Explore Our Culinary Collection card */}
-            <div className="dcv-includes-card" style={{ marginTop: 28, marginBottom: 28 }}>
-              <h3 className="dcv-includes-title" style={{ fontSize: 20, margin: "0 0 18px", color: "#1f383e" }}>
-                {gkde.collectionTitle}
-              </h3>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-                {gkde.venues.map((venue) => (
-                  <div key={venue.name} style={{ background: "#fbf9f5", borderRadius: 16, padding: "20px", border: "1px solid rgba(205, 172, 104, 0.25)" }}>
-                    <h4 style={{ margin: "0 0 4px", fontSize: 16, color: "#1f383e" }}>
-                      <strong className="dcv-cn-caps">{venue.name}</strong>
-                    </h4>
-                    <span style={{ fontSize: 13, color: "#9b7c50", fontWeight: 600, display: "block", marginBottom: 8 }}>
-                      {venue.kind}
-                    </span>
-                    <p style={{ margin: 0, fontSize: 14, color: "#34484a", lineHeight: 1.55 }}>
-                      {venue.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
+      {/* Culinary Collection: 3 Venue Cards (clickable for hours and details) */}
+      <Wrap className="dcv-wrap--stack">
+        <SectionTitle title={gkde.collectionTitle} />
+        <CasaNizucGkdeVenues
+          venues={gkde.venues}
+          meals={dining.meals}
+          allVenues={dining.venues}
+          venueImages={venueImages}
+        />
+      </Wrap>
+
+      {/* Experience & Package Pricing in dcv-grid2 */}
+      <Wrap className="dcv-wrap--stack">
+        <div className="dcv-grid2">
+          {/* Card 1: Experience */}
+          <article className="dcv-card">
+            <div className="dcv-body">
+              <div className="dcv-card-tag">All-Inclusive Dining</div>
+              <h3 style={{ fontSize: 26 }}>{gkde.experience.title}</h3>
+              <p style={{ fontSize: 16 }}>{gkde.experience.text}</p>
             </div>
+          </article>
 
-            {/* One Exceptional Culinary Experience card */}
-            <div className="dcv-includes-card" style={{ marginBottom: 28 }}>
-              <h3 className="dcv-includes-title" style={{ fontSize: 20, margin: "0 0 12px", color: "#1f383e" }}>
-                {gkde.experience.title}
-              </h3>
-              <p style={{ margin: 0, fontSize: 15, color: "#34484a", lineHeight: 1.6 }}>
-                {gkde.experience.text}
-              </p>
-            </div>
-
-            {/* Package Pricing card */}
-            <div className="dcv-includes-card" style={{ marginBottom: 28 }}>
-              <h3 className="dcv-includes-title" style={{ fontSize: 20, margin: "0 0 18px", color: "#1f383e" }}>
-                {gkde.pricing.title}
-              </h3>
-              <ul className="dcv-includes-list">
+          {/* Card 2: Pricing */}
+          <article className="dcv-card">
+            <div className="dcv-body">
+              <div className="dcv-card-tag">Rates &amp; Savings</div>
+              <h3 style={{ fontSize: 26 }}>{gkde.pricing.title}</h3>
+              <ul className="dcv-card-meta" style={{ margin: "16px 0", fontSize: 15 }}>
                 {gkde.pricing.items.map((item) => (
-                  <li key={item} className="dcv-includes-item">
-                    <span className="dcv-includes-bullet" aria-hidden="true" />
-                    <div className="dcv-includes-text">
-                      <strong>{item}</strong>
-                    </div>
+                  <li key={item} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <span style={{ color: "#9a6b1d" }}>•</span> {item}
                   </li>
                 ))}
               </ul>
-              <p className="dcv-cn-fine" style={{ marginTop: 16, color: "#6b7280", fontSize: 13 }}>
+              <p style={{ fontSize: 13, color: "var(--dcv-muted)", fontStyle: "italic" }}>
                 {gkde.pricing.note}
               </p>
             </div>
+          </article>
+        </div>
+      </Wrap>
 
-            {/* Closing callouts */}
-            {gkde.closing.map((line) => (
-              <p key={line} className="dcv-cn-callout" style={{ margin: "14px 0" }}>
-                {line}
-              </p>
-            ))}
-          </div>
-        </section>
+      {/* GKDE Closing Callout */}
+      <Wrap className="dcv-wrap--stack">
+        <div className="dcv-cn-callout" style={{ maxWidth: 840, margin: "0 auto", textAlign: "center" }}>
+          {gkde.closing.map((line) => (
+            <p key={line} style={{ fontSize: 18, fontWeight: 600, color: "#1f383e", margin: "6px 0", fontFamily: "var(--dcv-serif)" }}>
+              {line}
+            </p>
+          ))}
+        </div>
+      </Wrap>
 
-        {/* Gallery at the very bottom */}
-        <section className="dcv-calendar-gallery-section" style={{ marginTop: 48, paddingTop: 10 }}>
-          <div className="dcv-section-title" style={{ marginBottom: 24 }}>
-            <div>
-              <h2 style={{ fontSize: "clamp(26px, 3vw, 36px)", margin: "4px 0 0" }}>Gallery</h2>
-            </div>
-          </div>
-          <PhotoGallery images={GKDE_GALLERY_IMAGES} alt="Casa Nizuc GKDE Gallery" />
-        </section>
+      {/* Photo Gallery at the very bottom */}
+      <Wrap id="gallery" className="dcv-wrap--stack">
+        <SectionTitle title="GKDE Gallery" />
+        <PhotoGallery images={GKDE_GALLERY_IMAGES} alt="Casa Nizuc GKDE Gallery" />
       </Wrap>
     </>
   );
 }
 
 /**
- * Ofek section page: styled matching the Calendar of Events design,
- * with full-width hero, logo, highlights card, and photo gallery at the very bottom.
+ * Ofek section page: designed matching the authentic Passover Casa Nizuc design
+ * (DetailHero, SubNav, SectionTitle, rooftop highlight cards, and PhotoGallery at the bottom).
  */
 function OfekSection() {
   const { gkde } = CASA_NIZUC_PAGE;
-  const { ofek } = gkde;
+  const ofek = gkde.ofek;
 
   return (
     <>
       <DetailHero
         image={ofek.image}
-        kicker="CASA NIZUC · PREMIUM, NOT IN GKDE"
+        kicker="CASA NIZUC · OFEK ROOFTOP"
         title="Ofek"
-        subtitle={ofek.lead}
+        subtitle={ofek.heading}
         logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "left" }}
       />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
-      <Wrap>
-        <p style={{ margin: "0 0 24px" }}>
+      {/* Intro & Overview */}
+      <Wrap className="dcv-wrap--stack">
+        <p style={{ margin: "0 0 16px" }}>
           <Link className="dcv-link" href={`${CASA_NIZUC_HREF}#gkde`}>
             ← Back to GKDE
           </Link>
         </p>
 
-        {/* Content stack */}
-        <section className="dcv-calendar-content-stack" style={{ margin: "0 0 36px" }}>
-          <div style={{ maxWidth: 880 }}>
-            <h2 style={{ fontSize: 24, fontWeight: 700, color: "#1f383e", margin: "0 0 14px", fontFamily: "var(--dcv-serif)" }}>
-              {ofek.heading}
-            </h2>
-            <p className="dcv-copy-text" style={{ fontSize: 16, color: "#2d4447", lineHeight: 1.6, margin: "0 0 14px", fontWeight: 500 }}>
-              {ofek.lead}
-            </p>
-            <p className="dcv-copy-text" style={{ fontSize: 15, color: "#34484a", lineHeight: 1.6, margin: "0 0 20px" }}>
-              {ofek.text}
-            </p>
+        <SectionTitle title={ofek.heading} />
+        <p className="dcv-lead" style={{ maxWidth: 840, marginBottom: 16 }}>
+          {ofek.lead}
+        </p>
+        <p style={{ fontSize: 16, color: "var(--dcv-muted)", lineHeight: 1.7, maxWidth: 900 }}>
+          {ofek.text}
+        </p>
+      </Wrap>
 
-            {/* Highlights card */}
-            <div className="dcv-includes-card" style={{ marginTop: 24, marginBottom: 32 }}>
-              <h3 className="dcv-includes-title" style={{ fontSize: 20, margin: "0 0 18px", color: "#1f383e" }}>
-                Highlights
-              </h3>
-              <ul className="dcv-includes-list">
-                {ofek.points.map((point) => (
-                  <li key={point} className="dcv-includes-item">
-                    <span className="dcv-includes-bullet" aria-hidden="true" />
-                    <div className="dcv-includes-text">
-                      <Lead text={point} />
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
+      {/* Rooftop Highlights Cards */}
+      <Wrap className="dcv-wrap--stack">
+        <SectionTitle title="Rooftop Highlights" />
+        <div className="dcv-grid3">
+          {ofek.points.map((point) => {
+            const { title, desc } = splitLeadText(point);
+            return (
+              <article key={point} className="dcv-card">
+                <div className="dcv-body">
+                  <div className="dcv-card-tag">Rooftop Experience</div>
+                  <h3 style={{ fontSize: 22 }}>{title}</h3>
+                  <p>{desc}</p>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </Wrap>
 
-        {/* Gallery at the very bottom */}
-        <section className="dcv-calendar-gallery-section" style={{ marginTop: 48, paddingTop: 10 }}>
-          <div className="dcv-section-title" style={{ marginBottom: 24 }}>
-            <div>
-              <h2 style={{ fontSize: "clamp(26px, 3vw, 36px)", margin: "4px 0 0" }}>Gallery</h2>
-            </div>
-          </div>
-          <PhotoGallery images={OFEK_GALLERY_IMAGES} alt="Casa Nizuc Ofek Rooftop Gallery" />
-        </section>
+      {/* Photo Gallery at the very bottom */}
+      <Wrap id="gallery" className="dcv-wrap--stack">
+        <SectionTitle title="Ofek Rooftop Gallery" />
+        <PhotoGallery images={OFEK_GALLERY_IMAGES} alt="Casa Nizuc Ofek Rooftop Gallery" />
       </Wrap>
     </>
   );
@@ -458,30 +377,30 @@ function OfekSection() {
 
 /**
  * Main section router for /casa-nizuc/[section].
- * Calendar and About have their dedicated rich pages;
- * Shabbat, Dining, GKDE, and Ofek are designed following the Calendar of Events design,
- * with full-width hero, logo, luxury cards, and PhotoGallery at the very bottom.
+ * Calendar of Events has its dedicated page (untouched per user request);
+ * About has its dedicated page;
+ * Shabbat, Dining, GKDE, and Ofek are designed in the authentic Passover Casa Nizuc design
+ * (DetailHero with logo, SectionTitle, dcv-card grids, and PhotoGallery at the very bottom).
  */
 export function CasaNizucSectionView({ slug }: { slug: CasaNizucSectionSlug }) {
   if (slug === "calendar") {
     return <CasaNizucCalendarView />;
   }
+
   if (slug === "about") {
     return <CasaNizucAboutView />;
   }
-  if (slug === "shabbat") {
-    return <ShabbatSection />;
-  }
-  if (slug === "dining") {
-    return <DiningSection />;
-  }
-  if (slug === "gkde") {
-    return <GkdeSection />;
-  }
-  if (slug === "ofek") {
-    return <OfekSection />;
-  }
-  return null;
-}
 
-export default CasaNizucSectionView;
+  switch (slug) {
+    case "shabbat":
+      return <ShabbatSection />;
+    case "dining":
+      return <DiningSection />;
+    case "gkde":
+      return <GkdeSection />;
+    case "ofek":
+      return <OfekSection />;
+    default:
+      return null;
+  }
+}
