@@ -98,22 +98,14 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       title: "An unforgettable Passover experience for every age.",
       description: "We make sure every child—from our youngest guests to our teens—has an incredible Passover filled with fun, friendship, adventure, and meaningful experiences.",
     },
-    // director: {
-    //   title: "Our Director",
-    //   image: AllImages.casaNizucDayCampDirectorArianaMizrahi,
-    //   alt: "Ariana Mizrahi, Day Camp Director",
-    //   role: "Day Camp Director",
-    //   name: "Ariana Mizrahi",
-    //   bio: "With a passion for working with children and creating meaningful, fun-filled experiences, Ariana Mizrahi brings enthusiasm, creativity, and a warm, caring approach to her role as Day Camp Director at Diamond Blue, developing an engaging program filled with exciting activities, creative projects, interactive games, and memorable experiences.",
-    // },
-    team: [
-      {
-        id: "ariana-mizrahi",
-        role: "Day Camp Director",
-        name: "Ariana Mizrahi",
-        bio: "With a passion for working with children and creating meaningful, fun-filled experiences, Ariana Mizrahi brings enthusiasm, creativity, and a warm, caring approach to her role as Day Camp Director at Diamond Blue, developing an engaging program filled with exciting activities, creative projects, interactive games, and memorable experiences.",
-      },
-    ],
+    director: {
+      title: "Our Director",
+      image: AllImages.casaNizucDayCampDirectorArianaMizrahi,
+      alt: "Ariana Mizrahi, Day Camp Director",
+      role: "Day Camp Director",
+      name: "Ariana Mizrahi",
+      bio: "With a passion for working with children and creating meaningful, fun-filled experiences, Ariana Mizrahi brings enthusiasm, creativity, and a warm, caring approach to her role as Day Camp Director at Diamond Blue, developing an engaging program filled with exciting activities, creative projects, interactive games, and memorable experiences.",
+    },
     activities: [
       {
         id: "kids-day-camp",
