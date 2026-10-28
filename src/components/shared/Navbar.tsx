@@ -8,7 +8,7 @@ import { PRIMARY_NAV } from "./nav.data";
 import { MobileMenu } from "./MobileMenu";
 import { getExperiencesHref, getInquireContext } from "@/lib/inquire-context";
 import { SectionLink } from "./design/SectionLink";
-import { inquireHref } from "@/lib/routes";
+import { REQUEST_A_QUOTE_HREF, inquireHref } from "@/lib/routes";
 import { MAIN_SITE_URL } from "@/lib/site-hosts";
 import { AllImages } from "../../../public/images/AllImages";
 
@@ -39,18 +39,28 @@ export function Navbar() {
   // Read the query string without useSearchParams, which would force a Suspense boundary around the whole header.
   const search = useSyncExternalStore(subscribeToLocation, () => window.location.search, () => "");
 
-  // Inquire inside a program or one of its hotels (locked to that program, and hotel when there is one); Contact elsewhere.
+  // Inquire inside a program or one of its hotels (locked to that program, and hotel when there is one);
+  // Request a Quote on regular Casa Nizuc (/casa-nizuc and /casa-nizuc/[section]); Contact elsewhere.
+  const isCasaNizuc = pathname === "/casa-nizuc/" || (pathname ? pathname.startsWith("/casa-nizuc/") : false);
   const inquiry = getInquireContext(pathname, search);
-  const actionLabel = inquiry ? "INQUIRE" : "CONTACT";
-  const actionHref = inquiry ? inquireHref({ destination: inquiry.programId, resort: inquiry.resortId }) : "/contact";
-  // On the Inquire page itself there is no action button (client 2026-10-22).
+  const actionLabel = isCasaNizuc ? "REQUEST A QUOTE" : inquiry ? "INQUIRE" : "CONTACT";
+  const actionHref = isCasaNizuc
+    ? REQUEST_A_QUOTE_HREF
+    : inquiry
+      ? inquireHref({ destination: inquiry.programId, resort: inquiry.resortId })
+      : "/contact";
+  // On the Inquire or Request a Quote page itself there is no action button (client 2026-10-22).
   // "About" always leads to the main About page (/about) per client specification.
   // "Experiences" shows the experiences of the hotel the visitor is in, or the main Experiences page elsewhere.
   const experiencesHref = getExperiencesHref(pathname, search);
   const navLinks = PRIMARY_NAV.map((link) =>
     link.href === "/experiences" ? { ...link, href: experiencesHref } : link
   );
-  const onInquirePage = pathname === "/inquire" || pathname.startsWith("/inquire/");
+  const onInquirePage =
+    pathname === "/inquire" ||
+    (pathname ? pathname.startsWith("/inquire/") : false) ||
+    pathname === "/request-a-quote" ||
+    (pathname ? pathname.startsWith("/request-a-quote/") : false);
   // Guettaway pages (its own domain, or the program and its hotels on the other sites) swap the main brand for the Guettaway one (client 2026-10-26).
   const onGuettawayPage = inquiry?.programId === GUETTAWAY_PROGRAM_ID;
 

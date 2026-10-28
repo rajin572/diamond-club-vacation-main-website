@@ -89,16 +89,21 @@ function YesNoField({
   );
 }
 
-/** Five-step inquiry form with locked resort pre-selection when coming from a specific hotel/program. */
-export function InquireForm() {
+export interface InquireFormProps {
+  defaultDestination?: string;
+  isQuote?: boolean;
+}
+
+/** Five-step inquiry form with locked resort pre-selection when coming from a specific hotel/program or quote request. */
+export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = {}) {
   const searchParams = useSearchParams();
 
   const detailedExp = useMemo(() => {
     return resolveDetailedExperience(
-      searchParams.get("destination") ?? searchParams.get("program"),
+      searchParams.get("destination") ?? searchParams.get("program") ?? defaultDestination ?? null,
       searchParams.get("resort")
     );
-  }, [searchParams]);
+  }, [searchParams, defaultDestination]);
 
   const isGuettaway = /guettaway/i.test(detailedExp.label);
   const isPassover = /reserve|diamond blue/i.test(detailedExp.label);
@@ -156,10 +161,10 @@ export function InquireForm() {
       <main className="dcv-inquiry-shell">
         <div className="dcv-review">
           <h2>Thank you{values.firstName ? `, ${values.firstName}` : ""}.</h2>
-          <p>Your inquiry has been prepared.</p>
+          <p>{isQuote ? "Your quote request has been received." : "Your inquiry has been prepared."}</p>
           <p style={{ marginTop: 24 }}>
-            <Link className="dcv-btn" href="/">
-              Back to home
+            <Link className="dcv-btn" href={isQuote ? "/casa-nizuc" : "/"}>
+              {isQuote ? "Back to Casa Nizuc" : "Back to home"}
             </Link>
           </p>
         </div>
@@ -358,7 +363,7 @@ export function InquireForm() {
         {step === 4 && (
           <section>
             <div className="dcv-kicker">STEP 5 · REVIEW</div>
-            <h2>Review your inquiry</h2>
+            <h2>{isQuote ? "Review your quote request" : "Review your inquiry"}</h2>
             <div className="dcv-review">
               {reviewRows.map(([key, label]) => (
                 <div key={key}>
@@ -371,13 +376,17 @@ export function InquireForm() {
                 </div>
               ))}
             </div>
-            <p className="dcv-notice">By submitting, you consent to be contacted regarding your vacation inquiry.</p>
+            <p className="dcv-notice">
+              {isQuote
+                ? "By submitting, you consent to be contacted regarding your customized quote."
+                : "By submitting, you consent to be contacted regarding your vacation inquiry."}
+            </p>
             <div className="dcv-actions">
               <button type="button" className="dcv-btn" onClick={() => goTo(3)}>
                 ← Back
               </button>
               <button type="submit" className="dcv-btn">
-                Submit Inquiry →
+                {isQuote ? "Submit Quote Request →" : "Submit Inquiry →"}
               </button>
             </div>
           </section>

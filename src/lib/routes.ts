@@ -135,3 +135,4 @@ export function termsHrefForPath(pathname: string): string | null {
  * the header and the footer points here.
  */
 export const CASA_NIZUC_HREF = "/casa-nizuc";
+export const REQUEST_A_QUOTE_HREF = "/request-a-quote";
