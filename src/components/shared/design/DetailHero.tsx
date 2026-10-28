@@ -17,7 +17,7 @@ interface DetailHeroProps {
 }
 
 /** The rounded-bottom hero used by inner pages, updated with centralized typography and no banner logo. */
-export function DetailHero({ image, kicker, title, subtitle, imagePosition, actions }: DetailHeroProps) {
+export function DetailHero({ image, kicker, title, subtitle, imagePosition, actions, logo }: DetailHeroProps) {
   return (
     <section className="dcv-hero">
       <Image
@@ -29,6 +29,15 @@ export function DetailHero({ image, kicker, title, subtitle, imagePosition, acti
         style={imagePosition ? { objectPosition: imagePosition } : undefined}
       />
       <div className="dcv-copy">
+        {logo && (
+          <Image
+            src={logo.image}
+            alt={logo.alt}
+            priority
+            className="dcv-hero-logo"
+            style={{ width: "auto", height: "76px", margin: "0 auto 16px", objectFit: "contain", filter: "drop-shadow(0 2px 14px rgba(0,0,0,0.5))" }}
+          />
+        )}
         {kicker && <div className="dcv-kicker">{kicker}</div>}
         <h1>{formatProgramTitle(title, true)}</h1>
         {subtitle && <div className="dcv-hero-subtitle">{formatProgramTitle(subtitle)}</div>}

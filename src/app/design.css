@@ -3662,3 +3662,154 @@ html[data-guettaway-splash] .dcv-splash {
   background: rgba(232, 197, 108, 0.12);
   font-weight: 600;
 }
+
+/* ---------- Casa Nizuc Calendar of Events & Explore the Holidays (client 2026-10-28) ---------- */
+.dcv-holidays-section {
+  margin-top: 10px;
+  margin-bottom: 48px;
+}
+.dcv-holidays-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.dcv-holidays-title {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 700;
+  color: #1e383d;
+  margin: 0;
+  font-family: var(--dcv-serif);
+}
+.dcv-holidays-year {
+  font-size: 16px;
+  font-weight: 600;
+  color: #a48454;
+  letter-spacing: 0.04em;
+}
+.dcv-holidays-filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.dcv-holidays-pill {
+  background: #f4efe8;
+  color: #223b41;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 9999px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dcv-holidays-pill:hover {
+  background: #ebe3d7;
+}
+.dcv-holidays-pill--active {
+  background: #19343b;
+  color: #ffffff;
+  border-color: #19343b;
+  box-shadow: 0 4px 12px rgba(25, 52, 59, 0.25);
+}
+.dcv-holidays-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.dcv-holiday-card {
+  display: flex;
+  flex-direction: column;
+}
+.dcv-holiday-img-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #eae4da;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(205, 172, 104, 0.25);
+}
+.dcv-holiday-img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.dcv-holiday-card:hover .dcv-holiday-img {
+  transform: scale(1.05);
+}
+.dcv-holiday-info {
+  padding: 10px 4px 0;
+}
+.dcv-holiday-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e383d;
+  margin: 0 0 2px;
+}
+.dcv-holiday-date {
+  font-size: 13px;
+  color: #9b7c50;
+  font-weight: 500;
+  display: block;
+}
+.dcv-holidays-divider {
+  border: 0;
+  height: 1px;
+  background: rgba(205, 172, 104, 0.35);
+  margin: 48px 0;
+}
+.dcv-includes-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px 36px;
+  border: 1px solid rgba(205, 172, 104, 0.35);
+  box-shadow: 0 10px 32px rgba(24, 29, 31, 0.05);
+}
+.dcv-includes-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e383d;
+  margin: 0 0 20px;
+  font-family: var(--dcv-serif);
+}
+.dcv-includes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dcv-includes-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.dcv-includes-bullet {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c6a064;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+.dcv-includes-text {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #34484a;
+}
+.dcv-includes-text strong {
+  color: #1e383d;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .dcv-holidays-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .dcv-includes-card {
+    padding: 24px;
+  }
+}

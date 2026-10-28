@@ -180,7 +180,13 @@ export function CasaNizucView() {
 
   return (
     <>
-      <DetailHero image={hero.image} kicker={hero.kicker} title={hero.title} subtitle={hero.subtitle} />
+      <DetailHero
+        image={hero.image}
+        kicker={hero.kicker}
+        title={hero.title}
+        subtitle={hero.subtitle}
+        logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa" }}
+      />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
       {/* Discover cards: each one leads to its section below */}

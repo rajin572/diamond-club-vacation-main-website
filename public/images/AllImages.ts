@@ -629,6 +629,10 @@ import reserveLogo from "./mainDesign/reserve-logo.webp";
 import reserveLogoWhite from "./mainDesign/reserve-logo-white.webp";
 import blueLogo from "./mainDesign/blue-logo.webp";
 import blueLogoWhite from "./mainDesign/blue-logo-white.webp";
+import casaNizucLogo from "./mainDesign/casa-nizuc-logo.webp";
+import casaNizucLogoWhite from "./mainDesign/casa-nizuc-logo-white.webp";
+import casaNizucIcon from "./mainDesign/casa-nizuc-icon.webp";
+import casaNizucIconWhite from "./mainDesign/casa-nizuc-icon-white.webp";
 // The kids collage without the orange "I love DC" box (client 2026-10-20: that symbol is only for the St. Regis); used by Guettaway.
 import guettawayKidsProgram from "./mainDesign/guettaway-kids-program.webp";
 // Photo sent by the client 2026-10-20 for the Waldorf Astoria Day Camp team box (Program Director Rabbi Binyomin Schwartz, with two boys).
@@ -800,6 +804,23 @@ import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00494 from "./main
 import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00014 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suiteamai-diana-balderadsc00014.webp";
 import waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00099 from "./mainDesign/waldorf-room-waldorf-astoria-cancun-suiteamai-diana-balderadsc00099.webp";
 import waldorfRoomWaldorfAstoriaCancunMaster602d from "./mainDesign/waldorf-room-waldorf-astoria-cancun-master602d.webp";
+
+import holidayPassover from "./holidays/passover.webp";
+import holidaySukkot from "./holidays/sukkot.webp";
+import holidayWinterBreak from "./holidays/winter-break.webp";
+import holidaySummerVacation from "./holidays/summer-vacation.webp";
+import holidayShavuot from "./holidays/shavuot.webp";
+import holidayThanksgiving from "./holidays/thanksgiving.webp";
+import holidayRoshHashanah from "./holidays/rosh-hashanah.webp";
+import holidayLaborDay from "./holidays/labor-day.webp";
+import holidayChanukah from "./holidays/chanukah.webp";
+import holidayPresidentsDay from "./holidays/presidents-day.webp";
+import holidaySpringBreak from "./holidays/spring-break.webp";
+import holidayMemorialDay from "./holidays/memorial-day.webp";
+import holidayPurim from "./holidays/purim.webp";
+import holidayIndependenceDay from "./holidays/independence-day.webp";
+import holidayMidwinterBreak from "./holidays/midwinter-break.webp";
+import holidayNewYears from "./holidays/new-years.webp";
 
 export const AllImages = {
   logo,
@@ -1462,6 +1483,10 @@ export const AllImages = {
   reserveLogoWhite,
   blueLogo,
   blueLogoWhite,
+  casaNizucLogo,
+  casaNizucLogoWhite,
+  casaNizucIcon,
+  casaNizucIconWhite,
   guettawayKidsProgram,
   dayCampDirectorBinyominSchwartz,
   casaNizucDayCampDirectorArianaMizrahi,
@@ -1635,6 +1660,22 @@ export const AllImages = {
   waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00014,
   waldorfRoomWaldorfAstoriaCancunSuiteamaiDianaBalderadsc00099,
   waldorfRoomWaldorfAstoriaCancunMaster602d,
+  holidayPassover,
+  holidaySukkot,
+  holidayWinterBreak,
+  holidaySummerVacation,
+  holidayShavuot,
+  holidayThanksgiving,
+  holidayRoshHashanah,
+  holidayLaborDay,
+  holidayChanukah,
+  holidayPresidentsDay,
+  holidaySpringBreak,
+  holidayMemorialDay,
+  holidayPurim,
+  holidayIndependenceDay,
+  holidayMidwinterBreak,
+  holidayNewYears,
 };
 
 

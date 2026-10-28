@@ -6,6 +6,7 @@ import type { DesignImage, DesignLink, InfoCardData } from "@/components/shared/
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { Lead, PopupTable } from "./CasaNizucParts";
+import { CasaNizucCalendarView } from "./CasaNizucCalendarView";
 
 /** The pages that open from the year-round Casa Nizuc page (client 2026-10-27: new pages, not pop-ups). */
 export const CASA_NIZUC_SECTION_SLUGS = ["shabbat", "dining", "gkde", "ofek", "calendar"] as const;
@@ -258,6 +259,9 @@ function getSectionPage(slug: CasaNizucSectionSlug): SectionPage {
  * hero, sub navigation, back link, text beside a photo stack. The text is the same the pop-ups showed.
  */
 export function CasaNizucSectionView({ slug }: { slug: CasaNizucSectionSlug }) {
+  if (slug === "calendar") {
+    return <CasaNizucCalendarView />;
+  }
   const page = getSectionPage(slug);
 
   return (
