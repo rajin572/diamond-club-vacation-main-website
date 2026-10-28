@@ -1,18 +1,20 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { ArrowUpDown, CalendarDays, Droplets, KeyRound, Landmark, Scale, Star, UtensilsCrossed, Wine } from "lucide-react";
 import { DesignCard, DetailHero, InfoCardGrid, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
 import type { DesignLink, InfoCardData } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
+import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { AllImages } from "../../../public/images/AllImages";
 import { PopupTable } from "./CasaNizucParts";
 import { casaNizucSectionHref } from "./CasaNizucSectionView";
 
 const SUB_NAV: DesignLink[] = [
-  { label: "About", href: "#about" },
+  { label: "About", href: `${CASA_NIZUC_HREF}/about` },
   { label: "Shabbat", href: "#shabbat" },
   { label: "Dining", href: "#dining" },
   { label: "GKDE", href: "#gkde" },
-  { label: "Calendar of Events", href: "#calendar" },
+  { label: "Calendar of Events", href: `${CASA_NIZUC_HREF}/calendar` },
   { label: "Events", href: "#events" },
 ];
 
@@ -39,7 +41,7 @@ export function CasaNizucView() {
   const aboutCards: InfoCardData[] = [
     {
       id: "resort",
-      image: hero.image,
+      image: AllImages.casaNizucTowerDay,
       title: "The Resort",
       description: about.heading,
       kicker: "CASA NIZUC · ABOUT",
@@ -48,7 +50,7 @@ export function CasaNizucView() {
     },
     {
       id: "glance",
-      image: AllImages.casaNizucTowerDay,
+      image: AllImages.casaNizucEntrance,
       title: "At a glance",
       description: "Rooms, dining, pools and venues in numbers.",
       kicker: "CASA NIZUC · ABOUT",
@@ -183,26 +185,44 @@ export function CasaNizucView() {
       <DetailHero
         image={hero.image}
         kicker={hero.kicker}
-        title={hero.title}
+        title={
+          <span>
+            THE KOSHER RESORT
+            <br />
+            THAT HAS IT ALL
+          </span>
+        }
         subtitle={hero.subtitle}
-        logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa" }}
+        logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "left" }}
       />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
       {/* Discover cards: each one leads to its section below */}
       <Wrap id="overview">
         <SectionTitle title={overview.title} />
-        <div className="dcv-grid3">
+        <div className="dcv-grid4">
           {overview.cards.map((card) => (
-            <DesignCard key={card.id} image={card.image} title={card.title} description={card.description} href={`#${card.id}`} />
+            <DesignCard
+              key={card.id}
+              image={card.image}
+              title={card.title}
+              description={card.description}
+              href={`#${card.id}`}
+              featured={"featured" in card ? Boolean(card.featured) : false}
+            />
           ))}
         </div>
       </Wrap>
 
-      <Wrap id="about" className="dcv-wrap--stack">
-        <SectionTitle title="About" />
+      {/* <Wrap id="about" className="dcv-wrap--stack">
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "12px", marginBottom: "8px" }}>
+          <SectionTitle title="About" />
+          <Link className="dcv-link" href={`${CASA_NIZUC_HREF}/about`} style={{ fontSize: "14px", fontWeight: "600" }}>
+            Explore Full About Page →
+          </Link>
+        </div>
         <InfoCardGrid cards={aboutCards} gridClass="dcv-grid3" />
-      </Wrap>
+      </Wrap> */}
 
       <Wrap id="shabbat" className="dcv-wrap--stack">
         <SectionTitle title="Shabbat" />

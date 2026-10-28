@@ -19,6 +19,8 @@ interface DesignCardProps {
   sizes?: string;
   /** Brand marks laid over the photo. */
   logos?: CardLogo[];
+  /** One big card in the middle of the row (like the Dining/Entertainment featured cards). */
+  featured?: boolean;
 }
 
 /** Image card with a title, optional blurb and "Explore →" link; the whole card is the link (client design: `.card`). */
@@ -30,13 +32,15 @@ export function DesignCard({
   linkLabel = "Explore →",
   external,
   alt = "",
-  sizes = CARD_SIZES,
+  sizes,
   logos,
+  featured = false,
 }: DesignCardProps) {
-  const photo = <Image src={image} alt={alt} sizes={sizes} />;
+  const actualSizes = sizes ?? (featured ? "(max-width: 900px) 100vw, 900px" : CARD_SIZES);
+  const photo = <Image src={image} alt={alt} sizes={actualSizes} />;
 
   return (
-    <article className={href ? "dcv-card" : "dcv-card dcv-card--static"}>
+    <article className={`${href ? "dcv-card" : "dcv-card dcv-card--static"}${featured ? " dcv-card--featured" : ""}`}>
       {logos && logos.length > 0 ? (
         <div className="dcv-card-media">
           {photo}

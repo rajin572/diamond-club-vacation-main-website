@@ -3813,3 +3813,349 @@ html[data-guettaway-splash] .dcv-splash {
     padding: 24px;
   }
 }
+
+/* ==========================================================================
+   Enhanced About Page & Cards (Casa Nizuc)
+   ========================================================================== */
+
+.dcv-about-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 960px) {
+  .dcv-about-card-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.dcv-about-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(197, 160, 89, 0.22);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  width: 100%;
+}
+
+.dcv-about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 42px rgba(19, 52, 59, 0.13), 0 2px 10px rgba(197, 160, 89, 0.3);
+  border-color: rgba(197, 160, 89, 0.65);
+}
+
+.dcv-about-card-media {
+  position: relative;
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+  background: #19343b;
+}
+
+.dcv-about-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dcv-about-card:hover .dcv-about-card-media img {
+  transform: scale(1.06);
+}
+
+.dcv-about-card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 6px 14px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(25, 52, 59, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.dcv-about-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 24px 22px;
+}
+
+.dcv-about-card-body h3 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #19343b;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.dcv-about-card-body p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0 0 18px;
+  flex: 1;
+}
+
+.dcv-about-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 22px;
+}
+
+.dcv-about-card-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: #19343b;
+  background: rgba(197, 160, 89, 0.1);
+  border: 1px solid rgba(197, 160, 89, 0.28);
+  border-radius: 6px;
+}
+
+.dcv-about-card-chip b {
+  color: #a8813a;
+  font-weight: 700;
+}
+
+.dcv-about-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.dcv-about-card-btn {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a8813a;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.25s ease, color 0.25s ease;
+}
+
+.dcv-about-card:hover .dcv-about-card-btn {
+  color: #19343b;
+  gap: 10px;
+}
+
+/* Editorial Story Layout */
+.dcv-about-story-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .dcv-about-story-container {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.dcv-about-section-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #c5a059;
+  margin-bottom: 12px;
+}
+
+.dcv-about-story-main h2 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: #19343b;
+  line-height: 1.25;
+  margin: 0 0 20px;
+}
+
+.dcv-about-quote-block {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #19343b;
+  border-left: 3px solid #c5a059;
+  padding: 10px 0 10px 22px;
+  margin: 0 0 24px;
+  background: rgba(197, 160, 89, 0.05);
+  border-radius: 0 8px 8px 0;
+}
+
+.dcv-about-paragraphs p {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+/* Aside Boxes */
+.dcv-about-story-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dcv-about-stats-box {
+  background: #ffffff;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.dcv-about-stats-box h3 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 22px;
+  color: #19343b;
+  margin: 0 0 20px;
+}
+
+.dcv-about-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.dcv-about-stat-item {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: #faf8f5;
+  border-radius: 10px;
+  border: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+.dcv-about-stat-val {
+  font-size: 28px;
+  font-weight: 700;
+  color: #a8813a;
+  line-height: 1.1;
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.dcv-about-stat-lbl {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+.dcv-about-facts-box {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.dcv-about-facts-box h4 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 18px;
+  color: #19343b;
+  margin: 0 0 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 8px;
+}
+
+.dcv-about-facts-list {
+  margin: 0;
+}
+
+.dcv-about-fact-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.dcv-about-fact-row:last-child {
+  margin-bottom: 0;
+}
+
+.dcv-about-fact-row dt {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #a8813a;
+}
+
+.dcv-about-fact-row dd {
+  margin: 2px 0 0;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #334155;
+}
+
+/* ==========================================================================
+   Hero Title With Logo (Like Guettaway)
+   ========================================================================== */
+
+.dcv-title-with-logo--hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
+  text-align: left;
+}
+
+.dcv-title-logo--hero {
+  width: auto;
+  height: 2em;
+  max-height: 120px;
+  flex: none;
+  object-fit: contain;
+  position: static;
+  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 768px) {
+  .dcv-title-with-logo--hero {
+    gap: 0.4em;
+  }
+  .dcv-title-logo--hero {
+    height: 1.7em;
+    max-height: 80px;
+  }
+}
+
+@media (max-width: 520px) {
+  .dcv-title-with-logo--hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  .dcv-title-logo--hero {
+    height: 60px;
+  }
+}

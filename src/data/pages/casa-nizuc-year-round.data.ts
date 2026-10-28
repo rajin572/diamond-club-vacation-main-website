@@ -21,10 +21,9 @@ export const CASA_NIZUC_PAGE = {
   overview: {
     title: "Discover Casa Nizuc",
     cards: [
-      // { id: "about", title: "About", description: "The kosher resort that has it all.", image: AllImages.casaNizucGallery00 },
+      { id: "gkde", title: "GKDE", description: "The Gourmet Kosher Dining Experience", image: AllImages.casaNizucGkdeDining, featured: true },
       { id: "shabbat", title: "Shabbat", description: "Shabbat, the way it should feel.", image: AllImages.casaNizucAshanRender },
       { id: "dining", title: "Dining", description: "Five kosher destinations. One hotel.", image: AllImages.casaNizucDiningZait },
-      { id: "gkde", title: "GKDE", description: "The Gourmet Kosher Dining Experience", image: AllImages.casaNizucGkdeDining },
       { id: "calendar", title: "Calendar of Events", description: "Full programming. All inclusive.", image: AllImages.casaNizucTowerNight },
       { id: "events", title: "Events & Celebrations", description: "Your simcha. Our stage.", image: AllImages.casaNizucEventsChandeliers },
     ],

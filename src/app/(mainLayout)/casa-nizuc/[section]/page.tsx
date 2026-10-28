@@ -14,14 +14,14 @@ export function generateStaticParams() {
   return CASA_NIZUC_SECTION_SLUGS.map((section) => ({ section }));
 }
 
-const TITLES = { shabbat: "Shabbat", dining: "Dining", gkde: "GKDE", ofek: "Ofek", calendar: "Calendar of Events" } as const;
+const TITLES = { about: "About", shabbat: "Shabbat", dining: "Dining", gkde: "GKDE", ofek: "Ofek", calendar: "Calendar of Events" } as const;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { section } = await params;
   if (!isCasaNizucSectionSlug(section)) return { title: "Page Not Found" };
 
-  const { shabbat, dining, gkde, seasons } = CASA_NIZUC_PAGE;
-  const description = { shabbat: shabbat.lead, dining: dining.lead, gkde: gkde.lead, ofek: gkde.ofek.lead, calendar: seasons.lead }[section];
+  const { about, shabbat, dining, gkde, seasons } = CASA_NIZUC_PAGE;
+  const description = { about: about.lead, shabbat: shabbat.lead, dining: dining.lead, gkde: gkde.lead, ofek: gkde.ofek.lead, calendar: seasons.lead }[section];
 
   return { title: `${TITLES[section]} | Casa Nizuc`, description };
 }

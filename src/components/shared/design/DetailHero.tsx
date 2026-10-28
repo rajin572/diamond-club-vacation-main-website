@@ -6,18 +6,20 @@ import type { DesignImage } from "./types";
 interface DetailHeroProps {
   image: DesignImage;
   kicker?: string;
-  title: string;
-  subtitle?: string;
+  title: ReactNode;
+  subtitle?: ReactNode;
   /** CSS object-position of the photo, for tall or off-centre images (e.g. "50% 20%"). */
   imagePosition?: string;
-  /** Kept for backwards compatibility but not rendered on the banner per design requirements. */
-  logo?: { image: DesignImage; alt: string; wordmark?: boolean };
+  /** Brand logo shown on the banner (default position is "left" next to the title, like Guettaway). */
+  logo?: { image: DesignImage; alt: string; wordmark?: boolean; position?: "top" | "left" };
   /** Buttons shown under the title (e.g. the program's Brochure button). */
   actions?: ReactNode;
 }
 
-/** The rounded-bottom hero used by inner pages, updated with centralized typography and no banner logo. */
+/** The rounded-bottom hero used by inner pages, updated with centralized typography and flexible logo positioning. */
 export function DetailHero({ image, kicker, title, subtitle, imagePosition, actions, logo }: DetailHeroProps) {
+  const isLogoLeft = logo && logo.position !== "top";
+
   return (
     <section className="dcv-hero">
       <Image
@@ -29,7 +31,7 @@ export function DetailHero({ image, kicker, title, subtitle, imagePosition, acti
         style={imagePosition ? { objectPosition: imagePosition } : undefined}
       />
       <div className="dcv-copy">
-        {logo && (
+        {logo && logo.position === "top" && (
           <Image
             src={logo.image}
             alt={logo.alt}
@@ -39,8 +41,28 @@ export function DetailHero({ image, kicker, title, subtitle, imagePosition, acti
           />
         )}
         {kicker && <div className="dcv-kicker">{kicker}</div>}
-        <h1>{formatProgramTitle(title, true)}</h1>
-        {subtitle && <div className="dcv-hero-subtitle">{formatProgramTitle(subtitle)}</div>}
+        <h1>
+          {isLogoLeft ? (
+            <span className="dcv-title-with-logo dcv-title-with-logo--hero">
+              <Image
+                src={logo.image}
+                alt={logo.alt}
+                priority
+                className="dcv-title-logo dcv-title-logo--hero"
+              />
+              <span>{typeof title === "string" ? formatProgramTitle(title, true) : title}</span>
+            </span>
+          ) : typeof title === "string" ? (
+            formatProgramTitle(title, true)
+          ) : (
+            title
+          )}
+        </h1>
+        {subtitle && (
+          <div className="dcv-hero-subtitle">
+            {typeof subtitle === "string" ? formatProgramTitle(subtitle) : subtitle}
+          </div>
+        )}
         {actions && <div className="dcv-hero-actions">{actions}</div>}
       </div>
     </section>

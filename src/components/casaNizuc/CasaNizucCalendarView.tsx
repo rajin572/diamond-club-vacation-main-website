@@ -80,6 +80,7 @@ export function CasaNizucCalendarView() {
         kicker="CASA NIZUC · CALENDAR OF EVENTS"
         title="Calendar of Events"
         subtitle={seasons.heading}
+        logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "left" }}
       />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
