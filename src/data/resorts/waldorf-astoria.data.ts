@@ -1002,8 +1002,8 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   dining: {
     title: "Dining",
     description: "",
-    images: [],
-    // images: [AllImages.waldorfDiningMalpequeSunsetTerrace, AllImages.waldorfDiningMalpequeDish, AllImages.waldorfDiningMalpequeTerrace, AllImages.waldorfDiningMalpequeFirepit, AllImages.waldorfDiningChayaRestaurant, AllImages.waldorfDiningChayaCrudito, AllImages.waldorfDiningChayaBreakfast, AllImages.waldorfDiningJaoDining, AllImages.waldorfDiningJaoTlayuda, AllImages.waldorfDiningJaoTerrace, AllImages.waldorfDiningPeacockAlleyDessert, AllImages.waldorfDiningPeacockAlleyLounge, AllImages.waldorfDiningPeacockAlleyBar, AllImages.waldorfDiningPoolBarPool, AllImages.waldorfDiningPoolBarBbq, AllImages.waldorfDiningPoolBarCocktails],
+    // images: [],
+    images: [AllImages.waldorfDiningMalpequeSunsetTerrace, AllImages.waldorfDiningMalpequeDish, AllImages.waldorfDiningMalpequeTerrace, AllImages.waldorfDiningMalpequeFirepit, AllImages.waldorfDiningChayaRestaurant, AllImages.waldorfDiningChayaCrudito, AllImages.waldorfDiningChayaBreakfast, AllImages.waldorfDiningJaoDining, AllImages.waldorfDiningJaoTlayuda, AllImages.waldorfDiningJaoTerrace, AllImages.waldorfDiningPeacockAlleyDessert, AllImages.waldorfDiningPeacockAlleyLounge, AllImages.waldorfDiningPeacockAlleyBar, AllImages.waldorfDiningPoolBarPool, AllImages.waldorfDiningPoolBarBbq, AllImages.waldorfDiningPoolBarCocktails],
     items: [
       {
         id: "malpeque",
@@ -1011,7 +1011,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
         subtitle: "Daytime Lunch | Oceanfront Dining",
         image: AllImages.waldorfDiningMalpequeSunsetTerrace,
         description: "Enjoy a delicious selection of freshly grilled specialties and gourmet lunch favorites in a beautiful oceanfront setting overlooking the Caribbean Sea.",
-        gallery: [AllImages.waldorfDiningMalpequeSunsetTerrace, AllImages.waldorfDiningMalpequeDish, AllImages.waldorfDiningMalpequeTerrace, AllImages.waldorfDiningMalpequeFirepit],
+        gallery: [AllImages.waldorfDiningMalpequeSunsetTerrace, AllImages.waldorfDiningMalpequeTerrace, AllImages.waldorfDiningMalpequeFirepit],
       },
       {
         id: "chaya",
@@ -1019,7 +1019,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
         subtitle: "Breakfast & Lunch",
         image: AllImages.waldorfDiningChayaRestaurant,
         description: "Start your day with lavish breakfast buffets, live cooking stations, and freshly prepared favorites, followed by a delightful lunch featuring a variety of gourmet dishes.",
-        gallery: [AllImages.waldorfDiningChayaRestaurant, AllImages.waldorfDiningChayaCrudito, AllImages.waldorfDiningChayaBreakfast],
+        gallery: [AllImages.waldorfDiningChayaRestaurant, AllImages.waldorfDiningChayaBreakfast],
       },
       {
         id: "jao",
@@ -1027,7 +1027,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
         subtitle: "Specialty Fish Restaurant | Lunch",
         image: AllImages.waldorfDiningJaoDining,
         description: "Discover an exceptional fish dining experience featuring fresh fish, expertly prepared specialties, and creative flavors in a relaxed yet elegant tropical setting.",
-        gallery: [AllImages.waldorfDiningJaoDining, AllImages.waldorfDiningJaoTlayuda, AllImages.waldorfDiningJaoTerrace],
+        gallery: [AllImages.waldorfDiningJaoDining, AllImages.waldorfDiningJaoTerrace],
       },
       {
         id: "peacock-alley",
@@ -1035,7 +1035,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
         subtitle: "All-Day Lounge & Bar",
         image: AllImages.waldorfDiningPeacockAlleyDessert,
         description: "A sophisticated gathering place to relax, socialize, and enjoy premium wines, handcrafted cocktails, light bites, and refreshments throughout the day.",
-        gallery: [AllImages.waldorfDiningPeacockAlleyDessert, AllImages.waldorfDiningPeacockAlleyLounge, AllImages.waldorfDiningPeacockAlleyBar],
+        gallery: [AllImages.waldorfDiningPeacockAlleyDessert, AllImages.waldorfDiningPeacockAlleyLounge],
       },
       {
         id: "pool-bar",
@@ -1043,7 +1043,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
         subtitle: "Poolside Dining & Refreshments",
         image: AllImages.waldorfDiningPoolBarPool,
         description: "Enjoy refreshing beverages, freshly prepared light bites, and casual favorites served poolside throughout the day under the Caribbean sun.",
-        gallery: [AllImages.waldorfDiningPoolBarPool, AllImages.waldorfDiningPoolBarBbq, AllImages.waldorfDiningPoolBarCocktails],
+        gallery: [AllImages.waldorfDiningPoolBarPool],
       },
       {
         id: "grand-ballroom-yom-tov-dining",

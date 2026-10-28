@@ -36,7 +36,7 @@ export const EDITION_RESORT_DATA: ResortData = {
       {
         id: "wellness",
         title: "Wellness & Fitness",
-        description: "Fitness, treatments and wellness experiences.",
+        description: "Fitness center, classes and training.",
         image: AllImages.editionWellness2,
         target: { type: "section", section: "wellness" },
       },
@@ -3774,20 +3774,10 @@ export const EDITION_RESORT_DATA: ResortData = {
     ],
   },
   wellness: {
-    title: "Wellness & Spa",
-    description: "Spa, fitness and restorative wellness experiences.",
-    images: AllImages.series.editionWellness,
+    title: "Wellness & Fitness",
+    description: "Fitness center, classes and training.",
+    images: [AllImages.editionWellness2],
     activities: [
-      {
-        id: "beauty-salon",
-        title: "Beauty Salon",
-        description: "Detoxify, relax and rejuvenate as the soothing steam restores your body.",
-      },
-      {
-        id: "body-treatments",
-        title: "Body treatments",
-        description: "Body rituals that offer a journey of renewal through time-honoured techniques.",
-      },
       {
         id: "salt-soul-yoga",
         title: "Salt & Soul Yoga",
@@ -3809,11 +3799,6 @@ export const EDITION_RESORT_DATA: ResortData = {
         description: "Salsa, merengue and bachata through the week.",
       },
       { id: "aqua-zumba", title: "Aqua Zumba", description: "Low-impact classes in the pool." },
-      {
-        id: "rituals",
-        title: "Rituals",
-        description: "Drawn from ancient traditions, our spa rituals are designed to restore balance.",
-      },
       { id: "meditation", title: "Meditation", description: "Guided sessions to start or close the day." },
       {
         id: "technogym-cardio",
@@ -3832,7 +3817,7 @@ export const EDITION_RESORT_DATA: ResortData = {
       id: "spa",
       title: "The Spa",
       subtitle: "An afternoon that undoes the year",
-      image: AllImages.series.editionWellness[0],
+      image: AllImages.editionWellness1,
       description: "The spa offers hydrotherapy pools, a Turkish hammam and steam rooms, alongside a beauty salon and body treatments rooted in time-honoured techniques.",
       stats: [
         { label: "Location", value: "Lower level, main building" },
@@ -3851,7 +3836,12 @@ export const EDITION_RESORT_DATA: ResortData = {
           ],
         },
       ],
-      gallery: AllImages.series.editionWellness,
+      gallery: [AllImages.editionWellness1, AllImages.editionWellness3, AllImages.editionWellness4],
+    },
+    section: {
+      title: "Spa",
+      description: "The spa offers hydrotherapy pools, a Turkish hammam and steam rooms, alongside a beauty salon and body treatments rooted in time-honoured techniques.",
+      images: [AllImages.editionWellness1, AllImages.editionWellness3, AllImages.editionWellness4],
     },
   },
   gallery: {
