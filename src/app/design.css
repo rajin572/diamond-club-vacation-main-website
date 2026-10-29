@@ -152,6 +152,12 @@ html[data-site="guettaway"] .dcv-brand--guettaway,
   font-weight: 700;
   white-space: nowrap;
 }
+.dcv-logo--guettaway {
+  display: none;
+}
+html[data-site="guettaway"] .dcv-logo--guettaway {
+  display: inline;
+}
 .dcv-logo small {
   display: block;
   font: 10px var(--dcv-sans);
