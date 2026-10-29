@@ -670,6 +670,8 @@ import casaNizucLogoWhite from "./mainDesign/casa-nizuc-logo-white.webp";
 // Hotel logos shown above the title on the hotel banners (white artwork, trimmed).
 import stRegisHeroLogo from "./mainDesign/st-regis-hero-logo.webp";
 import editionHeroLogo from "./mainDesign/edition-hero-logo.webp";
+import waldorfHeroLogo from "./mainDesign/waldorf-hero-logo.webp";
+import parkHyattHeroLogo from "./mainDesign/park-hyatt-hero-logo.webp";
 import casaNizucIcon from "./mainDesign/casa-nizuc-icon.webp";
 import casaNizucIconWhite from "./mainDesign/casa-nizuc-icon-white.webp";
 // The kids collage without the orange "I love DC" box (client 2026-10-20: that symbol is only for the St. Regis); used by Guettaway.
@@ -1562,6 +1564,8 @@ export const AllImages = {
   casaNizucLogoWhite,
   stRegisHeroLogo,
   editionHeroLogo,
+  waldorfHeroLogo,
+  parkHyattHeroLogo,
   casaNizucIcon,
   casaNizucIconWhite,
   guettawayKidsProgram,

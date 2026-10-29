@@ -74,7 +74,6 @@ export function ResortDiningPageView({
         title={`Dining`}
         // title={`${data.resortName === "Casa Nizuc" ? "" : data.resortName} Dining`}
         subtitle="World-class Glatt Kosher fine dining, celebrated guest master chefs."
-        logo={data.heroLogo ? { ...data.heroLogo, wordmark: true } : undefined}
       />
 
       <SubNav items={navItems} label={`${data.resortName} sections`} />

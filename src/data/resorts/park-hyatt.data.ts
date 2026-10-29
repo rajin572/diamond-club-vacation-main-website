@@ -10,6 +10,7 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
   resortId: "park-hyatt",
   resortName: "Park Hyatt Riviera Maya",
   kicker: "GUETTAWAY DCP",
+  heroLogo: { image: AllImages.parkHyattHeroLogo, alt: "Park Hyatt Riviera Maya", height: 72 },
   tagline: "Guettaway a Diamond Club production",
   showTagline: false,
   heroImage: AllImages.series.parkHyatt[0],
