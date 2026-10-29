@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { EXPERIENCE_OPTIONS } from "@/components/inquire/inquire.data";
 import { getAdminEmail, sendMail } from "@/lib/email/mailer";
 import { adminEmail, guestEmail, type DetailRow } from "@/lib/email/templates";
 
@@ -64,9 +65,10 @@ export async function POST(request: Request) {
   const data = parsed.data;
   const rows = FIELDS.filter(([key]) => data[key]).map(([key, label]): DetailRow => [label, data[key]]);
   const fullName = `${data.firstName} ${data.lastName}`;
+  const experienceId = EXPERIENCE_OPTIONS.find((option) => option.label === data.experience)?.id;
 
   try {
-    await sendMail({ to: getAdminEmail(), replyTo: data.email, ...adminEmail(data.kind, fullName, rows) });
+    await sendMail({ to: getAdminEmail(experienceId), replyTo: data.email, ...adminEmail(data.kind, fullName, rows) });
   } catch (error) {
     console.error("[inquire] admin email failed", error);
     return NextResponse.json({ error: "We could not send your request. Please try again." }, { status: 500 });
