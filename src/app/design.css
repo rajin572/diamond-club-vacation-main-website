@@ -851,6 +851,15 @@ html[data-site="guettaway"] .dcv-logo--guettaway {
   line-height: 1.6;
   margin: 0;
 }
+.dcv-section-title--center {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+.dcv-section-title--center p {
+  max-width: 720px;
+}
 .dcv-anchor {
   scroll-margin-top: 110px;
 }
