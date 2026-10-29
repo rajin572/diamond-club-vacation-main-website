@@ -864,7 +864,7 @@ export const CASA_NIZUC_DATA: ResortData = {
       {
         id: "mayim",
         title: "Mayim",
-        subtitle: "International · Breakfast, lunch and dinner",
+        subtitle: "",
         image: AllImages.casaNizucDiningMayim,
         description: "It is about reconnecting with the origin. Have breakfast, lunch, and dinner with the silent jungle. It is not an ordinary buffet, it is an altar of wood and water, an immersive experience where the cuisine is designed to put your soul at peace.",
         stats: [{ label: "Serves", value: "Breakfast, lunch and dinner" }, { label: "Dress Code", value: "Casual" }],
@@ -873,7 +873,7 @@ export const CASA_NIZUC_DATA: ResortData = {
       {
         id: "ashan",
         title: "Âshân",
-        subtitle: "Steakhouse · Lunch and dinner",
+        subtitle: "",
         image: AllImages.casaNizucDiningAshan,
         description: "The Temple of Taste. Experience premium steaks with perfect texture and smoky flavors in a natural Eden. Nature and cuisine intertwine here for an unforgettable sensory journey. Enjoy to the last bite!",
         stats: [{ label: "Serves", value: "Lunch and dinner" }, { label: "Dress Code", value: "Formal" }],
@@ -882,7 +882,7 @@ export const CASA_NIZUC_DATA: ResortData = {
       {
         id: "zait",
         title: "Zait",
-        subtitle: "Mediterranean · Lunch and dinner",
+        subtitle: "",
         image: AllImages.casaNizucDiningZait,
         description: "Zait is an ode to the essential, a Mediterranean house that has left the earth behind, and now inhabits the sky. Every meal is a journey between the terrestrial and the celestial. A simple, tasteful banquet, served where Mediterranean meets divine.",
         stats: [{ label: "Serves", value: "Lunch and dinner" }, { label: "Dress Code", value: "Formal" }],
@@ -891,7 +891,7 @@ export const CASA_NIZUC_DATA: ResortData = {
       {
         id: "noam",
         title: "Noam",
-        subtitle: "Coffee House · Ice Cream Parlour · Grab and Go Bites",
+        subtitle: "",
         image: AllImages.casaNizucDiningNoam,
         description: "Every coffee is an artisanal ritual. Awaken your senses with aromas of roasted beans. In this sensory depth, you will find a unique sweetness and delicacy among textures and temperatures.",
         stats: [{ label: "Serves", value: "Breakfast, lunch and dinner" }, { label: "Dress Code", value: "Casual" }],
@@ -900,7 +900,7 @@ export const CASA_NIZUC_DATA: ResortData = {
       {
         id: "ofek",
         title: "Ofek",
-        subtitle: "Bistro Bar",
+        subtitle: "",
         image: AllImages.casaNizucDiningOfek,
         description: "Ofek is a space that inspires the art of soaring above the clouds, serving cocktails meticulously crafted with tropical fruits, fresh botanicals, and light-bodied spirits.",
         stats: [{ label: "Dress Code", value: "Casual" }],
@@ -909,7 +909,7 @@ export const CASA_NIZUC_DATA: ResortData = {
       {
         id: "mussa",
         title: "Mussa",
-        subtitle: "Lobby & Sports Bar",
+        subtitle: "",
         image: AllImages.casaNizucDiningMussa,
         description: "Where time stands still. Discover the peace of your intended destination. Our cocktails tell unique stories, harmonizing with the clouds, the ocean, and the mangroves. The ideal backdrop for beginning your next memorable journey.",
         stats: [{ label: "Dress Code", value: "Casual" }],
@@ -919,7 +919,7 @@ export const CASA_NIZUC_DATA: ResortData = {
       {
         id: "grand-ballroom-yom-tov-dining",
         title: "Grand Ballroom – Yom Tov Dining",
-        subtitle: "Festive holiday dinners",
+        subtitle: "",
         image: AllImages.casaNizucDiningGrandBallroom,
         description: "Celebrate Yom Tov with elegant holiday dinners in our beautiful Grand Ballroom, featuring exceptional gourmet cuisine, attentive service, and a warm, festive atmosphere for family and friends.",
         gallery: [AllImages.casaNizucDiningGrandBallroom],

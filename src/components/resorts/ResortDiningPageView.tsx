@@ -71,84 +71,85 @@ export function ResortDiningPageView({
       <DetailHero
         image={heroImage}
         kicker={data.programTitle || "Passover 2027"}
-        title={`${data.resortName} Dining`}
-        subtitle="World-class Glatt Kosher fine dining, celebrated guest master chefs, and strict rabbinical supervision."
+        title={`Dining`}
+        // title={`${data.resortName === "Casa Nizuc" ? "" : data.resortName} Dining`}
+        subtitle="World-class Glatt Kosher fine dining, celebrated guest master chefs."
       />
 
       <SubNav items={navItems} label={`${data.resortName} sections`} />
 
       {/* SECTION 1: Culinary Overview & Interactive Modals */}
       {SHOW_CULINARY_PROGRAM_ON_DINING_PAGE && (
-      <Wrap className="dcv-wrap--stack">
-        <SectionTitle
-          title="Passover Culinary Program"
-        />
+        <Wrap className="dcv-wrap--stack">
+          <SectionTitle
+            title="Passover Culinary Program"
+          />
 
-        <div className="dcv-grid2">
-          {/* Kosher Supervision Card */}
-          <article
-            className="dcv-card dcv-card--interactive"
-            onClick={() => setActiveModal("supervision")}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                setActiveModal("supervision");
-              }
-            }}
-          >
-            <Image
-              src={supervisionImage}
-              alt="Kosher Supervision"
-              sizes="(max-width: 900px) 100vw, 50vw"
-              priority={false}
-              // The Guettaway banner is a wide wordmark (2048x725): show it whole (contain), never cropped (client 2026-10-19).
-              style={{ objectFit: "cover", objectPosition: isGuettaway ? "center 30%" : "center 20%" }}
-            />
-            <div className="dcv-body">
-              <div className="dcv-card-tag">Glatt Kosher · Cholov Yisroel</div>
-              <h3>Kosher Supervision</h3>
-              <p>
-                Strict rabbinical oversight with 24/7 on-site mashgichim, Bishul Yisroel,
-                Chassidishe Shechita, and non-gebrokts options.
-              </p>
-              <span className="dcv-link">View Supervision Credentials →</span>
-            </div>
-          </article>
+          <div className="dcv-grid2">
+            {/* Kosher Supervision Card */}
+            <article
+              className="dcv-card dcv-card--interactive"
+              onClick={() => setActiveModal("supervision")}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setActiveModal("supervision");
+                }
+              }}
+            >
+              <Image
+                src={supervisionImage}
+                alt="Kosher Supervision"
+                sizes="(max-width: 900px) 100vw, 50vw"
+                priority={false}
+                // The Guettaway banner is a wide wordmark (2048x725): show it whole (contain), never cropped (client 2026-10-19).
+                style={{ objectFit: "cover", objectPosition: isGuettaway ? "center 30%" : "center 20%" }}
+              />
+              <div className="dcv-body">
+                <div className="dcv-card-tag">Glatt Kosher · Cholov Yisroel</div>
+                <h3>Kosher Supervision</h3>
+                <p>
+                  Strict rabbinical oversight with 24/7 on-site mashgichim, Bishul Yisroel,
+                  Chassidishe Shechita, and non-gebrokts options.
+                </p>
+                <span className="dcv-link">View Supervision Credentials →</span>
+              </div>
+            </article>
 
-          {/* Celebrity Chefs Card */}
-          <article
-            className="dcv-card dcv-card--interactive"
-            onClick={() => setActiveModal("chefs")}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                setActiveModal("chefs");
-              }
-            }}
-          >
-            <Image
-              src={chefImage}
-              alt={isGuettaway ? "Executive Chef Chaim Levy" : "Executive Chef Donny Rogoff"}
-              sizes="(max-width: 900px) 100vw, 50vw"
-              priority={false}
-              style={{ objectFit: "cover", objectPosition: "center" }}
-            />
-            <div className="dcv-body">
-              <div className="dcv-card-tag">Master Chefs · Fine Dining</div>
-              <h3>Celebrity Chefs</h3>
-              <p>
-                Acclaimed international culinary masters crafting bespoke multi-course menus,
-                artisanal pastries, and gastronomic holiday showcases.
-              </p>
-              <span className="dcv-link">Meet Our Executive Chefs →</span>
-            </div>
-          </article>
-        </div>
-      </Wrap>
+            {/* Celebrity Chefs Card */}
+            <article
+              className="dcv-card dcv-card--interactive"
+              onClick={() => setActiveModal("chefs")}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setActiveModal("chefs");
+                }
+              }}
+            >
+              <Image
+                src={chefImage}
+                alt={isGuettaway ? "Executive Chef Chaim Levy" : "Executive Chef Donny Rogoff"}
+                sizes="(max-width: 900px) 100vw, 50vw"
+                priority={false}
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+              <div className="dcv-body">
+                <div className="dcv-card-tag">Master Chefs · Fine Dining</div>
+                <h3>Celebrity Chefs</h3>
+                <p>
+                  Acclaimed international culinary masters crafting bespoke multi-course menus,
+                  artisanal pastries, and gastronomic holiday showcases.
+                </p>
+                <span className="dcv-link">Meet Our Executive Chefs →</span>
+              </div>
+            </article>
+          </div>
+        </Wrap>
       )}
 
       {/* SECTION 2: Complete Passover Restaurant Venues Grid */}
@@ -264,45 +265,45 @@ export function ResortDiningPageView({
 
       {/* SECTION 5: Inquire / Reservations CTA */}
       {SHOW_DINING_INQUIRY_ON_DINING_PAGE && (
-      <Wrap className="dcv-wrap--stack">
-        <div
-          style={{
-            textAlign: "center",
-            paddingBottom: "40px",
-          }}
-        >
+        <Wrap className="dcv-wrap--stack">
           <div
             style={{
-              background: "#fbf9f4",
-              border: "1px solid rgba(202, 160, 85, 0.3)",
-              borderRadius: "20px",
-              padding: "48px 24px",
-              maxWidth: "760px",
-              margin: "0 auto",
+              textAlign: "center",
+              paddingBottom: "40px",
             }}
           >
-          <div className="dcv-card-tag" style={{ display: "inline-block", marginBottom: "12px" }}>
-            PASSOVER 2027 RESERVATIONS
+            <div
+              style={{
+                background: "#fbf9f4",
+                border: "1px solid rgba(202, 160, 85, 0.3)",
+                borderRadius: "20px",
+                padding: "48px 24px",
+                maxWidth: "760px",
+                margin: "0 auto",
+              }}
+            >
+              <div className="dcv-card-tag" style={{ display: "inline-block", marginBottom: "12px" }}>
+                PASSOVER 2027 RESERVATIONS
+              </div>
+              <h2 style={{ fontSize: "32px", margin: "0 0 12px", fontFamily: "var(--dcv-serif)" }}>
+                Plan Your Dining Experience
+              </h2>
+              <p
+                style={{
+                  color: "var(--dcv-muted)",
+                  fontSize: "16px",
+                  lineHeight: 1.6,
+                  maxWidth: "540px",
+                  margin: "0 auto 24px",
+                }}
+              >
+                Have dietary preferences, need a private Seder room, or wish to reserve special seating?
+                Our culinary concierge team is at your service.
+              </p>
+              <DesignButton href={inquireDiningUrl}>Inquire About Dining</DesignButton>
+            </div>
           </div>
-          <h2 style={{ fontSize: "32px", margin: "0 0 12px", fontFamily: "var(--dcv-serif)" }}>
-            Plan Your Dining Experience
-          </h2>
-          <p
-            style={{
-              color: "var(--dcv-muted)",
-              fontSize: "16px",
-              lineHeight: 1.6,
-              maxWidth: "540px",
-              margin: "0 auto 24px",
-            }}
-          >
-            Have dietary preferences, need a private Seder room, or wish to reserve special seating?
-            Our culinary concierge team is at your service.
-          </p>
-          <DesignButton href={inquireDiningUrl}>Inquire About Dining</DesignButton>
-          </div>
-        </div>
-      </Wrap>
+        </Wrap>
       )}
 
       {/* Modals */}
