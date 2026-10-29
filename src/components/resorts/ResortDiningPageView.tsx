@@ -73,7 +73,6 @@ export function ResortDiningPageView({
         kicker={data.programTitle || "Passover 2027"}
         title={`${data.resortName} Dining`}
         subtitle="World-class Glatt Kosher fine dining, celebrated guest master chefs, and strict rabbinical supervision."
-        logo={data.heroLogo ? { ...data.heroLogo, position: "top" } : undefined}
       />
 
       <SubNav items={navItems} label={`${data.resortName} sections`} />
