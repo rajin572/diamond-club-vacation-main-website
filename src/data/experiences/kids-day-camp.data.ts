@@ -196,8 +196,8 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
       title: "Kids Come First",
       items: [
         "Dedicated counselors for every age group",
-        "On-site activities and entertainment",
         "Child-friendly menus and 24/7 kid-approved snacks",
+        "On-site activities and entertainment",
       ],
     },
     team: [

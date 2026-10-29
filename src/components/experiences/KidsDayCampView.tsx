@@ -39,7 +39,7 @@ export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
 
       {overview && (
         <Wrap>
-          <SectionTitle title={overview.title} description={overview.description} />
+          <SectionTitle className="dcv-section-title--center" title={overview.title} description={overview.description} />
         </Wrap>
       )}
 
