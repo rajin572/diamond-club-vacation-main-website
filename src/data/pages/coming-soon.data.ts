@@ -21,6 +21,11 @@ export const comingSoonRegistry = {
     title: "Private Events",
     tagline: "Let us create your dream destination event.",
   },
+  "casa-nizuc": {
+    id: "casa-nizuc",
+    title: "Casa Nizuc",
+    tagline: "Year-Round Luxury Kosher Hospitality",
+  },
 } satisfies Record<string, ComingSoonPageData>;
 
 export type ComingSoonId = keyof typeof comingSoonRegistry;

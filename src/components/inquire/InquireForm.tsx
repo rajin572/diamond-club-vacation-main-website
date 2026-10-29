@@ -207,11 +207,11 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
       </div>
 
       {/* Only the Guettaway, Reserve and Blue Inquire pages show contact details, before the form (client 2026-10-22); every other Inquire page has none. */}
-      {(isGuettaway || isPassover) && (
+      {/* {(isGuettaway || isPassover) && (
         <div style={{ marginBottom: 40 }}>
           <ContactDetails variant={isGuettaway ? "guettaway" : "passover"} />
         </div>
-      )}
+      )} */}
 
       <form onSubmit={onSubmit} noValidate>
         {step === 0 && (
