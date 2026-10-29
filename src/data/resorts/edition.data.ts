@@ -11,6 +11,7 @@ export const EDITION_RESORT_DATA: ResortData = {
   resortId: "edition",
   resortName: "The Riviera Maya EDITION at Kanai",
   kicker: "DIAMOND CLUB RESERVE",
+  heroLogo: { image: AllImages.editionHeroLogo, alt: "The Riviera Maya EDITION at Kanai", height: 76 },
   tagline: "",
   heroImage: AllImages.edition1,
   overviewLabel: "Hotel Overview",

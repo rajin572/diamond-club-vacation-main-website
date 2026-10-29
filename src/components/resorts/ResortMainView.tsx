@@ -95,7 +95,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
         title={data.resortName}
         singleLine
         subtitle={data.showTagline === false ? undefined : data.tagline}
-        logo={data.heroLogo ? { ...data.heroLogo, wordmark: true } : undefined}
+        logo={data.heroLogo ? { ...data.heroLogo, position: "top" } : undefined}
         actions={program?.brochure ? <ProgramBrochureButton brochure={program.brochure} /> : undefined}
       />
       <SubNav items={navItems} label={`${data.resortName} sections`} />
