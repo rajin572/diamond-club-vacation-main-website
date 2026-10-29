@@ -1903,6 +1903,10 @@ html[data-site="guettaway"] [data-hide-on~="guettaway"] {
     margin-top: 16px;
     border-bottom: 0;
   }
+  .dcv-mobile-menu a.dcv-btn--ghost {
+    margin-top: 12px;
+    border-bottom: 1px solid #b87f23;
+  }
 
   /* home: tiles 2-up, flat welcome section */
   .dcv-chain {
@@ -4317,5 +4321,103 @@ html[data-guettaway-splash] .dcv-splash {
   }
   .dcv-title-logo--hero {
     height: 60px;
+  }
+}
+
+/* ---------- login page (/login, design only) ---------- */
+.dcv-login {
+  max-width: var(--dcv-max);
+  margin: 0 auto;
+  padding: 56px 34px 24px;
+}
+.dcv-login-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 560px;
+  background: #fff;
+  border: 1px solid var(--dcv-line);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 18px 48px rgba(24, 29, 31, 0.1);
+}
+.dcv-login-art {
+  position: relative;
+  min-height: 320px;
+  background: #171717;
+}
+.dcv-login-art img {
+  object-fit: cover;
+}
+.dcv-login-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px clamp(24px, 5vw, 64px);
+}
+.dcv-login-panel h1 {
+  font-family: var(--dcv-serif);
+  font-size: clamp(30px, 3.4vw, 44px);
+  font-weight: 400;
+  margin: 28px 0 8px;
+}
+.dcv-login-lead {
+  color: var(--dcv-muted);
+  margin: 0 0 24px;
+}
+.dcv-login-brand {
+  align-items: center;
+  gap: 16px;
+}
+.dcv-login-brand .dcv-brand-seal {
+  height: 54px;
+  width: auto;
+  flex-shrink: 0;
+}
+.dcv-login-fields {
+  grid-template-columns: 1fr;
+}
+.dcv-login-submit {
+  width: 100%;
+  margin-top: 24px;
+  gap: 8px;
+}
+/* Diamond Club Vacations by default; Guettaway on guettaways.com and when opened from a Guettaway page (?brand=guettaway) */
+.dcv-login-brand-dc,
+.dcv-login-art-dc {
+  display: flex;
+}
+.dcv-login-art-dc {
+  display: block;
+}
+.dcv-login-brand-guettaway,
+.dcv-login-art-guettaway {
+  display: none;
+}
+html[data-site="guettaway"] .dcv-login-brand-dc,
+html[data-site="guettaway"] .dcv-login-art-dc,
+.dcv-login--guettaway .dcv-login-brand-dc,
+.dcv-login--guettaway .dcv-login-art-dc {
+  display: none;
+}
+html[data-site="guettaway"] .dcv-login-brand-guettaway,
+.dcv-login--guettaway .dcv-login-brand-guettaway {
+  display: flex;
+}
+html[data-site="guettaway"] .dcv-login-art-guettaway,
+.dcv-login--guettaway .dcv-login-art-guettaway {
+  display: block;
+}
+@media (max-width: 900px) {
+  .dcv-login {
+    padding: 28px 16px 8px;
+  }
+  .dcv-login-card {
+    grid-template-columns: 1fr;
+  }
+  .dcv-login-art {
+    display: none;
+  }
+  .dcv-login-panel {
+    padding: 36px 24px;
   }
 }

@@ -136,3 +136,7 @@ export function termsHrefForPath(pathname: string): string | null {
  */
 export const CASA_NIZUC_HREF = "/casa-nizuc";
 export const REQUEST_A_QUOTE_HREF = "/request-a-quote";
+
+/** Login page (design only for now). `brand=guettaway` shows the Guettaway branding on the other domains' Guettaway pages. */
+export const LOGIN_HREF = "/login";
+export const GUETTAWAY_LOGIN_HREF = "/login?brand=guettaway";
