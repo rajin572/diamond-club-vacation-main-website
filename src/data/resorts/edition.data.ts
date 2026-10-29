@@ -11,7 +11,7 @@ export const EDITION_RESORT_DATA: ResortData = {
   resortId: "edition",
   resortName: "The Riviera Maya EDITION at Kanai",
   kicker: "DIAMOND CLUB RESERVE",
-  tagline: "Contemporary Riviera Maya luxury with its own rooms, dining, pools, spa, wellness and gallery.",
+  tagline: "",
   heroImage: AllImages.edition1,
   overviewLabel: "Hotel Overview",
   showSubNav: true,
