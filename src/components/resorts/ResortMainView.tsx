@@ -93,6 +93,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
         image={data.heroImage}
         kicker={data.kicker}
         title={data.resortName}
+        singleLine
         subtitle={data.showTagline === false ? undefined : data.tagline}
         logo={data.heroLogo ? { ...data.heroLogo, wordmark: true } : undefined}
         actions={program?.brochure ? <ProgramBrochureButton brochure={program.brochure} /> : undefined}
