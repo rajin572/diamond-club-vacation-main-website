@@ -18,9 +18,17 @@ function getTransporter() {
   return transporter;
 }
 
-/** Where the admin copy of every submission goes; defaults to the sending mailbox. */
-export function getAdminEmail() {
-  return process.env.ADMIN_EMAIL || process.env.EMAIL_USER || "";
+/** Env var holding the admin inbox for each program's inquiries (comma-separate several addresses). */
+const PROGRAM_ADMIN_ENV: Record<string, string> = {
+  "diamond-club-reserve": "ADMIN_EMAIL_RESERVE",
+  guttaway: "ADMIN_EMAIL_GUETTAWAY",
+  blue: "ADMIN_EMAIL_BLUE",
+};
+
+/** Where the admin copy of a submission goes: the program's own inbox, else ADMIN_EMAIL, else the sending mailbox. */
+export function getAdminEmail(experienceId?: string) {
+  const programEnv = experienceId ? PROGRAM_ADMIN_ENV[experienceId] : undefined;
+  return (programEnv && process.env[programEnv]) || process.env.ADMIN_EMAIL || process.env.EMAIL_USER || "";
 }
 
 export async function sendMail({ to, subject, html, text, replyTo }: MailInput) {
