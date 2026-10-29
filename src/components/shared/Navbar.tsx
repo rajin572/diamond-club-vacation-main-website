@@ -8,7 +8,7 @@ import { PRIMARY_NAV } from "./nav.data";
 import { MobileMenu } from "./MobileMenu";
 import { getExperiencesHref, getInquireContext } from "@/lib/inquire-context";
 import { SectionLink } from "./design/SectionLink";
-import { REQUEST_A_QUOTE_HREF, inquireHref } from "@/lib/routes";
+import { GUETTAWAY_LOGIN_HREF, LOGIN_HREF, REQUEST_A_QUOTE_HREF, inquireHref } from "@/lib/routes";
 import { MAIN_SITE_URL } from "@/lib/site-hosts";
 import { AllImages } from "../../../public/images/AllImages";
 
@@ -63,6 +63,9 @@ export function Navbar() {
     (pathname ? pathname.startsWith("/request-a-quote/") : false);
   // Guettaway pages (its own domain, or the program and its hotels on the other sites) swap the main brand for the Guettaway one (client 2026-10-26).
   const onGuettawayPage = inquiry?.programId === GUETTAWAY_PROGRAM_ID;
+  // Login button after Inquire (client 2026-10-29): design only; it opens the login page with the brand of the site the visitor is on.
+  const onLoginPage = pathname === "/login" || (pathname ? pathname.startsWith("/login/") : false);
+  const loginHref = onGuettawayPage ? GUETTAWAY_LOGIN_HREF : LOGIN_HREF;
 
   return (
     <>
@@ -117,6 +120,11 @@ export function Navbar() {
                 {actionLabel}
               </Link>
             )}
+            {!onLoginPage && (
+              <Link className="dcv-btn dcv-btn--ghost" href={loginHref}>
+                LOGIN
+              </Link>
+            )}
           </nav>
 
           <MobileMenu
@@ -124,6 +132,7 @@ export function Navbar() {
             inquire={{ label: actionLabel, href: actionHref }}
             isPassoverPage={Boolean(inquiry)}
             hideAction={onInquirePage}
+            login={onLoginPage ? undefined : { label: "LOGIN", href: loginHref }}
           />
         </div>
       </header>
