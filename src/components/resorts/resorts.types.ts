@@ -65,7 +65,7 @@ export interface ResortData {
   showTagline?: boolean;
   heroImage: DesignImage;
   /** The hotel's wordmark shown above the hero title (white artwork). */
-  heroLogo?: { image: DesignImage; alt: string };
+  heroLogo?: { image: DesignImage; alt: string; /** Height in px on a desktop banner (default 76). */ height?: number };
 
   /** First label of the floating sub navigation ("Hotel Overview", "Overview", ...). */
   overviewLabel: string;

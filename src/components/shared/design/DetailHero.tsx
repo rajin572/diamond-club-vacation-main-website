@@ -25,7 +25,7 @@ interface DetailHeroProps {
   /** CSS object-position of the photo, for tall or off-centre images (e.g. "50% 20%"). */
   imagePosition?: string;
   /** Brand logo shown on the banner (default position is "left" next to the title, like Guettaway). */
-  logo?: { image: DesignImage; alt: string; wordmark?: boolean; position?: "top" | "left" };
+  logo?: { image: DesignImage; alt: string; wordmark?: boolean; position?: "top" | "left"; /** Height in px of a "top" logo (default 76). */ height?: number };
   /** Buttons shown under the title (e.g. the program's Brochure button). */
   actions?: ReactNode;
   /** Keep the title on one line on tablet and desktop (the font scales with the screen); it still wraps on phones. */
@@ -53,7 +53,7 @@ export function DetailHero({ image, kicker, title, subtitle, imagePosition, acti
             alt={logo.alt}
             priority
             className="dcv-hero-logo"
-            style={{ width: "auto", height: "76px", margin: "0 auto 16px", objectFit: "contain", filter: "drop-shadow(0 2px 14px rgba(0,0,0,0.5))" }}
+            style={{ width: "auto", height: `${logo.height ?? 76}px`, maxWidth: "80%", margin: "0 auto 16px", objectFit: "contain", filter: "drop-shadow(0 2px 14px rgba(0,0,0,0.5))" }}
           />
         )}
         {kicker && <div className="dcv-kicker">{kicker}</div>}

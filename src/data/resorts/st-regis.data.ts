@@ -21,7 +21,7 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
   tagline: "Refined beachfront luxury at Kanai, presented as a complete hotel experience within DIAMOND CLUB RESERVE.",
   showTagline: false,
   heroImage: AllImages.stregis7,
-  heroLogo: { image: AllImages.logoStRegisWhite, alt: "St. Regis" },
+  heroLogo: { image: AllImages.stRegisHeroLogo, alt: "St. Regis Kanai, Riviera Maya", height: 120 },
   overviewLabel: "Hotel Overview",
   showSubNav: true,
   overview: {

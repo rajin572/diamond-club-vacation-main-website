@@ -8,6 +8,7 @@ export const CASA_NIZUC_DATA: ResortData = {
   resortId: "casa-nizuc",
   resortName: "Casa Nizuc",
   kicker: "Year-Round Resort",
+  heroLogo: { image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc", height: 96 },
   tagline: "Year-round luxury kosher hospitality in Cancún.",
   heroImage: AllImages.series.casa[0],
   overviewLabel: "Overview",
