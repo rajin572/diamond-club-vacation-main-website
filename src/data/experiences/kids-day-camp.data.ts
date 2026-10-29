@@ -181,7 +181,7 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
   // From the client's page www.guettaways.com/kids-family-programs (client 2026-10-20: "Waldorf Astoria Day Camp").
   guttaway: {
     programId: "guttaway",
-    programName: "Guettaway a Diamond Club production",
+    programName: "Guettaway by DCP",
     hero: {
       title: "Day Camp",
       description: "",

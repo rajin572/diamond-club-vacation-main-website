@@ -9,7 +9,7 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
   programTitle: "Guettaway a Diamond Club production",
   resortId: "park-hyatt",
   resortName: "Park Hyatt Riviera Maya",
-  kicker: "GUETTAWAY DCP",
+  kicker: "Guettaway by DCP",
   heroLogo: { image: AllImages.parkHyattHeroLogo, alt: "Park Hyatt Riviera Maya", height: 72 },
   tagline: "Guettaway a Diamond Club production",
   showTagline: false,
@@ -57,9 +57,9 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
     description: "Breathe in the Caribbean Sea from our airy rooms and suites at Park Hyatt Riviera Maya, all with private balconies, a dose of sophistication and luxury amenities.",
     linkToDetails: true,
     items: [
-    // Room lists. Only one block is switched on (not commented); swap with: npm run rooms -- park-hyatt=hyatt-site | original | status
+      // Room lists. Only one block is switched on (not commented); swap with: npm run rooms -- park-hyatt=hyatt-site | original | status
 
-    // @rooms:begin hyatt-site | hyatt.com rooms page: 11 rooms and suites with the Hyatt photos
+      // @rooms:begin hyatt-site | hyatt.com rooms page: 11 rooms and suites with the Hyatt photos
       {
         id: "1-king-bed",
         title: "King Bed",
@@ -475,481 +475,481 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
           AllImages.parkHyattRoomCanphP0005KingRoomEntryArtwork,
         ],
       },
-    // @rooms:end hyatt-site
+      // @rooms:end hyatt-site
 
-    // @rooms:begin original | The original nine rooms
-    //       {
-    //         id: "king-room",
-    //         title: "King Room",
-    //         subtitle: "1 king bed",
-    //         image: AllImages.series.parkHyatt[2],
-    //         description: "Warm natural woods, stone accents and floor-to-ceiling glass in a serene setting steps from the shoreline.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 king bed" },
-    //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Beds & Bedding",
-    //             items: [
-    //               "1 King or 2 Queen Beds where applicable",
-    //               "Cribs permitted",
-    //               "Duvet and Frette luxury linens",
-    //               "Rollaway bed available upon request",
-    //             ],
-    //           },
-    //           {
-    //             title: "Room Features",
-    //             items: [
-    //               "Air-conditioned",
-    //               "Connecting rooms available for some rooms",
-    //               "Terrace",
-    //             ],
-    //           },
-    //           {
-    //             title: "Bath & Bathroom",
-    //             items: [
-    //               "Luxury bath amenities",
-    //               "Separate bathtub and shower",
-    //               "Double vanities",
-    //               "Lighted makeup mirror",
-    //               "Hair dryer",
-    //               "Robe",
-    //               "Slippers",
-    //             ],
-    //           },
-    //           {
-    //             title: "Internet & Phones",
-    //             items: [
-    //               "Cordless phone",
-    //               "Voicemail and speaker phone",
-    //               "Complimentary wireless internet",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 0),
-    //       },
-    //       {
-    //         id: "queen-room",
-    //         title: "Queen Room",
-    //         subtitle: "1 king bed",
-    //         image: AllImages.series.parkHyatt[3],
-    //         description: "Designed for quiet relaxation with plush double bedding, curated organic finishes and private terrace.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 king bed" },
-    //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Beds & Bedding",
-    //             items: [
-    //               "1 King or 2 Queen Beds where applicable",
-    //               "Cribs permitted",
-    //               "Duvet and Frette luxury linens",
-    //               "Rollaway bed available upon request",
-    //             ],
-    //           },
-    //           {
-    //             title: "Room Features",
-    //             items: [
-    //               "Air-conditioned",
-    //               "Connecting rooms available for some rooms",
-    //               "Terrace",
-    //             ],
-    //           },
-    //           {
-    //             title: "Bath & Bathroom",
-    //             items: [
-    //               "Luxury bath amenities",
-    //               "Separate bathtub and shower",
-    //               "Double vanities",
-    //               "Lighted makeup mirror",
-    //               "Hair dryer",
-    //               "Robe",
-    //               "Slippers",
-    //             ],
-    //           },
-    //           {
-    //             title: "Internet & Phones",
-    //             items: [
-    //               "Cordless phone",
-    //               "Voicemail and speaker phone",
-    //               "Complimentary wireless internet",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 1),
-    //       },
-    //       {
-    //         id: "ocean-view-king",
-    //         title: "Ocean View King",
-    //         subtitle: "1 king bed · ocean view",
-    //         image: AllImages.series.parkHyatt[4],
-    //         description: "Elevated views over the Caribbean sea, with custom King bed, natural wood details, and deep soaking tub.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 king bed" },
-    //           { label: "View", value: "Ocean view" },
-    //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Beds & Bedding",
-    //             items: [
-    //               "1 King or 2 Queen Beds where applicable",
-    //               "Cribs permitted",
-    //               "Duvet and Frette luxury linens",
-    //               "Rollaway bed available upon request",
-    //             ],
-    //           },
-    //           {
-    //             title: "Room Features",
-    //             items: [
-    //               "Air-conditioned",
-    //               "Connecting rooms available for some rooms",
-    //               "Terrace",
-    //             ],
-    //           },
-    //           {
-    //             title: "Bath & Bathroom",
-    //             items: [
-    //               "Luxury bath amenities",
-    //               "Separate bathtub and shower",
-    //               "Double vanities",
-    //               "Lighted makeup mirror",
-    //               "Hair dryer",
-    //               "Robe",
-    //               "Slippers",
-    //             ],
-    //           },
-    //           {
-    //             title: "Internet & Phones",
-    //             items: [
-    //               "Cordless phone",
-    //               "Voicemail and speaker phone",
-    //               "Complimentary wireless internet",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 2),
-    //       },
-    //       {
-    //         id: "ocean-view-king-private-pool",
-    //         title: "Ocean View King, Private Pool",
-    //         subtitle: "1 king bed · ocean view · private pool",
-    //         image: AllImages.series.parkHyatt[5],
-    //         description: "The perfect blend of horizon ocean vistas and your own private terrace pool for peaceful morning and evening dips.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 king bed" },
-    //           { label: "View", value: "Ocean view" },
-    //           { label: "Pool", value: "Private pool" },
-    //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Beds & Bedding",
-    //             items: [
-    //               "1 King or 2 Queen Beds where applicable",
-    //               "Cribs permitted",
-    //               "Duvet and Frette luxury linens",
-    //               "Rollaway bed available upon request",
-    //             ],
-    //           },
-    //           {
-    //             title: "Room Features",
-    //             items: [
-    //               "Air-conditioned",
-    //               "Connecting rooms available for some rooms",
-    //               "Terrace",
-    //             ],
-    //           },
-    //           {
-    //             title: "Bath & Bathroom",
-    //             items: [
-    //               "Luxury bath amenities",
-    //               "Separate bathtub and shower",
-    //               "Double vanities",
-    //               "Lighted makeup mirror",
-    //               "Hair dryer",
-    //               "Robe",
-    //               "Slippers",
-    //             ],
-    //           },
-    //           {
-    //             title: "Internet & Phones",
-    //             items: [
-    //               "Cordless phone",
-    //               "Voicemail and speaker phone",
-    //               "Complimentary wireless internet",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 3),
-    //       },
-    //       {
-    //         id: "plunge-pool-deluxe-suite",
-    //         title: "Plunge Pool Deluxe Suite",
-    //         subtitle: "1 king bed suite · ocean view · plunge pool",
-    //         image: AllImages.series.parkHyatt[6],
-    //         description: "Expansive luxury suite featuring an independent parlor, oversized private pool terrace, and panoramic Caribbean scenery.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 king bed suite" },
-    //           { label: "View", value: "Ocean view" },
-    //           { label: "Pool", value: "Plunge pool" },
-    //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Beds & Bedding",
-    //             items: [
-    //               "1 King or 2 Queen Beds where applicable",
-    //               "Cribs permitted",
-    //               "Duvet and Frette luxury linens",
-    //               "Rollaway bed available upon request",
-    //             ],
-    //           },
-    //           {
-    //             title: "Room Features",
-    //             items: [
-    //               "Air-conditioned",
-    //               "Connecting rooms available for some rooms",
-    //               "Terrace",
-    //             ],
-    //           },
-    //           {
-    //             title: "Bath & Bathroom",
-    //             items: [
-    //               "Luxury bath amenities",
-    //               "Separate bathtub and shower",
-    //               "Double vanities",
-    //               "Lighted makeup mirror",
-    //               "Hair dryer",
-    //               "Robe",
-    //               "Slippers",
-    //             ],
-    //           },
-    //           {
-    //             title: "Internet & Phones",
-    //             items: [
-    //               "Cordless phone",
-    //               "Voicemail and speaker phone",
-    //               "Complimentary wireless internet",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 4),
-    //       },
-    //       {
-    //         id: "private-pool-deluxe-suite",
-    //         title: "Private Pool Deluxe Suite",
-    //         subtitle: "1 king bed suite · ocean view · private pool",
-    //         image: AllImages.series.parkHyatt[7],
-    //         description: "Exceptional coastal retreat boasting a larger private swimming pool, secluded sun deck, and full personal concierge service.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 king bed suite" },
-    //           { label: "View", value: "Ocean view" },
-    //           { label: "Pool", value: "Private pool" },
-    //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Beds & Bedding",
-    //             items: [
-    //               "1 King or 2 Queen Beds where applicable",
-    //               "Cribs permitted",
-    //               "Duvet and Frette luxury linens",
-    //               "Rollaway bed available upon request",
-    //             ],
-    //           },
-    //           {
-    //             title: "Room Features",
-    //             items: [
-    //               "Air-conditioned",
-    //               "Connecting rooms available for some rooms",
-    //               "Terrace",
-    //             ],
-    //           },
-    //           {
-    //             title: "Bath & Bathroom",
-    //             items: [
-    //               "Luxury bath amenities",
-    //               "Separate bathtub and shower",
-    //               "Double vanities",
-    //               "Lighted makeup mirror",
-    //               "Hair dryer",
-    //               "Robe",
-    //               "Slippers",
-    //             ],
-    //           },
-    //           {
-    //             title: "Internet & Phones",
-    //             items: [
-    //               "Cordless phone",
-    //               "Voicemail and speaker phone",
-    //               "Complimentary wireless internet",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 5),
-    //       },
-    //       {
-    //         id: "plunge-pool-premium-suite",
-    //         title: "Plunge Pool Premium Suite",
-    //         subtitle: "1 king bed suite · ocean view · plunge pool",
-    //         image: AllImages.series.parkHyatt[8],
-    //         description: "Plunge Pool Premium Suite at Park Hyatt Riviera Maya: 1 king bed suite · ocean view · plunge pool.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 king bed suite" },
-    //           { label: "View", value: "Ocean view" },
-    //           { label: "Pool", value: "Plunge pool" },
-    //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Beds & Bedding",
-    //             items: [
-    //               "1 King or 2 Queen Beds where applicable",
-    //               "Cribs permitted",
-    //               "Duvet and Frette luxury linens",
-    //               "Rollaway bed available upon request",
-    //             ],
-    //           },
-    //           {
-    //             title: "Room Features",
-    //             items: [
-    //               "Air-conditioned",
-    //               "Connecting rooms available for some rooms",
-    //               "Terrace",
-    //             ],
-    //           },
-    //           {
-    //             title: "Bath & Bathroom",
-    //             items: [
-    //               "Luxury bath amenities",
-    //               "Separate bathtub and shower",
-    //               "Double vanities",
-    //               "Lighted makeup mirror",
-    //               "Hair dryer",
-    //               "Robe",
-    //               "Slippers",
-    //             ],
-    //           },
-    //           {
-    //             title: "Internet & Phones",
-    //             items: [
-    //               "Cordless phone",
-    //               "Voicemail and speaker phone",
-    //               "Complimentary wireless internet",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 0),
-    //       },
-    //       {
-    //         id: "private-pool-premium-suite",
-    //         title: "Private Pool Premium Suite",
-    //         subtitle: "1 king bed suite · ocean view · private pool",
-    //         image: AllImages.series.parkHyatt[9],
-    //         description: "Private Pool Premium Suite at Park Hyatt Riviera Maya: 1 king bed suite · ocean view · private pool.",
-    //         stats: [
-    //           { label: "Bedding", value: "1 king bed suite" },
-    //           { label: "View", value: "Ocean view" },
-    //           { label: "Pool", value: "Private pool" },
-    //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Beds & Bedding",
-    //             items: [
-    //               "1 King or 2 Queen Beds where applicable",
-    //               "Cribs permitted",
-    //               "Duvet and Frette luxury linens",
-    //               "Rollaway bed available upon request",
-    //             ],
-    //           },
-    //           {
-    //             title: "Room Features",
-    //             items: [
-    //               "Air-conditioned",
-    //               "Connecting rooms available for some rooms",
-    //               "Terrace",
-    //             ],
-    //           },
-    //           {
-    //             title: "Bath & Bathroom",
-    //             items: [
-    //               "Luxury bath amenities",
-    //               "Separate bathtub and shower",
-    //               "Double vanities",
-    //               "Lighted makeup mirror",
-    //               "Hair dryer",
-    //               "Robe",
-    //               "Slippers",
-    //             ],
-    //           },
-    //           {
-    //             title: "Internet & Phones",
-    //             items: [
-    //               "Cordless phone",
-    //               "Voicemail and speaker phone",
-    //               "Complimentary wireless internet",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 1),
-    //       },
-    //       {
-    //         id: "penthouse-suite",
-    //         title: "Penthouse Suite",
-    //         subtitle: "Ocean view · plunge pool",
-    //         image: AllImages.series.parkHyatt[10],
-    //         description: "Penthouse Suite at Park Hyatt Riviera Maya: Ocean view · plunge pool.",
-    //         stats: [
-    //           { label: "View", value: "Ocean view" },
-    //           { label: "Pool", value: "Plunge pool" },
-    //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
-    //         ],
-    //         groups: [
-    //           {
-    //             title: "Beds & Bedding",
-    //             items: [
-    //               "1 King or 2 Queen Beds where applicable",
-    //               "Cribs permitted",
-    //               "Duvet and Frette luxury linens",
-    //               "Rollaway bed available upon request",
-    //             ],
-    //           },
-    //           {
-    //             title: "Room Features",
-    //             items: [
-    //               "Air-conditioned",
-    //               "Connecting rooms available for some rooms",
-    //               "Terrace",
-    //             ],
-    //           },
-    //           {
-    //             title: "Bath & Bathroom",
-    //             items: [
-    //               "Luxury bath amenities",
-    //               "Separate bathtub and shower",
-    //               "Double vanities",
-    //               "Lighted makeup mirror",
-    //               "Hair dryer",
-    //               "Robe",
-    //               "Slippers",
-    //             ],
-    //           },
-    //           {
-    //             title: "Internet & Phones",
-    //             items: [
-    //               "Cordless phone",
-    //               "Voicemail and speaker phone",
-    //               "Complimentary wireless internet",
-    //             ],
-    //           },
-    //         ],
-    //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 2),
-    //       },
-    // @rooms:end original
+      // @rooms:begin original | The original nine rooms
+      //       {
+      //         id: "king-room",
+      //         title: "King Room",
+      //         subtitle: "1 king bed",
+      //         image: AllImages.series.parkHyatt[2],
+      //         description: "Warm natural woods, stone accents and floor-to-ceiling glass in a serene setting steps from the shoreline.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 king bed" },
+      //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Beds & Bedding",
+      //             items: [
+      //               "1 King or 2 Queen Beds where applicable",
+      //               "Cribs permitted",
+      //               "Duvet and Frette luxury linens",
+      //               "Rollaway bed available upon request",
+      //             ],
+      //           },
+      //           {
+      //             title: "Room Features",
+      //             items: [
+      //               "Air-conditioned",
+      //               "Connecting rooms available for some rooms",
+      //               "Terrace",
+      //             ],
+      //           },
+      //           {
+      //             title: "Bath & Bathroom",
+      //             items: [
+      //               "Luxury bath amenities",
+      //               "Separate bathtub and shower",
+      //               "Double vanities",
+      //               "Lighted makeup mirror",
+      //               "Hair dryer",
+      //               "Robe",
+      //               "Slippers",
+      //             ],
+      //           },
+      //           {
+      //             title: "Internet & Phones",
+      //             items: [
+      //               "Cordless phone",
+      //               "Voicemail and speaker phone",
+      //               "Complimentary wireless internet",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 0),
+      //       },
+      //       {
+      //         id: "queen-room",
+      //         title: "Queen Room",
+      //         subtitle: "1 king bed",
+      //         image: AllImages.series.parkHyatt[3],
+      //         description: "Designed for quiet relaxation with plush double bedding, curated organic finishes and private terrace.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 king bed" },
+      //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Beds & Bedding",
+      //             items: [
+      //               "1 King or 2 Queen Beds where applicable",
+      //               "Cribs permitted",
+      //               "Duvet and Frette luxury linens",
+      //               "Rollaway bed available upon request",
+      //             ],
+      //           },
+      //           {
+      //             title: "Room Features",
+      //             items: [
+      //               "Air-conditioned",
+      //               "Connecting rooms available for some rooms",
+      //               "Terrace",
+      //             ],
+      //           },
+      //           {
+      //             title: "Bath & Bathroom",
+      //             items: [
+      //               "Luxury bath amenities",
+      //               "Separate bathtub and shower",
+      //               "Double vanities",
+      //               "Lighted makeup mirror",
+      //               "Hair dryer",
+      //               "Robe",
+      //               "Slippers",
+      //             ],
+      //           },
+      //           {
+      //             title: "Internet & Phones",
+      //             items: [
+      //               "Cordless phone",
+      //               "Voicemail and speaker phone",
+      //               "Complimentary wireless internet",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 1),
+      //       },
+      //       {
+      //         id: "ocean-view-king",
+      //         title: "Ocean View King",
+      //         subtitle: "1 king bed · ocean view",
+      //         image: AllImages.series.parkHyatt[4],
+      //         description: "Elevated views over the Caribbean sea, with custom King bed, natural wood details, and deep soaking tub.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 king bed" },
+      //           { label: "View", value: "Ocean view" },
+      //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Beds & Bedding",
+      //             items: [
+      //               "1 King or 2 Queen Beds where applicable",
+      //               "Cribs permitted",
+      //               "Duvet and Frette luxury linens",
+      //               "Rollaway bed available upon request",
+      //             ],
+      //           },
+      //           {
+      //             title: "Room Features",
+      //             items: [
+      //               "Air-conditioned",
+      //               "Connecting rooms available for some rooms",
+      //               "Terrace",
+      //             ],
+      //           },
+      //           {
+      //             title: "Bath & Bathroom",
+      //             items: [
+      //               "Luxury bath amenities",
+      //               "Separate bathtub and shower",
+      //               "Double vanities",
+      //               "Lighted makeup mirror",
+      //               "Hair dryer",
+      //               "Robe",
+      //               "Slippers",
+      //             ],
+      //           },
+      //           {
+      //             title: "Internet & Phones",
+      //             items: [
+      //               "Cordless phone",
+      //               "Voicemail and speaker phone",
+      //               "Complimentary wireless internet",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 2),
+      //       },
+      //       {
+      //         id: "ocean-view-king-private-pool",
+      //         title: "Ocean View King, Private Pool",
+      //         subtitle: "1 king bed · ocean view · private pool",
+      //         image: AllImages.series.parkHyatt[5],
+      //         description: "The perfect blend of horizon ocean vistas and your own private terrace pool for peaceful morning and evening dips.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 king bed" },
+      //           { label: "View", value: "Ocean view" },
+      //           { label: "Pool", value: "Private pool" },
+      //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Beds & Bedding",
+      //             items: [
+      //               "1 King or 2 Queen Beds where applicable",
+      //               "Cribs permitted",
+      //               "Duvet and Frette luxury linens",
+      //               "Rollaway bed available upon request",
+      //             ],
+      //           },
+      //           {
+      //             title: "Room Features",
+      //             items: [
+      //               "Air-conditioned",
+      //               "Connecting rooms available for some rooms",
+      //               "Terrace",
+      //             ],
+      //           },
+      //           {
+      //             title: "Bath & Bathroom",
+      //             items: [
+      //               "Luxury bath amenities",
+      //               "Separate bathtub and shower",
+      //               "Double vanities",
+      //               "Lighted makeup mirror",
+      //               "Hair dryer",
+      //               "Robe",
+      //               "Slippers",
+      //             ],
+      //           },
+      //           {
+      //             title: "Internet & Phones",
+      //             items: [
+      //               "Cordless phone",
+      //               "Voicemail and speaker phone",
+      //               "Complimentary wireless internet",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 3),
+      //       },
+      //       {
+      //         id: "plunge-pool-deluxe-suite",
+      //         title: "Plunge Pool Deluxe Suite",
+      //         subtitle: "1 king bed suite · ocean view · plunge pool",
+      //         image: AllImages.series.parkHyatt[6],
+      //         description: "Expansive luxury suite featuring an independent parlor, oversized private pool terrace, and panoramic Caribbean scenery.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 king bed suite" },
+      //           { label: "View", value: "Ocean view" },
+      //           { label: "Pool", value: "Plunge pool" },
+      //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Beds & Bedding",
+      //             items: [
+      //               "1 King or 2 Queen Beds where applicable",
+      //               "Cribs permitted",
+      //               "Duvet and Frette luxury linens",
+      //               "Rollaway bed available upon request",
+      //             ],
+      //           },
+      //           {
+      //             title: "Room Features",
+      //             items: [
+      //               "Air-conditioned",
+      //               "Connecting rooms available for some rooms",
+      //               "Terrace",
+      //             ],
+      //           },
+      //           {
+      //             title: "Bath & Bathroom",
+      //             items: [
+      //               "Luxury bath amenities",
+      //               "Separate bathtub and shower",
+      //               "Double vanities",
+      //               "Lighted makeup mirror",
+      //               "Hair dryer",
+      //               "Robe",
+      //               "Slippers",
+      //             ],
+      //           },
+      //           {
+      //             title: "Internet & Phones",
+      //             items: [
+      //               "Cordless phone",
+      //               "Voicemail and speaker phone",
+      //               "Complimentary wireless internet",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 4),
+      //       },
+      //       {
+      //         id: "private-pool-deluxe-suite",
+      //         title: "Private Pool Deluxe Suite",
+      //         subtitle: "1 king bed suite · ocean view · private pool",
+      //         image: AllImages.series.parkHyatt[7],
+      //         description: "Exceptional coastal retreat boasting a larger private swimming pool, secluded sun deck, and full personal concierge service.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 king bed suite" },
+      //           { label: "View", value: "Ocean view" },
+      //           { label: "Pool", value: "Private pool" },
+      //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Beds & Bedding",
+      //             items: [
+      //               "1 King or 2 Queen Beds where applicable",
+      //               "Cribs permitted",
+      //               "Duvet and Frette luxury linens",
+      //               "Rollaway bed available upon request",
+      //             ],
+      //           },
+      //           {
+      //             title: "Room Features",
+      //             items: [
+      //               "Air-conditioned",
+      //               "Connecting rooms available for some rooms",
+      //               "Terrace",
+      //             ],
+      //           },
+      //           {
+      //             title: "Bath & Bathroom",
+      //             items: [
+      //               "Luxury bath amenities",
+      //               "Separate bathtub and shower",
+      //               "Double vanities",
+      //               "Lighted makeup mirror",
+      //               "Hair dryer",
+      //               "Robe",
+      //               "Slippers",
+      //             ],
+      //           },
+      //           {
+      //             title: "Internet & Phones",
+      //             items: [
+      //               "Cordless phone",
+      //               "Voicemail and speaker phone",
+      //               "Complimentary wireless internet",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 5),
+      //       },
+      //       {
+      //         id: "plunge-pool-premium-suite",
+      //         title: "Plunge Pool Premium Suite",
+      //         subtitle: "1 king bed suite · ocean view · plunge pool",
+      //         image: AllImages.series.parkHyatt[8],
+      //         description: "Plunge Pool Premium Suite at Park Hyatt Riviera Maya: 1 king bed suite · ocean view · plunge pool.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 king bed suite" },
+      //           { label: "View", value: "Ocean view" },
+      //           { label: "Pool", value: "Plunge pool" },
+      //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Beds & Bedding",
+      //             items: [
+      //               "1 King or 2 Queen Beds where applicable",
+      //               "Cribs permitted",
+      //               "Duvet and Frette luxury linens",
+      //               "Rollaway bed available upon request",
+      //             ],
+      //           },
+      //           {
+      //             title: "Room Features",
+      //             items: [
+      //               "Air-conditioned",
+      //               "Connecting rooms available for some rooms",
+      //               "Terrace",
+      //             ],
+      //           },
+      //           {
+      //             title: "Bath & Bathroom",
+      //             items: [
+      //               "Luxury bath amenities",
+      //               "Separate bathtub and shower",
+      //               "Double vanities",
+      //               "Lighted makeup mirror",
+      //               "Hair dryer",
+      //               "Robe",
+      //               "Slippers",
+      //             ],
+      //           },
+      //           {
+      //             title: "Internet & Phones",
+      //             items: [
+      //               "Cordless phone",
+      //               "Voicemail and speaker phone",
+      //               "Complimentary wireless internet",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 0),
+      //       },
+      //       {
+      //         id: "private-pool-premium-suite",
+      //         title: "Private Pool Premium Suite",
+      //         subtitle: "1 king bed suite · ocean view · private pool",
+      //         image: AllImages.series.parkHyatt[9],
+      //         description: "Private Pool Premium Suite at Park Hyatt Riviera Maya: 1 king bed suite · ocean view · private pool.",
+      //         stats: [
+      //           { label: "Bedding", value: "1 king bed suite" },
+      //           { label: "View", value: "Ocean view" },
+      //           { label: "Pool", value: "Private pool" },
+      //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Beds & Bedding",
+      //             items: [
+      //               "1 King or 2 Queen Beds where applicable",
+      //               "Cribs permitted",
+      //               "Duvet and Frette luxury linens",
+      //               "Rollaway bed available upon request",
+      //             ],
+      //           },
+      //           {
+      //             title: "Room Features",
+      //             items: [
+      //               "Air-conditioned",
+      //               "Connecting rooms available for some rooms",
+      //               "Terrace",
+      //             ],
+      //           },
+      //           {
+      //             title: "Bath & Bathroom",
+      //             items: [
+      //               "Luxury bath amenities",
+      //               "Separate bathtub and shower",
+      //               "Double vanities",
+      //               "Lighted makeup mirror",
+      //               "Hair dryer",
+      //               "Robe",
+      //               "Slippers",
+      //             ],
+      //           },
+      //           {
+      //             title: "Internet & Phones",
+      //             items: [
+      //               "Cordless phone",
+      //               "Voicemail and speaker phone",
+      //               "Complimentary wireless internet",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 1),
+      //       },
+      //       {
+      //         id: "penthouse-suite",
+      //         title: "Penthouse Suite",
+      //         subtitle: "Ocean view · plunge pool",
+      //         image: AllImages.series.parkHyatt[10],
+      //         description: "Penthouse Suite at Park Hyatt Riviera Maya: Ocean view · plunge pool.",
+      //         stats: [
+      //           { label: "View", value: "Ocean view" },
+      //           { label: "Pool", value: "Plunge pool" },
+      //           { label: "Hotel", value: "Park Hyatt Riviera Maya" },
+      //         ],
+      //         groups: [
+      //           {
+      //             title: "Beds & Bedding",
+      //             items: [
+      //               "1 King or 2 Queen Beds where applicable",
+      //               "Cribs permitted",
+      //               "Duvet and Frette luxury linens",
+      //               "Rollaway bed available upon request",
+      //             ],
+      //           },
+      //           {
+      //             title: "Room Features",
+      //             items: [
+      //               "Air-conditioned",
+      //               "Connecting rooms available for some rooms",
+      //               "Terrace",
+      //             ],
+      //           },
+      //           {
+      //             title: "Bath & Bathroom",
+      //             items: [
+      //               "Luxury bath amenities",
+      //               "Separate bathtub and shower",
+      //               "Double vanities",
+      //               "Lighted makeup mirror",
+      //               "Hair dryer",
+      //               "Robe",
+      //               "Slippers",
+      //             ],
+      //           },
+      //           {
+      //             title: "Internet & Phones",
+      //             items: [
+      //               "Cordless phone",
+      //               "Voicemail and speaker phone",
+      //               "Complimentary wireless internet",
+      //             ],
+      //           },
+      //         ],
+      //         gallery: rotate(AllImages.series.parkHyatt.slice(2, 8), 2),
+      //       },
+      // @rooms:end original
     ],
   },
   dining: {

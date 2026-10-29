@@ -12,7 +12,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   programTitle: "Guettaway a Diamond Club production",
   resortId: "waldorf-astoria",
   resortName: "Waldorf Astoria Riviera Maya",
-  kicker: "GUETTAWAY DCP",
+  kicker: "Guettaway by DCP",
   heroLogo: { image: AllImages.waldorfHeroLogo, alt: "Waldorf Astoria Riviera Maya", height: 100 },
   tagline: "Guettaway a Diamond Club production",
   showTagline: false,

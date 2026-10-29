@@ -70,7 +70,7 @@ export function ResortDiningPageView({
     <>
       <DetailHero
         image={heroImage}
-        kicker={data.programTitle || "Passover 2027"}
+        kicker={data.programTitle === "Guettaway a Diamond Club production" ? "Guettaway by DCP" : data.programTitle || "Passover 2027"}
         title={`Dining`}
         // title={`${data.resortName === "Casa Nizuc" ? "" : data.resortName} Dining`}
         subtitle="World-class Glatt Kosher fine dining, celebrated guest master chefs."
