@@ -2,7 +2,7 @@ import { CASA_NIZUC_HREF, PASSOVER_OFFERING_ID, TERMS_FOOTER_HREF, WEDDINGS_HREF
 import type { SiteId } from "@/lib/site-hosts";
 import type { DesignLink } from "./design/types";
 
-/** guettaways.com does not show the Passover and Casa Nizuc links; dcpassovervacations.com keeps them (client 2026-10-25). */
+/** guettaways.com does not show the Passover and Casa Nizuc links, nor the Explore and Events footer columns; dcpassovervacations.com keeps them (client 2026-10-25). */
 const HIDDEN_ON_GUETTAWAY: SiteId[] = ["guettaway"];
 
 export const PRIMARY_NAV: DesignLink[] = [
@@ -18,6 +18,7 @@ export const INQUIRE_LINK: DesignLink = { label: "Inquire", href: "/inquire" };
 export interface FooterColumn {
   title: string;
   links: DesignLink[];
+  hiddenOn?: SiteId[];
 }
 
 export const FOOTER_BLURB =
@@ -26,6 +27,7 @@ export const FOOTER_BLURB =
 export const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: "Explore",
+    hiddenOn: HIDDEN_ON_GUETTAWAY,
     links: [
       { label: "Passover Collection 2027", href: offeringHref(PASSOVER_OFFERING_ID), hiddenOn: HIDDEN_ON_GUETTAWAY },
       { label: "Casa Nizuc", href: CASA_NIZUC_HREF, hiddenOn: HIDDEN_ON_GUETTAWAY },
@@ -35,6 +37,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
   },
   {
     title: "Events",
+    hiddenOn: HIDDEN_ON_GUETTAWAY,
     links: [
       { label: "Weddings", href: WEDDINGS_HREF, hiddenOn: HIDDEN_ON_GUETTAWAY },
       { label: "Private Events", href: offeringHref("private-events"), hiddenOn: HIDDEN_ON_GUETTAWAY },
