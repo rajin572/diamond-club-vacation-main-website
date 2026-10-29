@@ -176,7 +176,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
   },
   blue: {
     programId: "blue",
-    programTitle: "Diamond Blue by DCV",
+    programTitle: "Casa Nizuc by DCV",
     experienceType: "entertainment",
     title: "Entertainment",
     heroImage: AllImages.reserveEntertainmentConcert,

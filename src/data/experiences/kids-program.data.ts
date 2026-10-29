@@ -14,7 +14,7 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
       {
         id: "day-camp",
         title: "Day Camp",
-        description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
+        description: "",
         image: AllImages.reserveKidsProgram,
         imageFocus: "top",
         linkTo: "kids-day-camp",
@@ -49,7 +49,7 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
   },
   blue: {
     programId: "blue",
-    programTitle: "Diamond Blue by DCV",
+    programTitle: "Casa Nizuc by DCV",
     experienceType: "kids-program",
     title: "Kids Program",
     heroImage: AllImages.reserveKidsProgram,
@@ -59,7 +59,7 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
       {
         id: "day-camp",
         title: "Day Camp",
-        description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
+        description: "",
         image: AllImages.reserveKidsProgram,
         imageFocus: "top",
         linkTo: "kids-day-camp",
@@ -104,7 +104,7 @@ export const KIDS_PROGRAM_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
       {
         id: "day-camp",
         title: "Day Camp",
-        description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
+        description: "",
         image: AllImages.guettawayKidsProgram,
         imageFocus: "top",
         linkTo: "kids-day-camp",

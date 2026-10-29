@@ -7,10 +7,10 @@ import type { TermsData } from "@/components/terms/terms.types";
  */
 export const BLUE_TERMS: TermsData = {
   programId: "blue",
-  programName: "DIAMOND BLUE BY DCV",
+  programName: "Casa Nizuc by DCV",
   hotels: "Casa Nizuc",
   heroImage: AllImages.casa2,
   sections: [],
   pendingNote:
-    "The terms and conditions for Diamond Blue by DCV will be published here soon. For questions about your reservation, please contact us.",
+    "The terms and conditions for Casa Nizuc by DCV will be published here soon. For questions about your reservation, please contact us.",
 };
