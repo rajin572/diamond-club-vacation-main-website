@@ -4,7 +4,7 @@ import type { ProgramData } from "@/components/programs/programs.types";
 export const BLUE_DATA: ProgramData = {
   id: "blue",
   offeringId: "passover-collection-2027",
-  title: "Diamond Blue by DCV",
+  title: "Casa Nizuc by DCV",
   kicker: "Passover 2027",
   tagline: "Luxury made accessible.",
   heroImage: AllImages.casa2,

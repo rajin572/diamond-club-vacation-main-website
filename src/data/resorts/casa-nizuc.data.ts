@@ -4,12 +4,12 @@ import type { ResortData } from "@/components/resorts/resorts.types";
 /** Casa Nizuc — content from the client's HTML design (diamond-club-main-design). */
 export const CASA_NIZUC_DATA: ResortData = {
   programId: "blue",
-  programTitle: "Diamond Blue by DCV",
+  programTitle: "Casa Nizuc by DCV",
   resortId: "casa-nizuc",
   resortName: "Casa Nizuc",
-  kicker: "Year-Round Resort",
+  kicker: "Casa Nizuc by DCV",
   heroLogo: { image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc", height: 96 },
-  tagline: "Year-round luxury kosher hospitality in Cancún.",
+  tagline: "Luxury made accessible",
   heroImage: AllImages.series.casa[0],
   overviewLabel: "Overview",
   showSubNav: true,

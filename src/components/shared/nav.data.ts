@@ -8,9 +8,9 @@ const HIDDEN_ON_GUETTAWAY: SiteId[] = ["guettaway"];
 export const PRIMARY_NAV: DesignLink[] = [
   { label: "Passover", href: offeringHref(PASSOVER_OFFERING_ID), hiddenOn: HIDDEN_ON_GUETTAWAY },
   { label: "Casa Nizuc", href: CASA_NIZUC_HREF, hiddenOn: HIDDEN_ON_GUETTAWAY },
-  { label: "Weddings & Events", href: WEDDINGS_HREF },
-  { label: "Experiences", href: "/experiences" },
-  { label: "About", href: "/about" },
+  { label: "Weddings & Events", href: WEDDINGS_HREF, hiddenOn: HIDDEN_ON_GUETTAWAY },
+  { label: "Experiences", href: "/experiences", hiddenOn: HIDDEN_ON_GUETTAWAY },
+  { label: "About", href: "/about", hiddenOn: HIDDEN_ON_GUETTAWAY },
 ];
 
 export const INQUIRE_LINK: DesignLink = { label: "Inquire", href: "/inquire" };
@@ -29,25 +29,26 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Explore",
     hiddenOn: HIDDEN_ON_GUETTAWAY,
     links: [
-      { label: "Passover Collection 2027", href: offeringHref(PASSOVER_OFFERING_ID) },
-      { label: "Casa Nizuc", href: CASA_NIZUC_HREF },
-      { label: "Experiences", href: "/experiences" },
+      { label: "Passover Collection 2027", href: offeringHref(PASSOVER_OFFERING_ID), hiddenOn: HIDDEN_ON_GUETTAWAY },
+      { label: "Casa Nizuc", href: CASA_NIZUC_HREF, hiddenOn: HIDDEN_ON_GUETTAWAY },
+      { label: "Experiences", href: "/experiences", hiddenOn: HIDDEN_ON_GUETTAWAY },
     ],
+
   },
   {
     title: "Events",
     hiddenOn: HIDDEN_ON_GUETTAWAY,
     links: [
-      { label: "Weddings", href: WEDDINGS_HREF },
-      { label: "Private Events", href: offeringHref("private-events") },
-      { label: "Plan Your Stay", href: "/contact" },
+      { label: "Weddings", href: WEDDINGS_HREF, hiddenOn: HIDDEN_ON_GUETTAWAY },
+      { label: "Private Events", href: offeringHref("private-events"), hiddenOn: HIDDEN_ON_GUETTAWAY },
+      { label: "Plan Your Stay", href: "/contact", hiddenOn: HIDDEN_ON_GUETTAWAY },
     ],
   },
   {
     title: "Guest",
     links: [
-      { label: "About", href: "/about" },
-      { label: "Contact", href: "/contact" },
+      { label: "About", href: "/about", hiddenOn: HIDDEN_ON_GUETTAWAY },
+      { label: "Contact", href: "/contact", hiddenOn: HIDDEN_ON_GUETTAWAY },
       { label: "Terms & Conditions", href: TERMS_FOOTER_HREF },
     ],
   },

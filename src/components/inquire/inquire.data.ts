@@ -35,7 +35,7 @@ export const EXPERIENCE_OPTIONS: InquireExperienceOption[] = [
   },
   {
     id: "blue",
-    label: "Diamond Blue by DCV",
+    label: "Casa Nizuc by DCV",
     aliases: ["blue", "diamond-blue", "diamond-club-blue", "diamond-club-blue-by-dcv"],
   },
   { id: "casa-nizuc", label: "Casa Nizuc — Year Round", aliases: ["casa-nizuc", "casa", "casa-nizuc-year-round", "casanizuc"] },

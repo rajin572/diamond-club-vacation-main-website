@@ -167,7 +167,7 @@ export const ATTRACTIONS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
   },
   blue: {
     programId: "blue",
-    programTitle: "Diamond Blue by DCV",
+    programTitle: "Casa Nizuc by DCV",
     experienceType: "attractions",
     title: "Attractions",
     heroImage: AllImages.reserveAttractionXcaret,
@@ -226,7 +226,7 @@ export const ATTRACTIONS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
         },
       },
       // Casa Nizuc is in Cancun: local attractions from the client's TripAdvisor Cancun lists (2026-10-19), reused from the shared list.
-      ...MORE_ATTRACTIONS.filter((a) => ["playa-delfines","la-isla-shopping-village","mayan-museum-of-cancun","san-miguelito-ruins"].includes(a.id)),
+      ...MORE_ATTRACTIONS.filter((a) => ["playa-delfines", "la-isla-shopping-village", "mayan-museum-of-cancun", "san-miguelito-ruins"].includes(a.id)),
       {
         id: "torre-escenica",
         title: "Torre Escenica",

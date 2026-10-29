@@ -176,7 +176,7 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
   },
   blue: {
     programId: "blue",
-    programTitle: "Diamond Blue by DCV",
+    programTitle: "Casa Nizuc by DCV",
     experienceType: "entertainment",
     title: "Entertainment",
     heroImage: AllImages.reserveEntertainmentConcert,
@@ -222,19 +222,6 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
     columns: 3,
     items: [
       SHULEM_LEMMER_SLOT,
-      YANKELOO,
-      {
-        id: "elon-gold",
-        title: "Elon Gold",
-        description: "Renowned comedian Elon Gold brings his acclaimed stand-up comedy and hilarious humor.",
-        image: AllImages.reserveEntertainmentElonGold,
-        details: {
-          title: "Elon Gold Stand-Up Comedy",
-          paragraphs: [
-            "From his Orthodox upbringing to his celebrated television appearances, comedian Elon Gold delivers an evening of non-stop laughter.",
-          ],
-        },
-      },
       {
         id: "dovi-meisels",
         title: "Dovi Meisels",
@@ -247,6 +234,20 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
           ],
         },
       },
+      {
+        id: "elon-gold",
+        title: "Elon Gold",
+        description: "Renowned comedian Elon Gold brings his acclaimed stand-up comedy and hilarious humor.",
+        image: AllImages.reserveEntertainmentElonGold,
+        details: {
+          title: "Elon Gold Stand-Up Comedy",
+          paragraphs: [
+            "From his Orthodox upbringing to his celebrated television appearances, comedian Elon Gold delivers an evening of non-stop laughter.",
+          ],
+        },
+      },
+      YANKELOO,
+
       {
         id: "nightlife",
         title: "Nightlife",

@@ -97,7 +97,7 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
   },
   blue: {
     programId: "blue",
-    programTitle: "Diamond Blue by DCV",
+    programTitle: "Casa Nizuc by DCV",
     experienceType: "scholars",
     title: "Scholars",
     viewerTitle: "Scholars Details",

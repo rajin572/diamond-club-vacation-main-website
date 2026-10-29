@@ -25,7 +25,7 @@ export function Footer() {
               link.href === TERMS_FOOTER_HREF ? (
                 <TermsFooterLink key={`${column.title}-${link.label}`} label={link.label} />
               ) : (
-                <Link key={`${column.title}-${link.label}`} href={link.href}>
+                <Link key={`${column.title}-${link.label}`} href={link.href} data-hide-on={link.hiddenOn?.join(" ")}>
                   {link.label}
                 </Link>
               )

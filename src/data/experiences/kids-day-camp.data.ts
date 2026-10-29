@@ -6,8 +6,8 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
     programId: "diamond-club-reserve",
     programName: "DIAMOND CLUB RESERVE",
     hero: {
-      title: "Day Camp & Teen Program",
-      description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
+      title: "Day Camp",
+      description: "",
       image: AllImages.dayCampCollage,
       imagePosition: "50% 20%",
     },
@@ -100,10 +100,10 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
   // The day camp content of the Diamond Club Reserve (St. Regis / EDITION), as asked on 2026-10-22; only "Our Team" stays Diamond Blue's own.
   blue: {
     programId: "blue",
-    programName: "Diamond Blue by DCV",
+    programName: "Casa Nizuc by DCV",
     hero: {
-      title: "Day Camp & Teen Program",
-      description: "An action-packed day camp schedule for all your kids, filled with exciting activities, events, sports, games, live shows, and entertainment, led by our incredible counselors.",
+      title: "Day Camp",
+      description: "",
       image: AllImages.dayCampCollage,
       imagePosition: "50% 20%",
     },
@@ -183,8 +183,8 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
     programId: "guttaway",
     programName: "Guettaway a Diamond Club production",
     hero: {
-      title: "Waldorf Astoria Day Camp",
-      description: "The Kids Club is led by professional day camp directors and vetted counselors, with safety and supervision as top priorities. Scheduling is designed to sync with adult programming.",
+      title: "Day Camp",
+      description: "",
       image: AllImages.guettawayKidsProgram,
       imagePosition: "50% 45%",
     },
