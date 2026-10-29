@@ -17,6 +17,7 @@ export const ST_REGIS_RESORT_DATA: ResortData = {
   programTitle: "DIAMOND CLUB RESERVE",
   resortId: "st-regis",
   resortName: "The St. Regis Kanai Resort",
+  kicker: "DIAMOND CLUB RESERVE",
   tagline: "Refined beachfront luxury at Kanai, presented as a complete hotel experience within DIAMOND CLUB RESERVE.",
   showTagline: false,
   heroImage: AllImages.stregis7,
