@@ -63,7 +63,7 @@ export function LoginView({ forceGuettaway }: LoginViewProps) {
             <Image src={AllImages.guettawayLogo} alt="Guettaway" width={42} height={52} priority className="dcv-brand-seal" />
             <span className="dcv-brand-divider" aria-hidden="true" />
             <div className="dcv-brand-text">
-              <span className="dcv-brand-title">DIAMOND CLUB</span>
+              <span className="dcv-brand-title">A DIAMOND CLUB</span>
               <span className="dcv-brand-sub">PRODUCTION</span>
             </div>
           </div>
