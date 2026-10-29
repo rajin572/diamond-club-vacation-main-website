@@ -387,6 +387,17 @@ html[data-site="guettaway"] .dcv-logo--guettaway {
   /* Every banner title is written in capitals (client request 2026-10-19), e.g. "THE RIVIERA MAYA EDITION AT KANAI". */
   text-transform: uppercase;
 }
+/* Resort banners: the hotel name stays on one line from tablet up; the size follows the screen width so the longest name fits. */
+@media (min-width: 768px) {
+  .dcv-hero--oneline .dcv-copy {
+    max-width: 96vw;
+  }
+  .dcv-hero--oneline h1 {
+    max-width: none;
+    white-space: nowrap;
+    font-size: min(68px, 3.7vw);
+  }
+}
 /* the Guettaway logo next to the name (client 2026-10-20) */
 /* "Back" button: goes to the previous page */
 .dcv-site .dcv-back-btn {

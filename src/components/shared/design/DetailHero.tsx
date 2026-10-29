@@ -14,14 +14,16 @@ interface DetailHeroProps {
   logo?: { image: DesignImage; alt: string; wordmark?: boolean; position?: "top" | "left" };
   /** Buttons shown under the title (e.g. the program's Brochure button). */
   actions?: ReactNode;
+  /** Keep the title on one line on tablet and desktop (the font scales with the screen); it still wraps on phones. */
+  singleLine?: boolean;
 }
 
 /** The rounded-bottom hero used by inner pages, updated with centralized typography and flexible logo positioning. */
-export function DetailHero({ image, kicker, title, subtitle, imagePosition, actions, logo }: DetailHeroProps) {
+export function DetailHero({ image, kicker, title, subtitle, imagePosition, actions, logo, singleLine }: DetailHeroProps) {
   const isLogoLeft = logo && logo.position !== "top";
 
   return (
-    <section className="dcv-hero">
+    <section className={singleLine ? "dcv-hero dcv-hero--oneline" : "dcv-hero"}>
       <Image
         src={image}
         alt=""
