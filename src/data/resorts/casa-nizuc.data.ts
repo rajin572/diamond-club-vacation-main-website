@@ -929,7 +929,7 @@ export const CASA_NIZUC_DATA: ResortData = {
   pools: {
     title: "Pools & Beach",
     description: "El Eden and Ofek pools, a whirlpool, a water slide and cabanas.",
-    images: [AllImages.casaNizucGallery31, AllImages.casaNizucPool, AllImages.casaNizucGallery30, AllImages.casaNizucGallery28, AllImages.casaNizucGallery29, AllImages.casaNizucGallery19, AllImages.casaNizucDiningOfek],
+    images: [AllImages.casaNizucWaterSlidePool, AllImages.casaNizucPool, AllImages.casaNizucGallery30, AllImages.casaNizucGallery28, AllImages.casaNizucGallery29, AllImages.casaNizucGallery19, AllImages.casaNizucDiningOfek],
     // From the hotel's Marriott experiences page (marriott.com/en-us/hotels/cunan-casa-nizuc-a-tribute-portfolio-resort/experiences/).
     // That page shows "Photo Coming Soon" for every pool, so the photos are the pool photos of the hotel's Marriott photos page (marriott.com/.../photos/), not one pool photo.
     items: [

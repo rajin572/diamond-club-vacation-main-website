@@ -670,6 +670,8 @@ import casaNizucLogoWhite from "./mainDesign/casa-nizuc-logo-white.webp";
 // Hotel logos shown above the title on the hotel banners (white artwork, trimmed).
 import stRegisHeroLogo from "./mainDesign/st-regis-hero-logo.webp";
 import editionHeroLogo from "./mainDesign/edition-hero-logo.webp";
+// Casa Nizuc kids' pool with the water slides (client 2026-10-29), first photo of Pools & Beach.
+import casaNizucWaterSlidePool from "./mainDesign/casa-nizuc-water-slide-pool.webp";
 import waldorfHeroLogo from "./mainDesign/waldorf-hero-logo.webp";
 import parkHyattHeroLogo from "./mainDesign/park-hyatt-hero-logo.webp";
 import casaNizucIcon from "./mainDesign/casa-nizuc-icon.webp";
@@ -1564,6 +1566,7 @@ export const AllImages = {
   casaNizucLogoWhite,
   stRegisHeroLogo,
   editionHeroLogo,
+  casaNizucWaterSlidePool,
   waldorfHeroLogo,
   parkHyattHeroLogo,
   casaNizucIcon,
