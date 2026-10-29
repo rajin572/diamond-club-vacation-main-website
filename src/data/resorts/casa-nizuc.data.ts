@@ -1004,24 +1004,25 @@ export const CASA_NIZUC_DATA: ResortData = {
       },
     ],
   },
+  // Spa & Wellness is taken out for now (client 2026-10-29). Uncomment this block to bring the spa block, card, nav link and detail page back.
   // From the Spa tab of the hotel's Marriott overview page ("Wellness Center"); its photo there is Marriott's "Photo Coming Soon" placeholder.
   // The client's message of 2026-10-22 ("Spa & Wellness", for Casa Nizuc), word for word. The photo is still Marriott's placeholder.
-  spa: {
-    item: {
-      id: "spa",
-      title: "Spa & Wellness",
-      subtitle: "Dedicated spa cabins",
-      image: AllImages.casaNizucSpaWellnessCenter,
-      description: "While the full-service spa is still under development, dedicated spa cabins are available, offering a variety of relaxing massage treatments for a rejuvenating experience.",
-      gallery: [AllImages.casaNizucSpaWellnessCenter],
-    },
-    // Own block on the hotel page (like Pools and Wellness).
-    section: {
-      title: "Spa & Wellness",
-      description: "While the full-service spa is still under development, dedicated spa cabins are available, offering a variety of relaxing massage treatments for a rejuvenating experience.",
-      images: [AllImages.casaNizucSpaWellnessCenter],
-    },
-  },
+  // spa: {
+  //   item: {
+  //     id: "spa",
+  //     title: "Spa & Wellness",
+  //     subtitle: "Dedicated spa cabins",
+  //     image: AllImages.casaNizucSpaWellnessCenter,
+  //     description: "While the full-service spa is still under development, dedicated spa cabins are available, offering a variety of relaxing massage treatments for a rejuvenating experience.",
+  //     gallery: [AllImages.casaNizucSpaWellnessCenter],
+  //   },
+  //   // Own block on the hotel page (like Pools and Wellness).
+  //   section: {
+  //     title: "Spa & Wellness",
+  //     description: "While the full-service spa is still under development, dedicated spa cabins are available, offering a variety of relaxing massage treatments for a rejuvenating experience.",
+  //     images: [AllImages.casaNizucSpaWellnessCenter],
+  //   },
+  // },
   gallery: {
     title: "Resort Gallery",
     description: "A dedicated gallery for Casa Nizuc.",
