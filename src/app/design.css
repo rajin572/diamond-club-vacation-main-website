@@ -3442,6 +3442,17 @@ html[data-site="guettaway"] [data-hide-on~="guettaway"] {
   cursor: pointer;
   border: 0;
 }
+/* Second line of the Grand Ballroom title: "Yom Tov Dining", small and in script. */
+.dcv-title-script {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.42em;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-weight: 400;
+}
+
 /* Second line of the Guettaway title: "A Diamond Club Production". */
 .dcv-title-sub {
   display: block;

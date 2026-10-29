@@ -3,6 +3,20 @@ import type { ReactNode } from "react";
 import { formatProgramTitle } from "@/lib/program-title";
 import type { DesignImage } from "./types";
 
+/** "Grand Ballroom – Yom Tov Dining" (client 2026-10-29): "Grand Ballroom" big, and "Yom Tov Dining" small in script under it. */
+const YOM_TOV_TITLE = /^(grand ballroom)\s*[–-]\s*(yom tov dining)$/i;
+
+function formatHeroTitle(title: string): ReactNode {
+  const match = YOM_TOV_TITLE.exec(title.trim());
+  if (!match) return formatProgramTitle(title, true);
+  return (
+    <>
+      {match[1]}
+      <span className="dcv-title-script">{match[2]}</span>
+    </>
+  );
+}
+
 interface DetailHeroProps {
   image: DesignImage;
   kicker?: string;
@@ -52,10 +66,10 @@ export function DetailHero({ image, kicker, title, subtitle, imagePosition, acti
                 priority
                 className="dcv-title-logo dcv-title-logo--hero"
               />
-              <span>{typeof title === "string" ? formatProgramTitle(title, true) : title}</span>
+              <span>{typeof title === "string" ? formatHeroTitle(title) : title}</span>
             </span>
           ) : typeof title === "string" ? (
-            formatProgramTitle(title, true)
+            formatHeroTitle(title)
           ) : (
             title
           )}
