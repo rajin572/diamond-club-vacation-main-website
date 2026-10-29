@@ -8,6 +8,7 @@ export const CASA_NIZUC_DATA: ResortData = {
   resortId: "casa-nizuc",
   resortName: "Casa Nizuc",
   kicker: "Casa Nizuc by DCV",
+  heroLogo: { image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc", height: 96 },
   tagline: "Luxury made accessible",
   heroImage: AllImages.series.casa[0],
   overviewLabel: "Overview",
