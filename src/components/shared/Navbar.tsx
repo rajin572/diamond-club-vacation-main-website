@@ -70,7 +70,10 @@ export function Navbar() {
     /guettaway/i.test(
       resolveDetailedExperience(inquireParams.get("destination") ?? inquireParams.get("program"), inquireParams.get("resort")).label
     );
-  const onGuettawayPage = inquiry?.programId === GUETTAWAY_PROGRAM_ID || inquiringAboutGuettaway;
+  // The program's terms page (/terms/guttaway) is a Guettaway page too (client 2026-10-31).
+  const termsProgramId = pathname ? /^\/terms\/([^/]+)/.exec(pathname)?.[1] : undefined;
+  const onGuettawayPage =
+    inquiry?.programId === GUETTAWAY_PROGRAM_ID || inquiringAboutGuettaway || termsProgramId === GUETTAWAY_PROGRAM_ID;
   // Login button after Inquire (client 2026-10-29): design only; it opens the login page with the brand of the site the visitor is on.
   const onLoginPage = pathname === "/login" || (pathname ? pathname.startsWith("/login/") : false);
   const loginHref = onGuettawayPage ? GUETTAWAY_LOGIN_HREF : LOGIN_HREF;
