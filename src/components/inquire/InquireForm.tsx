@@ -7,7 +7,6 @@ import { useSearchParams } from "next/navigation";
 import {
   COMMUNITY_OPTIONS,
   EXPERIENCE_OPTIONS,
-  NO_HOTEL_PREFERENCE,
   REFERRAL_OPTIONS,
   hotelsForExperience,
   resolveDetailedExperience,
@@ -155,8 +154,13 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
     setValues((current) => ({ ...current, experience, hotel: defaultHotel(experience) }));
   };
 
-  // The hotel is fixed when the visitor comes from a hotel page; otherwise a Passover program lets them pick one of its hotels.
-  const hotelChoices = detailedExp.hotel ? [] : hotelsForExperience(values.experience);
+  // A Passover program always asks for one of its hotels (required); a hotel page or the program's single hotel only preselects it.
+  const hotelChoices = hotelsForExperience(values.experience);
+
+  const continueFromTrip = () => {
+    if (hotelChoices.length > 0 && !values.hotel) return setError("Please select a hotel.");
+    goTo(1);
+  };
 
   const goTo = (target: number) => {
     setError("");
@@ -254,29 +258,19 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
                 )}
               </label>
 
-              {detailedExp.hotel || hotelChoices.length === 1 ? (
+              {hotelChoices.length > 0 && (
                 <label className="dcv-field-label dcv-wide">
-                  Hotel
-                  <div className="dcv-locked-experience">
-                    <span className="dcv-locked-text">{values.hotel}</span>
-                    <input type="hidden" name="hotel" value={values.hotel} />
-                  </div>
-                </label>
-              ) : hotelChoices.length > 1 ? (
-                <label className="dcv-field-label dcv-wide">
-                  Hotel
-                  <select
-                    name="hotel"
-                    value={values.hotel || NO_HOTEL_PREFERENCE}
-                    onChange={(event) => setValue("hotel", event.target.value === NO_HOTEL_PREFERENCE ? "" : event.target.value)}
-                  >
-                    <option>{NO_HOTEL_PREFERENCE}</option>
+                  Hotel *
+                  <select name="hotel" value={values.hotel} onChange={onField} required>
+                    <option value="" disabled>
+                      Select a hotel
+                    </option>
                     {hotelChoices.map((hotel) => (
                       <option key={hotel}>{hotel}</option>
                     ))}
                   </select>
                 </label>
-              ) : null}
+              )}
 
               <label className="dcv-field-label">
                 Adults · Age 18+
@@ -302,9 +296,14 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
                 onChange={setValue}
               />
             </div>
+            {error && (
+              <p className="dcv-notice" role="alert" style={{ color: "#b3261e", marginTop: 16 }}>
+                {error}
+              </p>
+            )}
             <div className="dcv-actions">
               <span />
-              <button type="button" className="dcv-btn" onClick={() => goTo(1)}>
+              <button type="button" className="dcv-btn" onClick={continueFromTrip}>
                 Continue →
               </button>
             </div>
