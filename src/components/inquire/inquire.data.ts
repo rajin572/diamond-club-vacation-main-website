@@ -53,6 +53,21 @@ export const RESORT_DISPLAY_NAMES: Record<string, string> = {
   "casa-nizuc": "Casa Nizuc",
 };
 
+/** The hotels of each Passover program, for the Hotel choice on the Inquire form (a program with one hotel gets it automatically). */
+export const PROGRAM_HOTELS: Record<string, string[]> = {
+  "diamond-club-reserve": [RESORT_DISPLAY_NAMES["st-regis"], RESORT_DISPLAY_NAMES["edition"]],
+  guttaway: [RESORT_DISPLAY_NAMES["waldorf-astoria"], RESORT_DISPLAY_NAMES["park-hyatt"]],
+  blue: [RESORT_DISPLAY_NAMES["casa-nizuc"]],
+};
+
+export const NO_HOTEL_PREFERENCE = "No preference";
+
+/** The hotels to choose from for an Experience label (empty when it is not a Passover program). */
+export function hotelsForExperience(label: string): string[] {
+  const id = EXPERIENCE_OPTIONS.find((option) => option.label === label)?.id;
+  return (id && PROGRAM_HOTELS[id]) || [];
+}
+
 export function resolveExperienceOption(destination: string | null): string {
   const normalized = destination?.toLowerCase().trim();
   if (!normalized) return EXPERIENCE_OPTIONS[0].label;
