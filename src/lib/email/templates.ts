@@ -19,7 +19,7 @@ const BRANDS: Record<EmailBrand, { name: string; siteUrl: string; logo: string; 
   guettaway: {
     name: "Guettaway, a Diamond Club Production",
     siteUrl: "https://guettaways.com",
-    logo: "/images/email-guettaway-logo.png",
+    logo: "/images/mainDesign/guettaway-logo.webp",
     logoWidth: 53,
     logoHeight: 64,
     title: "A DIAMOND CLUB",
