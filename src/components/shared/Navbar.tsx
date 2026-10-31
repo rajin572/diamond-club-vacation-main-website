@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { PRIMARY_NAV } from "./nav.data";
 import { MobileMenu } from "./MobileMenu";
 import { getExperiencesHref, getInquireContext } from "@/lib/inquire-context";
+import { resolveDetailedExperience } from "@/components/inquire/inquire.data";
 import { SectionLink } from "./design/SectionLink";
 import { GUETTAWAY_LOGIN_HREF, LOGIN_HREF, REQUEST_A_QUOTE_HREF, inquireHref } from "@/lib/routes";
 import { MAIN_SITE_URL } from "@/lib/site-hosts";
@@ -62,7 +63,14 @@ export function Navbar() {
     pathname === "/request-a-quote" ||
     (pathname ? pathname.startsWith("/request-a-quote/") : false);
   // Guettaway pages (its own domain, or the program and its hotels on the other sites) swap the main brand for the Guettaway one (client 2026-10-26).
-  const onGuettawayPage = inquiry?.programId === GUETTAWAY_PROGRAM_ID;
+  // The Inquire page itself is not inside a program, so it takes the program from its ?destination= (client 2026-10-31).
+  const inquireParams = new URLSearchParams(search);
+  const inquiringAboutGuettaway =
+    onInquirePage &&
+    /guettaway/i.test(
+      resolveDetailedExperience(inquireParams.get("destination") ?? inquireParams.get("program"), inquireParams.get("resort")).label
+    );
+  const onGuettawayPage = inquiry?.programId === GUETTAWAY_PROGRAM_ID || inquiringAboutGuettaway;
   // Login button after Inquire (client 2026-10-29): design only; it opens the login page with the brand of the site the visitor is on.
   const onLoginPage = pathname === "/login" || (pathname ? pathname.startsWith("/login/") : false);
   const loginHref = onGuettawayPage ? GUETTAWAY_LOGIN_HREF : LOGIN_HREF;
