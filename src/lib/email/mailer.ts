@@ -1,5 +1,13 @@
 import nodemailer, { type Transporter } from "nodemailer";
 
+export interface MailAttachment {
+  filename: string;
+  content: Buffer;
+  /** Referenced from the HTML as src="cid:...". */
+  cid: string;
+  contentType: string;
+}
+
 interface MailInput {
   to: string;
   subject: string;
@@ -8,6 +16,7 @@ interface MailInput {
   replyTo?: string;
   /** Sender name shown in the inbox (default "Diamond Club Vacations"). */
   fromName?: string;
+  attachments?: MailAttachment[];
 }
 
 let transporter: Transporter | null = null;
@@ -33,7 +42,7 @@ export function getAdminEmail(experienceId?: string) {
   return (programEnv && process.env[programEnv]) || process.env.ADMIN_EMAIL || process.env.EMAIL_USER || "";
 }
 
-export async function sendMail({ to, subject, html, text, replyTo, fromName = "Diamond Club Vacations" }: MailInput) {
+export async function sendMail({ to, subject, html, text, replyTo, fromName = "Diamond Club Vacations", attachments }: MailInput) {
   await getTransporter().sendMail({
     from: `"${fromName}" <${process.env.EMAIL_USER}>`,
     to,
@@ -41,5 +50,6 @@ export async function sendMail({ to, subject, html, text, replyTo, fromName = "D
     html,
     text,
     replyTo,
+    attachments,
   });
 }
