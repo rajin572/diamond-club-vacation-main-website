@@ -7,7 +7,9 @@ import { useSearchParams } from "next/navigation";
 import {
   COMMUNITY_OPTIONS,
   EXPERIENCE_OPTIONS,
+  NO_HOTEL_PREFERENCE,
   REFERRAL_OPTIONS,
+  hotelsForExperience,
   resolveDetailedExperience,
 } from "./inquire.data";
 import { ContactDetails } from "@/components/contact/ContactDetails";
@@ -16,6 +18,7 @@ type YesNo = "Yes" | "No" | "";
 
 interface InquiryValues {
   experience: string;
+  hotel: string;
   adults: string;
   children: string;
   rooms: string;
@@ -41,6 +44,7 @@ const REQUIRED_CONTACT_FIELDS: (keyof InquiryValues)[] = ["firstName", "lastName
 
 const REVIEW_LABELS: [keyof InquiryValues, string][] = [
   ["experience", "Experience"],
+  ["hotel", "Hotel"],
   ["adults", "Adults"],
   ["children", "Children"],
   ["rooms", "Rooms"],
@@ -89,6 +93,12 @@ function YesNoField({
   );
 }
 
+/** A Passover program with a single hotel (Diamond Blue at Casa Nizuc) needs no choice. */
+function defaultHotel(experience: string) {
+  const hotels = hotelsForExperience(experience);
+  return hotels.length === 1 ? hotels[0] : "";
+}
+
 export interface InquireFormProps {
   defaultDestination?: string;
   isQuote?: boolean;
@@ -114,6 +124,7 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
   const [error, setError] = useState("");
   const [values, setValues] = useState<InquiryValues>(() => ({
     experience: detailedExp.label,
+    hotel: detailedExp.hotel ?? defaultHotel(detailedExp.label),
     adults: "2",
     children: "0",
     rooms: "1",
@@ -138,6 +149,15 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
   const onField = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setValue(event.target.name as keyof InquiryValues, event.target.value);
 
+  // Picking another Experience resets the Hotel, since each program has its own hotels.
+  const onExperienceChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const experience = event.target.value;
+    setValues((current) => ({ ...current, experience, hotel: defaultHotel(experience) }));
+  };
+
+  // The hotel is fixed when the visitor comes from a hotel page; otherwise a Passover program lets them pick one of its hotels.
+  const hotelChoices = detailedExp.hotel ? [] : hotelsForExperience(values.experience);
+
   const goTo = (target: number) => {
     setError("");
     setStep(Math.max(0, Math.min(target, STEP_COUNT - 1)));
@@ -160,7 +180,7 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
       const response = await fetch("/api/inquire", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, hotel: detailedExp.hotel ?? "", kind: isQuote ? "quote" : "inquiry" }),
+        body: JSON.stringify({ ...values, kind: isQuote ? "quote" : "inquiry" }),
       });
       if (!response.ok) {
         const body = await response.json().catch(() => null);
@@ -196,7 +216,6 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
   }
 
   const reviewRows = REVIEW_LABELS.filter(([key]) => values[key]);
-  const hotelReviewRow = detailedExp.hotel ? { label: "Hotel", value: detailedExp.hotel } : null;
 
   return (
     <main className="dcv-inquiry-shell">
@@ -227,7 +246,7 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
                     <input type="hidden" name="experience" value={values.experience} />
                   </div>
                 ) : (
-                  <select name="experience" value={values.experience} onChange={onField}>
+                  <select name="experience" value={values.experience} onChange={onExperienceChange}>
                     {EXPERIENCE_OPTIONS.map((option) => (
                       <option key={option.id}>{option.label}</option>
                     ))}
@@ -235,15 +254,29 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
                 )}
               </label>
 
-              {detailedExp.hotel && (
+              {detailedExp.hotel || hotelChoices.length === 1 ? (
                 <label className="dcv-field-label dcv-wide">
                   Hotel
                   <div className="dcv-locked-experience">
-                    <span className="dcv-locked-text">{detailedExp.hotel}</span>
-                    <input type="hidden" name="hotel" value={detailedExp.hotel} />
+                    <span className="dcv-locked-text">{values.hotel}</span>
+                    <input type="hidden" name="hotel" value={values.hotel} />
                   </div>
                 </label>
-              )}
+              ) : hotelChoices.length > 1 ? (
+                <label className="dcv-field-label dcv-wide">
+                  Hotel
+                  <select
+                    name="hotel"
+                    value={values.hotel || NO_HOTEL_PREFERENCE}
+                    onChange={(event) => setValue("hotel", event.target.value === NO_HOTEL_PREFERENCE ? "" : event.target.value)}
+                  >
+                    <option>{NO_HOTEL_PREFERENCE}</option>
+                    {hotelChoices.map((hotel) => (
+                      <option key={hotel}>{hotel}</option>
+                    ))}
+                  </select>
+                </label>
+              ) : null}
 
               <label className="dcv-field-label">
                 Adults · Age 18+
@@ -391,11 +424,6 @@ export function InquireForm({ defaultDestination, isQuote }: InquireFormProps = 
               {reviewRows.map(([key, label]) => (
                 <div key={key}>
                   <b>{label}:</b> {values[key]}
-                  {key === "experience" && hotelReviewRow && (
-                    <div>
-                      <b>{hotelReviewRow.label}:</b> {hotelReviewRow.value}
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
