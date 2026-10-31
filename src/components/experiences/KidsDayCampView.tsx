@@ -64,9 +64,9 @@ export function KidsDayCampView({ data, nav }: KidsDayCampViewProps) {
               {activities && activities.length > 0 && (
                 <>
                   <h2>Day Camp Program</h2>
-                  <div className="dcv-feature-list dcv-feature-list--boxed">
+                  <div className="dcv-feature-list dcv-feature-list--boxed space-y-7! py-10!">
                     {activities.map((activity) => (
-                      <div key={activity.id} className="dcv-feature-group">
+                      <div key={activity.id} className="dcv-feature-group space-y-5!">
                         <h3>{activity.title}</h3>
                         <p className="dcv-copy-text" style={{ margin: 0 }}>
                           {activity.description}
