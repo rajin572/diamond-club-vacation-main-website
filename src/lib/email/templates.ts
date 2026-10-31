@@ -1,4 +1,6 @@
 import { siteConfig } from "@/lib/site-config";
+import { GUETTAWAY_LOGO_PNG_BASE64 } from "./logos";
+import type { MailAttachment } from "./mailer";
 
 /** Colors and fonts mirror the site (design.css): cream page, gold accent, Georgia headings. */
 const INK = "#171717";
@@ -19,13 +21,20 @@ const BRANDS: Record<EmailBrand, { name: string; siteUrl: string; logo: string; 
   guettaway: {
     name: "Guettaway, a Diamond Club Production",
     siteUrl: "https://guettaways.com",
-    logo: "/images/mainDesign/guettaway-logo.webp",
+    logo: "cid:guettaway-logo",
     logoWidth: 53,
     logoHeight: 64,
     title: "A DIAMOND CLUB",
     sub: "PRODUCTION",
   },
 };
+
+/** Images the email's HTML refers to with "cid:" (none for Diamond Club Vacations, whose logo is loaded from the site). */
+export function emailAttachments(brand: EmailBrand): MailAttachment[] {
+  return brand === "guettaway"
+    ? [{ filename: "guettaway-logo.png", content: Buffer.from(GUETTAWAY_LOGO_PNG_BASE64, "base64"), cid: "guettaway-logo", contentType: "image/png" }]
+    : [];
+}
 
 export function brandName(brand: EmailBrand) {
   return BRANDS[brand].name;
@@ -53,7 +62,8 @@ interface LayoutInput {
 
 function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing, brand }: LayoutInput) {
   const b = BRANDS[brand];
-  const logoUrl = `${siteConfig.siteUrl}${b.logo}`;
+  // "cid:" logos travel inside the email; the others are loaded from the live site.
+  const logoUrl = b.logo.startsWith("cid:") ? b.logo : `${siteConfig.siteUrl}${b.logo}`;
   const rowsHtml = rows
     .map(
       ([label, value]) => `

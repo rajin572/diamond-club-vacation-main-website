@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getAdminEmail, sendMail } from "@/lib/email/mailer";
 import { emailBrandFor } from "@/lib/email/brand";
-import { adminEmail, brandName, guestEmail, type DetailRow } from "@/lib/email/templates";
+import { adminEmail, brandName, emailAttachments, guestEmail, type DetailRow } from "@/lib/email/templates";
 
 export const runtime = "nodejs";
 
@@ -31,7 +31,7 @@ export async function POST(request: Request) {
 
   try {
     const admin = adminEmail("contact", fullName, rows, brand);
-    await sendMail({ to: getAdminEmail(), replyTo: email, fromName: brandName(brand), ...admin });
+    await sendMail({ to: getAdminEmail(), replyTo: email, fromName: brandName(brand), attachments: emailAttachments(brand), ...admin });
   } catch (error) {
     console.error("[contact] admin email failed", error);
     return NextResponse.json({ error: "We could not send your message. Please try again." }, { status: 500 });
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
 
   // The admin already has the message; a failed confirmation must not make the guest resubmit.
   try {
-    await sendMail({ to: email, fromName: brandName(brand), ...guestEmail("contact", fullName.split(/\s+/)[0], rows, brand) });
+    await sendMail({ to: email, fromName: brandName(brand), attachments: emailAttachments(brand), ...guestEmail("contact", fullName.split(/\s+/)[0], rows, brand) });
   } catch (error) {
     console.error("[contact] guest email failed", error);
   }
