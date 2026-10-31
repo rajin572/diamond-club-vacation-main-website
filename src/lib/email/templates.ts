@@ -11,6 +11,26 @@ const SANS = "Arial, Helvetica, sans-serif";
 
 export type DetailRow = [label: string, value: string];
 
+/** Whose site the submission came from: Guettaway shows its own logo and "A Diamond Club Production", like the website header. */
+export type EmailBrand = "dcv" | "guettaway";
+
+const BRANDS: Record<EmailBrand, { name: string; siteUrl: string; logo: string; logoWidth: number; logoHeight: number; title: string; sub: string }> = {
+  dcv: { name: "Diamond Club Vacations", siteUrl: siteConfig.siteUrl, logo: "/images/logo.png", logoWidth: 64, logoHeight: 64, title: "DIAMOND CLUB", sub: "VACATIONS" },
+  guettaway: {
+    name: "Guettaway, a Diamond Club Production",
+    siteUrl: "https://guettaways.com",
+    logo: "/images/email-guettaway-logo.png",
+    logoWidth: 53,
+    logoHeight: 64,
+    title: "A DIAMOND CLUB",
+    sub: "PRODUCTION",
+  },
+};
+
+export function brandName(brand: EmailBrand) {
+  return BRANDS[brand].name;
+}
+
 export function escapeHtml(value: string) {
   return value
     .replace(/&/g, "&amp;")
@@ -28,10 +48,12 @@ interface LayoutInput {
   rows: DetailRow[];
   rowsHeading: string;
   closing?: string;
+  brand: EmailBrand;
 }
 
-function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing }: LayoutInput) {
-  const logoUrl = `${siteConfig.siteUrl}/images/logo.png`;
+function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing, brand }: LayoutInput) {
+  const b = BRANDS[brand];
+  const logoUrl = `${siteConfig.siteUrl}${b.logo}`;
   const rowsHtml = rows
     .map(
       ([label, value]) => `
@@ -57,9 +79,9 @@ function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing }:
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border:1px solid ${LINE};">
           <tr>
             <td align="center" style="padding:32px 24px 24px;border-bottom:3px solid ${GOLD};">
-              <img src="${logoUrl}" width="64" height="64" alt="Diamond Club Vacations" style="display:block;margin:0 auto 12px;border:0;">
-              <div style="font-family:${SERIF};font-size:20px;letter-spacing:3px;color:${INK};">DIAMOND CLUB</div>
-              <div style="font-family:${SANS};font-size:11px;letter-spacing:4px;color:${GOLD};margin-top:4px;">VACATIONS</div>
+              <img src="${logoUrl}" width="${b.logoWidth}" height="${b.logoHeight}" alt="${escapeHtml(b.name)}" style="display:block;margin:0 auto 12px;border:0;">
+              <div style="font-family:${SERIF};font-size:20px;letter-spacing:3px;color:${INK};">${b.title}</div>
+              <div style="font-family:${SANS};font-size:11px;letter-spacing:4px;color:${GOLD};margin-top:4px;">${b.sub}</div>
             </td>
           </tr>
           <tr>
@@ -82,13 +104,7 @@ function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing }:
           }
           <tr>
             <td align="center" style="padding:28px 32px 36px;">
-              <a href="${siteConfig.siteUrl}" style="display:inline-block;background:${INK};color:#ffffff;font-family:${SANS};font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:14px 28px;">Visit Our Website</a>
-            </td>
-          </tr>
-          <tr>
-            <td align="center" style="background:${CREAM};padding:20px 24px;border-top:1px solid ${LINE};font-family:${SANS};font-size:12px;line-height:1.6;color:${MUTED};">
-              LUXURY KOSHER HOSPITALITY · WORLDWIDE<br>
-              ${escapeHtml(siteConfig.contact.email)} · ${escapeHtml(siteConfig.contact.phone)}
+              <a href="${b.siteUrl}" style="display:inline-block;background:${INK};color:#ffffff;font-family:${SANS};font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:14px 28px;">Visit Our Website</a>
             </td>
           </tr>
         </table>
@@ -99,8 +115,8 @@ function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing }:
 </html>`;
 }
 
-function toText(heading: string, intro: string, rows: DetailRow[], closing?: string) {
-  return [heading, "", intro, "", ...rows.map(([label, value]) => `${label}: ${value}`), ...(closing ? ["", closing] : []), "", "Diamond Club Vacations"].join("\n");
+function toText(heading: string, intro: string, rows: DetailRow[], brandText: string, closing?: string) {
+  return [heading, "", intro, "", ...rows.map(([label, value]) => `${label}: ${value}`), ...(closing ? ["", closing] : []), "", brandText].join("\n");
 }
 
 export interface EmailContent {
@@ -110,11 +126,12 @@ export interface EmailContent {
 }
 
 /** Admin notification: every submitted answer, so the team can act without opening the site. */
-export function adminEmail(kind: "contact" | "inquiry" | "quote", fullName: string, rows: DetailRow[]): EmailContent {
+export function adminEmail(kind: "contact" | "inquiry" | "quote", fullName: string, rows: DetailRow[], brand: EmailBrand = "dcv"): EmailContent {
   const label = { contact: "Contact message", inquiry: "Vacation inquiry", quote: "Quote request" }[kind];
-  const intro = `${fullName} just submitted the ${label.toLowerCase()} form on the website. Reply to this email to answer them directly.`;
+  const site = brand === "guettaway" ? "the Guettaway website" : "the website";
+  const intro = `${fullName} just submitted the ${label.toLowerCase()} form on ${site}. Reply to this email to answer them directly.`;
   return {
-    subject: `New ${label.toLowerCase()} from ${fullName}`,
+    subject: `New ${brand === "guettaway" ? "Guettaway " : ""}${label.toLowerCase()} from ${fullName}`,
     html: layout({
       preheader: intro,
       kicker: "New submission",
@@ -122,18 +139,19 @@ export function adminEmail(kind: "contact" | "inquiry" | "quote", fullName: stri
       intro,
       rowsHeading: "Submission details",
       rows,
+      brand,
     }),
-    text: toText(`New ${label.toLowerCase()}`, intro, rows),
+    text: toText(`New ${label.toLowerCase()}`, intro, rows, brandName(brand)),
   };
 }
 
 /** Confirmation sent to the guest with a copy of what they submitted. */
-export function guestEmail(kind: "contact" | "inquiry" | "quote", firstName: string, rows: DetailRow[]): EmailContent {
+export function guestEmail(kind: "contact" | "inquiry" | "quote", firstName: string, rows: DetailRow[], brand: EmailBrand = "dcv"): EmailContent {
   const what = { contact: "message", inquiry: "inquiry", quote: "quote request" }[kind];
-  const intro = `Thank you for reaching out to Diamond Club Vacations. We have received your ${what} and a member of our concierge team will be in touch with you shortly.`;
+  const intro = `Thank you for reaching out to ${brandName(brand)}. We have received your ${what} and a member of our concierge team will be in touch with you shortly.`;
   const closing = "We look forward to curating your extraordinary kosher luxury vacation.";
   return {
-    subject: `We received your ${what} — Diamond Club Vacations`,
+    subject: `We received your ${what} — ${brandName(brand)}`,
     html: layout({
       preheader: `We have received your ${what}.`,
       kicker: "Confirmation",
@@ -142,7 +160,8 @@ export function guestEmail(kind: "contact" | "inquiry" | "quote", firstName: str
       rowsHeading: `Your ${what}`,
       rows,
       closing,
+      brand,
     }),
-    text: toText(firstName ? `Thank you, ${firstName}.` : "Thank you.", intro, rows, closing),
+    text: toText(firstName ? `Thank you, ${firstName}.` : "Thank you.", intro, rows, brandName(brand), closing),
   };
 }

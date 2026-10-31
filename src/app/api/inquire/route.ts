@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { EXPERIENCE_OPTIONS } from "@/components/inquire/inquire.data";
 import { getAdminEmail, sendMail } from "@/lib/email/mailer";
-import { adminEmail, guestEmail, type DetailRow } from "@/lib/email/templates";
+import { emailBrandFor } from "@/lib/email/brand";
+import { adminEmail, brandName, guestEmail, type DetailRow } from "@/lib/email/templates";
 
 export const runtime = "nodejs";
 
@@ -66,9 +67,15 @@ export async function POST(request: Request) {
   const rows = FIELDS.filter(([key]) => data[key]).map(([key, label]): DetailRow => [label, data[key]]);
   const fullName = `${data.firstName} ${data.lastName}`;
   const experienceId = EXPERIENCE_OPTIONS.find((option) => option.label === data.experience)?.id;
+  const brand = emailBrandFor(request, experienceId);
 
   try {
-    await sendMail({ to: getAdminEmail(experienceId), replyTo: data.email, ...adminEmail(data.kind, fullName, rows) });
+    await sendMail({
+      to: getAdminEmail(experienceId),
+      replyTo: data.email,
+      fromName: brandName(brand),
+      ...adminEmail(data.kind, fullName, rows, brand),
+    });
   } catch (error) {
     console.error("[inquire] admin email failed", error);
     return NextResponse.json({ error: "We could not send your request. Please try again." }, { status: 500 });
@@ -76,7 +83,7 @@ export async function POST(request: Request) {
 
   // The admin already has the request; a failed confirmation must not make the guest resubmit.
   try {
-    await sendMail({ to: data.email, ...guestEmail(data.kind, data.firstName, rows) });
+    await sendMail({ to: data.email, fromName: brandName(brand), ...guestEmail(data.kind, data.firstName, rows, brand) });
   } catch (error) {
     console.error("[inquire] guest email failed", error);
   }
