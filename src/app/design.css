@@ -1413,6 +1413,14 @@ html[data-site="guettaway"] [data-hide-on~="guettaway"] {
   display: none !important;
 }
 
+/* shown only on guettaways.com (see lib/site-hosts) */
+.dcv-only-guettaway {
+  display: none;
+}
+html[data-site="guettaway"] .dcv-only-guettaway {
+  display: inline;
+}
+
 /* ---------- terms and conditions (/terms/[programId]) ---------- */
 .dcv-terms {
   max-width: 860px;

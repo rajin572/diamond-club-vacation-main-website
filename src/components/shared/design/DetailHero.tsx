@@ -19,7 +19,7 @@ function formatHeroTitle(title: string): ReactNode {
 
 interface DetailHeroProps {
   image: DesignImage;
-  kicker?: string;
+  kicker?: ReactNode;
   title: ReactNode;
   subtitle?: ReactNode;
   /** CSS object-position of the photo, for tall or off-centre images (e.g. "50% 20%"). */
