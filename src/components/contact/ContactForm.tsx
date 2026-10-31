@@ -8,6 +8,8 @@ import { ContactDetails } from "./ContactDetails";
 
 /** The contact form is always about the brand as a whole; the field is shown but cannot be changed. */
 const CONTACT_EXPERIENCE = "Diamond Club Vacations";
+/** Shown instead on guettaways.com (CSS, keyed on <html data-site>). */
+const CONTACT_EXPERIENCE_GUETTAWAY = "Guettaway, a Diamond Club Production";
 
 interface ContactValues {
   fullName: string;
@@ -100,7 +102,10 @@ export function ContactForm() {
   return (
     <main className="dcv-inquiry-shell">
       <div style={{ textAlign: "center", marginBottom: 32 }}>
-        <div className="dcv-kicker" style={{ marginBottom: 8 }}>DIAMOND CLUB VACATIONS</div>
+        <div className="dcv-kicker" style={{ marginBottom: 8 }}>
+          <span data-hide-on="guettaway">DIAMOND CLUB VACATIONS</span>
+          <span className="dcv-only-guettaway">GUETTAWAY, A DIAMOND CLUB PRODUCTION</span>
+        </div>
         <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", margin: "0 0 10px", fontFamily: "var(--dcv-serif)" }}>
           Contact Us
         </h1>
@@ -116,7 +121,10 @@ export function ContactForm() {
           <label className="dcv-field-label dcv-wide">
             Experience
             <div className="dcv-locked-experience">
-              <span className="dcv-locked-text">{CONTACT_EXPERIENCE}</span>
+              <span className="dcv-locked-text">
+                <span data-hide-on="guettaway">{CONTACT_EXPERIENCE}</span>
+                <span className="dcv-only-guettaway">{CONTACT_EXPERIENCE_GUETTAWAY}</span>
+              </span>
               <input type="hidden" name="experience" value={CONTACT_EXPERIENCE} />
             </div>
           </label>

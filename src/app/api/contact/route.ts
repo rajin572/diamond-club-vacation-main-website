@@ -21,7 +21,7 @@ export async function POST(request: Request) {
   const { fullName, email, phone, subject, message } = parsed.data;
   const brand = emailBrandFor(request);
   const rows: DetailRow[] = [
-    ["Experience", "Diamond Club Vacations"],
+    ["Experience", brandName(brand)],
     ["Full name", fullName],
     ["Email", email],
     ["Phone", phone],

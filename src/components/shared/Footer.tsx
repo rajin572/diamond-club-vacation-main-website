@@ -12,9 +12,9 @@ export function Footer() {
           <Link className="dcv-logo" data-hide-on="guettaway" href="/" aria-label="Diamond Club Vacations home">
             DIAMOND CLUB<small>VACATIONS</small>
           </Link>
-          {/* guettaways.com: "DIAMOND CLUB / PRODUCTION", like the header (shown by CSS, see design.css). */}
+          {/* guettaways.com: "GUETTAWAY / A DIAMOND CLUB PRODUCTION", like the header (shown by CSS, see design.css). */}
           <Link className="dcv-logo dcv-logo--guettaway" href="/" aria-label="Diamond Club Production, Guettaway home">
-            DIAMOND CLUB<small>PRODUCTION</small>
+            GUETTAWAY<small>A DIAMOND CLUB PRODUCTION</small>
           </Link>
           <p>{FOOTER_BLURB}</p>
         </div>

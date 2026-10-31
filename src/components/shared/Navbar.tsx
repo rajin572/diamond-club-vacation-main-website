@@ -102,8 +102,8 @@ export function Navbar() {
             <Image src={AllImages.guettawayLogo} alt="Guettaway" width={42} height={52} priority className="dcv-brand-seal" />
             <span className="dcv-brand-divider" aria-hidden="true" />
             <div className="dcv-brand-text">
-              <span className="dcv-brand-title">A DIAMOND CLUB</span>
-              <span className="dcv-brand-sub">PRODUCTION</span>
+              <span className="dcv-brand-title">GUETTAWAY</span>
+              <span className="dcv-brand-sub dcv-brand-sub--long">A DIAMOND CLUB PRODUCTION</span>
             </div>
           </Link>
 
