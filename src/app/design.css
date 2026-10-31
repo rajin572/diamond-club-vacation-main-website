@@ -1153,6 +1153,21 @@ button.dcv-link {
   padding: 22px 26px;
   margin-top: 16px;
 }
+/* Day Camp program (Morning / Midday / Afternoon / Evening): each box must stand out from the page (client 2026-10-30). */
+.dcv-feature-list--boxed {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+  border-radius: 32px;
+  background: #f4ecdc;
+}
+.dcv-feature-list--boxed .dcv-feature-group {
+  margin: 0;
+  background: #fff;
+  border: 1.5px solid #cdac68;
+  border-left-width: 5px;
+  box-shadow: 0 10px 26px rgba(120, 88, 30, 0.16);
+}
 .dcv-feature-group h3 {
   font-size: 20px;
   margin: 0 0 12px;
