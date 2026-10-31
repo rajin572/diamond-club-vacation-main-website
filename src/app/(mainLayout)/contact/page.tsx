@@ -13,7 +13,12 @@ export default function ContactPage() {
     <>
       <DetailHero
         image={AllImages.inquirySource01}
-        kicker="DIAMOND CLUB VACATIONS"
+        kicker={
+          <>
+            <span data-hide-on="guettaway">DIAMOND CLUB VACATIONS</span>
+            <span className="dcv-only-guettaway">GUETTAWAY, A DIAMOND CLUB PRODUCTION</span>
+          </>
+        }
         title="Contact Us"
         subtitle="We look forward to curating your extraordinary kosher luxury vacation."
       />
