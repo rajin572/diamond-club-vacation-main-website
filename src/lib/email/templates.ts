@@ -11,6 +11,9 @@ const GOLD = "#9a7a38";
 const SERIF = "Georgia, 'Times New Roman', serif";
 const SANS = "Arial, Helvetica, sans-serif";
 
+/** The "Visit Our Website" button at the bottom of the emails is hidden for now (client 2026-10-31); set to true to bring it back. */
+const SHOW_WEBSITE_BUTTON = false;
+
 export type DetailRow = [label: string, value: string];
 
 /** Whose site the submission came from: Guettaway shows its own logo and "A Diamond Club Production", like the website header. */
@@ -112,11 +115,15 @@ function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing, b
               ? `<tr><td style="padding:16px 32px 8px;"><p style="margin:0;font-family:${SANS};font-size:15px;line-height:1.6;color:${MUTED};">${escapeHtml(closing)}</p></td></tr>`
               : ""
           }
-          <tr>
+          ${
+            SHOW_WEBSITE_BUTTON
+              ? `<tr>
             <td align="center" style="padding:28px 32px 36px;">
               <a href="${b.siteUrl}" style="display:inline-block;background:${INK};color:#ffffff;font-family:${SANS};font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:14px 28px;">Visit Our Website</a>
             </td>
-          </tr>
+          </tr>`
+              : `<tr><td style="padding:0 0 24px;font-size:0;line-height:0;">&nbsp;</td></tr>`
+          }
         </table>
       </td>
     </tr>
