@@ -129,11 +129,6 @@
   margin-top: 4px;
   white-space: nowrap;
 }
-/* "A DIAMOND CLUB PRODUCTION" is longer than VACATIONS, so it gets tighter letter spacing */
-.dcv-brand-sub--long {
-  font-size: 9px;
-  letter-spacing: 0.2em;
-}
 /* Header brands of the satellite domains, shown only on their site (data-site is set before paint, see lib/site-hosts) */
 .dcv-brand--passover,
 .dcv-brand--guettaway {
