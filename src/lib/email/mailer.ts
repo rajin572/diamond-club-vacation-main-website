@@ -6,6 +6,8 @@ interface MailInput {
   html: string;
   text: string;
   replyTo?: string;
+  /** Sender name shown in the inbox (default "Diamond Club Vacations"). */
+  fromName?: string;
 }
 
 let transporter: Transporter | null = null;
@@ -31,9 +33,9 @@ export function getAdminEmail(experienceId?: string) {
   return (programEnv && process.env[programEnv]) || process.env.ADMIN_EMAIL || process.env.EMAIL_USER || "";
 }
 
-export async function sendMail({ to, subject, html, text, replyTo }: MailInput) {
+export async function sendMail({ to, subject, html, text, replyTo, fromName = "Diamond Club Vacations" }: MailInput) {
   await getTransporter().sendMail({
-    from: `"Diamond Club Vacations" <${process.env.EMAIL_USER}>`,
+    from: `"${fromName}" <${process.env.EMAIL_USER}>`,
     to,
     subject,
     html,
