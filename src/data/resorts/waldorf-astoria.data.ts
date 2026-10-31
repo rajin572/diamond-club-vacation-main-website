@@ -1192,7 +1192,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
   wellness: {
     title: "Wellness & Fitness",
     description: "Kayaking and paddle boarding on the coastal waters, and world-class golf and tennis, with the spa on the property.",
-    images: [AllImages.waldorfWellnessFitnessCenter, AllImages.waldorfWellnessGolfAerial, AllImages.waldorfWellnessTennisCourt],
+    images: [AllImages.waldorfWellnessFitnessCenter],
     // From the hotel's Hilton "Things to do" page (hilton.com/en/hotels/cunwawa-waldorf-astoria-riviera-maya/things-to-do/). The day trips on that page
     // (Chichen Itza, sailing, whale sharks, Isla Mujeres, ATVs, cenotes) are not wellness: they are the program's attractions.
     activities: [
