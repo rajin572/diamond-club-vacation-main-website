@@ -139,11 +139,19 @@ html[data-site="guettaway"] .dcv-brand--guettaway,
 .dcv-brand--guettaway.dcv-brand--on {
   display: inline-flex;
 }
-/* Guettaway: the oval Guettaway seal in place of the Diamond Club seal, then "DIAMOND CLUB / PRODUCTION" */
+/* Guettaway: the oval Guettaway seal in place of the Diamond Club seal, then the "GUETTAWAY" wordmark (navy) over "A DIAMOND CLUB PRODUCTION" (client: no lines on its sides) */
 .dcv-brand--guettaway .dcv-brand-seal {
   height: 54px;
   width: auto;
   flex-shrink: 0;
+}
+.dcv-brand--guettaway .dcv-brand-title {
+  font-size: 27px;
+  letter-spacing: 0.1em;
+  color: #1c2a5e;
+}
+.dcv-brand--guettaway .dcv-brand-sub {
+  letter-spacing: 0.3em;
 }
 .dcv-logo {
   font-family: var(--dcv-serif);
@@ -1385,7 +1393,8 @@ button.dcv-link {
   margin: auto;
   padding: 58px 42px;
   display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr);
+  /* the last, auto-width column holds the WhatsApp and Instagram icons (FooterSocial) */
+  grid-template-columns: 2fr repeat(3, 1fr) auto;
   gap: 40px;
 }
 .dcv-footer h4 {
@@ -1401,10 +1410,12 @@ button.dcv-link {
 .dcv-footer .dcv-footer-inner a:not(.dcv-logo):hover {
   color: #fff;
 }
-/* guettaways.com: round WhatsApp and Instagram icons, last column of the footer grid (right edge) */
+/* round WhatsApp and Instagram icons in the last column of the top row, at the right edge (FooterSocial); Guettaway's on its pages and guettaways.com.
+   On the tablet and phone grids (1-2 columns) they wrap to their own row. */
 .dcv-footer .dcv-footer-inner .dcv-footer-social-col {
   grid-column: -2 / -1;
   justify-self: end;
+  align-self: start;
 }
 .dcv-footer-social-row {
   display: flex;
@@ -2191,6 +2202,9 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
     grid-template-columns: 1fr;
     padding: 44px 24px;
     gap: 28px;
+  }
+  .dcv-footer .dcv-footer-inner .dcv-footer-social-col {
+    justify-self: start;
   }
   .dcv-hero-words {
     padding: 80px 20px 230px;
@@ -3167,6 +3181,12 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
   .dcv-brand--guettaway .dcv-brand-seal {
     height: 46px;
   }
+  .dcv-brand--guettaway .dcv-brand-title {
+    font-size: 23px;
+  }
+  .dcv-brand--guettaway .dcv-brand-sub {
+    letter-spacing: 0.22em;
+  }
 }
 
 @media (max-width: 600px) {
@@ -3189,6 +3209,13 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
   }
   .dcv-brand--guettaway .dcv-brand-seal {
     height: 34px;
+  }
+  .dcv-brand--guettaway .dcv-brand-title {
+    font-size: 19px;
+    letter-spacing: 0.08em;
+  }
+  .dcv-brand--guettaway .dcv-brand-sub {
+    letter-spacing: 0.16em;
   }
   .dcv-brochure-header {
     padding: 22px 20px 16px;

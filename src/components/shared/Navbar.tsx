@@ -7,13 +7,11 @@ import { usePathname } from "next/navigation";
 import { PRIMARY_NAV } from "./nav.data";
 import { MobileMenu } from "./MobileMenu";
 import { getExperiencesHref, getInquireContext } from "@/lib/inquire-context";
-import { resolveDetailedExperience } from "@/components/inquire/inquire.data";
-import { SectionLink } from "./design/SectionLink";
+import { NavLinkItem } from "./NavLinkItem";
+import { isGuettawayPage, isInquirePath, isLoginPath } from "./guettaway-page";
 import { GUETTAWAY_LOGIN_HREF, LOGIN_HREF, REQUEST_A_QUOTE_HREF, inquireHref } from "@/lib/routes";
 import { MAIN_SITE_URL } from "@/lib/site-hosts";
 import { AllImages } from "../../../public/images/AllImages";
-
-const GUETTAWAY_PROGRAM_ID = "guttaway";
 
 function subscribeToLocation(onChange: () => void) {
   window.addEventListener("popstate", onChange);
@@ -57,29 +55,10 @@ export function Navbar() {
   const navLinks = PRIMARY_NAV.map((link) =>
     link.href === "/experiences" ? { ...link, href: experiencesHref } : link
   );
-  const onInquirePage =
-    pathname === "/inquire" ||
-    (pathname ? pathname.startsWith("/inquire/") : false) ||
-    pathname === "/request-a-quote" ||
-    (pathname ? pathname.startsWith("/request-a-quote/") : false);
+  const onInquirePage = isInquirePath(pathname);
+  const onLoginPage = isLoginPath(pathname);
   // Guettaway pages (its own domain, or the program and its hotels on the other sites) swap the main brand for the Guettaway one (client 2026-10-26).
-  // The Inquire page itself is not inside a program, so it takes the program from its ?destination= (client 2026-10-31).
-  const inquireParams = new URLSearchParams(search);
-  const inquiringAboutGuettaway =
-    onInquirePage &&
-    /guettaway/i.test(
-      resolveDetailedExperience(inquireParams.get("destination") ?? inquireParams.get("program"), inquireParams.get("resort")).label
-    );
-  // The program's terms page (/terms/guttaway) is a Guettaway page too (client 2026-10-31).
-  const termsProgramId = pathname ? /^\/terms\/([^/]+)/.exec(pathname)?.[1] : undefined;
-  // The login page opened from a Guettaway page (/login?brand=guettaway) keeps the Guettaway brand (client 2026-10-31).
-  const onLoginPage = pathname === "/login" || (pathname ? pathname.startsWith("/login/") : false);
-  const loginForGuettaway = onLoginPage && inquireParams.get("brand") === "guettaway";
-  const onGuettawayPage =
-    inquiry?.programId === GUETTAWAY_PROGRAM_ID ||
-    inquiringAboutGuettaway ||
-    termsProgramId === GUETTAWAY_PROGRAM_ID ||
-    loginForGuettaway;
+  const onGuettawayPage = isGuettawayPage(pathname, search);
   // Login button after Inquire (client 2026-10-29): design only; it opens the login page with the brand of the site the visitor is on.
   const loginHref = onGuettawayPage ? GUETTAWAY_LOGIN_HREF : LOGIN_HREF;
 
@@ -108,7 +87,7 @@ export function Navbar() {
             </a>
           )}
 
-          {/* Guettaway: the Guettaway logo replaces the Diamond Club seal, next to "DIAMOND CLUB PRODUCTION" (client 2026-10-26; the logo in the hero stays).
+          {/* Guettaway: the Guettaway logo replaces the Diamond Club seal, next to the "GUETTAWAY" wordmark and "A DIAMOND CLUB PRODUCTION" (client 2026-10-26; the logo in the hero stays; no side lines around the tagline).
               Shown by CSS on guettaways.com (see design.css), and by `--on` on the Guettaway program's pages of the other sites. "/" leads to the Guettaway page there (client 2026-10-25). */}
           <Link
             className={`dcv-brand dcv-brand--guettaway${onGuettawayPage ? " dcv-brand--on" : ""}`}
@@ -118,16 +97,14 @@ export function Navbar() {
             <Image src={AllImages.guettawayLogo} alt="Guettaway" width={42} height={52} priority className="dcv-brand-seal" />
             <span className="dcv-brand-divider" aria-hidden="true" />
             <div className="dcv-brand-text">
-              <span className="dcv-brand-title">A DIAMOND CLUB</span>
-              <span className="dcv-brand-sub">PRODUCTION</span>
+              <span className="dcv-brand-title">GUETTAWAY</span>
+              <span className="dcv-brand-sub">A DIAMOND CLUB PRODUCTION</span>
             </div>
           </Link>
 
           <nav className="dcv-navlinks" aria-label="Primary">
             {navLinks.map((link) => (
-              <SectionLink key={link.label} href={link.href} data-hide-on={link.hiddenOn?.join(" ")}>
-                {link.label}
-              </SectionLink>
+              <NavLinkItem key={`${link.label}-${link.href}`} link={link} />
             ))}
 
             {/* Inquire inside a program / hotel; Contact on all other pages */}

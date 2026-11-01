@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { GUETTAWAY_CONTACT_DETAILS, InstagramIcon, WhatsAppIcon } from "@/components/contact/ContactDetails";
 import { TERMS_FOOTER_HREF } from "@/lib/routes";
+import FooterSocial from "./FooterSocial";
 import { FOOTER_BLURB, FOOTER_COLUMNS } from "./nav.data";
 import TermsFooterLink from "./TermsFooterLink";
 
@@ -13,9 +13,9 @@ export function Footer() {
           <Link className="dcv-logo" data-hide-on="guettaway" href="/" aria-label="Diamond Club Vacations home">
             DIAMOND CLUB<small>VACATIONS</small>
           </Link>
-          {/* guettaways.com: "DIAMOND CLUB / PRODUCTION", like the header (shown by CSS, see design.css). */}
+          {/* guettaways.com: "GUETTAWAY / A DIAMOND CLUB PRODUCTION", like the header but in white (shown by CSS, see design.css). */}
           <Link className="dcv-logo dcv-logo--guettaway" href="/" aria-label="Diamond Club Production, Guettaway home">
-            DIAMOND CLUB<small>PRODUCTION</small>
+            GUETTAWAY<small>A DIAMOND CLUB PRODUCTION</small>
           </Link>
           <p>{FOOTER_BLURB}</p>
         </div>
@@ -25,40 +25,20 @@ export function Footer() {
             {column.links.map((link) => (
               link.href === TERMS_FOOTER_HREF ? (
                 <TermsFooterLink key={`${column.title}-${link.label}`} label={link.label} />
+              ) : link.onlyOnGuettaway ? (
+                <span key={`${column.title}-${link.label}-${link.href}`} className="dcv-only-guettaway dcv-only-guettaway--block">
+                  <Link href={link.href}>{link.label}</Link>
+                </span>
               ) : (
-                <Link key={`${column.title}-${link.label}`} href={link.href} data-hide-on={link.hiddenOn?.join(" ")}>
+                <Link key={`${column.title}-${link.label}-${link.href}`} href={link.href} data-hide-on={link.hiddenOn?.join(" ")}>
                   {link.label}
                 </Link>
               )
             ))}
           </div>
         ))}
-        {/* guettaways.com: Guettaway's WhatsApp and Instagram as round icons on the right (shown by CSS, see design.css). */}
-        <div className="dcv-only-guettaway dcv-only-guettaway--block dcv-footer-social-col">
-          <div className="dcv-footer-social-row">
-            <a
-              className="dcv-footer-social dcv-footer-social--whatsapp"
-              href={GUETTAWAY_CONTACT_DETAILS.whatsapp.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`WhatsApp ${GUETTAWAY_CONTACT_DETAILS.whatsapp.display}`}
-            >
-              <WhatsAppIcon size={22} />
-            </a>
-            {GUETTAWAY_CONTACT_DETAILS.instagram.map((account) => (
-              <a
-                key={account.label}
-                className="dcv-footer-social"
-                href={account.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`@${account.label} on Instagram`}
-              >
-                <InstagramIcon size={22} />
-              </a>
-            ))}
-          </div>
-        </div>
+        {/* WhatsApp and Instagram as round icons on the right: Diamond Club's, or Guettaway's on its pages and domain. */}
+        <FooterSocial />
       </div>
     </footer>
   );

@@ -1,4 +1,4 @@
-import { CASA_NIZUC_HREF, PASSOVER_OFFERING_ID, TERMS_FOOTER_HREF, WEDDINGS_HREF, offeringHref } from "@/lib/routes";
+import { CASA_NIZUC_HREF, GUETTAWAY_ABOUT_HREF, PASSOVER_OFFERING_ID, TERMS_FOOTER_HREF, WEDDINGS_HREF, offeringHref } from "@/lib/routes";
 import type { SiteId } from "@/lib/site-hosts";
 import type { DesignLink } from "./design/types";
 
@@ -11,6 +11,7 @@ export const PRIMARY_NAV: DesignLink[] = [
   { label: "Weddings & Events", href: WEDDINGS_HREF, hiddenOn: HIDDEN_ON_GUETTAWAY },
   { label: "Experiences", href: "/experiences", hiddenOn: HIDDEN_ON_GUETTAWAY },
   { label: "About", href: "/about", hiddenOn: HIDDEN_ON_GUETTAWAY },
+  { label: "About", href: GUETTAWAY_ABOUT_HREF, onlyOnGuettaway: true },
 ];
 
 export const INQUIRE_LINK: DesignLink = { label: "Inquire", href: "/inquire" };
@@ -48,6 +49,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Guest",
     links: [
       { label: "About", href: "/about", hiddenOn: HIDDEN_ON_GUETTAWAY },
+      { label: "About", href: GUETTAWAY_ABOUT_HREF, onlyOnGuettaway: true },
       { label: "Contact", href: "/contact" },
       { label: "Terms & Conditions", href: TERMS_FOOTER_HREF },
     ],

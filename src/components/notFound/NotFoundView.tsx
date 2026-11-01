@@ -19,7 +19,7 @@ export function NotFoundView() {
             <h2>Let us help you find your way</h2>
             <p className="dcv-lead">Try one of these pages, or contact us and we will help you directly.</p>
             <nav className="dcv-gallery-tabs" aria-label="Popular pages">
-              {PRIMARY_NAV.map((link) => (
+              {PRIMARY_NAV.filter((link) => !link.onlyOnGuettaway).map((link) => (
                 <Link key={link.href} href={link.href}>
                   {link.label}
                 </Link>

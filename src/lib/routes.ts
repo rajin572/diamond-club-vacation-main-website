@@ -120,6 +120,9 @@ export function termsHref(programId: string): string {
 /** The program whose terms the footer links to on guettaways.com when the page is not a program page (e.g. /contact). */
 export const GUETTAWAY_PROGRAM_ID = "guttaway";
 
+/** Guettaway's own About page: the header and footer "About" links of guettaways.com lead here (the other sites lead to /about). */
+export const GUETTAWAY_ABOUT_HREF = `${programHref(PASSOVER_OFFERING_ID, GUETTAWAY_PROGRAM_ID)}/about`;
+
 /** The footer link the Terms & Conditions entry carries; its real target depends on the page (see `termsHrefForPath`). */
 export const TERMS_FOOTER_HREF = "#terms";
 

@@ -8,7 +8,7 @@ export const PARK_HYATT_RESORT_DATA: ResortData = {
   programId: "guttaway",
   programTitle: "Guettaway a Diamond Club production",
   resortId: "park-hyatt",
-  resortName: "Park Hyatt Riviera Maya",
+  resortName: "",
   kicker: "Guettaway a Diamond Club production",
   heroLogo: { image: AllImages.parkHyattHeroLogo, alt: "Park Hyatt Riviera Maya", height: 72 },
   tagline: "Guettaway a Diamond Club production",

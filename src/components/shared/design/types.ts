@@ -9,6 +9,8 @@ export interface DesignLink {
   href: string;
   /** Header links only: the satellite sites (see lib/site-hosts) on which the link is hidden. */
   hiddenOn?: SiteId[];
+  /** The link exists only on guettaways.com (shown by CSS, see `dcv-only-guettaway`); a twin of a link hidden there that leads to Guettaway's own page. */
+  onlyOnGuettaway?: boolean;
 }
 
 export interface DesignStat {
