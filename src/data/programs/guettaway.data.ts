@@ -36,7 +36,7 @@ export const GUTTAWAY_DATA: ProgramData = {
         id: "park-hyatt",
         title: "Park Hyatt Riviera Maya",
         image: AllImages.guettawayMain3,
-        logos: [{ image: AllImages.guettawayMain4, alt: "Park Hyatt Riviera Maya", blend: true }],
+        logos: [{ image: AllImages.parkHyattHeroLogo, alt: "Park Hyatt Riviera Maya", wordmark: true }],
         target: { type: "resort", resortId: "park-hyatt" },
       },
     ],

@@ -9,7 +9,13 @@ export function CardLogos({ logos }: { logos: CardLogo[] }) {
     <div className="dcv-card-logos">
       {logos.map((logo) =>
         logo.image ? (
-          <Image key={logo.alt} className={logo.blend ? "dcv-blend" : undefined} src={logo.image} alt={logo.alt} sizes="220px" />
+          <Image
+            key={logo.alt}
+            className={logo.blend ? "dcv-blend" : logo.wordmark ? "dcv-wordmark" : undefined}
+            src={logo.image}
+            alt={logo.alt}
+            sizes={logo.wordmark ? "420px" : "220px"}
+          />
         ) : (
           <span key={logo.alt} role="img" aria-label={logo.alt}>
             {logo.text}

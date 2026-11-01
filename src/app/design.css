@@ -2529,6 +2529,11 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
   max-width: 70%;
   mix-blend-mode: screen;
 }
+/* wide transparent wordmark (e.g. "PARK HYATT RIVIERA MAYA"): wider than a square brand mark */
+.dcv-card .dcv-card-logos img.dcv-wordmark {
+  height: clamp(34px, 3.6vw, 52px);
+  max-width: 80%;
+}
 .dcv-card-logos span {
   color: #fff;
   font: 400 clamp(11px, 1.1vw, 14px) / 1.25 var(--dcv-serif);

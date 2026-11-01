@@ -30,4 +30,6 @@ export interface CardLogo {
   alt: string;
   /** Artwork is white on a black background: blend it onto the photo instead of showing the black. */
   blend?: boolean;
+  /** Wide wordmark with a transparent background (white artwork): drawn wider than a square brand mark, no blending. */
+  wordmark?: boolean;
 }
