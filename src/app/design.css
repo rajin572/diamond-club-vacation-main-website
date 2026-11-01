@@ -1401,6 +1401,39 @@ button.dcv-link {
 .dcv-footer .dcv-footer-inner a:not(.dcv-logo):hover {
   color: #fff;
 }
+/* guettaways.com: round WhatsApp and Instagram icons, last column of the footer grid (right edge) */
+.dcv-footer .dcv-footer-inner .dcv-footer-social-col {
+  grid-column: -2 / -1;
+  justify-self: end;
+}
+.dcv-footer-social-row {
+  display: flex;
+  gap: 12px;
+}
+.dcv-footer .dcv-footer-inner a.dcv-footer-social.dcv-footer-social--whatsapp {
+  background: #25d366;
+}
+.dcv-footer .dcv-footer-inner a.dcv-footer-social.dcv-footer-social--whatsapp:hover {
+  box-shadow: 0 8px 18px rgba(37, 211, 102, 0.35);
+}
+.dcv-footer .dcv-footer-inner a.dcv-footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  border-radius: 50%;
+  /* Instagram's own gradient, same as the contact page pill */
+  background: linear-gradient(45deg, #f9ce34 0%, #ee2a7b 45%, #6228d7 100%);
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+.dcv-footer .dcv-footer-inner a.dcv-footer-social:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(238, 42, 123, 0.38);
+}
 .dcv-footer p {
   color: #aaa;
   max-width: 380px;
@@ -1419,6 +1452,10 @@ html[data-site="guettaway"] [data-hide-on~="guettaway"] {
 }
 html[data-site="guettaway"] .dcv-only-guettaway {
   display: inline;
+}
+/* for a block-level wrapper (use with .dcv-only-guettaway) */
+html[data-site="guettaway"] .dcv-only-guettaway--block {
+  display: block;
 }
 
 /* ---------- terms and conditions (/terms/[programId]) ---------- */

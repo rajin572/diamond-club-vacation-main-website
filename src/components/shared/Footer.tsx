@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GUETTAWAY_CONTACT_DETAILS, InstagramIcon, WhatsAppIcon } from "@/components/contact/ContactDetails";
 import { TERMS_FOOTER_HREF } from "@/lib/routes";
 import { FOOTER_BLURB, FOOTER_COLUMNS } from "./nav.data";
 import TermsFooterLink from "./TermsFooterLink";
@@ -32,6 +33,32 @@ export function Footer() {
             ))}
           </div>
         ))}
+        {/* guettaways.com: Guettaway's WhatsApp and Instagram as round icons on the right (shown by CSS, see design.css). */}
+        <div className="dcv-only-guettaway dcv-only-guettaway--block dcv-footer-social-col">
+          <div className="dcv-footer-social-row">
+            <a
+              className="dcv-footer-social dcv-footer-social--whatsapp"
+              href={GUETTAWAY_CONTACT_DETAILS.whatsapp.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`WhatsApp ${GUETTAWAY_CONTACT_DETAILS.whatsapp.display}`}
+            >
+              <WhatsAppIcon size={22} />
+            </a>
+            {GUETTAWAY_CONTACT_DETAILS.instagram.map((account) => (
+              <a
+                key={account.label}
+                className="dcv-footer-social"
+                href={account.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`@${account.label} on Instagram`}
+              >
+                <InstagramIcon size={22} />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </footer>
   );

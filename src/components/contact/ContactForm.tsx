@@ -9,7 +9,7 @@ import { ContactDetails } from "./ContactDetails";
 /** The contact form is always about the brand as a whole; the field is shown but cannot be changed. */
 const CONTACT_EXPERIENCE = "Diamond Club Vacations";
 /** Shown instead on guettaways.com (CSS, keyed on <html data-site>). */
-const CONTACT_EXPERIENCE_GUETTAWAY = "Guettaway, a Diamond Club Production";
+const CONTACT_EXPERIENCE_GUETTAWAY = "Guettaway a Diamond Club Production";
 
 interface ContactValues {
   fullName: string;
@@ -104,7 +104,7 @@ export function ContactForm() {
       <div style={{ textAlign: "center", marginBottom: 32 }}>
         <div className="dcv-kicker" style={{ marginBottom: 8 }}>
           <span data-hide-on="guettaway">DIAMOND CLUB VACATIONS</span>
-          <span className="dcv-only-guettaway">GUETTAWAY, A DIAMOND CLUB PRODUCTION</span>
+          <span className="dcv-only-guettaway">GUETTAWAY A DIAMOND CLUB PRODUCTION</span>
         </div>
         <h1 style={{ fontSize: "clamp(28px, 4vw, 42px)", margin: "0 0 10px", fontFamily: "var(--dcv-serif)" }}>
           Contact Us
@@ -114,7 +114,13 @@ export function ContactForm() {
         </p>
       </div>
 
-      <ContactDetails />
+      {/* guettaways.com shows Guettaway's own contact details instead of Diamond Club's (CSS, keyed on <html data-site>). */}
+      <div data-hide-on="guettaway">
+        <ContactDetails />
+      </div>
+      <div className="dcv-only-guettaway dcv-only-guettaway--block">
+        <ContactDetails variant="guettaway" />
+      </div>
 
       <form onSubmit={onSubmit} noValidate style={{ maxWidth: 720, margin: "0 auto" }}>
         <div className="dcv-formgrid">

@@ -117,6 +117,9 @@ export function termsHref(programId: string): string {
   return `/terms/${programId}`;
 }
 
+/** The program whose terms the footer links to on guettaways.com when the page is not a program page (e.g. /contact). */
+export const GUETTAWAY_PROGRAM_ID = "guttaway";
+
 /** The footer link the Terms & Conditions entry carries; its real target depends on the page (see `termsHrefForPath`). */
 export const TERMS_FOOTER_HREF = "#terms";
 

@@ -20,7 +20,7 @@ export interface AboutPageData {
 export const ABOUT_PAGE_DATA: AboutPageData = {
   hero: {
     kicker: "DIAMOND CLUB VACATIONS",
-    title: "About Diamond Club Vacations",
+    title: "Diamond Club Vacations",
     subtitle: "Luxury, without compromise.",
     image: AllImages.homeHeroImage,
   },
