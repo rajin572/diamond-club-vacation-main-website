@@ -4,7 +4,7 @@ import type { TermsData } from "@/components/terms/terms.types";
 /** Source: "TERMS AND CONDITIONS Waldorf-PHRM" PDF supplied by the client (Passover 2027, Waldorf Astoria & Park Hyatt Riviera Maya). */
 export const GUETTAWAY_TERMS: TermsData = {
   programId: "guttaway",
-  programName: "GUETTAWAY by DCP",
+  programName: "Guettaway a Diamond Club production",
   hotels: "Waldorf Astoria & Park Hyatt Riviera Maya",
   heroImage: AllImages.guettawayMain1,
   sections: [
