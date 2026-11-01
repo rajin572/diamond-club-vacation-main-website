@@ -22,7 +22,7 @@ export type EmailBrand = "dcv" | "guettaway";
 const BRANDS: Record<EmailBrand, { name: string; siteUrl: string; logo: string; logoWidth: number; logoHeight: number; title: string; sub: string }> = {
   dcv: { name: "Diamond Club Vacations", siteUrl: siteConfig.siteUrl, logo: "/images/logo.png", logoWidth: 64, logoHeight: 64, title: "DIAMOND CLUB", sub: "VACATIONS" },
   guettaway: {
-    name: "Guettaway, a Diamond Club Production",
+    name: "Guettaway a Diamond Club Production",
     siteUrl: "https://guettaways.com",
     logo: "cid:guettaway-logo",
     logoWidth: 53,
@@ -110,20 +110,18 @@ function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing, b
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rowsHtml}</table>
             </td>
           </tr>
-          ${
-            closing
-              ? `<tr><td style="padding:16px 32px 8px;"><p style="margin:0;font-family:${SANS};font-size:15px;line-height:1.6;color:${MUTED};">${escapeHtml(closing)}</p></td></tr>`
-              : ""
-          }
-          ${
-            SHOW_WEBSITE_BUTTON
-              ? `<tr>
+          ${closing
+      ? `<tr><td style="padding:16px 32px 8px;"><p style="margin:0;font-family:${SANS};font-size:15px;line-height:1.6;color:${MUTED};">${escapeHtml(closing)}</p></td></tr>`
+      : ""
+    }
+          ${SHOW_WEBSITE_BUTTON
+      ? `<tr>
             <td align="center" style="padding:28px 32px 36px;">
               <a href="${b.siteUrl}" style="display:inline-block;background:${INK};color:#ffffff;font-family:${SANS};font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:14px 28px;">Visit Our Website</a>
             </td>
           </tr>`
-              : `<tr><td style="padding:0 0 24px;font-size:0;line-height:0;">&nbsp;</td></tr>`
-          }
+      : `<tr><td style="padding:0 0 24px;font-size:0;line-height:0;">&nbsp;</td></tr>`
+    }
         </table>
       </td>
     </tr>

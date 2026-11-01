@@ -16,7 +16,7 @@ export default function ContactPage() {
         kicker={
           <>
             <span data-hide-on="guettaway">DIAMOND CLUB VACATIONS</span>
-            <span className="dcv-only-guettaway">GUETTAWAY, A DIAMOND CLUB PRODUCTION</span>
+            <span className="dcv-only-guettaway">GUETTAWAY A DIAMOND CLUB PRODUCTION</span>
           </>
         }
         title="Contact Us"

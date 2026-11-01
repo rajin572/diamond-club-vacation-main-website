@@ -14,7 +14,7 @@ interface InquirePageProps {
   searchParams: Promise<{ destination?: string; program?: string; resort?: string }>;
 }
 
-const GUETTAWAY_KICKER = "Guettaway, a Diamond Club Production";
+const GUETTAWAY_KICKER = "Guettaway a Diamond Club Production";
 
 export default async function InquirePage({ searchParams }: InquirePageProps) {
   const { destination, program, resort } = await searchParams;
