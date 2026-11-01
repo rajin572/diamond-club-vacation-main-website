@@ -31,7 +31,7 @@ export async function POST(request: Request) {
 
   try {
     const admin = adminEmail("contact", fullName, rows, brand);
-    await sendMail({ to: getAdminEmail(), replyTo: email, fromName: brandName(brand), attachments: emailAttachments(brand), ...admin });
+    await sendMail({ to: getAdminEmail(undefined, brand === "guettaway"), replyTo: email, fromName: brandName(brand), attachments: emailAttachments(brand), ...admin });
   } catch (error) {
     console.error("[contact] admin email failed", error);
     return NextResponse.json({ error: "We could not send your message. Please try again." }, { status: 500 });

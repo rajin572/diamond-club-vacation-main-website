@@ -29,17 +29,26 @@ function getTransporter() {
   return transporter;
 }
 
-/** Env var holding the admin inbox for each program's inquiries (comma-separate several addresses). */
-const PROGRAM_ADMIN_ENV: Record<string, string> = {
-  "diamond-club-reserve": "ADMIN_EMAIL_RESERVE",
-  guttaway: "ADMIN_EMAIL_GUETTAWAY",
-  blue: "ADMIN_EMAIL_BLUE",
+/** Everything that is not a program below (Contact form, Casa Nizuc Year Round, weddings, private events). */
+const DEFAULT_ADMIN_EMAIL = "info@dcvacations.com";
+
+const GUETTAWAY_ADMIN_EMAIL = "Guettaway@dcvacations.com, info@guettaways.com";
+
+/** Admin inbox(es) for each program's inquiries (comma-separate several addresses), and the env var that overrides it, e.g. to test with your own mailbox. */
+const PROGRAM_ADMIN: Record<string, { env: string; email: string }> = {
+  "diamond-club-reserve": { env: "ADMIN_EMAIL_RESERVE", email: "Reserve@dcvacations.com" },
+  guttaway: { env: "ADMIN_EMAIL_GUETTAWAY", email: GUETTAWAY_ADMIN_EMAIL },
+  blue: { env: "ADMIN_EMAIL_BLUE", email: "Casanizuc@dcvacations.com" },
 };
 
-/** Where the admin copy of a submission goes: the program's own inbox, else ADMIN_EMAIL, else the sending mailbox. */
-export function getAdminEmail(experienceId?: string) {
-  const programEnv = experienceId ? PROGRAM_ADMIN_ENV[experienceId] : undefined;
-  return (programEnv && process.env[programEnv]) || process.env.ADMIN_EMAIL || process.env.EMAIL_USER || "";
+/**
+ * Where the admin copy of a submission goes: the program's own inbox, else the default inbox.
+ * A Contact form sent from guettaways.com (`guettawaySite`) goes to Guettaway's inboxes.
+ */
+export function getAdminEmail(experienceId?: string, guettawaySite = false) {
+  const program = PROGRAM_ADMIN[experienceId ?? (guettawaySite ? "guttaway" : "")];
+  if (program) return process.env[program.env] || program.email;
+  return process.env.ADMIN_EMAIL || DEFAULT_ADMIN_EMAIL;
 }
 
 export async function sendMail({ to, subject, html, text, replyTo, fromName = "Diamond Club Vacations", attachments }: MailInput) {
