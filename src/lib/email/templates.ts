@@ -22,21 +22,60 @@ export type DetailRow = [label: string, value: string];
 export type EmailBrand = "dcv" | "guettaway";
 
 /**
- * `logo` (a PNG in /public) sits above the wordmark. In production it is loaded from the live site: a hosted PNG is the one image every mail
- * program shows (GoDaddy, Outlook and Yahoo break images sent inside the email), so a new logo shows once it is deployed.
- * Locally the live site may not have it yet and mail servers cannot reach localhost, so it is sent inside the email instead (see emailAttachments).
+ * The email's images (PNG/JPG files in /public). In production they are loaded from the live site: a hosted image is the one kind every mail
+ * program shows (GoDaddy, Outlook and Yahoo break images sent inside the email), so a new image shows once it is deployed.
+ * Locally the live site may not have them yet and mail servers cannot reach localhost, so they are sent inside the email instead (see emailAttachments).
  */
-const EMBED_LOGO = process.env.NODE_ENV !== "production";
+const EMBED_IMAGES = process.env.NODE_ENV !== "production";
+
+interface EmailImage {
+  cid: string;
+  path: string;
+  contentType: "image/png" | "image/jpeg";
+}
+
+interface Brand {
+  name: string;
+  siteUrl: string;
+  logo: EmailImage;
+  logoWidth: number;
+  logoHeight: number;
+  /** Resort photo under the header, like the hero of the website's pages. */
+  banner: EmailImage;
+  bannerAlt: string;
+  title: string;
+  titleColor: string;
+  titleSize: number;
+  titleSpacing: number;
+  sub: string;
+}
+
+const BANNER_CID = "brand-banner";
 const LOGO_CID = "brand-logo";
 
-const BRANDS: Record<EmailBrand, { name: string; siteUrl: string; logo: string; logoWidth: number; logoHeight: number; title: string; titleColor: string; titleSize: number; titleSpacing: number; sub: string }> = {
-  dcv: { name: "Diamond Club Vacations", siteUrl: siteConfig.siteUrl, logo: "/images/logo.png", logoWidth: 64, logoHeight: 64, title: "DIAMOND CLUB", titleColor: INK, titleSize: 20, titleSpacing: 3, sub: "VACATIONS" },
+const BRANDS: Record<EmailBrand, Brand> = {
+  dcv: {
+    name: "Diamond Club Vacations",
+    siteUrl: siteConfig.siteUrl,
+    logo: { cid: LOGO_CID, path: "/images/logo.png", contentType: "image/png" },
+    logoWidth: 64,
+    logoHeight: 64,
+    banner: { cid: BANNER_CID, path: "/images/email/dcv-banner.jpg", contentType: "image/jpeg" },
+    bannerAlt: "Diamond Club Vacations, Riviera Maya",
+    title: "DIAMOND CLUB",
+    titleColor: INK,
+    titleSize: 20,
+    titleSpacing: 3,
+    sub: "VACATIONS",
+  },
   guettaway: {
     name: "Guettaway a Diamond Club Production",
     siteUrl: "https://guettaways.com",
-    logo: "/images/guettaway-logo-email.png",
+    logo: { cid: LOGO_CID, path: "/images/email/guettaway-logo.png", contentType: "image/png" },
     logoWidth: 53,
     logoHeight: 64,
+    banner: { cid: BANNER_CID, path: "/images/email/guettaway-banner.jpg", contentType: "image/jpeg" },
+    bannerAlt: "Waldorf Astoria Riviera Maya",
     title: "GUETTAWAY",
     titleColor: NAVY,
     titleSize: 30,
@@ -45,11 +84,20 @@ const BRANDS: Record<EmailBrand, { name: string; siteUrl: string; logo: string; 
   },
 };
 
-/** The logo as an inline image when running locally (see EMBED_LOGO); nothing in production. */
+function imageSrc(image: EmailImage) {
+  return EMBED_IMAGES ? `cid:${image.cid}` : `${siteConfig.siteUrl}${image.path}`;
+}
+
+/** The logo and banner as inline images when running locally (see EMBED_IMAGES); nothing in production. */
 export function emailAttachments(brand: EmailBrand): MailAttachment[] {
-  if (!EMBED_LOGO) return [];
-  const { logo } = BRANDS[brand];
-  return [{ filename: path.basename(logo), content: readFileSync(path.join(process.cwd(), "public", logo)), cid: LOGO_CID, contentType: "image/png" }];
+  if (!EMBED_IMAGES) return [];
+  const { logo, banner } = BRANDS[brand];
+  return [logo, banner].map(({ cid, path: file, contentType }) => ({
+    filename: path.basename(file),
+    content: readFileSync(path.join(process.cwd(), "public", file)),
+    cid,
+    contentType,
+  }));
 }
 
 export function brandName(brand: EmailBrand) {
@@ -102,11 +150,17 @@ function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing, b
       <td align="center">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border:1px solid ${LINE};">
           <tr>
-            <td align="center" style="padding:32px 24px 24px;border-bottom:3px solid ${GOLD};">
-              <img src="${EMBED_LOGO ? `cid:${LOGO_CID}` : `${siteConfig.siteUrl}${b.logo}`}" width="${b.logoWidth}" height="${b.logoHeight}" alt="${escapeHtml(b.name)}" style="display:block;margin:0 auto 12px;border:0;">
-
-              <div style="font-family:${SERIF};font-size:${b.titleSize}px;font-weight:bold;letter-spacing:${b.titleSpacing}px;color:${b.titleColor};">${b.title}</div>
-              <div style="font-family:${SANS};font-size:11px;letter-spacing:4px;color:${GOLD};margin-top:4px;">${b.sub}</div>
+            <td align="center" style="padding:32px 24px 24px;">
+              <a href="${b.siteUrl}" style="text-decoration:none;">
+                <img src="${imageSrc(b.logo)}" width="${b.logoWidth}" height="${b.logoHeight}" alt="${escapeHtml(b.name)}" style="display:block;margin:0 auto 12px;border:0;">
+                <div style="font-family:${SERIF};font-size:${b.titleSize}px;font-weight:bold;letter-spacing:${b.titleSpacing}px;color:${b.titleColor};">${b.title}</div>
+                <div style="font-family:${SANS};font-size:11px;letter-spacing:4px;color:${GOLD};margin-top:4px;">${b.sub}</div>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0;border-bottom:3px solid ${GOLD};font-size:0;line-height:0;">
+              <img src="${imageSrc(b.banner)}" width="600" alt="${escapeHtml(b.bannerAlt)}" style="display:block;width:100%;max-width:600px;height:auto;border:0;">
             </td>
           </tr>
           <tr>
@@ -134,6 +188,13 @@ function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing, b
           </tr>`
       : `<tr><td style="padding:0 0 24px;font-size:0;line-height:0;">&nbsp;</td></tr>`
     }
+          <tr>
+            <td align="center" style="padding:32px 24px 28px;background:${INK};">
+              <div style="font-family:${SERIF};font-size:18px;font-weight:bold;letter-spacing:3px;color:#ffffff;">${b.title}</div>
+              <div style="font-family:${SANS};font-size:10px;letter-spacing:4px;color:${GOLD};margin-top:4px;">${b.sub}</div>
+              <div style="border-top:1px solid #333333;margin-top:22px;padding-top:16px;font-family:${SANS};font-size:11px;color:#888888;">&copy; ${new Date().getFullYear()} ${escapeHtml(b.name)}. All rights reserved.</div>
+            </td>
+          </tr>
         </table>
       </td>
     </tr>
