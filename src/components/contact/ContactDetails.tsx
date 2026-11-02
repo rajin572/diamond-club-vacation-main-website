@@ -3,10 +3,10 @@ import { Globe, Mail, MapPin, Phone } from "lucide-react";
 /** The company's contact details, from the client (2026-10-22). Shown as icons and values only, without labels. */
 export const CONTACT_DETAILS = {
   email: "info@dcvacations.com",
-  /** The 212 number is the WhatsApp one (client). */
-  whatsapp: { display: "212-927-4000", href: "https://wa.me/12129274000" },
-  /** The 800 number is the phone one (client). */
-  phone: { display: "888-613-4470", href: "tel:+18886134470" },
+  /** The 888 number is the WhatsApp one (client 2026-11-01). */
+  whatsapp: { display: "888-613-4470", href: "https://wa.me/18886134470" },
+  /** The 212 number is the main phone one (client 2026-11-01). */
+  phone: { display: "212-927-4000", href: "tel:+12129274000" },
   /** The Diamond Club website (client 2026-10-22). */
   website: { display: "www.dcvacations.com", href: "https://www.dcvacations.com" },
   address: ["Diamond Club Vacations", "5120 13th Avenue", "Brooklyn, NY 11219"],

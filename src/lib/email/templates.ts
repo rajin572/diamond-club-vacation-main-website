@@ -1,5 +1,6 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { siteConfig } from "@/lib/site-config";
-import { GUETTAWAY_LOGO_PNG_BASE64 } from "./logos";
 import type { MailAttachment } from "./mailer";
 
 /** Colors and fonts mirror the site (design.css): cream page, gold accent, Georgia headings. */
@@ -10,33 +11,45 @@ const CREAM = "#f7f5f1";
 const GOLD = "#9a7a38";
 const SERIF = "Georgia, 'Times New Roman', serif";
 const SANS = "Arial, Helvetica, sans-serif";
+const NAVY = "#1c2a5e";
 
 /** The "Visit Our Website" button at the bottom of the emails is hidden for now (client 2026-10-31); set to true to bring it back. */
 const SHOW_WEBSITE_BUTTON = false;
 
 export type DetailRow = [label: string, value: string];
 
-/** Whose site the submission came from: Guettaway shows its own logo and "A Diamond Club Production", like the website header. */
+/** Whose site the submission came from: Guettaway shows its "GUETTAWAY / A DIAMOND CLUB PRODUCTION" wordmark, like the website header. */
 export type EmailBrand = "dcv" | "guettaway";
 
-const BRANDS: Record<EmailBrand, { name: string; siteUrl: string; logo: string; logoWidth: number; logoHeight: number; title: string; sub: string }> = {
-  dcv: { name: "Diamond Club Vacations", siteUrl: siteConfig.siteUrl, logo: "/images/logo.png", logoWidth: 64, logoHeight: 64, title: "DIAMOND CLUB", sub: "VACATIONS" },
+/**
+ * `logo` (a PNG in /public) sits above the wordmark. In production it is loaded from the live site: a hosted PNG is the one image every mail
+ * program shows (GoDaddy, Outlook and Yahoo break images sent inside the email), so a new logo shows once it is deployed.
+ * Locally the live site may not have it yet and mail servers cannot reach localhost, so it is sent inside the email instead (see emailAttachments).
+ */
+const EMBED_LOGO = process.env.NODE_ENV !== "production";
+const LOGO_CID = "brand-logo";
+
+const BRANDS: Record<EmailBrand, { name: string; siteUrl: string; logo: string; logoWidth: number; logoHeight: number; title: string; titleColor: string; titleSize: number; titleSpacing: number; sub: string }> = {
+  dcv: { name: "Diamond Club Vacations", siteUrl: siteConfig.siteUrl, logo: "/images/logo.png", logoWidth: 64, logoHeight: 64, title: "DIAMOND CLUB", titleColor: INK, titleSize: 20, titleSpacing: 3, sub: "VACATIONS" },
   guettaway: {
     name: "Guettaway a Diamond Club Production",
     siteUrl: "https://guettaways.com",
-    logo: "cid:guettaway-logo",
+    logo: "/images/guettaway-logo-email.png",
     logoWidth: 53,
     logoHeight: 64,
-    title: "A DIAMOND CLUB",
-    sub: "PRODUCTION",
+    title: "GUETTAWAY",
+    titleColor: NAVY,
+    titleSize: 30,
+    titleSpacing: 6,
+    sub: "A DIAMOND CLUB PRODUCTION",
   },
 };
 
-/** Images the email's HTML refers to with "cid:" (none for Diamond Club Vacations, whose logo is loaded from the site). */
+/** The logo as an inline image when running locally (see EMBED_LOGO); nothing in production. */
 export function emailAttachments(brand: EmailBrand): MailAttachment[] {
-  return brand === "guettaway"
-    ? [{ filename: "guettaway-logo.png", content: Buffer.from(GUETTAWAY_LOGO_PNG_BASE64, "base64"), cid: "guettaway-logo", contentType: "image/png" }]
-    : [];
+  if (!EMBED_LOGO) return [];
+  const { logo } = BRANDS[brand];
+  return [{ filename: path.basename(logo), content: readFileSync(path.join(process.cwd(), "public", logo)), cid: LOGO_CID, contentType: "image/png" }];
 }
 
 export function brandName(brand: EmailBrand) {
@@ -65,8 +78,6 @@ interface LayoutInput {
 
 function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing, brand }: LayoutInput) {
   const b = BRANDS[brand];
-  // "cid:" logos travel inside the email; the others are loaded from the live site.
-  const logoUrl = b.logo.startsWith("cid:") ? b.logo : `${siteConfig.siteUrl}${b.logo}`;
   const rowsHtml = rows
     .map(
       ([label, value]) => `
@@ -92,8 +103,9 @@ function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing, b
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border:1px solid ${LINE};">
           <tr>
             <td align="center" style="padding:32px 24px 24px;border-bottom:3px solid ${GOLD};">
-              <img src="${logoUrl}" width="${b.logoWidth}" height="${b.logoHeight}" alt="${escapeHtml(b.name)}" style="display:block;margin:0 auto 12px;border:0;">
-              <div style="font-family:${SERIF};font-size:20px;letter-spacing:3px;color:${INK};">${b.title}</div>
+              <img src="${EMBED_LOGO ? `cid:${LOGO_CID}` : `${siteConfig.siteUrl}${b.logo}`}" width="${b.logoWidth}" height="${b.logoHeight}" alt="${escapeHtml(b.name)}" style="display:block;margin:0 auto 12px;border:0;">
+
+              <div style="font-family:${SERIF};font-size:${b.titleSize}px;font-weight:bold;letter-spacing:${b.titleSpacing}px;color:${b.titleColor};">${b.title}</div>
               <div style="font-family:${SANS};font-size:11px;letter-spacing:4px;color:${GOLD};margin-top:4px;">${b.sub}</div>
             </td>
           </tr>
