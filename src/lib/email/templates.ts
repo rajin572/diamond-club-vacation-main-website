@@ -151,11 +151,9 @@ function layout({ preheader, kicker, title, intro, rows, rowsHeading, closing, b
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border:1px solid ${LINE};">
           <tr>
             <td align="center" style="padding:32px 24px 24px;">
-              <a href="${b.siteUrl}" style="text-decoration:none;">
-                <img src="${imageSrc(b.logo)}" width="${b.logoWidth}" height="${b.logoHeight}" alt="${escapeHtml(b.name)}" style="display:block;margin:0 auto 12px;border:0;">
-                <div style="font-family:${SERIF};font-size:${b.titleSize}px;font-weight:bold;letter-spacing:${b.titleSpacing}px;color:${b.titleColor};">${b.title}</div>
-                <div style="font-family:${SANS};font-size:11px;letter-spacing:4px;color:${GOLD};margin-top:4px;">${b.sub}</div>
-              </a>
+              <img src="${imageSrc(b.logo)}" width="${b.logoWidth}" height="${b.logoHeight}" alt="${escapeHtml(b.name)}" style="display:block;margin:0 auto 12px;border:0;">
+              <div style="font-family:${SERIF};font-size:${b.titleSize}px;font-weight:bold;letter-spacing:${b.titleSpacing}px;color:${b.titleColor};">${b.title}</div>
+              <div style="font-family:${SANS};font-size:11px;letter-spacing:4px;color:${GOLD};margin-top:4px;">${b.sub}</div>
             </td>
           </tr>
           <tr>
