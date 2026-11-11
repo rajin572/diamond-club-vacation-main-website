@@ -81,10 +81,10 @@ const SHULEM_LEMMER: ExperienceItem = {
 };
 
 /**
- * Shulem Lemmer is off the Guettaway program for now (client 2026-10-28): the card announces that a big star will be named soon.
- * When he, or the new artist, is confirmed, set the flag to true (or replace SHULEM_LEMMER) and the real card comes back.
+ * Shulem Lemmer was taken off the Guettaway program on 2026-10-28 (the card announced that a big star would be named soon) and is back
+ * since 2026-11-11. Set the flag to false to show the "big star announcement" card again.
  */
-const SHOW_SHULEM_LEMMER = false;
+const SHOW_SHULEM_LEMMER = true;
 
 const BIG_STAR_ANNOUNCEMENT: ExperienceItem = {
   id: "big-star-announcement",
