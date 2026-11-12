@@ -63,7 +63,7 @@ const SOMETHING_BIG_IS_COMING: ExperienceItem = {
 const ZUSHA_SLOT = SHOW_ZUSHA ? ZUSHA : SOMETHING_IS_COMING;
 const BEN_TZUR_SLOT = SHOW_BEN_TZUR ? BEN_TZUR : SOMETHING_BIG_IS_COMING;
 
-const SHULEM_LEMMER: ExperienceItem = {
+export const SHULEM_LEMMER: ExperienceItem = {
   id: "shulem-lemmer",
   title: "Shulem Lemmer",
   description: "Experience an extraordinary evening with internationally acclaimed vocalist Shulem Lemmer, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",

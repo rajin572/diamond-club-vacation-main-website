@@ -69,7 +69,7 @@ export function ExperienceCards({ items, columns, layout = "cards", viewerTitle 
           ) : null;
 
           return layout === "people" ? (
-            <article key={item.id} className="dcv-card dcv-person-card">
+            <article key={item.id} className={item.featured ? "dcv-card dcv-person-card dcv-person-card--featured" : "dcv-card dcv-person-card"}>
               <div className="dcv-person-photo">
                 {item.image ? (
                   <Image src={item.image} alt={item.title} fill sizes="132px" />

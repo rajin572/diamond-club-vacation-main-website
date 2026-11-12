@@ -2660,6 +2660,21 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
 .dcv-person-card p {
   text-align: left;
 }
+/* one person in a bigger box, on its own row and centered (e.g. Rabbi Eli on the Guettaway scholars page) */
+.dcv-person-card--featured {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 640px);
+  margin-top: 84px;
+}
+.dcv-person-card--featured .dcv-person-photo {
+  width: 168px;
+  height: 168px;
+  margin-top: -84px;
+}
+.dcv-person-card--featured h3 {
+  font-size: 22px;
+}
 
 .dcv-xv-backdrop {
   position: fixed;
@@ -2915,6 +2930,14 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
   }
   .dcv-person-card {
     margin-top: 58px;
+  }
+  .dcv-person-card--featured {
+    margin-top: 70px;
+  }
+  .dcv-person-card--featured .dcv-person-photo {
+    width: 140px;
+    height: 140px;
+    margin-top: -70px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
