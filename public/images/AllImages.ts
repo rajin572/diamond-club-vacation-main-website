@@ -686,6 +686,7 @@ import entertainmentShulemLemmer from "./mainDesign/entertainment-shulem-lemmer.
 import entertainmentDoviMeiselsGuitar from "./mainDesign/entertainment-dovi-meisels-guitar.webp";
 import scholarRabbiAviWiesenfeld from "./mainDesign/scholar-rabbi-avi-wiesenfeld.webp";
 import scholarRabbiEliStefansky from "./mainDesign/scholar-rabbi-eli-stefansky.webp";
+import scholarRabbiMeirElbaz from "./mainDesign/scholar-rabbi-meir-elbaz.webp";
 import scholarRabbiEliMansour from "./mainDesign/scholar-rabbi-eli-mansour.webp";
 import scholarCantorNissimSaal from "./mainDesign/scholar-cantor-nissim-saal.webp";
 import scholarCameronErickson from "./mainDesign/scholar-cameron-erickson.webp";
@@ -1578,6 +1579,7 @@ export const AllImages = {
   entertainmentDoviMeiselsGuitar,
   scholarRabbiAviWiesenfeld,
   scholarRabbiEliStefansky,
+  scholarRabbiMeirElbaz,
   scholarRabbiEliMansour,
   scholarCantorNissimSaal,
   scholarCameronErickson,

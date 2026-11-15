@@ -1004,6 +1004,10 @@ html[data-site="guettaway"] .dcv-logo--guettaway {
 .dcv-grid3 .dcv-card:nth-child(2n) {
   transform: translateY(16px);
 }
+/* a grid with a featured person on top: the cards below sit in one straight row (the featured card would shift the stagger) */
+.dcv-grid3:has(.dcv-person-card--featured) .dcv-card:nth-child(2n) {
+  transform: none;
+}
 .dcv-grid3 .dcv-card:nth-child(2n):hover {
   transform: translateY(10px);
 }

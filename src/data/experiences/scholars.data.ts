@@ -138,7 +138,7 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
     viewerTitle: "Scholars Details",
     layout: "people",
     heroImage: AllImages.reserveScholars,
-    columns: 2,
+    columns: 3,
     items: [
       // Back on the page (client 2026-11-11), in a bigger box on top; Rabbi Avi and Shulem below (client 2026-11-12).
       {
@@ -176,6 +176,20 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
       {
         ...SHULEM_LEMMER,
         description: "Internationally acclaimed vocalist, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",
+      },
+      // Added 2026-11-15 (client): Rabbi Meir Gavriel Elbaz, next to Shulem Lemmer. Text and photo as sent.
+      {
+        id: "rabbi-meir-gavriel-elbaz",
+        title: "Rabbi Meir Gavriel Elbaz",
+        description: "Av Bet Din Badatz Meorot Ha'Mishpat, Sephardic Director at Lander College for Men and head of the English division of Halacha Yomit.",
+        image: AllImages.scholarRabbiMeirElbaz,
+        details: {
+          title: "Rabbi Meir Gavriel Elbaz",
+          paragraphs: [
+            "Rabbi Meir Gavriel Elbaz was born and raised in Queens, NY. After graduating from the Mirrer Yeshiva in Brooklyn, he advanced his Torah studies in Bet Midrash Yehave Da'at in Jerusalem, where he received Semicha (ordination) in both Rabbanut and Dayanut. Upon returning to the United States, Rabbi Elbaz assumed the mantle of rabbinic leadership at Congregation Ohel Simcha in Queens. He serves as Maggid Shiur and Sephardic Director at Lander College for Men. In addition, Rabbi Elbaz heads the English division of Halacha Yomit, an esteemed global platform dedicated to spreading the teachings of Maran Rabbeinu Ovadia Yosef zt\"l to the Jewish masses. He also serves as a Posek and halachic guide for several communities and organizations around the world. He also serves as Av Bet Din Badatz Meorot Ha'Mishpat, an esteemed Bet Din for the Sephardic community in the Tri-State area.",
+            "Rabbi Elbaz's popular Shiurim in all matters of Torah and Jewish thought can be found on TorahAnyTime, Lander Torah, and YUTorah.",
+          ],
+        },
       },
     ],
   },
