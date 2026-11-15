@@ -952,6 +952,18 @@ html[data-site="guettaway"] .dcv-logo--guettaway {
   height: 300px;
 }
 /* one big card in the middle of the row, the same width and look as the Dining card (client 2026-10-22) */
+/* the two big cards on top of a card grid, and a row of normal cards below them */
+.dcv-grid--top {
+  margin-bottom: 26px;
+}
+.dcv-grid--top .dcv-card img {
+  height: 380px;
+}
+@media (max-width: 600px) {
+  .dcv-grid--top .dcv-card img {
+    height: 260px;
+  }
+}
 .dcv-card--featured {
   grid-column: 1 / -1;
   width: 100%;
@@ -2629,6 +2641,10 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
 }
 .dcv-card img.dcv-focus-top {
   object-position: center top;
+}
+/* tall portrait photos: keep the face, which sits in the upper part, in the card's wide crop */
+.dcv-card img.dcv-focus-upper {
+  object-position: center 25%;
 }
 .dcv-person-card {
   overflow: visible;

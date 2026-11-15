@@ -27,6 +27,7 @@ const ZUSHA: ExperienceItem = {
   title: "Zusha",
   description: "Experience an electrifying night of soul-stirring music, infectious energy, and uplifting melodies.",
   image: AllImages.zushaConcert,
+  imageFocus: "top",
   details: {
     title: "Zusha Live Concert",
     paragraphs: [
@@ -70,7 +71,7 @@ export const SHULEM_LEMMER: ExperienceItem = {
   image: AllImages.entertainmentShulemLemmer,
   imageFocus: "top",
   details: {
-    title: "Shulem Lemmer – Live in Concert",
+    title: "Shulem Lemmer – Live Concert",
     paragraphs: [
       "Experience an extraordinary evening with internationally acclaimed vocalist Shulem Lemmer, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",
       "Renowned for his breathtaking performances, soulful melodies, and powerful stage presence, Shulem brings a spectacular blend of timeless classics, beloved favorites, and uplifting music to the stage.",
@@ -220,8 +221,11 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
     title: "Entertainment",
     heroImage: AllImages.reserveEntertainmentConcert,
     columns: 3,
+    // Shulem Lemmer and Zusha are the two big cards on top; the six below are in a grid (client 2026-11-15).
+    topCount: 2,
     items: [
       SHULEM_LEMMER_SLOT,
+      ZUSHA,
       {
         id: "dovi-meisels",
         title: "Dovi Meisels",
@@ -234,20 +238,38 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
           ],
         },
       },
+      YANKELOO,
+      // Added 2026-11-15 (Guettaway brochure), text and photos from the client.
       {
-        id: "elon-gold",
-        title: "Elon Gold",
-        description: "Renowned comedian Elon Gold brings his acclaimed stand-up comedy and hilarious humor.",
-        image: AllImages.reserveEntertainmentElonGold,
+        id: "menachem-toker",
+        title: "Menachem Toker",
+        tag: "Program Host & Talent Show Host",
+        description: "Prominent Israeli Haredi radio broadcaster, television host, and music producer, widely recognized as one of the leading voices in Jewish media.",
+        image: AllImages.entertainmentMenachemToker,
+        imageFocus: "upper",
         details: {
-          title: "Elon Gold Stand-Up Comedy",
+          title: "Menachem Toker",
+          tag: "Program Host & Talent Show Host",
           paragraphs: [
-            "From his Orthodox upbringing to his celebrated television appearances, comedian Elon Gold delivers an evening of non-stop laughter.",
+            "Prominent Israeli Haredi radio broadcaster, television host, and music producer, widely recognized as one of the leading voices in Jewish media.",
           ],
         },
       },
-      YANKELOO,
-
+      {
+        id: "shimi-adar",
+        title: "Shimi Adar",
+        tag: "Motivational Entertainer",
+        description: "Jewish motivational speaker, event MC, entertainer, host of high-energy dance programs, and founder of Shimi2Jewmba.",
+        image: AllImages.entertainmentShimiAdar,
+        imageFocus: "upper",
+        details: {
+          title: "Shimi Adar",
+          tag: "Motivational Entertainer",
+          paragraphs: [
+            "Jewish motivational speaker, event MC, entertainer, host of high-energy dance programs, and founder of Shimi2Jewmba.",
+          ],
+        },
+      },
       {
         id: "nightlife",
         title: "Nightlife",

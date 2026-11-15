@@ -33,6 +33,7 @@ export function ExperienceCategoryView({ offeringId, data, nav, resortId }: Expe
         <ExperienceCards
           items={items}
           columns={data.columns}
+          topCount={data.topCount}
           layout={data.layout}
           viewerTitle={data.viewerTitle ?? data.title}
         />

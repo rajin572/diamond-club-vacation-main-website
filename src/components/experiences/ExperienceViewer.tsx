@@ -11,7 +11,7 @@ export interface ViewerSlide {
   id: string;
   title: string;
   image: DesignImage;
-  imageFocus?: "top" | "center";
+  imageFocus?: "top" | "upper" | "center";
   tag?: string;
   paragraphs: string[];
   facts?: ExperienceFact[];

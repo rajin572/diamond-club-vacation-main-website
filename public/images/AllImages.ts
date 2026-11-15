@@ -683,10 +683,13 @@ import dayCampDirectorBinyominSchwartz from "./mainDesign/day-camp-director-biny
 import casaNizucDayCampDirectorArianaMizrahi from "./mainDesign/casa-nizuc-day-camp-director-ariana-mizrahi.webp";
 // Photos from the client's two Word documents of 2026-10-19 (entertainment, rabbis, cantor, Grand Ballroom) and the Park Hyatt Living Room / Brisa photos.
 import entertainmentShulemLemmer from "./mainDesign/entertainment-shulem-lemmer.webp";
+import entertainmentMenachemToker from "./mainDesign/entertainment-menachem-toker.webp";
+import entertainmentShimiAdar from "./mainDesign/entertainment-shimi-adar.webp";
 import entertainmentDoviMeiselsGuitar from "./mainDesign/entertainment-dovi-meisels-guitar.webp";
 import scholarRabbiAviWiesenfeld from "./mainDesign/scholar-rabbi-avi-wiesenfeld.webp";
 import scholarRabbiEliStefansky from "./mainDesign/scholar-rabbi-eli-stefansky.webp";
 import scholarRabbiMeirElbaz from "./mainDesign/scholar-rabbi-meir-elbaz.webp";
+import scholarShulemLemmer from "./mainDesign/scholar-shulem-lemmer.webp";
 import scholarRabbiEliMansour from "./mainDesign/scholar-rabbi-eli-mansour.webp";
 import scholarCantorNissimSaal from "./mainDesign/scholar-cantor-nissim-saal.webp";
 import scholarCameronErickson from "./mainDesign/scholar-cameron-erickson.webp";
@@ -1576,10 +1579,13 @@ export const AllImages = {
   dayCampDirectorBinyominSchwartz,
   casaNizucDayCampDirectorArianaMizrahi,
   entertainmentShulemLemmer,
+  entertainmentMenachemToker,
+  entertainmentShimiAdar,
   entertainmentDoviMeiselsGuitar,
   scholarRabbiAviWiesenfeld,
   scholarRabbiEliStefansky,
   scholarRabbiMeirElbaz,
+  scholarShulemLemmer,
   scholarRabbiEliMansour,
   scholarCantorNissimSaal,
   scholarCameronErickson,

@@ -10,7 +10,7 @@ export const GUTTAWAY_DATA: ProgramData = {
   heroImage: AllImages.guettawayMain1,
   brochure: {
     title: "GUETTAWAY Brochure",
-    pdfHref: "/brochures/guettaway-info-book-2.pdf",
+    pdfHref: "/brochures/guettaway-pesach-2027-info-book.pdf",
   },
   card: {
     subtitle: "Elevated Pesach for the Heimish Family",

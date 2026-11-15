@@ -24,7 +24,7 @@ export interface ExperienceItem {
   /** Omit to show a placeholder portrait (speakers still to be announced). */
   image?: DesignImage;
   /** Which part of the photo stays visible when it is cropped into a card (posters keep their top). */
-  imageFocus?: "top" | "center";
+  imageFocus?: "top" | "upper" | "center";
   /** Details still to be announced: the card is shown without a link. */
   tba?: boolean;
   /** One big card across the whole row (e.g. the live concert at the top of Blue's Entertainment). */
@@ -55,6 +55,8 @@ export interface ExperienceCategoryData {
   layout?: "cards" | "people";
   columns: 2 | 3;
   items: ExperienceItem[];
+  /** The first N items are shown as two big cards on top, the rest below them (e.g. the two headliners of Guettaway's Entertainment). */
+  topCount?: number;
   gallery?: {
     title?: string;
     description?: string;

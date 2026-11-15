@@ -175,7 +175,15 @@ export const SCHOLARS_BY_PROGRAM: Record<string, ExperienceCategoryData> = {
       // The cantor, in the box of the "Distinguished Guest Speaker" card (client 2026-11-12). His text and photo are the entertainment card's.
       {
         ...SHULEM_LEMMER,
-        description: "Internationally acclaimed vocalist, whose magnificent voice and remarkable vocal range have captivated audiences around the world.",
+        // His own photo and text for the scholars page, as the chazzan (client 2026-11-15); the entertainment card keeps the concert photo and text.
+        image: AllImages.scholarShulemLemmer,
+        description: "Join us for an unforgettable Yom Tov as world-renowned Chazzan Shulem Lemmer graces us with his magnificent voice and inspiring tefillos throughout the entire Yom Tov.",
+        details: {
+          title: "Shulem Lemmer – Chazzan",
+          paragraphs: [
+            "Join us for an unforgettable Yom Tov as world-renowned Chazzan Shulem Lemmer graces us with his magnificent voice and inspiring tefillos throughout the entire Yom Tov.",
+          ],
+        },
       },
       // Added 2026-11-15 (client): Rabbi Meir Gavriel Elbaz, next to Shulem Lemmer. Text and photo as sent.
       {
