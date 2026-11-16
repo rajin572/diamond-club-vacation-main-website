@@ -4,19 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { DetailHero, PhotoGallery, SubNav, Wrap } from "@/components/shared/design";
-import type { DesignImage, DesignLink } from "@/components/shared/design";
+import type { DesignImage } from "@/components/shared/design";
 import { AllImages } from "../../../public/images/AllImages";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
+import { CASA_NIZUC_SUB_NAV } from "./casaNizucNav";
 
-const SUB_NAV: DesignLink[] = [
-  { label: "About", href: `${CASA_NIZUC_HREF}/about` },
-  { label: "Shabbat", href: `${CASA_NIZUC_HREF}/shabbat` },
-  { label: "Dining", href: `${CASA_NIZUC_HREF}/dining` },
-  { label: "GKDE", href: `${CASA_NIZUC_HREF}/gkde` },
-  { label: "Calendar of Events", href: `${CASA_NIZUC_HREF}/calendar` },
-  { label: "Events", href: `${CASA_NIZUC_HREF}#events` },
-];
+const SUB_NAV = CASA_NIZUC_SUB_NAV;
 
 type HolidayCategory = "all" | "jewish" | "american" | "break";
 

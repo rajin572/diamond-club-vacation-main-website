@@ -19,19 +19,13 @@ import {
   Wine,
 } from "lucide-react";
 import { DetailHero, InfoModal, PhotoGallery, SectionTitle, SubNav, Wrap } from "@/components/shared/design";
-import type { DesignImage, DesignLink, InfoCardData } from "@/components/shared/design";
+import type { DesignImage, InfoCardData } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { AllImages } from "../../../public/images/AllImages";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
+import { CASA_NIZUC_SUB_NAV } from "./casaNizucNav";
 
-const SUB_NAV: DesignLink[] = [
-  { label: "About", href: `${CASA_NIZUC_HREF}/about` },
-  { label: "Shabbat", href: `${CASA_NIZUC_HREF}/shabbat` },
-  { label: "Dining", href: `${CASA_NIZUC_HREF}/dining` },
-  { label: "GKDE", href: `${CASA_NIZUC_HREF}/gkde` },
-  { label: "Calendar of Events", href: `${CASA_NIZUC_HREF}/calendar` },
-  { label: "Events", href: `${CASA_NIZUC_HREF}#events` },
-];
+const SUB_NAV = CASA_NIZUC_SUB_NAV;
 
 const FEATURE_ICONS: Record<string, ReactNode> = {
   "Every outlet kosher": <Star size={22} aria-hidden="true" />,

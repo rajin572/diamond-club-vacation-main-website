@@ -212,8 +212,8 @@ export interface EmailContent {
 }
 
 /** Admin notification: every submitted answer, so the team can act without opening the site. */
-export function adminEmail(kind: "contact" | "inquiry" | "quote", fullName: string, rows: DetailRow[], brand: EmailBrand = "dcv"): EmailContent {
-  const label = { contact: "Contact message", inquiry: "Vacation inquiry", quote: "Quote request" }[kind];
+export function adminEmail(kind: "contact" | "inquiry" | "quote" | "reservation", fullName: string, rows: DetailRow[], brand: EmailBrand = "dcv"): EmailContent {
+  const label = { contact: "Contact message", inquiry: "Vacation inquiry", quote: "Quote request", reservation: "Table reservation request" }[kind];
   const site = brand === "guettaway" ? "the Guettaway website" : "the website";
   const intro = `${fullName} just submitted the ${label.toLowerCase()} form on ${site}. Reply to this email to answer them directly.`;
   return {
@@ -232,8 +232,8 @@ export function adminEmail(kind: "contact" | "inquiry" | "quote", fullName: stri
 }
 
 /** Confirmation sent to the guest with a copy of what they submitted. */
-export function guestEmail(kind: "contact" | "inquiry" | "quote", firstName: string, rows: DetailRow[], brand: EmailBrand = "dcv"): EmailContent {
-  const what = { contact: "message", inquiry: "inquiry", quote: "quote request" }[kind];
+export function guestEmail(kind: "contact" | "inquiry" | "quote" | "reservation", firstName: string, rows: DetailRow[], brand: EmailBrand = "dcv"): EmailContent {
+  const what = { contact: "message", inquiry: "inquiry", quote: "quote request", reservation: "table reservation request" }[kind];
   const intro = `Thank you for reaching out to ${brandName(brand)}. We have received your ${what} and a member of our concierge team will be in touch with you shortly.`;
   const closing = "We look forward to curating your extraordinary kosher luxury vacation.";
   return {

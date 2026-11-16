@@ -640,6 +640,8 @@ import casaNizucDiningZait from "./mainDesign/casa-nizuc-dining-zait.webp";
 import casaNizucDiningZaitTerrace from "./mainDesign/casa-nizuc-dining-zait-terrace.webp";
 import casaNizucDiningNoam from "./mainDesign/casa-nizuc-dining-noam.webp";
 import casaNizucDiningOfek from "./mainDesign/casa-nizuc-dining-ofek.webp";
+// The Ofek rooftop bar, cropped from the client's "GKDE · Landing page" PDF (2026-11-15).
+import casaNizucOfekBar from "./mainDesign/casa-nizuc-ofek-bar.webp";
 // Casa Nizuc page (/casa-nizuc): the renders of the client's Casa Nizuc Kosher Marketing Packet (October 2026).
 import casaNizucTowerNight from "./mainDesign/casa-nizuc-tower-night.webp";
 import casaNizucTowerDay from "./mainDesign/casa-nizuc-tower-day.webp";
@@ -1545,6 +1547,7 @@ export const AllImages = {
   casaNizucDiningZaitTerrace,
   casaNizucDiningNoam,
   casaNizucDiningOfek,
+  casaNizucOfekBar,
   casaNizucTowerNight,
   casaNizucTowerDay,
   casaNizucAshanRender,

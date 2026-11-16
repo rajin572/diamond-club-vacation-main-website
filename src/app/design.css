@@ -4565,3 +4565,1005 @@ html[data-site="guettaway"] .dcv-login-art-guettaway,
     padding: 36px 24px;
   }
 }
+
+/* ---------- Casa Nizuc landing pages (GKDE, Shabbat): laid out like the client's PDFs, in the site's own colours and fonts ---------- */
+.dcv-lp-band {
+  position: relative;
+  width: 100%;
+  padding: 88px 42px;
+}
+.dcv-lp-band--dark {
+  background: #161616;
+  color: #fff;
+}
+.dcv-lp-band--cream {
+  background: #f6efe0;
+}
+.dcv-lp-band--white {
+  background: #fff;
+}
+.dcv-lp-band--tight {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.dcv-lp-inner {
+  max-width: var(--dcv-max);
+  margin: 0 auto;
+}
+.dcv-lp-center {
+  text-align: center;
+}
+.dcv-lp-eyebrow {
+  font: 700 12px/1.4 var(--dcv-sans);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #b88124;
+  margin: 0 0 16px;
+}
+.dcv-lp-band--dark .dcv-lp-eyebrow {
+  color: #e4bd60;
+}
+.dcv-lp-title {
+  font: 400 clamp(32px, 4vw, 52px) / 1.12 var(--dcv-serif);
+  margin: 0;
+  color: #111;
+}
+.dcv-lp-band--dark .dcv-lp-title {
+  color: #fff;
+}
+.dcv-lp-sub {
+  margin: 16px auto 0;
+  max-width: 640px;
+  color: #666;
+  line-height: 1.7;
+}
+.dcv-lp-body {
+  color: #4a4a4a;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0 0 16px;
+}
+.dcv-lp-accent {
+  font: italic 400 22px/1.5 var(--dcv-serif);
+  color: #9a6b1d;
+  margin: 8px 0 0;
+}
+
+/* Dark strip under the GKDE hero. */
+.dcv-lp-strip {
+  background: #161616;
+  color: #e4bd60;
+  padding: 20px 42px;
+}
+.dcv-lp-strip ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: var(--dcv-max);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 12px 32px;
+  font: 700 12px/1.4 var(--dcv-sans);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.dcv-lp-fromline {
+  margin: 14px 0 0;
+  font-size: 14px;
+  color: #fff;
+}
+.dcv-lp-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+
+/* Restaurant rows: photo on one side, text on the other, alternating. */
+.dcv-lp-rows {
+  display: grid;
+  gap: 72px;
+  margin-top: 56px;
+}
+.dcv-lp-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+}
+.dcv-lp-row--flip > :first-child {
+  order: 2;
+}
+.dcv-lp-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(24, 29, 31, 0.14);
+}
+.dcv-lp-photo img {
+  object-fit: cover;
+}
+.dcv-lp-name {
+  font: 400 clamp(34px, 4vw, 52px) / 1.1 var(--dcv-serif);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  color: #111;
+}
+.dcv-lp-kind {
+  font: 700 15px/1.5 var(--dcv-sans);
+  color: #8a5d12;
+  margin: 0 0 14px;
+}
+.dcv-lp-badge {
+  display: inline-block;
+  border: 1px solid #b88124;
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  font: 700 11px/1.2 var(--dcv-sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8a5d12;
+}
+.dcv-lp-linkbtn {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #111;
+  padding: 0 0 3px;
+  margin-top: 6px;
+  font: 700 12px/1.4 var(--dcv-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a6b1d;
+  cursor: pointer;
+}
+
+/* A day at Casa Nizuc: four bordered cells on the dark band. */
+.dcv-lp-day {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 48px;
+  border: 1px solid rgba(228, 189, 96, 0.35);
+  text-align: left;
+}
+.dcv-lp-day > div {
+  padding: 30px 26px 34px;
+  border-left: 1px solid rgba(228, 189, 96, 0.35);
+}
+.dcv-lp-day > div:first-child {
+  border-left: 0;
+}
+.dcv-lp-day small {
+  display: block;
+  font: 700 11px/1.4 var(--dcv-sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e4bd60;
+  margin-bottom: 14px;
+}
+.dcv-lp-day h3 {
+  font: 400 26px/1.25 var(--dcv-serif);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  color: #fff;
+}
+.dcv-lp-day p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* What's included / not included. */
+.dcv-lp-included {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+  text-align: left;
+}
+.dcv-lp-box {
+  background: #fff;
+  border: 1px solid rgba(205, 172, 104, 0.4);
+  border-radius: 22px;
+  padding: 34px 36px;
+  box-shadow: 0 12px 30px rgba(24, 29, 31, 0.06);
+}
+.dcv-lp-box--tan {
+  background: #efe3c9;
+  box-shadow: none;
+}
+.dcv-lp-box h3 {
+  font: 700 12px/1.4 var(--dcv-sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a5d12;
+  margin: 0 0 20px;
+}
+.dcv-lp-box p {
+  margin: 0;
+  color: #4a4a4a;
+  line-height: 1.8;
+}
+.dcv-lp-checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 28px;
+}
+.dcv-lp-checks li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  color: #3a3a3a;
+  line-height: 1.55;
+  font-size: 15px;
+}
+.dcv-lp-checks svg {
+  color: #b88124;
+  margin-top: 3px;
+}
+
+/* Pricing cards. */
+.dcv-lp-prices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 780px;
+  margin: 48px auto 0;
+}
+.dcv-lp-price {
+  border: 1px solid rgba(205, 172, 104, 0.6);
+  border-radius: 22px;
+  padding: 36px 28px 30px;
+  background: #fffdf8;
+}
+.dcv-lp-price .dcv-lp-eyebrow {
+  margin-bottom: 18px;
+}
+.dcv-lp-price b {
+  display: block;
+  font: 400 clamp(52px, 6vw, 72px) / 1 var(--dcv-serif);
+  color: #111;
+  margin-bottom: 12px;
+}
+.dcv-lp-price span {
+  display: block;
+  color: #555;
+  font-size: 14px;
+}
+.dcv-lp-price .dcv-lp-desk {
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid #ebe6dd;
+  font-size: 14px;
+  color: #666;
+}
+.dcv-lp-price s {
+  color: #999;
+}
+.dcv-lp-promo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+  color: #666;
+  font-size: 14px;
+}
+.dcv-lp-promo-code {
+  border: 1px solid #b88124;
+  background: #fff;
+  padding: 12px 22px;
+  font: 700 14px/1 var(--dcv-sans);
+  letter-spacing: 0.22em;
+  color: #111;
+}
+
+/* Need to know: title on the left, a grid of facts on the right. */
+.dcv-lp-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 40px;
+  margin: 0;
+}
+.dcv-lp-facts > div {
+  padding: 18px 0;
+  border-top: 1px solid rgba(205, 172, 104, 0.5);
+}
+.dcv-lp-facts dt {
+  font: 700 11px/1.4 var(--dcv-sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8a5d12;
+  margin-bottom: 6px;
+}
+.dcv-lp-facts dd {
+  margin: 0;
+  color: #222;
+  line-height: 1.6;
+}
+.dcv-lp-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 56px;
+  padding: 30px 36px;
+  background: #efe3c9;
+  border-radius: 20px;
+}
+.dcv-lp-banner h3 {
+  font: 400 28px/1.2 var(--dcv-serif);
+  margin: 0;
+  color: #111;
+}
+.dcv-lp-banner p {
+  margin: 0;
+  color: #4a4a4a;
+  line-height: 1.7;
+  max-width: 460px;
+}
+
+/* Full-width photo band with a centred call to action. */
+.dcv-lp-photoband {
+  position: relative;
+  padding: 120px 42px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.dcv-lp-photoband > img {
+  object-fit: cover;
+}
+.dcv-lp-photoband::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.58);
+}
+.dcv-lp-photoband > .dcv-lp-inner {
+  position: relative;
+  z-index: 1;
+}
+.dcv-lp-photoband h2 {
+  font: 400 clamp(34px, 4.6vw, 60px) / 1.12 var(--dcv-serif);
+  margin: 0 0 18px;
+  color: #fff;
+}
+.dcv-lp-photoband p:not(.dcv-lp-quote):not(.dcv-lp-eyebrow) {
+  margin: 0 auto 28px;
+  max-width: 560px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+.dcv-lp-quote {
+  font: italic 400 clamp(26px, 3.4vw, 42px) / 1.4 var(--dcv-serif);
+  max-width: 900px;
+  margin: 0 auto 22px;
+  color: #fff;
+}
+
+/* Dark footer band: name on the left, contact on the right. */
+.dcv-lp-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 18px 40px;
+  align-items: flex-end;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+}
+.dcv-lp-foot b {
+  display: block;
+  font: 400 18px/1.4 var(--dcv-serif);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.dcv-lp-foot a {
+  color: #e4bd60;
+}
+.dcv-lp-foot > div:last-child {
+  text-align: right;
+}
+
+/* Shabbat: four icon cards under the intro. */
+.dcv-lp-cards4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 48px;
+}
+.dcv-lp-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(205, 172, 104, 0.4);
+  border-radius: 20px;
+  padding: 26px 24px 28px;
+  box-shadow: 0 10px 26px rgba(24, 29, 31, 0.06);
+}
+.dcv-lp-card h3 {
+  font: 400 21px/1.3 var(--dcv-serif);
+  margin: 0 0 10px;
+  color: #111;
+}
+.dcv-lp-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.65;
+  font-size: 15px;
+}
+.dcv-lp-card--soon {
+  border: 2px solid #c9a45a;
+}
+
+/* Shabbat: the eight steps on the dark band. */
+.dcv-lp-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 26px 0 34px;
+  list-style: none;
+  border-top: 1px solid rgba(228, 189, 96, 0.35);
+}
+.dcv-lp-steps--first {
+  margin-top: 48px;
+}
+.dcv-lp-steps li {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.dcv-lp-step-n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e4bd60;
+  border-radius: 50%;
+  color: #e4bd60;
+  font: 400 15px/1 var(--dcv-serif);
+}
+.dcv-lp-steps small {
+  display: block;
+  font: 700 11px/1.4 var(--dcv-sans);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e4bd60;
+  margin-bottom: 8px;
+}
+.dcv-lp-steps h3 {
+  font: 400 22px/1.3 var(--dcv-serif);
+  margin: 0 0 8px;
+  color: #fff;
+}
+.dcv-lp-steps p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+  font-size: 15px;
+}
+.dcv-lp-note {
+  margin: 44px 0 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Shabbat: photos on the left, the meals on the right. */
+.dcv-lp-collage {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  min-height: 520px;
+}
+.dcv-lp-collage > div {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(24, 29, 31, 0.12);
+}
+.dcv-lp-collage > div:first-child {
+  grid-row: 1 / span 2;
+}
+.dcv-lp-collage img {
+  object-fit: cover;
+}
+.dcv-lp-meals {
+  margin: 28px 0;
+}
+.dcv-lp-meal {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(205, 172, 104, 0.5);
+}
+.dcv-lp-meal:last-child {
+  border-bottom: 1px solid rgba(205, 172, 104, 0.5);
+}
+.dcv-lp-meal small {
+  font: 700 11px/1.5 var(--dcv-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8a5d12;
+}
+.dcv-lp-meal h3 {
+  font: 400 20px/1.3 var(--dcv-serif);
+  margin: 0 0 6px;
+  color: #111;
+}
+.dcv-lp-meal p {
+  margin: 0;
+  color: #555;
+  line-height: 1.65;
+  font-size: 15px;
+}
+.dcv-lp-reserve {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px 28px;
+  background: #efe3c9;
+  border-radius: 18px;
+}
+.dcv-lp-reserve p {
+  margin: 0;
+  max-width: 320px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+.dcv-lp-reserve .dcv-lp-eyebrow {
+  margin-bottom: 8px;
+}
+
+/* Shabbat: four columns of ready-made cards, good-to-know in three. */
+.dcv-lp-cards4--ready {
+  margin-top: 44px;
+  text-align: left;
+}
+.dcv-lp-pill {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #161616;
+  color: #e4bd60;
+  font: 700 10px/1 var(--dcv-sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 7px 11px;
+  border-radius: 999px;
+}
+.dcv-lp-know {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px 40px;
+  margin-top: 40px;
+}
+.dcv-lp-know > div {
+  padding-top: 18px;
+  border-top: 2px solid #c9a45a;
+}
+.dcv-lp-know h3 {
+  font: 700 15px/1.4 var(--dcv-sans);
+  margin: 0 0 8px;
+  color: #111;
+}
+.dcv-lp-know p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.dcv-lp-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 40px;
+  padding-bottom: 36px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+.dcv-lp-cta h2 {
+  font: 400 clamp(30px, 3.6vw, 46px) / 1.15 var(--dcv-serif);
+  margin: 0 0 8px;
+  color: #fff;
+}
+.dcv-lp-cta p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+.dcv-lp-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.dcv-site a.dcv-btn--light {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: none;
+}
+
+@media (max-width: 1000px) {
+  .dcv-lp-split,
+  .dcv-lp-row,
+  .dcv-lp-included {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .dcv-lp-row--flip > :first-child {
+    order: 0;
+  }
+  .dcv-lp-day,
+  .dcv-lp-cards4,
+  .dcv-lp-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dcv-lp-day > div:nth-child(3) {
+    border-left: 0;
+  }
+  .dcv-lp-day > div:nth-child(n + 3) {
+    border-top: 1px solid rgba(228, 189, 96, 0.35);
+  }
+  .dcv-lp-know {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dcv-lp-collage {
+    min-height: 420px;
+  }
+}
+@media (max-width: 600px) {
+  .dcv-lp-band {
+    padding: 56px 20px;
+  }
+  .dcv-lp-strip,
+  .dcv-lp-photoband {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .dcv-lp-day,
+  .dcv-lp-cards4,
+  .dcv-lp-steps,
+  .dcv-lp-know,
+  .dcv-lp-checks,
+  .dcv-lp-prices,
+  .dcv-lp-facts {
+    grid-template-columns: 1fr;
+  }
+  .dcv-lp-day > div {
+    border-left: 0;
+    border-top: 1px solid rgba(228, 189, 96, 0.35);
+  }
+  .dcv-lp-day > div:first-child {
+    border-top: 0;
+  }
+  .dcv-lp-banner,
+  .dcv-lp-foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dcv-lp-foot > div:last-child {
+    text-align: left;
+  }
+  .dcv-lp-meal {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .dcv-lp-collage {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    min-height: 0;
+  }
+  .dcv-lp-collage > div {
+    aspect-ratio: 4 / 3;
+  }
+  .dcv-lp-collage > div:first-child {
+    grid-row: auto;
+  }
+}
+
+/* Casa Nizuc Dining and Overview pages: centred intro, filter pills and photo cards, same pattern as the GKDE and Shabbat pages. */
+.dcv-lp-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.dcv-lp-intro .dcv-lp-body {
+  margin-bottom: 18px;
+}
+.dcv-lp-intro .dcv-lp-title {
+  margin-bottom: 28px;
+}
+.dcv-lp-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 32px 0 0;
+}
+.dcv-lp-filter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 24px;
+  border: 1px solid #b88124;
+  border-radius: 999px;
+  background: #fff;
+  color: #8a5d12;
+  font: 700 12px/1 var(--dcv-sans);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+.dcv-lp-filter[aria-pressed="true"] {
+  background: linear-gradient(135deg, #e4bd60, #b87f23);
+  color: #111;
+  border-color: transparent;
+}
+.dcv-lp-grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 44px;
+  text-align: left;
+}
+.dcv-lp-dcard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(205, 172, 104, 0.4);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(24, 29, 31, 0.07);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.dcv-lp-dcard--link {
+  cursor: pointer;
+}
+.dcv-lp-dcard--link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(24, 29, 31, 0.13);
+}
+.dcv-lp-dcard-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+.dcv-lp-dcard-photo img {
+  object-fit: cover;
+}
+.dcv-lp-dcard-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 26px 28px 28px;
+}
+.dcv-lp-dcard-body h3 {
+  font: 400 26px/1.2 var(--dcv-serif);
+  margin: 0 0 6px;
+  color: #111;
+}
+.dcv-lp-dcard-body .dcv-lp-quoteline {
+  font: italic 400 17px/1.4 var(--dcv-serif);
+  color: #9a6b1d;
+  margin: 0 0 12px;
+}
+.dcv-lp-dcard-body p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.dcv-lp-dcard-body .dcv-lp-linkbtn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+.dcv-lp-dcard-body p + .dcv-lp-linkbtn,
+.dcv-lp-dcard-body p + .dcv-link {
+  margin-top: 18px;
+}
+.dcv-lp-flag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e4bd60, #b87f23);
+  color: #111;
+  font: 700 10px/1 var(--dcv-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.dcv-lp-flag--dark {
+  background: #161616;
+  color: #fff;
+}
+.dcv-lp-notice {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 12px;
+  padding: 7px 12px;
+  border: 1px solid #b88124;
+  font: 700 10px/1 var(--dcv-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8a5d12;
+}
+.dcv-lp-photoband .dcv-lp-eyebrow {
+  color: #e4bd60;
+}
+.dcv-lp-dates {
+  font: italic 400 20px/1.4 var(--dcv-serif);
+  color: #e4bd60;
+  margin: 0 auto 26px;
+}
+@media (max-width: 1000px) {
+  .dcv-lp-grid3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .dcv-lp-grid3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Restaurant pages: three info cards, hours list, reservation form. */
+.dcv-lp-cards3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.dcv-lp-hours {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+.dcv-lp-hours li {
+  color: #222;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.dcv-lp-hours small {
+  display: block;
+  margin-top: 3px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.dcv-lp-fine {
+  margin: 0 0 22px;
+  color: #777;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.6;
+}
+.dcv-lp-form {
+  padding: 30px 32px 34px;
+}
+@media (max-width: 1000px) {
+  .dcv-lp-cards3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dcv-lp-gallery {
+  display: grid;
+  gap: 18px;
+}
+.dcv-lp-gallery--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.dcv-lp-gallery > div {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(24, 29, 31, 0.12);
+}
+.dcv-lp-gallery--1 > div {
+  aspect-ratio: 21 / 9;
+}
+.dcv-lp-gallery img {
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  .dcv-lp-gallery--2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Casa Nizuc landing pages: the site's centred banner, made taller so the buttons and the note under them fit. */
+.dcv-hero.dcv-hero--landing {
+  height: auto;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+}
+.dcv-hero.dcv-hero--landing > img {
+  position: absolute;
+  inset: 0;
+}
+.dcv-hero.dcv-hero--landing .dcv-copy {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 96px 42px 120px;
+}
+.dcv-hero--landing .dcv-hero-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+.dcv-lp-hero-note {
+  margin: 18px 0 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+.dcv-lp-hero-note b {
+  font-size: 16px;
+}
+
+/* Info strip: items with a dot between them. */
+.dcv-lp-strip li + li::before {
+  content: "·";
+  margin-right: 32px;
+  color: rgba(228, 189, 96, 0.6);
+}
+.dcv-lp-strip ul {
+  justify-content: center;
+}
+
+/* A restaurant with two photos (Mayim): the main photo and a narrow strip under it. */
+.dcv-lp-photos {
+  display: grid;
+  gap: 14px;
+}
+.dcv-lp-photo--strip {
+  aspect-ratio: 4 / 1;
+}
+
+@media (max-width: 1000px) {
+  .dcv-lp-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .dcv-hero.dcv-hero--landing {
+    min-height: 520px;
+  }
+  .dcv-hero.dcv-hero--landing .dcv-copy {
+    padding: 64px 20px 92px;
+  }
+  .dcv-lp-steps {
+    grid-template-columns: 1fr;
+  }
+  .dcv-lp-strip li + li::before {
+    display: none;
+  }
+}

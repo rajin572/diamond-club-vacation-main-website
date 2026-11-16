@@ -19,8 +19,8 @@ import { AllImages } from "../../../public/images/AllImages";
 import { PopupTable } from "./CasaNizucParts";
 
 const SUB_NAV: DesignLink[] = [
-  { label: "Overview", href: "#overview" },
   { label: "About", href: "#about" },
+  { label: "Overview", href: `${CASA_NIZUC_HREF}/overview` },
   { label: "Shabbat", href: "#shabbat" },
   { label: "Dining", href: "#dining" },
   { label: "GKDE", href: "#gkde" },
@@ -236,7 +236,7 @@ export function CasaNizucView() {
               priority={false}
             />
             <div className="dcv-body">
-              <div className="dcv-card-tag">Five Kosher Destinations · One Hotel</div>
+              <div className="dcv-card-tag">Seven Restaurants · One Destination</div>
               <h3>{dining.heading}</h3>
               <p>{dining.text}</p>
               <span className="dcv-link">
