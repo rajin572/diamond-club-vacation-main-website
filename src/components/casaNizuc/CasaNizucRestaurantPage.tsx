@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock, MapPin, ShieldCheck } from "lucide-react";
 import { PhotoGallery, SubNav } from "@/components/shared/design";
+import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { CasaNizucReservationForm } from "./CasaNizucReservationForm";
 import { DINING_VENUES, getMealsForVenue, restaurantHref, type DiningVenue } from "./casaNizucDining";
@@ -14,6 +15,7 @@ import { BOOK_STAY_HREF, CASA_NIZUC_SUB_NAV } from "./casaNizucNav";
  */
 export function CasaNizucRestaurantPage({ venue }: { venue: DiningVenue }) {
   const meals = getMealsForVenue(venue.name);
+  const ofek = venue.slug === "ofek" ? CASA_NIZUC_PAGE.gkde.ofek : null;
   const others = DINING_VENUES.filter((item) => item.slug !== venue.slug);
 
   return (
@@ -57,6 +59,35 @@ export function CasaNizucRestaurantPage({ venue }: { venue: DiningVenue }) {
           </div>
         </div>
       </section>
+
+      {/* Ofek: the rooftop's story and highlights (client's Ofek page) */}
+      {ofek && (
+        <section className="dcv-lp-band dcv-lp-band--white">
+          <div className="dcv-lp-inner">
+            <p className="dcv-lp-eyebrow">Adults-only rooftop</p>
+            <h2 className="dcv-lp-title">{ofek.heading}</h2>
+            <p className="dcv-lp-body" style={{ fontWeight: 600 }}>
+              {ofek.lead}
+            </p>
+            <p className="dcv-lp-body">{ofek.text}</p>
+            <h3 className="dcv-lp-title" style={{ fontSize: "clamp(26px, 3vw, 36px)", margin: "40px 0 24px" }}>
+              Rooftop Highlights
+            </h3>
+            <div className="dcv-lp-cards3">
+              {ofek.points.map((point) => {
+                const at = point.indexOf(": ");
+                return (
+                  <div key={point} className="dcv-lp-card">
+                    <p className="dcv-lp-eyebrow">Rooftop experience</p>
+                    <h3>{at < 0 ? point : point.slice(0, at)}</h3>
+                    {at >= 0 && <p>{point.slice(at + 2)}</p>}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Photo gallery */}
       <section className="dcv-lp-band dcv-lp-band--white">

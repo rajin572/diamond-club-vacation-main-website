@@ -32,6 +32,17 @@ function DiamondClubBrand() {
   );
 }
 
+/** Casa Nizuc pages (client 2026-11-15): the Casa Nizuc logo replaces the Diamond Club seal, and the Marriott Bonvoy logo replaces the DIAMOND CLUB / VACATIONS text. */
+function CasaNizucBrand() {
+  return (
+    <>
+      <Image src={AllImages.casaNizucLogo} alt="Casa Nizuc Resort & Spa" width={56} height={55} priority className="dcv-brand-casa" />
+      <span className="dcv-brand-divider" aria-hidden="true" />
+      <Image src={AllImages.marriottBonvoyLogo} alt="Marriott Bonvoy" width={104} height={31} priority className="dcv-brand-bonvoy" />
+    </>
+  );
+}
+
 /** Announcement bar + sticky header with the brand mark and the context-aware action button (the Brochure buttons live on the program pages). */
 export function Navbar() {
   const pathname = usePathname();
@@ -40,7 +51,7 @@ export function Navbar() {
 
   // Inquire inside a program or one of its hotels (locked to that program, and hotel when there is one);
   // Request a Quote on regular Casa Nizuc (/casa-nizuc and /casa-nizuc/[section]); Contact elsewhere.
-  const isCasaNizuc = pathname === "/casa-nizuc/" || (pathname ? pathname.startsWith("/casa-nizuc/") : false);
+  const isCasaNizuc = pathname === "/casa-nizuc" || pathname === "/casa-nizuc/" || (pathname ? pathname.startsWith("/casa-nizuc/") : false);
   const inquiry = getInquireContext(pathname, search);
   const actionLabel = isCasaNizuc ? "REQUEST A QUOTE" : inquiry ? "INQUIRE" : "CONTACT";
   const actionHref = isCasaNizuc
@@ -69,8 +80,8 @@ export function Navbar() {
         <div className="dcv-nav">
           {/* Left side brand. Each site shows its own block (CSS, keyed on <html data-site>, see lib/site-hosts), so the right one is there before React loads. */}
           {!onGuettawayPage && (
-            <Link className="dcv-brand" data-hide-on="passover guettaway" href="/" aria-label="Diamond Club Vacations home">
-              <DiamondClubBrand />
+            <Link className="dcv-brand" data-hide-on="passover guettaway" href="/" aria-label={isCasaNizuc ? "Casa Nizuc by Marriott Bonvoy, Diamond Club Vacations home" : "Diamond Club Vacations home"}>
+              {isCasaNizuc ? <CasaNizucBrand /> : <DiamondClubBrand />}
             </Link>
           )}
 

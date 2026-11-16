@@ -668,6 +668,8 @@ import reserveLogoWhite from "./mainDesign/reserve-logo-white.webp";
 import blueLogo from "./mainDesign/blue-logo.webp";
 import blueLogoWhite from "./mainDesign/blue-logo-white.webp";
 import casaNizucLogo from "./mainDesign/casa-nizuc-logo.webp";
+// The Marriott Bonvoy logo, from the client's "Caza Nizuc Main Page" document (2026-11-15).
+import marriottBonvoyLogo from "./mainDesign/marriott-bonvoy-logo.webp";
 import casaNizucLogoWhite from "./mainDesign/casa-nizuc-logo-white.webp";
 // Hotel logos shown above the title on the hotel banners (white artwork, trimmed).
 import stRegisHeroLogo from "./mainDesign/st-regis-hero-logo.webp";
@@ -1570,6 +1572,7 @@ export const AllImages = {
   blueLogo,
   blueLogoWhite,
   casaNizucLogo,
+  marriottBonvoyLogo,
   casaNizucLogoWhite,
   stRegisHeroLogo,
   editionHeroLogo,

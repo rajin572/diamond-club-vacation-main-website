@@ -30,14 +30,16 @@ interface DetailHeroProps {
   actions?: ReactNode;
   /** Keep the title on one line on tablet and desktop (the font scales with the screen); it still wraps on phones. */
   singleLine?: boolean;
+  /** Extra class on the banner. */
+  className?: string;
 }
 
 /** The rounded-bottom hero used by inner pages, updated with centralized typography and flexible logo positioning. */
-export function DetailHero({ image, kicker, title, subtitle, imagePosition, actions, logo, singleLine }: DetailHeroProps) {
+export function DetailHero({ image, kicker, title, subtitle, imagePosition, actions, logo, singleLine, className }: DetailHeroProps) {
   const isLogoLeft = logo && logo.position !== "top";
 
   return (
-    <section className={singleLine ? "dcv-hero dcv-hero--oneline" : "dcv-hero"}>
+    <section className={["dcv-hero", singleLine && "dcv-hero--oneline", className].filter(Boolean).join(" ")}>
       <Image
         src={image}
         alt=""

@@ -3,8 +3,8 @@ import { CASA_NIZUC_HREF } from "@/lib/routes";
 
 /** The pill navigation under the banner of the year-round Casa Nizuc section pages. */
 export const CASA_NIZUC_SUB_NAV: DesignLink[] = [
-  { label: "Overview", href: `${CASA_NIZUC_HREF}/overview` },
   { label: "About", href: `${CASA_NIZUC_HREF}/about` },
+  { label: "Overview", href: `${CASA_NIZUC_HREF}/overview` },
   { label: "Shabbat", href: `${CASA_NIZUC_HREF}/shabbat` },
   { label: "Dining", href: `${CASA_NIZUC_HREF}/dining` },
   { label: "GKDE", href: `${CASA_NIZUC_HREF}/gkde` },

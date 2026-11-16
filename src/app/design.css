@@ -99,6 +99,16 @@
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+.dcv-brand-casa {
+  width: auto;
+  height: 56px;
+  flex-shrink: 0;
+}
+.dcv-brand-bonvoy {
+  width: auto;
+  height: 31px;
+  flex-shrink: 0;
+}
 .dcv-brand-divider {
   display: inline-block;
   width: 1.5px;
@@ -3216,6 +3226,12 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
     width: 44px;
     height: 44px;
   }
+  .dcv-brand-casa {
+    height: 46px;
+  }
+  .dcv-brand-bonvoy {
+    height: 26px;
+  }
   .dcv-brand-divider {
     height: 30px;
   }
@@ -3244,6 +3260,12 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
   .dcv-brand-badge {
     width: 36px;
     height: 36px;
+  }
+  .dcv-brand-casa {
+    height: 38px;
+  }
+  .dcv-brand-bonvoy {
+    height: 21px;
   }
   .dcv-brand-divider {
     height: 24px;

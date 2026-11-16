@@ -9,9 +9,8 @@ import { AllImages } from "../../../public/images/AllImages";
  */
 export const CASA_NIZUC_PAGE = {
   hero: {
-    kicker: "A Tribute Portfolio Resort by Marriott · A DCV Concept",
+    kicker: "A New Standard in Luxury Kosher Hospitality",
     title: "The Kosher Resort That Has It All",
-    subtitle: "Dining · Shabbat · GKDE · Calendar of Events · Events & Celebrations",
     // The daytime aerial photo, the same banner as the Passover (Diamond Blue) Casa Nizuc page (client 2026-10-26).
     image: AllImages.series.casa[0],
   },
@@ -27,6 +26,37 @@ export const CASA_NIZUC_PAGE = {
       { id: "calendar", title: "Calendar of Events", description: "Full programming. All inclusive.", image: AllImages.casaNizucTowerNight },
       { id: "events", title: "Events & Celebrations", description: "Your simcha. Our stage.", image: AllImages.casaNizucEventsChandeliers },
     ],
+  },
+
+  // The About page (client 2026-11-15, "Caza Nizuc Main Page"). Text between asterisks is emphasised, as in the document.
+  aboutPage: {
+    kicker: "One Destination. So Much to Experience.",
+    title: "Welcome to Casa Nizuc",
+    subtitle: "A New Standard in Resort Hospitality",
+    welcome: [
+      "Just 10 minutes from Cancun International Airport, *Casa Nizuc* introduces a refreshing new concept in upscale resort hospitality, bringing together stylish accommodations, exceptional kosher dining, vibrant entertainment, and an extraordinary variety of experiences in one remarkable destination.",
+      "More than simply a place to stay, Casa Nizuc offers a complete vacation experience, combining comfort, convenience, warm hospitality, and an impressive collection of dining, leisure, and entertainment options.",
+    ],
+    culinary: {
+      title: "An Unprecedented Kosher Culinary Experience",
+      image: AllImages.casaNizucAshanRender,
+      paragraphs: [
+        "At the heart of Casa Nizuc is an extraordinary culinary offering, featuring *an unprecedented variety of kosher dining options, all within one resort destination.*",
+        "From an elegant steakhouse featuring a futuristic dining experience to a spectacular Mediterranean specialty restaurant on the 23rd floor offering breathtaking 360-degree panoramic views of the lagoon and Caribbean Sea, to delicious dairy breakfasts and lunches, rooftop sushi and tapas, a specialty coffee shop, and casual poolside favorites, each venue offers its own distinctive flavors and atmosphere.",
+      ],
+      kashrut: "*All kosher dining is maintained under the highest standards of Kashrut, featuring Glatt Kosher Beit Yosef meats and Chalav Yisroel dairy products, under strict kosher supervision.*",
+    },
+    beyond: {
+      title: "Beyond the Dining Experience",
+      image: AllImages.casaNizucBeachClubMap,
+      paragraphs: [
+        "Casa Nizuc is about much more than exceptional cuisine.",
+        "Guests can enjoy inviting swimming pools, entertainment, welcoming social spaces, and an exclusive beach club located just across the street.",
+        "Adding another exciting dimension is *La Aldea Village, scheduled to open in April 2027* — a vibrant destination featuring shopping, dining, entertainment, and beautifully designed gathering spaces that extend the experience beyond the resort itself.",
+        "Whether you're planning a weekend getaway, a family vacation, or a special holiday celebration, Casa Nizuc brings together comfort, variety, convenience, and memorable experiences in one remarkable destination.",
+      ],
+    },
+    closing: "Casa Nizuc — One Destination. So Much to Experience.",
   },
 
   about: {

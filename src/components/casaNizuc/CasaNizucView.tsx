@@ -18,8 +18,14 @@ import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { AllImages } from "../../../public/images/AllImages";
 import { PopupTable } from "./CasaNizucParts";
 
+/** The Ofek rooftop card of the GKDE block on the main page. */
+const SHOW_OFEK_CARD = false;
+
+/** The "The Resort" block (three cards) of the main page. */
+const SHOW_RESORT_SECTION = false;
+
 const SUB_NAV: DesignLink[] = [
-  { label: "About", href: "#about" },
+  { label: "About", href: `${CASA_NIZUC_HREF}/about` },
   { label: "Overview", href: `${CASA_NIZUC_HREF}/overview` },
   { label: "Shabbat", href: "#shabbat" },
   { label: "Dining", href: "#dining" },
@@ -72,6 +78,7 @@ export function CasaNizucView() {
     <>
       {/* Hero Header */}
       <DetailHero
+        imagePosition="center 40%"
         image={hero.image}
         kicker={hero.kicker}
         title={
@@ -81,15 +88,14 @@ export function CasaNizucView() {
             THAT HAS IT ALL
           </span>
         }
-        subtitle={hero.subtitle}
-        logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "left", wordmark: true }}
+        logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "top", height: 84 }}
       />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
       {/* SECTION 1: Discover Casa Nizuc (GKDE Featured Card at top, 4 cards below) */}
       <Wrap id="overview">
         <SectionTitle title={overview.title} />
-        <div className="dcv-grid4">
+        <div className="dcv-grid5">
           {overview.cards.map((card) => (
             <DesignCard
               key={card.id}
@@ -97,93 +103,95 @@ export function CasaNizucView() {
               title={card.title}
               description={card.description}
               href={`#${card.id}`}
-              featured={"featured" in card ? Boolean(card.featured) : false}
             />
           ))}
         </div>
       </Wrap>
 
       {/* SECTION 2: About The Resort */}
-      <Wrap id="about" className="dcv-wrap--stack">
-        <SectionTitle title="The Resort" />
-        <p className="dcv-lead" style={{ maxWidth: 840, marginBottom: 16 }}>
-          {about.lead}
-        </p>
-        <p style={{ fontSize: 16, color: "var(--dcv-muted)", lineHeight: 1.7, maxWidth: 900, marginBottom: 28 }}>
-          {about.paragraphs[0]}
-        </p>
+      {/* Hidden for now (client, 2026-11-16); set SHOW_RESORT_SECTION to bring it back. */}
+      {SHOW_RESORT_SECTION && (
+        <Wrap id="about" className="dcv-wrap--stack">
+          <SectionTitle title="The Resort" />
+          <p className="dcv-lead" style={{ maxWidth: 840, marginBottom: 16 }}>
+            {about.lead}
+          </p>
+          <p style={{ fontSize: 16, color: "var(--dcv-muted)", lineHeight: 1.7, maxWidth: 900, marginBottom: 28 }}>
+            {about.paragraphs[0]}
+          </p>
 
-        <div className="dcv-grid3">
-          {/* Card 1: The Property */}
-          <article className="dcv-card">
-            <div style={{ position: "relative", width: "100%", height: 260, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
-              <Image
-                src={AllImages.casaNizucTowerDay}
-                alt="Casa Nizuc Property"
-                fill
-                sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-            <div className="dcv-body">
-              <div className="dcv-card-tag">The Property</div>
-              <h3>The Resort</h3>
-              <p>{about.paragraphs[1]}</p>
-              <Link href={`${CASA_NIZUC_HREF}/about`} className="dcv-link" style={{ marginTop: "auto", display: "inline-block", paddingTop: 12 }}>
-                Explore Details →
-              </Link>
-            </div>
-          </article>
+          <div className="dcv-grid3">
+            {/* Card 1: The Property */}
+            <article className="dcv-card">
+              <div style={{ position: "relative", width: "100%", height: 260, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
+                <Image
+                  src={AllImages.casaNizucTowerDay}
+                  alt="Casa Nizuc Property"
+                  fill
+                  sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <div className="dcv-body">
+                <div className="dcv-card-tag">The Property</div>
+                <h3>The Resort</h3>
+                <p>{about.paragraphs[1]}</p>
+                <Link href={`${CASA_NIZUC_HREF}/about`} className="dcv-link" style={{ marginTop: "auto", display: "inline-block", paddingTop: 12 }}>
+                  Explore Details →
+                </Link>
+              </div>
+            </article>
 
-          {/* Card 2: At a Glance */}
-          <article className="dcv-card">
-            <div style={{ position: "relative", width: "100%", height: 260, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
-              <Image
-                src={AllImages.casaNizucEntrance}
-                alt="Casa Nizuc Entrance"
-                fill
-                sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-            <div className="dcv-body">
-              <div className="dcv-card-tag">By The Numbers</div>
-              <h3>At a Glance</h3>
-              <ul className="dcv-card-meta" style={{ margin: "14px 0", fontSize: 14 }}>
-                {about.glance.map((item) => (
-                  <li key={item.label} style={{ marginBottom: 6 }}>
-                    <b>{item.value}</b> {item.label}
-                  </li>
-                ))}
-              </ul>
-              <Link href={`${CASA_NIZUC_HREF}/about`} className="dcv-link" style={{ marginTop: "auto", display: "inline-block", paddingTop: 12 }}>
-                View Facts &amp; Numbers →
-              </Link>
-            </div>
-          </article>
+            {/* Card 2: At a Glance */}
+            <article className="dcv-card">
+              <div style={{ position: "relative", width: "100%", height: 260, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
+                <Image
+                  src={AllImages.casaNizucEntrance}
+                  alt="Casa Nizuc Entrance"
+                  fill
+                  sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <div className="dcv-body">
+                <div className="dcv-card-tag">By The Numbers</div>
+                <h3>At a Glance</h3>
+                <ul className="dcv-card-meta" style={{ margin: "14px 0", fontSize: 14 }}>
+                  {about.glance.map((item) => (
+                    <li key={item.label} style={{ marginBottom: 6 }}>
+                      <b>{item.value}</b> {item.label}
+                    </li>
+                  ))}
+                </ul>
+                <Link href={`${CASA_NIZUC_HREF}/about`} className="dcv-link" style={{ marginTop: "auto", display: "inline-block", paddingTop: 12 }}>
+                  View Facts &amp; Numbers →
+                </Link>
+              </div>
+            </article>
 
-          {/* Card 3: Kosher-Friendly By Design */}
-          <article className="dcv-card">
-            <div style={{ position: "relative", width: "100%", height: 260, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
-              <Image
-                src={AllImages.casaNizucGallery31}
-                alt="Kosher-Friendly by Design"
-                fill
-                sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-            <div className="dcv-body">
-              <div className="dcv-card-tag">Observance Built In</div>
-              <h3>Kosher-Friendly by Design</h3>
-              <p>“{about.quote}” {about.features[0].text}</p>
-              <Link href={`${CASA_NIZUC_HREF}/about`} className="dcv-link" style={{ marginTop: "auto", display: "inline-block", paddingTop: 12 }}>
-                See What Is Built In →
-              </Link>
-            </div>
-          </article>
-        </div>
-      </Wrap>
+            {/* Card 3: Kosher-Friendly By Design */}
+            <article className="dcv-card">
+              <div style={{ position: "relative", width: "100%", height: 260, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
+                <Image
+                  src={AllImages.casaNizucGallery31}
+                  alt="Kosher-Friendly by Design"
+                  fill
+                  sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <div className="dcv-body">
+                <div className="dcv-card-tag">Observance Built In</div>
+                <h3>Kosher-Friendly by Design</h3>
+                <p>“{about.quote}” {about.features[0].text}</p>
+                <Link href={`${CASA_NIZUC_HREF}/about`} className="dcv-link" style={{ marginTop: "auto", display: "inline-block", paddingTop: 12 }}>
+                  See What Is Built In →
+                </Link>
+              </div>
+            </article>
+          </div>
+        </Wrap>
+      )}
 
       {/* SECTION 3: Shabbat (Featured Card, no bottom 3 cards per user request) */}
       <Wrap id="shabbat" className="dcv-wrap--stack">
@@ -192,7 +200,7 @@ export function CasaNizucView() {
           {shabbat.lead}
         </p>
 
-        <div className="dcv-dining-top-card">
+        <div className="dcv-dining-top-card" style={{ margin: 0 }}>
           <Link
             href={`${CASA_NIZUC_HREF}/shabbat`}
             className="dcv-card dcv-card--interactive"
@@ -223,7 +231,7 @@ export function CasaNizucView() {
           {dining.lead}
         </p>
 
-        <div className="dcv-dining-top-card">
+        <div className="dcv-dining-top-card" style={{ margin: 0 }}>
           <Link
             href={`${CASA_NIZUC_HREF}/dining`}
             className="dcv-card dcv-card--interactive"
@@ -254,49 +262,37 @@ export function CasaNizucView() {
           {gkde.lead}
         </p>
 
-        <div className="dcv-grid2">
-          {/* Card 1: GKDE Experience */}
-          <article className="dcv-card">
-            <div style={{ position: "relative", width: "100%", height: 300, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
-              <Image
-                src={gkde.image}
-                alt="Gourmet Kosher Dining Experience"
-                fill
-                sizes="(max-width: 900px) 100vw, 50vw"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
+        <div className="dcv-dining-top-card" style={{ margin: 0 }}>
+          <Link
+            href={`${CASA_NIZUC_HREF}/gkde`}
+            className="dcv-card dcv-card--interactive"
+            style={{ display: "block", textDecoration: "none" }}
+          >
+            <Image src={gkde.image} alt="GKDE, the Gourmet Kosher Dining Experience" sizes="(max-width: 900px) 100vw, 900px" priority={false} />
             <div className="dcv-body">
-              <div className="dcv-card-tag">All-Inclusive Dining Package</div>
-              <h3>{gkde.tagline}</h3>
-              <p>{gkde.intro[0]}</p>
-              <Link href={`${CASA_NIZUC_HREF}/gkde`} className="dcv-link" style={{ marginTop: "auto", display: "inline-block", paddingTop: 12 }}>
-                Explore GKDE Venues &amp; Pricing →
-              </Link>
+              <div className="dcv-card-tag">GKDE · All-Inclusive Dining Package</div>
+              <h3>GKDE — The Gourmet Kosher Dining Experience</h3>
+              <p>
+                {gkde.tagline} {gkde.intro[0]}
+              </p>
+              <span className="dcv-link">Explore GKDE venues &amp; pricing →</span>
             </div>
-          </article>
+          </Link>
+        </div>
 
-          {/* Card 2: Ofek Rooftop Lounge */}
-          <article className="dcv-card">
-            <div style={{ position: "relative", width: "100%", height: 300, overflow: "hidden", borderRadius: "20px 20px 0 0" }}>
-              <Image
-                src={gkde.ofek.image}
-                alt="Ofek Rooftop Sky Pool"
-                fill
-                sizes="(max-width: 900px) 100vw, 50vw"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
+        {/* The Ofek rooftop card is hidden for now (client, 2026-11-16); set SHOW_OFEK_CARD to bring it back. */}
+        {SHOW_OFEK_CARD && (
+          <article className="dcv-card" style={{ marginTop: 24 }}>
             <div className="dcv-body">
               <div className="dcv-card-tag">Adults-Only Rooftop</div>
               <h3>{gkde.ofek.heading}</h3>
               <p>{gkde.ofek.lead}</p>
-              <Link href={`${CASA_NIZUC_HREF}/ofek`} className="dcv-link" style={{ marginTop: "auto", display: "inline-block", paddingTop: 12 }}>
+              <Link href={`${CASA_NIZUC_HREF}/ofek`} className="dcv-link">
                 Explore Ofek Rooftop →
               </Link>
             </div>
           </article>
-        </div>
+        )}
       </Wrap>
 
       {/* SECTION 6: Calendar of Events (Shown like previous, linking to calendar) */}
@@ -306,7 +302,7 @@ export function CasaNizucView() {
           {seasons.lead}
         </p>
 
-        <div className="dcv-dining-top-card">
+        <div className="dcv-dining-top-card" style={{ margin: 0 }}>
           <Link
             href={`${CASA_NIZUC_HREF}/calendar`}
             className="dcv-card dcv-card--interactive"
@@ -337,7 +333,7 @@ export function CasaNizucView() {
           {events.lead}
         </p>
 
-        <div className="dcv-dining-top-card">
+        <div className="dcv-dining-top-card" style={{ margin: 0 }}>
           <article
             className="dcv-card dcv-card--interactive"
             role="button"

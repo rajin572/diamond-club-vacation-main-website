@@ -5,7 +5,7 @@ import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { AllImages } from "../../../public/images/AllImages";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { CasaNizucCalendarView } from "./CasaNizucCalendarView";
-import { CasaNizucAboutView } from "./CasaNizucAboutView";
+import { CasaNizucAboutPage } from "./CasaNizucAboutPage";
 import { CasaNizucDiningPage } from "./CasaNizucDiningPage";
 import { CasaNizucOverviewPage } from "./CasaNizucOverviewPage";
 import { CasaNizucGkdePage } from "./CasaNizucGkdePage";
@@ -121,7 +121,7 @@ export function CasaNizucSectionView({ slug }: { slug: CasaNizucSectionSlug }) {
   }
 
   if (slug === "about") {
-    return <CasaNizucAboutView />;
+    return <CasaNizucAboutPage />;
   }
 
   switch (slug) {
