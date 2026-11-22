@@ -106,7 +106,7 @@
 }
 .dcv-brand-bonvoy {
   width: auto;
-  height: 76px;
+  height: 44px;
   flex-shrink: 0;
 }
 .dcv-brand-divider {
@@ -3230,7 +3230,7 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
     height: 78px;
   }
   .dcv-brand-bonvoy {
-    height: 62px;
+    height: 36px;
   }
   .dcv-brand-divider {
     height: 30px;
@@ -3265,7 +3265,7 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
     height: 62px;
   }
   .dcv-brand-bonvoy {
-    height: 50px;
+    height: 28px;
   }
   .dcv-brand-divider {
     height: 24px;

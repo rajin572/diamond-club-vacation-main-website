@@ -24,9 +24,9 @@ export const CASA_NIZUC_PAGE = {
     lead: "Six clear paths. Every experience is easy to find and book.",
     cards: [
       { id: "stay", title: "Hotel Accommodations", description: "Book your stay.", image: AllImages.casaNizucTowerDay },
-      { id: "gkde", title: "Gourmet Kosher Dining", description: "Reserve your daily Gourmet Kosher Dining Experience (GKDE).", image: AllImages.casaNizucGkdeDining },
+      { id: "gkde", title: "Gourmet Kosher Dining Experience", description: "Reserve your daily Gourmet Kosher Dining Experience (GKDE).", image: AllImages.casaNizucGkdeDining },
       { id: "shabbat", title: "Shabbat Experience", description: "Book a Friday–Sunday Shabbat dining package.", image: AllImages.casaNizucAshanRender },
-      { id: "restaurants", title: "Restaurant Tables", description: "Book Ashan, Mayim, Zait or another participating restaurant.", image: AllImages.casaNizucDiningZait },
+      { id: "restaurants", title: "Restaurant", description: "Book Ashan, Mayim, Zait or another participating restaurant.", image: AllImages.casaNizucDiningZait },
       { id: "ofek", title: "Ofek Rooftop", description: "Explore and reserve rooftop dining experiences.", image: AllImages.casaNizucOfekRooftop },
       { id: "events", title: "Private Events", description: "Weddings, mitzvahs, celebrations, and groups.", image: AllImages.casaNizucEventsChandeliers },
     ],

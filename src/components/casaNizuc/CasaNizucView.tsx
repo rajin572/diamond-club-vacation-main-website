@@ -12,13 +12,13 @@ import {
   SubNav,
   Wrap,
 } from "@/components/shared/design";
-import type { DesignImage, DesignLink } from "@/components/shared/design";
+import type { DesignImage } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { AllImages } from "../../../public/images/AllImages";
 import { PopupTable } from "./CasaNizucParts";
 import { restaurantHref } from "./casaNizucDining";
-import { BOOK_STAY_HREF } from "./casaNizucNav";
+import { BOOK_STAY_HREF, CASA_NIZUC_SUB_NAV } from "./casaNizucNav";
 
 /** The Ofek rooftop card of the GKDE block on the main page. */
 const SHOW_OFEK_CARD = false;
@@ -35,17 +35,6 @@ const DISCOVER_LINKS: Record<string, { href: string; label: string; external?: b
   ofek: { href: restaurantHref("ofek"), label: "Reserve experience →" },
   events: { href: "#events", label: "Request a proposal →" },
 };
-
-const SUB_NAV: DesignLink[] = [
-  { label: "About", href: `${CASA_NIZUC_HREF}/about` },
-  { label: "Overview", href: `${CASA_NIZUC_HREF}/overview` },
-  { label: "Shabbat", href: "#shabbat" },
-  { label: "Dining", href: "#dining" },
-  { label: "GKDE", href: "#gkde" },
-  { label: "Calendar", href: "#calendar" },
-  { label: "Events", href: "#events" },
-  { label: "Gallery", href: "#gallery" },
-];
 
 const CASA_NIZUC_MAIN_GALLERY: DesignImage[] = [
   AllImages.series.casa[0],
@@ -96,7 +85,7 @@ export function CasaNizucView() {
         title="A NEW STANDARD IN KOSHER HOSPITALITY"
         logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "top", height: 180 }}
       />
-      <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
+      <SubNav items={CASA_NIZUC_SUB_NAV} label="Casa Nizuc sections" />
 
       {/* SECTION 1: Discover & Reserve Your Experience (six boxes, client 2026-11-22) */}
       <Wrap id="overview">
