@@ -239,19 +239,19 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         },
       },
       YANKELOO,
-      // Added 2026-11-15 (Guettaway brochure), text and photos from the client.
+      // Added 2026-11-15 (Guettaway brochure), text and photos from the client; text updated from the 2026-11-22 brochure.
       {
         id: "menachem-toker",
         title: "Menachem Toker",
-        tag: "Program Host & Talent Show Host",
-        description: "Prominent Israeli Haredi radio broadcaster, television host, and music producer, widely recognized as one of the leading voices in Jewish media.",
+        tag: "Program MC & Talent Show Host",
+        description: "Renowned Israeli radio and television personality, entertainer, and music producer. Known for his charismatic stage presence and engaging personality, Menachem will serve as our Program MC and host his famous Talent Show.",
         image: AllImages.entertainmentMenachemToker,
         imageFocus: "upper",
         details: {
           title: "Menachem Toker",
-          tag: "Program Host & Talent Show Host",
+          tag: "Program MC & Talent Show Host",
           paragraphs: [
-            "Prominent Israeli Haredi radio broadcaster, television host, and music producer, widely recognized as one of the leading voices in Jewish media.",
+            "Renowned Israeli radio and television personality, entertainer, and music producer. Known for his charismatic stage presence and engaging personality, Menachem will serve as our Program MC and host his famous Talent Show.",
           ],
         },
       },
@@ -259,14 +259,14 @@ export const ENTERTAINMENT_BY_PROGRAM: Record<string, ExperienceCategoryData> = 
         id: "shimi-adar",
         title: "Shimi Adar",
         tag: "Motivational Entertainer",
-        description: "Jewish motivational speaker, event MC, entertainer, host of high-energy dance programs, and founder of Shimi2Jewmba.",
+        description: "Dynamic motivational speaker and entertainer, Shimi Adar is the founder of Shimi2Jewmba and host of high-energy dance programs. With her infectious enthusiasm and personality, Shimi brings excitement, energy, and smiles to audiences of all ages.",
         image: AllImages.entertainmentShimiAdar,
         imageFocus: "upper",
         details: {
           title: "Shimi Adar",
           tag: "Motivational Entertainer",
           paragraphs: [
-            "Jewish motivational speaker, event MC, entertainer, host of high-energy dance programs, and founder of Shimi2Jewmba.",
+            "Dynamic motivational speaker and entertainer, Shimi Adar is the founder of Shimi2Jewmba and host of high-energy dance programs. With her infectious enthusiasm and personality, Shimi brings excitement, energy, and smiles to audiences of all ages.",
           ],
         },
       },

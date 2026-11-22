@@ -73,6 +73,7 @@ export function CasaNizucView() {
         className="dcv-hero--casa-main"
         imagePosition="center 40%"
         image={hero.image}
+        kicker="Tribute Portfolio Resort"
         title="A NEW STANDARD IN KOSHER HOSPITALITY"
         subtitle={<span>{home.lead}</span>}
         logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "top", height: 180 }}
@@ -248,7 +249,7 @@ export function CasaNizucView() {
 
       {/* Events & celebrations */}
       <section id="events" className="dcv-lp-band dcv-lp-band--white">
-        <div className="dcv-lp-inner dcv-lp-row">
+        <div className="dcv-lp-inner dcv-lp-row dcv-lp-row--flip">
           <div>
             <p className="dcv-lp-eyebrow">{home.events.eyebrow}</p>
             <h2 className="dcv-lp-title" style={{ marginBottom: 22 }}>
@@ -279,9 +280,6 @@ export function CasaNizucView() {
           <h2 className="dcv-lp-title">{home.closing.title}</h2>
           <p className="dcv-lp-sub">{home.closing.text}</p>
           <div className="dcv-hero-actions" style={{ justifyContent: "center", marginTop: 28 }}>
-            <a className="dcv-btn" href="#overview">
-              View booking options
-            </a>
             <a className="dcv-btn dcv-btn--ghost" href={BOOK_STAY_HREF} target="_blank" rel="noopener noreferrer">
               Book your stay ↗
             </a>
