@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { SubNav } from "@/components/shared/design";
@@ -7,14 +6,9 @@ import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { CasaNizucHero } from "./CasaNizucHero";
 import { BOOK_STAY_HREF, CASA_NIZUC_SUB_NAV } from "./casaNizucNav";
 
-/** "Just 10 minutes ... *Casa Nizuc* introduces ...": text between asterisks is emphasised, as in the client's document. */
-function Emphasis({ text }: { text: string }): ReactNode {
-  return text.split("*").map((part, index) => (index % 2 ? <em key={index}>{part}</em> : part));
-}
-
 /**
- * About page, from the client's "Caza Nizuc Main Page" document (2026-11-15): the welcome, the kosher culinary experience and what lies
- * beyond the dining. Same pattern as the other Casa Nizuc landing pages.
+ * About page, from the client's website design package (about.html, 2026-11-22): the introduction, the five numbered parts of the resort
+ * (01 to 05) and the kosher commitment. The text and order are the client's; the photos and colours are the site's own.
  */
 export function CasaNizucAboutPage() {
   const { aboutPage: page, hero } = CASA_NIZUC_PAGE;
@@ -23,80 +17,61 @@ export function CasaNizucAboutPage() {
     <>
       <CasaNizucHero
         image={hero.image}
-        kicker={page.kicker}
+        kicker={page.eyebrow}
         title={page.title}
         subtitle={page.subtitle}
         actions={
           <>
-            <Link className="dcv-btn" href={BOOK_STAY_HREF}>
+            <a className="dcv-btn" href={BOOK_STAY_HREF}>
               Book your stay
-            </Link>
-            <Link className="dcv-btn dcv-btn--light" href={`${CASA_NIZUC_HREF}/dining`}>
-              Explore the dining
+            </a>
+            <Link className="dcv-btn dcv-btn--light" href={`${CASA_NIZUC_HREF}#overview`}>
+              Explore reservation options
             </Link>
           </>
         }
       />
       <SubNav items={CASA_NIZUC_SUB_NAV} label="Casa Nizuc sections" />
 
-      {/* Welcome */}
+      {/* Introduction */}
       <section className="dcv-lp-band">
         <div className="dcv-lp-inner dcv-lp-intro">
-          {page.welcome.map((paragraph) => (
-            <p key={paragraph} className="dcv-lp-body">
-              <Emphasis text={paragraph} />
-            </p>
-          ))}
+          <p className="dcv-lp-eyebrow">{page.eyebrow}</p>
+          <h2 className="dcv-lp-title" style={{ marginBottom: 22 }}>
+            {page.heading}
+          </h2>
+          <p className="dcv-lp-body">{page.intro}</p>
         </div>
       </section>
 
-      {/* Kosher culinary experience */}
-      <section className="dcv-lp-band dcv-lp-band--white">
-        <div className="dcv-lp-inner dcv-lp-split" style={{ alignItems: "center" }}>
-          <div>
-            <h2 className="dcv-lp-title" style={{ fontSize: "clamp(30px, 3.4vw, 44px)", marginBottom: 24 }}>
-              {page.culinary.title}
-            </h2>
-            {page.culinary.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="dcv-lp-body">
-                <Emphasis text={paragraph} />
-              </p>
-            ))}
-            <p className="dcv-cn-callout" style={{ marginTop: 24 }}>
-              <Emphasis text={page.culinary.kashrut} />
-            </p>
+      {/* 01 to 05, photo and text alternating sides */}
+      {page.sections.map((section, index) => (
+        <section key={section.number} className={index % 2 ? "dcv-lp-band dcv-lp-band--cream" : "dcv-lp-band dcv-lp-band--white"}>
+          <div className={index % 2 ? "dcv-lp-inner dcv-lp-row dcv-lp-row--flip" : "dcv-lp-inner dcv-lp-row"}>
+            <div className="dcv-lp-photo">
+              <Image src={section.image} alt={section.title} fill sizes="(max-width: 1000px) 100vw, 55vw" />
+            </div>
+            <div>
+              <p className="dcv-lp-eyebrow">{section.number}</p>
+              <h2 className="dcv-lp-title" style={{ fontSize: "clamp(28px, 3.2vw, 40px)", marginBottom: 18 }}>
+                {section.title}
+              </h2>
+              <p className="dcv-lp-body">{section.text}</p>
+            </div>
           </div>
-          <div className="dcv-lp-photo">
-            <Image src={page.culinary.image} alt={page.culinary.title} fill sizes="(max-width: 1000px) 100vw, 50vw" />
-          </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
-      {/* Beyond the dining experience */}
-      <section className="dcv-lp-band dcv-lp-band--cream">
-        <div className="dcv-lp-inner dcv-lp-split" style={{ alignItems: "center" }}>
-          <div className="dcv-lp-photo">
-            <Image src={page.beyond.image} alt={page.beyond.title} fill sizes="(max-width: 1000px) 100vw, 50vw" />
+      {/* Our kosher commitment */}
+      <section className="dcv-lp-band">
+        <div className="dcv-lp-inner dcv-lp-center">
+          <h2 className="dcv-lp-title">{page.kosher.title}</h2>
+          <p className="dcv-lp-sub">{page.kosher.text}</p>
+          <div className="dcv-hero-actions" style={{ justifyContent: "center", marginTop: 28 }}>
+            <Link className="dcv-btn" href={`${CASA_NIZUC_HREF}#overview`}>
+              Explore reservation options
+            </Link>
           </div>
-          <div>
-            <h2 className="dcv-lp-title" style={{ fontSize: "clamp(30px, 3.4vw, 44px)", marginBottom: 24 }}>
-              {page.beyond.title}
-            </h2>
-            {page.beyond.paragraphs.map((paragraph) => (
-              <p key={paragraph} className="dcv-lp-body">
-                <Emphasis text={paragraph} />
-              </p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Closing line */}
-      <section className="dcv-lp-band dcv-lp-band--tight">
-        <div className="dcv-lp-inner dcv-lp-intro">
-          <p className="dcv-lp-accent" style={{ fontSize: 26 }}>
-            {page.closing}
-          </p>
         </div>
       </section>
       <p style={{ textAlign: "center", margin: "18px 0 28px" }}>

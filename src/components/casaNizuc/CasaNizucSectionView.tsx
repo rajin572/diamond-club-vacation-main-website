@@ -7,13 +7,14 @@ import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { CasaNizucCalendarView } from "./CasaNizucCalendarView";
 import { CasaNizucAboutPage } from "./CasaNizucAboutPage";
 import { CasaNizucDiningPage } from "./CasaNizucDiningPage";
+import { CasaNizucEventsPage } from "./CasaNizucEventsPage";
 import { CasaNizucOverviewPage } from "./CasaNizucOverviewPage";
 import { CasaNizucGkdePage } from "./CasaNizucGkdePage";
 import { CasaNizucShabbatPage } from "./CasaNizucShabbatPage";
 import { CASA_NIZUC_SUB_NAV } from "./casaNizucNav";
 
 /** The pages that open from the year-round Casa Nizuc page. */
-export const CASA_NIZUC_SECTION_SLUGS = ["overview", "about", "shabbat", "dining", "gkde", "ofek", "calendar"] as const;
+export const CASA_NIZUC_SECTION_SLUGS = ["overview", "about", "shabbat", "dining", "gkde", "ofek", "calendar", "events"] as const;
 export type CasaNizucSectionSlug = (typeof CASA_NIZUC_SECTION_SLUGS)[number];
 
 export function isCasaNizucSectionSlug(slug: string): slug is CasaNizucSectionSlug {
@@ -133,6 +134,8 @@ export function CasaNizucSectionView({ slug }: { slug: CasaNizucSectionSlug }) {
       return <CasaNizucGkdePage />;
     case "ofek":
       return <OfekSection />;
+    case "events":
+      return <CasaNizucEventsPage />;
     default:
       return null;
   }

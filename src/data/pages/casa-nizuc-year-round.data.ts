@@ -32,35 +32,144 @@ export const CASA_NIZUC_PAGE = {
     ],
   },
 
-  // The About page (client 2026-11-15, "Caza Nizuc Main Page"). Text between asterisks is emphasised, as in the document.
-  aboutPage: {
-    kicker: "One Destination. So Much to Experience.",
-    title: "Welcome to Casa Nizuc",
-    subtitle: "A New Standard in Resort Hospitality",
-    welcome: [
-      "Just 10 minutes from Cancun International Airport, *Casa Nizuc* introduces a refreshing new concept in upscale resort hospitality, bringing together stylish accommodations, exceptional kosher dining, vibrant entertainment, and an extraordinary variety of experiences in one remarkable destination.",
-      "More than simply a place to stay, Casa Nizuc offers a complete vacation experience, combining comfort, convenience, warm hospitality, and an impressive collection of dining, leisure, and entertainment options.",
-    ],
-    culinary: {
-      title: "An Unprecedented Kosher Culinary Experience",
+  // The main page sections, from the client's website design package (index.html, 2026-11-22): the text and the order are the client's,
+  // the colours, photos and cards are the site's own. Booking actions open the pages where each experience is booked.
+  home: {
+    lead: "Exceptional kosher dining, meaningful Shabbat experiences, and stylish resort accommodations — all in one distinctive destination.",
+    about: {
+      eyebrow: "About Casa Nizuc",
+      title: "More Than a Stay. A Complete Kosher Hospitality Experience.",
+      paragraphs: [
+        "Casa Nizuc, a Tribute Portfolio Resort by Marriott in Cancún, combines upscale resort accommodations with a thoughtfully developed kosher hospitality program.",
+        "Discover kosher restaurants, dedicated Shabbat experiences, a curated dining package, and opportunities for family getaways and private celebrations.",
+      ],
+      image: AllImages.casaNizucTowerDay,
+    },
+    gkde: {
+      eyebrow: "Our signature culinary experience",
+      title: "Gourmet Kosher Dining Experience",
+      text: "Discover a curated kosher dining program with varied restaurant concepts and a convenient daily package.",
+      prices: [
+        { label: "Adults", price: "$200", unit: "per day" },
+        { label: "Children 3–12", price: "$100", unit: "per day" },
+        { label: "Ages 0–2", price: "$35", unit: "per day" },
+      ],
+      notice: "Friday Shabbat dinner and late-booking supplements may apply. Hotel accommodations are booked separately.",
+      image: AllImages.casaNizucGkdeDining,
+    },
+    restaurants: {
+      eyebrow: "Individual reservations",
+      title: "Explore Our Kosher Restaurants",
+      text: "Every restaurant has its own information page and a clear booking action.",
+      list: [
+        { slug: "ashan", tag: "Kosher", title: "Ashan Steakhouse", text: "Signature meat dining.", action: "Reserve a table" },
+        { slug: "mayim", tag: "Kosher", title: "Mayim Dairy", text: "Breakfast and lunch.", action: "Reserve a table" },
+        { slug: "zait", tag: "Kosher", title: "Zait Mediterranean", text: "Mediterranean dining.", action: "Reserve a table" },
+        { slug: "ofek", tag: "Kosher", title: "Ofek Rooftop", text: "Rooftop tapas and sushi experiences.", action: "Reserve an experience" },
+        { slug: "noam", tag: "Kosher", title: "Noam Coffee Shop", text: "Coffee and light bites.", action: "View menu / reservations" },
+        { slug: "brisa", tag: "Important distinction", title: "Other Resort Dining", text: "Brisa and La Boya are non-kosher and are labeled separately.", action: "View dining guidelines" },
+      ],
+    },
+    shabbat: {
+      eyebrow: "Friday through Sunday",
+      title: "Shabbat, the Way It Should Feel.",
+      text: "Thoughtfully prepared kosher meals, Kiddush, services, and warm hospitality.",
+      prices: [
+        { label: "Adults", price: "$250", unit: "package" },
+        { label: "Children 3–12", price: "$125", unit: "package" },
+        { label: "Ages 0–2", price: "$35", unit: "package" },
+      ],
+      notice: "Hotel accommodations are separate.",
       image: AllImages.casaNizucAshanRender,
-      paragraphs: [
-        "At the heart of Casa Nizuc is an extraordinary culinary offering, featuring *an unprecedented variety of kosher dining options, all within one resort destination.*",
-        "From an elegant steakhouse featuring a futuristic dining experience to a spectacular Mediterranean specialty restaurant on the 23rd floor offering breathtaking 360-degree panoramic views of the lagoon and Caribbean Sea, to delicious dairy breakfasts and lunches, rooftop sushi and tapas, a specialty coffee shop, and casual poolside favorites, each venue offers its own distinctive flavors and atmosphere.",
-      ],
-      kashrut: "*All kosher dining is maintained under the highest standards of Kashrut, featuring Glatt Kosher Beit Yosef meats and Chalav Yisroel dairy products, under strict kosher supervision.*",
     },
-    beyond: {
-      title: "Beyond the Dining Experience",
+    more: {
+      eyebrow: "Resort & destination",
+      title: "More to Discover",
+      beachTitle: "Beach Club & La Aldea",
+      beachText:
+        "A guest-exclusive beach club is planned for March 2027, approximately a five-minute walk from the resort. Nearby La Aldea shopping, dining, and entertainment is planned for April 2027.",
+      beachNotice: "La Aldea dining is not kosher. Opening dates are subject to change.",
+      holidaysTitle: "Holidays & Special Programs",
+      holidaysText: "Explore seasonal programs and curated experiences; inclusions vary by program.",
       image: AllImages.casaNizucBeachClubMap,
-      paragraphs: [
-        "Casa Nizuc is about much more than exceptional cuisine.",
-        "Guests can enjoy inviting swimming pools, entertainment, welcoming social spaces, and an exclusive beach club located just across the street.",
-        "Adding another exciting dimension is *La Aldea Village, scheduled to open in April 2027* — a vibrant destination featuring shopping, dining, entertainment, and beautifully designed gathering spaces that extend the experience beyond the resort itself.",
-        "Whether you're planning a weekend getaway, a family vacation, or a special holiday celebration, Casa Nizuc brings together comfort, variety, convenience, and memorable experiences in one remarkable destination.",
-      ],
     },
-    closing: "Casa Nizuc — One Destination. So Much to Experience.",
+    events: {
+      eyebrow: "Events & Celebrations",
+      title: "Extraordinary Moments. Beautifully Celebrated.",
+      text: "Destination weddings, bar and bat mitzvahs, family celebrations, and corporate or group events — with customized kosher hospitality arrangements.",
+      image: AllImages.casaNizucEventsChandeliers,
+    },
+    closing: {
+      eyebrow: "Your next step",
+      title: "Ready to Experience Casa Nizuc?",
+      text: "Hotel rooms are booked through Marriott. Kosher dining, Shabbat, restaurant tables, and private events use their own reservation paths.",
+    },
+  },
+
+  // The About page, from the client's website design package (about.html, 2026-11-22). It replaces the 2026-11-15 About text.
+  aboutPage: {
+    eyebrow: "Discover Casa Nizuc",
+    title: "More Than a Stay.",
+    subtitle: "A Complete Kosher Hospitality Experience.",
+    heading: "More Than a Stay. A Complete Kosher Hospitality Experience.",
+    intro:
+      "Casa Nizuc is a distinctive Tribute Portfolio Resort by Marriott in Cancún, bringing together stylish resort accommodations and a thoughtfully developed kosher hospitality experience.",
+    sections: [
+      {
+        number: "01",
+        title: "Accommodations & Resort Amenities",
+        text: "Stylish rooms and suites, resort pools, public spaces, and the convenience of booking accommodations through Marriott Bonvoy. Hotel reservations are separate from kosher dining packages.",
+        image: AllImages.casaNizucRoomSuiteLiving,
+      },
+      {
+        number: "02",
+        title: "Gourmet Kosher Dining",
+        text: "Ashan Steakhouse, Mayim Dairy, Zait Mediterranean, Ofek Rooftop, and Noam Coffee Shop. Explore individual venues or the signature daily GKDE package.",
+        image: AllImages.casaNizucDiningAshan,
+      },
+      {
+        number: "03",
+        title: "Shabbat & Jewish Hospitality",
+        text: "Dedicated Friday–Sunday Shabbat dining with meals, Kiddush, services and warm hospitality. Book separately from the hotel room.",
+        image: AllImages.casaNizucAshanRender,
+      },
+      {
+        number: "04",
+        title: "Beach Club & Local Experiences",
+        text: "Guest-exclusive beach club planned March 2027, approximately five minutes away on foot. La Aldea Nizuc shopping, non-kosher dining and entertainment planned April 2027.",
+        image: AllImages.casaNizucBeachClubMap,
+      },
+      {
+        number: "05",
+        title: "Events, Holidays & Celebrations",
+        text: "Special holiday programs and customized weddings, bar and bat mitzvahs, private celebrations and corporate gatherings.",
+        image: AllImages.casaNizucEventsChandeliers,
+      },
+    ],
+    // The document's "final supervising authority and certification to be published once confirmed" note is left out until it is confirmed.
+    kosher: {
+      title: "Our Kosher Commitment",
+      text: "Program developed around Glatt, Chalak Beit Yosef, and Chalav Yisrael standards.",
+    },
+  },
+
+  // The Events & Celebrations page, from the client's website design package (events.html, 2026-11-22).
+  eventsPage: {
+    eyebrow: "Events & Celebrations",
+    title: "Extraordinary Moments.",
+    subtitle: "Beautifully Celebrated.",
+    intro:
+      "From intimate family gatherings to destination celebrations, Casa Nizuc brings together a distinctive Caribbean setting, personalized hospitality, and customized kosher culinary experiences.",
+    typesTitle: "Events We Help Create",
+    types: [
+      { title: "Destination Weddings", text: "Thoughtfully planned celebrations with kosher hospitality." },
+      { title: "Bar & Bat Mitzvahs", text: "Meaningful family milestones in Cancún." },
+      { title: "Private Celebrations", text: "Birthdays, anniversaries, and family gatherings." },
+      { title: "Corporate & Group Events", text: "Meetings, retreats, and group experiences." },
+    ],
+    formTitle: "Request a Proposal",
+    eventTypes: ["Wedding", "Bar / Bat Mitzvah", "Private Celebration", "Corporate / Group Event"],
+    image: AllImages.casaNizucEventsChandeliers,
   },
 
   about: {

@@ -14,14 +14,14 @@ export function generateStaticParams() {
   return CASA_NIZUC_SECTION_SLUGS.map((section) => ({ section }));
 }
 
-const TITLES = { overview: "Overview", about: "About", shabbat: "Shabbat", dining: "Dining", gkde: "GKDE", ofek: "Ofek", calendar: "Calendar of Events" } as const;
+const TITLES = { overview: "Overview", about: "About", shabbat: "Shabbat", dining: "Dining", gkde: "GKDE", ofek: "Ofek", calendar: "Calendar of Events", events: "Events & Celebrations" } as const;
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { section } = await params;
   if (!isCasaNizucSectionSlug(section)) return { title: "Page Not Found" };
 
-  const { overviewPage, about, shabbat, dining, gkde, seasons } = CASA_NIZUC_PAGE;
-  const description = { overview: overviewPage.intro[0], about: about.lead, shabbat: shabbat.lead, dining: dining.lead, gkde: gkde.lead, ofek: gkde.ofek.lead, calendar: seasons.lead }[section];
+  const { overviewPage, aboutPage, eventsPage, shabbat, dining, gkde, seasons } = CASA_NIZUC_PAGE;
+  const description = { overview: overviewPage.intro[0], about: aboutPage.intro, shabbat: shabbat.lead, dining: dining.lead, gkde: gkde.lead, ofek: gkde.ofek.lead, calendar: seasons.lead, events: eventsPage.intro }[section];
 
   return { title: `${TITLES[section]} | Casa Nizuc`, description };
 }
