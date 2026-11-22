@@ -76,7 +76,7 @@ export function Navbar() {
   return (
     <>
       <div className="dcv-top">LUXURY KOSHER HOSPITALITY · WORLDWIDE</div>
-      <header className="dcv-header">
+      <header className={isCasaNizuc ? "dcv-header dcv-header--casa" : "dcv-header"}>
         <div className="dcv-nav">
           {/* Left side brand. Each site shows its own block (CSS, keyed on <html data-site>, see lib/site-hosts), so the right one is there before React loads. */}
           {!onGuettawayPage && (

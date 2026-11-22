@@ -17,12 +17,24 @@ import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { AllImages } from "../../../public/images/AllImages";
 import { PopupTable } from "./CasaNizucParts";
+import { restaurantHref } from "./casaNizucDining";
+import { BOOK_STAY_HREF } from "./casaNizucNav";
 
 /** The Ofek rooftop card of the GKDE block on the main page. */
 const SHOW_OFEK_CARD = false;
 
 /** The "The Resort" block (three cards) of the main page. */
 const SHOW_RESORT_SECTION = false;
+
+/** Where each "Discover & Reserve" box opens; the hotel box opens Marriott's own site in a new tab. */
+const DISCOVER_LINKS: Record<string, { href: string; label: string; external?: boolean }> = {
+  stay: { href: BOOK_STAY_HREF, label: "Explore ↗", external: true },
+  gkde: { href: `${CASA_NIZUC_HREF}/gkde`, label: "Reserve GKDE →" },
+  shabbat: { href: `${CASA_NIZUC_HREF}/shabbat`, label: "Reserve Shabbat →" },
+  restaurants: { href: `${CASA_NIZUC_HREF}/dining`, label: "Book a table →" },
+  ofek: { href: restaurantHref("ofek"), label: "Reserve experience →" },
+  events: { href: "#events", label: "Request a proposal →" },
+};
 
 const SUB_NAV: DesignLink[] = [
   { label: "About", href: `${CASA_NIZUC_HREF}/about` },
@@ -78,33 +90,36 @@ export function CasaNizucView() {
     <>
       {/* Hero Header */}
       <DetailHero
+        className="dcv-hero--casa-main"
         imagePosition="center 40%"
         image={hero.image}
-        kicker={hero.kicker}
-        title={
-          <span>
-            THE KOSHER RESORT
-            <br />
-            THAT HAS IT ALL
-          </span>
-        }
-        logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "top", height: 84 }}
+        title="A NEW STANDARD IN KOSHER HOSPITALITY"
+        logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "top", height: 180 }}
       />
       <SubNav items={SUB_NAV} label="Casa Nizuc sections" />
 
-      {/* SECTION 1: Discover Casa Nizuc (GKDE Featured Card at top, 4 cards below) */}
+      {/* SECTION 1: Discover & Reserve Your Experience (six boxes, client 2026-11-22) */}
       <Wrap id="overview">
         <SectionTitle title={overview.title} />
-        <div className="dcv-grid5">
-          {overview.cards.map((card) => (
-            <DesignCard
-              key={card.id}
-              image={card.image}
-              title={card.title}
-              description={card.description}
-              href={`#${card.id}`}
-            />
-          ))}
+        <p className="dcv-lead" style={{ maxWidth: 840, marginBottom: 24 }}>
+          {overview.lead}
+        </p>
+        <div className="dcv-grid3">
+          {overview.cards.map((card) => {
+            const link = DISCOVER_LINKS[card.id];
+            return (
+              <DesignCard
+                key={card.id}
+                image={card.image}
+                alt={card.title}
+                title={card.title}
+                description={card.description}
+                href={link?.href}
+                linkLabel={link?.label}
+                external={link?.external}
+              />
+            );
+          })}
         </div>
       </Wrap>
 

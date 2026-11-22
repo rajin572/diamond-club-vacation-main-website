@@ -101,12 +101,12 @@
 }
 .dcv-brand-casa {
   width: auto;
-  height: 56px;
+  height: 100px;
   flex-shrink: 0;
 }
 .dcv-brand-bonvoy {
   width: auto;
-  height: 31px;
+  height: 76px;
   flex-shrink: 0;
 }
 .dcv-brand-divider {
@@ -3227,10 +3227,10 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
     height: 44px;
   }
   .dcv-brand-casa {
-    height: 46px;
+    height: 78px;
   }
   .dcv-brand-bonvoy {
-    height: 26px;
+    height: 62px;
   }
   .dcv-brand-divider {
     height: 30px;
@@ -3262,10 +3262,10 @@ html[data-site="guettaway"] .dcv-only-guettaway--block {
     height: 36px;
   }
   .dcv-brand-casa {
-    height: 38px;
+    height: 62px;
   }
   .dcv-brand-bonvoy {
-    height: 21px;
+    height: 50px;
   }
   .dcv-brand-divider {
     height: 24px;
@@ -5587,5 +5587,29 @@ html[data-site="guettaway"] .dcv-login-art-guettaway,
   }
   .dcv-lp-strip li + li::before {
     display: none;
+  }
+}
+
+/* Casa Nizuc main banner (client 2026-11-22): "A New Standard in Kosher Hospitality" as the title, on one line from tablet up
+   (the font scales with the screen); it wraps on phones. */
+.dcv-site .dcv-hero--casa-main .dcv-copy {
+  max-width: 96vw;
+}
+.dcv-site .dcv-hero--casa-main h1 {
+  font-size: clamp(30px, 6vw, 62px);
+  max-width: none;
+}
+@media (min-width: 701px) {
+  .dcv-site .dcv-hero--casa-main h1 {
+    white-space: nowrap;
+    font-size: min(62px, 3.6vw);
+  }
+}
+
+/* Casa Nizuc pages: a taller header so the bigger Casa Nizuc logo fits (client 2026-11-22, "the Casa Nizuc symbol needs to be bigger").
+   Only on desktop: from 1000px down the header already grows with its content (it becomes the hamburger row). */
+@media (min-width: 1001px) {
+  .dcv-site .dcv-header.dcv-header--casa {
+    height: 116px;
   }
 }

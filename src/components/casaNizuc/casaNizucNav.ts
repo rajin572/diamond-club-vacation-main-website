@@ -16,8 +16,5 @@ export const CASA_NIZUC_SUB_NAV: DesignLink[] = [
 export const SHABBAT_INQUIRE_HREF = "/inquire?destination=casa-nizuc&topic=shabbat";
 export const GKDE_INQUIRE_HREF = "/inquire?destination=casa-nizuc&topic=gkde";
 
-/**
- * "Book Your Stay" has to open Casa Nizuc's official Marriott reservation page; the client will send that URL (Overview and Dining briefs,
- * 2026-11-15). Until then it opens the Inquire form for the year-round Casa Nizuc.
- */
-export const BOOK_STAY_HREF = "/inquire?destination=casa-nizuc&topic=stay";
+/** "Book Your Stay" opens Casa Nizuc's official Marriott page (URL from the client, 2026-11-22). */
+export const BOOK_STAY_HREF = "https://www.marriott.com/en-us/hotels/cunan-casa-nizuc-a-tribute-portfolio-resort/overview/";

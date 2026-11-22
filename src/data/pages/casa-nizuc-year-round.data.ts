@@ -11,20 +11,24 @@ export const CASA_NIZUC_PAGE = {
   hero: {
     kicker: "A New Standard in Luxury Kosher Hospitality",
     title: "The Kosher Resort That Has It All",
-    // The daytime aerial photo, the same banner as the Passover (Diamond Blue) Casa Nizuc page (client 2026-10-26).
-    image: AllImages.series.casa[0],
+    // The wide daytime aerial photo, sea to forest (client 2026-11-22); 3:1, the shape of the banner, so nothing is cropped.
+    image: AllImages.casaNizucHeroWide,
   },
 
   // The "Discover" cards at the top (client 2026-10-26, same as the Passover > Diamond Blue > Casa Nizuc page): each one leads to its section below.
   // The lines are the sections' own headings, nothing new.
+  // "Discover & Reserve Your Experience" (client's website design package, 2026-11-22): six boxes, each opening where that experience is
+  // booked. Hotel Accommodations opens Casa Nizuc's official Marriott page; the client asked for no booking-system wording on that box.
   overview: {
-    title: "Discover Casa Nizuc",
+    title: "Discover & Reserve Your Experience",
+    lead: "Six clear paths. Every experience is easy to find and book.",
     cards: [
-      { id: "gkde", title: "GKDE", description: "The Gourmet Kosher Dining Experience", image: AllImages.casaNizucGkdeDining, featured: true },
-      { id: "shabbat", title: "Shabbat", description: "Shabbat, the way it should feel.", image: AllImages.casaNizucAshanRender },
-      { id: "dining", title: "Dining", description: "Five kosher destinations. One hotel.", image: AllImages.casaNizucDiningZait },
-      { id: "calendar", title: "Calendar of Events", description: "Full programming. All inclusive.", image: AllImages.casaNizucTowerNight },
-      { id: "events", title: "Events & Celebrations", description: "Your simcha. Our stage.", image: AllImages.casaNizucEventsChandeliers },
+      { id: "stay", title: "Hotel Accommodations", description: "Book your stay.", image: AllImages.casaNizucTowerDay },
+      { id: "gkde", title: "Gourmet Kosher Dining", description: "Reserve your daily Gourmet Kosher Dining Experience (GKDE).", image: AllImages.casaNizucGkdeDining },
+      { id: "shabbat", title: "Shabbat Experience", description: "Book a Friday–Sunday Shabbat dining package.", image: AllImages.casaNizucAshanRender },
+      { id: "restaurants", title: "Restaurant Tables", description: "Book Ashan, Mayim, Zait or another participating restaurant.", image: AllImages.casaNizucDiningZait },
+      { id: "ofek", title: "Ofek Rooftop", description: "Explore and reserve rooftop dining experiences.", image: AllImages.casaNizucOfekRooftop },
+      { id: "events", title: "Private Events", description: "Weddings, mitzvahs, celebrations, and groups.", image: AllImages.casaNizucEventsChandeliers },
     ],
   },
 

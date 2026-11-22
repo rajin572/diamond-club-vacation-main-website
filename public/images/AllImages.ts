@@ -645,6 +645,7 @@ import casaNizucOfekBar from "./mainDesign/casa-nizuc-ofek-bar.webp";
 // Casa Nizuc page (/casa-nizuc): the renders of the client's Casa Nizuc Kosher Marketing Packet (October 2026).
 import casaNizucTowerNight from "./mainDesign/casa-nizuc-tower-night.webp";
 import casaNizucTowerDay from "./mainDesign/casa-nizuc-tower-day.webp";
+import casaNizucHeroWide from "./mainDesign/casa-nizuc-hero-wide.webp";
 import casaNizucAshanRender from "./mainDesign/casa-nizuc-ashan-render.webp";
 import casaNizucMayimBuffet from "./mainDesign/casa-nizuc-mayim-buffet.webp";
 import casaNizucGkdeDining from "./mainDesign/casa-nizuc-gkde-dining.webp";
@@ -1552,6 +1553,7 @@ export const AllImages = {
   casaNizucOfekBar,
   casaNizucTowerNight,
   casaNizucTowerDay,
+  casaNizucHeroWide,
   casaNizucAshanRender,
   casaNizucMayimBuffet,
   casaNizucGkdeDining,
