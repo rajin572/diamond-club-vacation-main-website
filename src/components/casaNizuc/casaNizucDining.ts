@@ -5,7 +5,13 @@ import { CASA_NIZUC_HREF } from "@/lib/routes";
 export type DiningVenue = (typeof CASA_NIZUC_PAGE.dining.venues)[number] & { menuUrl?: string; reservationUrl?: string };
 export type DiningMeal = (typeof CASA_NIZUC_PAGE.dining.meals)[number];
 
-export const DINING_VENUES: DiningVenue[] = CASA_NIZUC_PAGE.dining.venues;
+/**
+ * The non-kosher restaurants (Brisa, La Boya) are off the year-round Casa Nizuc pages (client 2026-11-23): no card, no filter, no page.
+ * Their data is kept; set this to true to bring them back.
+ */
+export const SHOW_NON_KOSHER_DINING = false;
+
+export const DINING_VENUES: DiningVenue[] = CASA_NIZUC_PAGE.dining.venues.filter((venue) => SHOW_NON_KOSHER_DINING || venue.kosher);
 
 export function restaurantHref(slug: string): string {
   return `${CASA_NIZUC_HREF}/restaurants/${slug}`;

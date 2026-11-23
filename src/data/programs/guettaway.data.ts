@@ -54,7 +54,7 @@ export const GUTTAWAY_DATA: ProgramData = {
       "Outstanding value",
     ],
     // The text of page 2 of the Guettaway brochure (client 2026-10-22), word for word. It is shown on the Guettaway About page and in the About block of the program page.
-    aboutTitle: "2 World-Class Resorts — 1 Incredible Guettaway.",
+    aboutTitle: "2 World-Class Resorts 1 Incredible Guettaway",
     about: [
       "For nearly a decade, the Bordeaux Group has been setting a distinctive standard for Pesach hospitality. As the group behind more than 20 kosher restaurants throughout the New York tri-state area and the creators of Pesach with Bordeaux and Guettaway, they bring a rich culinary legacy and a passion for unforgettable experiences.",
       "At the heart of it are Shai and Miriam Guetta, whose personal touch, exceptional dining, and warm, vibrant atmosphere have made Guettaway an experience guests return to year after year.",

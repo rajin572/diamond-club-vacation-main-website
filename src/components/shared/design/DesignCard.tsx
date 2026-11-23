@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CardLogos } from "./CardLogos";
@@ -74,10 +75,12 @@ interface RoomCardProps {
   href?: string;
   linkLabel?: string;
   alt?: string;
+  /** An extra button under the link (e.g. "Book this room" on the year-round Casa Nizuc). */
+  action?: ReactNode;
 }
 
 /** Compact card for room / venue lists (client design: `.room`). */
-export function RoomCard({ image, title, meta, href, linkLabel = "View room details →", alt = "" }: RoomCardProps) {
+export function RoomCard({ image, title, meta, href, linkLabel = "View room details →", alt = "", action }: RoomCardProps) {
   return (
     <article className="dcv-room">
       <Image src={image} alt={alt} sizes={CARD_SIZES} />
@@ -91,6 +94,7 @@ export function RoomCard({ image, title, meta, href, linkLabel = "View room deta
             </Link>
           </p>
         )}
+        {action && <div className="dcv-room-action">{action}</div>}
       </div>
     </article>
   );

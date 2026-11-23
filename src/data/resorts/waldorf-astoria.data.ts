@@ -206,7 +206,7 @@ export const WALDORF_ASTORIA_RESORT_DATA: ResortData = {
         title: "Swim up Pool 1 King Guestroom",
         subtitle: "1 King Bed",
         image: AllImages.waldorfWebWaldorfAstoriaCancun109PoolViewSwimUpKingGuestroomK1lvo,
-        description: "Start your day with a swim and end it with a toast. This swim-up king room blends style and comfort with direct pool access — perfect for enjoying drinks from the minibar or unwinding after a wellness class or sunset party.",
+        description: "Start your day with a swim and end it with a toast. This swim-up king room blends style and comfort with direct pool access, perfect for enjoying drinks from the minibar or unwinding after a wellness class or sunset party.",
         stats: [
           { label: "Bedding", value: "1 King Bed" },
         ],

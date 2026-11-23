@@ -6,7 +6,7 @@ export function Lead({ text, caps }: { text: string; caps?: boolean }) {
   if (at < 0) return <>{text}</>;
   return (
     <>
-      <strong className={caps ? "dcv-cn-caps" : undefined}>{text.slice(0, at)}</strong> — {text.slice(at + 2)}
+      <strong className={caps ? "dcv-cn-caps" : undefined}>{text.slice(0, at)}:</strong> {text.slice(at + 2)}
     </>
   );
 }

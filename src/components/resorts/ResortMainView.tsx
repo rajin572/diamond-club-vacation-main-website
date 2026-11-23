@@ -91,6 +91,7 @@ export function ResortMainView({ offeringId, programId, data, program }: ResortM
     <>
       <DetailHero
         image={data.heroImage}
+        imagePosition={data.heroImagePosition}
         kicker={data.kicker}
         title={data.resortName}
         singleLine

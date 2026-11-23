@@ -5598,8 +5598,7 @@ html[data-site="guettaway"] .dcv-login-art-guettaway,
 .dcv-site .dcv-hero--casa-main h1 {
   font-size: clamp(30px, 6vw, 62px);
   max-width: none;
-  /* gold like the other banner words (client 2026-11-22: "I don't like the white") */
-  color: #e5c16d;
+  /* white again (2026-11-23); it was gold from 2026-11-22 (#e5c16d). */
 }
 /* "TRIBUTE PORTFOLIO RESORT" between the logo and the title (client 2026-11-22). */
 .dcv-site .dcv-hero--casa-main .dcv-kicker {
@@ -5643,4 +5642,11 @@ html[data-site="guettaway"] .dcv-login-art-guettaway,
   .dcv-lp-mini {
     grid-template-columns: 1fr;
   }
+}
+
+/* "Book this room" under a room card link (year-round Casa Nizuc, client 2026-11-23): above the link that covers the card, so it stays clickable. */
+.dcv-room-action {
+  position: relative;
+  z-index: 2;
+  margin-top: 16px;
 }

@@ -5,17 +5,17 @@ import type { DesignImage } from "@/components/shared/design";
 import { CASA_NIZUC_PAGE } from "@/data/pages/casa-nizuc-year-round.data";
 import { CASA_NIZUC_HREF } from "@/lib/routes";
 import { AllImages } from "../../../public/images/AllImages";
-import { getDiningVenue, restaurantHref } from "./casaNizucDining";
-import { BOOK_STAY_HREF, CASA_NIZUC_SUB_NAV } from "./casaNizucNav";
+import { getDiningVenue, restaurantHref, SHOW_NON_KOSHER_DINING } from "./casaNizucDining";
+import { BOOK_STAY_HREF, CASA_NIZUC_ROOMS_HREF, CASA_NIZUC_SUB_NAV } from "./casaNizucNav";
 
 const EVENTS_HREF = `${CASA_NIZUC_HREF}/events`;
 
 /** The photo gallery that closed the page before the 2026-11-22 layout; the client's layout has none. Set to true to bring it back. */
 const SHOW_GALLERY = false;
 
-/** Where each "Discover & Reserve" box opens; the hotel box opens Marriott's own site in a new tab. */
+/** Where each "Discover & Reserve" box opens; the hotel box opens the Rooms & Suites page (only its "Book" buttons go to Marriott). */
 const DISCOVER_LINKS: Record<string, { href: string; label: string; external?: boolean }> = {
-  stay: { href: BOOK_STAY_HREF, label: "Explore ↗", external: true },
+  stay: { href: CASA_NIZUC_ROOMS_HREF, label: "View rooms & suites →" },
   gkde: { href: `${CASA_NIZUC_HREF}/gkde`, label: "Reserve GKDE →" },
   shabbat: { href: `${CASA_NIZUC_HREF}/shabbat`, label: "Reserve Shabbat →" },
   restaurants: { href: `${CASA_NIZUC_HREF}/dining`, label: "Book a table →" },
@@ -75,17 +75,13 @@ export function CasaNizucView() {
         image={hero.image}
         kicker="Tribute Portfolio Resort"
         title="A NEW STANDARD IN KOSHER HOSPITALITY"
-        subtitle={<span>{home.lead}</span>}
         logo={{ image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc Resort & Spa", position: "top", height: 180 }}
       />
       <SubNav items={CASA_NIZUC_SUB_NAV} label="Casa Nizuc sections" />
 
       {/* Discover & Reserve Your Experience: six boxes */}
       <Wrap id="overview">
-        <SectionTitle title={overview.title} />
-        <p className="dcv-lead" style={{ maxWidth: 840, marginBottom: 24 }}>
-          {overview.lead}
-        </p>
+        {/* No heading or lead over the six cards (client 2026-11-23: "remove those texts"). */}
         <div className="dcv-grid3">
           {overview.cards.map((card) => {
             const link = DISCOVER_LINKS[card.id];
@@ -156,7 +152,7 @@ export function CasaNizucView() {
           <h2 className="dcv-lp-title">{home.restaurants.title}</h2>
           <p className="dcv-lp-body">{home.restaurants.text}</p>
           <div className="dcv-lp-grid3">
-            {home.restaurants.list.map((item) => {
+            {home.restaurants.list.filter((item) => SHOW_NON_KOSHER_DINING || item.tag === "Kosher").map((item) => {
               const venue = getDiningVenue(item.slug);
               const kosher = item.tag === "Kosher";
               return (

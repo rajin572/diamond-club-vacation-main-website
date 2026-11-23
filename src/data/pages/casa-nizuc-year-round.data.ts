@@ -35,7 +35,7 @@ export const CASA_NIZUC_PAGE = {
   // The main page sections, from the client's website design package (index.html, 2026-11-22): the text and the order are the client's,
   // the colours, photos and cards are the site's own. Booking actions open the pages where each experience is booked.
   home: {
-    lead: "Exceptional kosher dining, meaningful Shabbat experiences, and stylish resort accommodations — all in one distinctive destination.",
+    lead: "Exceptional kosher dining, meaningful Shabbat experiences, and stylish resort accommodations, all in one distinctive destination.",
     about: {
       eyebrow: "About Casa Nizuc",
       title: "More Than a Stay. A Complete Kosher Hospitality Experience.",
@@ -96,7 +96,7 @@ export const CASA_NIZUC_PAGE = {
     events: {
       eyebrow: "Events & Celebrations",
       title: "Extraordinary Moments. Beautifully Celebrated.",
-      text: "Destination weddings, bar and bat mitzvahs, family celebrations, and corporate or group events — with customized kosher hospitality arrangements.",
+      text: "Destination weddings, bar and bat mitzvahs, family celebrations, and corporate or group events, with customized kosher hospitality arrangements.",
       image: AllImages.casaNizucEventsChandeliers,
     },
     closing: {
@@ -223,7 +223,7 @@ export const CASA_NIZUC_PAGE = {
     exploreTitle: "One Destination. Endless Possibilities.",
     // `href` is left out for the boxes whose pages do not exist yet.
     boxes: [
-      { title: "Gourmet Kosher Dining", text: "An unprecedented collection of kosher dining experiences, from a futuristic steakhouse to spectacular rooftop cuisine, dairy favorites, and more — all under the highest standards of Kashrut.", image: AllImages.casaNizucGkdeDining, href: "gkde" },
+      { title: "Gourmet Kosher Dining", text: "An unprecedented collection of kosher dining experiences, from a futuristic steakhouse to spectacular rooftop cuisine, dairy favorites, and more, all under the highest standards of Kashrut.", image: AllImages.casaNizucGkdeDining, href: "gkde" },
       { title: "Accommodations", text: "Discover stylish rooms and suites thoughtfully designed for comfort, relaxation, and memorable stays in the Mexican Caribbean.", image: AllImages.casaNizucRoomSuiteLiving },
       { title: "La Aldea Village", notice: "Opening April 2027", text: "Discover an exciting village-style destination featuring shopping, dining, entertainment, and inviting social spaces, all within a vibrant architectural setting.", image: AllImages.casaNizucEntrance },
       { title: "Exclusive Beach Club", notice: "Opening March 2027", text: "Experience the beauty of the Caribbean at the exclusive Casa Nizuc Beach Club, conveniently located across the street from the resort.", image: AllImages.casaNizucBeachClubMap },
@@ -242,7 +242,7 @@ export const CASA_NIZUC_PAGE = {
     closing: {
       title: "Your Getaway. Your Experience.",
       text: "Whether you're planning a weekend escape, a family vacation, or a special holiday celebration, Casa Nizuc brings together exceptional dining, memorable experiences, and warm hospitality in one remarkable destination.",
-      line: "Casa Nizuc — One Destination. So Much to Experience.",
+      line: "Casa Nizuc One Destination So Much to Experience",
     },
   },
 
@@ -317,7 +317,7 @@ export const CASA_NIZUC_PAGE = {
     lead: "From sophisticated restaurants and breathtaking rooftop settings to relaxed cafés and casual poolside favorites, every venue has its own character, atmosphere and flavors.",
     introTitle: "Discover Your Next Dining Experience",
     intro: [
-      "At Casa Nizuc, dining is more than a meal — it's an experience to discover.",
+      "At Casa Nizuc, dining is more than a meal; it's an experience to discover.",
       "From sophisticated restaurants and breathtaking rooftop settings to relaxed cafés and casual poolside favorites, Casa Nizuc brings together an exciting collection of culinary destinations, each with its own distinctive character, atmosphere, and flavors.",
       "Whether you're planning a memorable evening, enjoying a leisurely breakfast, or looking for a casual bite between activities, there's something to suit every taste and occasion.",
     ],

@@ -64,6 +64,8 @@ export interface ResortData {
   /** Show `tagline` under the hero title (default true). */
   showTagline?: boolean;
   heroImage: DesignImage;
+  /** CSS object-position of the hero photo, for wide or off-centre images. */
+  heroImagePosition?: string;
   /** The hotel's wordmark shown above the hero title (white artwork). */
   heroLogo?: { image: DesignImage; alt: string; /** Height in px on a desktop banner (default 76). */ height?: number };
 

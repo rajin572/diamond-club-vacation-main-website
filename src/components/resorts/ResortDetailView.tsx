@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import {
   DetailHero,
@@ -38,16 +39,20 @@ interface ResortDetailViewProps {
   data: ResortData;
   item: ResortDetailItem;
   kind: ResortDetailKind;
+  /** Overrides for a page shown outside the Passover pages (the year-round Casa Nizuc rooms): its own tab bar, back link and banner buttons. */
+  navItems?: DesignLink[];
+  back?: { href: string; label: string };
+  heroActions?: ReactNode;
 }
 
 /**
  * One layout for every resort detail page (room, restaurant, pool, spa): hero, key facts, description and
  * feature lists beside a photo stack, then the full gallery (client design: st-regis-deluxe-room.html).
  */
-export function ResortDetailView({ offeringId, programId, data, item, kind }: ResortDetailViewProps) {
+export function ResortDetailView({ offeringId, programId, data, item, kind, navItems: navOverride, back, heroActions }: ResortDetailViewProps) {
   const config = KIND[kind];
 
-  const navItems: DesignLink[] = buildHotelSubNav({
+  const navItems: DesignLink[] = navOverride ?? buildHotelSubNav({
     offeringId,
     programId,
     resortId: data.resortId,
@@ -55,20 +60,21 @@ export function ResortDetailView({ offeringId, programId, data, item, kind }: Re
   });
 
   // Back to the list this page was opened from, so the visitor lands on the same section, not at the top of the hotel page.
-  const backHref = kind === "restaurant" ? diningHref(offeringId, programId, data.resortId) : `${resortHref(offeringId, programId, data.resortId)}#${config.section}`;
+  const backHref = back?.href ?? (kind === "restaurant" ? diningHref(offeringId, programId, data.resortId) : `${resortHref(offeringId, programId, data.resortId)}#${config.section}`);
+  const backLabel = back?.label ?? config.sectionLabel;
 
   const heroImage = item.gallery[0] ?? item.image;
   const stats = (item.stats ?? []).slice(0, 4);
 
   return (
     <>
-      <DetailHero image={heroImage} kicker={data.resortName} title={item.title} subtitle={item.subtitle || undefined} />
+      <DetailHero image={heroImage} kicker={data.resortName} title={item.title} subtitle={item.subtitle || undefined} actions={heroActions} />
       <SubNav items={navItems} label={`${data.resortName} sections`} />
 
       <Wrap>
         <p style={{ margin: "0 0 18px" }}>
           <Link className="dcv-link" href={backHref}>
-            ← Back to {config.sectionLabel}
+            ← Back to {backLabel}
           </Link>
         </p>
         <StatsRow stats={stats} />

@@ -18,16 +18,20 @@ export function CasaNizucDiningVenues({ venues }: { venues: DiningVenue[] }) {
   const [filter, setFilter] = useState<Filter>("all");
 
   const shown = venues.filter((venue) => filter === "all" || (filter === "kosher") === venue.kosher);
+  // The filter only makes sense when both kinds are listed (the non-kosher restaurants are hidden, see SHOW_NON_KOSHER_DINING).
+  const showFilters = venues.some((venue) => venue.kosher) && venues.some((venue) => !venue.kosher);
 
   return (
     <>
-      <div className="dcv-lp-filters" role="group" aria-label="Filter restaurants">
-        {FILTERS.map((item) => (
-          <button key={item.id} type="button" className="dcv-lp-filter" aria-pressed={filter === item.id} onClick={() => setFilter(item.id)}>
-            {item.label}
-          </button>
-        ))}
-      </div>
+      {showFilters && (
+        <div className="dcv-lp-filters" role="group" aria-label="Filter restaurants">
+          {FILTERS.map((item) => (
+            <button key={item.id} type="button" className="dcv-lp-filter" aria-pressed={filter === item.id} onClick={() => setFilter(item.id)}>
+              {item.label}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="dcv-lp-grid3">
         {shown.map((venue) => (

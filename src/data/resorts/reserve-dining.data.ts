@@ -26,7 +26,7 @@ const HOTEL_SITE_DINING: ResortListSection = {
       stats: [
         { label: "Cuisine", value: "Latin American Restaurant" },
         { label: "Serves", value: "Dinner" },
-        { label: "Hours", value: "Vary — see concierge" },
+        { label: "Hours", value: "Vary, see concierge" },
       ],
       gallery: [AllImages.stregisDineOceanFacingDiningRoom],
     },
@@ -39,7 +39,7 @@ const HOTEL_SITE_DINING: ResortListSection = {
       stats: [
         { label: "Cuisine", value: "Eastern Mediterranean Restaurant" },
         { label: "Serves", value: "Breakfast & Dinner" },
-        { label: "Hours", value: "Vary — see concierge" },
+        { label: "Hours", value: "Vary, see concierge" },
       ],
       gallery: [AllImages.stregisDinePatternedTileDiningRoom],
     },
@@ -52,7 +52,7 @@ const HOTEL_SITE_DINING: ResortListSection = {
       stats: [
         { label: "Cuisine", value: "Mexican Mediterranean Seafood Restaurant" },
         { label: "Serves", value: "Dinner" },
-        { label: "Hours", value: "Vary — see concierge" },
+        { label: "Hours", value: "Vary, see concierge" },
       ],
       gallery: [AllImages.stregisDineOutdoorDiningTerrace],
     },
@@ -91,7 +91,7 @@ const HOTEL_SITE_DINING: ResortListSection = {
       stats: [
         { label: "Cuisine", value: "Mexican Chocolate Café" },
         { label: "Serves", value: "Chocolate & Afternoon Tea" },
-        { label: "Hours", value: "Vary — see concierge" },
+        { label: "Hours", value: "Vary, see concierge" },
       ],
       gallery: [AllImages.stregisDineAfternoonTeaServiceTheLibrary],
     },

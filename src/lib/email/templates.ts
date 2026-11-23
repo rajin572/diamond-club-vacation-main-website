@@ -237,7 +237,7 @@ export function guestEmail(kind: "contact" | "inquiry" | "quote" | "reservation"
   const intro = `Thank you for reaching out to ${brandName(brand)}. We have received your ${what} and a member of our concierge team will be in touch with you shortly.`;
   const closing = "We look forward to curating your extraordinary kosher luxury vacation.";
   return {
-    subject: `We received your ${what} — ${brandName(brand)}`,
+    subject: `We received your ${what} | ${brandName(brand)}`,
     html: layout({
       preheader: `We have received your ${what}.`,
       kicker: "Confirmation",

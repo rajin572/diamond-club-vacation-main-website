@@ -63,7 +63,7 @@ export function CasaNizucDiningPage() {
       <section className="dcv-lp-photoband">
         <Image src={AllImages.casaNizucDiningZaitTerrace} alt="" fill sizes="100vw" />
         <div className="dcv-lp-inner">
-          <h2>Casa Nizuc — A World of Flavors Awaits.</h2>
+          <h2>Casa Nizuc A World of Flavors Awaits</h2>
           <Link className="dcv-btn" href={BOOK_STAY_HREF}>
             Book your stay
           </Link>

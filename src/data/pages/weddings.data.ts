@@ -74,7 +74,7 @@ export const WEDDINGS_PAGE_DATA = {
     eyebrow: "Where Your Forever Begins",
     heading: "Your Dreamiest I Do",
     lead: "The ultimate coastal canvas to immortalize your love story. Framed by the raw beauty of the ocean on one side and the golden glow of the lagoon on the other, our exquisite, design-driven event spaces elevate your special day into an unforgettable masterpiece.",
-    secondaryLead: "From intimate, free-spirited ceremonies to grand, high-energy celebrations, we blend breathtaking backdrops with curated, boutique sophistication—ensuring your beginning is just as captivating as the journey ahead.",
+    secondaryLead: "From intimate, free-spirited ceremonies to grand, high-energy celebrations, we blend breathtaking backdrops with curated, boutique sophistication, ensuring your beginning is just as captivating as the journey ahead.",
     arrivalStory: "Your journey begins high above the coast on the 23rd floor, where our sky lobby welcomes guests with breathtaking, unobstructed ocean views. Designed with a seamless organic philosophy, the space flows naturally to immediately ease the mind, while lobby bar Mussa serves as the perfect venue to toast your arrival against a stunning marine backdrop.",
     badges: [
       {
@@ -218,7 +218,7 @@ export const WEDDINGS_PAGE_DATA = {
     kicker: "AN UNCOMPROMISING GASTRONOMIC JOURNEY",
     headline: "Culinary Artistry & Mixology",
     lead: "From prime cuts to oceanfront sips, our curated dining concepts cater to every craving, day and night. Elevating our culinary narrative to new heights, we proudly feature dedicated premium venues with specialized Kosher dining.",
-    strictTradition: "Seamlessly blending gourmet innovation with strict tradition, our offerings include certified Glatt Kosher (Beit Yosef) specialties and Chalav Yisroel options—ensuring an uncompromising, world-class gastronomic experience for every discerning palate.",
+    strictTradition: "Seamlessly blending gourmet innovation with strict tradition, our offerings include certified Glatt Kosher (Beit Yosef) specialties and Chalav Yisroel options, ensuring an uncompromising, world-class gastronomic experience for every discerning palate.",
     ultimateBeverage: "Upgrade your stay with Casa Nizuc's premium beverage experience, creating the feel of a luxury all-inclusive resort while preserving the exclusivity of our hospitality program.",
     image: WeddingImages.culinaryFire,
     secondaryImage: AllImages.casaNizucDiningZaitTerrace,
@@ -300,7 +300,7 @@ export const WEDDINGS_PAGE_DATA = {
     kicker: "RESORT LIVING",
     headline: "Your Sanctuary",
     lead: "Each of our guestrooms is a uniquely curated canvas of coastal character, capturing the independent spirit of our destination through captivating design, expressive details, and effortless comfort.",
-    subtext: "Framed by floor-to-ceiling perspectives, every sanctuary offers a guaranteed view of nature’s finest work—whether waking up to the endless azure of the open ocean or winding down to the mesmerizing, golden sunsets over the serene lagoon.",
+    subtext: "Framed by floor-to-ceiling perspectives, every sanctuary offers a guaranteed view of nature’s finest work, whether waking up to the endless azure of the open ocean or winding down to the mesmerizing, golden sunsets over the serene lagoon.",
     categories: [
       {
         id: "master-suites",

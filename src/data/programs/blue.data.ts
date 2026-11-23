@@ -47,7 +47,7 @@ export const BLUE_DATA: ProgramData = {
       "Backed by the expertise of Diamond Club Vacations, our dedicated team brings years of hospitality experience, culinary excellence, and a genuine passion for creating unforgettable vacations.",
       "Our philosophy is simple: **exceptional hospitality should be about how you're treated, not how much you spend.**",
       "We look forward to welcoming you and your family to Casa Nizuc for Passover 2027.",
-      "**Casa Nizuc by DCV — Exceptional Hospitality. Extraordinary Value.**",
+      "**Casa Nizuc by DCV: Exceptional Hospitality. Extraordinary Value.**",
       "Warmest regards,",
       "**DCV & The Casa Nizuc Team**",
     ],

@@ -204,7 +204,7 @@ function DonnyRogoffModal({ onClose }: { onClose: () => void }) {
               With a background in fine dining, restaurant ownership, and international hospitality, his expertise extends far beyond the kitchen. From creating distinctive restaurant concepts and elevated culinary experiences to directing international logistics, staffing, and comprehensive food and beverage operations, Chef Rogoff brings ambitious visions to life.
             </p>
             <p>
-              Driven by creativity, precision, and an uncompromising commitment to excellence, he continues to elevate the world of luxury kosher hospitality — where exceptional cuisine, flawless execution, and unforgettable experiences come together.
+              Driven by creativity, precision, and an uncompromising commitment to excellence, he continues to elevate the world of luxury kosher hospitality, where exceptional cuisine, flawless execution, and unforgettable experiences come together.
             </p>
           </div>
 

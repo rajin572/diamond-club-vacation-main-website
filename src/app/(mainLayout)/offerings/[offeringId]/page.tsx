@@ -72,7 +72,7 @@ export default async function OfferingPage({ params }: PageProps) {
     offers: programs.map((program) => ({
       "@type": "Offer",
       name: program.title,
-      description: `${program.subtitle} — ${program.location}`,
+      description: `${program.subtitle}, ${program.location}`,
       url: `${siteConfig.siteUrl}${program.href}`,
     })),
   };

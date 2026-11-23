@@ -7,7 +7,7 @@ import { AllImages } from "../../../../public/images/AllImages";
 
 export const metadata: Metadata = {
   title: "Inquire",
-  description: "Tell us about your trip and your group — Passover 2027, Casa Nizuc, weddings and private events with Diamond Club Vacations.",
+  description: "Tell us about your trip and your group: Passover 2027, Casa Nizuc, weddings and private events with Diamond Club Vacations.",
 };
 
 interface InquirePageProps {

@@ -39,9 +39,9 @@ export const DIAMOND_CLUB_RESERVE_DATA: ProgramData = {
     about: [
       "**The St. Regis & EDITION Resorts at Kanai | Riviera Maya**",
       "**Welcome to Diamond Club Reserve**",
-      "This Passover, Diamond Club Vacations invites you to experience something truly extraordinary at two of the Riviera Maya’s most spectacular beachfront resorts — The St. Regis and The Riviera Maya EDITION at Kanai.",
+      "This Passover, Diamond Club Vacations invites you to experience something truly extraordinary at two of the Riviera Maya’s most spectacular beachfront resorts: The St. Regis and The Riviera Maya EDITION at Kanai.",
       "Combining world-class hospitality with the signature warmth and personal attention that define Diamond Club, our boutique Passover experience brings together exceptional cuisine, inspiring programming, outstanding entertainment, and unforgettable family moments in a setting unlike any other.",
-      "**Discover Kanai — A Destination Like No Other**",
+      "**Discover Kanai: A Destination Like No Other**",
       "Nestled along the pristine Caribbean coastline, Kanai is an exclusive 680-acre development surrounded by protected natural beauty. Home to The St. Regis and EDITION resorts, this remarkable destination offers breathtaking architecture, lush tropical landscapes, and nearly two miles of white-sand beaches.",
       "Conveniently located approximately 30 minutes from Cancun International Airport and just minutes from Playa del Carmen, Kanai provides the perfect balance of privacy, sophistication, and accessibility.",
       "**Two Iconic Resorts. One Extraordinary Experience.**",

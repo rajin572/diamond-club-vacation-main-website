@@ -10,7 +10,9 @@ export const CASA_NIZUC_DATA: ResortData = {
   kicker: "Casa Nizuc by DCV",
   heroLogo: { image: AllImages.casaNizucLogoWhite, alt: "Casa Nizuc", height: 96 },
   tagline: "Luxury made accessible",
-  heroImage: AllImages.series.casa[0],
+  // Same banner as the year-round Casa Nizuc page (client 2026-11-23).
+  heroImage: AllImages.casaNizucHeroWide,
+  heroImagePosition: "center 40%",
   overviewLabel: "Overview",
   showSubNav: true,
   overview: {

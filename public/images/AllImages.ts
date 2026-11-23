@@ -688,6 +688,7 @@ import dayCampDirectorBinyominSchwartz from "./mainDesign/day-camp-director-biny
 import casaNizucDayCampDirectorArianaMizrahi from "./mainDesign/casa-nizuc-day-camp-director-ariana-mizrahi.webp";
 // Photos from the client's two Word documents of 2026-10-19 (entertainment, rabbis, cantor, Grand Ballroom) and the Park Hyatt Living Room / Brisa photos.
 import entertainmentShulemLemmer from "./mainDesign/entertainment-shulem-lemmer.webp";
+import entertainmentBenTzur from "./mainDesign/entertainment-ben-tzur.webp";
 import entertainmentMenachemToker from "./mainDesign/entertainment-menachem-toker.webp";
 import entertainmentShimiAdar from "./mainDesign/entertainment-shimi-adar.webp";
 import entertainmentDoviMeiselsGuitar from "./mainDesign/entertainment-dovi-meisels-guitar.webp";
@@ -1587,6 +1588,7 @@ export const AllImages = {
   dayCampDirectorBinyominSchwartz,
   casaNizucDayCampDirectorArianaMizrahi,
   entertainmentShulemLemmer,
+  entertainmentBenTzur,
   entertainmentMenachemToker,
   entertainmentShimiAdar,
   entertainmentDoviMeiselsGuitar,

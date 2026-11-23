@@ -13,7 +13,7 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
     },
     overview: {
       title: "An unforgettable Passover experience for every age.",
-      description: "We make sure every child—from our youngest guests to our teens—has an incredible Passover filled with fun, friendship, adventure, and meaningful experiences.",
+      description: "We make sure every child, from our youngest guests to our teens, has an incredible Passover filled with fun, friendship, adventure, and meaningful experiences.",
     },
     // Its own box above the team, styled like "Our Team", with the director's photo and text (client 2026-10-28).
     director: {
@@ -109,7 +109,7 @@ export const KIDS_DAY_CAMP_BY_PROGRAM: Record<string, KidsDayCampData> = {
     },
     overview: {
       title: "An unforgettable Passover experience for every age.",
-      description: "We make sure every child—from our youngest guests to our teens—has an incredible Passover filled with fun, friendship, adventure, and meaningful experiences.",
+      description: "We make sure every child, from our youngest guests to our teens, has an incredible Passover filled with fun, friendship, adventure, and meaningful experiences.",
     },
     director: {
       title: "Our Director",

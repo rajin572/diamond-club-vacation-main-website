@@ -162,7 +162,7 @@ export function CasaNizucCalendarView() {
                   <li key={item.title} className="dcv-includes-item">
                     <span className="dcv-includes-bullet" aria-hidden="true" />
                     <div className="dcv-includes-text">
-                      <strong>{item.title}</strong> — {item.text}
+                      <strong>{item.title}:</strong> {item.text}
                     </div>
                   </li>
                 ))}
